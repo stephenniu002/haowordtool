@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5075958362002617" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字母求解器专业版 | 免费英文乱序解谜 & 字谜求解器</title>
+    <meta name="description" content="立即解开乱序字母，获取单词定义、发音和拼字游戏分数。支持最多15个字母，支持通配符 ? 和 *。">
+    <style>
+        :root { --primary: #2563eb; --gray-50: #f9fafb; --gray-600: #4b5563; --gray-800: #1f2937; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; color: var(--gray-800); background:#fff; line-height:1.6; }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+        nav { background:#fff; border-bottom:1px solid #e5e7eb; position:sticky; top:0; z-index:100; }
+        .nav-inner { display:flex; justify-content:space-between; align-items:center; height:64px; max-width:1200px; margin:0 auto; padding:0 20px; }
+        .logo { font-size:1.5rem; font-weight:700; color:var(--primary); text-decoration:none; }
+        .nav-links { display:flex; gap:24px; list-style:none; }
+        .nav-links a { color:var(--gray-600); text-decoration:none; font-weight:500; }
+        .hero { background:var(--gray-50); padding:60px 0; text-align:center; }
+        .hero h1 { font-size:2.5rem; margin-bottom:12px; }
+        .hero p { color:var(--gray-600); max-width:600px; margin:0 auto 24px; }
+        .search-box { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+        .search-box input { width:320px; max-width:80vw; padding:14px 20px; border:2px solid #e5e7eb; border-radius:50px; font-size:1rem; outline:none; }
+        .search-box button { padding:14px 28px; background:var(--primary); color:#fff; border:none; border-radius:50px; font-weight:600; cursor:pointer; }
+        footer { background:#f8fafc; border-top:1px solid #e2e8f0; padding:48px 0 24px; margin-top:60px; text-align:center; color:#94a3b8; }
+        @media (max-width:768px) { .nav-links { display:none; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/zh/" class="logo">🔤 Letter Solver Pro</a>
+            <ul class="nav-links">
+                <li><a href="/zh/">首页</a></li>
+                <li><a href="/unscrambler.html">字母求解</a></li>
+                <li><a href="/blog.html">博客</a></li>
+                <li><a href="/about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <h1>立即解开乱序字母</h1>
+            <p>输入最多15个字母，使用 ? 或 * 作为通配符，获取单词定义、发音及拼字游戏分数。</p>
+            <div class="search-box">
+                <input type="text" placeholder="例如 AELRST" id="heroInput">
+                <button onclick="location.href='/unscrambler.html?letters=' + document.getElementById('heroInput').value">求解</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>🌐 语言：<a href="/">English</a> | <a href="/zh/">中文</a> | <a href="/fr/">Français</a> | <a href="/es/">Español</a> | <a href="/ja/">日本語</a></p>
+            <p>© 2026 Letter Solver Pro</p>
+        </div>
+    </footer>
+</body>
+</html>
