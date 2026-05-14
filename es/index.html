@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5075958362002617" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Solver Pro | Descifrador de Palabras y Anagramas</title>
+    <meta name="description" content="Descifra letras al instante. Definiciones, pronunciaciones y puntuaciones de Scrabble. Hasta 15 letras, comodines ? y *.">
+    <style>
+        :root { --primary: #2563eb; --gray-50: #f9fafb; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: system-ui, sans-serif; color:#1f2937; background:#fff; }
+        .container { max-width:1200px; margin:auto; padding:0 20px; }
+        nav { background:#fff; border-bottom:1px solid #e5e7eb; }
+        .nav-inner { display:flex; justify-content:space-between; align-items:center; height:64px; }
+        .logo { font-size:1.5rem; font-weight:700; color:var(--primary); text-decoration:none; }
+        .nav-links { display:flex; gap:24px; list-style:none; }
+        .hero { background:var(--gray-50); padding:60px 0; text-align:center; }
+        .hero h1 { font-size:2.5rem; }
+        .search-box input, .search-box button { padding:14px 20px; border-radius:50px; }
+        .search-box button { background:var(--primary); color:#fff; border:none; font-weight:600; }
+        footer { background:#f8fafc; text-align:center; padding:40px; margin-top:60px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/es/" class="logo">🔤 Letter Solver Pro</a>
+            <ul class="nav-links">
+                <li><a href="/es/">Inicio</a></li>
+                <li><a href="/unscrambler.html">Descifrador</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/about.html">Acerca de</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Descifra palabras al instante</h1>
+        <p>Ingresa hasta 15 letras, usa ? o * como comodines.</p>
+        <div class="search-box">
+            <input type="text" placeholder="ej: AELRST" id="heroInput">
+            <button onclick="location.href='/unscrambler.html?letters=' + document.getElementById('heroInput').value">Resolver</button>
+        </div>
+    </section>
+    <footer>
+        <p>🌐 <a href="/">English</a> | <a href="/zh/">中文</a> | <a href="/fr/">Français</a> | <a href="/es/">Español</a> | <a href="/ja/">日本語</a></p>
+        <p>© 2026 Letter Solver Pro</p>
+    </footer>
+</body>
+</html>
