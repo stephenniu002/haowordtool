@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Unscrambler & Anagram Solver | Letter Solver Pro</title>
+    <meta name="description" content="Unscramble letters, solve anagrams and find words instantly. Free tool with Scrabble scores, definitions and audio pronunciations. Supports up to 15 letters, wildcards ? and *.">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Letter Solver Pro - Unscrambler",
+      "url": "https://haowordtool.com/unscrambler.html",
+      "description": "Professional word unscrambler with Scrabble scores, definitions and pronunciations.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+
+    <style>
+        :root { --primary: #2563eb; --primary-dark: #1e40af; --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-600: #4b5563; --gray-800: #1f2937; --radius: 12px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; color: var(--gray-800); background: #fff; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* 导航栏 */
+        nav { background: #fff; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--gray-600); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* 工具区域 */
+        .tool-section { padding: 60px 0; }
+        .tabs { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
+        .tab-btn { padding: 10px 24px; border: 2px solid #e5e7eb; background: #fff; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+        .search-panel { background: var(--gray-50); padding: 32px; border-radius: var(--radius); margin-bottom: 32px; }
+        .search-row { display: flex; gap: 12px; flex-wrap: wrap; }
+        .search-row input { flex: 1; min-width: 200px; padding: 14px 20px; border: 2px solid #e5e7eb; border-radius: 50px; font-size: 1rem; outline: none; }
+        .search-row input:focus { border-color: var(--primary); }
+        .search-row button { padding: 14px 28px; background: var(--primary); color: #fff; border: none; border-radius: 50px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .search-row button:hover { background: var(--primary-dark); }
+        .results { background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 24px; min-height: 200px; }
+        .word-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e5e7eb; }
+        .word-item:last-child { border-bottom: none; }
+        .word-text { font-size: 1.2rem; font-weight: 600; }
+        .word-info { display: flex; gap: 16px; align-items: center; color: var(--gray-600); font-size: 0.9rem; }
+
+        /* Footer */
+        footer { background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 48px 0 24px; margin-top: 60px; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .footer-col h4 { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col a { color: #475569; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--primary); }
+        .language-switcher { display: flex; align-items: center; gap: 8px; margin-top: 16px; }
+        .language-switcher select { padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: #fff; font-size: 0.9rem; color: #334155; outline: none; cursor: pointer; }
+        .copyright { text-align: center; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 32px; padding-top: 24px; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #fff; border-bottom: 1px solid #e5e7eb; padding: 16px; gap: 12px; }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="logo">🔤 Letter Solver Pro</a>
+            <button class="mobile-menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="unscrambler.html" class="active">Unscrambler</a></li>
+                <li><a href="unscrambler.html#anagram">Anagram Solver</a></li>
+                <li><a href="unscrambler.html#finder">Word Finder</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 工具面板 -->
+    <section class="tool-section">
+        <div class="container">
+            <h1 style="font-size:2rem; margin-bottom:8px;">🔍 Word Unscrambler & Solver</h1>
+            <p style="color:var(--gray-600); margin-bottom:32px;">Enter up to 15 letters, use ? or * as wildcards. Get definitions, pronunciations and Scrabble scores instantly.</p>
+
+            <!-- 标签切换 -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('unscrambler')">Unscrambler</button>
+                <button class="tab-btn" onclick="switchTab('anagram')">Anagram Solver</button>
+                <button class="tab-btn" onclick="switchTab('finder')">Word Finder</button>
+            </div>
+
+            <!-- 输入区域 -->
+            <div class="search-panel">
+                <div class="search-row">
+                    <input type="text" id="letterInput" placeholder="e.g. aelrst, c?mp, wor*" maxlength="15">
+                    <button onclick="searchWords()">Find Words</button>
+                </div>
+            </div>
+
+            <!-- 结果展示 -->
+            <div class="results" id="resultsContainer">
+                <p style="color:var(--gray-600);">Enter letters above to see results. Example: try "AELRST"</p>
+            </div>
+
+            <!-- 广告位 -->
+            <div style="background:var(--gray-100); border:2px dashed #d1d5db; border-radius:var(--radius); padding:30px; text-align:center; margin-top:32px; color:var(--gray-600);">
+                📢 Google AdSense Ad Unit (Responsive)
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 style="font-size:1.25rem; font-weight:700; color:#1e293b; margin-bottom:12px;">🔤 Letter Solver Pro</h3>
+                <p style="color:#475569; font-size:0.9rem; line-height:1.6;">Professional multi‑language word discovery tool built with the precision of automated trading systems.</p>
+                <div class="language-switcher">
+                    <label for="lang-select" style="font-size:0.9rem; color:#475569;">🌐 Language:</label>
+                    <select id="lang-select" onchange="if(this.value) window.location.href=this.value">
+                        <option value="">English</option>
+                        <option value="/zh/">中文</option>
+                        <option value="/fr/">Français</option>
+                        <option value="/es/">Español</option>
+                        <option value="/ja/">日本語</option>
+                    </select>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Access</h4>
+                <ul>
+                    <li><a href="/en/unscrambler.html">English Unscrambler</a></li>
+                    <li><a href="/zh/">中文单词解谜</a></li>
+                    <li><a href="/fr/">Solveur d'Anagrammes</a></li>
+                    <li><a href="/es/">Descifrador de Palabras</a></li>
+                    <li><a href="/ja/">アナグラム 解読</a></li>
+                    <li><a href="/how-it-works.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact & Location</h4>
+                <ul style="list-style:none; color:#475569;">
+                    <li style="margin-bottom:8px;">📍 Hong Kong SAR</li>
+                    <li style="margin-bottom:8px;">📧 <a href="mailto:love6598878593@gmail.com" style="color:#2563eb;">love6598878593@gmail.com</a></li>
+                </ul>
+                <p style="color:#94a3b8; font-size:0.8rem; margin-top:12px;">Professional Service by <span style="font-weight:600; color:#64748b;">Lobster</span></p>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Letter Solver Pro. All rights reserved. | haowordtool.com</div>
+    </footer>
+
+    <script>
+        // 简单的标签切换
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('resultsContainer').innerHTML = '<p style="color:var(--gray-600);">This feature is coming soon. Currently demonstrating UI.</p>';
+        }
+
+        // 搜索单词（演示）
+        function searchWords() {
+            const input = document.getElementById('letterInput').value.trim();
+            if (!input) return;
+            // 这里将来会接入 Free Dictionary API，目前显示演示结果
+            document.getElementById('resultsContainer').innerHTML = `
+                <div class="word-item"><span class="word-text">STAR</span><span class="word-info">⭐4 pts · noun</span></div>
+                <div class="word-item"><span class="word-text">RATS</span><span class="word-info">⭐4 pts · noun</span></div>
+                <div class="word-item"><span class="word-text">ARTS</span><span class="word-info">⭐4 pts · noun</span></div>
+                <p style="margin-top:16px; color:var(--gray-600); font-size:0.9rem;">🔧 Full API integration coming soon. Currently showing sample results.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
