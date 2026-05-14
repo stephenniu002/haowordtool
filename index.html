@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letter Solver Pro - Free Word Unscrambler, Anagram Solver & Word Finder</title>
     <meta name="description" content="Unscramble words, find anagrams, and solve word puzzles instantly with Letter Solver Pro. Free tool for Scrabble, Words With Friends, and word games. Supports wildcards and pattern search.">
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,7 +18,6 @@
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
-
     <style>
         :root { --primary: #2563eb; --primary-dark: #1e40af; --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-600: #4b5563; --gray-800: #1f2937; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,10 +27,14 @@
         nav { background: #fff; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
         .nav-links a { color: var(--gray-600); text-decoration: none; font-weight: 500; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: var(--primary); }
         .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* 右上角语言切换器 */
+        .lang-nav { margin-left: auto; display: flex; align-items: center; }
+        .lang-nav select { padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: #fff; font-size: 0.9rem; color: #334155; outline: none; cursor: pointer; }
 
         .hero { background: var(--gray-50); padding: 60px 0; text-align: center; }
         .hero h1 { font-size: 2.5rem; margin-bottom: 12px; }
@@ -40,7 +42,7 @@
         .search-box { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
         .search-box input { width: 320px; max-width: 80vw; padding: 14px 20px; border: 2px solid #e5e7eb; border-radius: 50px; font-size: 1rem; outline: none; }
         .search-box input:focus { border-color: var(--primary); }
-        .search-box button { padding: 14px 28px; background: var(--primary); color: #fff; border: none; border-radius: 50px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .search-box button { padding: 14px 28px; background: var(--primary); color: #fff; border: none; border-radius: 50px; font-weight: 600; cursor: pointer; }
         .search-box button:hover { background: var(--primary-dark); }
 
         footer { background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 48px 0 24px; margin-top: 60px; }
@@ -50,14 +52,13 @@
         .footer-col ul li { margin-bottom: 8px; }
         .footer-col a { color: #475569; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
         .footer-col a:hover { color: var(--primary); }
-        .language-switcher { display: flex; align-items: center; gap: 8px; margin-top: 16px; }
-        .language-switcher select { padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: #fff; font-size: 0.9rem; color: #334155; outline: none; cursor: pointer; }
         .copyright { text-align: center; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 32px; padding-top: 24px; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #fff; border-bottom: 1px solid #e5e7eb; padding: 16px; gap: 12px; }
             .nav-links.active { display: flex; }
             .mobile-menu-btn { display: block; }
+            .lang-nav { display: none; } /* 移动端隐藏，改用Footer的语言切换 */
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -76,6 +77,15 @@
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/faq.html">FAQ</a></li>
             </ul>
+            <div class="lang-nav">
+                <select onchange="if(this.value) window.location.href=this.value">
+                    <option value="/" selected>English</option>
+                    <option value="/zh/">中文</option>
+                    <option value="/fr/">Français</option>
+                    <option value="/es/">Español</option>
+                    <option value="/ja/">日本語</option>
+                </select>
+            </div>
         </div>
     </nav>
 
@@ -99,9 +109,9 @@
             <div class="footer-col">
                 <h3 style="font-size:1.25rem; font-weight:700; color:#1e293b; margin-bottom:12px;">🔤 Letter Solver Pro</h3>
                 <p style="color:#475569; font-size:0.9rem; line-height:1.6;">Professional multi‑language word discovery tool built with the precision of automated trading systems.</p>
-                <div class="language-switcher">
-                    <label for="lang-select" style="font-size:0.9rem; color:#475569;">🌐 Language:</label>
-                    <select id="lang-select" onchange="if(this.value) window.location.href=this.value">
+                <!-- Footer 同样保留语言切换，方便移动端 -->
+                <div style="margin-top:16px;">
+                    <select onchange="if(this.value) window.location.href=this.value">
                         <option value="/" selected>English</option>
                         <option value="/zh/">中文</option>
                         <option value="/fr/">Français</option>
