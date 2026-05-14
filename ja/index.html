@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5075958362002617" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Solver Pro | アナグラムソルバー & 単語検索</title>
+    <meta name="description" content="文字を並べ替えて単語を見つけよう。定義、発音、スクラブルスコアを表示。最大15文字、ワイルドカード ? と * に対応。">
+    <style>
+        :root { --primary: #2563eb; --gray-50: #f9fafb; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: system-ui, sans-serif; color:#1f2937; background:#fff; }
+        .container { max-width:1200px; margin:auto; padding:0 20px; }
+        nav { background:#fff; border-bottom:1px solid #e5e7eb; }
+        .nav-inner { display:flex; justify-content:space-between; align-items:center; height:64px; }
+        .logo { font-size:1.5rem; font-weight:700; color:var(--primary); text-decoration:none; }
+        .nav-links { display:flex; gap:24px; list-style:none; }
+        .lang-nav select { padding:8px 12px; border-radius:6px; }
+        .hero { background:var(--gray-50); padding:60px 0; text-align:center; }
+        .hero h1 { font-size:2.5rem; }
+        .search-box input, .search-box button { padding:14px 20px; border-radius:50px; }
+        .search-box button { background:var(--primary); color:#fff; border:none; font-weight:600; }
+        footer { background:#f8fafc; padding:48px 0; margin-top:60px; text-align:center; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/ja/" class="logo">🔤 Letter Solver Pro</a>
+            <ul class="nav-links">
+                <li><a href="/ja/">ホーム</a></li>
+                <li><a href="/unscrambler.html">ソルバー</a></li>
+                <li><a href="/blog.html">ブログ</a></li>
+                <li><a href="/about.html">概要</a></li>
+            </ul>
+            <div class="lang-nav">
+                <select onchange="if(this.value) window.location.href=this.value">
+                    <option value="/">English</option>
+                    <option value="/zh/">中文</option>
+                    <option value="/fr/">Français</option>
+                    <option value="/es/">Español</option>
+                    <option value="/ja/" selected>日本語</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>文字を並べ替えて単語を発見</h1>
+        <p>最大15文字、? や * をワイルドカードとして使用できます。</p>
+        <div class="search-box">
+            <input type="text" placeholder="例: AELRST" id="heroInput">
+            <button onclick="location.href='/unscrambler.html?letters=' + document.getElementById('heroInput').value">検索</button>
+        </div>
+    </section>
+    <footer>
+        <p>🌐 <a href="/">English</a> | <a href="/zh/">中文</a> | <a href="/fr/">Français</a> | <a href="/es/">Español</a> | <a href="/ja/">日本語</a></p>
+        <p>© 2026 Letter Solver Pro</p>
+    </footer>
+</body>
+</html>
