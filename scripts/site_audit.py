@@ -107,6 +107,10 @@ def audit_local(root: Path) -> list[Finding]:
     if ads_txt.is_file() and "pub-4489946300243174" not in ads_txt.read_text(encoding="utf-8"):
         findings.append(Finding("ERROR", "ads-txt", "ads.txt", "Publisher ID is missing or incorrect."))
 
+    homepage = root / "index.html"
+    if homepage.is_file() and 'name="google-adsense-account" content="ca-pub-4489946300243174"' not in homepage.read_text(encoding="utf-8"):
+        findings.append(Finding("ERROR", "adsense-account", "index.html", "AdSense account meta tag is missing or incorrect."))
+
     known_public_paths = {public_path(root, file) for file in html_files}
     for file in html_files:
         relative = file.relative_to(root).as_posix()
