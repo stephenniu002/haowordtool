@@ -20,7 +20,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
 
-ADSENSE_ID = "ca-pub-5075958362002617"
+ADSENSE_ID = "ca-pub-4489946300243174"
 DEFAULT_ORIGIN = "https://haowordtool.com"
 REQUIRED_FILES = ("ads.txt", "robots.txt", "sitemap.xml", "privacy.html", "terms.html")
 
@@ -104,7 +104,7 @@ def audit_local(root: Path) -> list[Finding]:
             findings.append(Finding("ERROR", "required-file", required, "Required trust or discovery file is missing."))
 
     ads_txt = root / "ads.txt"
-    if ads_txt.is_file() and "pub-5075958362002617" not in ads_txt.read_text(encoding="utf-8"):
+    if ads_txt.is_file() and "pub-4489946300243174" not in ads_txt.read_text(encoding="utf-8"):
         findings.append(Finding("ERROR", "ads-txt", "ads.txt", "Publisher ID is missing or incorrect."))
 
     known_public_paths = {public_path(root, file) for file in html_files}
