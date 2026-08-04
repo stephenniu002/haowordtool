@@ -8,6 +8,7 @@
   <url><loc>https://haowordtool.com/blog.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://haowordtool.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://haowordtool.com/about.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://haowordtool.com/share.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://haowordtool.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://haowordtool.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://haowordtool.com/zh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

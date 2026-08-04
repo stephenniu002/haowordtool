@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="72" viewBox="0 0 260 72" role="img" aria-labelledby="title desc">
+  <title id="title">HaoWordTool free word solver</title>
+  <desc id="desc">Blue badge linking to the free English word unscrambler.</desc>
+  <rect width="260" height="72" rx="12" fill="#1e40af"/>
+  <rect x="6" y="6" width="60" height="60" rx="9" fill="#fff" opacity=".14"/>
+  <text x="36" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#fff">Aa</text>
+  <text x="80" y="31" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">HaoWordTool</text>
+  <text x="80" y="51" font-family="Arial,sans-serif" font-size="13" fill="#dbeafe">Free English word solver</text>
+</svg>

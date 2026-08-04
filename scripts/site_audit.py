@@ -134,7 +134,7 @@ def audit_local(root: Path) -> list[Finding]:
             findings.append(Finding("WARN", "h1", relative, f"Expected one H1; found {parser.h1_count}."))
 
         loaders = text.count("pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
-        if relative not in {"privacy.html", "terms.html", "word.html"}:
+        if relative not in {"privacy.html", "terms.html", "word.html", "share.html"}:
             if ADSENSE_ID not in text:
                 findings.append(Finding("WARN", "adsense-code", relative, "AdSense publisher code is absent."))
             if loaders > 1:
