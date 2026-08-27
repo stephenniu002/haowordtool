@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+promotion-preview.md
+promotion-log.csv
