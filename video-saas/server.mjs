@@ -29,10 +29,10 @@ export function createApp({db=openStore(),env=process.env}={}){
       if(req.method==='OPTIONS'){if(!allowed.has(req.headers.origin))return send(res,403,{error:'不允许的来源'});res.writeHead(204,{'Access-Control-Allow-Methods':'GET,POST,OPTIONS','Access-Control-Allow-Headers':'Content-Type'});return res.end();}
       if(!p.startsWith('/api/video/')){
         const rel=p==='/'?'video-studio.html':p.slice(1)+(p.endsWith('/')?'index.html':'');
-        if(!/^(video-studio\.html|assets\/video-[a-z0-9.-]+|video-studio\/(?:en|ja|fr|es)\/index\.html|video-studio\/manifest\.webmanifest)$/.test(rel)||!['GET','HEAD'].includes(req.method))return send(res,404,{error:'Not found'});
+        if(!/^((?:video-studio|app-builder)\.html|assets\/(?:video-|app-builder)[a-z0-9.-]+|video-studio\/(?:en|ja|fr|es)\/index\.html|video-studio\/manifest\.webmanifest)$/.test(rel)||!['GET','HEAD'].includes(req.method))return send(res,404,{error:'Not found'});
         const data=await readFile(resolve(root,rel));
         const types={'.html':'text/html; charset=utf-8','.css':'text/css','.mjs':'text/javascript','.js':'text/javascript','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
-        res.writeHead(200,{'Content-Type':types[extname(rel)]||'application/octet-stream','Cache-Control':'no-cache','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"});return res.end(req.method==='HEAD'?undefined:data);
+        res.writeHead(200,{'Content-Type':types[extname(rel)]||'application/octet-stream','Cache-Control':'no-cache','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self'; frame-src 'self' about:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"});return res.end(req.method==='HEAD'?undefined:data);
       }
       // Acknowledge notifications without trusting them. Signed provider queries are authoritative.
       if(p==='/api/video/payments/wechat-notify'&&req.method==='POST'){req.resume();res.writeHead(204);return res.end();}
