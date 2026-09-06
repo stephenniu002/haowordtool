@@ -1,0 +1,2 @@
+# Preserve the upstream dictionary bytes and its reproducible checksum on Windows.
+assets/enable1.txt -text
