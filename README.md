@@ -9,6 +9,7 @@ No dependency installation is required. Use Node.js:
 ```
 node scripts/generate-site.mjs
 node --test tests/solver.test.cjs
+node --test tests/media.test.mjs
 node scripts/validate-site.mjs
 ```
 
@@ -23,3 +24,9 @@ Dictionary provenance, limitations and checksum: [assets/DICTIONARY.md](assets/D
 Review the branch diff, run the checks, then merge into the existing publishing branch using the repository's established hosting configuration. Do not point CNAME to a second deployment. Keep a copy of the previous commit for rollback. Verify live CA? → CAT = 4 and CART? → TRACK = 6 after deployment.
 
 Search Console setup and follow-up work: [SEARCH_GROWTH.zh-CN.md](SEARCH_GROWTH.zh-CN.md). Search traffic and AdSense approval are not guaranteed by this release.
+
+## Media downloader
+
+`/media-downloader.html` is a standalone, browser-only media download tool. Edit its HTML and `assets/media*` directly; generation preserves them and adds navigation and sitemap entries. No proxy server, accounts, payment, or additional dependencies are required.
+
+Supports CORS-enabled audio/video files and unencrypted HLS VOD with MPEG-TS segments (up to 2,000 segments and 256 MiB total). Master playlists offer resolution selection. Live streams, DRM/encryption, DASH, fragmented MP4, byte ranges, discontinuities and separate audio tracks are rejected. HLS output is `.ts`, not transcoded MP4. Downloads remain in memory until saved or the page closes. Large files may exceed memory on mobile devices. Source URLs are never stored by this page; requests omit cookies and referrers, but the source sees the user's IP and requested URL. This route intentionally loads no third-party scripts.
