@@ -7,4 +7,5 @@ const models=[
 {name:'MuseTalk · 嘴型同步',purpose:'用音频驱动视频中的人物嘴型，不负责生成聊天回复。',format:'Python 项目 + 多个权重文件，非 GGUF',hardware:'需按官方环境配置 GPU；不是可直接安装的手机 App。',license:'代码 MIT；权重和第三方组件需分别检查许可。',url:'https://github.com/TMElyralab/MuseTalk'},
 {name:'LivePortrait · 头像动画',purpose:'将驱动动作应用到人像，制作表情与头部动画。',format:'Python 项目 + 多个权重文件，非 GGUF',hardware:'按官方安装说明配置设备；下载量取决于所选组件。',license:'商用前检查全部依赖；部分 InsightFace 预训练模型限非商业研究。',url:'https://github.com/KlingAIResearch/LivePortrait'}];
 for(const model of models){const card=document.createElement('article');const title=document.createElement('h3');title.textContent=model.name;card.append(title);for(const text of [model.purpose,model.format,model.hardware,model.license]){const p=document.createElement('p');p.textContent=text;card.append(p);}const a=document.createElement('a');a.href=model.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='前往官方下载页 ↗';card.append(a);section.querySelector('.model-grid').append(card);}document.querySelector('#install').after(section);
-const nav=document.querySelector('header nav');const a=document.createElement('a');a.href='#models';a.textContent='模型下载';nav.append(a);}
+}
+
