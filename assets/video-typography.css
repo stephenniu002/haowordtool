@@ -1,0 +1,11 @@
+:root{--haoword-font:"Segoe UI","Microsoft YaHei","PingFang SC","Hiragino Sans","Yu Gothic UI",Arial,sans-serif;--haoword-code:Consolas,"SFMono-Regular",monospace}
+html,body{font-family:var(--haoword-font);font-size:16px;line-height:1.6}
+button,input,textarea,select,summary,header,nav,h1,h2,h3,h4{font-family:var(--haoword-font)}
+button,input,select,summary{line-height:1.5}
+pre,code,kbd,.editors textarea{font-family:var(--haoword-code)}
+.app-builder-page>header{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:18px 4%}
+.app-builder-page>header>a:first-child{margin-right:auto;line-height:1.5}
+.app-builder-page>header>span,.app-builder-page>header>a:not(:first-child){display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 16px;margin:0;border:1px solid #3b4657;border-radius:10px;background:#172131;color:#e5eaf2;font-family:var(--haoword-font);font-size:14px;font-weight:600;line-height:20px;letter-spacing:0;text-align:center}
+.app-builder-page>header>span{background:#222c3a;color:#bfcadb}
+.app-builder-page>header>a:not(:first-child):hover{background:#26334a;border-color:#7786a1}
+@media(max-width:720px){.app-builder-page>header>a:first-child{width:100%;margin:0}.app-builder-page>header>span,.app-builder-page>header>a:not(:first-child){flex:1 1 auto}.app-builder-page>header>a[href*="ai-companion"]{flex-basis:100%}}
