@@ -5,6 +5,7 @@ try{const saved=localStorage.getItem('haoword-studio-language');if(saved in LANG
 if(typeof location!=='undefined'){const route=location.pathname.match(/^\/video-studio\/(en|ja|fr|es)(?:\/|$)/);if(route)language=route[1];}
 export const getLanguage=()=>language;
 export const messages={
+  '我的AI 女友&男友':['My AI Girlfriend & Boyfriend','AI彼女・彼氏','Ma copine et mon copain IA','Mi novia y novio IA'],
   '语言':['Language','言語','Langue','Idioma'],
   '跳到工作台':['Skip to studio','スタジオへ移動','Aller au studio','Ir al estudio'],
   '视频工作台':['Video studio','動画スタジオ','Studio vidéo','Estudio de vídeo'],
