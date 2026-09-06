@@ -2,3 +2,5 @@
 [hidden]{display:none!important}
 .language-picker{display:flex;align-items:center;gap:8px;margin:0;color:var(--muted);font-size:13px}.language-picker select{width:125px;padding:7px 10px;font-size:14px}@media(max-width:760px){.language-picker{margin-left:auto}.language-picker select{width:110px}header #account-button{font-size:12px;padding:8px 10px}}
 .studio-faq{padding:12px 0 32px}.studio-faq h2{font-size:24px}.studio-faq details{border-top:1px solid var(--line);padding:14px 0}.studio-faq summary{cursor:pointer;font-size:16px}.studio-faq p{color:var(--muted);font-size:14px;margin:12px 0}.studio-faq nav{margin-top:22px;flex-wrap:wrap}
+
+.apps[hidden]{display:none!important}

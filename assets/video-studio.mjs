@@ -36,7 +36,7 @@ function preview(){if(!project)return;const s=project.scenes[current],total=proj
 function stop(){playing=false;cancelAnimationFrame(tick);$('play').textContent='▶';$('play').setAttribute('aria-label','播放分镜预览');}
 function animate(){if(!playing)return;clock=(performance.now()-playStarted)/1000;const total=project.scenes.reduce((n,s)=>n+s.duration,0);if(clock>=total){clock=total;preview();stop();return;}let at=0;current=project.scenes.findIndex(s=>{at+=s.duration;return clock<at;});preview();tick=requestAnimationFrame(animate);}
 function download(name,body,type){const url=URL.createObjectURL(new Blob([body],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);}
-function refreshUser(u){user=u;$('account-button').textContent=u?`${u.email.split('@')[0]} · 退出`:'登录 / 注册';$('membership').textContent=u?(u.active?`订阅有效至 ${new Date(u.expires).toLocaleString(getLanguage())}`:'尚未开通 / 订阅已到期'):'尚未登录';}
+function refreshUser(u){user=u;const active=!!u?.active;const native=new URLSearchParams(location.search).get('native')==='1';$('apps').hidden=!active||native;for(const kind of ['android','ios']){const a=$(kind+'-link');const ready=active&&config?.downloads?.[kind];if(ready){a.href=apiBase()+'/api/video/apps/'+kind;a.querySelector('small').textContent=({en:'Download purchased app',ja:'購入済みアプリをダウンロード',fr:'Télécharger l’application achetée',es:'Descargar la aplicación comprada'})[getLanguage()]||'下载已购 App';}else a.removeAttribute('href');a.setAttribute('aria-disabled',String(!ready));} $('account-button').textContent=u?`${u.email.split('@')[0]} · 退出`:'登录 / 注册';$('membership').textContent=u?(u.active?`订阅有效至 ${new Date(u.expires).toLocaleString(getLanguage())}`:'尚未开通 / 订阅已到期'):'尚未登录';}
 function requireUser(){if(!config)throw new Error('制作服务尚未连接，请先使用免费分镜工具');if(!user){$('auth-dialog').showModal();throw new Error('请先登录账号');}}
 $('prompt').addEventListener('input',()=>$('char-count').textContent=`${$('prompt').value.length} / 1800`);
 const examples={
@@ -78,7 +78,6 @@ async function init(){
   try{config=await api('/config');$('connection').textContent=config.render?'制作服务已连接 · 完成分镜后可提交配音和渲染':'编辑模式 · 配音 / 渲染服务尚未开通，可免费拆分脚本、编辑和下载分镜工程';
     document.querySelectorAll('[data-pay]').forEach(b=>b.disabled=!config.payments[b.dataset.pay]);
     if(config.cnyFen)$('cny-price').textContent=`支付宝 / 微信：¥ ${(config.cnyFen/100).toFixed(2)} / 30 天（运营方设定）`;
-    for(const kind of ['android','ios'])if(config[kind]){const a=$(`${kind}-link`);a.href=config[kind];a.setAttribute('aria-disabled','false');a.rel='noopener noreferrer';a.querySelector('small').textContent=kind==='android'?'下载正式 APK ↗':'前往苹果下载页 ↗';}
     try{refreshUser((await api('/me')).user);await Promise.all([refreshJobs(),refreshOrders()]);}catch{refreshUser(null);}
   }catch{$('connection').textContent='免费分镜工具可用 · 制作服务尚未连接，AI 起稿、账号、配音、付款和成片下载暂不可用';}
 }

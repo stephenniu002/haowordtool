@@ -38,7 +38,7 @@ export function createApp({db=openStore(),env=process.env}={}){
       if(p==='/api/video/payments/wechat-notify'&&req.method==='POST'){req.resume();res.writeHead(204);return res.end();}
       if(req.method!=='GET'&&(!req.headers.origin||!allowed.has(req.headers.origin)))return send(res,403,{error:'请求来源校验失败'});
       const ip=req.socket.remoteAddress||'unknown';
-      if(p==='/api/video/config'&&req.method==='GET')return send(res,200,{plan:PLAN,cnyFen:Number(env.PLAN_CNY_FEN)||null,payments:paymentConfig(env),render:env.RENDER_ENABLED==='true'&&!!env.ELEVENLABS_API_KEY&&!!env.ELEVENLABS_VOICE_ID,ai:!!(env.XAI_API_KEY&&env.XAI_MODEL),android:validLink(env.ANDROID_DOWNLOAD_URL),ios:validLink(env.IOS_DOWNLOAD_URL),captionsMirage:false});
+      if(p==='/api/video/config'&&req.method==='GET')return send(res,200,{plan:PLAN,cnyFen:Number(env.PLAN_CNY_FEN)||null,payments:paymentConfig(env),render:env.RENDER_ENABLED==='true'&&!!env.ELEVENLABS_API_KEY&&!!env.ELEVENLABS_VOICE_ID,ai:!!(env.XAI_API_KEY&&env.XAI_MODEL),downloads:{android:!!env.ANDROID_PACKAGE_FILE,ios:!!env.IOS_PACKAGE_FILE},captionsMirage:false});
       if(['/api/video/register','/api/video/login'].includes(p)&&req.method==='POST'){
         rateLimit(db,`auth:${ip}`,15,900000);
         const b=await body(req),email=String(b.email||'').trim().toLowerCase(),password=String(b.password||'');
@@ -59,6 +59,16 @@ export function createApp({db=openStore(),env=process.env}={}){
         res.setHeader('Set-Cookie',cookie(token,604800));return send(res,200,{user:userData(u)});
       }
       const u=auth(req);
+      const appDownload=p.match(/^\/api\/video\/apps\/(android|ios)$/);
+      if(appDownload&&req.method==='GET'){
+        subscriber(u);
+        const platform=appDownload[1],configured=platform==='android'?env.ANDROID_PACKAGE_FILE:env.IOS_PACKAGE_FILE;
+        if(!configured)return send(res,503,{error:'安装包尚未发布'});
+        const file=resolve(configured),info=await stat(file);
+        if(!info.isFile())return send(res,503,{error:'安装包暂不可用'});
+        res.writeHead(200,{'Content-Type':'application/octet-stream','Content-Length':info.size,'Content-Disposition':'attachment; filename="haoword-app.'+(platform==='android'?'apk':'ipa')+'"','Cache-Control':'private, no-store'});
+        createReadStream(file).on('error',()=>res.destroy()).pipe(res);return;
+      }
       if(p==='/api/video/me'&&req.method==='GET')return send(res,200,{user:userData(u)});
       if(p==='/api/video/logout'&&req.method==='POST'){const t=req.headers.cookie?.match(/video_session=([a-f0-9]{64})/)?.[1];if(t)db.prepare('DELETE FROM sessions WHERE token=?').run(sha(t));res.setHeader('Set-Cookie',cookie('',0));return send(res,200,{ok:true});}
       if(p==='/api/video/storyboard'&&req.method==='POST'){
@@ -116,5 +126,4 @@ export function createApp({db=openStore(),env=process.env}={}){
     }catch(e){if(res.headersSent){res.destroy();return;}const status=e.status||400;return send(res,status,{error:e.code==='ENOENT'?'文件暂不可用':e.code?.startsWith('SQLITE')?'操作未完成，请刷新重试':e.message||'请求失败'});}
   });
 }
-function validLink(value){try{const u=new URL(value);return u.protocol==='https:'?u.href:null;}catch{return null;}}
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){const port=Number(process.env.PORT)||8787;createApp().listen(port,process.env.HOST||'127.0.0.1',()=>console.log(`Video Studio: http://localhost:${port}/video-studio.html`));}
