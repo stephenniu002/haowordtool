@@ -1,7 +1,6 @@
 import {setupSidebar} from './companion-sidebar.mjs';
 import {rachel,setupHub} from './companion-hub.mjs';
 import {setupTools} from './companion-tools.mjs';
-import {setupModels} from './companion-models.mjs';
 import {moreProfiles,setupLibrary} from './companion-library.mjs';
 import {setupInstall} from './companion-install.mjs';
 import {setupIdle} from './companion-idle.mjs';
@@ -18,7 +17,7 @@ profiles.forEach((p,i)=>{const b=document.createElement('button');b.className='c
 $('#profile').onsubmit=e=>{e.preventDefault();apply();$('#status').textContent='角色设定已应用，示例对话已重置。';};
 $('#composer').onsubmit=e=>{e.preventDefault();const input=$('#message'),text=input.value.trim();if(!text)return;bubble(text,true);input.value='';bubble(replies[data().language]);};
 $('#clear').onclick=()=>{$('#messages').replaceChildren();$('#status').textContent='当前对话已清空。';};
-$('#export').onclick=()=>{if(!$('#profile').reportValidity())return;const url=URL.createObjectURL(new Blob([JSON.stringify({version:2,fictional:true,type:profiles[selected].type,...data(),media:mediaMetadata()},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='haoword-character.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);};setupUploads();select(0);setupIdle();setupLibrary(profiles);setupInstall();setupModels();setupTools();setupHub(profiles);setupSidebar();
+$('#export').onclick=()=>{if(!$('#profile').reportValidity())return;const url=URL.createObjectURL(new Blob([JSON.stringify({version:2,fictional:true,type:profiles[selected].type,...data(),media:mediaMetadata()},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='haoword-character.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);};setupUploads();select(0);setupIdle();setupLibrary(profiles);setupInstall();setupTools();setupHub(profiles);setupSidebar();
 
 
 
