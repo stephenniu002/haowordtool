@@ -4,22 +4,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   menu?.addEventListener('click',()=>menu.setAttribute('aria-expanded',String(Boolean(document.querySelector('.nav-links')?.classList.toggle('open')))));
   const form=document.querySelector('#solverForm'); if(!form) return;
   const input=document.querySelector('#letters'),output=document.querySelector('#results'),min=document.querySelector('#minLength'),max=document.querySelector('#maxLength'),exact=document.querySelector('#exact'),submit=form.querySelector('[type="submit"]');
-  let dictionary,generation=0,found=[],shown=0;
+  let generation=0,found=[],shown=0;
   const message=text=>{const p=document.createElement('p');p.className='notice';p.textContent=text;output.replaceChildren(p);};
   const syncMode=()=>{min.disabled=max.disabled=exact.checked;}; exact.addEventListener('change',syncMode);
-  async function loadDictionary() {
-    if(!dictionary) dictionary=(async()=>{
-      const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
-      try {
-        const response=await fetch('/assets/enable1.txt',{signal:controller.signal});
-        if(!response.ok) throw Error('Dictionary unavailable');
-        const index=LetterSolver.indexWords(await response.text());
-        if(index.flat().length<100000) throw Error('Incomplete dictionary');
-        return index;
-      } finally {clearTimeout(timer);}
-    })().catch(error=>{dictionary=undefined;throw error;});
-    return dictionary;
-  }
+  const loadDictionary=LetterDictionary.createLoader({indexWords:LetterSolver.indexWords});
+  const clearValidation=()=>{for(const field of [input,min,max])field.removeAttribute('aria-invalid');};
   function appendPage() {
     const list=output.querySelector('ul'),end=Math.min(shown+60,found.length),fragment=document.createDocumentFragment();
     for(const result of found.slice(shown,end)) {
@@ -43,15 +32,19 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   async function solve(event) {
     event?.preventDefault();const request=++generation;let settings,rack;
-    try {settings={min:Number(min.value),max:Number(max.value),exact:exact.checked};rack=LetterSolver.options(input.value,settings).rack;input.removeAttribute('aria-invalid');}
-    catch(error) {input.setAttribute('aria-invalid','true');message(error.message);return;}
+    // A validation error must also release any previous loading state.
+    submit.disabled=false;output.removeAttribute('aria-busy');clearValidation();
+    try {rack=LetterSolver.parseRack(input.value);}
+    catch(error) {input.setAttribute('aria-invalid','true');message(error.message);input.focus();return;}
+    try {settings={min:Number(min.value),max:Number(max.value),exact:exact.checked};LetterSolver.options(rack,settings);}
+    catch(error) {min.setAttribute('aria-invalid','true');max.setAttribute('aria-invalid','true');message(error.message);min.focus();return;}
     submit.disabled=true;output.setAttribute('aria-busy','true');message('Loading the word list… Your search is processed on this device.');
     try {const index=await loadDictionary();if(request!==generation)return;found=LetterSolver.search(index,rack,settings);render(rack);}
     catch {if(request===generation)message('The word list could not be loaded. Check your connection and select Find words to retry.');}
     finally {if(request===generation){submit.disabled=false;output.removeAttribute('aria-busy');}}
   }
   form.addEventListener('submit',solve);
-  form.addEventListener('input',()=>{generation++;submit.disabled=false;output.removeAttribute('aria-busy');message('Settings changed. Select Find words to update the results.');});
+  form.addEventListener('input',()=>{generation++;submit.disabled=false;output.removeAttribute('aria-busy');clearValidation();message('Settings changed. Select Find words to update the results.');});
   const params=new URLSearchParams(location.search);
   if(params.has('letters')) {
     input.value=params.get('letters');

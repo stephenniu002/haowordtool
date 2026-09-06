@@ -8,7 +8,7 @@ No dependency installation is required. Use Node.js:
 
 ```
 node scripts/generate-site.mjs
-node --test tests/solver.test.cjs
+node --test tests/*.test.cjs
 node scripts/validate-site.mjs
 ```
 
@@ -16,7 +16,7 @@ Edit templates in `scripts/generate-site.mjs`, article data in `scripts/content.
 
 Serve this directory over HTTP for testing: opening index.html as a local file cannot fetch the dictionary. No server API, external dictionary API or user search logging is introduced. The browser fetches the static dictionary once per page session on first search. User-entered searches are not placed into the URL. Prewritten tutorial links contain public sample racks; normal hosting/advertising services can see requested URLs as described in the site's privacy notice.
 
-Dictionary provenance, limitations and checksum: [assets/DICTIONARY.md](assets/DICTIONARY.md).
+Dictionary provenance, limitations and checksum: [assets/DICTIONARY.md](assets/DICTIONARY.md). The loader verifies the exact SHA-256 before indexing, shares concurrent loads and permits retries after failures. Serve over HTTPS (or localhost for development) so the browser's Web Crypto integrity check is available.
 
 ## Release
 

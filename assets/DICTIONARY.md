@@ -12,4 +12,4 @@ The original file is retained without modification. The application deduplicates
 
 This is a broad historical lexicon, not a common-word frequency list, definition database, child-safe curated list or current official Scrabble/Words With Friends dictionary. It includes rare and potentially sensitive entries. Do not claim tournament validity from inclusion, or invalidity from absence. The engine does not generate inflections absent from the data.
 
-To update: review the upstream source and license, replace enable1.txt, record the new checksum, run `node --test tests/solver.test.cjs` and `node scripts/validate-site.mjs`, and update this record. Do not silently swap to an incomplete download.
+To update: review the upstream source and license, replace enable1.txt, update the expected checksum in assets/dictionary-loader.js and tests/solver.test.cjs, run `node --test tests/*.test.cjs` and `node scripts/validate-site.mjs`, and update this record. The browser rejects a mismatched file, even if it still contains many words. Do not silently swap to an incomplete download.

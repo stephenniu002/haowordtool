@@ -7,17 +7,22 @@
     if(rack.length<2||rack.length>15) throw Error('Enter 2–15 tiles. Each ? or * counts as one tile.');
     return rack;
   }
-  function match(word,rack) {
-    const counts=Object.create(null),blankPositions=[]; let blanks=0,score=0;
-    for(const ch of rack) {if(ch==='?'||ch==='*') blanks++; else counts[ch]=(counts[ch]||0)+1;}
+  function inventory(rack) {
+    const counts=new Uint8Array(26);let blanks=0;
+    for(const ch of rack) {if(ch==='?'||ch==='*') blanks++; else counts[ch.charCodeAt(0)-97]++;}
+    return {counts,blanks};
+  }
+  function matchInventory(word,available) {
+    const counts=available.counts.slice(),blankPositions=[];let blanks=available.blanks,score=0;
     for(let i=0;i<word.length;i++) {
-      const ch=word[i];
-      if(counts[ch]) {counts[ch]--;score+=VALUES[ch];}
+      const ch=word[i],offset=word.charCodeAt(i)-97;
+      if(counts[offset]) {counts[offset]--;score+=VALUES[ch];}
       else if(blanks) {blanks--;blankPositions.push(i);}
       else return null;
     }
     return {word,score,blankPositions};
   }
+  function match(word,rack) {return matchInventory(word,inventory(rack));}
   function indexWords(text) {
     const index=Array.from({length:16},()=>[]);
     for(const word of new Set(text.split(/\s+/))) if(/^[a-z]{2,15}$/.test(word)) index[word.length].push(word);
@@ -30,8 +35,8 @@
     return {rack,min,max:Math.min(max,rack.length)};
   }
   function search(index,input,settings) {
-    const {rack,min,max}=options(input,settings),results=[];
-    for(let n=min;n<=max;n++) for(const word of index[n]) {const hit=match(word,rack);if(hit) results.push(hit);}
+    const {rack,min,max}=options(input,settings),results=[],available=inventory(rack);
+    for(let n=min;n<=max;n++) for(const word of index[n]) {const hit=matchInventory(word,available);if(hit) results.push(hit);}
     return results.sort((a,b)=>b.word.length-a.word.length||b.score-a.score||(a.word<b.word?-1:a.word>b.word?1:0));
   }
   const api={parseRack,match,indexWords,options,search};

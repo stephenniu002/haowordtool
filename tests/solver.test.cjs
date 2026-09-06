@@ -59,6 +59,8 @@ test('generated tool pages load the core first and provide every length',()=>{
   for(const file of ['index.html','unscrambler.html']) {
     const html=fs.readFileSync(path.join(root,file),'utf8');
     assert.ok(html.indexOf('/assets/solver-core.js')<html.indexOf('/assets/site.js'));
+    assert.ok(html.indexOf('/assets/dictionary-loader.js')>html.indexOf('/assets/solver-core.js'));
+    assert.ok(html.indexOf('/assets/dictionary-loader.js')<html.indexOf('/assets/site.js'));
     assert.ok(!html.includes('maxlength="15"'));
     for(const id of ['minLength','maxLength']) {
       const select=html.match(new RegExp(`<select id="${id}">([\\s\\S]*?)</select>`))[1];
@@ -67,4 +69,13 @@ test('generated tool pages load the core first and provide every length',()=>{
     assert.ok(html.includes('<noscript>'));
     assert.ok(html.includes('https://haowordtool.com/'+(file==='index.html'?'':file)));
   }
+});
+test('each candidate starts from a fresh inventory',()=>{
+  const words=['aab','aba','abb','baa','bab','bba','bbb'];
+  const forward=core.indexWords(words.join('\n')),reverse=core.indexWords([...words].reverse().join('\n'));
+  assert.deepEqual(core.search(forward,'aab?'),core.search(reverse,'aab?'));
+  assert.deepEqual(core.search(forward,'aab?'),core.search(forward,'aab?'));
+  const results=core.search(forward,'aab?');
+  assert.equal(results.find(r=>r.word==='abb').score,4);
+  assert.ok(!results.some(r=>r.word==='bbb'));
 });
