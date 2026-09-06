@@ -1,3 +1,4 @@
+import {createContactCards} from './video-contact-card.mjs';
 import {contacts} from './video-contact-config.mjs';
 const number=contacts.whatsapp.replace(/[\s()+-]/g,'');
 const whatsapp=/^[1-9]\d{6,14}$/.test(number),wechat=contacts.wechat.trim();
@@ -8,7 +9,7 @@ if(whatsapp||wechat||contacts.whatsappQr||contacts.wechatQr){
   const title=document.createElement('h2');title.textContent=labels[0];title.style.cssText='font-size:18px;margin:0';section.append(title);
   if(whatsapp){const a=document.createElement('a');a.href=`https://wa.me/${number}`;a.target='_blank';a.rel='noopener noreferrer';a.textContent=`WhatsApp +${number} ↗`;a.style.color='#c8ff73';section.append(a);}
   if(wechat){const id=document.createElement('span');id.textContent=`WeChat: ${wechat}`;id.style.userSelect='all';const button=document.createElement('button');button.type='button';button.textContent=labels[1];button.style.cssText='padding:10px 14px;border-radius:8px;cursor:pointer';const status=document.createElement('span');status.setAttribute('role','status');button.onclick=async()=>{try{await navigator.clipboard.writeText(wechat);status.textContent=labels[2];}catch{status.textContent=labels[3];}};section.append(id,button,status);}
-  if(contacts.whatsappQr){const card=document.createElement('div');const label=document.createElement('p');label.textContent='WhatsApp · CUTISCURA';const link=document.createElement('a');link.href=contacts.whatsappQr;link.target='_blank';link.rel='noopener';link.setAttribute('aria-label','WhatsApp QR · Open full image');const img=document.createElement('img');img.src=contacts.whatsappQr;img.alt='CUTISCURA WhatsApp contact QR code';img.loading='lazy';img.style.cssText='width:320px;max-width:100%;height:auto;border-radius:12px';link.append(img);card.append(label,link);section.append(card);}
-  if(contacts.wechatQr){const card=document.createElement('div');const label=document.createElement('p');label.textContent='WeChat / 微信 · Lily';const link=document.createElement('a');link.href=contacts.wechatQr;link.target='_blank';link.rel='noopener';link.setAttribute('aria-label','WeChat QR · Open full image');const img=document.createElement('img');img.src=contacts.wechatQr;img.alt='Lily WeChat contact QR code';img.loading='lazy';img.style.cssText='width:320px;max-width:100%;height:auto;border-radius:12px';link.append(img);card.append(label,link);section.append(card);}
+  createContactCards(section,contacts,language);
   (document.querySelector('main')||document.body).append(section);
 }
+
