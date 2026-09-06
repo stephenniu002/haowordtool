@@ -9,3 +9,9 @@ pre,code,kbd,.editors textarea{font-family:var(--haoword-code)}
 .app-builder-page>header>span{background:#222c3a;color:#bfcadb}
 .app-builder-page>header>a:not(:first-child):hover{background:#26334a;border-color:#7786a1}
 @media(max-width:720px){.app-builder-page>header>a:first-child{width:100%;margin:0}.app-builder-page>header>span,.app-builder-page>header>a:not(:first-child){flex:1 1 auto}.app-builder-page>header>a[href*="ai-companion"]{flex-basis:100%}}
+
+/* Shared interface rhythm across all studios. */
+body a,body label,body p,body span,body small,body li,body strong,body dialog,body footer{font-family:var(--haoword-font)}
+header a,nav a,button,summary{font-weight:600;letter-spacing:normal}
+.language-picker{display:inline-flex;align-items:center;gap:8px;font-size:14px;margin:0}.language-picker select{width:auto;margin:0;padding:8px 10px;min-height:40px;font-family:var(--haoword-font)}
+html[lang="zh-CN"] .eyebrow,html[lang="zh-CN"] .hub-brand small{letter-spacing:normal}

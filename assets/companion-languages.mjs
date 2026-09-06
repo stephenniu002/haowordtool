@@ -1,3 +1,4 @@
+import {menuCopy} from './video-menu-copy.mjs';
 const names={'zh-CN':'中文',en:'English',ja:'日本語',fr:'Français',es:'Español'},columns={en:0,ja:1,fr:2,es:3};
 const labels={
 '展开 / 收起人物设定':['Expand / collapse persona','人物設定を開く・閉じる','Afficher / masquer le profil','Mostrar / ocultar personalidad'],
@@ -62,7 +63,7 @@ document.querySelector('body>header').append(picker);
 const originals=new WeakMap(),attributes=new WeakMap();
 function apply(){observer.disconnect();document.documentElement.lang=language;
 document.querySelectorAll('select:not(.companion-language) option').forEach(option=>{if(!option.hasAttribute('value'))option.setAttribute('value',option.value);});
-const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);while(walker.nextNode()){const node=walker.currentNode;if(node.parentElement.closest('script,style,textarea,[data-no-i18n],#messages'))continue;let old=originals.get(node);if(!old||node.nodeValue!==old.rendered)old={source:node.nodeValue};const source=old.source.trim(),value=labels[source]?.[columns[language]]||source;const rendered=old.source.replace(source,value);originals.set(node,{source:old.source,rendered});if(node.nodeValue!==rendered)node.nodeValue=rendered;}
-document.querySelectorAll('[placeholder]').forEach(el=>{const source=attributes.get(el)||el.getAttribute('placeholder');attributes.set(el,source);el.setAttribute('placeholder',labels[source]?.[columns[language]]||source);});
+const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);while(walker.nextNode()){const node=walker.currentNode;if(node.parentElement.closest('script,style,textarea,[data-no-i18n],#messages'))continue;let old=originals.get(node);if(!old||node.nodeValue!==old.rendered)old={source:node.nodeValue};const source=old.source.trim(),value=labels[source]?.[columns[language]]||menuCopy(source,language);const rendered=old.source.replace(source,value);originals.set(node,{source:old.source,rendered});if(node.nodeValue!==rendered)node.nodeValue=rendered;}
+document.querySelectorAll('[placeholder],[aria-label],[title]').forEach(el=>{if(el.closest('[data-no-i18n]'))return;const record=attributes.get(el)||{};for(const attr of ['placeholder','aria-label','title']){if(!el.hasAttribute(attr))continue;const source=record[attr]||el.getAttribute(attr);record[attr]=source;el.setAttribute(attr,labels[source]?.[columns[language]]||menuCopy(source,language));}attributes.set(el,record);});
 observer.observe(document.body,{childList:true,subtree:true,characterData:true});}
-const observer=new MutationObserver(apply);picker.onchange=()=>{language=picker.value;try{localStorage.setItem('haoword-studio-language',language);}catch{}apply();};apply();
+const observer=new MutationObserver(apply);picker.onchange=()=>{language=picker.value;try{localStorage.setItem('haoword-studio-language',language);}catch{}apply();document.dispatchEvent(new CustomEvent('studio-languagechange',{detail:language}));};apply();

@@ -1,5 +1,7 @@
 import {createContactCards} from './video-contact-card.mjs';
 import {contacts} from './video-contact-config.mjs';
+function render(){
+document.querySelector('#contact-support')?.remove();
 const number=contacts.whatsapp.replace(/[\s()+-]/g,'');
 const whatsapp=/^[1-9]\d{6,14}$/.test(number),wechat=contacts.wechat.trim();
 if(whatsapp||wechat||contacts.whatsappQr||contacts.wechatQr){
@@ -13,3 +15,6 @@ if(whatsapp||wechat||contacts.whatsappQr||contacts.wechatQr){
   (document.querySelector('main')||document.body).append(section);
 }
 
+
+}
+render();document.addEventListener('studio-languagechange',render);

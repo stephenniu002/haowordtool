@@ -1,3 +1,4 @@
+import {menuCopy} from './video-menu-copy.mjs';
 export const LANGUAGES = Object.freeze({'zh-CN':'中文',en:'English',ja:'日本語',fr:'Français',es:'Español'});
 const columns={en:0,ja:1,fr:2,es:3};
 let language='zh-CN';
@@ -179,24 +180,25 @@ const patterns=[
   [/^制作中 (\d+)%$/,['Rendering $1%','制作中 $1%','Rendu $1 %','Renderizando $1%']],
 ];
 export function translate(source,lang=language){
-  const index=columns[lang];if(index===undefined)return source;
+  const index=columns[lang];if(index===undefined)return menuCopy(source,lang);
   if(messages[source])return messages[source][index];
   for(const [pattern,values]of patterns)if(pattern.test(source))return source.replace(pattern,values[index]).replace('支付宝','Alipay').replace('微信','WeChat');
-  return source;
+  return menuCopy(source,lang);
 }
 export const t=source=>translate(source);
-export function initI18n(){
+export function initI18n({preserveTitle=false}={}){
   const reverse=new Map();for(const [source,values]of Object.entries(messages))for(const value of values)if(!reverse.has(value))reverse.set(value,source);
   const sourceText=value=>{const trimmed=value.trim();return value.replace(trimmed,reverse.get(trimmed)||trimmed);};
   const label=document.createElement('label');label.className='language-picker';label.append(document.createTextNode('语言'));
   const select=document.createElement('select');select.id='studio-language';select.setAttribute('aria-label','语言');
   for(const [value,name]of Object.entries(LANGUAGES)){const option=document.createElement('option');option.value=value;option.textContent=name;select.append(option);}select.value=language;label.append(select);
-  document.querySelector('header').insertBefore(label,document.getElementById('account-button'));
+  document.querySelector('header').insertBefore(label,document.querySelector('header #account-button'));
   const original=new WeakMap(),attrs=new WeakMap();let scheduled=false;
   const excluded=el=>el?.closest('script,style,textarea,[data-no-i18n],.job p:first-child,.address');
   function apply(){
+    document.querySelectorAll('select:not(#studio-language) option').forEach(o=>{if(!o.hasAttribute('value'))o.setAttribute('value',o.value);});
     scheduled=false;observer.disconnect();document.documentElement.lang=language;
-    document.title=({'zh-CN':'视频自动制作工作台 · HaoWord Studio',en:'Video Production Workspace · HaoWord Studio',ja:'動画制作ワークスペース · HaoWord Studio',fr:'Espace de production vidéo · HaoWord Studio',es:'Espacio de producción de vídeo · HaoWord Studio'})[language];
+    if(!preserveTitle)document.title=({'zh-CN':'视频自动制作工作台 · HaoWord Studio',en:'Video Production Workspace · HaoWord Studio',ja:'動画制作ワークスペース · HaoWord Studio',fr:'Espace de production vidéo · HaoWord Studio',es:'Espacio de producción de vídeo · HaoWord Studio'})[language];
     const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
     while(walker.nextNode()){
       const node=walker.currentNode;if(excluded(node.parentElement))continue;
