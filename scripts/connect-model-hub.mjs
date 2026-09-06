@@ -1,0 +1,2 @@
+import {readFile,writeFile} from 'node:fs/promises';
+for(const path of ['index.html','ai-companion.html','app-builder.html','video-studio.html',...['en','ja','fr','es'].map(l=>`video-studio/${l}/index.html`)]){let h=await readFile(path,'utf8');const link='<a class="model-hub-entry" href="/ai-companion.html#models">Hugging Face 模型库</a>';if(!h.includes('class="model-hub-entry"'))h=h.includes('</nav>')?h.replace('</nav>',link+'</nav>'):h.replace('</header>',link+'</header>');await writeFile(path,h);}
