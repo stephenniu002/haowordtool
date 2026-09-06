@@ -1,3 +1,5 @@
+import {setupSidebar} from './companion-sidebar.mjs';
+import {rachel,setupHub} from './companion-hub.mjs';
 import {setupTools} from './companion-tools.mjs';
 import {setupModels} from './companion-models.mjs';
 import {moreProfiles,setupLibrary} from './companion-library.mjs';
@@ -11,12 +13,14 @@ const replies={zh:'这是固定示例回复。正式 AI 聊天尚未接通；你
 function data(){return Object.fromEntries(new FormData($('#profile')));}
 function apply(){const b=data();$('#chat-name').textContent=b.name;$('#avatar').textContent=b.name.slice(0,1);updateAvatar();$('#messages').replaceChildren();bubble(greetings[b.language]);}
 function select(i){clearUploads();selected=i;const p=profiles[i];for(const k of ['name','personality','scenario'])$('#profile').elements[k].value=p[k];document.querySelectorAll('.character').forEach((b,j)=>b.setAttribute('aria-pressed',String(i===j)));apply();}
-profiles.splice(2,0,...moreProfiles);
+profiles.splice(2,0,...moreProfiles);profiles.splice(profiles.length-1,0,rachel);
 profiles.forEach((p,i)=>{const b=document.createElement('button');b.className='character';b.type='button';const title=document.createElement('strong');title.textContent=p.name+' · '+p.type;const subtitle=document.createElement('small');subtitle.textContent=p.personality;b.append(title,subtitle);b.onclick=()=>select(i);$('#characters').append(b);});
 $('#profile').onsubmit=e=>{e.preventDefault();apply();$('#status').textContent='角色设定已应用，示例对话已重置。';};
 $('#composer').onsubmit=e=>{e.preventDefault();const input=$('#message'),text=input.value.trim();if(!text)return;bubble(text,true);input.value='';bubble(replies[data().language]);};
 $('#clear').onclick=()=>{$('#messages').replaceChildren();$('#status').textContent='当前对话已清空。';};
-$('#export').onclick=()=>{if(!$('#profile').reportValidity())return;const url=URL.createObjectURL(new Blob([JSON.stringify({version:2,fictional:true,type:profiles[selected].type,...data(),media:mediaMetadata()},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='haoword-character.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);};setupUploads();select(0);setupIdle();setupLibrary(profiles);setupInstall();setupModels();setupTools();
+$('#export').onclick=()=>{if(!$('#profile').reportValidity())return;const url=URL.createObjectURL(new Blob([JSON.stringify({version:2,fictional:true,type:profiles[selected].type,...data(),media:mediaMetadata()},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='haoword-character.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);};setupUploads();select(0);setupIdle();setupLibrary(profiles);setupInstall();setupModels();setupTools();setupHub(profiles);setupSidebar();
+
+
 
 
 
