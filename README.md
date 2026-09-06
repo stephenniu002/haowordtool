@@ -2,7 +2,7 @@
 
 ## Video Studio SaaS
 
-`/video-studio.html` adds the Chinese video studio: storyboard editing, optional AI scripts, ElevenLabs narration, aligned captions, Remotion/HyperFrames rendering and MP4/SRT downloads. Subscription: **30 USDT per 30 days**, renewed by explicit payment, with Alipay, WeChat Pay and manually verified USDT channels. Static hosting supports the editor; production rendering and payments require the separate Node service. Android/iOS packaging sources are in `mobile/`; real download URLs require signed, published applications.
+`/video-studio.html` adds the Chinese video studio: storyboard editing, optional AI scripts, ElevenLabs narration, aligned captions, Remotion/HyperFrames rendering and MP4/SRT downloads. Subscription: **80 USDT per 30 days**, renewed by explicit payment, with Alipay, WeChat Pay and manually verified USDT channels. Static hosting supports the editor; production rendering and payments require the separate Node service. Android/iOS packaging sources are in `mobile/`; real download URLs require signed, published applications.
 
 Setup, configuration and current limitations: [video-saas/DEPLOY.zh-CN.md](video-saas/DEPLOY.zh-CN.md). Captions/Mirage API access is pending; current captions use ElevenLabs timing. No payment provider or paid AI service is enabled without server configuration.
 

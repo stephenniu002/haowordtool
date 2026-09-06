@@ -26,7 +26,7 @@ async function wechat(method,path,data){
 }
 export async function createPayment(order){
   if(!paymentConfig()[order.method])throw new Error('该渠道尚未开通');
-  if(order.method==='usdt')return {address:process.env.USDT_ADDRESS,network:process.env.USDT_NETWORK,amount:'30',verification:'manual',message:'转账后提交交易哈希，核实到账后开通。请勿重复付款。'};
+  if(order.method==='usdt')return {address:process.env.USDT_ADDRESS,network:process.env.USDT_NETWORK,amount:String(order.amount/1000000),verification:'manual',message:'转账后提交交易哈希，核实到账后开通。请勿重复付款。'};
   if(order.method==='alipay'){
     const r=await alipay('alipay.trade.precreate',{out_trade_no:order.id,total_amount:(order.amount/100).toFixed(2),subject:'HaoWord 视频工作台 30天订阅',timeout_express:'30m'});
     return {qr:r.qrCode||r.qr_code};

@@ -1,4 +1,4 @@
-export const PLAN = Object.freeze({name: '创作者月度订阅', usdt: 30, days: 30});
+export const PLAN = Object.freeze({name: '创作者月度订阅', usdt: 80, days: 30});
 export const SCRIPT_LANGUAGES = Object.freeze({'zh-CN':'Chinese',en:'English',ja:'Japanese',fr:'French',es:'Spanish'});
 export const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function validateProject(input) {

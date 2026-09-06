@@ -1,6 +1,6 @@
 # HaoWord 视频工作台：交付与开通
 
-本次需求以最后确认的信息为准：**30 USDT / 30 天订阅**。支付宝、微信、USDT 每次购买延长 30 天；不自动扣款。不是 30U 永久授权，也不是按条收费。
+本次需求以最后确认的信息为准：**80 USDT / 30 天订阅**。支付宝、微信、USDT 每次购买延长 30 天；不自动扣款。不是 30U 永久授权，也不是按条收费。
 
 ## 已实现
 
@@ -23,7 +23,7 @@
 2. 配置 xAI、ElevenLabs 的正式 API 密钥和可用声音 ID，核对套餐允许商业使用及当前 Remotion 商业许可要求。
 3. 申请支付宝/微信对应商户产品权限，配置商户号、应用号、签名私钥和平台公钥。签名密钥只放在服务端环境中。
 4. 填写 USDT **公开收款地址和准确网络**。本版 USDT 需要运营人员独立核对链上到账，不含自动链上索引、确认数监听或自动兑换。
-5. 人民币定价用 `PLAN_CNY_FEN` 明确设定并向用户展示。本项目不会假装把 30 USDT 实时换算成人民币。
+5. 人民币定价用 `PLAN_CNY_FEN` 明确设定并向用户展示。本项目不会假装把 80 USDT 实时换算成人民币。
 6. APK 需要 Android SDK/JDK 和发布签名；iOS 需要 macOS/Xcode、Apple 开发者账号、签名与 App Store/TestFlight 发布。下载按钮只读取真实 HTTPS 地址，未配置则不可点击。
 7. Captions 官方 API 入口现为 Mirage 申请制，官方公开页面没有提供当前可用的具体请求契约。本版**没有声称已接入 Captions/Mirage**，同步字幕来自 ElevenLabs 时间戳。取得正式文档和权限后才可接入数字人口播等功能。
 8. 生产上线前配置客服、数据保留与删除流程；当前账号无自助找回密码或邮箱验证。运营方应在正式向公众开放注册前接入邮件验证与找回。
@@ -79,7 +79,7 @@ Chromium/FFmpeg 需要足够 CPU、内存、磁盘。Dockerfile 已安装系统�
 
 ```sh
 pnpm admin pending
-pnpm admin confirm-usdt ORDER_ID TRANSACTION_HASH "TRC20, recipient address verified, 30 USDT received, confirmations verified"
+pnpm admin confirm-usdt ORDER_ID TRANSACTION_HASH "TRC20, recipient address verified, 80 USDT received, confirmations verified"
 ```
 
 必须先独立核实网络、正确 USDT 合约、收款地址、金额、交易成功状态与确认数。提交的哈希要与订单匹配；审核说明进入审计记录。不要仅根据截图或备注开通。续费从当前有效期与当前时间的较晚者起加 30 天。

@@ -86,7 +86,7 @@ export function createApp({db=openStore(),env=process.env}={}){
         const b=await body(req);if(!['usdt','alipay','wechat'].includes(b.method)||!paymentConfig(env)[b.method])throw new Error('该支付渠道尚未开通');
         const pending=db.prepare("SELECT id FROM orders WHERE user_id=? AND method=? AND status IN ('pending','review') AND created>? ORDER BY created DESC LIMIT 1").get(u.id,b.method,Date.now()-1800000);
         if(pending)return send(res,200,{order:db.prepare('SELECT * FROM orders WHERE id=?').get(pending.id)});
-        const id=randomBytes(16).toString('hex'),amount=b.method==='usdt'?30000000:Number(env.PLAN_CNY_FEN),currency=b.method==='usdt'?'USDT':'CNY';
+        const id=randomBytes(16).toString('hex'),amount=b.method==='usdt'?PLAN.usdt*1000000:Number(env.PLAN_CNY_FEN),currency=b.method==='usdt'?'USDT':'CNY';
         db.prepare('INSERT INTO orders(id,user_id,method,status,amount,currency,created) VALUES(?,?,?,?,?,?,?)').run(id,u.id,b.method,'creating',amount,currency,Date.now());
         try{
           const details=await createPayment({id,method:b.method,amount});
