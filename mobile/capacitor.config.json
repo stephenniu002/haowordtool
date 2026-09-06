@@ -1,0 +1,15 @@
+{
+  "appId": "com.haowordtool.studio",
+  "appName": "HaoWord Studio",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  },
+  "ios": {
+    "contentInset": "automatic"
+  },
+  "server": {
+    "url": "https://haowordtool.com/video-studio.html?native=1",
+    "cleartext": false
+  }
+}

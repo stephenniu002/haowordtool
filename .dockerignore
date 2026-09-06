@@ -1,0 +1,8 @@
+**/node_modules
+**/.env
+**/data
+**/build
+**/.git
+**/android
+**/ios
+**/www

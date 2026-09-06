@@ -1,0 +1,10 @@
+import {bundle} from '@remotion/bundler';
+import {selectComposition,renderMedia} from '@remotion/renderer';
+import {readFile} from 'node:fs/promises';
+import {resolve,dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
+const directory=resolve(process.argv[2]),here=dirname(fileURLToPath(import.meta.url));
+const inputProps=JSON.parse(await readFile(resolve(directory,'render-props.json'),'utf8'));
+const serveUrl=await bundle({entryPoint:resolve(here,'remotion/index.jsx'),outDir:resolve(directory,'bundle')});
+const composition=await selectComposition({serveUrl,id:'Studio',inputProps});
+await renderMedia({serveUrl,composition,inputProps,codec:'h264',outputLocation:resolve(directory,'video.mp4'),concurrency:2});

@@ -1,0 +1,38 @@
+name: Build Video Studio Android APK
+on:
+  workflow_dispatch:
+    inputs:
+      studio_origin:
+        description: Deployed HTTPS studio origin
+        required: true
+        default: https://haowordtool.com
+permissions:
+  contents: read
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: android-actions/setup-android@v3
+      - run: npm install --global pnpm@11.19.0
+      - run: pnpm install --frozen-lockfile
+      - run: node prepare.mjs
+        env:
+          MOBILE_SERVER_ORIGIN: ${{ inputs.studio_origin }}
+      - run: pnpm exec cap add android
+      - run: chmod +x android/gradlew && cd android && ./gradlew assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: haoword-studio-debug-apk
+          path: mobile/android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 14
