@@ -1,3 +1,4 @@
+import {setupIdle} from './companion-idle.mjs';
 import {setupUploads,updateAvatar,clearUploads,mediaMetadata} from './companion-uploads.mjs';
 const $=s=>document.querySelector(s),profiles=[{name:'月见',type:'AI 女友',personality:'温柔、好奇，喜欢电影、音乐与周末散步。',scenario:'在安静的咖啡馆聊聊彼此的一天。',icon:'月'},{name:'林川',type:'AI 男友',personality:'开朗、耐心，喜欢做饭、旅行与摄影。',scenario:'计划一次轻松的周末旅行。',icon:'川'},{name:'我的朋友',type:'自定义朋友',personality:'请写下你希望朋友拥有的性格、兴趣和说话方式。',scenario:'从今天的一件小事开始聊天。',icon:'友'}];let selected=0;
 function bubble(text,user=false){const div=document.createElement('div');div.className='bubble'+(user?' user':'');const label=document.createElement('small');label.textContent=user?'你':$('#chat-name').textContent+' · 示例回复';div.append(label,document.createTextNode(text));$('#messages').append(div);div.scrollIntoView({block:'nearest'});}
@@ -10,4 +11,5 @@ profiles.forEach((p,i)=>{const b=document.createElement('button');b.className='c
 $('#profile').onsubmit=e=>{e.preventDefault();apply();$('#status').textContent='角色设定已应用，示例对话已重置。';};
 $('#composer').onsubmit=e=>{e.preventDefault();const input=$('#message'),text=input.value.trim();if(!text)return;bubble(text,true);input.value='';bubble(replies[data().language]);};
 $('#clear').onclick=()=>{$('#messages').replaceChildren();$('#status').textContent='当前对话已清空。';};
-$('#export').onclick=()=>{if(!$('#profile').reportValidity())return;const url=URL.createObjectURL(new Blob([JSON.stringify({version:2,fictional:true,type:profiles[selected].type,...data(),media:mediaMetadata()},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='haoword-character.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);};setupUploads();select(0);
+$('#export').onclick=()=>{if(!$('#profile').reportValidity())return;const url=URL.createObjectURL(new Blob([JSON.stringify({version:2,fictional:true,type:profiles[selected].type,...data(),media:mediaMetadata()},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='haoword-character.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);};setupUploads();select(0);setupIdle();
+
