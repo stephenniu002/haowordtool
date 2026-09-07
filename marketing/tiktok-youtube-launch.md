@@ -4,12 +4,12 @@ Status: assets prepared; no social post has been published from this kit. Destin
 
 ## Video
 
-- File: `demo-en/haoword-english-45s.mp4`
-- Format: 1080 × 1920, 45 seconds, English captions, silent audio track.
+- File: `demo-en/haoword-english-voice-45s.mp4`
+- Format: 1080 × 1920, 45 seconds, English captions, synthesized English narration.
 - Content: actual browser interface screenshots edited into a tutorial. It is not a continuous screen recording.
 - Captions: `demo-en/haoword-english.srt`
 - Cover: `demo-en/cover.jpg`
-- Live video: https://haowordtool.com/marketing/demo-en/haoword-english-45s.mp4
+- Live video: https://haowordtool.com/marketing/demo-en/haoword-english-voice-45s.mp4
 
 ## YouTube title
 
@@ -25,7 +25,7 @@ https://haowordtool.com/en/?utm_source=youtube&utm_medium=organic_social&utm_cam
 Follow the three tutorials and download the example:
 https://haowordtool.com/en/learn/?utm_source=youtube&utm_medium=organic_social&utm_campaign=english_launch&utm_content=tutorials
 
-This is an edited demonstration using actual interface screenshots, with captions and no narration. The tool runs static frontend code; it does not turn a React project into a built app or generate a signed APK/IPA. The included task list resets on reload.
+This is an edited demonstration using actual interface screenshots, with captions and synthesized English narration. The tool runs static frontend code; it does not turn a React project into a built app or generate a signed APK/IPA. The included task list resets on reload.
 
 #HTML #WebDevelopment #CodingForBeginners
 
@@ -52,3 +52,11 @@ These follow-up clips are briefs, not completed or scheduled posts.
 Record each real post URL and publish date. Compare platform views and watch time using the platform's own reports. Use Search Console to review search impressions, clicks, queries and countries for `/en/` separately from the older word-solver pages.
 
 UTM URLs do not collect analytics by themselves. Workspace events remain local browser events until an approved measurement service is connected. Do not report event counts as unique people or claim a traffic increase before data exists.
+
+## Follow and comment call to action
+
+Follow for more practical web-building tutorials. What are you trying to build? Leave your question in the comments.
+
+Suggested creator comment: Try the free workspace and example at https://haowordtool.com/en/ — which step should I explain next?
+
+Reply to real comments using their actual question and the relevant tutorial. Replies and posts are pending account access.
