@@ -1,6 +1,6 @@
-# Letter Solver Pro
+# HaoWord Studio
 
-Static website served at https://haowordtool.com. Existing HTML routes, advertising account and CNAME are preserved.
+App Studio is the homepage at https://haowordtool.com. Video Studio, character creation, plans, and the word-solver learning library retain separate routes.
 
 ## Build and check
 
@@ -26,3 +26,6 @@ Search Console setup and follow-up work: [SEARCH_GROWTH.zh-CN.md](SEARCH_GROWTH.
 
 ## Creative workspaces
 Video Studio, App Studio and AI Companion are linked from the home page. GitHub Pages serves the public interfaces; paid rendering, checkout and protected app packages require a separately configured backend. See video-saas/DEPLOY.zh-CN.md.
+
+## Studio redesign
+The main generator rebuilds the legacy tools, runs scripts/redesign-studios.mjs, then regenerates localized video pages. Edit studio markup in scripts/templates/*.template and scripts/redesign-studios.mjs; shared styling is assets/studio-design.css. App drafts are stored only in browser local storage and can be cleared in the workspace. Paid production and checkout still require a separately configured server.

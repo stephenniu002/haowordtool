@@ -1,4 +1,4 @@
-import {menuCopy} from './video-menu-copy.mjs';
+import {menuCopy} from './video-menu-copy.mjs?v=studio2';
 export const LANGUAGES = Object.freeze({'zh-CN':'中文',en:'English',ja:'日本語',fr:'Français',es:'Español'});
 const columns={en:0,ja:1,fr:2,es:3};
 let language='zh-CN';
@@ -208,7 +208,7 @@ export function initI18n({preserveTitle=false}={}){
       original.set(node,{source,rendered});if(rendered!==node.nodeValue)node.nodeValue=rendered;
     }
     document.querySelectorAll('[placeholder],[aria-label]').forEach(el=>{
-      if(excluded(el))return;const record=attrs.get(el)||{};
+      if(el.closest('script,style,[data-no-i18n]'))return;const record=attrs.get(el)||{};
       for(const attr of ['placeholder','aria-label']){const value=el.getAttribute(attr);if(value===null)continue;const previous=record[attr];const source=previous&&value===previous.rendered?previous.source:sourceText(value);const rendered=translate(source);record[attr]={source,rendered};if(value!==rendered)el.setAttribute(attr,rendered);}attrs.set(el,record);
     });
     observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['placeholder','aria-label']});

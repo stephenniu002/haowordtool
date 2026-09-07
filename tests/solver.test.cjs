@@ -56,7 +56,7 @@ test('all-blank searches remain complete, sorted and zero-scoring',()=>{
   assert.deepEqual(results.map(r=>r.word),results.map(r=>r.word).sort());
 });
 test('generated tool pages load the core first and provide every length',()=>{
-  for(const file of ['index.html','unscrambler.html']) {
+  for(const file of ['unscrambler.html']) {
     const html=fs.readFileSync(path.join(root,file),'utf8');
     assert.ok(html.indexOf('/assets/solver-core.js')<html.indexOf('/assets/site.js'));
     assert.ok(html.indexOf('/assets/dictionary-loader.js')>html.indexOf('/assets/solver-core.js'));

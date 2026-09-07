@@ -1,5 +1,5 @@
 import {draftFromText,validateProject,hyperframeHtml,escapeHtml as h} from './video-core.mjs';
-import {getLanguage,initI18n} from './video-i18n.mjs';
+import {getLanguage,initI18n} from './video-i18n.mjs?v=studio2';
 const $=id=>document.getElementById(id);
 if(new URLSearchParams(location.search).get('native')==='1'){
   $('plans').hidden=true;$('apps').hidden=true;
@@ -81,5 +81,6 @@ async function init(){
     try{refreshUser((await api('/me')).user);await Promise.all([refreshJobs(),refreshOrders()]);}catch{refreshUser(null);}
   }catch{$('connection').textContent='免费分镜工具可用 · 制作服务尚未连接，AI 起稿、账号、配音、付款和成片下载暂不可用';}
 }
+$('import-storyboard').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>100000)throw new Error('分镜文件不能超过 100 KB');const parsed=JSON.parse(await file.text());loadProject(validateProject(parsed));notify('分镜已导入，可继续编辑。');}catch(err){notify(err.message||'分镜文件格式不正确');}finally{e.target.value='';}};
 initI18n();
 init();
