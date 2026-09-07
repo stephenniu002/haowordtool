@@ -1,0 +1,1 @@
+Daily plan learning example. Extract the ZIP and open index.html. Keep HTML, CSS and JS in the same folder. No external dependencies. Tasks reset on reload. You may modify and reuse this sample.

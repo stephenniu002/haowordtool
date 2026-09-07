@@ -1,4 +1,4 @@
-import {getLanguage} from './video-i18n.mjs?v=studio2';
+import {getLanguage} from './video-i18n.mjs?v=seo1';
 const $=id=>document.getElementById(id),english=()=>getLanguage()==='en';
 const profiles=[{name:'月见',en:'Tsukimi',personality:'温柔、好奇，喜欢电影与周末散步。',personalityEn:'Warm and curious. Loves films and weekend walks.',scenario:'在咖啡馆分享今天的小事。',scenarioEn:'Sharing little moments from the day in a café.',icon:'月'},{name:'林川',en:'Lin',personality:'开朗、耐心，喜欢旅行、做饭与摄影。',personalityEn:'Patient and cheerful. Enjoys travel, cooking and photography.',scenario:'一起计划下一次周末旅行。',scenarioEn:'Planning a weekend trip together.',icon:'川'},{name:'新朋友',en:'New friend',personality:'写下你想要的性格与兴趣。',personalityEn:'Describe their personality and interests.',scenario:'从一句问候开始。',scenarioEn:'Start with a simple greeting.',icon:'+'}];
 let selected=0,custom=false;

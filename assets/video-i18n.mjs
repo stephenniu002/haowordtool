@@ -1,9 +1,9 @@
-import {menuCopy} from './video-menu-copy.mjs?v=studio2';
+import {menuCopy} from './video-menu-copy.mjs?v=seo1';
 export const LANGUAGES = Object.freeze({'zh-CN':'中文',en:'English',ja:'日本語',fr:'Français',es:'Español'});
 const columns={en:0,ja:1,fr:2,es:3};
 let language='zh-CN';
 try{const saved=localStorage.getItem('haoword-studio-language');if(saved in LANGUAGES)language=saved;}catch{}
-if(typeof location!=='undefined'){const route=location.pathname.match(/^\/video-studio\/(en|ja|fr|es)(?:\/|$)/);if(route)language=route[1];}
+if(typeof location!=='undefined'){const route=location.pathname.match(/^\/video-studio\/(en|ja|fr|es)(?:\/|$)/);if(route)language=route[1];if(/^\/en(?:\/|$)/.test(location.pathname))language='en';}
 export const getLanguage=()=>language;
 export const messages={
   '我的AI 女友&男友':['My AI Girlfriend & Boyfriend','AI彼女・彼氏','Ma copine et mon copain IA','Mi novia y novio IA'],

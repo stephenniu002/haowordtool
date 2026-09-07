@@ -22,3 +22,8 @@ marketing/demo/*.png
 marketing/demo/contact-sheet.jpg
 marketing/demo/frames.txt
 marketing/demo/render.py
+
+marketing/demo-en/*.png
+marketing/demo-en/contact-sheet.jpg
+marketing/demo-en/frames.txt
+marketing/demo-en/render.py

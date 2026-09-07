@@ -1,5 +1,5 @@
 import {draftFromText,validateProject,hyperframeHtml,escapeHtml as h} from './video-core.mjs';
-import {getLanguage,initI18n} from './video-i18n.mjs?v=studio2';
+import {getLanguage,initI18n} from './video-i18n.mjs?v=seo1';
 const $=id=>document.getElementById(id);
 if(new URLSearchParams(location.search).get('native')==='1'){
   $('plans').hidden=true;$('apps').hidden=true;

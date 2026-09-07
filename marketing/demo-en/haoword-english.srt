@@ -1,0 +1,29 @@
+1
+00:00:00,000 --> 00:00:07,000
+AI gave you code. Now run it.
+A free HTML, CSS and JavaScript workspace.
+
+2
+00:00:07,000 --> 00:00:15,000
+01 / IMPORT Start with a sample
+Import the tutorial example: three real files.
+
+3
+00:00:15,000 --> 00:00:23,000
+02 / EDIT Make it yours
+Change the heading, then run the project.
+
+4
+00:00:23,000 --> 00:00:31,000
+03 / TEST Check mobile layout
+Try the narrow preview. Add and complete tasks.
+
+5
+00:00:31,000 --> 00:00:39,000
+04 / EXPORT Keep your code
+Download the ZIP. Extract it and open index.html.
+
+6
+00:00:39,000 --> 00:00:45,000
+YOUR TURN Build one small thing
+Three practical tutorials. Sample files included.
