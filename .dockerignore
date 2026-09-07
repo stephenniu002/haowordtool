@@ -6,3 +6,9 @@
 **/android
 **/ios
 **/www
+
+**/.env.*
+**/private-packages
+**/*.apk
+**/*.aab
+**/*.ipa

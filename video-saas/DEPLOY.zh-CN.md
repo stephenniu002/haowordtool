@@ -24,7 +24,7 @@
 3. 申请支付宝/微信对应商户产品权限，配置商户号、应用号、签名私钥和平台公钥。签名密钥只放在服务端环境中。
 4. 填写 USDT **公开收款地址和准确网络**。本版 USDT 需要运营人员独立核对链上到账，不含自动链上索引、确认数监听或自动兑换。
 5. 人民币定价用 `PLAN_CNY_FEN` 明确设定并向用户展示。本项目不会假装把 80 USDT 实时换算成人民币。
-6. APK 需要 Android SDK/JDK 和发布签名；iOS 需要 macOS/Xcode、Apple 开发者账号、签名与 App Store/TestFlight 发布。下载按钮只读取真实 HTTPS 地址，未配置则不可点击。
+6. APK 需要 Android SDK/JDK 和发布签名；iOS 需要 macOS/Xcode、Apple 开发者账号、签名与 App Store/TestFlight 发布。下载接口逐次检查登录和有效订阅；正式签名安装包保存在 API 服务器私有目录，未配置则不可下载。
 7. Captions 官方 API 入口现为 Mirage 申请制，官方公开页面没有提供当前可用的具体请求契约。本版**没有声称已接入 Captions/Mirage**，同步字幕来自 ElevenLabs 时间戳。取得正式文档和权限后才可接入数字人口播等功能。
 8. 生产上线前配置客服、数据保留与删除流程；当前账号无自助找回密码或邮箱验证。运营方应在正式向公众开放注册前接入邮件验证与找回。
 
@@ -98,7 +98,9 @@ pnpm sync
 
 PowerShell 设置变量用 `$env:MOBILE_SERVER_ORIGIN='https://haowordtool.com'` 后执行 `node prepare.mjs`。
 
-分别用 Android Studio、macOS 的 Xcode 打开生成的 `android`/`ios` 项目。构建和签名真实 APK，上传到你控制的 HTTPS 下载地址；iOS 发布到 TestFlight/App Store。将这两个真实链接配置到 `ANDROID_DOWNLOAD_URL`、`IOS_DOWNLOAD_URL`。
+分别用 Android Studio、macOS 的 Xcode 打开生成的 `android`/`ios` 项目。Android 正式签名 APK 放入服务器的 `video-saas/private-packages/haoword.apk`，设置 `ANDROID_PACKAGE_FILE=/packages/haoword.apk`。Compose 将该目录只读挂载给 API，目录与安装包不进入 Git 或容器镜像。确保容器用户有文件读取权限。下载请求通过 `/api/video/apps/android`，每次校验会话和订阅。不要使用公开链接或旧的 `ANDROID_DOWNLOAD_URL`、`IOS_DOWNLOAD_URL` 配置。
+
+iOS 需按实际签名与分发方式发布；私有 IPA 文件接口本身不保证设备可安装，也不能代替 TestFlight/App Store 发布流程。只有已准备适当签名和分发方案时，才配置 `IOS_PACKAGE_FILE=/packages/haoword.ipa`。
 
 仓库附带手动触发的 `Build Video Studio Android APK` GitHub Actions 工作流，用于生成测试 APK 下载构件。测试 APK 不是正式签名发布版，Actions 构件会过期，不应填入面向消费者的正式下载地址。正式 APK 需要运营方提供自己的签名密钥，苹果版本仍需在 macOS/Xcode 上构建与签名。
 

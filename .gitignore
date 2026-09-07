@@ -15,3 +15,5 @@ mobile/build/
 *.apk
 *.aab
 *.ipa
+
+video-saas/private-packages/
