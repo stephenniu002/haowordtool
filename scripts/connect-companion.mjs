@@ -1,0 +1,2 @@
+import {readFile,writeFile} from 'node:fs/promises';
+for(const path of ['index.html','app-builder.html','video-studio.html',...['en','ja','fr','es'].map(l=>`video-studio/${l}/index.html`)]){let h=await readFile(path,'utf8');if(!h.includes('href="/ai-companion.html"')){const link='<a href="/ai-companion.html">我的AI 女友&amp;男友</a>';h=h.includes('</nav>')?h.replace('</nav>',link+'</nav>'):h.replace('</header>',link+'</header>');}await writeFile(path,h);}

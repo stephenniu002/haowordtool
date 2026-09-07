@@ -2,3 +2,16 @@ __pycache__/
 *.py[cod]
 promotion-preview.md
 promotion-log.csv
+node_modules/
+.env
+.env.*
+!.env.example
+video-saas/data/
+video-saas/test-output/
+mobile/www/
+mobile/android/
+mobile/ios/
+mobile/build/
+*.apk
+*.aab
+*.ipa

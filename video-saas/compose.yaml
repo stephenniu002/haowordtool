@@ -1,0 +1,39 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: video-saas/Dockerfile
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      DATA_DIR: /data
+      NODE_ENV: production
+    ports: ["127.0.0.1:8787:8787"]
+    volumes: ["studio-data:/data"]
+    restart: unless-stopped
+  billing:
+    build:
+      context: ..
+      dockerfile: video-saas/Dockerfile
+    command: ["node", "billing.mjs"]
+    env_file: .env
+    environment:
+      DATA_DIR: /data
+    volumes: ["studio-data:/data"]
+    init: true
+    restart: unless-stopped
+  worker:
+    build:
+      context: ..
+      dockerfile: video-saas/Dockerfile
+    command: ["node", "worker.mjs"]
+    env_file: .env
+    environment:
+      DATA_DIR: /data
+    volumes: ["studio-data:/data"]
+    init: true
+    shm_size: 1gb
+    stop_grace_period: 25m
+    restart: unless-stopped
+volumes:
+  studio-data:

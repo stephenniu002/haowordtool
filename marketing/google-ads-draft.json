@@ -1,0 +1,59 @@
+{
+  "status": "DRAFT_NOT_UPLOADED",
+  "dailyBudget": null,
+  "currency": "USD",
+  "launchAuthorized": false,
+  "campaignStatus": "Paused",
+  "campaignType": "Search",
+  "network": "Google Search",
+  "locationOption": "Presence",
+  "conversionGoal": "storyboard_export",
+  "conversionTrackingConfigured": false,
+  "note": "Promote only the currently usable free storyboard editor. Do not advertise active voice, MP4 generation, subscriptions or downloadable native apps until those services are live. Country scope is a proposed interpretation of the user's US / Europe / Japan request; confirm it along with the daily budget before launch.",
+  "groups": [
+    {
+      "campaign": "HaoWord Storyboard EN",
+      "language": "en",
+      "countries": ["US", "GB", "IE"],
+      "finalUrl": "https://haoword-video-studio.astute-guppy-4547.chatgpt.site/video-studio/en/",
+      "headlines": ["Free Storyboard Maker", "Turn Scripts Into Scenes", "Plan Your Next Short Video", "Edit Your Video Storyboard", "Preview Every Scene", "Export Your Storyboard", "A Clearer Video Workflow", "No Login to Plan a Video", "HaoWord Video Studio", "Start With Your Script"],
+      "descriptions": ["Split a script into scenes. Edit headings, narration and timing in your browser.", "Preview your storyboard and export JSON or HyperFrames HTML projects for free.", "Plan vertical, landscape or square videos. Free storyboard tools need no account.", "Create a clear plan before production. Available in English and four more languages."],
+      "phraseKeywords": ["storyboard maker", "video storyboard editor", "script to storyboard", "online storyboard tool", "short video storyboard"],
+      "exactKeywords": ["free storyboard maker", "video storyboard maker", "storyboard editor"],
+      "negativeKeywords": ["jobs", "career", "salary", "crack", "pirated", "torrent", "movie download"]
+    },
+    {
+      "campaign": "HaoWord Storyboard FR",
+      "language": "fr",
+      "countries": ["FR"],
+      "finalUrl": "https://haoword-video-studio.astute-guppy-4547.chatgpt.site/video-studio/fr/",
+      "headlines": ["Storyboard gratuit en ligne", "Du script aux scènes", "Préparez votre vidéo", "Modifiez chaque scène", "Visualisez votre storyboard", "Export JSON et HyperFrames", "Votre atelier vidéo", "Sans compte pour commencer", "HaoWord Studio", "Créez un plan clair"],
+      "descriptions": ["Découpez votre script en scènes. Modifiez titres, narration et durée en ligne.", "Prévisualisez les images et exportez gratuitement en JSON ou HTML HyperFrames.", "Préparez des vidéos verticales, horizontales ou carrées, sans compte.", "Organisez votre prochaine vidéo avec un storyboard clair. Interface en français."],
+      "phraseKeywords": ["créer un storyboard", "storyboard en ligne", "outil storyboard", "storyboard vidéo"],
+      "exactKeywords": ["storyboard gratuit", "créateur de storyboard"],
+      "negativeKeywords": ["emploi", "salaire", "stage", "crack", "torrent", "film gratuit"]
+    },
+    {
+      "campaign": "HaoWord Storyboard JA",
+      "language": "ja",
+      "countries": ["JP"],
+      "finalUrl": "https://haoword-video-studio.astute-guppy-4547.chatgpt.site/video-studio/ja/",
+      "headlines": ["無料の絵コンテ作成", "台本をシーンに分割", "動画の構成を考えよう", "シーンを自由に編集", "画面をプレビュー", "絵コンテを保存", "動画制作の準備に", "登録なしで始められる", "HaoWord Studio", "日本語で動画を企画"],
+      "descriptions": ["台本をシーンに分割。タイトル、ナレーション、時間をブラウザで編集。", "プレビューしてJSONやHyperFramesの工程を無料で保存できます。", "縦型・横型・正方形に対応。無料の絵コンテ機能はアカウント不要。", "動画のアイデアを明確な構成に。日本語を含む５言語に対応。"],
+      "phraseKeywords": ["絵コンテ 作成", "動画 絵コンテ", "絵コンテ ツール", "動画 構成 作成"],
+      "exactKeywords": ["絵コンテ 無料", "絵コンテ オンライン"],
+      "negativeKeywords": ["求人", "年収", "採用", "海賊版", "torrent"]
+    },
+    {
+      "campaign": "HaoWord Storyboard ES",
+      "language": "es",
+      "countries": ["ES"],
+      "finalUrl": "https://haoword-video-studio.astute-guppy-4547.chatgpt.site/video-studio/es/",
+      "headlines": ["Crea tu storyboard gratis", "Del guion a las escenas", "Prepara tu próximo vídeo", "Edita cada escena", "Previsualiza el storyboard", "Exporta JSON y HyperFrames", "Planifica vídeos en línea", "Empieza sin crear cuenta", "HaoWord Studio", "Dale forma a tu guion"],
+      "descriptions": ["Divide tu guion en escenas. Edita títulos, narración y tiempos en el navegador.", "Previsualiza y exporta gratis proyectos JSON o HTML de HyperFrames.", "Planifica vídeos verticales, horizontales o cuadrados. No necesitas una cuenta.", "Da forma a tu próxima idea con un storyboard claro y una interfaz en español."],
+      "phraseKeywords": ["crear storyboard", "storyboard online", "herramienta storyboard", "storyboard para vídeo"],
+      "exactKeywords": ["storyboard gratis", "creador de storyboard"],
+      "negativeKeywords": ["empleo", "salario", "trabajo", "crack", "torrent", "película gratis"]
+    }
+  ]
+}

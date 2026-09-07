@@ -23,3 +23,6 @@ Dictionary provenance, limitations and checksum: [assets/DICTIONARY.md](assets/D
 Review the branch diff, run the checks, then merge into the existing publishing branch using the repository's established hosting configuration. Do not point CNAME to a second deployment. Keep a copy of the previous commit for rollback. Verify live CA? → CAT = 4 and CART? → TRACK = 6 after deployment.
 
 Search Console setup and follow-up work: [SEARCH_GROWTH.zh-CN.md](SEARCH_GROWTH.zh-CN.md). Search traffic and AdSense approval are not guaranteed by this release.
+
+## Creative workspaces
+Video Studio, App Studio and AI Companion are linked from the home page. GitHub Pages serves the public interfaces; paid rendering, checkout and protected app packages require a separately configured backend. See video-saas/DEPLOY.zh-CN.md.

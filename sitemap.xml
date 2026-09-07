@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://haowordtool.com/video-studio.html</loc><lastmod>2026-08-28</lastmod><changefreq>weekly</changefreq><priority>.7</priority></url>
+  <url><loc>https://haowordtool.com/app-builder.html</loc><lastmod>2026-08-28</lastmod><changefreq>weekly</changefreq><priority>.7</priority></url>
+  <url><loc>https://haowordtool.com/ai-companion.html</loc><lastmod>2026-08-28</lastmod><changefreq>weekly</changefreq><priority>.7</priority></url>
+  <url><loc>https://haowordtool.com/media-downloader.html</loc><lastmod>2026-08-28</lastmod><changefreq>weekly</changefreq><priority>.7</priority></url>
   <url><loc>https://haowordtool.com/</loc><lastmod>2026-09-06</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://haowordtool.com/unscrambler.html</loc><lastmod>2026-09-06</lastmod><changefreq>weekly</changefreq><priority>.9</priority></url>
   <url><loc>https://haowordtool.com/blog.html</loc><lastmod>2026-09-06</lastmod><changefreq>weekly</changefreq><priority>.7</priority></url>
@@ -36,4 +40,8 @@
   <url><loc>https://haowordtool.com/guides/plural-s-and-ed-endings.html</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>.7</priority></url>
   <url><loc>https://haowordtool.com/guides/letter-frequency-without-myths.html</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>.7</priority></url>
   <url><loc>https://haowordtool.com/guides/from-solver-result-to-real-vocabulary.html</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>.7</priority></url>
+  <url><loc>https://haowordtool.com/video-studio/en/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://haowordtool.com/video-studio/ja/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://haowordtool.com/video-studio/fr/</loc><lastmod>2026-09-06</lastmod></url>
+  <url><loc>https://haowordtool.com/video-studio/es/</loc><lastmod>2026-09-06</lastmod></url>
 </urlset>
