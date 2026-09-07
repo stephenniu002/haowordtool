@@ -17,3 +17,8 @@ mobile/build/
 *.ipa
 
 video-saas/private-packages/
+
+marketing/demo/*.png
+marketing/demo/contact-sheet.jpg
+marketing/demo/frames.txt
+marketing/demo/render.py

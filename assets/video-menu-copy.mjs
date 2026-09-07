@@ -1,4 +1,6 @@
 export const menuEnglish = {
+"教程示例 · 每日计划":"Tutorial example · Daily plan",
+"示例文件加载失败":"Could not load example files",
 "项目已打包下载":"Project ZIP downloaded",
 "描述你的应用":"Describe your app",
 "项目编辑器":"Project editor",

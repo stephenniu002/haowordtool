@@ -29,3 +29,5 @@ await import('./generate-video-seo.mjs');
 
 // Disclose the App workspace's explicit local draft storage.
 {const privacy=fs.readFileSync(path.join(root,'privacy.html'),'utf8');fs.writeFileSync(path.join(root,'privacy.html'),privacy.replace('</main>','<section class="section"><div class="wrap prose"><h2>App workspace drafts</h2><p>The App workspace stores your brief and project code in browser local storage on this device so you can resume after reloading. Use Clear local draft in the workspace to remove the saved copy, or clear this site’s browser data. Drafts are not uploaded by this storage feature. Do not enter API keys or passwords into project code. Character preview conversations remain in page memory and clear on reload.</p></div></section></main>'));}
+
+await import('./create-tutorials.mjs');
