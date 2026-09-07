@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="126" height="46" viewBox="0 0 126 46" role="img" aria-labelledby="title">
+  <title id="title">HAO</title>
+  <g fill="#17654a" transform="translate(7 5) skewX(-10)">
+    <path d="M0 0h10v13h15V0h10v36H25V22H10v14H0z"/>
+    <path fill-rule="evenodd" d="M39 36 52 0h12l13 36H66l-2-7H51l-2 7zm15-15h7l-3.5-12z"/>
+    <path fill-rule="evenodd" d="M98 0c12 0 19 7 19 18s-7 18-19 18-19-7-19-18S86 0 98 0zm0 9c-6 0-9 3-9 9s3 9 9 9 9-3 9-9-3-9-9-9z"/>
+  </g>
+  <path d="m47 43 23-3" stroke="#a4b65a" stroke-width="3" stroke-linecap="round"/>
+</svg>
