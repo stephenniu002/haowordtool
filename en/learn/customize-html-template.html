@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to customize an HTML website template step by step | HaoWordStudio</title>
+  <meta name="description" content="Customize a working HTML website template by replacing its text, colors, links and form behavior, then test the mobile layout and exported ZIP.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://haowordtool.com/en/learn/customize-html-template.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to customize an HTML website template step by step">
+  <meta property="og:description" content="Follow a working example from first edit to mobile and ZIP checks.">
+  <meta property="og:url" content="https://haowordtool.com/en/learn/customize-html-template.html">
+  <meta property="og:image" content="https://haowordtool.com/marketing/demo-en/03-edit.png">
+  <link rel="stylesheet" href="/assets/studio-design.css?v=seo1">
+  <link rel="stylesheet" href="/assets/tutorials.css?v=3">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4489946300243174" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-top"><a class="logo" href="/en/"><img src="/assets/hao-logo.svg?v=4" alt="HaoWordStudio" width="236" height="46" style="display:block;width:min(236px,50vw);height:auto"></a><nav aria-label="Main navigation"><a href="/en/">Workspace</a><a href="/en/learn/">Tutorials</a><a href="/templates.html">Templates</a><a href="/contact.html">Contact</a></nav></header>
+<main class="lesson">
+  <p class="eyebrow">PRACTICAL GUIDE · SEPTEMBER 10, 2026</p>
+  <h1>How to customize an HTML website template step by step</h1>
+  <p class="lesson-lead">Start with the free landing-page project, replace its identity and offer, verify its form, test a 390px layout and inspect the files after export.</p>
+  <figure><img src="/marketing/demo-en/03-edit.png" alt="Editing separate HTML CSS and JavaScript files with a live website preview" width="1600" height="900" loading="eager"><figcaption>The actual HaoWordStudio editor used in this tutorial.</figcaption></figure>
+  <article>
+    <p>A template saves time only when you can change it without breaking its structure. The safest order is content first, links second, visual tokens third and layout last. That order gives each edit a visible result and keeps errors small enough to diagnose.</p>
+
+    <h2>1. Download and identify the three working layers</h2>
+    <p>Download the free landing-page ZIP below and extract it into a new folder. The project contains <code>index.html</code>, <code>styles.css</code> and <code>app.js</code>. HTML holds the meaning and content, CSS controls appearance and layout, and JavaScript handles the email-form feedback. Keep the original ZIP until your edited copy passes every check.</p>
+    <p>Open the HaoWordStudio workspace and import all three files together. Click <strong>Run project</strong>. Before editing, confirm that you can see the headline, three feature cards and the email field. Enter an invalid address, then a valid one. Different feedback messages prove that the original JavaScript works.</p>
+
+    <h2>2. Replace the identity and offer in HTML</h2>
+    <p>Use the HTML tab and search for the current product name. Replace the name in the header, main heading and footer. Then rewrite the supporting paragraph so it answers three questions: who the product is for, what result it provides and what the visitor should do next.</p>
+    <p>Change one section at a time and run the page after each group of edits. Preserve element names such as <code>id="interest-form"</code> and <code>id="form-status"</code>. The JavaScript uses those identifiers to find the form and message area. Visible words are safe to replace; IDs require a matching JavaScript change.</p>
+    <p>Use a real destination for every link. A call-to-action can point to an order page, a booking page or a contact section. If the destination does not exist yet, use a working contact link instead of leaving <code>href=&quot;#&quot;</code>. Test each link from the preview.</p>
+
+    <h2>3. Change colors with a small set of CSS tokens</h2>
+    <p>Open <code>styles.css</code> and identify the repeated background, text and accent colors. Choose one dark text color, one light page color, one main accent and one border color. Replacing a small palette keeps buttons, cards and headings consistent.</p>
+    <p>Check contrast before adding decorative effects. Button text must remain readable in its normal and hover states. Links should be identifiable without relying on subtle color differences. Avoid changing widths, gaps and font sizes until the new content is in place; longer headings can reveal where layout changes are actually needed.</p>
+
+    <h2>4. Adapt the form behavior honestly</h2>
+    <p>The free example validates an email and shows a local confirmation. It does not send the address to a server. Edit the confirmation text so it does not promise a subscription or message that the page cannot deliver. For a live mailing list, connect a form provider in the published version and test a real submission using an address you control.</p>
+    <p>If you do not need the form, remove the entire form section and the related JavaScript listener. Leaving a button that appears to submit but stores nothing creates a misleading page and makes testing harder.</p>
+
+    <h2>5. Test the mobile layout at 390 pixels</h2>
+    <p>Select the 390px preview. Read the page from top to bottom without zooming. The headline should wrap into complete phrases, buttons should fit within the viewport and card text should not touch the edges. Tab through links and the form to confirm that keyboard focus remains visible.</p>
+    <p>Use the longest realistic heading and button label during this check. Short placeholder copy often hides problems. If a row becomes crowded, change its mobile CSS to a single column inside the existing media query instead of shrinking the text until it is difficult to read.</p>
+
+    <h2>6. Export and verify the deliverable</h2>
+    <p>Choose <strong>Download project ZIP</strong>, extract it into a different folder and open the exported <code>index.html</code>. Confirm that CSS and JavaScript load from the extracted files. Repeat the valid and invalid email checks, open each navigation link and resize the browser window.</p>
+    <p>A successful editor preview is not the final test. The extracted copy proves that the three file references survived export. If the page loses its styling, check that <code>styles.css</code> sits next to <code>index.html</code> and that the stylesheet filename matches the HTML exactly, including capitalization.</p>
+
+    <h2>Final acceptance checklist</h2>
+    <ul>
+      <li>The header, headline, offer, button labels and footer use the new identity.</li>
+      <li>Every visible link opens the intended destination.</li>
+      <li>The form either performs its stated action or clearly describes local-only feedback.</li>
+      <li>No text or control extends beyond a 390px viewport.</li>
+      <li>The extracted ZIP opens with its styling and interaction intact.</li>
+      <li>The project contains no passwords, private keys, analytics secrets or customer data.</li>
+    </ul>
+
+    <h2>When a template is the wrong starting point</h2>
+    <p>A static template is a good fit for a landing page, portfolio, event page or simple brochure site. A login, database, private dashboard, live payment system or native mobile installer needs additional development and security work. Write those requirements down before buying a template so the project format matches the result you need.</p>
+  </article>
+
+  <section class="lesson-download"><h2>Use the exact project from this guide</h2><p>The download contains readable HTML, CSS and JavaScript with no framework or external library.</p><div class="actions"><a class="button primary" href="/examples/landing-page-en.zip" download>Download the free template</a><a class="button" href="/en/?utm_source=customize_guide&amp;utm_medium=internal&amp;utm_campaign=template_pack">Open the workspace</a><a class="button" href="/examples/landing-page-en/">View the finished example</a></div></section>
+  <section class="commerce-entry"><p class="eyebrow">NEXT PROJECT</p><h2>Need more layouts or a finished setup?</h2><p>Compare the 10-template and 30-template source packs, or send a fixed-scope project brief for a customized website.</p><div class="actions"><a class="button primary" href="/templates.html?utm_source=customize_guide&amp;utm_medium=internal&amp;utm_campaign=template_pack">Compare template packs</a><a class="button" href="/custom-web-design.html?utm_source=customize_guide&amp;utm_medium=internal&amp;utm_campaign=custom_service">Request customization</a></div></section>
+  <section class="guide-proof"><p class="eyebrow">TEST RECORD</p><h2>How this guide was checked</h2><p>HaoWordStudio tested the included landing-page files in its three-tab editor, verified both form responses, checked the 390px preview and reopened the extracted ZIP. Last reviewed September 10, 2026.</p></section>
+</main>
+<footer class="site-footer"><span>HaoWordStudio · Practical tutorials</span><nav><a href="/en/learn/">All tutorials</a><a href="/templates.html">Templates</a><a href="/privacy.html">Privacy</a><a href="/contact.html">Contact</a></nav></footer>
+</body>
+</html>
