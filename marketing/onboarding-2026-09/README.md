@@ -1,6 +1,6 @@
 # HaoWordStudio customer onboarding videos
 
-Four English vertical videos explaining what the site does and how to use it. Every video contains English narration, visible explanatory text, `haowordtool.com/en/`, and a follow/comment call to action.
+Five English vertical videos explaining what the site does, how to use it and how to request a template pack. Every video contains English narration, visible explanatory text, a HaoWordStudio website address, and a follow/comment call to action.
 
 ## 01 — What is HaoWordStudio?
 
@@ -35,5 +35,6 @@ Four English vertical videos explaining what the site does and how to use it. Ev
 
 ## Status
 
-- Local rendering and media checks: required before release.
+- Local rendering and media checks: complete. All five files contain an AAC LC 48 kHz mono audio stream.
+- Website gallery: `https://haowordtool.com/videos.html`
 - TikTok and YouTube upload: pending access to the dedicated HaoWordStudio accounts in AdsPower.
