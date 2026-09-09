@@ -1,0 +1,18 @@
+import { readFileSync,writeFileSync } from 'node:fs';
+const read=p=>readFileSync(p,'utf8');
+const write=(p,v)=>writeFileSync(p,v,'utf8');
+
+let terms=read('terms.html').replaceAll('Updated August 28, 2026','Updated September 10, 2026');
+if(!terms.includes('<h2>Digital products and order formation</h2>')){
+  const commerce='<h2>Digital products and order formation</h2><p>An email inquiry or order request is not an accepted order. Before payment, we provide the current product contents, total price, delivery method and available payment instructions. An order is accepted only after we confirm those details and receive the required payment.</p><h2>Delivery and access</h2><p>Template products are delivered as private ZIP files. Courses may be delivered by granting viewer access to the buyer’s supplied Google account. The public website does not contain paid download links. We normally aim to deliver within 24 hours after payment is verified; if delivery is unavailable, we do not accept the order.</p><h2>Product license</h2><p>A template-pack purchaser may modify and use the source in unlimited personal projects and client end products. The source pack may not be redistributed, shared, sublicensed or resold as a competing template product. Course access is personal to the buyer and its private link or files may not be republished or resold. No exclusive or trademark rights are transferred.</p><h2>Corrections, delivery problems and refunds</h2><p>Contact us within seven days if a delivered archive is corrupted, incomplete or materially different from the confirmed contents. We will first repair or replace the delivery. Refund rights required by applicable law remain unaffected; other digital-delivery requests are considered according to the confirmed order and whether access or source files have already been supplied.</p><h2>Payments and third-party services</h2><p>A checkout provider, payment network or file host may process information under its own terms. Crypto instructions are valid only when they state the exact token, network and complete receiving address. A login or authorization callback URL is not a payment address. Payments sent with the wrong asset or network cannot be treated as verified until recoverable funds are received.</p>';
+  terms=terms.replace('<h2>Changes and contact</h2>',commerce+'<h2>Changes and contact</h2>');
+  write('terms.html',terms);
+}
+
+let privacy=read('privacy.html').replaceAll('Updated August 28, 2026','Updated September 10, 2026');
+if(!privacy.includes('<h2>Orders and digital delivery</h2>')){
+  const orders='<h2>Orders and digital delivery</h2><p>When you request a product or service, we may receive your name, email address, country, requested product and the information needed to confirm delivery. For a Google Drive course, the Google email you supply is used to grant viewer access. For a blockchain payment, we may record the public transaction hash, asset, network, amount and status. Never send a private key, seed phrase, account password or full payment-card number.</p><h2>Payment and file-service providers</h2><p>If third-party checkout is enabled, that provider processes payment and receipt data under its own privacy terms. Google processes Drive access information when a course is shared. We receive only the transaction and delivery information needed to confirm the order, provide access, handle support and keep required business records.</p>';
+  privacy=privacy.replace('<h2>Retention and sharing</h2>',orders+'<h2>Retention and sharing</h2>');
+  write('privacy.html',privacy);
+}
+console.log('Added digital-product ordering, delivery, licensing, refund and privacy terms.');
