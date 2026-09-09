@@ -10,6 +10,7 @@ const blockedAdPages = new Set([
   'app-builder.html',
   'unscrambler.html',
   'templates.html',
+  'order.html',
   'custom-web-design.html',
   'ielts-course.html',
   'pricing.html',

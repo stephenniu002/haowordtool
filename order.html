@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Request a HaoWordStudio Digital Product Order</title>
+  <meta name="description" content="Request a HaoWordStudio template pack or IELTS course order and receive confirmed contents, payment instructions and private delivery details before paying.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://haowordtool.com/order.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Request a HaoWordStudio order">
+  <meta property="og:description" content="Create an order reference and confirm the contents before paying.">
+  <meta property="og:url" content="https://haowordtool.com/order.html">
+  <link rel="stylesheet" href="/assets/studio-design.css?v=seo1">
+  <link rel="stylesheet" href="/assets/tutorials.css?v=3">
+  <style>.order-hero{max-width:820px}.order-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:28px;align-items:start}.order-form,.order-summary{padding:28px;background:#fff;border:1px solid #d6e0cd;border-radius:16px}.order-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}.order-form label{margin:0}.order-form .wide{grid-column:1/-1}.order-summary{position:sticky;top:20px}.order-summary dl{display:grid;grid-template-columns:auto 1fr;gap:10px 16px}.order-summary dt{font-weight:700}.order-summary dd{margin:0}.order-status{min-height:28px;color:#17654a}.order-note{padding:18px;background:#fff9df;border-left:5px solid #eab522}.order-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.order-steps article{padding:22px;background:#edf2e8;border-radius:14px}.order-steps b{font-size:28px;color:#17654a}@media(max-width:760px){.order-layout,.order-form,.order-steps{grid-template-columns:1fr}.order-form .wide{grid-column:auto}.order-summary{position:static}}</style>
+</head>
+<body>
+<header class="site-top"><a class="logo" href="/"><img src="/assets/hao-logo.svg?v=4" alt="HaoWordStudio" width="236" height="46" style="display:block;width:min(236px,50vw);height:auto"></a><nav aria-label="Main navigation"><a href="/templates.html">Templates</a><a href="/en/ielts/">Free IELTS lessons</a><a href="/ielts-course.html">IELTS course</a><a href="/contact.html">Contact</a></nav></header>
+<main class="lesson">
+  <section class="order-hero"><p class="eyebrow">MANUAL ORDER REQUEST</p><h1>Confirm the product and delivery before paying.</h1><p class="lesson-lead">Create a private order request for a template pack or IELTS course. You will receive the current contents, accepted payment method and delivery terms in writing before an order is accepted.</p></section>
+
+  <section class="order-steps" aria-label="Order process"><article><b>01</b><h2>Request</h2><p>Select a product and prepare an email with your order reference.</p></article><article><b>02</b><h2>Confirm</h2><p>Review the contents, total price, payment instructions and delivery target.</p></article><article><b>03</b><h2>Receive</h2><p>After verified payment, receive the correct ZIP or private Google Drive access.</p></article></section>
+
+  <section class="order-layout" id="order-form-section">
+    <form class="order-form" id="product-order" novalidate>
+      <label class="wide">Product<select name="product" required><option value="">Select a product</option><option value="starter">Starter Web Template Pack — $9 USD</option><option value="pro">Pro Web Template Pack — $29 USD</option><option value="ielts">IELTS English Course — $29 USD</option></select></label>
+      <label>Your name<input name="name" autocomplete="name" required maxlength="80"></label>
+      <label>Contact email<input name="email" type="email" autocomplete="email" required maxlength="160"></label>
+      <label>Country or region<input name="country" autocomplete="country-name" required maxlength="100"></label>
+      <label>Preferred payment type<select name="payment" required><option value="">Select a preference</option><option>Hosted card checkout</option><option>Cryptocurrency, after token and network confirmation</option><option>Ask which methods are available</option></select></label>
+      <label class="wide" data-drive-field hidden>Google email for private Drive access<input name="driveEmail" type="email" autocomplete="email" maxlength="160"></label>
+      <label class="wide">Order note<textarea name="note" maxlength="800" placeholder="Questions about the files, license, course contents or delivery"></textarea></label>
+      <div class="actions wide"><button class="primary" type="submit">Prepare order email</button><button type="button" id="copy-order">Copy order request</button></div>
+      <p class="order-status wide" role="status"></p>
+    </form>
+
+    <aside class="order-summary"><p class="eyebrow">ORDER SUMMARY</p><h2 id="summary-product">Select a product</h2><dl><dt>Price</dt><dd id="summary-price">—</dd><dt>Delivery</dt><dd id="summary-delivery">—</dd><dt>Order reference</dt><dd id="summary-reference">Generated when you prepare the request</dd></dl><p class="order-note">This page does not charge you. Use only the payment instructions sent in the reply for your order reference.</p><p><a href="/terms.html">Digital product terms</a> · <a href="/privacy.html">Privacy</a></p></aside>
+  </section>
+
+  <section><h2>What is confirmed in the reply</h2><ul><li>The exact product name, current contents and total price.</li><li>The accepted checkout method or exact cryptocurrency token, network and destination.</li><li>The delivery target and the email or Google account used for access.</li><li>The license and refund terms that apply to the order.</li></ul><p>Do not send passwords, full card details, private keys or seed phrases. A payment screenshot alone is not proof of a completed transaction.</p></section>
+  <section class="guide-proof"><p class="eyebrow">DELIVERY RECORD</p><h2>A reference connects the request, payment and delivery.</h2><p>Keep the generated order reference in the email subject. HaoWordStudio uses it to match payment confirmation to the correct ZIP or Google Drive permission.</p><p><a href="/templates.html">Compare template packs</a> · <a href="/ielts-course.html">Review the IELTS course</a> · <a href="/contact.html">Ask a question</a></p></section>
+</main>
+<footer class="site-footer"><span>HaoWordStudio · Manual product orders</span><nav><a href="/templates.html">Templates</a><a href="/ielts-course.html">IELTS course</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></nav></footer>
+<script src="/assets/order.js" defer></script>
+</body>
+</html>
