@@ -12,6 +12,7 @@ export async function processTarget({db,crypt,env,dataDir,meta,browser=browserRu
   const account=db.prepare('SELECT * FROM accounts WHERE id=?').get(target.account_id);
   let dispatched=false;
   try{
+    if(env.PUBLISHER_ADSPOWER_ONLY==='1'&&['facebook','tiktok'].includes(account.platform))throw new Error('AdsPower-only publishing needs its verified adapter; standalone publishing is disabled');
     if(account.status!=='ready')throw new Error('Account needs reconnection');
     const secret=crypt.open(account.secret,account.id),payload=JSON.parse(target.payload);let result;
     if(platformById(account.platform).driver==='meta'){
