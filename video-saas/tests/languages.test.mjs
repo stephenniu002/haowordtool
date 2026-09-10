@@ -11,6 +11,10 @@ test('every UI translation has English, Japanese, French and Spanish text',()=>{
   assert.equal(translate('语言','ja'),'言語');
   assert.equal(translate('3 个镜头','fr'),'3 scènes');
   assert.equal(translate('月度订阅','es'),'Suscripción mensual');
+  assert.equal(translate('选择角色','ja'),'キャラクターを選択');
+  assert.equal(translate('清空对话','fr'),'Effacer la conversation');
+  assert.equal(translate('写下你想说的话…','es'),'Escribe un mensaje…');
+  assert.equal(translate('角色设定已应用到当前预览。','en'),'Character settings applied to this preview.');
   assert.equal(translate('My original script','fr'),'My original script');
 });
 test('selected script language survives validation and exports',()=>{

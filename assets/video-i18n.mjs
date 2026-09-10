@@ -1,11 +1,64 @@
 import {menuCopy} from './video-menu-copy.mjs?v=seo1';
 export const LANGUAGES = Object.freeze({'zh-CN':'中文',en:'English',ja:'日本語',fr:'Français',es:'Español'});
 const columns={en:0,ja:1,fr:2,es:3};
-let language='zh-CN';
-try{const saved=localStorage.getItem('haoword-studio-language');if(saved in LANGUAGES)language=saved;}catch{}
+let language='en';
+try{
+  const saved=localStorage.getItem('haoword-studio-language');
+  if(saved in LANGUAGES)language=saved;
+  else if(typeof navigator!=='undefined'){
+    const locale=(navigator.languages?.[0]||navigator.language||'en').toLowerCase();
+    language=locale.startsWith('zh')?'zh-CN':locale.startsWith('ja')?'ja':locale.startsWith('fr')?'fr':locale.startsWith('es')?'es':'en';
+  }
+}catch{}
 if(typeof location!=='undefined'){const route=location.pathname.match(/^\/video-studio\/(en|ja|fr|es)(?:\/|$)/);if(route)language=route[1];if(/^\/en(?:\/|$)/.test(location.pathname))language='en';}
 export const getLanguage=()=>language;
 export const messages={
+  '应用工作台':['App Studio','アプリスタジオ','Studio d’apps','Estudio de apps'],
+  'AI 伴侣':['AI Companion','AIコンパニオン','Compagnon IA','Compañero de IA'],
+  '实操教程':['Tutorials','実践ガイド','Tutoriels','Tutoriales'],
+  '订阅与服务':['Plans & services','プランとサービス','Offres et services','Planes y servicios'],
+  '为对话，写一个开始。':['Every conversation starts somewhere.','会話の始まりを、ここから。','Chaque conversation commence quelque part.','Toda conversación empieza en algún lugar.'],
+  '选择虚拟伙伴，定制性格与故事，创建属于你的角色卡。':['Choose a fictional companion, shape their personality and story, and create your own character card.','架空のパートナーを選び、性格や物語を設定して、自分だけのキャラクターカードを作成できます。','Choisissez un compagnon fictif, façonnez sa personnalité et son histoire, puis créez votre propre fiche de personnage.','Elige un compañero ficticio, define su personalidad y su historia, y crea tu propia ficha de personaje.'],
+  '角色体验预览':['Character preview','キャラクタープレビュー','Aperçu du personnage','Vista previa del personaje'],
+  '主导航':['Main navigation','メインナビゲーション','Navigation principale','Navegación principal'],
+  '选择角色':['Choose a character','キャラクターを選択','Choisir un personnage','Elegir un personaje'],
+  '定制角色设定':['Customize character','キャラクターを設定','Personnaliser le personnage','Personalizar el personaje'],
+  '角色名称':['Character name','キャラクター名','Nom du personnage','Nombre del personaje'],
+  '性格与兴趣':['Personality & interests','性格と興味','Personnalité et centres d’intérêt','Personalidad e intereses'],
+  '故事设定':['Scenario','シナリオ','Scénario','Escenario'],
+  '应用角色设定':['Apply character','設定を適用','Appliquer le personnage','Aplicar personaje'],
+  '导出角色卡':['Export character card','キャラクターカードを書き出す','Exporter la fiche du personnage','Exportar ficha del personaje'],
+  '角色设定可导出为 JSON；不保存聊天记录。':['Export settings as JSON. Conversations are not stored.','設定はJSONで書き出せます。会話履歴は保存されません。','Exportez les réglages en JSON. Les conversations ne sont pas enregistrées.','Exporta los ajustes en JSON. Las conversaciones no se guardan.'],
+  '虚构成年角色':['Fictional adult character','架空の成人キャラクター','Personnage adulte fictif','Personaje adulto ficticio'],
+  '清空对话':['Clear conversation','会話を消去','Effacer la conversation','Borrar conversación'],
+  '当前为固定示例对话，尚未连接 AI。你输入的内容只在本页使用，刷新后清除。':['This preview uses fixed sample replies. AI is not connected. Messages stay on this page and clear on reload.','このプレビューは固定のサンプル返信を使用しています。AIには未接続です。入力内容はこのページ内だけで使用され、再読み込みすると消去されます。','Cet aperçu utilise des réponses d’exemple fixes. L’IA n’est pas connectée. Les messages restent sur cette page et sont effacés au rechargement.','Esta vista previa usa respuestas de ejemplo fijas. La IA no está conectada. Los mensajes permanecen en esta página y se borran al recargar.'],
+  '写下你想说的话…':['Write a message…','メッセージを入力…','Écrivez un message…','Escribe un mensaje…'],
+  '聊天消息':['Chat message','チャットメッセージ','Message de discussion','Mensaje de chat'],
+  '发送':['Send','送信','Envoyer','Enviar'],
+  '让每一项服务都清楚透明':['Know exactly what is available','利用できる機能を明確に','Sachez exactement ce qui est disponible','Conoce exactamente qué está disponible'],
+  '角色定制和导出免费。实时 AI 聊天及 100 USDT／月订阅尚未开放。':['Character customization and export are free. Live AI chat and the 100 USDT/month plan are not available yet.','キャラクター設定と書き出しは無料です。リアルタイムAIチャットと月額100 USDTプランはまだ利用できません。','La personnalisation et l’exportation sont gratuits. Le chat IA en direct et l’offre à 100 USDT par mois ne sont pas encore disponibles.','La personalización y la exportación son gratuitas. El chat de IA en directo y el plan de 100 USDT al mes aún no están disponibles.'],
+  '查看服务状态':['View service status','サービス状況を見る','Voir l’état du service','Ver estado del servicio'],
+  '单词工具':['Word tools','単語ツール','Outils de mots','Herramientas de palabras'],
+  '学习指南':['Learning guides','学習ガイド','Guides pratiques','Guías de aprendizaje'],
+  '隐私':['Privacy','プライバシー','Confidentialité','Privacidad'],
+  '条款':['Terms','利用規約','Conditions','Condiciones'],
+  '月见':['Tsukimi','月見','Tsukimi','Tsukimi'],
+  '林川':['Lin','林川','Lin','Lin'],
+  '新朋友':['New friend','新しい友達','Nouvel ami','Nuevo amigo'],
+  '温柔、好奇，喜欢电影与周末散步。':['Warm and curious. Loves films and weekend walks.','穏やかで好奇心旺盛。映画と週末の散歩が好きです。','Douce et curieuse. Aime les films et les promenades du week-end.','Amable y curiosa. Le gustan las películas y los paseos de fin de semana.'],
+  '在咖啡馆分享今天的小事。':['Sharing little moments from the day in a café.','カフェで今日の小さな出来事を語り合う。','Partager les petits moments de la journée dans un café.','Compartir los pequeños momentos del día en una cafetería.'],
+  '开朗、耐心，喜欢旅行、做饭与摄影。':['Patient and cheerful. Enjoys travel, cooking and photography.','明るくて辛抱強く、旅行、料理、写真が好きです。','Patient et enjoué. Aime voyager, cuisiner et photographier.','Paciente y alegre. Le gustan los viajes, la cocina y la fotografía.'],
+  '一起计划下一次周末旅行。':['Planning a weekend trip together.','次の週末旅行を一緒に計画する。','Planifier ensemble une escapade de week-end.','Planear juntos un viaje de fin de semana.'],
+  '写下你想要的性格与兴趣。':['Describe their personality and interests.','希望する性格や興味を入力してください。','Décrivez sa personnalité et ses centres d’intérêt.','Describe su personalidad y sus intereses.'],
+  '从一句问候开始。':['Start with a simple greeting.','簡単なあいさつから始めましょう。','Commencez par une simple salutation.','Empieza con un saludo sencillo.'],
+  '温柔与好奇':['Gentle & curious','穏やかで好奇心旺盛','Doux et curieux','Amable y curioso'],
+  '开朗与耐心':['Cheerful & patient','明るくて辛抱強い','Enjoué et patient','Alegre y paciente'],
+  '自由定制':['Make it your own','自由にカスタマイズ','À personnaliser','Personalización libre'],
+  '你':['You','あなた','Vous','Tú'],
+  '示例回复':['Sample reply','サンプル返信','Réponse d’exemple','Respuesta de ejemplo'],
+  '欢迎来到角色体验。你想从今天的一件小事聊起吗？':['Welcome to the character preview. What would you like to talk about?','キャラクタープレビューへようこそ。今日はどんなことを話したいですか？','Bienvenue dans l’aperçu du personnage. De quoi souhaitez-vous parler ?','Te damos la bienvenida a la vista previa. ¿De qué te gustaría hablar?'],
+  '角色设定已应用到当前预览。':['Character settings applied to this preview.','キャラクター設定をこのプレビューに適用しました。','Les réglages du personnage ont été appliqués à cet aperçu.','Los ajustes del personaje se aplicaron a esta vista previa.'],
+  '这是一条固定示例回复，不是 AI 生成的回答。你可以先定制角色、导出角色卡，实时聊天将在服务接通后开放。':['This is a fixed sample reply, not an AI response. You can customize the character and export a card while live chat is being prepared.','これは固定のサンプル返信で、AIの回答ではありません。ライブチャットの準備中も、キャラクターを設定してカードを書き出せます。','Il s’agit d’une réponse d’exemple fixe, et non d’une réponse générée par l’IA. Vous pouvez personnaliser le personnage et exporter sa fiche pendant la préparation du chat en direct.','Esta es una respuesta de ejemplo fija, no una respuesta de IA. Puedes personalizar el personaje y exportar su ficha mientras se prepara el chat en directo.'],
   '我的AI 女友&男友':['My AI Girlfriend & Boyfriend','AI彼女・彼氏','Ma copine et mon copain IA','Mi novia y novio IA'],
   '语言':['Language','言語','Langue','Idioma'],
   '跳到工作台':['Skip to studio','スタジオへ移動','Aller au studio','Ir al estudio'],
