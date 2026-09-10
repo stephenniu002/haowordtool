@@ -35,3 +35,5 @@ await import('./create-tutorials.mjs');
 await import('./generate-english-seo.mjs');
 
 await import('./build-local-ai.mjs');
+
+await import('./connect-social-publisher.mjs');
