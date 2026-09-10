@@ -22,4 +22,12 @@ $('publishForm').onsubmit=async e=>{e.preventDefault();$('publishButton').disabl
   requestKey ||= crypto.randomUUID();await post('jobs',{key:requestKey,accounts,variants,confirmPublic:$('confirm').checked});notice('任务已加入队列。请刷新查看各平台结果。');await results();
 }catch(e){notice(e.message);}finally{$('publishButton').disabled=false;}};
 $('refresh').onclick=()=>refresh().catch(e=>notice(e.message));$('logout').onclick=async()=>{await post('logout',{});location.reload();};
-refresh().catch(e=>{notice(e.message==='Sign in first'?'':e.message);});
+refresh().catch(e=>{
+  if(e.message==='Sign in first')return;
+  notice('工作台页面已上线，发布服务尚未连接。当前可浏览平台和流程，暂不能上传或发布。');
+  $('login').hidden=true;$('workspace').hidden=false;
+  const names=['Facebook','Instagram','TikTok','YouTube','抖音','小红书','B站','视频号 / WeChat Channels','快手','微博','百家号','支付宝生活号','虎扑','X / Twitter'];
+  $('platforms').replaceChildren();for(const name of names){const card=el('div');card.className='platform';card.append(el('b',name));const button=el('button',name==='X / Twitter'?'暂未支持':'尚未配置');button.disabled=true;card.append(button);$('platforms').append(card);}
+  for(const field of document.querySelectorAll('#publishForm input,#publishForm textarea,#publishForm button'))field.disabled=true;
+  $('logout').hidden=true;$('refresh').hidden=true;$('results').append(el('p','发布服务连接后，将在这里显示真实发布记录。'));
+});
