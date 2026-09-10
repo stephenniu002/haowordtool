@@ -2,6 +2,7 @@
   const form = document.querySelector('#publisher-quote');
   if (!form) return;
   const status = document.querySelector('#publisher-status');
+  const t = text => window.publisherI18n?.t(text) ?? text;
   const plans = {monthly: 'Monthly — US$25 / month', yearly: 'Yearly — US$299 / year'};
   document.querySelectorAll('[data-plan]').forEach(link => link.addEventListener('click', () => {
     form.elements.plan.value = link.dataset.plan;
@@ -16,17 +17,18 @@
     if (!form.reportValidity()) return '';
     const values = new FormData(form);
     const brief = [
-      'HaoWord Studio — Social Publisher service request',
-      `Plan: ${plans[values.get('plan')]}`,
-      'Scope and service period to be confirmed. Manual renewal; payment not yet submitted.',
-      `Name: ${values.get('name')}`, `Email: ${values.get('email')}`,
-      `System: ${values.get('system')}`, `Account count: ${values.get('accounts')}`,
-      `Platforms and content: ${values.get('requirements')}`,
-      `Deadline / other requirements: ${values.get('deadline') || 'Not specified'}`
+      t('HaoWord Studio — Social Publisher service request'),
+      `${t('Plan')}: ${t(plans[values.get('plan')])}`,
+      t('Scope and service period to be confirmed. Manual renewal; payment not yet submitted.'),
+      `${t('Preferred language')}: ${document.documentElement.lang}`,
+      `${t('Name')}: ${values.get('name')}`, `${t('Email')}: ${values.get('email')}`,
+      `${t('System')}: ${t(values.get('system'))}`, `${t('Account count')}: ${values.get('accounts')}`,
+      `${t('Platforms and content')}: ${values.get('requirements')}`,
+      `${t('Deadline / other requirements')}: ${values.get('deadline') || t('Not specified')}`
     ].join('\n\n');
     document.querySelector('#publisher-preview').hidden = false;
     document.querySelector('#publisher-brief-text').value = brief;
-    status.textContent = 'Request ready. Send it to love6598878593@gmail.com to confirm your selected plan.';
+    status.textContent = t('Request ready. Send it to love6598878593@gmail.com to confirm your selected plan.');
     return brief;
   }
   document.querySelector('#preview-publisher-brief').addEventListener('click', prepare);
@@ -34,7 +36,7 @@
     event.preventDefault();
     const brief = prepare();
     if (!brief) return;
-    location.href = `mailto:love6598878593@gmail.com?subject=${encodeURIComponent('Social Publisher — ' + plans[form.elements.plan.value])}&body=${encodeURIComponent(brief)}`;
-    status.textContent = 'Your email app should open. If it does not, copy the brief below and email it to love6598878593@gmail.com.';
+    location.href = `mailto:love6598878593@gmail.com?subject=${encodeURIComponent(t('Social Publisher — ') + t(plans[form.elements.plan.value]))}&body=${encodeURIComponent(brief)}`;
+    status.textContent = t('Your email app should open. If it does not, copy the brief below and email it to love6598878593@gmail.com.');
   });
 })();
