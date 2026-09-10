@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="HaoWord 多平台发布工作台：连接账号、上传一次视频并查看各平台发布状态。"><meta name="robots" content="noindex"><title>HaoWord · 多平台发布</title><link rel="stylesheet" href="assets/publisher.css"><script src="assets/publisher.js" defer></script></head>
+<body><header><a href="https://haowordtool.com/">HaoWordStudio</a><span>Social Publisher</span></header><main>
+<h1>上传一次，发布到多个平台</h1><p class="lead">连接账号，选择视频和平台。登录有效期间无需重复登录。</p>
+<p id="notice" role="status" aria-live="polite"></p>
+<section id="login"><h2>登录发布工作台</h2><form id="loginForm"><label>邮箱<input name="email" type="email" autocomplete="username" required></label><label>密码<input name="password" type="password" autocomplete="current-password" required></label><button>登录</button></form><p>工作台需由管理员部署并创建账号。已有网站账号与此工作台账号暂不互通。</p></section>
+<div id="workspace" hidden>
+<section><h2>1 · 连接平台</h2><div id="platforms" class="grid"></div><p>Facebook 使用公共主页，Instagram 使用专业账号。其他平台的首次登录在发布服务电脑上的浏览器完成。连接后核对账号身份再发布。</p><div id="accounts"></div></section>
+<section><h2>2 · 上传视频</h2><p>相同视频只上传一次。可分别选择英语版和中文版；未提供中文版时使用英语版。字幕需已嵌入视频。</p><form id="publishForm">
+<div class="grid"><fieldset><legend>国际平台 · English</legend><label>MP4 视频<input id="enVideo" type="file" accept="video/mp4" required></label><label>标题<input id="enTitle" maxlength="100" required></label><label>描述 / 网址<textarea id="enDescription" maxlength="2200">Learn more: https://haowordtool.com/social-publisher.html</textarea></label></fieldset>
+<fieldset><legend>国内平台 · 中文（可选）</legend><label>MP4 视频<input id="zhVideo" type="file" accept="video/mp4"></label><label>标题<input id="zhTitle" maxlength="100"></label><label>描述 / 网址<textarea id="zhDescription" maxlength="2200">了解更多：https://haowordtool.com/social-publisher.html</textarea></label></fieldset></div>
+<label class="confirm"><input id="confirm" type="checkbox" required>我已核对所选账号和视频，确认公开发布。</label><button id="publishButton">上传并发布到所选账号</button></form></section>
+<section><h2>3 · 发布记录</h2><button id="refresh" type="button">刷新状态</button><div id="results"></div><p>“已提交”表示平台已接收或浏览器流程已结束，仍需核对实际帖子；“待核对”不会自动重试。</p></section>
+<button id="logout" class="secondary">退出工作台</button></div>
+</main></body></html>

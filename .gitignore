@@ -3,6 +3,10 @@ __pycache__/
 promotion-preview.md
 promotion-log.csv
 node_modules/
+publisher-service/data/
+publisher-service/test-output/
+publisher-service/.venv/
+publisher-service/vendor/
 .env
 .env.*
 !.env.example

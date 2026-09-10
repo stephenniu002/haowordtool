@@ -1,0 +1,12 @@
+{
+  "name": "haoword-social-publisher",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=24.0.0"},
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "worker": "node --env-file-if-exists=.env worker.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
