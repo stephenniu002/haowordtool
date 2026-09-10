@@ -2,6 +2,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+// Keep the working publisher entry when the marketing site is regenerated.
+const publisherPage = path.join(root, 'social-publisher.html');
+if (fs.existsSync(publisherPage)) {
+  let product = fs.readFileSync(publisherPage, 'utf8');
+  if (!product.includes('data-publisher-workspace')) {
+    product = product.replace('</main>', '<section data-publisher-workspace><h2>进入发布工作台</h2><p>连接 Facebook 公共主页、Instagram 专业账号和已配置的浏览器平台。首次使用需要部署发布服务并授权账号。</p><a class="button primary" href="/publisher.html">打开发布工作台 →</a></section></main>');
+    fs.writeFileSync(publisherPage, product);
+  }
+}
 for (const file of ['index.html', 'en/index.html', 'pricing.html', 'templates.html']) {
   const location = path.join(root, file);
   if (!fs.existsSync(location)) continue;
