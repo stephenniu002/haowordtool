@@ -37,3 +37,4 @@ await import('./generate-english-seo.mjs');
 await import('./build-local-ai.mjs');
 
 await import('./connect-social-publisher.mjs');
+await import('./generate-localized-pages.mjs');
