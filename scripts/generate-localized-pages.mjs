@@ -294,12 +294,12 @@ for (const [file, page] of pages) {
   for (const code of languages) {
     const target = path.join(root, code, file);
     fs.mkdirSync(path.dirname(target), {recursive: true});
-    fs.writeFileSync(target, shell(code, file, page));
+    fs.writeFileSync(target, shell(code, file, page).replace('<head>', '<head><meta name="localization-status" content="entry-only">'));
   }
 }
 
 for (const code of ['zh', 'ja', 'fr', 'es']) {
-  fs.writeFileSync(path.join(root, code, 'index.html'), homeShell(code));
+  fs.writeFileSync(path.join(root, code, 'index.html'), homeShell(code).replace('<head>', '<head><meta name="localization-status" content="entry-only">'));
 }
 
 for (const file of fs.readdirSync(path.join(root, 'en')).filter(name => name.endsWith('.html'))) {
@@ -338,3 +338,5 @@ if (fs.existsSync(sitemapPath)) {
 }
 
 console.log(`Generated ${pages.length * languages.length} localized page counterparts.`);
+const {run: optimizeSearch} = await import('./optimize-search.mjs');
+optimizeSearch();
