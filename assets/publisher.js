@@ -8,7 +8,7 @@ async function api(path,options={}){const headers=new Headers(options.headers||{
 const post=(path,value)=>api(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});
 function el(tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;}
 async function refresh(){state=await api('state');$('login').hidden=true;$('workspace').hidden=false;$('platforms').replaceChildren();
-  for(const p of state.platforms){const card=el('div');card.className='platform';card.append(el('b',p.name));const b=el('button',p.available?'连接账号':'尚未配置');b.disabled=!p.available;b.onclick=()=>connect(p);card.append(b);card.append(el('small',p.driver==='meta'?'官方授权':p.driver==='browser'?'本机浏览器登录':'暂未支持'));$('platforms').append(card);}
+  for(const p of state.platforms){const card=el('div');card.className='platform';card.append(el('b',p.name));const b=el('button',p.available?'连接账号':'尚未配置');b.disabled=!p.available;b.onclick=()=>connect(p);card.append(b);card.append(el('small',p.driver==='meta'?'官方授权':p.driver==='oauth'?'OAuth 授权':p.driver==='browser'?'本机浏览器登录':'暂未支持'));$('platforms').append(card);}
   const selected=new Set([...document.querySelectorAll('#accounts input:checked')].map(n=>n.value));$('accounts').replaceChildren(el('h3','选择发布账号'));
   for(const a of state.accounts){const label=el('label'),check=el('input');check.type='checkbox';check.value=a.id;check.disabled=a.status!=='ready';check.checked=selected.has(a.id);check.onchange=()=>{requestKey=null;};label.append(check,document.createTextNode(`${a.label} · ${a.platform} · ${a.status}`));$('accounts').append(label);}
   await results();
