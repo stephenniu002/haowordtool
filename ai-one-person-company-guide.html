@@ -1,21 +1,140 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>一人公司 AI 操作手册 | HaoWord Studio</title>
-<meta name="description" content="用 Codex、n8n 和内容工具搭建一人公司 AI 操作系统：内容获客、私域承接、成交交付和复盘优化。">
-<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://haowordtool.com/ai-one-person-company-guide.html">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#17654a">
+<title>一人公司 AI 工作流入口 | HaoWord Studio</title>
+<meta name="description" content="输入你的选题、产品和盈利目标，HaoWord 一人公司入口会把任务交给 n8n COO，生成内容获客、私域承接、成交交付和复盘优化的 AI 员工任务链。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://haowordtool.com/ai-one-person-company-guide.html">
 <link rel="stylesheet" href="/assets/studio-design.css?v=seo1">
+<script type="module" src="/assets/one-person-company.mjs?v=20260913"></script>
 </head>
-<body>
+<body class="one-person-company-page">
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-top"><a class="logo" href="/"><img src="/assets/hao-logo.svg?v=4" alt="HaoWord Studio" width="236" height="46"></a><nav aria-label="Main navigation"><a href="/">App Studio</a><a href="/templates.html">Templates</a><a href="/social-publisher.html">Social Publisher</a><a href="/pricing.html">Plans &amp; services</a></nav></header>
+<header class="site-top">
+  <a class="logo" href="/"><img src="/assets/hao-logo.svg?v=4" alt="HaoWord Studio" width="236" height="46"></a>
+  <nav aria-label="Main navigation">
+    <a href="/">App Studio</a>
+    <a href="/ai-one-person-company-guide.html" aria-current="page">一人公司</a>
+    <a href="/templates.html">Templates</a>
+    <a href="/social-publisher.html">Social Publisher</a>
+    <a href="/pricing.html">Plans &amp; services</a>
+  </nav>
+</header>
+
 <main id="main">
-<section class="page-heading"><div><p class="eyebrow">AI ONE-PERSON COMPANY</p><h1>先让一人公司有流程，再让流程自动化。</h1><p class="muted">这份手册帮你把内容获客、私域承接、成交交付和复盘优化拆成可执行流程，再把重复、低风险的节点交给 n8n。</p></div><a class="button primary" href="/publisher.html#leadCapture">预约自动化诊断</a></section>
-<section class="home-section"><div class="section-heading"><div><p class="eyebrow">OPERATING LOOP</p><h2>一人公司的最小闭环</h2></div><p>不要先追求全自动。先人工跑通，再固化 SOP，最后自动化。</p></div><div class="how-grid"><article><b>01</b><h3>内容获客</h3><p>每天围绕一个明确痛点发布短视频、图文或社群内容，把用户引到资料领取或预约表单。</p></article><article><b>02</b><h3>私域承接</h3><p>用户填表或添加联系方式后，先发资料，再问平台、频率和卡点，判断 cold、warm、hot。</p></article><article><b>03</b><h3>成交交付</h3><p>先卖 SOP、诊断和流程配置。成交后再收集素材、账号情况和交付边界。</p></article></div></section>
-<section class="home-section"><div class="section-heading"><div><p class="eyebrow">AI ROLES</p><h2>虚拟团队怎么分工</h2></div><p>工具不是越多越好，关键是每个岗位都有清楚职责。</p></div><div class="tool-grid"><article class="tool-card"><div class="tool-card-body"><span class="badge">CEO</span><h3>Codex</h3><p>定方向、拆任务、生成复盘、更新 SOP。涉及收费、发布、账号和承诺时，只给建议，不自动执行。</p></div></article><article class="tool-card"><div class="tool-card-body"><span class="badge">COO</span><h3>n8n</h3><p>接收表单、分发任务、创建提醒、汇总数据。确定性流程交给它，不确定判断交给 Codex。</p></div></article><article class="tool-card"><div class="tool-card-body"><span class="badge">CONTENT</span><h3>视频和口播工具</h3><p>生成脚本、分镜、视频提示词、广告素材和多语言版本。公开发布前必须人工审批。</p></div></article></div></section>
-<section class="home-section"><h2>第一周只做 5 件事</h2><ol><li>确定一个主 offer：199 元 SOP 或 499-999 元自动化诊断。</li><li>每天发布 1 条内容，CTA 都指向领取资料或预约诊断。</li><li>所有线索进入 n8n，Codex CEO 自动分级。</li><li>当天跟进 hot lead，48 小时内跟进 warm lead。</li><li>周末复盘播放、私信、表单、预约和成交。</li></ol><p><a class="button primary" href="/multi-platform-publishing-checklist.html">查看多平台发布检查清单</a><a class="button" href="/social-publisher.html#quote">了解发布系统服务</a></p></section>
+  <section class="opc-hero">
+    <div>
+      <p class="eyebrow">AI ONE-PERSON COMPANY</p>
+      <h1>把一个盈利目标，交给一套 AI 员工系统。</h1>
+      <p class="muted">输入选题、产品和市场，n8n 会把任务串给 Google 企业版 CEO、Codex、Genspark、LOVART、海螺、Medeo、TopView、AhaCreator、Harvey、Cursor 和第二大脑。</p>
+      <div class="actions">
+        <a class="button primary" href="#company-intake">启动工作流</a>
+        <a class="button" href="https://n8n-production-3db6.up.railway.app/webhook/one-person-company-os" target="_blank" rel="noreferrer">查看系统状态</a>
+      </div>
+    </div>
+    <div class="opc-console" aria-label="一人公司运行链路">
+      <span>内容获客</span>
+      <span>私域承接</span>
+      <span>领取资料</span>
+      <span>建立信任</span>
+      <span>成交产品/服务</span>
+      <span>交付</span>
+      <span>复盘优化</span>
+    </div>
+  </section>
+
+  <section class="home-section" id="company-intake">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">START A RUN</p>
+        <h2>启动你的 AI 员工任务链</h2>
+      </div>
+      <p>这一步不会自动发私信、发布内容或扣费。它只生成任务包，并把需要你确认的动作放进审批队列。</p>
+    </div>
+    <div class="opc-workspace">
+      <form class="opc-form" id="opc-form" action="https://n8n-production-3db6.up.railway.app/webhook/one-person-company-run" method="post">
+        <label>选题或业务目标
+          <textarea name="topic" required maxlength="600">HaoWordTool AI sales workflow 找客户并成交</textarea>
+        </label>
+        <div class="two-cols">
+          <label>产品或服务
+            <input name="product" required maxlength="160" value="HaoWordTool AI sales workflow">
+          </label>
+          <label>网站
+            <input name="brandUrl" required maxlength="240" value="https://haowordtool.com/">
+          </label>
+        </div>
+        <label>目标市场
+          <input name="market" required maxlength="240" value="US / English-speaking solo founders and small business owners">
+        </label>
+        <label>盈利目标
+          <input name="goal" required maxlength="240" value="把 AI 视频流量转成付费客户">
+        </label>
+        <label>核心卖点
+          <textarea name="coreValueProposition" required maxlength="700">Help solo founders and small business owners turn AI video traffic into real sales: create AI videos, publish across platforms, auto-reply to customer messages, follow up with leads, guide users to payment, and complete the transaction.</textarea>
+        </label>
+        <div class="two-cols">
+          <label>你的称呼，可选
+            <input name="name" maxlength="80" placeholder="例如：Stephen">
+          </label>
+          <label>联系方式，可选
+            <input name="contact" maxlength="160" placeholder="Email / LINE / WeChat">
+          </label>
+        </div>
+        <button class="primary" type="submit">生成一人公司任务链</button>
+        <p class="note">提交后会发送到 n8n。联系方式只用于后续人工跟进；所有发布、外联、收费、签约和法律结论都需要人工审批。</p>
+      </form>
+
+      <aside class="opc-result" aria-live="polite">
+        <div class="panel-top">
+          <h2>运行结果</h2>
+          <span class="badge" id="opc-status">等待输入</span>
+        </div>
+        <div id="opc-output" class="opc-output">
+          <p class="muted">生成后这里会显示 run ID、AI 员工分工、下一步任务包和审批提醒。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">AI EMPLOYEES</p>
+        <h2>n8n 负责把这些员工串起来</h2>
+      </div>
+      <p>确定性的流程交给 n8n，不确定的判断交给对应 AI 员工，最后由你审批关键动作。</p>
+    </div>
+    <div class="tool-grid">
+      <article class="tool-card"><div class="tool-card-body"><span class="badge">CEO</span><h3>Google 企业版</h3><p>看全局，结合 Google 生态资料判断方向、优先级和风险。</p></div></article>
+      <article class="tool-card"><div class="tool-card-body"><span class="badge">CHIEF OF STAFF</span><h3>Codex</h3><p>把方向拆成任务，生成验收标准、复盘和下一步动作。</p></div></article>
+      <article class="tool-card"><div class="tool-card-body"><span class="badge">COO</span><h3>n8n</h3><p>接收触发、分发任务、记录状态、生成审批和回流数据。</p></div></article>
+      <article class="tool-card"><div class="tool-card-body"><span class="badge">RESEARCH</span><h3>Genspark</h3><p>做市场调研、竞品比较、ICP、关键词和机会地图。</p></div></article>
+      <article class="tool-card"><div class="tool-card-body"><span class="badge">DESIGN</span><h3>LOVART</h3><p>输出视觉系统、广告图、落地页素材和品牌风格。</p></div></article>
+      <article class="tool-card"><div class="tool-card-body"><span class="badge">GROWTH</span><h3>AhaCreator</h3><p>生成达人/BD campaign、合作邀约、筛选规则和投放复盘。</p></div></article>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <h2>这条入口连接的真实流程</h2>
+    <ol class="opc-steps">
+      <li>你输入选题或盈利目标。</li>
+      <li>n8n 创建总编排 run，并生成各 AI 员工任务包。</li>
+      <li>内容团队产出口播、分镜、视频提示词和发布文案。</li>
+      <li>AhaCreator 和客户打分 workflow 找到更可能付费的人。</li>
+      <li>Harvey 检查外联、广告、合同和隐私风险。</li>
+      <li>你审批后，再发布、发私域、引导付款、记录成交和交付。</li>
+      <li>数据回流给 Codex 和 Google CEO，生成下一轮优化。</li>
+    </ol>
+  </section>
 </main>
-<footer class="site-footer"><span>© 2026 HaoWord Studio</span><nav><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></nav></footer>
+
+<footer class="site-footer">
+  <span>© 2026 HaoWord Studio</span>
+  <nav><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></nav>
+</footer>
 </body>
 </html>
