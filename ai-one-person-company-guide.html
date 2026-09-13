@@ -100,6 +100,62 @@
     </div>
   </section>
 
+  <section class="home-section" id="short-drama-factory">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">SHORT DRAMA FACTORY</p>
+        <h2>AI短剧出海/变现项目入口</h2>
+      </div>
+      <p>适合把“霸总复仇、赘婿逆袭、海外付费解锁”这类需求拆成剧本、角色一致性、分镜、并发渲染、交付和收款审批。</p>
+    </div>
+    <div class="opc-workspace">
+      <form class="opc-form" id="drama-form" action="https://n8n-production-3db6.up.railway.app/webhook/ai-short-drama-project" method="post">
+        <label>短剧标题
+          <input name="title" required maxlength="120" value="赘婿归来">
+        </label>
+        <label>客户需求
+          <textarea name="premise" required maxlength="900">做一部3集的AI短剧，赘婿逆袭题材，单集1分钟，要能在海外短剧APP上付费解锁。</textarea>
+        </label>
+        <div class="two-cols">
+          <label>题材
+            <input name="genre" required maxlength="160" value="霸总复仇 / 赘婿逆袭">
+          </label>
+          <label>目标市场
+            <input name="market" required maxlength="220" value="Overseas short drama apps / English-speaking audience">
+          </label>
+        </div>
+        <div class="two-cols">
+          <label>集数
+            <input name="episodes" type="number" min="1" max="10" value="3">
+          </label>
+          <label>每集分镜数
+            <input name="scenesPerEpisode" type="number" min="3" max="8" value="5">
+          </label>
+        </div>
+        <div class="two-cols">
+          <label>单集时长
+            <input name="durationPerEpisode" required maxlength="80" value="60 seconds">
+          </label>
+          <label>变现方式
+            <input name="monetization" required maxlength="220" value="Episode unlock at $0.99 plus bundle upsell">
+          </label>
+        </div>
+        <button class="primary" type="submit">生成短剧工厂任务</button>
+        <p class="note">当前会生成结构化分镜、角色一致性提示词、并发渲染任务和收款审批清单；真实调用视频 API、Stripe 或海外平台上架前仍需人工确认。</p>
+      </form>
+
+      <aside class="opc-result" aria-live="polite">
+        <div class="panel-top">
+          <h2>短剧项目</h2>
+          <span class="badge" id="drama-status">等待输入</span>
+        </div>
+        <div id="drama-output" class="opc-output">
+          <p class="muted">生成后这里会显示项目 ID、集数、分镜数、角色一致性 bible、并发渲染任务和变现审批点。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
   <section class="home-section">
     <div class="section-heading">
       <div>
