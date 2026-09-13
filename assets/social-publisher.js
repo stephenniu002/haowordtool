@@ -52,6 +52,9 @@
         `${t('Requested date and time')}: ${scheduledAt.value.replace('T', ' ')} (UTC${utcOffset.value})`,
         `UTC: ${new Date(scheduledAt.value + utcOffset.value).toISOString()}`
       ] : []),
+      'Resources:',
+      'AI one-person company guide: https://haowordtool.com/ai-one-person-company-guide.html',
+      'Multi-platform publishing checklist: https://haowordtool.com/multi-platform-publishing-checklist.html',
       t('This is a service request, not an active publishing job. Login and platform support must be confirmed.'),
       `${t('Deadline / other requirements')}: ${values.get('deadline') || t('Not specified')}`
     ].join('\n\n');
@@ -91,6 +94,6 @@
     if (!brief) return;
     sendLead(brief);
     location.href = `mailto:love6598878593@gmail.com?subject=${encodeURIComponent(t('Social Publisher — ') + t(plans[form.elements.plan.value]))}&body=${encodeURIComponent(brief)}`;
-    status.textContent = t('Your email app should open. If it does not, copy the brief below and email it to love6598878593@gmail.com.');
+    status.innerHTML = 'Your email app should open. You can also read the <a href="/ai-one-person-company-guide.html">AI one-person company guide</a> and <a href="/multi-platform-publishing-checklist.html">publishing checklist</a>.';
   });
 })();
