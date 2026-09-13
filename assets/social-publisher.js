@@ -3,6 +3,7 @@
   if (!form) return;
   const status = document.querySelector('#publisher-status');
   const t = text => window.publisherI18n?.t(text) ?? text;
+  const leadEndpoint = 'https://n8n-production-3db6.up.railway.app/webhook/haowordtool-lead';
   const plans = {monthly: 'Monthly — US$25 / month', yearly: 'Yearly — US$299 / year'};
   const timing = form.elements.publishTiming;
   const scheduledAt = form.elements.scheduledAt;
@@ -59,11 +60,36 @@
     status.textContent = t('Request ready. Send it to love6598878593@gmail.com to confirm your selected plan.');
     return brief;
   }
+  function sendLead(brief) {
+    const values = new FormData(form);
+    const payload = new URLSearchParams({
+      source: 'social-publisher-page',
+      offer: 'HaoWordTool Social Publisher',
+      plan: values.get('plan') || '',
+      name: values.get('name') || '',
+      contact: values.get('email') || '',
+      business: values.get('system') || '',
+      platforms: values.get('requirements') || '',
+      pain: values.get('deadline') || '',
+      accounts: values.get('accounts') || '',
+      publishTiming: values.get('publishTiming') || '',
+      scheduledAt: values.get('scheduledAt') || '',
+      utcOffset: values.get('utcOffset') || '',
+      preferredLanguage: document.documentElement.lang || '',
+      brief
+    });
+    fetch(leadEndpoint, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: payload
+    }).catch(() => {});
+  }
   document.querySelector('#preview-publisher-brief').addEventListener('click', prepare);
   form.addEventListener('submit', event => {
     event.preventDefault();
     const brief = prepare();
     if (!brief) return;
+    sendLead(brief);
     location.href = `mailto:love6598878593@gmail.com?subject=${encodeURIComponent(t('Social Publisher — ') + t(plans[form.elements.plan.value]))}&body=${encodeURIComponent(brief)}`;
     status.textContent = t('Your email app should open. If it does not, copy the brief below and email it to love6598878593@gmail.com.');
   });

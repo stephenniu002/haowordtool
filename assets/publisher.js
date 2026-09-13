@@ -2,6 +2,7 @@ const $=id=>document.getElementById(id);let state,requestKey=null;
 const cachedUploads=new Map();
 const API_ORIGIN='https://haoword-publisher-service-production.up.railway.app';
 const TOKEN_KEY='haoword.publisher.token';
+const leadEndpoint='https://n8n-production-3db6.up.railway.app/webhook/haowordtool-lead';
 function notice(text){$('notice').textContent=text;}
 async function api(path,options={}){const headers=new Headers(options.headers||{}),token=localStorage.getItem(TOKEN_KEY);if(token)headers.set('Authorization',`Bearer ${token}`);const res=await fetch(`${API_ORIGIN}/api/publisher/${path}`,{...options,headers});let b;try{b=await res.json();}catch{throw new Error('发布服务暂时不可达，请稍后再试。');}if(!res.ok){if(res.status===401&&path!=='login')localStorage.removeItem(TOKEN_KEY);throw new Error(b.error||'Request failed');}return b;}
 const post=(path,value)=>api(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});
@@ -24,6 +25,7 @@ $('publishForm').onsubmit=async e=>{e.preventDefault();$('publishButton').disabl
   requestKey ||= crypto.randomUUID();await post('jobs',{key:requestKey,accounts,variants,confirmPublic:$('confirm').checked});notice('任务已加入队列。请刷新查看各平台结果。');await results();
 }catch(e){notice(e.message);}finally{$('publishButton').disabled=false;}};
 $('refresh').onclick=()=>refresh().catch(e=>notice(e.message));$('logout').onclick=async()=>{try{await post('logout',{});}finally{localStorage.removeItem(TOKEN_KEY);location.reload();}};
+const leadForm=$('leadForm');if(leadForm){leadForm.onsubmit=async e=>{e.preventDefault();const button=leadForm.querySelector('button');const result=$('leadResult');button.disabled=true;result.textContent='正在提交...';try{const data=Object.fromEntries(new FormData(leadForm).entries());data.source='publisher-page';data.platforms=String(data.platforms||'').split(',').map(item=>item.trim()).filter(Boolean).join(', ');await fetch(leadEndpoint,{method:'POST',mode:'no-cors',body:new URLSearchParams(data)});result.textContent='已收到。请检查你的微信/LINE/邮箱，我们会发送 HaoWordTool 多平台发布资料。';leadForm.reset();}catch(err){result.textContent='提交失败，请稍后再试，或直接添加微信/LINE。';}finally{button.disabled=false;}};}
 refresh().catch(e=>{
   if(e.message==='Sign in first')return;
   notice('发布服务暂时不可达。当前可浏览平台和流程，暂不能上传或发布。');
