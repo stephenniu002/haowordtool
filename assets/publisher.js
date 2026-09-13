@@ -2,15 +2,21 @@ const $=id=>document.getElementById(id);let state,requestKey=null;
 const cachedUploads=new Map();
 const API_ORIGIN='https://haoword-publisher-service-production.up.railway.app';
 const TOKEN_KEY='haoword.publisher.token';
+const PENDING_PLATFORM_KEY='haoword.publisher.pendingPlatform';
 function notice(text){$('notice').textContent=text;}
 async function api(path,options={}){const headers=new Headers(options.headers||{}),token=localStorage.getItem(TOKEN_KEY);if(token)headers.set('Authorization',`Bearer ${token}`);const res=await fetch(`${API_ORIGIN}/api/publisher/${path}`,{...options,headers});let b;try{b=await res.json();}catch{throw new Error('发布服务暂时不可达，请稍后再试。');}if(!res.ok){if(res.status===401&&path!=='login')localStorage.removeItem(TOKEN_KEY);throw new Error(b.error||'Request failed');}return b;}
 const post=(path,value)=>api(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});
 function el(tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;}
-async function refresh(){state=await api('state');$('login').hidden=true;$('workspace').hidden=false;$('platforms').replaceChildren();
+function platformMatches(p,id,label){return p.id===id||p.id===id.replace(/-/g,'_')||p.name===label;}
+function updateShowcase(platforms=[]){for(const card of document.querySelectorAll('#platformShowcase [data-platform]')){const label=card.querySelector('b')?.textContent||card.dataset.platform,p=platforms.find(item=>platformMatches(item,card.dataset.platform,label)),status=card.querySelector('small');card.classList.toggle('active',!!p?.available);if(status)status.textContent=p?.available?'点击连接':p?'待配置':'未接入';card.onclick=e=>{e.preventDefault();directConnect(card.dataset.platform,label).catch(err=>notice(err.message));};}}
+async function directConnect(id,label){if(!localStorage.getItem(TOKEN_KEY)){sessionStorage.setItem(PENDING_PLATFORM_KEY,id);notice(`请先登录发布工作台，登录后将继续连接 ${label}。`);$('login').hidden=false;$('login').scrollIntoView({behavior:'smooth',block:'start'});return;}if(!state)await refresh(false);const p=state.platforms.find(item=>platformMatches(item,id,label));if(!p){notice(`${label} 尚未接入发布服务。`);return;}if(!p.available){notice(`${p.name} 还缺平台开发者凭据，暂不能真实授权。`);return;}await connect(p);}
+async function continuePendingConnect(){const id=sessionStorage.getItem(PENDING_PLATFORM_KEY);if(!id||!state)return;const p=state.platforms.find(item=>platformMatches(item,id,''));if(!p)return;sessionStorage.removeItem(PENDING_PLATFORM_KEY);await directConnect(p.id,p.name);}
+async function refresh(runPending=true){state=await api('state');updateShowcase(state.platforms);$('login').hidden=true;$('workspace').hidden=false;$('platforms').replaceChildren();
   for(const p of state.platforms){const card=el('div');card.className='platform';card.append(el('b',p.name));const b=el('button',p.available?'连接账号':'尚未配置');b.disabled=!p.available;b.onclick=()=>connect(p);card.append(b);card.append(el('small',p.driver==='meta'?'官方授权':p.driver==='oauth'?'OAuth 授权':p.driver==='browser'?'本机浏览器登录':'暂未支持'));$('platforms').append(card);}
   const selected=new Set([...document.querySelectorAll('#accounts input:checked')].map(n=>n.value));$('accounts').replaceChildren(el('h3','选择发布账号'));
   for(const a of state.accounts){const label=el('label'),check=el('input');check.type='checkbox';check.value=a.id;check.disabled=a.status!=='ready';check.checked=selected.has(a.id);check.onchange=()=>{requestKey=null;};label.append(check,document.createTextNode(`${a.label} · ${a.platform} · ${a.status}`));$('accounts').append(label);}
   await results();
+  if(runPending)await continuePendingConnect();
 }
 async function connect(p){try{if(p.driver==='meta'||p.driver==='oauth'){location.assign((await post(`oauth/${p.id}`,{})).url);return;}await post('connect',{platform:p.id,label:p.name});notice('请在发布服务电脑上打开的浏览器中完成登录，然后刷新状态。');await refresh();}catch(e){notice(e.message);}}
 async function results(){const {targets}=await api('jobs');$('results').replaceChildren();const labels={queued:'排队中',publishing:'发布中',submitted:'已提交，待平台确认',published:'已发布',review_required:'待核对，请勿重复发布',failed:'失败'};for(const t of targets){const item=el('article');item.append(el('strong',`${t.label} · ${labels[t.status]||t.status}`));if(t.error)item.append(el('p',t.error));if(t.result){const r=JSON.parse(t.result);if(r.url&&/^https:\/\/(www\.)?(facebook|instagram)\.com\//.test(r.url)){const link=el('a','查看平台帖子');link.href=r.url;link.target='_blank';link.rel='noopener noreferrer';item.append(link);}}$('results').append(item);}}
@@ -24,6 +30,7 @@ $('publishForm').onsubmit=async e=>{e.preventDefault();$('publishButton').disabl
   requestKey ||= crypto.randomUUID();await post('jobs',{key:requestKey,accounts,variants,confirmPublic:$('confirm').checked});notice('任务已加入队列。请刷新查看各平台结果。');await results();
 }catch(e){notice(e.message);}finally{$('publishButton').disabled=false;}};
 $('refresh').onclick=()=>refresh().catch(e=>notice(e.message));$('logout').onclick=async()=>{try{await post('logout',{});}finally{localStorage.removeItem(TOKEN_KEY);location.reload();}};
+updateShowcase();
 refresh().catch(e=>{
   if(e.message==='Sign in first')return;
   notice('发布服务暂时不可达。当前可浏览平台和流程，暂不能上传或发布。');
