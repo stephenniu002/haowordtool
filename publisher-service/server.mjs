@@ -14,6 +14,14 @@ import {adspowerStatus} from './adspower-status.mjs';
 export function passwordHash(password,salt=randomBytes(16).toString('hex')){return `${salt}:${scryptSync(password,salt,64).toString('hex')}`;}
 function validPassword(password,stored){const [salt]=stored.split(':');const actual=Buffer.from(passwordHash(password,salt));const expected=Buffer.from(stored);return actual.length===expected.length&&timingSafeEqual(actual,expected);}
 export function mediaSignature(key,id,expires){return createHmac('sha256',key).update(`${id}:${expires}`).digest('hex');}
+function workerStatus(dataDir){
+  try{
+    const pid=Number(readFileSync(join(dataDir,'worker.lock'),'utf8'));
+    if(!Number.isInteger(pid)||pid<=0)return {running:false};
+    process.kill(pid,0);
+    return {running:true};
+  }catch{return {running:false};}
+}
 export function createApp(env=process.env,{meta:providedMeta}={}){
   const origin=new URL(env.PUBLIC_ORIGIN||'http://localhost:8789').origin;
   if(env.PUBLIC_ORIGIN&&env.PUBLIC_ORIGIN!==origin)throw new Error('PUBLIC_ORIGIN must be an origin without a path or trailing slash');
@@ -32,7 +40,7 @@ export function createApp(env=process.env,{meta:providedMeta}={}){
     try{
       const url=new URL(req.url,origin),path=url.pathname;
       if(path==='/healthz'&&req.method==='GET'){db.prepare('SELECT 1').get();return json(res,200,{ok:true});}
-      if(path==='/api/publisher/local-status'&&req.method==='GET'){const ads=await adspowerStatus(env);return json(res,200,{publisher:true,adspower:{configured:ads.configured,active:ads.active}});}
+      if(path==='/api/publisher/local-status'&&req.method==='GET'){const ads=await adspowerStatus(env);return json(res,200,{publisher:true,worker:workerStatus(dataDir),adspower:{configured:ads.configured,active:ads.active}});}
       if(!['GET','HEAD'].includes(req.method)&&req.headers.origin!==origin)return json(res,403,{error:'Origin rejected'});
       if(path.startsWith('/api/publisher/media/')&&req.method==='GET'){
         const id=path.split('/').at(-1),expires=Number(url.searchParams.get('expires')),sig=url.searchParams.get('sig')||'';
