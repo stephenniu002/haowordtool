@@ -2,8 +2,8 @@
   "checkedAt": "2026-09-14T09:10:00+08:00",
   "service": {
     "status": "partial",
-    "label": "网站 API 在线；本机发布端未连接",
-    "details": "Railway API 可响应且允许 haowordtool.com 调用，但健康检查地址返回 404；AdsPower1 Local API 当前拒绝连接。"
+    "label": "需要启动本机发布端",
+    "details": "请先启动 AdsPower1 和本机发布服务，然后点击平台按钮完成登录。扫码、短信和二次验证由账号本人完成。"
   },
   "levels": {
     "verified": "已验收",
