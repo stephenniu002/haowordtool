@@ -23,3 +23,18 @@ test('publisher pages link status evidence and avoid the old YouTube OAuth claim
   assert(!workspace.includes('YouTube 已接入 OAuth'));
   assert(script.includes("fetch('/publisher-platform-status.json'"));
 });
+
+test('social publisher account buttons preserve the selected platform in the login flow',async()=>{
+  const [landing,script]=await Promise.all([
+    readFile(new URL('../social-publisher.html',import.meta.url),'utf8'),
+    readFile(new URL('../assets/publisher.js',import.meta.url),'utf8')
+  ]);
+  for(const id of ['youtube','facebook','instagram','tiktok','douyin','xiaohongshu','bilibili','tencent','kuaishou','weibo','baijiahao','alipay','hupu']){
+    assert(landing.includes(`/publisher.html?platform=${id}#login`),id);
+  }
+  assert(!landing.includes('/publisher.html?platform=x#login'));
+  assert(landing.includes('<button class="button" type="button" disabled>Not available</button>'));
+  assert(script.includes("new URL(location.href).searchParams.get('platform')"));
+  assert(script.includes("sessionStorage.setItem(PENDING_PLATFORM_KEY,id)"));
+  assert(script.includes("id==='facebook'||id==='tiktok'"));
+});
