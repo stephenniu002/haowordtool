@@ -19,9 +19,13 @@ test('publisher pages link status evidence and avoid the old YouTube OAuth claim
     readFile(new URL('../assets/publisher.js',import.meta.url),'utf8')
   ]);
   assert(workspace.includes('id="platformAuditRows"'));
+  assert(workspace.includes('id="platformAuditCards"'));
+  assert(workspace.includes('<summary>查看平台检查详情</summary>'));
   assert(landing.includes('/publisher.html#verification'));
   assert(!workspace.includes('YouTube 已接入 OAuth'));
   assert(script.includes("fetch('/publisher-platform-status.json'"));
+  assert(script.includes("button.onclick=()=>directConnect(item.id,item.name)"));
+  assert(script.includes("unsupported'?'暂不可用':'连接账号'"));
 });
 
 test('social publisher account buttons preserve the selected platform in the login flow',async()=>{
