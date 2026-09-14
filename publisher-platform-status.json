@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-14T09:10:00+08:00",
+  "service": {
+    "status": "partial",
+    "label": "网站 API 在线；本机发布端未连接",
+    "details": "Railway API 可响应且允许 haowordtool.com 调用，但健康检查地址返回 404；AdsPower1 Local API 当前拒绝连接。"
+  },
+  "levels": {
+    "verified": "已验收",
+    "partial": "部分通过",
+    "login_required": "待登录测试",
+    "unsupported": "未接入"
+  },
+  "platforms": [
+    {"id":"youtube","name":"YouTube","adapter":"旧版浏览器 CLI","status":"partial","account":"当前会话缺失","result":"曾记录一条公开 Short；本次只能确认 CLI 入口，需重新登录后复测","evidenceUrl":"https://youtube.com/shorts/wds6aiMcoRw"},
+    {"id":"facebook","name":"Facebook","adapter":"AdsPower1（用户指定）","status":"partial","account":"Meta Business Suite 登录页面可见","result":"账号页面可访问；视频文件附加和公开发布尚未确认"},
+    {"id":"instagram","name":"Instagram","adapter":"Meta 官方接口候选","status":"login_required","account":"未绑定专业账号","result":"未按 AdsPower 流程完成账号和发布验收"},
+    {"id":"tiktok","name":"TikTok","adapter":"AdsPower1（用户指定）","status":"login_required","account":"AdsPower1 环境已打开","result":"最新版统一 CLI 没有 TikTok 入口；尚无成功发布记录"},
+    {"id":"douyin","name":"抖音","adapter":"当前主线 CLI","status":"partial","account":"当前会话缺失","result":"CLI 登录、检查和视频入口通过；历史任务仅到平台审核，未取得公开链接"},
+    {"id":"kuaishou","name":"快手","adapter":"当前主线 CLI","status":"partial","account":"当前会话缺失","result":"CLI 登录、检查和视频入口通过；历史任务仅到平台审核，未取得公开链接"},
+    {"id":"xiaohongshu","name":"小红书","adapter":"当前主线 CLI","status":"login_required","account":"未登录","result":"CLI 登录、检查和视频入口通过；待账号登录与草稿/发布验收"},
+    {"id":"bilibili","name":"B站","adapter":"当前主线 CLI","status":"login_required","account":"未登录","result":"CLI 登录、检查和视频入口通过；B站需交互式登录后验收"},
+    {"id":"tencent","name":"视频号","adapter":"旧版浏览器 CLI","status":"login_required","account":"未登录","result":"CLI 登录、检查和视频入口通过；待微信扫码和真实发布验收"},
+    {"id":"baijiahao","name":"百家号","adapter":"旧版浏览器 CLI","status":"login_required","account":"未登录","result":"CLI 登录、检查和视频入口通过；待账号验收"},
+    {"id":"alipay","name":"支付宝生活号","adapter":"旧版浏览器 CLI","status":"login_required","account":"未登录","result":"CLI 登录、检查和视频入口通过；待账号验收"},
+    {"id":"weibo","name":"微博","adapter":"旧版浏览器 CLI","status":"login_required","account":"未登录","result":"CLI 登录、检查和视频入口通过；待账号验收"},
+    {"id":"hupu","name":"虎扑","adapter":"旧版浏览器 CLI","status":"login_required","account":"未登录","result":"CLI 登录、检查和视频入口通过；待账号验收"},
+    {"id":"x","name":"X / Twitter","adapter":"无","status":"unsupported","account":"不可连接","result":"上游没有 X 发布器；当前账号状态也不作为自动发布验收"}
+  ]
+}
