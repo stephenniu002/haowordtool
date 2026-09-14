@@ -102,6 +102,18 @@
     ['Prepare once. Publish across your selected channels. Multi-platform publishing setup and service plans: US$25 monthly or US$299 yearly.','准备一份素材，发布到选定平台。多平台发布安装配置服务：每月 25 美元或每年 299 美元。','一度準備し、選んだ投稿先へ。マルチ投稿の導入・サービスは月額25米ドルまたは年額299米ドル。','Préparez une fois, publiez sur vos canaux. Configuration et service : 25 USD par mois ou 299 USD par an.','Prepara una vez y publica en tus canales. Configuración y servicio: 25 USD al mes o 299 USD al año.']
   ];
   rows.push(
+    ['Connect your accounts.','连接你的平台账号。','プラットフォームのアカウントを接続。','Connectez vos comptes.','Conecta tus cuentas.'],
+    ['Choose a platform. The workbench remembers your selection and starts that login flow after workspace verification.','选择平台后，工作台会记住所选平台；完成工作台验证后自动启动该平台的登录流程。','プラットフォームを選ぶと、ワークベンチが選択を記憶し、確認後にログインを開始します。','Choisissez une plateforme. L’atelier mémorise votre choix et lance sa connexion après vérification.','Elige una plataforma. El espacio de trabajo recuerda tu elección e inicia su acceso tras la verificación.'],
+    ['Connect account','连接账号','アカウントを接続','Connecter le compte','Conectar cuenta'],
+    ['Not available','暂不可用','利用不可','Indisponible','No disponible'],
+    ['Google account','Google 账号','Google アカウント','Compte Google','Cuenta de Google'],
+    ['Meta account','Meta 账号','Meta アカウント','Compte Meta','Cuenta de Meta'],
+    ['Phone or QR code','手机或扫码','電話番号またはQRコード','Téléphone ou code QR','Teléfono o código QR'],
+    ['Phone or email','手机或邮箱','電話番号またはメール','Téléphone ou e-mail','Teléfono o correo'],
+    ['WeChat QR code','微信扫码','WeChat QRコード','Code QR WeChat','Código QR de WeChat'],
+    ['Browser login','浏览器登录','ブラウザーでログイン','Connexion par navigateur','Acceso en navegador'],
+    ['Publisher integration unavailable','发布器尚未接入','投稿連携は未対応','Intégration de publication indisponible','Integración de publicación no disponible'],
+    ['Account login and any QR, email, SMS or two-step verification are completed on the platform. A connection is only marked ready after the platform confirms it.','账号登录、扫码、邮箱、短信或二次验证均在对应平台完成。只有平台确认成功后，连接才会标记为可用。','ログイン、QR、メール、SMS、二段階認証は各プラットフォームで完了します。プラットフォームの確認後のみ接続済みと表示します。','La connexion et toute vérification par QR, e-mail, SMS ou en deux étapes se font sur la plateforme. La connexion n’est prête qu’après confirmation de celle-ci.','El acceso y la verificación por QR, correo, SMS o dos pasos se completan en la plataforma. La conexión solo se marca como lista tras su confirmación.'],
     ['X / Twitter','X / Twitter','X / Twitter','X / Twitter','X / Twitter'],
     ['Integration pending','待接入验证','連携は未検証','Intégration à vérifier','Integración por verificar'],
     ['X is included in the test plan. The current social-auto-upload project has no X uploader; automated posting and scheduling require separate integration and verification.','X 已加入测试清单。当前 social-auto-upload 项目没有 X 上传模块；自动发布和定时发布需要另行接入并验证。','Xもテスト対象です。現在のsocial-auto-uploadにはX用アップローダーがないため、自動投稿と予約投稿は別途連携・検証が必要です。','X est inclus dans les tests. Le projet social-auto-upload actuel ne dispose pas de module X ; publication automatique et programmation nécessitent une intégration et une validation distinctes.','X está incluido en las pruebas. El proyecto social-auto-upload actual no tiene módulo para X; la publicación automática y programada requiere integración y verificación aparte.'],
