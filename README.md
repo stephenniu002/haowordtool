@@ -28,4 +28,12 @@ Search Console setup and follow-up work: [SEARCH_GROWTH.zh-CN.md](SEARCH_GROWTH.
 Video Studio, App Studio and AI Companion are linked from the home page. GitHub Pages serves the public interfaces; paid rendering, checkout and protected app packages require a separately configured backend. See video-saas/DEPLOY.zh-CN.md.
 
 ## Studio redesign
+
+## Service discovery and affiliate links
+
+The Chinese and English homepages are discovery hubs. Existing editors remain at `/app-builder.html` and `/en/app-builder.html`. Service buying guides live under `/services/` and `/en/services/`.
+
+Edit `scripts/build-service-hub.mjs` and `assets/discover.css`. Store only public affiliate URLs in `assets/service-links.json` (never API keys or login credentials). Blank URLs generate clearly labelled ordinary Fiverr search links; configured URLs receive a nearby affiliate disclosure and `rel="sponsored noopener"`. Only reviewed Fiverr HTTPS destinations are accepted.
+
+Run `node scripts/build-service-hub.mjs`, then `node scripts/optimize-search.mjs` and the existing checks. The main generator invokes these steps as well. The site remains on its existing GitHub Pages domain.
 The main generator rebuilds the legacy tools, runs scripts/redesign-studios.mjs, then regenerates localized video pages. Edit studio markup in scripts/templates/*.template and scripts/redesign-studios.mjs; shared styling is assets/studio-design.css. App drafts are stored only in browser local storage and can be cleared in the workspace. Paid production and checkout still require a separately configured server.

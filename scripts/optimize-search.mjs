@@ -14,6 +14,7 @@ const urlOf = file => origin + '/' + file.replace(/(^|\/)index\.html$/, '$1');
 // Only reviewed, equivalent content belongs in a language cluster.
 const groups = [
   {'zh-CN': 'index.html', en: 'en/index.html'},
+  ...['index.html','logo-design.html','website-design.html','video-editing.html','disclosure.html'].map(file => ({'zh-CN': `services/${file}`, en: `en/services/${file}`})),
   ...['index.html', 'run-ai-html.html', 'preview-mobile-webpage.html', 'export-html-css-js-zip.html'].map(file => ({'zh-CN': `learn/${file}`, en: `en/learn/${file}`})),
   {'zh-CN': 'video-studio.html', ...Object.fromEntries(['en', 'ja', 'fr', 'es'].map(code => [code, `video-studio/${code}/index.html`]))}
 ];
@@ -56,7 +57,9 @@ export function run({check = false} = {}) {
     }
   }
   readDirectory('', false);
-  for (const dir of [...locales, 'guides', 'learn', 'video-studio']) readDirectory(dir, true);
+  for (const dir of [...locales, 'guides', 'learn', 'video-studio', 'services']) {
+    if (fs.existsSync(path.join(root, dir))) readDirectory(dir, true);
+  }
   const result = optimize(pages);
   const changes = [...result.pages].filter(([file, html]) => pages.get(file) !== html);
   if (fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8') !== result.sitemap) changes.push(['sitemap.xml', result.sitemap]);
