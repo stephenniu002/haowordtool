@@ -42,3 +42,26 @@ test('social publisher account buttons preserve the selected platform in the log
   assert(script.includes("sessionStorage.setItem(PENDING_PLATFORM_KEY,id)"));
   assert(script.includes("id==='facebook'||id==='tiktok'"));
 });
+
+test('publisher combines language selection with the local WhatsApp control surface',async()=>{
+  const [workspace,script,css,server]=await Promise.all([
+    readFile(new URL('../publisher.html',import.meta.url),'utf8'),
+    readFile(new URL('../assets/publisher.js',import.meta.url),'utf8'),
+    readFile(new URL('../assets/publisher.css',import.meta.url),'utf8'),
+    readFile(new URL('../publisher-service/server.mjs',import.meta.url),'utf8')
+  ]);
+  for(const language of ['zh-CN','en','ja','fr','es'])assert(workspace.includes(`value="${language}"`),language);
+  assert(workspace.includes('id="whatsappControl"'));
+  assert(workspace.includes('href="http://127.0.0.1:8000/"'));
+  assert(workspace.includes('href="http://localhost:8789/publisher.html"'));
+  assert(script.includes("localStorage.setItem(LANGUAGE_KEY,publisherLanguage)"));
+  assert(script.includes("frame.src=frame.dataset.src"));
+  assert(script.includes("?location.origin:'https://haoword-publisher-service-production.up.railway.app'"));
+  assert(css.includes('.whatsapp-embed iframe'));
+  assert(server.includes('frame-src http://127.0.0.1:8000'));
+  assert(server.includes("'/publisher-platform-status.json'"));
+  assert(server.includes("path==='/healthz'"));
+  assert(server.includes("path==='/api/publisher/adspower/status'"));
+  assert(server.includes("path==='/api/publisher/local-status'"));
+  assert(script.includes('loadPublicAudit().then(loadLocalServiceStatus)'));
+});

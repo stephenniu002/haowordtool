@@ -9,6 +9,7 @@ import {openStore,vault,hash,rateLimit,transaction} from './store.mjs';
 import {PLATFORMS,platformById,readiness} from './platforms.mjs';
 import {createMeta} from './meta.mjs';
 import {enqueue} from './queue.mjs';
+import {adspowerStatus} from './adspower-status.mjs';
 
 export function passwordHash(password,salt=randomBytes(16).toString('hex')){return `${salt}:${scryptSync(password,salt,64).toString('hex')}`;}
 function validPassword(password,stored){const [salt]=stored.split(':');const actual=Buffer.from(passwordHash(password,salt));const expected=Buffer.from(stored);return actual.length===expected.length&&timingSafeEqual(actual,expected);}
@@ -30,6 +31,8 @@ export function createApp(env=process.env,{meta:providedMeta}={}){
     res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');
     try{
       const url=new URL(req.url,origin),path=url.pathname;
+      if(path==='/healthz'&&req.method==='GET'){db.prepare('SELECT 1').get();return json(res,200,{ok:true});}
+      if(path==='/api/publisher/local-status'&&req.method==='GET'){const ads=await adspowerStatus(env);return json(res,200,{publisher:true,adspower:{configured:ads.configured,active:ads.active}});}
       if(!['GET','HEAD'].includes(req.method)&&req.headers.origin!==origin)return json(res,403,{error:'Origin rejected'});
       if(path.startsWith('/api/publisher/media/')&&req.method==='GET'){
         const id=path.split('/').at(-1),expires=Number(url.searchParams.get('expires')),sig=url.searchParams.get('sig')||'';
@@ -66,6 +69,7 @@ export function createApp(env=process.env,{meta:providedMeta}={}){
       if(path.startsWith('/api/publisher/')){
         if(!session)return json(res,401,{error:'Sign in first'});
         const user=session.user_id;
+        if(path==='/api/publisher/adspower/status'&&req.method==='GET')return json(res,200,await adspowerStatus(env));
         if(path==='/api/publisher/state'&&req.method==='GET')return json(res,200,{accounts:accountList(user),platforms:PLATFORMS.map(p=>({...p,available:readiness(p,env)}))});
         if(path==='/api/publisher/logout'&&req.method==='POST'){db.prepare('DELETE FROM sessions WHERE token=?').run(token);res.setHeader('Set-Cookie','publisher_session=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0');return json(res,200,{ok:true});}
         if(path==='/api/publisher/oauth/meta'&&req.method==='POST'){
@@ -98,10 +102,10 @@ export function createApp(env=process.env,{meta:providedMeta}={}){
         if(path==='/api/publisher/jobs'&&req.method==='GET')return json(res,200,{targets:db.prepare('SELECT t.id,t.status,t.result,t.error,a.label,a.platform,j.created FROM targets t JOIN jobs j ON j.id=t.job_id JOIN accounts a ON a.id=t.account_id WHERE j.user_id=? ORDER BY j.created DESC LIMIT 100').all(user)});
         return json(res,404,{error:'Not found'});
       }
-      if(req.method==='GET'&&['/','/publisher.html','/assets/publisher.js','/assets/publisher.css'].includes(path)){
+      if(req.method==='GET'&&['/','/publisher.html','/publisher-platform-status.json','/assets/publisher.js','/assets/publisher.css'].includes(path)){
         const name=path==='/'?'publisher.html':path.slice(1);const file=resolve(fileURLToPath(new URL('..',import.meta.url)),name);
-        res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
-        res.setHeader('Content-Type',name.endsWith('.js')?'text/javascript':name.endsWith('.css')?'text/css':'text/html; charset=utf-8');return res.end(readFileSync(file));
+        res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src http://127.0.0.1:8000; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
+        res.setHeader('Content-Type',name.endsWith('.js')?'text/javascript':name.endsWith('.css')?'text/css':name.endsWith('.json')?'application/json; charset=utf-8':'text/html; charset=utf-8');return res.end(readFileSync(file));
       }
       return json(res,404,{error:'Not found'});
     }catch(error){if(!res.headersSent&&!res.destroyed)json(res,error.status||400,{error:error.name==='ProviderError'?error.message:'Request failed. Check your input and server configuration.'});else res.destroy();}
