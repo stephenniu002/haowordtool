@@ -38,6 +38,7 @@ await import('./build-local-ai.mjs');
 
 await import('./connect-social-publisher.mjs');
 await import('./generate-localized-pages.mjs');
+await import('./add-affiliate-landing.mjs');
 await import('./build-service-hub.mjs');
 const {run: optimizeServiceSearch}=await import('./optimize-search.mjs');
 optimizeServiceSearch();
