@@ -193,7 +193,7 @@ const page = `<!doctype html>
         <p>Fiverr services solve production and marketing bottlenecks. Amazon products support filming, storage and home-office workflows.</p>
       </div>
       <div class="offer-grid">${affiliateOfferCards}</div>
-      <p class="tracking-note"><strong>Affiliate disclosure:</strong> HaoWordTool may earn a commission from qualifying Fiverr purchases made through the marked affiliate links, at no extra cost to the buyer. Amazon buttons remain ordinary destination links until an approved Amazon Associates tag is added. Product availability, prices and seller terms can change.</p>
+      <p class="tracking-note"><strong>Affiliate disclosure:</strong> HaoWordTool may earn a commission from qualifying Fiverr marketplace purchases or affiliate-program referrals made through the marked links, at no extra cost to the visitor. Amazon buttons remain ordinary destination links until an approved Amazon Associates tag is added. Product availability, prices and program terms can change.</p>
     </section>
 
     <section class="product-controls" aria-label="Product filters">
