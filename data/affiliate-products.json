@@ -1,0 +1,185 @@
+{
+  "amazonUrl": "https://amzn.to/4AeIehO",
+  "categories": [
+    {
+      "id": "tech",
+      "label": "Tech & Gadgets",
+      "image": "/assets/affiliate-products/tech.webp",
+      "why": "Highly visual products work well in comparison clips, setup demos, and problem-solution Pins.",
+      "products": [
+        "Sony WH-1000XM6 Noise-Canceling Headphones",
+        "Samsung Galaxy S26 Ultra",
+        "Apple MacBook Neo",
+        "Sony WF-1000XM6 Noise-Canceling Earbuds",
+        "Lenovo ThinkBook Plus G7 Auto Twist",
+        "GoPro Mission One Series",
+        "Insta360 Mic Pro",
+        "Apple Watch Series 12",
+        "Dell XPS 13 DX13260",
+        "ASUS ExpertBook Ultra"
+      ]
+    },
+    {
+      "id": "home-kitchen",
+      "label": "Home & Kitchen",
+      "image": "/assets/affiliate-products/home-kitchen.webp",
+      "why": "Everyday transformations are easy to show in 15-second demos and searchable recipe or home-improvement Pins.",
+      "products": [
+        "KitchenAid Artisan Plus Stand Mixer",
+        "Cosori Iconic Air Fryer",
+        "Ninja BlendBoss Personal Blender",
+        "Instant Pot Rio 6-Quart",
+        "Ooni Halo Pro Spiral Mixer",
+        "Drinkmate OmniFizz Sparkling Water Maker",
+        "Le Creuset Enameled Dutch Oven",
+        "Breville Smart Oven",
+        "Ninja Slushi Max XXL",
+        "GIR Silicone Spatula"
+      ]
+    },
+    {
+      "id": "outdoor-travel",
+      "label": "Outdoor & Travel",
+      "image": "/assets/affiliate-products/outdoor-travel.webp",
+      "why": "Lifestyle-led gear supports packing lists, field tests, seasonal guides, and aspirational Pinterest storytelling.",
+      "products": [
+        "Patagonia Torrentshell 3L Jacket",
+        "HOKA Speedgoat 7 Trail Shoes",
+        "REI Co-op Rainier Rain Jacket",
+        "Cotopaxi Allpa 35L Travel Pack",
+        "Osprey Farpoint 55 Travel Pack",
+        "Helinox Chair Zero LT",
+        "Alpacka Chinook Packraft",
+        "Coros Apex 2 Pro Sports Watch",
+        "Garmin Fenix 8 Outdoor Watch",
+        "Apple AirTag"
+      ]
+    },
+    {
+      "id": "health-fitness",
+      "label": "Health & Fitness",
+      "image": "/assets/affiliate-products/health-fitness.webp",
+      "why": "Routine, setup, and feature demonstrations create repeatable content without relying on medical or guaranteed-result claims.",
+      "products": [
+        "Withings Body Scan 2.0 Smart Scale",
+        "Shokz OpenFit Pro Open-Ear Headphones",
+        "Amazfit Active Max Smartwatch",
+        "Snode AD80 Adjustable Dumbbells",
+        "Bowflex SelectTech 840 Adjustable Kettlebell",
+        "Reebok Nano X5 Edge Training Shoes",
+        "Nike Metcon 10 Training Shoes",
+        "Optimum Nutrition Creatine Powder",
+        "Oura Ring 5 Smart Ring",
+        "Whoop 5.0 Fitness Band"
+      ]
+    },
+    {
+      "id": "beauty-care",
+      "label": "Beauty & Personal Care",
+      "image": "/assets/affiliate-products/beauty-care.webp",
+      "why": "Texture, routine, and application content are naturally visual and suited to short tutorials and comparison Pins.",
+      "products": [
+        "La Roche-Posay Toleriane Face Moisturizer",
+        "Lancôme JuicyTreat Lip Oil",
+        "Rare Beauty Warm Wishes Matte Bronzer",
+        "Marc Jacobs Beauty Eyeliner",
+        "Shark CryoGlow LED Face Mask",
+        "Dr. Brandt Wrinkle Release Serum",
+        "YSE Beauty Like a Gloss Lip Color",
+        "IGK Best Interest Styling Cream",
+        "Murad Retinal ReSculpt Night Cream",
+        "Eucerin Radiant Tone Body Lotion"
+      ]
+    },
+    {
+      "id": "baby-parenting",
+      "label": "Baby & Parenting",
+      "image": "/assets/affiliate-products/baby-parenting.webp",
+      "why": "Longer decision cycles support helpful checklists, safety-focused explainers, and combined article-plus-video funnels.",
+      "products": [
+        "Cybex Cloud T Infant Car Seat",
+        "Chicco KeyFit Infant Car Seat",
+        "Maxi-Cosi Iora Bassinet",
+        "BabyBjörn Baby Cradle",
+        "Philips Avent Ultra Air Pacifier",
+        "Abigail 3-in-1 Convertible Crib",
+        "Avocado Organic Crib Mattress",
+        "Bombi Bēbee V2 Lightweight Stroller",
+        "Chicco LullaGlide Plus Bassinet",
+        "MAM Original Matte Pacifier"
+      ]
+    },
+    {
+      "id": "pet-products",
+      "label": "Pet Products",
+      "image": "/assets/affiliate-products/pet-products.webp",
+      "why": "Emotion-led pet content earns attention quickly and supports demonstrations, routines, and repeat-purchase topics.",
+      "products": [
+        "Birdfy Feeder Metal 2 4K",
+        "CATLINK Open-X Automatic Litter Box",
+        "Neakasa Riko Automatic Pet Feeder",
+        "SATELLAI Collar Go GPS Dog Collar",
+        "Bramble Plant-Based Fresh Dog Food",
+        "Hertzko Double-Sided Grooming Brush",
+        "Squishface Pet Wrinkle Wipes",
+        "Pawridise Pet Bathing Glove",
+        "Petgugu AI Smart Feeder",
+        "LumaTempo Smart Aquarium"
+      ]
+    },
+    {
+      "id": "office-productivity",
+      "label": "Office & Productivity",
+      "image": "/assets/affiliate-products/office-productivity.webp",
+      "why": "Workstation upgrades suit Pinterest, YouTube, and LinkedIn content built around efficiency, comfort, and setup comparisons.",
+      "products": [
+        "Logitech MX Wireless Keyboard",
+        "Logitech MX Master 3 Wireless Mouse",
+        "HP OfficeJet Pro 9015e Printer",
+        "Brother MFC-J6955DW Printer",
+        "Epson EcoTank Pro ET-5850 Printer",
+        "Bose Noise Cancelling Headphones 700",
+        "SIHOO M57 Ergonomic Chair",
+        "Sharpie Permanent Marker 24-Pack",
+        "SanDisk 128GB USB Flash Drive",
+        "Apple AirPods Pro 2nd Generation"
+      ]
+    },
+    {
+      "id": "smart-home",
+      "label": "Smart Home",
+      "image": "/assets/affiliate-products/smart-home.webp",
+      "why": "Installation and automation routines create clear tutorial content with a visible before-and-after story.",
+      "products": [
+        "Aqara Camera Hub G5 Pro",
+        "Arlo Video Doorbell 2nd Gen",
+        "Amazon Echo Dot Max",
+        "Ecobee Smart Thermostat Premium",
+        "Ultraloq Bolt Fingerprint Smart Lock",
+        "Govee Ceiling Light Ultra",
+        "Roborock Saros Rover Robot Vacuum",
+        "SwitchBot Lock Ultra Max",
+        "Aqara Smart Lock U400",
+        "Google Nest Hub Max"
+      ]
+    },
+    {
+      "id": "gaming-entertainment",
+      "label": "Gaming & Entertainment",
+      "image": "/assets/affiliate-products/gaming-entertainment.webp",
+      "why": "Feature comparisons, setup reveals, and performance clips fit short-form platforms and highly engaged enthusiast audiences.",
+      "products": [
+        "Steam Deck OLED",
+        "SteelSeries Arctis Nova Pro Omni Headset",
+        "Logitech G Pro X2 Superstrike Mouse",
+        "Razer Iskur V2 Gaming Chair",
+        "Corsair MAKR PRO 75 Keyboard",
+        "ASUS ROG Falchion Ace 75 HE Keyboard",
+        "HyperX Cloud Alpha 2 Wireless Headset",
+        "Razer Wolverine V3 Controller",
+        "PlayStation 27-inch Gaming Monitor",
+        "ASUS ROG Kithara Headset"
+      ]
+    }
+  ]
+}

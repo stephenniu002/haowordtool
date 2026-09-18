@@ -40,6 +40,7 @@ await import('./connect-social-publisher.mjs');
 await import('./generate-localized-pages.mjs');
 await import('./add-affiliate-landing.mjs');
 await import('./add-top-products-2026.mjs');
+await import('./add-products-page.mjs');
 await import('./build-service-hub.mjs');
 const {run: optimizeServiceSearch}=await import('./optimize-search.mjs');
 optimizeServiceSearch();
