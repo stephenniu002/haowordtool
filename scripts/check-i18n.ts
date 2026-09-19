@@ -24,7 +24,7 @@ import path from 'node:path';
    ============================================================ */
 const LOCALES_DIR = path.resolve(process.cwd(), 'locales');
 const BASE_LOCALE = 'en';                 // 基准语言
-const IGNORE_UNTRANSLATED: string[] = [];
+const IGNORE_UNTRANSLATED: string[] = ['checkout.emailPh', 'auth.fieldEmailPh']; // Example email addresses are intentionally identical.
 
 /* ============================================================
    类型
