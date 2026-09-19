@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "i18n:check": "node scripts/check-i18n.mjs",
+    "i18n:check:ci": "node scripts/check-i18n.mjs --ci",
+    "i18n:check:json": "node scripts/check-i18n.mjs --json",
+    "i18n:fix": "node scripts/check-i18n.mjs --fix"
+  }
+}

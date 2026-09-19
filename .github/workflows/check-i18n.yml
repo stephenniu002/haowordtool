@@ -1,0 +1,25 @@
+name: Check i18n
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['locales/**', 'scripts/check-i18n.*', '.github/workflows/check-i18n.yml', 'package.json']
+  pull_request:
+    paths: ['locales/**', 'scripts/check-i18n.*', '.github/workflows/check-i18n.yml', 'package.json']
+permissions:
+  contents: read
+jobs:
+  i18n:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check language packs when configured
+        run: |
+          if [ -d locales ]; then
+            npm run i18n:check:ci
+          else
+            echo 'Language-pack check not run: this static site does not yet use locales/*.json.' >> "$GITHUB_STEP_SUMMARY"
+          fi
