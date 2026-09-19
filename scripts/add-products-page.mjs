@@ -30,8 +30,16 @@ const products = data.categories.flatMap((category, categoryIndex) => category.p
 })));
 
 const productHref = product => `/affiliate-marketing.html?product=${encodeURIComponent(product.name)}&utm_source=affiliate_products&utm_medium=content&utm_campaign=ai_product_100`;
+const amazonHref = product => {
+  const asin = data.amazonAsins?.[product.name];
+  return asin ? `https://www.amazon.com/dp/${encodeURIComponent(asin)}?tag=${encodeURIComponent(data.amazonTag)}` : '';
+};
 
 function productCard(product) {
+  const amazonUrl = amazonHref(product);
+  const amazonAction = amazonUrl
+    ? `<a class="amazon-link" href="${amazonUrl}" target="_blank" rel="sponsored noopener">View product on Amazon <span aria-hidden="true">↗</span></a>`
+    : `<span class="amazon-link pending">Amazon ASIN required</span>`;
   return `<article class="product-card" id="${slug(product.name)}" data-affiliate-product>
     <a class="product-media" href="${productHref(product)}" aria-label="Promote ${escape(product.name)} with AI">
       <img src="${product.image}" alt="Editorial product setup representing ${escape(product.category)}" loading="lazy" width="1200" height="900" style="object-position:${product.position}">
@@ -45,7 +53,7 @@ function productCard(product) {
       <p class="product-channel"><strong>Best first channel:</strong> ${escape(product.channel)}</p>
       <div class="product-actions">
         <a class="button primary" href="${productHref(product)}">Promote this with AI <span aria-hidden="true">→</span></a>
-        <a class="amazon-link" href="${data.amazonUrl}" target="_blank" rel="sponsored noopener">View on Amazon <span aria-hidden="true">↗</span></a>
+        ${amazonAction}
       </div>
     </div>
   </article>`;
@@ -97,6 +105,9 @@ function render({canonical, title, robots}) {
   <title>${escape(title)}</title>
   <meta name="description" content="Browse 100 product ideas across 10 categories, each matched with an AI content, publishing and lead-follow-up workflow.">
   <meta name="robots" content="${robots}">
+  <meta name="google-site-verification" content="V5m3Ygpe6VRjGSpzT7cTDbs60OFmx-hJfBzwGmgUzRQ">
+  <meta name="p:domain_verify" content="7c64ba517a90ca07acc1a2e96cdd5b18">
+  <meta name="google-adsense-account" content="ca-pub-4489946300243174">
   <link rel="canonical" href="${canonical}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="100 Products You Can Promote with AI">
@@ -171,6 +182,7 @@ function render({canonical, title, robots}) {
     .product-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
     .product-actions .button{border-radius:4px}
     .amazon-link{font:700 14px Arial,sans-serif;color:var(--editor-blue)}
+    .amazon-link.pending{display:inline-flex;align-items:center;color:#8b3e00;background:#fff4cf;border:1px solid #e3c86a;border-radius:4px;padding:7px 9px;text-decoration:none}
     .empty-state{padding:40px;border:1px solid var(--editor-line);background:var(--editor-warm);font-size:18px}
     .final-cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:36px;align-items:center;background:#122c23;color:#fff;padding:38px;margin-top:58px}
     .final-cta h2{font-size:34px;margin:0 0 10px;color:#fff}
@@ -184,7 +196,7 @@ function render({canonical, title, robots}) {
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-top">
     <a class="logo" href="/"><img src="/assets/hao-logo.svg?v=4" alt="HaoWordStudio" width="236" height="46" style="display:block;width:min(236px,50vw);height:auto"></a>
-    <nav aria-label="Main navigation"><a href="/">App Studio</a><a href="/affiliate-products.html" aria-current="page">100 Products</a><a href="/affiliate-marketing.html">AI Affiliate Workflow</a><a href="/contact.html">Contact</a></nav>
+    <nav aria-label="Main navigation"><a href="/">App Studio</a><a href="/affiliate-dashboard.html">Product workspace</a><a href="/affiliate-products.html" aria-current="page">100 Products</a><a href="/affiliate-marketing.html">AI Affiliate Workflow</a><a href="/contact.html">Contact</a></nav>
   </header>
   <main id="main">
     <section class="hero-search">
@@ -192,7 +204,7 @@ function render({canonical, title, robots}) {
         <p class="eyebrow">AI + AFFILIATE MARKETING</p>
         <h1>100 products.<br>One AI workflow to promote them all.</h1>
         <p class="sub">Pick a product below. HaoWordTool connects the content path: AI video, multi-platform publishing, automatic replies, lead follow-up, and payment guidance.</p>
-        <p class="disclosure"><strong>Disclosure:</strong> HaoWordTool may earn a commission when visitors use marked affiliate links. As an Amazon Associate, HaoWordTool earns from qualifying purchases. This is an original product-opportunity guide and is not affiliated with Wirecutter or The New York Times. Verify availability, specifications, price, and program terms before publishing.</p>
+        <p class="disclosure"><strong>Disclosure:</strong> HaoWordTool may earn a commission from Amazon and Fiverr when you click links on this page. As an Amazon Associate, HaoWordTool earns from qualifying purchases. Amazon product buttons are enabled only after a specific ASIN is mapped to the item; no homepage or generic Amazon link is used on this page. This is an original product-opportunity guide and is not affiliated with Wirecutter or The New York Times.</p>
       </div>
       <aside class="search-panel">
         <p class="eyebrow">PRODUCT FINDER</p>

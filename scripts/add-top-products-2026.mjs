@@ -80,12 +80,16 @@ const filterButtons = [['all', 'All'], ...categories.map(([id, label]) => [id, l
   .join('');
 
 const categoryRows = categories.map(([id, label, desc]) => `<article><b>${String(products.filter(p => p.category === id).length).padStart(2, '0')}</b><h3>${escape(label)}</h3><p>${escape(desc)}</p></article>`).join('');
+const offerAction = offer => offer.url
+  ? `<a class="button${offer.network === 'Fiverr' ? ' primary' : ''}" href="${escape(offer.url)}" target="_blank" rel="sponsored noopener">Browse ${escape(offer.network)}</a>`
+  : `<span class="button disabled-link" aria-label="Specific Amazon ASIN required before publishing an affiliate link">ASIN required before linking</span>`;
+const offerLabel = offer => offer.tracking === 'active' ? 'Affiliate link' : offer.tracking === 'asin_required' ? 'ASIN required' : 'Destination link';
 const affiliateOfferCards = affiliateOffers.map(offer => `<article class="offer-card" data-network="${escape(offer.network.toLowerCase())}">
-  <p class="eyebrow">${escape(offer.network)} · ${offer.tracking === 'active' ? 'Affiliate link' : 'Destination link'}</p>
+  <p class="eyebrow">${escape(offer.network)} · ${offerLabel(offer)}</p>
   <h3>${escape(offer.name)}</h3>
   <p>${escape(offer.buyer)}</p>
   <p><strong>Content angle:</strong> ${escape(offer.angle)}</p>
-  <a class="button${offer.network === 'Fiverr' ? ' primary' : ''}" href="${escape(offer.url)}" target="_blank" rel="sponsored noopener">Browse ${escape(offer.network)}</a>
+  ${offerAction(offer)}
 </article>`).join('\n');
 const productJson = products.map(product => ({
   '@type': 'ListItem',
@@ -102,6 +106,9 @@ const page = `<!doctype html>
   <title>2026 Top 100 Viral Products for Affiliate Marketing | HaoWordTool</title>
   <meta name="description" content="An original 2026 top 100 product-opportunity list for Pinterest, YouTube Shorts, TikTok and affiliate marketing content. Built for free-traffic testing and human-approved offers.">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="google-site-verification" content="V5m3Ygpe6VRjGSpzT7cTDbs60OFmx-hJfBzwGmgUzRQ">
+  <meta name="p:domain_verify" content="7c64ba517a90ca07acc1a2e96cdd5b18">
+  <meta name="google-adsense-account" content="ca-pub-4489946300243174">
   <link rel="canonical" href="${base}/top-100-products-2026.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="2026 Top 100 Viral Products for Affiliate Marketing">
@@ -143,6 +150,7 @@ const page = `<!doctype html>
     .offer-card h3{font-size:20px;margin:6px 0 8px}
     .offer-card p{color:#52645a}
     .offer-card .button{margin-top:auto}
+    .disabled-link{background:#fff4cf;color:#8b3e00;border-color:#e3c86a;cursor:not-allowed}
     .tracking-note{font-size:13px;line-height:1.7;color:#52645a;max-width:920px}
     .affiliate-cta{margin-top:34px}
     @media(max-width:980px){.category-grid,.offer-grid{grid-template-columns:repeat(2,1fr)}.product-card{grid-template-columns:70px 1fr}.product-visual{grid-column:2}.product-body{grid-column:1/-1}}
@@ -155,6 +163,7 @@ const page = `<!doctype html>
     <a class="logo" href="/"><img src="/assets/hao-logo.svg?v=4" alt="HaoWordStudio" width="236" height="46" style="display:block;width:min(236px,50vw);height:auto"></a>
     <nav aria-label="Main navigation">
       <a href="/">App Studio</a>
+      <a href="/affiliate-dashboard.html">Product workspace</a>
       <a href="/top-100-products-2026.html" aria-current="page">Top 100 Products</a>
       <a href="/affiliate-marketing.html">Affiliate Funnel</a>
       <a href="/social-publisher.html">Social Publisher</a>
@@ -193,7 +202,7 @@ const page = `<!doctype html>
         <p>Fiverr services solve production and marketing bottlenecks. Amazon products support filming, storage and home-office workflows.</p>
       </div>
       <div class="offer-grid">${affiliateOfferCards}</div>
-      <p class="tracking-note"><strong>Affiliate disclosure:</strong> HaoWordTool may earn a commission from qualifying Fiverr marketplace purchases, Fiverr affiliate-program referrals, and Amazon purchases made through the marked links, at no extra cost to the visitor. As an Amazon Associate, HaoWordTool earns from qualifying purchases. Product availability, prices and program terms can change.</p>
+      <p class="tracking-note"><strong>Affiliate disclosure:</strong> HaoWordTool may earn a commission from qualifying Fiverr marketplace purchases, Fiverr affiliate-program referrals, and Amazon purchases made through marked product-detail links, at no extra cost to the visitor. As an Amazon Associate, HaoWordTool earns from qualifying purchases. Amazon links on this page stay disabled until each item has a specific ASIN mapped to <code>https://www.amazon.com/dp/[ASIN]?tag=haowordstudio-20</code>.</p>
     </section>
 
     <section class="product-controls" aria-label="Product filters">
