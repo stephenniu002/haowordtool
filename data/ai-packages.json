@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "currency": "USD",
+  "store": "haowordtool.myshopify.com",
+  "checkoutEnabled": false,
+  "generationEnabled": false,
+  "packages": [
+    {
+      "id": "product-photos",
+      "title": "AI Product Photos",
+      "priceCents": 3250,
+      "sku": "HWT-AI-PHOTO-5",
+      "outputCount": 5,
+      "revisionCount": 1,
+      "summary": "5 product scene images",
+      "inputs": "Product photos, brand details and scene requirements",
+      "format": "5 JPG or PNG images",
+      "limit": "One product · one visual direction",
+      "kind": "photos",
+      "status": "coming_soon",
+      "shopifyVariantId": null
+    },
+    {
+      "id": "product-video",
+      "title": "AI Product Video",
+      "priceCents": 11700,
+      "sku": "HWT-AI-VIDEO-15",
+      "outputCount": 1,
+      "revisionCount": 1,
+      "summary": "One 15-second product video",
+      "inputs": "Product assets, selling points and target language",
+      "format": "15-second MP4 + subtitles",
+      "limit": "One product · one aspect ratio",
+      "kind": "video",
+      "status": "coming_soon",
+      "shopifyVariantId": null
+    },
+    {
+      "id": "voiceover",
+      "title": "AI Voiceover",
+      "priceCents": 650,
+      "sku": "HWT-AI-VOICE-300",
+      "outputCount": 1,
+      "revisionCount": 1,
+      "summary": "One voiceover, up to 300 words",
+      "inputs": "Final script, language and voice style",
+      "format": "One MP3 or WAV voice track",
+      "limit": "One language · one stock voice",
+      "kind": "voice",
+      "status": "coming_soon",
+      "shopifyVariantId": null
+    }
+  ]
+}

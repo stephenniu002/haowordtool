@@ -327,9 +327,9 @@
     "t46": "Distributeur connecté pour animaux",
     "t47": "Découvrez la distribution programmée avec caméra.",
     "t48": "Voir l’aperçu →",
-    "t49": "Outils IA à découvrir",
-    "t50": "Découvrez cinq outils et leurs sites officiels. Les démonstrations des guides sont des aperçus.",
-    "t51": "Voir tous les outils IA",
+    "t49": "Studio IA HaoWordTool",
+    "t50": "Photos de produits, vidéos et voix off. Des forfaits de création clairs pour votre marque.",
+    "t51": "Voir les forfaits",
     "t52": "Vidéos avec avatars IA",
     "t53": "Tarifs du fournisseur",
     "t54": "Voir le guide →",
@@ -390,6 +390,16 @@
     "t109": "Fermer le compte",
     "t110": "Fermer les détails du produit",
     "t111": "Accueil HaoWordTool",
-    "t112": "Pied de page"
+    "t112": "Pied de page",
+    "aiStudio": {
+      "photos": "5 images de produits · 1 révision",
+      "video": "Vidéo de 15 secondes + sous-titres · 1 révision",
+      "voice": "Voix off de 300 mots maximum · 1 révision",
+      "view": "Voir le forfait →",
+      "soon": "Bientôt disponible",
+      "photoTitle": "Photos de produits IA",
+      "videoTitle": "Vidéo produit IA",
+      "voiceTitle": "Voix off IA"
+    }
   }
 }

@@ -327,9 +327,9 @@
     "t46": "Smart Pet Feeder",
     "t47": "Explore scheduled feeding with a camera.",
     "t48": "View preview →",
-    "t49": "Featured AI tools",
-    "t50": "Explore five tools and visit their official websites. Guide demonstrations are previews.",
-    "t51": "View all AI tools",
+    "t49": "HaoWordTool AI Studio",
+    "t50": "Product photos, videos and voiceovers. Clear project packages, made for your brand.",
+    "t51": "Explore packages",
     "t52": "AI avatar videos",
     "t53": "Provider pricing",
     "t54": "View guide →",
@@ -390,6 +390,16 @@
     "t109": "Close account",
     "t110": "Close product details",
     "t111": "HaoWordTool home",
-    "t112": "Footer"
+    "t112": "Footer",
+    "aiStudio": {
+      "photos": "5 product scene images · 1 revision",
+      "video": "15-second video + subtitles · 1 revision",
+      "voice": "Voiceover up to 300 words · 1 revision",
+      "view": "View package →",
+      "soon": "Coming soon",
+      "photoTitle": "AI Product Photos",
+      "videoTitle": "AI Product Video",
+      "voiceTitle": "AI Voiceover"
+    }
   }
 }

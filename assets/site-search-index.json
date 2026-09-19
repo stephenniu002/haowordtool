@@ -36,12 +36,6 @@
     "keywords": ""
   },
   {
-    "title": "AI tool guides — HaoWordTool",
-    "url": "/ai-tools.html",
-    "description": "Explore five AI tool guide previews and visit the official providers: HeyGen, Speechify, v0, PixVerse and GlobalGPT.",
-    "keywords": ""
-  },
-  {
     "title": "Word Patterns, Spelling & Puzzle Strategy Library",
     "url": "/blog.html",
     "description": "Browse 23 original guides to anagrams, spelling, vocabulary learning, crossword constraints, and word-game strategy.",
@@ -532,46 +526,6 @@
     "keywords": "商品 产品 预览"
   },
   {
-    "title": "HeyGen",
-    "titleZh": "",
-    "url": "/ai-tools.html#heygen",
-    "description": "AI avatar videos",
-    "descriptionZh": "AI 数字人视频",
-    "keywords": "AI 工具 人工智能"
-  },
-  {
-    "title": "Speechify",
-    "titleZh": "",
-    "url": "/ai-tools.html#speechify",
-    "description": "Text to speech",
-    "descriptionZh": "文字转语音",
-    "keywords": "AI 工具 人工智能"
-  },
-  {
-    "title": "v0",
-    "titleZh": "",
-    "url": "/ai-tools.html#v0",
-    "description": "Build interfaces with prompts",
-    "descriptionZh": "通过提示词构建界面",
-    "keywords": "AI 工具 人工智能"
-  },
-  {
-    "title": "PixVerse",
-    "titleZh": "",
-    "url": "/ai-tools.html#pixverse",
-    "description": "Text and image to video",
-    "descriptionZh": "文字、图片生成视频",
-    "keywords": "AI 工具 人工智能"
-  },
-  {
-    "title": "GlobalGPT",
-    "titleZh": "",
-    "url": "/ai-tools.html#globalgpt",
-    "description": "Explore multiple AI models",
-    "descriptionZh": "探索多种 AI 模型",
-    "keywords": "AI 工具 人工智能"
-  },
-  {
     "title": "Reviews — editorial previews",
     "titleZh": "评测 — 编辑预览",
     "url": "/reviews.html",
@@ -637,5 +591,35 @@
     "url": "/reviews.html#ai-chatbot",
     "description": "Review preview. Scores, specifications and prices are unverified.",
     "keywords": "reviews 评测 预览 ai-chatbot"
+  },
+  {
+    "title": "HaoWordTool AI Studio",
+    "url": "/ai-tools.html",
+    "description": "Product photo, video and voiceover project packages.",
+    "keywords": "AI 商品图 视频 配音 自营 制作 套餐"
+  },
+  {
+    "title": "AI Product Photos",
+    "url": "/ai-tools.html#product-photos",
+    "description": "5 product scene images; one revision.",
+    "keywords": "HaoWordTool AI Studio Product photos, brand details and scene requirements"
+  },
+  {
+    "title": "AI Product Video",
+    "url": "/ai-tools.html#product-video",
+    "description": "One 15-second product video; one revision.",
+    "keywords": "HaoWordTool AI Studio Product assets, selling points and target language"
+  },
+  {
+    "title": "AI Voiceover",
+    "url": "/ai-tools.html#voiceover",
+    "description": "One voiceover, up to 300 words; one revision.",
+    "keywords": "HaoWordTool AI Studio Final script, language and voice style"
+  },
+  {
+    "title": "AI creative workspace",
+    "url": "/ai-workspace.html",
+    "description": "Prepare your project brief and access your store account.",
+    "keywords": "工作台 项目 订单 素材 下载"
   }
 ]

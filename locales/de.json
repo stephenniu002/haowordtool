@@ -327,9 +327,9 @@
     "t46": "Intelligenter Futterautomat",
     "t47": "Entdecken Sie zeitgesteuerte Fütterung mit Kamera.",
     "t48": "Vorschau ansehen →",
-    "t49": "Ausgewählte KI-Tools",
-    "t50": "Entdecken Sie fünf Tools und ihre offiziellen Websites. Vorführungen in den Ratgebern sind Vorschauen.",
-    "t51": "Alle KI-Tools ansehen",
+    "t49": "HaoWordTool KI-Studio",
+    "t50": "Produktfotos, Videos und Sprachaufnahmen. Klare Projektpakete für Ihre Marke.",
+    "t51": "Pakete ansehen",
     "t52": "KI-Avatar-Videos",
     "t53": "Preise beim Anbieter",
     "t54": "Ratgeber ansehen →",
@@ -390,6 +390,16 @@
     "t109": "Kontofenster schließen",
     "t110": "Produktdetails schließen",
     "t111": "HaoWordTool-Startseite",
-    "t112": "Fußzeile"
+    "t112": "Fußzeile",
+    "aiStudio": {
+      "photos": "5 Produktbilder · 1 Überarbeitung",
+      "video": "15-Sekunden-Video mit Untertiteln · 1 Überarbeitung",
+      "voice": "Sprachaufnahme bis 300 Wörter · 1 Überarbeitung",
+      "view": "Paket ansehen →",
+      "soon": "Demnächst verfügbar",
+      "photoTitle": "KI-Produktfotos",
+      "videoTitle": "KI-Produktvideo",
+      "voiceTitle": "KI-Sprachaufnahme"
+    }
   }
 }

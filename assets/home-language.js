@@ -11,7 +11,7 @@
     if(!supported.includes(lang)) lang='en';
     const id=++request;
     try {
-      if(lang!=='en'&&!cached[lang]){const r=await fetch('/locales/'+lang+'.json?v=eight-languages-1');if(!r.ok)throw Error('Language unavailable');const data=await r.json();if(bindings.some(b=>typeof read(data,b.key)!=='string'))throw Error('Incomplete language');cached[lang]=data;}
+      if(lang!=='en'&&!cached[lang]){const r=await fetch('/locales/'+lang+'.json?v=ai-studio-1');if(!r.ok)throw Error('Language unavailable');const data=await r.json();if(bindings.some(b=>typeof read(data,b.key)!=='string'))throw Error('Incomplete language');cached[lang]=data;}
       if(id!==request)return;
       for(const b of bindings){const value=lang==='en'?b.original:read(cached[lang],b.key);if(b.attr)b.el.setAttribute(b.attr,value);else b.el.textContent=value;}
       current=lang;select.value=lang;document.documentElement.lang=lang;
