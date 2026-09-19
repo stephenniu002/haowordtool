@@ -1,0 +1,1423 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Five Product Landing Pages — Design Preview | Haowordtool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#4B5563;--ink-strong:#1F2937;--ink-soft:#6B7280;--ink-light:#9CA3AF;
+  --line:#E5E7EB;--line-soft:#F3F4F6;
+  --surface:#FFFFFF;--surface-soft:#F9FAFB;
+  --success:#059669;--success-soft:#ECFDF5;
+  --radius:12px;--radius-lg:16px;--radius-xl:20px;--radius-2xl:28px;
+  --shadow-card:0 1px 2px rgba(31,41,55,.04),0 4px 12px rgba(31,41,55,.05);
+  --shadow-hover:0 4px 8px rgba(31,41,55,.06),0 16px 40px rgba(31,41,55,.08);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --sticky:76px;
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;
+  background:var(--surface);color:var(--ink);font-size:16px;line-height:1.625;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:var(--sticky);
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul,ol{list-style:none}
+::selection{background:#0B5FFF;color:#fff}
+.container{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ===== Switcher ===== */
+.switcher{position:sticky;top:0;z-index:200;background:#1F2937;padding:12px 0}
+.switcher-inner{display:flex;gap:8px;overflow-x:auto;max-width:1120px;margin:0 auto;padding:0 24px;scrollbar-width:none}
+.switcher-inner::-webkit-scrollbar{display:none}
+.switcher button{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:100px;
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);
+  font-size:13px;font-weight:600;white-space:nowrap;flex:none;
+  transition:all .25s var(--ease);border:1px solid transparent;
+}
+.switcher button:hover{background:rgba(255,255,255,.14);color:#fff}
+.switcher button.active{background:#fff;color:#1F2937}
+.switcher-emoji{font-size:15px}
+
+/* ===== Landing ===== */
+.landing{display:none;animation:fadeIn .5s var(--ease) both}
+.landing.active{display:block}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.15;color:var(--ink-strong)}
+h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.035em;line-height:1.06}
+h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+h3{font-size:1rem;font-weight:600;letter-spacing:-.01em}
+.text-balance{text-wrap:balance}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--brand);margin-bottom:14px;
+}
+.eyebrow::before{content:'';width:20px;height:2px;background:var(--brand);border-radius:2px}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:54px;padding:16px 30px;border-radius:9999px;
+  font-size:16px;font-weight:700;letter-spacing:-.01em;
+  background:var(--brand);color:#fff;
+  box-shadow:0 8px 24px var(--brand-shadow);
+  transition:all .3s var(--ease);white-space:nowrap;
+}
+.btn:hover{background:var(--brand-dark);transform:translateY(-2px);box-shadow:0 12px 32px var(--brand-shadow)}
+.btn svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-block{width:100%}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;overflow:hidden;padding:56px 0 72px;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,var(--brand-soft) 0%,transparent 60%),#fff;
+}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#fff;border:1px solid var(--line);
+  padding:6px 14px;border-radius:100px;
+  font-size:12.5px;font-weight:700;color:var(--ink-strong);
+  box-shadow:var(--shadow-card);margin-bottom:20px;
+}
+.hero-badge .stars{color:#F5A623;letter-spacing:1px;font-size:12px}
+.hero-badge b{color:var(--ink-strong)}
+
+.hero h1{margin-bottom:16px}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--brand) 0%,var(--brand-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{font-size:16.5px;line-height:1.7;color:var(--ink);margin-bottom:26px;max-width:520px}
+.hero-bullets{display:flex;flex-direction:column;gap:11px;margin-bottom:30px}
+.hero-bullets li{display:flex;align-items:flex-start;gap:12px;font-size:15px;font-weight:500;color:var(--ink-strong);line-height:1.5}
+.hero-bullets .check{
+  width:22px;height:22px;border-radius:50%;background:var(--success-soft);color:var(--success);
+  display:grid;place-items:center;flex:none;margin-top:1px;
+}
+.hero-bullets .check svg{width:12px;height:12px}
+
+.hero-price{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+.hero-price-now{font-size:36px;font-weight:900;letter-spacing:-.03em;color:var(--brand);line-height:1}
+.hero-price-was{font-size:18px;color:var(--ink-light);text-decoration:line-through}
+.hero-price-save{
+  font-size:12px;font-weight:800;background:var(--accent);color:#fff;
+  padding:4px 12px;border-radius:100px;letter-spacing:.02em;
+}
+
+.hero-cta{margin-bottom:18px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--ink-soft);font-weight:600}
+.hero-trust-item{display:inline-flex;align-items:center;gap:6px}
+.hero-trust-item svg{width:15px;height:15px;color:var(--success)}
+
+/* Hero image */
+.hero-media{
+  position:relative;aspect-ratio:1;border-radius:var(--radius-2xl);overflow:hidden;
+  box-shadow:0 24px 60px rgba(15,17,21,.18);
+  background:linear-gradient(135deg,var(--brand),var(--brand-dark));
+  display:grid;place-items:center;
+}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-media .fallback{
+  position:absolute;inset:0;display:grid;place-items:center;
+  font-size:120px;line-height:1;
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,.25));
+  z-index:0;
+}
+.hero-media img{position:relative;z-index:1}
+.hero-media-badge{
+  position:absolute;top:20px;left:20px;z-index:2;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
+  padding:8px 16px;border-radius:100px;
+  font-size:12px;font-weight:800;color:var(--ink-strong);
+  letter-spacing:.02em;
+}
+
+/* ===== Trust strip ===== */
+.trust-strip{background:#1F2937;color:#fff;padding:20px 0}
+.trust-strip-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:28px;flex-wrap:wrap;max-width:1120px;margin:0 auto;padding:0 24px;
+}
+.trust-strip-item{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:rgba(255,255,255,.82)}
+.trust-strip-item strong{color:#fff}
+.trust-strip-icon{
+  width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.1);
+  display:grid;place-items:center;flex:none;color:#FCD34D;
+}
+.trust-strip-icon svg{width:16px;height:16px}
+
+/* ===== Section ===== */
+.section{padding:72px 0}
+.section--soft{background:var(--surface-soft)}
+.section-head{max-width:640px;margin:0 auto 44px;text-align:center}
+.section-head h2{margin-bottom:12px}
+.section-head p{font-size:16px;line-height:1.7;color:var(--ink)}
+
+/* ===== Problem / Solution ===== */
+.ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:920px;margin:0 auto}
+.ps-card{padding:30px 26px;border-radius:var(--radius-xl);border:1px solid var(--line);background:#fff}
+.ps-card.bad{border-color:#FECACA;background:linear-gradient(180deg,#FFF5F5 0%,#fff 60%)}
+.ps-card.good{border-color:#BBF7D0;background:linear-gradient(180deg,#F0FDF4 0%,#fff 60%)}
+.ps-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 12px;border-radius:100px;margin-bottom:16px;
+}
+.ps-card.bad .ps-badge{background:#FEE2E2;color:#DC2626}
+.ps-card.good .ps-badge{background:var(--success-soft);color:var(--success)}
+.ps-card h3{font-size:1.1rem;margin-bottom:14px}
+.ps-list{display:flex;flex-direction:column;gap:11px}
+.ps-list li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:var(--ink);line-height:1.55}
+.ps-list li::before{content:'';flex:none;width:7px;height:7px;border-radius:50%;margin-top:8px}
+.ps-card.bad .ps-list li::before{background:#EF4444}
+.ps-card.good .ps-list li::before{background:var(--success)}
+
+/* ===== Features ===== */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature{
+  padding:26px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+}
+.feature:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:var(--brand)}
+.feature-icon{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  margin-bottom:16px;font-size:20px;
+}
+.feature-icon.blue{background:var(--brand-soft);color:var(--brand)}
+.feature-icon.green{background:var(--success-soft);color:var(--success)}
+.feature-icon.orange{background:var(--accent-soft);color:var(--accent)}
+.feature h3{font-size:1rem;margin-bottom:8px}
+.feature p{font-size:14px;color:var(--ink);line-height:1.65}
+
+/* ===== Comparison ===== */
+.compare-wrap{
+  max-width:820px;margin:0 auto;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-card);
+}
+.compare-table{width:100%;border-collapse:collapse}
+.compare-table th,.compare-table td{
+  padding:14px 18px;text-align:left;font-size:14px;
+  border-bottom:1px solid var(--line-soft);
+}
+.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:none}
+.compare-table th{
+  font-weight:700;font-size:12.5px;background:var(--surface-soft);
+  text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);
+}
+.compare-table th.us{background:var(--brand);color:#fff}
+.compare-table td.us{background:rgba(11,95,255,.03);font-weight:600}
+.compare-table td.center{text-align:center}
+.yes{color:var(--success);font-weight:800}
+.no{color:#EF4444;font-weight:800}
+
+/* ===== Reviews ===== */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{
+  padding:24px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+  display:flex;flex-direction:column;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.review:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.review-stars{color:#F5A623;font-size:14px;letter-spacing:1px;margin-bottom:12px}
+.review-title{font-size:15px;font-weight:800;margin-bottom:8px}
+.review-body{font-size:14px;color:var(--ink);line-height:1.7;margin-bottom:16px;flex:1}
+.review-footer{display:flex;align-items:center;gap:11px;padding-top:14px;border-top:1px solid var(--line-soft)}
+.review-avatar{
+  width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;
+  color:#fff;font-size:14px;font-weight:800;
+}
+.review-name{font-size:13.5px;font-weight:700;color:var(--ink-strong)}
+.review-verified{font-size:11.5px;color:var(--success);font-weight:700;display:inline-flex;align-items:center;gap:4px}
+.review-verified svg{width:11px;height:11px}
+
+/* ===== Offer ===== */
+.offer{
+  max-width:900px;margin:0 auto;
+  background:linear-gradient(160deg,#1F2937 0%,#0F1115 100%);
+  border-radius:var(--radius-2xl);padding:clamp(32px,5vw,52px);
+  color:#fff;position:relative;overflow:hidden;
+  box-shadow:0 24px 60px rgba(15,17,21,.24);
+}
+.offer::before{
+  content:'';position:absolute;top:-30%;right:-15%;width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,var(--brand-glow),transparent 68%);pointer-events:none;
+}
+.offer-inner{position:relative;z-index:1}
+.offer-head{text-align:center;margin-bottom:30px}
+.offer-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--accent);color:#fff;
+  padding:6px 14px;border-radius:100px;
+  font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:16px;box-shadow:0 8px 22px rgba(255,107,53,.4);
+}
+.offer-head h2{color:#fff;margin-bottom:10px}
+.offer-head p{color:rgba(255,255,255,.7);font-size:15px}
+.offer-options{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.offer-option{
+  background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.1);
+  border-radius:var(--radius-lg);padding:20px 18px;cursor:pointer;
+  transition:all .25s var(--ease);position:relative;
+}
+.offer-option:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25)}
+.offer-option.selected{background:rgba(11,95,255,.14);border-color:var(--brand);box-shadow:0 0 0 4px rgba(11,95,255,.12)}
+.offer-option .popular-tag{
+  position:absolute;top:-10px;right:14px;
+  background:var(--accent);color:#fff;
+  font-size:10.5px;font-weight:800;letter-spacing:.06em;
+  padding:4px 10px;border-radius:100px;
+}
+.offer-option-radio{
+  width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,.25);
+  display:grid;place-items:center;margin-bottom:12px;
+}
+.offer-option.selected .offer-option-radio{border-color:var(--brand);background:var(--brand)}
+.offer-option-radio svg{width:11px;height:11px;color:#fff;opacity:0}
+.offer-option.selected .offer-option-radio svg{opacity:1}
+.offer-option h4{font-size:14.5px;font-weight:800;margin-bottom:6px;color:#fff}
+.offer-option-price{display:flex;align-items:baseline;gap:8px;margin-bottom:5px}
+.offer-option-price strong{font-size:22px;font-weight:900;letter-spacing:-.03em;color:#fff}
+.offer-option-price span{font-size:12.5px;color:rgba(255,255,255,.5);text-decoration:line-through}
+.offer-option-save{font-size:11.5px;font-weight:700;color:#22C55E}
+.offer-option-per{font-size:11px;color:rgba(255,255,255,.5);margin-top:4px}
+.offer-cta{max-width:420px;margin:0 auto 18px}
+.offer-trust{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;font-size:12.5px;color:rgba(255,255,255,.65)}
+.offer-trust-item{display:inline-flex;align-items:center;gap:7px;font-weight:600}
+.offer-trust-item svg{width:14px;height:14px;color:#22C55E}
+
+/* ===== Guarantee ===== */
+.guarantee{
+  display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;
+  max-width:800px;margin:0 auto;padding:32px 36px;
+  background:linear-gradient(135deg,#F0FDF4,#ECFDF5);
+  border:2px solid #BBF7D0;border-radius:var(--radius-xl);
+}
+.guarantee-badge{
+  width:80px;height:80px;border-radius:50%;flex:none;
+  background:#fff;display:grid;place-items:center;font-size:36px;
+  box-shadow:0 12px 30px rgba(16,185,129,.18);border:4px solid #BBF7D0;
+}
+.guarantee h3{font-size:1.2rem;margin-bottom:8px;color:#065F46}
+.guarantee p{color:#047857;font-size:14.5px;line-height:1.7}
+
+/* ===== FAQ ===== */
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+  margin-bottom:10px;overflow:hidden;transition:border-color .2s;
+}
+.faq-item.open{border-color:var(--brand)}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px 22px;cursor:pointer;font-size:15px;font-weight:700;color:var(--ink-strong);
+  transition:background .15s;
+}
+.faq-q:hover{background:var(--surface-soft)}
+.faq-toggle{
+  width:26px;height:26px;border-radius:50%;flex:none;
+  background:var(--surface-soft);color:var(--ink);
+  display:grid;place-items:center;transition:all .3s var(--ease);
+}
+.faq-item.open .faq-toggle{background:var(--brand);color:#fff;transform:rotate(45deg)}
+.faq-toggle svg{width:13px;height:13px}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 22px 20px;font-size:14px;color:var(--ink);line-height:1.75}
+
+/* ===== Final CTA ===== */
+.final-cta{
+  text-align:center;padding:64px 24px;
+  background:radial-gradient(ellipse 70% 60% at 50% 50%,var(--brand-soft) 0%,transparent 70%),#fff;
+}
+.final-cta h2{margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto}
+.final-cta p{font-size:16px;color:var(--ink);max-width:520px;margin:0 auto 28px;line-height:1.7}
+.final-cta-note{font-size:13px;color:var(--ink-light);font-weight:600;margin-top:14px}
+
+/* ===== Sticky bar ===== */
+.sticky-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:150;height:var(--sticky);
+  background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-top:1px solid var(--line);box-shadow:0 -8px 32px rgba(15,17,21,.08);
+  transform:translateY(100%);transition:transform .35s var(--ease);display:none;
+}
+.sticky-bar.show{transform:translateY(0)}
+.sticky-inner{
+  height:100%;max-width:1120px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;gap:14px;
+}
+.sticky-info{flex:1;min-width:0}
+.sticky-title{
+  font-size:13px;font-weight:800;color:var(--ink-strong);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:3px;
+}
+.sticky-price{display:flex;align-items:baseline;gap:7px;font-size:12px}
+.sticky-price strong{font-size:15px;font-weight:900;color:var(--brand)}
+.sticky-price s{color:var(--ink-light);font-size:11.5px}
+.sticky-price .save{color:var(--success);font-weight:800}
+.sticky-bar .btn{min-height:auto;padding:11px 22px;font-size:14px;flex:none}
+
+/* ===== Toast ===== */
+.toast{
+  position:fixed;left:50%;bottom:calc(var(--sticky) + 20px);
+  transform:translate(-50%,16px);z-index:300;
+  display:flex;align-items:center;gap:11px;
+  background:rgba(31,41,55,.96);backdrop-filter:blur(12px);
+  color:#fff;padding:14px 22px;border-radius:100px;
+  font-size:14px;font-weight:600;
+  box-shadow:0 16px 40px rgba(0,0,0,.35);
+  opacity:0;pointer-events:none;transition:all .35s var(--ease);
+  white-space:nowrap;max-width:calc(100vw - 40px);
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast-ico{
+  width:22px;height:22px;border-radius:50%;background:#22C55E;
+  flex:none;display:grid;place-items:center;
+}
+.toast-ico svg{width:12px;height:12px;color:#fff}
+
+/* ===== Responsive ===== */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:36px;text-align:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-bullets{display:inline-flex;text-align:left;margin-left:auto;margin-right:auto}
+  .hero-price{justify-content:center}
+  .hero-trust{justify-content:center}
+  .features-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .ps-grid{grid-template-columns:1fr}
+  .offer-options{grid-template-columns:1fr}
+  .guarantee{grid-template-columns:1fr;text-align:center;padding:26px 22px}
+  .guarantee-badge{margin:0 auto}
+  .compare-table th,.compare-table td{padding:11px 12px;font-size:12.5px}
+}
+@media(max-width:560px){
+  .features-grid{grid-template-columns:1fr}
+  .hero{padding:36px 0 52px}
+  .section{padding:52px 0}
+  .sticky-title{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+<meta name="description" content="Explore five product landing page designs: bug zapper, pressure washer, vegetable cutter, spin scrubber and pet feeder. Interactive design preview."><meta name="robots" content="noindex,follow"><link rel="canonical" href="https://haowordtool.com/landing-pages.html"><meta name="google-site-verification" content="V5m3Ygpe6VRjGSpzT7cTDbs60OFmx-hJfBzwGmgUzRQ"><meta name="p:domain_verify" content="7c64ba517a90ca07acc1a2e96cdd5b18"><meta name="google-adsense-account" content="ca-pub-4489946300243174"><style>[hidden]{display:none!important}.preview-banner{background:#EBF1FF;color:#1F2937;padding:12px 24px;font-size:12px;display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap}.preview-banner a{font-weight:700;white-space:nowrap}.photo-caption{font-size:12px;margin-top:12px;color:#6B7280;text-align:center}.preview-price-label{flex-basis:100%;font-size:12px;color:#6B7280}.demo-strip-note{text-align:center;font-size:12px;color:#fff;margin-bottom:12px}.faq-q{width:100%;text-align:left}:focus-visible{outline:3px solid #0B5FFF;outline-offset:4px}.offer-option:focus-visible{outline-color:var(--brand)}.landing [id]{scroll-margin-top:90px}.site-footer{text-align:center;font-size:13px;padding:32px 24px;background:#F3F4F6}.site-footer a{margin:0 12px}.toast{max-width:calc(100vw - 32px);white-space:normal}.sticky-bar{padding-bottom:env(safe-area-inset-bottom)}@media(max-width:480px){.sticky-inner{gap:12px}.sticky-info{min-width:0}.sticky-title{font-size:11px}.sticky-price{gap:5px;flex-wrap:wrap}.sticky-bar .btn{padding:12px 14px;font-size:13px}.preview-banner{gap:6px}}</style></head>
+<body><div class="preview-banner"><a href="/">← Haowordtool</a><span><strong>Design preview</strong> · Illustrative specs, prices, ratings and reviews. No purchases or shipping offers.</span></div>
+
+<!-- ==================== SWITCHER ==================== -->
+<div class="switcher">
+  <div class="switcher-inner" role="tablist" aria-label="Product designs">
+    <button data-target="p1" class="active" id="tab-p1" role="tab" aria-controls="p1" aria-selected="true" tabindex="0"><span class="switcher-emoji">🦟</span>Bug Zapper</button>
+    <button data-target="p2" id="tab-p2" role="tab" aria-controls="p2" aria-selected="false" tabindex="-1"><span class="switcher-emoji">💦</span>Pressure Washer</button>
+    <button data-target="p3" id="tab-p3" role="tab" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="switcher-emoji">🔪</span>Veggie Cutter</button>
+    <button data-target="p4" id="tab-p4" role="tab" aria-controls="p4" aria-selected="false" tabindex="-1"><span class="switcher-emoji">🧽</span>Spin Scrubber</button>
+    <button data-target="p5" id="tab-p5" role="tab" aria-controls="p5" aria-selected="false" tabindex="-1"><span class="switcher-emoji">🐾</span>Pet Feeder</button>
+  </div>
+</div>
+
+<!-- =========================================================
+     PRODUCT 1 — BUG ZAPPER
+     ========================================================= -->
+<main id="main"><div class="landing active" id="p1" style="--brand:#0EA5A5;--brand-dark:#0D9488;--brand-soft:#F0FDFA;--brand-glow:rgba(14,165,165,.3);--brand-shadow:rgba(14,165,165,.28);--accent:#FF6B35;--accent-soft:#FFF1EB" role="tabpanel" aria-labelledby="tab-p1">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span>Sample rating · </span>
+          <span class="stars">★★★★★</span><b>4.8</b><span>·</span><span>12,864 reviews</span>
+        </div>
+        <h1>Enjoy your yard.<br><em>Without the mosquitoes.</em></h1>
+        <p class="hero-sub">2800V solar bug zapper that kills mosquitoes on contact. No chemicals. No cords. No more itching.</p>
+        <ul class="hero-bullets">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>2800V high-voltage grid kills on contact</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Solar + USB-C dual charging — never runs out</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>IP65 waterproof — leave it outside in the rain</span></li>
+        </ul>
+        <div class="hero-price"><span class="preview-price-label">Illustrative price</span>
+          <span class="hero-price-now">$79.99</span>
+          <span class="hero-price-was">$109.99</span>
+          <span class="hero-price-save">Save 27%</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#p1-offer" class="btn btn-block">Compare example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>2-year warranty</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-media">
+          <div class="fallback">🦟</div>
+          <span class="hero-media-badge">⚡ 2800V Grid</span>
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&amp;h=900&amp;fit=crop&amp;q=80" alt="Backyard" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      <p class="photo-caption">Illustrative stock photo, not a photo of the offered product.</p></div>
+    </div>
+  </section>
+
+  <div class="trust-strip"><p class="demo-strip-note">Illustrative trust metrics and service promises</p>
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><div><strong>4.8/5</strong> · 12,864 reviews</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span><div><strong>32,000+</strong> yards protected</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>30-night</strong> money-back</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon></svg></span><div><strong>Free</strong> US shipping</div></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The Problem</span>
+        <h2>Mosquitoes ruin every outdoor evening</h2>
+        <p>Sprays smell. Coils are toxic. Nets are ugly. And none of them actually work when it matters.</p>
+      </div>
+      <div class="ps-grid">
+        <div class="ps-card bad">
+          <span class="ps-badge">❌ Old solutions</span>
+          <h3>What you've tried</h3>
+          <ul class="ps-list">
+            <li>Citronella candles that barely work</li>
+            <li>Chemical sprays that smell and sting</li>
+            <li>Zappers that need an outlet nearby</li>
+            <li>Traps that fill with water and rust</li>
+            <li>Still getting bitten every evening</li>
+          </ul>
+        </div>
+        <div class="ps-card good">
+          <span class="ps-badge">✓ The Bug Zapper</span>
+          <h3>What works</h3>
+          <ul class="ps-list">
+            <li>365nm UV light attracts mosquitoes from 1,500 sq ft</li>
+            <li>2800V grid kills instantly — no chemicals</li>
+            <li>Solar panel charges all day, works all night</li>
+            <li>IP65 waterproof — leave it out year-round</li>
+            <li>Silent operation, no zap noise</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Why It Works</span><h2>Built for real yards</h2></div>
+      <div class="features-grid">
+        <div class="feature"><div class="feature-icon blue">⚡</div><h3>2800V Instant Kill</h3><p>Mosquitoes die on contact. No lingering, no escape, no second chances.</p></div>
+        <div class="feature"><div class="feature-icon green">☀️</div><h3>Solar + USB-C</h3><p>Charges all day in the sun. USB-C backup for rainy weeks. Never runs out.</p></div>
+        <div class="feature"><div class="feature-icon orange">💧</div><h3>IP65 Waterproof</h3><p>Rain, sprinklers, humidity — nothing stops it. Leave it outside year-round.</p></div>
+        <div class="feature"><div class="feature-icon blue">🔇</div><h3>Silent Operation</h3><p>No annoying zap sounds. Enjoy your evening without a constant buzz.</p></div>
+        <div class="feature"><div class="feature-icon green">🧹</div><h3>Easy-Clean Tray</h3><p>Twist-off tray empties in 5 seconds. No touching dead bugs.</p></div>
+        <div class="feature"><div class="feature-icon orange">📐</div><h3>Compact &amp; Portable</h3><p>Fits on any table or hangs from a hook. Take it camping or to the patio.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Comparison</span><h2>Why it beats everything else</h2></div>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Feature</th><th class="us">Bug Zapper</th><th>Chemical Spray</th><th>Citronella</th><th>Indoor Zapper</th></tr></thead>
+          <tbody>
+            <tr><td>Kills on contact</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>No chemicals</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center">Some</td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Works outdoors</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center">Weak</td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>No cords needed</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>Waterproof</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>Under $100</td><td class="us center"><span class="yes">✓</span></td><td class="center">Repeats</td><td class="center">Repeats</td><td class="center"><span class="yes">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Sample testimonials</span><h2>Example review layout</h2></div>
+      <div class="reviews-grid">
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Finally, mosquito-free evenings</div><p class="review-body">"We couldn't sit on our deck after 6 PM. Now we have dinner outside every night. This thing works."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#F472B6,#EC4899)">JK</div><div><div class="review-name">Jessica K.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Works without chemicals</div><p class="review-body">"My kids are allergic to mosquito bites and I hate spraying them. This zapper means no chemicals and no bites."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">MR</div><div><div class="review-name">Mark R.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Survived a rainy summer</div><p class="review-body">"Left it outside through two thunderstorms. Still works perfectly. The solar panel keeps it charged even on cloudy days."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#10B981,#059669)">DL</div><div><div class="review-name">David L.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="p1-offer">
+    <div class="container">
+      <div class="offer">
+        <div class="offer-inner">
+          <div class="offer-head">
+            <span class="offer-badge">Sample offer · Not currently on sale</span>
+            <h2>Choose your pack</h2>
+            <p>Free US shipping · 30-night trial · 2-year warranty</p>
+          </div>
+          <div class="offer-options" role="radiogroup" aria-label="Preview package">
+            <div class="offer-option" data-price="79.99" data-landing="p1" role="radio" aria-checked="false" tabindex="-1" aria-label="Single Unit, sample price $79.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Single Unit</h4>
+              <div class="offer-option-price"><strong>$79.99</strong><span>$109.99</span></div>
+              <div class="offer-option-save">Save $30.00</div>
+              <div class="offer-option-per">Just for you</div>
+            </div>
+            <div class="offer-option selected" data-price="129.99" data-landing="p1" role="radio" aria-checked="true" tabindex="0" aria-label="Yard Pack (2 units), sample price $129.99">
+              <span class="popular-tag">MOST POPULAR</span>
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Yard Pack (2 units)</h4>
+              <div class="offer-option-price"><strong>$129.99</strong><span>$219.98</span></div>
+              <div class="offer-option-save">Save $90.00</div>
+              <div class="offer-option-per">$65 each · Cover front + back yard</div>
+            </div>
+            <div class="offer-option" data-price="179.99" data-landing="p1" role="radio" aria-checked="false" tabindex="-1" aria-label="Family Pack (3 units), sample price $179.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Family Pack (3 units)</h4>
+              <div class="offer-option-price"><strong>$179.99</strong><span>$329.97</span></div>
+              <div class="offer-option-save">Save $149.98</div>
+              <div class="offer-option-per">$60 each · Best value</div>
+            </div>
+          </div>
+          <div class="offer-cta">
+            <button class="btn btn-block add-to-cart-btn" data-landing="p1">Preview selection — <span class="cart-price">$129.99</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+          <div class="offer-trust">
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Secure payment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="guarantee">
+        <div class="guarantee-badge">🛡️</div>
+        <div><h3>Example guarantee section</h3><p>This design demonstrates where a seller’s verified return and warranty terms would appear. No guarantee or trial is offered in this preview.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+      <div class="faq-wrap">
+        <div class="faq-item"><button type="button" class="faq-q" id="p1-faq-0" aria-expanded="false" aria-controls="p1-answer-0"><span>Does it kill other insects too?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p1-answer-0" hidden=""><div class="faq-a-inner">Yes — it also kills gnats, moths, flies, and other flying insects attracted to UV light. The 365nm wavelength is specifically tuned for mosquitoes but works on most small flying pests.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p1-faq-1" aria-expanded="false" aria-controls="p1-answer-1"><span>How often do I need to charge it?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p1-answer-1" hidden=""><div class="faq-a-inner">In full sun, the solar panel keeps it charged indefinitely. If you live somewhere with heavy rain, a USB-C charge takes about 90 minutes and lasts 3-4 nights.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p1-faq-2" aria-expanded="false" aria-controls="p1-answer-2"><span>Is it safe for pets and kids?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p1-answer-2" hidden=""><div class="faq-a-inner">Yes. No chemicals, no sprays, no fumes. The grid is enclosed behind a protective mesh so fingers and paws can't reach the voltage. Safe for pets and children.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Enjoy your yard again.</h2>
+      <p>Join 32,000+ homeowners who took back their evenings.</p>
+      <a href="#p1-offer" class="btn" style="padding:18px 40px;font-size:17px">Explore example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <div class="final-cta-note">30-night trial · Free shipping · 2-year warranty</div>
+    </div>
+  </section>
+
+</div><div class="landing" id="p2" style="--brand:#2563EB;--brand-dark:#1D4ED8;--brand-soft:#EFF6FF;--brand-glow:rgba(37,99,235,.3);--brand-shadow:rgba(37,99,235,.28);--accent:#FF6B35;--accent-soft:#FFF1EB" role="tabpanel" aria-labelledby="tab-p2" hidden="">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span>Sample rating · </span><span class="stars">★★★★★</span><b>4.7</b><span>·</span><span>8,421 reviews</span></div>
+        <h1>Wash your car.<br><em>Anywhere. In 10 minutes.</em></h1>
+        <p class="hero-sub">Cordless 65-bar pressure washer with a 24,000mAh battery. Draw water from any bucket, bottle, or lake.</p>
+        <ul class="hero-bullets">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>65-bar pressure — cuts dirt, not paint</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>6-in-1 nozzle — soap, rinse, jet, fan, shower, cone</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Draws from any water source — no hose needed</span></li>
+        </ul>
+        <div class="hero-price"><span class="preview-price-label">Illustrative price</span>
+          <span class="hero-price-now">$89.99</span>
+          <span class="hero-price-was">$149.99</span>
+          <span class="hero-price-save">Save 40%</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#p2-offer" class="btn btn-block">Compare example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>1-year warranty</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-media">
+          <div class="fallback">💦</div>
+          <span class="hero-media-badge">⚡ 65 Bar · Cordless</span>
+          <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=900&amp;h=900&amp;fit=crop&amp;q=80" alt="Car wash" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      <p class="photo-caption">Illustrative stock photo, not a photo of the offered product.</p></div>
+    </div>
+  </section>
+
+  <div class="trust-strip"><p class="demo-strip-note">Illustrative trust metrics and service promises</p>
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><div><strong>4.7/5</strong> · 8,421 reviews</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon></svg></span><div><strong>18,000+</strong> cars washed</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>30-night</strong> money-back</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>50 min</strong> runtime</div></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">The Problem</span><h2>Car washing is a hassle</h2><p>Drive to a car wash. Wait in line. Pay $25. Or drag out a cord and hose at home — and get tangled up.</p></div>
+      <div class="ps-grid">
+        <div class="ps-card bad"><span class="ps-badge">❌ Old way</span><h3>What you're dealing with</h3><ul class="ps-list"><li>Drive to a car wash, wait, pay $25+</li><li>Cords tangle, hoses kink, water sprays everywhere</li><li>Apartment / condo with no water access</li><li>Pressure too weak to remove bug splatter</li><li>Water bill spikes every month</li></ul></div>
+        <div class="ps-card good"><span class="ps-badge">✓ Cordless Washer</span><h3>What works</h3><ul class="ps-list"><li>Fill a bucket. Wash anywhere. Zero setup.</li><li>65-bar pressure lifts dirt, mud, and bug splatter</li><li>Works with any water source — bucket, bottle, lake</li><li>50-minute runtime on a single charge</li><li>Weighs under 4 lbs — carry it in one hand</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Why It Works</span><h2>Real power. Real portability.</h2></div>
+      <div class="features-grid">
+        <div class="feature"><div class="feature-icon blue">💪</div><h3>65-Bar Pressure</h3><p>Powerful enough for mud and bugs. Gentle enough for paint and glass.</p></div>
+        <div class="feature"><div class="feature-icon green">🔋</div><h3>50-Min Battery</h3><p>24,000mAh battery. Wash 2-3 cars on one charge. USB-C recharge.</p></div>
+        <div class="feature"><div class="feature-icon orange">🎯</div><h3>6-in-1 Nozzle</h3><p>Jet, fan, shower, cone, soap, rinse. Twist to switch — no tip changes.</p></div>
+        <div class="feature"><div class="feature-icon blue">💧</div><h3>Any Water Source</h3><p>Draws from a bucket, bottle, or lake. No garden hose needed.</p></div>
+        <div class="feature"><div class="feature-icon green">🪶</div><h3>Ultra Lightweight</h3><p>Under 4 lbs. One-hand operation. No shoulder strain.</p></div>
+        <div class="feature"><div class="feature-icon orange">🌊</div><h3>Self-Priming Hose</h3><p>10-foot hose drops into any water source. Filter included.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Comparison</span><h2>Why cordless wins</h2></div>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Feature</th><th class="us">Cordless Washer</th><th>Car Wash</th><th>Wired Washer</th><th>Bucket + Sponge</th></tr></thead>
+          <tbody>
+            <tr><td>Works anywhere</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Real pressure</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>No cords</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Under $100</td><td class="us center"><span class="yes">✓</span></td><td class="center">Repeats</td><td class="center">$150+</td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>No water bill</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="yes">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Sample testimonials</span><h2>Example review layout</h2></div>
+      <div class="reviews-grid">
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">No more car wash lines</div><p class="review-body">"I wash my car in the parking garage at work. Bucket of water, 10 minutes, done. It pays for itself in a month."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">CT</div><div><div class="review-name">Chris T.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Great for apartment living</div><p class="review-body">"I don't have a hose. This draws from a 5-gallon bucket and the pressure is way better than I expected."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#F472B6,#EC4899)">AL</div><div><div class="review-name">Amy L.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Also cleans patio &amp; grill</div><p class="review-body">"Not just for cars — I use it on my patio furniture, BBQ grill, and even my mountain bike after muddy rides."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#10B981,#059669)">RN</div><div><div class="review-name">Ryan N.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="p2-offer">
+    <div class="container">
+      <div class="offer">
+        <div class="offer-inner">
+          <div class="offer-head">
+            <span class="offer-badge">Sample offer · Not currently on sale</span>
+            <h2>Choose your pack</h2>
+            <p>Free US shipping · 30-night trial · 1-year warranty</p>
+          </div>
+          <div class="offer-options" role="radiogroup" aria-label="Preview package">
+            <div class="offer-option" data-price="89.99" data-landing="p2" role="radio" aria-checked="false" tabindex="-1" aria-label="Single Unit, sample price $89.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Single Unit</h4>
+              <div class="offer-option-price"><strong>$89.99</strong><span>$149.99</span></div>
+              <div class="offer-option-save">Save $60.00</div>
+              <div class="offer-option-per">Just for you</div>
+            </div>
+            <div class="offer-option selected" data-price="159.99" data-landing="p2" role="radio" aria-checked="true" tabindex="0" aria-label="Duo Pack (2 units), sample price $159.99">
+              <span class="popular-tag">MOST POPULAR</span>
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Duo Pack (2 units)</h4>
+              <div class="offer-option-price"><strong>$159.99</strong><span>$299.98</span></div>
+              <div class="offer-option-save">Save $139.99</div>
+              <div class="offer-option-per">$80 each · Home + car + travel</div>
+            </div>
+            <div class="offer-option" data-price="219.99" data-landing="p2" role="radio" aria-checked="false" tabindex="-1" aria-label="Family Pack (3 units), sample price $219.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Family Pack (3 units)</h4>
+              <div class="offer-option-price"><strong>$219.99</strong><span>$449.97</span></div>
+              <div class="offer-option-save">Save $229.98</div>
+              <div class="offer-option-per">$73 each · Best value</div>
+            </div>
+          </div>
+          <div class="offer-cta">
+            <button class="btn btn-block add-to-cart-btn" data-landing="p2">Preview selection — <span class="cart-price">$159.99</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+          <div class="offer-trust">
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Secure payment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="guarantee">
+        <div class="guarantee-badge">🛡️</div>
+        <div><h3>Example guarantee section</h3><p>This design demonstrates where a seller’s verified return and warranty terms would appear. No guarantee or trial is offered in this preview.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+      <div class="faq-wrap">
+        <div class="faq-item"><button type="button" class="faq-q" id="p2-faq-0" aria-expanded="false" aria-controls="p2-answer-0"><span>How long does the battery last?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p2-answer-0" hidden=""><div class="faq-a-inner">About 50 minutes of continuous use on a full charge. In practice that's 2-3 cars or 5-6 patio cleanings. USB-C recharge takes about 2.5 hours.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p2-faq-1" aria-expanded="false" aria-controls="p2-answer-1"><span>Will it scratch my car paint?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p2-answer-1" hidden=""><div class="faq-a-inner">No. The 65-bar pressure is tuned for automotive paint. Use the fan nozzle and keep the spray 8-12 inches away. It's powerful enough to remove dirt but gentle enough for clear coat.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p2-faq-2" aria-expanded="false" aria-controls="p2-answer-2"><span>Do I need a hose?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p2-answer-2" hidden=""><div class="faq-a-inner">No. The 10-foot hose drops into any water source — a 5-gallon bucket, a 2L bottle, a lake, or a pool. A filter is included to keep debris out of the pump.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Stop driving to the car wash.</h2>
+      <p>Wash anywhere. In 10 minutes. With water you already have.</p>
+      <a href="#p2-offer" class="btn" style="padding:18px 40px;font-size:17px">Explore example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <div class="final-cta-note">30-night trial · Free shipping · 1-year warranty</div>
+    </div>
+  </section>
+
+</div><div class="landing" id="p3" style="--brand:#EA580C;--brand-dark:#C2410C;--brand-soft:#FFF7ED;--brand-glow:rgba(234,88,12,.3);--brand-shadow:rgba(234,88,12,.28);--accent:#0B5FFF;--accent-soft:#EBF1FF" role="tabpanel" aria-labelledby="tab-p3" hidden="">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span>Sample rating · </span><span class="stars">★★★★★</span><b>4.6</b><span>·</span><span>6,247 reviews</span></div>
+        <h1>Prep dinner in<br><em>half the time.</em></h1>
+        <p class="hero-sub">4-in-1 cordless electric cutter slices, dices, juliennes, and peels. Replaces 5 kitchen tools.</p>
+        <ul class="hero-bullets">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Slices, dices, juliennes, peels in seconds</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Cordless with USB-C — one charge = 30 meals</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Dishwasher-safe parts — 10-second cleanup</span></li>
+        </ul>
+        <div class="hero-price"><span class="preview-price-label">Illustrative price</span>
+          <span class="hero-price-now">$44.99</span>
+          <span class="hero-price-was">$69.99</span>
+          <span class="hero-price-save">Save 36%</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#p3-offer" class="btn btn-block">Compare example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>FDA food-safe</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-media">
+          <div class="fallback">🔪</div>
+          <span class="hero-media-badge">🔪 4-in-1 Function</span>
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&amp;h=900&amp;fit=crop&amp;q=80" alt="Kitchen" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      <p class="photo-caption">Illustrative stock photo, not a photo of the offered product.</p></div>
+    </div>
+  </section>
+
+  <div class="trust-strip"><p class="demo-strip-note">Illustrative trust metrics and service promises</p>
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><div><strong>4.6/5</strong> · 6,247 reviews</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>4× faster</strong> than knife</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>30-night</strong> money-back</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 7 12 12 15 15"></polyline></svg></span><div><strong>2-hour</strong> full charge</div></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">The Problem</span><h2>Chopping vegetables is the slowest part of dinner</h2><p>Knife skills take years. Food processors are bulky. And hand-cutting onions for 20 minutes is nobody's idea of a good time.</p></div>
+      <div class="ps-grid">
+        <div class="ps-card bad"><span class="ps-badge">❌ Old way</span><h3>Why dinner takes forever</h3><ul class="ps-list"><li>20 minutes just to chop vegetables</li><li>Uneven cuts that cook at different speeds</li><li>Food processor takes up half the counter</li><li>Cleaning a blender is a 10-minute job</li><li>Knife cuts happen when you're tired</li></ul></div>
+        <div class="ps-card good"><span class="ps-badge">✓ 4-in-1 Cutter</span><h3>Dinner in half the time</h3><ul class="ps-list"><li>Chop an onion in 5 seconds</li><li>Consistent cuts every single time</li><li>Fits in a drawer when not in use</li><li>Dishwasher-safe parts, 10-second rinse</li><li>Cordless — use it anywhere in the kitchen</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Why It Works</span><h2>One tool. Five jobs.</h2></div>
+      <div class="features-grid">
+        <div class="feature"><div class="feature-icon blue">🔪</div><h3>Slices</h3><p>Uniform slices of cucumber, tomato, potato — perfect for salads and stir-fry.</p></div>
+        <div class="feature"><div class="feature-icon green">🧅</div><h3>Dices</h3><p>Onion, garlic, pepper — diced in 5 seconds. No more crying over the cutting board.</p></div>
+        <div class="feature"><div class="feature-icon orange">🥕</div><h3>Juliennes</h3><p>Carrot, zucchini, cucumber sticks for platters, slaws, and garnishes.</p></div>
+        <div class="feature"><div class="feature-icon blue">🍎</div><h3>Peels</h3><p>Apple, potato, cucumber — peel without a peeler.</p></div>
+        <div class="feature"><div class="feature-icon green">🔋</div><h3>Cordless Battery</h3><p>USB-C recharge. One charge = 30 meals. No outlet needed.</p></div>
+        <div class="feature"><div class="feature-icon orange">🧼</div><h3>Dishwasher-Safe</h3><p>Blade and cup go straight into the dishwasher. Base wipes clean.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Comparison</span><h2>Why it beats a knife</h2></div>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Feature</th><th class="us">4-in-1 Cutter</th><th>Knife</th><th>Food Processor</th><th>Mandoline</th></tr></thead>
+          <tbody>
+            <tr><td>Slices evenly</td><td class="us center"><span class="yes">✓</span></td><td class="center">Practice</td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Under 30 seconds</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Cordless</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Under $50</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center">$100+</td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Easy to clean</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Sample testimonials</span><h2>Example review layout</h2></div>
+      <div class="reviews-grid">
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Life-changer for meal prep</div><p class="review-body">"I meal prep on Sundays. Used to take 2 hours. Now it's 45 minutes. The dicer alone is worth the price."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#F97316,#DC2626)">LM</div><div><div class="review-name">Lisa M.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">My kids use it safely</div><p class="review-body">"My 10-year-old helps me cook now. The blade is enclosed and it's cordless, so I don't have to worry about the cord or a knife."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">SP</div><div><div class="review-name">Sarah P.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Saves drawer space</div><p class="review-body">"I got rid of my mandoline, my garlic press, and my box grater. This replaces all three. And it actually fits in a drawer."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#10B981,#059669)">JW</div><div><div class="review-name">James W.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="p3-offer">
+    <div class="container">
+      <div class="offer">
+        <div class="offer-inner">
+          <div class="offer-head">
+            <span class="offer-badge">Sample offer · Not currently on sale</span>
+            <h2>Choose your pack</h2>
+            <p>Free US shipping · 30-night trial · FDA food-safe</p>
+          </div>
+          <div class="offer-options" role="radiogroup" aria-label="Preview package">
+            <div class="offer-option" data-price="44.99" data-landing="p3" role="radio" aria-checked="false" tabindex="-1" aria-label="Single Unit, sample price $44.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Single Unit</h4>
+              <div class="offer-option-price"><strong>$44.99</strong><span>$69.99</span></div>
+              <div class="offer-option-save">Save $25.00</div>
+              <div class="offer-option-per">Just for you</div>
+            </div>
+            <div class="offer-option selected" data-price="79.99" data-landing="p3" role="radio" aria-checked="true" tabindex="0" aria-label="Duo Pack (2 units), sample price $79.99">
+              <span class="popular-tag">MOST POPULAR</span>
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Duo Pack (2 units)</h4>
+              <div class="offer-option-price"><strong>$79.99</strong><span>$139.98</span></div>
+              <div class="offer-option-save">Save $59.99</div>
+              <div class="offer-option-per">$40 each · One for you, one to gift</div>
+            </div>
+            <div class="offer-option" data-price="109.99" data-landing="p3" role="radio" aria-checked="false" tabindex="-1" aria-label="Family Pack (3 units), sample price $109.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Family Pack (3 units)</h4>
+              <div class="offer-option-price"><strong>$109.99</strong><span>$209.97</span></div>
+              <div class="offer-option-save">Save $99.98</div>
+              <div class="offer-option-per">$37 each · Best value</div>
+            </div>
+          </div>
+          <div class="offer-cta">
+            <button class="btn btn-block add-to-cart-btn" data-landing="p3">Preview selection — <span class="cart-price">$79.99</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+          <div class="offer-trust">
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Secure payment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="guarantee">
+        <div class="guarantee-badge">🛡️</div>
+        <div><h3>Example guarantee section</h3><p>This design demonstrates where a seller’s verified return and warranty terms would appear. No guarantee or trial is offered in this preview.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+      <div class="faq-wrap">
+        <div class="faq-item"><button type="button" class="faq-q" id="p3-faq-0" aria-expanded="false" aria-controls="p3-answer-0"><span>Is it safe to use around kids?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p3-answer-0" hidden=""><div class="faq-a-inner">Yes — much safer than a knife. The blade is fully enclosed and only activates when the lid is locked. Cordless design means no wires to trip over.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p3-faq-1" aria-expanded="false" aria-controls="p3-answer-1"><span>What vegetables work best?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p3-answer-1" hidden=""><div class="faq-a-inner">Works great with onion, garlic, bell pepper, cucumber, tomato, carrot, zucchini, potato, apple, and more. Not recommended for hard items like nuts or ice.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p3-faq-2" aria-expanded="false" aria-controls="p3-answer-2"><span>How often do I need to charge it?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p3-answer-2" hidden=""><div class="faq-a-inner">One full USB-C charge (about 2 hours) lasts 30 meals. If you cook daily, you'll charge it about once a month.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Dinner, faster.</h2>
+      <p>Join 6,247 home cooks who cut prep time in half.</p>
+      <a href="#p3-offer" class="btn" style="padding:18px 40px;font-size:17px">Explore example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <div class="final-cta-note">30-night trial · Free shipping · FDA food-safe</div>
+    </div>
+  </section>
+
+</div><div class="landing" id="p4" style="--brand:#7C3AED;--brand-dark:#6D28D9;--brand-soft:#F5F3FF;--brand-glow:rgba(124,58,237,.3);--brand-shadow:rgba(124,58,237,.28);--accent:#FF6B35;--accent-soft:#FFF1EB" role="tabpanel" aria-labelledby="tab-p4" hidden="">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span>Sample rating · </span><span class="stars">★★★★★</span><b>4.7</b><span>·</span><span>9,632 reviews</span></div>
+        <h1>Stop bending.<br><em>Start scrubbing.</em></h1>
+        <p class="hero-sub">Cordless spin scrubber with a 54-inch extendable handle and 8 brush heads. Cleans bathrooms, kitchens, and floors without bending or kneeling.</p>
+        <ul class="hero-bullets">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>54" extendable handle — no bending over</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>8 brush heads for tile, glass, grout, tub, and more</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>IPX7 waterproof — use it in the shower, sink, or tub</span></li>
+        </ul>
+        <div class="hero-price"><span class="preview-price-label">Illustrative price</span>
+          <span class="hero-price-now">$49.99</span>
+          <span class="hero-price-was">$79.99</span>
+          <span class="hero-price-save">Save 38%</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#p4-offer" class="btn btn-block">Compare example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>1-year warranty</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-media">
+          <div class="fallback">🧽</div>
+          <span class="hero-media-badge">🔋 90-min Runtime</span>
+          <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=900&amp;h=900&amp;fit=crop&amp;q=80" alt="Cleaning" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      <p class="photo-caption">Illustrative stock photo, not a photo of the offered product.</p></div>
+    </div>
+  </section>
+
+  <div class="trust-strip"><p class="demo-strip-note">Illustrative trust metrics and service promises</p>
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><div><strong>4.7/5</strong> · 9,632 reviews</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span><div><strong>Loved by</strong> seniors &amp; back-pain sufferers</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>30-night</strong> money-back</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>90-min</strong> runtime</div></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">The Problem</span><h2>Cleaning hurts your back</h2><p>Bathtubs, floors, baseboards — all require bending, kneeling, and scrubbing that leaves you sore for days.</p></div>
+      <div class="ps-grid">
+        <div class="ps-card bad"><span class="ps-badge">❌ Old way</span><h3>What you're doing now</h3><ul class="ps-list"><li>Bending over tubs and floors for 30+ minutes</li><li>Kneeling on hard tile that leaves bruises</li><li>Scrubbing grout with a toothbrush</li><li>Shoulder and back pain after every deep clean</li><li>Soft sponges that don't actually scrub</li></ul></div>
+        <div class="ps-card good"><span class="ps-badge">✓ Spin Scrubber</span><h3>Clean without bending</h3><ul class="ps-list"><li>54-inch extendable handle reaches the tub floor</li><li>Spin action does the work — no elbow grease</li><li>IPX7 waterproof, safe for shower and sink</li><li>8 brush heads fit any surface</li><li>90-minute runtime on a single charge</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Why It Works</span><h2>Engineered for real cleaning</h2></div>
+      <div class="features-grid">
+        <div class="feature"><div class="feature-icon blue">📏</div><h3>54" Extendable Handle</h3><p>Adjusts from 26" to 54" — reach the tub floor, ceiling corners, or under the couch without bending.</p></div>
+        <div class="feature"><div class="feature-icon green">🔄</div><h3>2-Speed Spin</h3><p>Low speed for delicate surfaces, high speed for grout and stubborn stains. Up to 380 RPM.</p></div>
+        <div class="feature"><div class="feature-icon orange">🌊</div><h3>IPX7 Waterproof</h3><p>Fully waterproof. Use it in the shower, sink, tub, or outdoors without worrying about water damage.</p></div>
+        <div class="feature"><div class="feature-icon blue">🎯</div><h3>8 Brush Heads</h3><p>Flat, corner, round, cone, and more. Swap heads in seconds — no tools needed.</p></div>
+        <div class="feature"><div class="feature-icon green">🔋</div><h3>90-Minute Battery</h3><p>Charge via USB-C. One charge cleans the whole house. LED battery indicator on the handle.</p></div>
+        <div class="feature"><div class="feature-icon orange">🪶</div><h3>Lightweight</h3><p>Under 3 lbs. One-hand operation. No shoulder fatigue even during long sessions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Comparison</span><h2>Why it beats hand-scrubbing</h2></div>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Feature</th><th class="us">Spin Scrubber</th><th>Hand Brush</th><th>Sponge</th><th>Steam Mop</th></tr></thead>
+          <tbody>
+            <tr><td>No bending</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Works on grout</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center">Weak</td></tr>
+            <tr><td>Works in shower</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>Under $60</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center">$100+</td></tr>
+            <tr><td>No elbow grease</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="yes">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Sample testimonials</span><h2>Example review layout</h2></div>
+      <div class="reviews-grid">
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">No more back pain</div><p class="review-body">"I have arthritis and cleaning the tub was unbearable. This scrubber does the work — I just guide it. Life-changing."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED)">PB</div><div><div class="review-name">Patricia B.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Grout has never been cleaner</div><p class="review-body">"The corner brush head got into every grout line. My bathroom looks like it was professionally cleaned."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">TN</div><div><div class="review-name">Tom N.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Battery lasts forever</div><p class="review-body">"I cleaned my whole house on one charge — two bathrooms, kitchen, and floors. Still had battery left."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#10B981,#059669)">MK</div><div><div class="review-name">Maria K.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="p4-offer">
+    <div class="container">
+      <div class="offer">
+        <div class="offer-inner">
+          <div class="offer-head">
+            <span class="offer-badge">Sample offer · Not currently on sale</span>
+            <h2>Choose your pack</h2>
+            <p>Free US shipping · 30-night trial · 1-year warranty</p>
+          </div>
+          <div class="offer-options" role="radiogroup" aria-label="Preview package">
+            <div class="offer-option" data-price="49.99" data-landing="p4" role="radio" aria-checked="false" tabindex="-1" aria-label="Single Unit, sample price $49.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Single Unit</h4>
+              <div class="offer-option-price"><strong>$49.99</strong><span>$79.99</span></div>
+              <div class="offer-option-save">Save $30.00</div>
+              <div class="offer-option-per">Just for you</div>
+            </div>
+            <div class="offer-option selected" data-price="89.99" data-landing="p4" role="radio" aria-checked="true" tabindex="0" aria-label="Duo Pack (2 units), sample price $89.99">
+              <span class="popular-tag">MOST POPULAR</span>
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Duo Pack (2 units)</h4>
+              <div class="offer-option-price"><strong>$89.99</strong><span>$159.98</span></div>
+              <div class="offer-option-save">Save $69.99</div>
+              <div class="offer-option-per">$45 each · One up, one down</div>
+            </div>
+            <div class="offer-option" data-price="119.99" data-landing="p4" role="radio" aria-checked="false" tabindex="-1" aria-label="Family Pack (3 units), sample price $119.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Family Pack (3 units)</h4>
+              <div class="offer-option-price"><strong>$119.99</strong><span>$239.97</span></div>
+              <div class="offer-option-save">Save $119.98</div>
+              <div class="offer-option-per">$40 each · Best value</div>
+            </div>
+          </div>
+          <div class="offer-cta">
+            <button class="btn btn-block add-to-cart-btn" data-landing="p4">Preview selection — <span class="cart-price">$89.99</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+          <div class="offer-trust">
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Secure payment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="guarantee">
+        <div class="guarantee-badge">🛡️</div>
+        <div><h3>Example guarantee section</h3><p>This design demonstrates where a seller’s verified return and warranty terms would appear. No guarantee or trial is offered in this preview.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+      <div class="faq-wrap">
+        <div class="faq-item"><button type="button" class="faq-q" id="p4-faq-0" aria-expanded="false" aria-controls="p4-answer-0"><span>Is it really waterproof?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p4-answer-0" hidden=""><div class="faq-a-inner">Yes — IPX7 rated. The entire brush head and shaft can be submerged in water. You can use it inside the shower, sink, or bathtub without any risk.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p4-faq-1" aria-expanded="false" aria-controls="p4-answer-1"><span>Will it scratch my surfaces?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p4-answer-1" hidden=""><div class="faq-a-inner">No. The brush heads use soft nylon bristles that are gentle on tile, glass, and porcelain. For delicate surfaces like natural stone, use the low speed setting.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p4-faq-2" aria-expanded="false" aria-controls="p4-answer-2"><span>How long does the battery last?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p4-answer-2" hidden=""><div class="faq-a-inner">90 minutes of continuous use on a full charge. In practice that's 2-3 full bathroom cleans or the entire ground floor of a house. Charging takes about 3 hours via USB-C.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Clean without the pain.</h2>
+      <p>Join 9,632 people who stopped bending and started scrubbing smarter.</p>
+      <a href="#p4-offer" class="btn" style="padding:18px 40px;font-size:17px">Explore example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <div class="final-cta-note">30-night trial · Free shipping · 1-year warranty</div>
+    </div>
+  </section>
+
+</div><div class="landing" id="p5" style="--brand:#DB2777;--brand-dark:#BE185D;--brand-soft:#FDF2F8;--brand-glow:rgba(219,39,119,.3);--brand-shadow:rgba(219,39,119,.28);--accent:#FF6B35;--accent-soft:#FFF1EB" role="tabpanel" aria-labelledby="tab-p5" hidden="">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span>Sample rating · </span><span class="stars">★★★★★</span><b>4.8</b><span>·</span><span>7,893 reviews</span></div>
+        <h1>Never miss<br><em>a feeding again.</em></h1>
+        <p class="hero-sub">Smart automatic pet feeder with 1080P HD camera, app control, and 4L capacity. Feed your pet from anywhere in the world.</p>
+        <ul class="hero-bullets">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>1080P HD camera with night vision</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Schedule meals from your phone — anywhere</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>4L capacity — 20+ days without refilling</span></li>
+        </ul>
+        <div class="hero-price"><span class="preview-price-label">Illustrative price</span>
+          <span class="hero-price-now">$69.99</span>
+          <span class="hero-price-was">$119.99</span>
+          <span class="hero-price-save">Save 42%</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#p5-offer" class="btn btn-block">Compare example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+          <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>1-year warranty</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-media">
+          <div class="fallback">🐾</div>
+          <span class="hero-media-badge">📹 1080P HD Camera</span>
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900&amp;h=900&amp;fit=crop&amp;q=80" alt="Cute dog" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      <p class="photo-caption">Illustrative stock photo, not a photo of the offered product.</p></div>
+    </div>
+  </section>
+
+  <div class="trust-strip"><p class="demo-strip-note">Illustrative trust metrics and service promises</p>
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><div><strong>4.8/5</strong> · 7,893 reviews</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span><div><strong>24,000+</strong> pets fed</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>30-night</strong> money-back</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>20 days</strong> per fill</div></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">The Problem</span><h2>Every trip feels like abandoning your pet</h2><p>Weekend trips, late meetings, overnight shifts — you're always worried about whether your cat or dog has eaten.</p></div>
+      <div class="ps-grid">
+        <div class="ps-card bad"><span class="ps-badge">❌ Old way</span><h3>What you're doing now</h3><ul class="ps-list"><li>Asking neighbors to feed your pet</li><li>Coming home early from trips to feed them</li><li>Worrying all day if they've eaten</li><li>Pets overeat or under-eat when you're away</li><li>No way to see them while traveling</li></ul></div>
+        <div class="ps-card good"><span class="ps-badge">✓ Smart Feeder</span><h3>Peace of mind</h3><ul class="ps-list"><li>Schedule meals from your phone — anywhere</li><li>Watch your pet eat in real-time on 1080P HD</li><li>Talk to them through the built-in mic</li><li>20+ days of food in the 4L hopper</li><li>Backup battery keeps it running in power outages</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Why It Works</span><h2>Feed them. See them. Anywhere.</h2></div>
+      <div class="features-grid">
+        <div class="feature"><div class="feature-icon blue">📹</div><h3>1080P HD Camera</h3><p>Watch your pet eat in crystal-clear HD. Night vision mode for after-dark feedings.</p></div>
+        <div class="feature"><div class="feature-icon green">📱</div><h3>App Control</h3><p>Schedule up to 10 meals per day. Adjust portions. Feed on demand — from anywhere.</p></div>
+        <div class="feature"><div class="feature-icon orange">🎤</div><h3>Two-Way Audio</h3><p>Talk to your pet through the built-in speaker. They hear your voice while they eat.</p></div>
+        <div class="feature"><div class="feature-icon blue">🍚</div><h3>4L Capacity</h3><p>Holds 4 liters of dry food. That's 20+ days of meals for the average cat or small dog.</p></div>
+        <div class="feature"><div class="feature-icon green">🔋</div><h3>Battery Backup</h3><p>Runs on USB power with a backup battery. Keeps feeding through outages.</p></div>
+        <div class="feature"><div class="feature-icon orange">🧼</div><h3>Easy to Clean</h3><p>BPA-free hopper and bowl. Dishwasher-safe. Takes 30 seconds to disassemble.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Comparison</span><h2>Why smart beats basic</h2></div>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Feature</th><th class="us">Smart Feeder</th><th>Basic Timer Feeder</th><th>Neighbor</th><th>Free-Feed Bowl</th></tr></thead>
+          <tbody>
+            <tr><td>Camera</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>App control</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>Two-way audio</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>20+ day capacity</td><td class="us center"><span class="yes">✓</span></td><td class="center">Varies</td><td class="center">Varies</td><td class="center"><span class="yes">✓</span></td></tr>
+            <tr><td>Portion control</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center"><span class="no">✗</span></td><td class="center"><span class="no">✗</span></td></tr>
+            <tr><td>Under $100</td><td class="us center"><span class="yes">✓</span></td><td class="center"><span class="yes">✓</span></td><td class="center">Free</td><td class="center"><span class="yes">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Sample testimonials</span><h2>Example review layout</h2></div>
+      <div class="reviews-grid">
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Peace of mind on every trip</div><p class="review-body">"I travel for work 2-3 times a month. Now I can see my cat eating dinner from my hotel room. Worth every penny."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#EC4899,#DB2777)">LG</div><div><div class="review-name">Lauren G.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">My dog loves it</div><p class="review-body">"The two-way audio actually works. My dog comes running when he hears my voice through the app. Amazing."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">MT</div><div><div class="review-name">Mike T.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+        <div class="review"><div class="review-stars">★★★★★</div><div class="review-title">Camera quality is excellent</div><p class="review-body">"1080P is not a marketing claim — the footage is genuinely sharp even at night. I can see exactly when my cat eats."</p><div class="review-footer"><div class="review-avatar" style="background:linear-gradient(135deg,#10B981,#059669)">SK</div><div><div class="review-name">Sandra K.</div><div class="review-verified">Illustrative review · Not verified</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="p5-offer">
+    <div class="container">
+      <div class="offer">
+        <div class="offer-inner">
+          <div class="offer-head">
+            <span class="offer-badge">Sample offer · Not currently on sale</span>
+            <h2>Choose your pack</h2>
+            <p>Free US shipping · 30-night trial · 1-year warranty</p>
+          </div>
+          <div class="offer-options" role="radiogroup" aria-label="Preview package">
+            <div class="offer-option" data-price="69.99" data-landing="p5" role="radio" aria-checked="false" tabindex="-1" aria-label="Single Unit, sample price $69.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Single Unit</h4>
+              <div class="offer-option-price"><strong>$69.99</strong><span>$119.99</span></div>
+              <div class="offer-option-save">Save $50.00</div>
+              <div class="offer-option-per">Just for you</div>
+            </div>
+            <div class="offer-option selected" data-price="129.99" data-landing="p5" role="radio" aria-checked="true" tabindex="0" aria-label="Duo Pack (2 units), sample price $129.99">
+              <span class="popular-tag">MOST POPULAR</span>
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Duo Pack (2 units)</h4>
+              <div class="offer-option-price"><strong>$129.99</strong><span>$239.98</span></div>
+              <div class="offer-option-save">Save $109.99</div>
+              <div class="offer-option-per">$65 each · For multi-pet homes</div>
+            </div>
+            <div class="offer-option" data-price="179.99" data-landing="p5" role="radio" aria-checked="false" tabindex="-1" aria-label="Family Pack (3 units), sample price $179.99">
+              <div class="offer-option-radio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h4>Family Pack (3 units)</h4>
+              <div class="offer-option-price"><strong>$179.99</strong><span>$359.97</span></div>
+              <div class="offer-option-save">Save $179.98</div>
+              <div class="offer-option-per">$60 each · Best value</div>
+            </div>
+          </div>
+          <div class="offer-cta">
+            <button class="btn btn-block add-to-cart-btn" data-landing="p5">Preview selection — <span class="cart-price">$129.99</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+          <div class="offer-trust">
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free US shipping</span>
+            <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Secure payment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="guarantee">
+        <div class="guarantee-badge">🛡️</div>
+        <div><h3>Example guarantee section</h3><p>This design demonstrates where a seller’s verified return and warranty terms would appear. No guarantee or trial is offered in this preview.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+      <div class="faq-wrap">
+        <div class="faq-item"><button type="button" class="faq-q" id="p5-faq-0" aria-expanded="false" aria-controls="p5-answer-0"><span>Does it work with wet food?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p5-answer-0" hidden=""><div class="faq-a-inner">No — this model is designed for dry kibble only. Wet food would clump in the hopper and clog the dispenser. For wet food, use the feeder as a bowl replacement only.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p5-faq-1" aria-expanded="false" aria-controls="p5-answer-1"><span>What size kibble works best?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p5-answer-1" hidden=""><div class="faq-a-inner">Works best with kibble between 2mm and 15mm in diameter. Smaller kibble may get stuck — we recommend medium or large kibble for the smoothest operation.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p5-faq-2" aria-expanded="false" aria-controls="p5-answer-2"><span>What happens if Wi-Fi drops?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p5-answer-2" hidden=""><div class="faq-a-inner">The feeder stores your meal schedule locally, so it will continue feeding your pet even if Wi-Fi goes down. You just won't see live camera feed or get app notifications until it reconnects.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-q" id="p5-faq-3" aria-expanded="false" aria-controls="p5-answer-3"><span>How many meals can I schedule?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button><div class="faq-a" id="p5-answer-3" hidden=""><div class="faq-a-inner">Up to 10 meals per day, with 1-20 portions per meal. That's plenty for even the most demanding feeding routine — including prescription diets that require frequent small meals.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Never worry about feeding time again.</h2>
+      <p>Join 24,000+ pet parents who travel, work late, and still feed their pets on time.</p>
+      <a href="#p5-offer" class="btn" style="padding:18px 40px;font-size:17px">Explore example packs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+      <div class="final-cta-note">30-night trial · Free shipping · 1-year warranty</div>
+    </div>
+  </section>
+
+</div></main><footer class="site-footer"><a href="/">Home</a><a href="/affiliate-products.html">Product catalog</a><a href="/fiverr-services.html">Fiverr services</a><a href="/en/privacy.html">Privacy</a><p>HaoWordTool · Interactive design preview</p></footer>
+
+<!-- =========================================================
+     PRODUCT 2 — CORDLESS PRESSURE WASHER
+     ========================================================= -->
+
+
+<!-- =========================================================
+     PRODUCT 3 — 4-IN-1 ELECTRIC VEGETABLE CUTTER
+     ========================================================= -->
+
+
+<!-- =========================================================
+     PRODUCT 4 — ELECTRIC SPIN SCRUBBER
+     ========================================================= -->
+
+
+<!-- =========================================================
+     PRODUCT 5 — AUTOMATIC PET FEEDER WITH CAMERA
+     ========================================================= -->
+
+
+<!-- ==================== STICKY BAR ==================== -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-inner">
+    <div class="sticky-info">
+      <div class="sticky-title" id="stickyTitle">Product</div>
+      <div class="sticky-price">
+        <strong id="stickyPrice">$0.00</strong>
+        <s id="stickyWas">$0.00</s>
+        <span class="save" id="stickySave">Save $0</span>
+      </div>
+    </div>
+    <button class="btn" id="stickyBuy">Preview selection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ==================== TOAST ==================== -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+  <span id="toastText">Preview selection</span>
+</div>
+
+<script>(function(){
+'use strict';
+const slugs={p1:'bug-zapper',p2:'pressure-washer',p3:'veggie-cutter',p4:'spin-scrubber',p5:'pet-feeder'};
+const titles={p1:'Solar Bug Zapper',p2:'Cordless Pressure Washer',p3:'Electric Vegetable Cutter',p4:'Electric Spin Scrubber',p5:'Smart Pet Feeder'};
+const tabs=Array.from(document.querySelectorAll('.switcher [data-target]'));
+const landings=Array.from(document.querySelectorAll('.landing'));
+const sticky=document.getElementById('stickyBar');let current='p1',toastTimer;
+function money(value){return '$'+Number(value).toFixed(2)}
+function updatePrice(){const landing=document.getElementById(current),option=landing.querySelector('.offer-option.selected');const amount=Number(option.dataset.price);const original=Number(option.querySelector('.offer-option-price span').textContent.replace(/[^0-9.]/g,''));document.getElementById('stickyTitle').textContent=titles[current]+' · Preview';document.getElementById('stickyPrice').textContent=money(amount);document.getElementById('stickyWas').textContent=money(original);document.getElementById('stickySave').textContent='Example saving '+money(Math.max(0,original-amount));landing.querySelector('.cart-price').textContent=money(amount);['--brand','--brand-dark','--brand-shadow'].forEach(name=>sticky.style.setProperty(name,landing.style.getPropertyValue(name)));}
+function scrollState(){const visible=window.scrollY>500;sticky.style.display=visible?'block':'none';sticky.classList.toggle('show',visible)}
+function activate(id,push,scroll){if(!slugs[id])id='p1';current=id;landings.forEach(el=>{const active=el.id===id;el.classList.toggle('active',active);el.hidden=!active});tabs.forEach(tab=>{const active=tab.dataset.target===id;tab.classList.toggle('active',active);tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1});document.title=titles[id]+' — Design Preview | Haowordtool';updatePrice();if(push)history.pushState(null,'','#'+slugs[id]);if(scroll)window.scrollTo({top:0,behavior:'instant'});scrollState()}
+function route(){const hash=location.hash.slice(1);const id=Object.keys(slugs).find(id=>slugs[id]===hash||id===hash||hash.startsWith(id+'-'))||'p1';activate(id,false,false);if(hash.endsWith('-offer'))document.getElementById(id+'-offer').scrollIntoView({block:'start'})}
+tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>activate(tab.dataset.target,true,true));tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();tabs[next].focus();activate(tabs[next].dataset.target,true,true)})});
+window.addEventListener('popstate',route);window.addEventListener('hashchange',route);window.addEventListener('scroll',scrollState,{passive:true});
+landings.forEach(landing=>{const options=Array.from(landing.querySelectorAll('.offer-option'));function select(option){options.forEach(el=>{const active=el===option;el.classList.toggle('selected',active);el.setAttribute('aria-checked',String(active));el.tabIndex=active?0:-1});if(landing.id===current)updatePrice()};options.forEach((option,index)=>{option.addEventListener('click',()=>select(option));option.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight'||event.key==='ArrowDown')next=(index+1)%options.length;else if(event.key==='ArrowLeft'||event.key==='ArrowUp')next=(index+options.length-1)%options.length;else if(event.key!==' '&&event.key!=='Enter')return;event.preventDefault();options[next].focus();select(options[next])})});});
+document.querySelectorAll('.faq-q').forEach(button=>button.addEventListener('click',()=>{const item=button.closest('.faq-item'),open=!item.classList.contains('open');item.closest('.landing').querySelectorAll('.faq-item').forEach(other=>{other.classList.remove('open');other.querySelector('.faq-q').setAttribute('aria-expanded','false');other.querySelector('.faq-a').hidden=true});item.classList.toggle('open',open);button.setAttribute('aria-expanded',String(open));item.querySelector('.faq-a').hidden=!open}));
+function previewSelection(){const selected=document.getElementById(current).querySelector('.offer-option.selected');document.getElementById('toastText').textContent=selected.querySelector('h4').textContent+' selected for preview. Checkout is not available.';const toast=document.getElementById('toast');toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),4500)}
+document.querySelectorAll('.add-to-cart-btn').forEach(button=>button.addEventListener('click',previewSelection));document.getElementById('stickyBuy').addEventListener('click',previewSelection);
+document.querySelectorAll('a[href^="#p"]').forEach(link=>link.addEventListener('click',event=>{const target=document.getElementById(link.hash.slice(1));if(!target)return;event.preventDefault();const id=target.closest('.landing').id;activate(id,false,false);history.pushState(null,'',link.hash);target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'})}));
+route();
+})();
+</script>
+
+
+
+</body></html>
