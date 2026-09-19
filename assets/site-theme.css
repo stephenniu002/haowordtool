@@ -8,3 +8,11 @@ body.hwt-site{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans
 
 /* One consistent Explore disclosure on desktop and mobile. */
 .hwt-header .hwt-explore{position:relative;margin-left:auto;flex-shrink:0}.hwt-explore>summary{display:flex;align-items:center;justify-content:center;gap:9px;min-height:42px;padding:10px 16px;border:1px solid #dbe2ed;border-radius:9px;background:#fff;color:#111827;font:600 14px/1.5 Inter,sans-serif;cursor:pointer;list-style:none}.hwt-explore>summary::-webkit-details-marker{display:none}.hwt-explore[open]>summary{background:#ebf1ff;border-color:#b9d0ff;color:#0b5fff}.hwt-explore[open]>summary svg{transform:rotate(180deg)}.hwt-explore>nav{position:absolute;top:calc(100% + 10px);right:0;z-index:250;display:grid;gap:4px;min-width:200px;padding:8px;background:white;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 12px 32px #13233b1f}.hwt-explore:not([open])>nav{display:none}.hwt-header .hwt-explore nav a{display:block;padding:12px 14px;border-radius:7px;white-space:nowrap;font:500 14px/1.5 Inter,sans-serif}.hwt-explore nav a:hover,.hwt-explore nav a:focus-visible{background:#ebf1ff;color:#0b5fff}.hwt-header .hwt-actions{margin-left:0}.hwt-header .hwt-nav{gap:24px}@media(max-width:550px){.hwt-header .hwt-nav{gap:12px}.hwt-header .hwt-brand-name{display:none}.hwt-header .hwt-actions{display:flex;margin-left:0}.hwt-header .hwt-actions>a[data-open-search]{display:none}.hwt-header .hwt-actions>a:last-child{font-size:12px}.hwt-explore>summary{padding:9px 12px;min-height:40px;font-size:13px}.hwt-explore>nav{right:-70px;min-width:210px}.hwt-header .hwt-explore{margin-left:auto}}
+
+/* Homepage AI tool identities: preserve original logo proportions. */
+#ai-tools .tool-logo{display:flex;align-items:center;justify-content:flex-start;height:88px;margin-bottom:20px}
+#ai-tools .tool-logo img{display:block;width:72px;height:72px;object-fit:contain}
+#ai-tools .card-body{height:100%;display:flex;flex-direction:column}
+#ai-tools .card-desc{flex:1}
+#ai-tools .card-foot{align-items:flex-start;flex-direction:column;gap:10px}
+@media(min-width:1100px){#ai-tools .cards-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
