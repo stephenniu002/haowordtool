@@ -1,6 +1,6 @@
 # i18n language pack checker
 
-The English and Simplified Chinese JSON language packs are checked by CI. Existing static pages and inline dictionaries have not yet been migrated to consume these packs. The checker validates resources; it does not translate or change the website’s display language.
+The English and Simplified Chinese JSON language packs are checked by CI. The root homepage now consumes homepageLive keys through assets/home-language.js. Its header offers English / 中文, defaults to English, remembers the selection locally and accepts ?lang=zh-CN. Other static pages and inline dictionaries have not been migrated.
 
 Put the English reference in locales/en.json and actual translations in locales/<language>.json. Run npm run i18n:check or npm run i18n:check:ci. No dependency installation is required; use Node 22+. check-i18n.ts is the source, and check-i18n.mjs is its runnable JavaScript copy. Keep both in sync.
 
@@ -10,4 +10,4 @@ Do not copy the sample package.json over other packages. This root package only 
 
 ## Initial language resources
 
-English and Simplified Chinese language packs are now supplied. Chinese text is preserved from the owner’s document and English is a matching translation. These files are not yet connected to page rendering. They contain draft marketing claims (customer counts, hands-on tests, trials and refunds) and labels for planned features (SMS, API keys, payment hub); none establish that these claims are verified or the features are implemented. Existing Shopify authentication and checkout remain unchanged. Review applicable claims before enabling them in customer-facing pages.
+English and Simplified Chinese language packs are now supplied. Chinese text is preserved from the owner’s document and English is a matching translation. Only the homepageLive namespace is connected to root homepage rendering; the earlier namespaces remain draft resources. They contain draft marketing claims (customer counts, hands-on tests, trials and refunds) and labels for planned features (SMS, API keys, payment hub); none establish that these claims are verified or the features are implemented. Existing Shopify authentication and checkout remain unchanged. Review applicable claims before enabling them in customer-facing pages.
