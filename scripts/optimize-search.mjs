@@ -13,7 +13,7 @@ const urlOf = file => origin + '/' + file.replace(/(^|\/)index\.html$/, '$1');
 
 // Only reviewed, equivalent content belongs in a language cluster.
 const groups = [
-  {'zh-CN': 'index.html', en: 'en/index.html'},
+  // The new English root homepage and legacy localized homepages are different content.
   ...['index.html','logo-design.html','website-design.html','video-editing.html','disclosure.html'].map(file => ({'zh-CN': `services/${file}`, en: `en/services/${file}`})),
   ...['index.html', 'run-ai-html.html', 'preview-mobile-webpage.html', 'export-html-css-js-zip.html'].map(file => ({'zh-CN': `learn/${file}`, en: `en/learn/${file}`})),
   {'zh-CN': 'video-studio.html', ...Object.fromEntries(['en', 'ja', 'fr', 'es'].map(code => [code, `video-studio/${code}/index.html`]))}

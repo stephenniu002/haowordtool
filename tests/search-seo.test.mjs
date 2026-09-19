@@ -14,10 +14,10 @@ test('entry-only pages remain available but are excluded from indexing and langu
 });
 
 test('complete language counterparts have identical self-inclusive reciprocal annotations', () => {
-  const result = optimize(new Map([['index.html', page('/')], ['en/index.html', page('/en/')]]));
+  const result = optimize(new Map([['learn/index.html', page('/learn/')], ['en/learn/index.html', page('/en/learn/')]]));
   const annotations = html => html.match(/<link rel="alternate"[^>]*>/g);
-  assert.deepEqual(annotations(result.pages.get('index.html')), annotations(result.pages.get('en/index.html')));
-  assert.equal(annotations(result.pages.get('index.html')).length, 3);
+  assert.deepEqual(annotations(result.pages.get('learn/index.html')), annotations(result.pages.get('en/learn/index.html')));
+  assert.equal(annotations(result.pages.get('learn/index.html')).length, 3);
   assert.deepEqual(optimize(result.pages), result);
 });
 
@@ -31,3 +31,6 @@ test('preserve noindex and canonical aliases; neither enters sitemap or hreflang
   assert.doesNotMatch(result.pages.get('index.html'), /hreflang/);
   assert.doesNotMatch(result.sitemap, /lastmod|priority|changefreq/);
 });
+
+test('redesigned English root is not incorrectly grouped as the legacy Chinese home',()=>{const result=optimize(new Map([['index.html',page('/')],['en/index.html',page('/en/')]]));assert.doesNotMatch(result.pages.get('index.html'),/hreflang/);assert.doesNotMatch(result.pages.get('en/index.html'),/hreflang/)});
+
