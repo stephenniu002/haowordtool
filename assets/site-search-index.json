@@ -1,0 +1,641 @@
+[
+  {
+    "title": "About HaoWordStudio",
+    "url": "/about.html",
+    "description": "Who runs HaoWordStudio, what the site publishes, how its browser tools and practical tutorials are tested, and how corrections are handled.",
+    "keywords": ""
+  },
+  {
+    "title": "Customer center — HaoWordTool",
+    "url": "/account.html",
+    "description": "Sign in or create your HaoWordTool store account with an email verification code. View orders and manage your profile securely through Shopify.",
+    "keywords": ""
+  },
+  {
+    "title": "联盟产品工作台 | HaoWordTool",
+    "url": "/affiliate-dashboard.html",
+    "description": "管理 HaoWordTool 的 100 个联盟产品内容方向、Amazon ASIN 状态与 Fiverr 分流入口。",
+    "keywords": ""
+  },
+  {
+    "title": "Affiliate Marketing Landing Page | HaoWordTool",
+    "url": "/affiliate-marketing.html",
+    "description": "Turn AI video traffic from Pinterest, YouTube, TikTok and social channels into leads, follow-up conversations and paid offers with HaoWordTool.",
+    "keywords": ""
+  },
+  {
+    "title": "100 Products You Can Promote with AI | HaoWordTool",
+    "url": "/affiliate-products.html",
+    "description": "Browse 100 product ideas across 10 categories, each matched with an AI content, publishing and lead-follow-up workflow.",
+    "keywords": ""
+  },
+  {
+    "title": "一人公司 AI 工作流入口 | HaoWord Studio",
+    "url": "/ai-one-person-company-guide.html",
+    "description": "输入你的选题、产品和盈利目标，HaoWord 一人公司入口会把任务交给 n8n COO，生成内容获客、私域承接、成交交付和复盘优化的 AI 员工任务链。",
+    "keywords": ""
+  },
+  {
+    "title": "AI tool guides — HaoWordTool",
+    "url": "/ai-tools.html",
+    "description": "Explore five AI tool guide previews and visit the official providers: HeyGen, Speechify, v0, PixVerse and GlobalGPT.",
+    "keywords": ""
+  },
+  {
+    "title": "Word Patterns, Spelling & Puzzle Strategy Library",
+    "url": "/blog.html",
+    "description": "Browse 23 original guides to anagrams, spelling, vocabulary learning, crossword constraints, and word-game strategy.",
+    "keywords": ""
+  },
+  {
+    "title": "Your checkout — HaoWordTool",
+    "url": "/checkout.html",
+    "description": "Choose HaoWordTool products, review your order and continue to secure Shopify payment.",
+    "keywords": ""
+  },
+  {
+    "title": "Contact HaoWordStudio",
+    "url": "/contact.html",
+    "description": "Contact HaoWordStudio about tutorial corrections, broken examples, accessibility, privacy or product support.",
+    "keywords": ""
+  },
+  {
+    "title": "Custom Website Design and Template Setup | HaoWordStudio",
+    "url": "/custom-web-design.html",
+    "description": "Request a fixed-scope custom website: template setup from $79, a three-page business launch from $149, or a custom front-end build from $199.",
+    "keywords": ""
+  },
+  {
+    "title": "Editorial and Testing Standards | HaoWordStudio",
+    "url": "/editorial-standards.html",
+    "description": "How HaoWordStudio plans, tests, updates and corrects its software tutorials, examples and word-reference articles.",
+    "keywords": ""
+  },
+  {
+    "title": "Affiliate Marketing Funnel for Creators | HaoWordTool",
+    "url": "/en/affiliate-marketing.html",
+    "description": "Turn AI video traffic from Pinterest, YouTube, TikTok and social channels into leads, follow-up conversations and paid offers with HaoWordTool.",
+    "keywords": ""
+  },
+  {
+    "title": "AI Affiliate Product Ideas: 100 Visual Campaigns | HaoWordTool",
+    "url": "/en/affiliate-products.html",
+    "description": "Browse 100 product ideas across 10 categories, each matched with an AI content, publishing and lead-follow-up workflow.",
+    "keywords": ""
+  },
+  {
+    "title": "Online HTML, CSS & JavaScript Editor | HaoWord Studio",
+    "url": "/en/app-builder.html",
+    "description": "Run static HTML, CSS and JavaScript, preview mobile layouts and export a ZIP. Free browser workspace with step-by-step tutorials and a working sample.",
+    "keywords": ""
+  },
+  {
+    "title": "IELTS Academic Writing Task 2: Build a Clear Essay Plan | HaoWordStudio",
+    "url": "/en/ielts/academic-writing-task-2-plan.html",
+    "description": "A complete IELTS Academic Writing Task 2 planning lesson with an original practice question, position test, paragraph map, timed exercise and self-review checklist.",
+    "keywords": ""
+  },
+  {
+    "title": "Free IELTS Lessons for Writing and Speaking | HaoWordStudio",
+    "url": "/en/ielts/index.html",
+    "description": "Practice IELTS Writing Task 2 planning and Speaking Part 2 organization with original exercises, timed routines and self-review checklists.",
+    "keywords": ""
+  },
+  {
+    "title": "IELTS Speaking Part 2: Make a One-Minute Plan | HaoWordStudio",
+    "url": "/en/ielts/speaking-part-2-one-minute-plan.html",
+    "description": "Practice IELTS Speaking Part 2 with an original cue card, a timed one-minute note plan, a complete sample response and a recording checklist.",
+    "keywords": ""
+  },
+  {
+    "title": "Free creative tools & professional service guides | HaoWord Studio",
+    "url": "/en/index.html",
+    "description": "Create with free app and video tools. Compare logo design, website and video editing services with practical briefs and delivery checklists.",
+    "keywords": ""
+  },
+  {
+    "title": "AI website templates: how to choose, test and customize one | HaoWord Studio",
+    "url": "/en/learn/ai-website-templates.html",
+    "description": "Evaluate AI-generated website templates by structure, responsive behavior, interactions and export quality before using them for a real project.",
+    "keywords": ""
+  },
+  {
+    "title": "How to customize an HTML website template step by step | HaoWordStudio",
+    "url": "/en/learn/customize-html-template.html",
+    "description": "Customize a working HTML website template by replacing its text, colors, links and form behavior, then test the mobile layout and exported ZIP.",
+    "keywords": ""
+  },
+  {
+    "title": "How to export HTML, CSS and JavaScript as a working ZIP | HaoWord Studio",
+    "url": "/en/learn/export-html-css-js-zip.html",
+    "description": "Export a static project, extract it into a fresh folder and verify its files and interactions. Understand the difference between source files, hosting and an App installer.",
+    "keywords": ""
+  },
+  {
+    "title": "HTML, CSS and JavaScript online editor: a practical workflow | HaoWord Studio",
+    "url": "/en/learn/html-css-javascript-online-editor.html",
+    "description": "Use a browser editor to separate three files, run a real interactive page, diagnose common errors and export the result safely.",
+    "keywords": ""
+  },
+  {
+    "title": "Learn to run, preview and export a static web project | HaoWord Studio",
+    "url": "/en/learn/index.html",
+    "description": "Three hands-on HTML, CSS and JavaScript tutorials with a shared, downloadable daily-plan example.",
+    "keywords": ""
+  },
+  {
+    "title": "Landing page HTML template: build and test a working example | HaoWord Studio",
+    "url": "/en/learn/landing-page-html-template.html",
+    "description": "Create a responsive product landing page with semantic HTML, focused CSS and a working email validation interaction.",
+    "keywords": ""
+  },
+  {
+    "title": "Portfolio website source code: build a responsive personal site | HaoWord Studio",
+    "url": "/en/learn/portfolio-website-source-code.html",
+    "description": "Download and customize a complete portfolio example with project cards, accessible navigation and a working category filter.",
+    "keywords": ""
+  },
+  {
+    "title": "How to preview a webpage at mobile width | HaoWord Studio",
+    "url": "/en/learn/preview-mobile-webpage.html",
+    "description": "Use a 390px preview to test wrapping, forms and long task labels. Follow a responsive CSS example and learn what still needs a real phone test.",
+    "keywords": ""
+  },
+  {
+    "title": "How to run AI-generated HTML, CSS and JavaScript | HaoWord Studio",
+    "url": "/en/learn/run-ai-html.html",
+    "description": "Import a working daily-plan example, edit its heading and test real JavaScript interactions. Learn which AI code can run without a build step.",
+    "keywords": ""
+  },
+  {
+    "title": "How our recommendations and affiliate links work | HaoWord Studio",
+    "url": "/en/services/disclosure.html",
+    "description": "Understand our editorial guides, third-party links, affiliate commissions and service selection approach.",
+    "keywords": ""
+  },
+  {
+    "title": "Service guides: design, websites & video | HaoWord Studio",
+    "url": "/en/services/index.html",
+    "description": "Compare logo design, website and video editing options with practical briefs, delivery checklists and links to service providers.",
+    "keywords": ""
+  },
+  {
+    "title": "Logo & brand design buyer’s guide | HaoWord Studio",
+    "url": "/en/services/logo-design.html",
+    "description": "Understand the brief, source files and usage terms before hiring a logo designer.",
+    "keywords": ""
+  },
+  {
+    "title": "Video editing & captions buyer’s guide | HaoWord Studio",
+    "url": "/en/services/video-editing.html",
+    "description": "Define the footage, editing scope, caption languages and export formats in one brief.",
+    "keywords": ""
+  },
+  {
+    "title": "Websites & landing pages buyer’s guide | HaoWord Studio",
+    "url": "/en/services/website-design.html",
+    "description": "Compare templates, do-it-yourself tools and custom builds for your stage of business.",
+    "keywords": ""
+  },
+  {
+    "title": "Daily plan · HTML learning example",
+    "url": "/examples/daily-plan-en/index.html",
+    "description": "A free daily-plan example for importing HTML, CSS and JavaScript, checking mobile layouts and exporting a ZIP.",
+    "keywords": ""
+  },
+  {
+    "title": "每日计划 · 教程示例",
+    "url": "/examples/daily-plan/index.html",
+    "description": "用于学习 HTML、CSS 和 JavaScript 导入、手机预览与 ZIP 导出的免费示例。",
+    "keywords": ""
+  },
+  {
+    "title": "Northstar — landing-page example",
+    "url": "/examples/landing-page-en/index.html",
+    "description": "A working plain HTML, CSS and JavaScript landing-page example with an interactive email form.",
+    "keywords": ""
+  },
+  {
+    "title": "Alex Chen — portfolio example",
+    "url": "/examples/portfolio-en/index.html",
+    "description": "A working plain HTML, CSS and JavaScript portfolio example with accessible project filters.",
+    "keywords": ""
+  },
+  {
+    "title": "Frequently Asked Questions | Letter Solver Pro",
+    "url": "/faq.html",
+    "description": "Answers about exact anagrams, subsets, wildcard tiles, word lists, scores, privacy, missing words, and responsible use.",
+    "keywords": ""
+  },
+  {
+    "title": "Join the Fiverr Affiliate Program | HaoWordTool",
+    "url": "/fiverr-affiliate-program.html",
+    "description": "A dedicated Fiverr Affiliate Program recruitment page for creators, publishers and marketers.",
+    "keywords": ""
+  },
+  {
+    "title": "Fiverr Marketplace Services | HaoWordTool",
+    "url": "/fiverr-services.html",
+    "description": "Compare Fiverr Marketplace service paths for AI video, Pinterest, landing pages, social media and chatbots.",
+    "keywords": ""
+  },
+  {
+    "title": "Exact Anagram or Subset Search? Choose with Worked Examples | Letter Solver Pro",
+    "url": "/guides/anagram-solver-vs-word-finder.html",
+    "description": "Compare LISTEN, LIST and repeated-letter racks to choose the right search mode, understand length filters, and avoid positional-pattern mistakes.",
+    "keywords": ""
+  },
+  {
+    "title": "Use Anagrams for Spelling Practice Without Memorizing Noise | Letter Solver Pro",
+    "url": "/guides/anagrams-for-spelling-practice.html",
+    "description": "A classroom-ready routine that links letter order, sound, meaning, and recall.",
+    "keywords": ""
+  },
+  {
+    "title": "Common Letter Pairs and Clusters for Faster Solving | Letter Solver Pro",
+    "url": "/guides/common-letter-pairs-and-clusters.html",
+    "description": "Train your eye to group letters into useful chunks without inventing impossible spellings.",
+    "keywords": ""
+  },
+  {
+    "title": "Solve Crossword Constraints Step by Step | Letter Solver Pro",
+    "url": "/guides/crossword-constraints-step-by-step.html",
+    "description": "Combine pattern, clue type, tense, number, and crossings in a disciplined order.",
+    "keywords": ""
+  },
+  {
+    "title": "Why Word Lists Disagree—and How to Avoid False Positives | Letter Solver Pro",
+    "url": "/guides/dictionary-differences-and-false-positives.html",
+    "description": "Understand dictionary scope, inflections, names, abbreviations, and regional variation before trusting a result.",
+    "keywords": ""
+  },
+  {
+    "title": "A Better Method for Five-Letter Word Puzzles | Letter Solver Pro",
+    "url": "/guides/five-letter-word-solving-method.html",
+    "description": "Use position information, letter frequency, and contradiction tracking instead of chasing fashionable starter words.",
+    "keywords": ""
+  },
+  {
+    "title": "From Solver Result to Real Vocabulary | Letter Solver Pro",
+    "url": "/guides/from-solver-result-to-real-vocabulary.html",
+    "description": "A five-minute follow-up that turns a result list into words you can recognize and use.",
+    "keywords": ""
+  },
+  {
+    "title": "How an Anagram Algorithm Works | Letter Solver Pro",
+    "url": "/guides/how-anagram-algorithms-work.html",
+    "description": "A plain-language explanation of letter signatures, multisets, wildcards, filtering, and ranking.",
+    "keywords": ""
+  },
+  {
+    "title": "How to Unscramble Letters Systematically | Letter Solver Pro",
+    "url": "/guides/how-to-unscramble-letters-systematically.html",
+    "description": "A repeatable five-pass method for turning a mixed letter rack into useful words without relying on random guessing.",
+    "keywords": ""
+  },
+  {
+    "title": "Letter Frequency Without the Myths | Letter Solver Pro",
+    "url": "/guides/letter-frequency-without-myths.html",
+    "description": "How corpus frequency helps puzzle solving—and where simplistic frequency charts mislead.",
+    "keywords": ""
+  },
+  {
+    "title": "Plural -S and Past -ED in Letter Puzzles | Letter Solver Pro",
+    "url": "/guides/plural-s-and-ed-endings.html",
+    "description": "Use grammatical endings to expand a rack while avoiding forms that do not exist.",
+    "keywords": ""
+  },
+  {
+    "title": "Use Prefixes and Suffixes to Find Longer Anagrams | Letter Solver Pro",
+    "url": "/guides/prefixes-and-suffixes-for-anagrams.html",
+    "description": "A practical guide to treating affixes as structural clues rather than loose letter groups.",
+    "keywords": ""
+  },
+  {
+    "title": "Q Words Without U: Patterns, Meanings, and Game Use | Letter Solver Pro",
+    "url": "/guides/q-words-without-u-explained.html",
+    "description": "A short, usable reference to the unusual Q words that matter in English-language word games.",
+    "keywords": ""
+  },
+  {
+    "title": "Rack Management Between Turns | Letter Solver Pro",
+    "url": "/guides/rack-management-between-turns.html",
+    "description": "A practical framework for deciding what to play, keep, or exchange.",
+    "keywords": ""
+  },
+  {
+    "title": "Responsible Use of Word Solvers | Letter Solver Pro",
+    "url": "/guides/responsible-use-of-word-solvers.html",
+    "description": "When a solver teaches, when it spoils, and how to use one without undermining a game or assignment.",
+    "keywords": ""
+  },
+  {
+    "title": "Scrabble Letter Values: Score, Scarcity, and Opportunity | Letter Solver Pro",
+    "url": "/guides/scrabble-letter-values-explained.html",
+    "description": "Why a high-value tile is not always valuable, and how board multipliers change the calculation.",
+    "keywords": ""
+  },
+  {
+    "title": "Seven-Letter Bingo Strategy: From Rack to Play | Letter Solver Pro",
+    "url": "/guides/seven-letter-bingo-strategy.html",
+    "description": "How to identify bingo-friendly racks, preserve flexible letters, and compare score with board position.",
+    "keywords": ""
+  },
+  {
+    "title": "A 30-Day Word-Pattern Practice Plan | Letter Solver Pro",
+    "url": "/guides/thirty-day-word-pattern-practice.html",
+    "description": "Ten minutes a day to improve anagram speed, spelling awareness, and usable vocabulary.",
+    "keywords": ""
+  },
+  {
+    "title": "Reading the Vowel–Consonant Balance in a Letter Rack | Letter Solver Pro",
+    "url": "/guides/vowels-and-consonants-in-word-racks.html",
+    "description": "Learn what a rack’s vowel ratio tells you, when to search for a digraph, and how to rescue vowel-heavy or consonant-heavy combinations.",
+    "keywords": ""
+  },
+  {
+    "title": "How to Use Blank Tiles in a Word Unscrambler | Letter Solver Pro",
+    "url": "/guides/wildcard-blank-tile-strategy.html",
+    "description": "Work through CART? and LET?, identify the letters supplied by blanks, calculate their scores, and check your answers with three exercises.",
+    "keywords": ""
+  },
+  {
+    "title": "Learn Vocabulary Through Word Families | Letter Solver Pro",
+    "url": "/guides/word-families-for-vocabulary.html",
+    "description": "Turn one solved word into a durable network of meanings, forms, and collocations.",
+    "keywords": ""
+  },
+  {
+    "title": "Using Word Puzzles in an ESL Classroom | Letter Solver Pro",
+    "url": "/guides/word-puzzles-in-esl-classrooms.html",
+    "description": "Five activities that produce speaking and vocabulary practice instead of silent busywork.",
+    "keywords": ""
+  },
+  {
+    "title": "Words Ending in -ING: Spelling Rules You Can Actually Use | Letter Solver Pro",
+    "url": "/guides/words-ending-in-ing-guide.html",
+    "description": "A decision guide for adding -ing, including silent e, doubled consonants, and exceptions.",
+    "keywords": ""
+  },
+  {
+    "title": "How Letter Solver Pro Works: Matching, Ranking & Limits",
+    "url": "/how-it-works.html",
+    "description": "Read the exact matching method, wildcard behavior, ranking logic, dictionary scope, privacy model, and known limitations.",
+    "keywords": ""
+  },
+  {
+    "title": "IELTS English Course | HaoWordStudio",
+    "url": "/ielts-course.html",
+    "description": "Order the HaoWordStudio IELTS English course for private delivery through Google Drive after payment is confirmed.",
+    "keywords": ""
+  },
+  {
+    "title": "Haowordtool — Better Products, Smarter AI Tools",
+    "url": "/",
+    "description": "Explore physical products, AI tools and practical buying guides with Haowordtool. Better Products, Smarter AI Tools.",
+    "keywords": ""
+  },
+  {
+    "title": "Five Product Landing Pages — Design Preview | Haowordtool",
+    "url": "/landing-pages.html",
+    "description": "Explore five product landing page designs: bug zapper, pressure washer, vegetable cutter, spin scrubber and pet feeder. Interactive design preview.",
+    "keywords": ""
+  },
+  {
+    "title": "WhatsApp AI 自动回复机器人 | HaoWord Studio",
+    "url": "/local-ai.html",
+    "description": "查看 Ollama 本地 AI 采购询盘实测、演示视频及部署调试服务。先评估电脑和业务资料，再确认书面报价；WhatsApp 自动收发仍待联调。",
+    "keywords": ""
+  },
+  {
+    "title": "多平台视频发布检查清单 | HaoWord Studio",
+    "url": "/multi-platform-publishing-checklist.html",
+    "description": "多平台视频发布前的检查清单：素材、标题、标签、账号、发布时间、人工审批和复盘数据。",
+    "keywords": ""
+  },
+  {
+    "title": "产品与服务价格 | HaoWord Studio",
+    "url": "/pricing.html",
+    "description": "查看 HaoWord Studio 免费网页工具、$9 和 $29 模板包、IELTS 英语课程以及定制网站服务的价格、交付方式和购买流程。",
+    "keywords": ""
+  },
+  {
+    "title": "Privacy Policy | HaoWordStudio",
+    "url": "/privacy.html",
+    "description": "How HaoWordStudio handles browser-based searches, hosting logs, cookies, advertising, email, and user privacy choices.",
+    "keywords": ""
+  },
+  {
+    "title": "推荐与佣金说明 | HaoWord Studio",
+    "url": "/services/disclosure.html",
+    "description": "了解本站服务指南、第三方链接、联盟佣金及服务商选择标准。",
+    "keywords": ""
+  },
+  {
+    "title": "精选服务｜设计、建站与视频制作指南 | HaoWord Studio",
+    "url": "/services/index.html",
+    "description": "比较 Logo 设计、网站搭建和视频剪辑方案。查看交付清单、需求模板与第三方服务入口。",
+    "keywords": ""
+  },
+  {
+    "title": "Logo 与品牌设计选择指南 | HaoWord Studio",
+    "url": "/services/logo-design.html",
+    "description": "从品牌定位、源文件到商用范围，弄清一套 Logo 应该交付什么。",
+    "keywords": ""
+  },
+  {
+    "title": "视频剪辑与字幕选择指南 | HaoWord Studio",
+    "url": "/services/video-editing.html",
+    "description": "把素材整理、剪辑范围、字幕语言与导出规格写进同一份需求。",
+    "keywords": ""
+  },
+  {
+    "title": "网站与落地页选择指南 | HaoWord Studio",
+    "url": "/services/website-design.html",
+    "description": "比较模板、自助搭建与定制开发，找到适合当前业务阶段的方案。",
+    "keywords": ""
+  },
+  {
+    "title": "Multi-platform Social Publisher Setup | HaoWord Studio",
+    "url": "/social-publisher.html",
+    "description": "Request setup of social-auto-upload for Douyin (China), TikTok (international), Xiaohongshu (小红书), Bilibili, YouTube and more. A scoped installation service with platform checks and a practical handover.",
+    "keywords": ""
+  },
+  {
+    "title": "HTML Website Template Packs | HaoWordStudio",
+    "url": "/templates.html",
+    "description": "Buy responsive HTML, CSS and JavaScript website template packs with working source files, documentation and commercial-use licensing.",
+    "keywords": ""
+  },
+  {
+    "title": "Terms of Use | HaoWordStudio",
+    "url": "/terms.html",
+    "description": "Terms governing permitted use, accuracy limits, intellectual property, game rules, disclaimers, and changes.",
+    "keywords": ""
+  },
+  {
+    "title": "2026 Top 100 Viral Products for Affiliate Marketing | HaoWordTool",
+    "url": "/top-100-products-2026.html",
+    "description": "An original 2026 top 100 product-opportunity list for Pinterest, YouTube Shorts, TikTok and affiliate marketing content. Built for free-traffic testing and human-approved offers.",
+    "keywords": ""
+  },
+  {
+    "title": "Word Unscrambler & Exact Anagram Solver | Letter Solver Pro",
+    "url": "/unscrambler.html",
+    "description": "Find common English words from up to 15 letters, filter by length, use wildcards, and understand the transparent letter-count algorithm.",
+    "keywords": ""
+  },
+  {
+    "title": "HaoWordStudio Video Guides: Edit, Test, Export and Buy Templates",
+    "url": "/videos.html",
+    "description": "Watch five narrated HaoWordStudio guides showing how to run AI website code, edit files, test mobile layouts, export a ZIP and order template packs.",
+    "keywords": ""
+  },
+  {
+    "title": "Solar Bug Zapper",
+    "titleZh": "太阳能灭蚊灯",
+    "url": "/landing-pages.html#bug-zapper",
+    "description": "Explore an outdoor bug-zapper concept.",
+    "descriptionZh": "了解户外灭蚊灯的产品概念。",
+    "keywords": "商品 产品 预览"
+  },
+  {
+    "title": "Cordless Pressure Washer",
+    "titleZh": "无线高压清洗机",
+    "url": "/landing-pages.html#pressure-washer",
+    "description": "Explore cordless cleaning for outdoor jobs.",
+    "descriptionZh": "了解户外无线清洗方案。",
+    "keywords": "商品 产品 预览"
+  },
+  {
+    "title": "Electric Vegetable Cutter",
+    "titleZh": "电动切菜机",
+    "url": "/landing-pages.html#veggie-cutter",
+    "description": "Explore a compact kitchen-prep concept.",
+    "descriptionZh": "了解小巧的厨房备菜工具概念。",
+    "keywords": "商品 产品 预览"
+  },
+  {
+    "title": "Electric Spin Scrubber",
+    "titleZh": "电动旋转清洁刷",
+    "url": "/landing-pages.html#spin-scrubber",
+    "description": "Explore a powered brush for everyday cleaning.",
+    "descriptionZh": "了解适合日常清洁的电动刷。",
+    "keywords": "商品 产品 预览"
+  },
+  {
+    "title": "Smart Pet Feeder",
+    "titleZh": "智能宠物喂食器",
+    "url": "/landing-pages.html#pet-feeder",
+    "description": "Explore scheduled feeding with a camera.",
+    "descriptionZh": "了解带摄像头的定时喂食方案。",
+    "keywords": "商品 产品 预览"
+  },
+  {
+    "title": "HeyGen",
+    "titleZh": "",
+    "url": "/ai-tools.html#heygen",
+    "description": "AI avatar videos",
+    "descriptionZh": "AI 数字人视频",
+    "keywords": "AI 工具 人工智能"
+  },
+  {
+    "title": "Speechify",
+    "titleZh": "",
+    "url": "/ai-tools.html#speechify",
+    "description": "Text to speech",
+    "descriptionZh": "文字转语音",
+    "keywords": "AI 工具 人工智能"
+  },
+  {
+    "title": "v0",
+    "titleZh": "",
+    "url": "/ai-tools.html#v0",
+    "description": "Build interfaces with prompts",
+    "descriptionZh": "通过提示词构建界面",
+    "keywords": "AI 工具 人工智能"
+  },
+  {
+    "title": "PixVerse",
+    "titleZh": "",
+    "url": "/ai-tools.html#pixverse",
+    "description": "Text and image to video",
+    "descriptionZh": "文字、图片生成视频",
+    "keywords": "AI 工具 人工智能"
+  },
+  {
+    "title": "GlobalGPT",
+    "titleZh": "",
+    "url": "/ai-tools.html#globalgpt",
+    "description": "Explore multiple AI models",
+    "descriptionZh": "探索多种 AI 模型",
+    "keywords": "AI 工具 人工智能"
+  },
+  {
+    "title": "Reviews — editorial previews",
+    "titleZh": "评测 — 编辑预览",
+    "url": "/reviews.html",
+    "description": "Ten unverified product and AI review previews.",
+    "keywords": "测评 比较 产品 AI"
+  },
+  {
+    "title": "Exploring Bug Zappers",
+    "url": "/reviews.html#bug-zapper",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 bug-zapper"
+  },
+  {
+    "title": "Exploring Noise-Cancelling Earbuds",
+    "url": "/reviews.html#anc-earbuds",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 anc-earbuds"
+  },
+  {
+    "title": "Exploring Fitness Bands",
+    "url": "/reviews.html#fitness-band",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 fitness-band"
+  },
+  {
+    "title": "Exploring Mini Projectors for Bedroom Movie Nights",
+    "url": "/reviews.html#mini-projector",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 mini-projector"
+  },
+  {
+    "title": "Exploring Air Purifiers for Small Rooms",
+    "url": "/reviews.html#air-purifier",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 air-purifier"
+  },
+  {
+    "title": "Exploring Electric Spin Scrubbers",
+    "url": "/reviews.html#spin-scrubber",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 spin-scrubber"
+  },
+  {
+    "title": "Exploring Cordless Pressure Washers",
+    "url": "/reviews.html#pressure-washer",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 pressure-washer"
+  },
+  {
+    "title": "Exploring AI Product Photo Generators for E-commerce",
+    "url": "/reviews.html#ai-product-photos",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 ai-product-photos"
+  },
+  {
+    "title": "Exploring AI UGC Video Ad Generators",
+    "url": "/reviews.html#ugc-video-ads",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 ugc-video-ads"
+  },
+  {
+    "title": "Exploring AI Chatbots for E-commerce",
+    "url": "/reviews.html#ai-chatbot",
+    "description": "Review preview. Scores, specifications and prices are unverified.",
+    "keywords": "reviews 评测 预览 ai-chatbot"
+  }
+]
