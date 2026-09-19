@@ -1,0 +1,2070 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI tool guides — HaoWordTool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#4B5563;--ink-strong:#111827;--ink-soft:#6B7280;--ink-light:#9CA3AF;
+  --line:#E5E7EB;--line-soft:#F3F4F6;
+  --surface:#FFFFFF;--surface-soft:#F9FAFB;
+  --success:#059669;--success-soft:#ECFDF5;
+  --warning:#D97706;--warning-soft:#FFFBEB;
+  --danger:#DC2626;--danger-soft:#FEF2F2;
+  --radius:12px;--radius-lg:16px;--radius-xl:20px;--radius-2xl:28px;
+  --shadow-card:0 1px 2px rgba(31,41,55,.04),0 4px 12px rgba(31,41,55,.05);
+  --shadow-hover:0 4px 8px rgba(31,41,55,.06),0 16px 40px rgba(31,41,55,.08);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;
+  background:var(--surface);color:var(--ink);font-size:16px;line-height:1.625;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul,ol{list-style:none}
+::selection{background:#0B5FFF;color:#fff}
+.container{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ===== Switcher ===== */
+.switcher{position:sticky;top:0;z-index:200;background:#111827;padding:12px 0}
+.switcher-inner{display:flex;gap:8px;overflow-x:auto;max-width:1120px;margin:0 auto;padding:0 24px;scrollbar-width:none}
+.switcher-inner::-webkit-scrollbar{display:none}
+.switcher button{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:100px;
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);
+  font-size:13px;font-weight:600;white-space:nowrap;flex:none;
+  transition:all .25s var(--ease);border:1px solid transparent;
+}
+.switcher button:hover{background:rgba(255,255,255,.14);color:#fff}
+.switcher button.active{background:#fff;color:#111827}
+.switcher-emoji{font-size:15px}
+
+/* ===== Landing ===== */
+.landing{display:none;animation:fadeIn .5s var(--ease) both}
+.landing.active{display:block}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.15;color:var(--ink-strong)}
+h1{font-size:clamp(2.1rem,5.2vw,3.4rem);letter-spacing:-.035em;line-height:1.05}
+h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+h3{font-size:1rem;font-weight:600;letter-spacing:-.01em}
+.text-balance{text-wrap:balance}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--brand);margin-bottom:14px;
+}
+.eyebrow::before{content:'';width:20px;height:2px;background:var(--brand);border-radius:2px}
+
+.cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:58px;padding:18px 38px;border-radius:100px;
+  font-size:17px;font-weight:700;letter-spacing:-.01em;
+  background:var(--brand);color:#fff;
+  box-shadow:0 10px 28px var(--brand-shadow);
+  transition:all .3s var(--ease);white-space:nowrap;
+}
+.cta:hover{background:var(--brand-dark);transform:translateY(-2px);box-shadow:0 16px 38px var(--brand-shadow)}
+.cta svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+.cta:hover svg{transform:translateX(4px)}
+.cta-block{width:100%}
+
+.cta-micro{
+  font-size:13px;color:var(--ink-light);
+  font-weight:500;margin-top:14px;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.cta-micro svg{width:14px;height:14px;color:var(--success)}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;overflow:hidden;
+  padding:64px 0 80px;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,var(--brand-soft) 0%,transparent 65%),#fff;
+}
+.hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);
+  padding:8px 16px;border-radius:100px;
+  font-size:13px;font-weight:600;color:var(--ink-strong);
+  box-shadow:var(--shadow-card);margin-bottom:24px;
+}
+.hero-badge .live-dot{
+  width:8px;height:8px;border-radius:50%;background:#22C55E;
+  box-shadow:0 0 0 4px rgba(34,197,94,.2);flex:none;
+  animation:pulseDot 1.8s infinite;
+}
+@keyframes pulseDot{
+  0%,100%{box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+  50%{box-shadow:0 0 0 8px rgba(34,197,94,.04)}
+}
+
+.hero h1{margin-bottom:20px}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--brand) 0%,var(--brand-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{
+  font-size:18px;line-height:1.65;color:var(--ink);
+  margin-bottom:36px;max-width:520px;
+}
+
+/* ===== Demo visuals ===== */
+.demo-frame{
+  position:relative;aspect-ratio:1/1;border-radius:var(--radius-2xl);
+  overflow:hidden;
+  background:linear-gradient(160deg,#111827 0%,#1F2937 100%);
+  box-shadow:0 24px 60px rgba(15,17,21,.24);
+  display:grid;place-items:center;
+  padding:32px;
+}
+.demo-frame::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 20%,var(--brand-glow),transparent 55%),
+    radial-gradient(circle at 75% 80%,rgba(255,255,255,.06),transparent 60%);
+  pointer-events:none;
+}
+.demo-tag{
+  position:absolute;top:20px;left:20px;z-index:3;
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.12);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.15);
+  padding:7px 14px;border-radius:100px;
+  font-size:11.5px;font-weight:800;letter-spacing:.06em;
+  text-transform:uppercase;color:#fff;
+}
+.demo-tag .rec-dot{
+  width:7px;height:7px;border-radius:50%;background:#EF4444;flex:none;
+  animation:pulseRed 1.4s infinite;
+}
+@keyframes pulseRed{0%,100%{opacity:1}50%{opacity:.3}}
+.demo-live{
+  position:absolute;bottom:20px;right:20px;z-index:3;
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.12);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.15);
+  padding:6px 12px;border-radius:100px;
+  font-size:11.5px;font-weight:700;color:#fff;
+}
+.demo-live svg{width:12px;height:12px;color:#22C55E}
+.demo-stage{position:relative;z-index:2;width:100%;height:100%;display:grid;place-items:center}
+
+/* ==== Demo animations ==== */
+.avatar-scene{display:grid;place-items:center;gap:26px}
+.avatar-circle{
+  width:150px;height:150px;border-radius:50%;
+  background:linear-gradient(135deg,#7C3AED,#0EA5E9);
+  display:grid;place-items:center;font-size:72px;
+  position:relative;
+  box-shadow:0 0 0 8px rgba(255,255,255,.06),0 20px 50px rgba(124,58,237,.4);
+  animation:avatarFloat 4s ease-in-out infinite;
+}
+@keyframes avatarFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.avatar-circle::after{
+  content:'';position:absolute;inset:-14px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.15);
+  animation:avatarRing 2.4s infinite;
+}
+@keyframes avatarRing{0%{transform:scale(1);opacity:1}100%{transform:scale(1.15);opacity:0}}
+.waveform{display:flex;align-items:center;gap:3px;height:60px}
+.waveform span{
+  width:4px;border-radius:2px;
+  background:linear-gradient(180deg,#7C3AED,#0EA5E9);
+  animation:wave 1.2s ease-in-out infinite;
+}
+.waveform span:nth-child(1){animation-delay:0s;height:20%}
+.waveform span:nth-child(2){animation-delay:.1s;height:50%}
+.waveform span:nth-child(3){animation-delay:.2s;height:80%}
+.waveform span:nth-child(4){animation-delay:.3s;height:100%}
+.waveform span:nth-child(5){animation-delay:.4s;height:70%}
+.waveform span:nth-child(6){animation-delay:.5s;height:90%}
+.waveform span:nth-child(7){animation-delay:.6s;height:60%}
+.waveform span:nth-child(8){animation-delay:.7s;height:85%}
+.waveform span:nth-child(9){animation-delay:.8s;height:100%}
+.waveform span:nth-child(10){animation-delay:.9s;height:75%}
+.waveform span:nth-child(11){animation-delay:1s;height:45%}
+.waveform span:nth-child(12){animation-delay:1.1s;height:60%}
+@keyframes wave{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+.lang-pills{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.lang-pill{
+  padding:6px 12px;border-radius:100px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.14);
+  font-size:11.5px;font-weight:700;color:rgba(255,255,255,.8);
+}
+.lang-pill.on{background:#fff;color:#111827;animation:langCycle 8s infinite}
+.lang-pill:nth-child(1).on{animation-delay:0s}
+.lang-pill:nth-child(2).on{animation-delay:2s}
+.lang-pill:nth-child(3).on{animation-delay:4s}
+.lang-pill:nth-child(4).on{animation-delay:6s}
+@keyframes langCycle{
+  0%,24%{background:#fff;color:#111827}
+  25%,100%{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8)}
+}
+
+.speech-scene{width:100%;display:grid;gap:20px}
+.speech-line{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;border-radius:12px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  opacity:.4;animation:highlightLine 6s infinite;
+}
+.speech-line:nth-child(1){animation-delay:0s}
+.speech-line:nth-child(2){animation-delay:1.5s}
+.speech-line:nth-child(3){animation-delay:3s}
+.speech-line:nth-child(4){animation-delay:4.5s}
+@keyframes highlightLine{
+  0%,20%{background:rgba(249,115,22,.18);border-color:rgba(249,115,22,.4);opacity:1;transform:translateX(6px)}
+  21%,100%{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);opacity:.4;transform:translateX(0)}
+}
+.speech-play{
+  width:30px;height:30px;border-radius:50%;flex:none;
+  background:rgba(255,255,255,.15);color:#fff;
+  display:grid;place-items:center;font-size:11px;
+}
+.speech-line span{font-size:13.5px;color:#fff;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.speech-speed{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.speed-pill{
+  padding:6px 14px;border-radius:100px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  font-size:12px;font-weight:700;color:rgba(255,255,255,.7);
+}
+.speed-pill.on{background:#fff;color:#111827}
+
+.v0-scene{width:100%;display:grid;gap:14px}
+.v0-prompt{
+  display:flex;align-items:center;gap:12px;
+  padding:14px 18px;border-radius:12px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+}
+.v0-icon{
+  width:26px;height:26px;border-radius:8px;
+  background:#fff;color:#111827;
+  display:grid;place-items:center;
+  font-size:13px;font-weight:900;flex:none;
+}
+.v0-text{font-size:13px;color:#fff;font-weight:500;overflow:hidden}
+.v0-text::after{content:'|';color:#22C55E;font-weight:400;animation:blink 1s infinite}
+@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+.v0-code{
+  background:#0B0F19;border-radius:12px;
+  border:1px solid rgba(255,255,255,.1);
+  padding:16px 18px;
+  font-family:'SF Mono',Menlo,Consolas,monospace;
+  font-size:12px;line-height:1.8;
+  color:#E5E7EB;overflow:hidden;
+}
+.v0-code-line{display:flex;gap:12px;opacity:0;animation:codeLine 9s infinite}
+.v0-code-line:nth-child(1){animation-delay:0s}
+.v0-code-line:nth-child(2){animation-delay:1s}
+.v0-code-line:nth-child(3){animation-delay:2s}
+.v0-code-line:nth-child(4){animation-delay:3s}
+.v0-code-line:nth-child(5){animation-delay:4s}
+.v0-code-line:nth-child(6){animation-delay:5s}
+@keyframes codeLine{
+  0%,8%{opacity:0;transform:translateX(-6px)}
+  9%,100%{opacity:1;transform:translateX(0)}
+}
+.v0-num{color:#6B7280;user-select:none;flex:none;min-width:14px}
+.v0-tag{color:#F472B6}
+.v0-attr{color:#FBBF24}
+.v0-val{color:#60A5FA}
+.v0-text-code{color:#34D399}
+
+.pix-scene{width:100%;display:grid;gap:16px}
+.pix-photo{
+  position:relative;aspect-ratio:16/10;border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#F59E0B,#DC2626);
+  display:grid;place-items:center;
+}
+.pix-photo::before{
+  content:'📸';font-size:80px;
+  filter:drop-shadow(0 8px 20px rgba(0,0,0,.3));
+}
+.pix-photo.play::before{content:'🎬';animation:scalePulse 3s ease-in-out infinite}
+@keyframes scalePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.pix-progress{
+  position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:rgba(255,255,255,.15);overflow:hidden;
+}
+.pix-progress-fill{height:100%;background:#fff;animation:progress 6s infinite linear}
+@keyframes progress{0%{width:0}100%{width:100%}}
+.pix-label{
+  text-align:center;font-size:12px;font-weight:700;
+  color:rgba(255,255,255,.7);letter-spacing:.06em;text-transform:uppercase;
+}
+
+.gpt-scene{width:100%;display:grid;gap:20px}
+.gpt-models{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.gpt-model{
+  aspect-ratio:1;border-radius:12px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  display:grid;place-items:center;
+  font-size:24px;
+  animation:modelGlow 8s infinite;
+}
+.gpt-model:nth-child(1){animation-delay:0s}
+.gpt-model:nth-child(2){animation-delay:2s}
+.gpt-model:nth-child(3){animation-delay:4s}
+.gpt-model:nth-child(4){animation-delay:6s}
+@keyframes modelGlow{
+  0%,20%{background:#fff;transform:scale(1.05);box-shadow:0 0 24px rgba(255,255,255,.3)}
+  21%,100%{background:rgba(255,255,255,.06);transform:scale(1);box-shadow:none}
+}
+.gpt-chat{
+  background:#0B0F19;border-radius:12px;
+  border:1px solid rgba(255,255,255,.1);
+  padding:14px 16px;display:grid;gap:10px;
+}
+.gpt-msg{
+  display:flex;gap:10px;align-items:flex-start;
+  opacity:0;animation:msgFade 6s infinite;
+}
+.gpt-msg:nth-child(1){animation-delay:0s}
+.gpt-msg:nth-child(2){animation-delay:1.5s}
+.gpt-msg:nth-child(3){animation-delay:3s}
+@keyframes msgFade{
+  0%,20%{opacity:1;transform:translateY(0)}
+  21%,100%{opacity:0;transform:translateY(-6px)}
+}
+.gpt-avatar{
+  width:22px;height:22px;border-radius:6px;flex:none;
+  display:grid;place-items:center;font-size:11px;
+}
+.gpt-avatar.user{background:#F472B6}
+.gpt-avatar.bot{background:#6366F1}
+.gpt-text{font-size:12.5px;color:#E5E7EB;line-height:1.5}
+
+/* ===== Trust strip ===== */
+.trust-strip{background:#111827;color:#fff;padding:22px 0}
+.trust-strip-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:28px;flex-wrap:wrap;max-width:1120px;margin:0 auto;padding:0 24px;
+}
+.trust-strip-item{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:rgba(255,255,255,.82)}
+.trust-strip-item strong{color:#fff}
+.trust-strip-icon{
+  width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.1);
+  display:grid;place-items:center;flex:none;color:#FCD34D;
+}
+.trust-strip-icon svg{width:16px;height:16px}
+
+/* ===== Section ===== */
+.section{padding:80px 0}
+.section--soft{background:var(--surface-soft)}
+.section-head{max-width:680px;margin:0 auto 48px;text-align:center}
+.section-head h2{margin-bottom:12px}
+.section-head p{font-size:16px;line-height:1.7;color:var(--ink)}
+
+/* ============================================================
+   痛点 / 难点 / 解决方案 三段式
+   ============================================================ */
+.tri-section{
+  max-width:1000px;margin:0 auto;
+  display:grid;gap:20px;
+}
+.tri-card{
+  border-radius:var(--radius-xl);
+  padding:32px 32px 34px;
+  border:1px solid var(--line);
+  background:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.tri-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:4px;
+}
+.tri-card.pain::before{background:linear-gradient(180deg,#DC2626,#F87171)}
+.tri-card.difficulty::before{background:linear-gradient(180deg,#D97706,#FBBF24)}
+.tri-card.solution::before{background:linear-gradient(180deg,var(--brand),var(--brand-dark))}
+
+.tri-header{
+  display:flex;align-items:flex-start;gap:16px;
+  margin-bottom:20px;
+}
+.tri-icon{
+  width:52px;height:52px;border-radius:14px;flex:none;
+  display:grid;place-items:center;font-size:24px;
+}
+.tri-card.pain .tri-icon{background:var(--danger-soft);color:var(--danger)}
+.tri-card.difficulty .tri-icon{background:var(--warning-soft);color:var(--warning)}
+.tri-card.solution .tri-icon{background:var(--brand-soft);color:var(--brand)}
+
+.tri-title-block{flex:1;min-width:0}
+.tri-label{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:11px;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:4px 10px;border-radius:100px;
+  margin-bottom:8px;
+}
+.tri-card.pain .tri-label{background:var(--danger-soft);color:var(--danger)}
+.tri-card.difficulty .tri-label{background:var(--warning-soft);color:var(--warning)}
+.tri-card.solution .tri-label{background:var(--brand-soft);color:var(--brand)}
+
+.tri-card h3{
+  font-size:1.25rem;font-weight:800;letter-spacing:-.02em;
+  color:var(--ink-strong);line-height:1.3;
+}
+.tri-card p.tri-intro{
+  font-size:14.5px;color:var(--ink);line-height:1.65;
+  margin-bottom:22px;
+}
+
+.tri-list{display:grid;gap:14px}
+.tri-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:14px 16px;
+  border-radius:12px;
+  background:var(--surface-soft);
+  border:1px solid var(--line-soft);
+  transition:transform .2s var(--ease),border-color .2s;
+}
+.tri-item:hover{transform:translateX(3px)}
+.tri-card.pain .tri-item:hover{border-color:#FECACA}
+.tri-card.difficulty .tri-item:hover{border-color:#FDE68A}
+.tri-card.solution .tri-item:hover{border-color:var(--brand)}
+.tri-item-icon{
+  width:28px;height:28px;border-radius:8px;flex:none;
+  display:grid;place-items:center;font-size:13px;
+  margin-top:1px;
+}
+.tri-card.pain .tri-item-icon{background:var(--danger-soft);color:var(--danger)}
+.tri-card.difficulty .tri-item-icon{background:var(--warning-soft);color:var(--warning)}
+.tri-card.solution .tri-item-icon{background:var(--brand-soft);color:var(--brand)}
+.tri-item-body{flex:1;min-width:0}
+.tri-item-title{
+  font-size:14.5px;font-weight:700;color:var(--ink-strong);
+  margin-bottom:4px;line-height:1.35;
+}
+.tri-item-desc{
+  font-size:13.5px;color:var(--ink);line-height:1.6;
+}
+
+/* 对比箭头 */
+.tri-divider{
+  display:grid;place-items:center;
+  color:var(--ink-light);
+  margin:-4px 0;
+}
+.tri-divider svg{width:24px;height:24px}
+.tri-divider-arrow{
+  display:grid;place-items:center;
+  width:44px;height:44px;border-radius:50%;
+  background:#fff;border:1px solid var(--line);
+  box-shadow:var(--shadow-card);
+}
+
+/* ===== Demo section ===== */
+.demo-block{max-width:920px;margin:0 auto}
+.demo-visual{
+  border-radius:var(--radius-2xl);
+  overflow:hidden;
+  background:linear-gradient(160deg,#111827 0%,#1F2937 100%);
+  position:relative;
+  padding:40px 32px;
+  box-shadow:0 24px 60px rgba(15,17,21,.2);
+}
+.demo-visual::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 20%,var(--brand-glow),transparent 55%);
+  pointer-events:none;
+}
+.demo-visual-inner{position:relative;z-index:1}
+
+.feature-3up{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;margin-top:32px;
+}
+.feat-card{
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-lg);padding:22px 20px;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+}
+.feat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:var(--brand)}
+.feat-icon{
+  width:42px;height:42px;border-radius:12px;
+  display:grid;place-items:center;margin-bottom:14px;font-size:19px;
+}
+.feat-icon.blue{background:var(--brand-soft);color:var(--brand)}
+.feat-icon.green{background:var(--success-soft);color:var(--success)}
+.feat-icon.orange{background:var(--accent-soft);color:var(--accent)}
+.feat-card h3{font-size:15px;font-weight:700;margin-bottom:6px}
+.feat-card p{font-size:13.5px;color:var(--ink);line-height:1.65}
+
+/* ===== Pricing ===== */
+.pricing{
+  max-width:920px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.plan{
+  background:#fff;border:2px solid var(--line);border-radius:var(--radius-xl);
+  padding:28px 24px;display:flex;flex-direction:column;position:relative;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+}
+.plan:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.plan.popular{border-color:var(--brand);box-shadow:0 12px 32px var(--brand-shadow)}
+.plan-badge{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:var(--brand);color:#fff;
+  font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  padding:5px 14px;border-radius:100px;white-space:nowrap;
+}
+.plan-name{font-size:15px;font-weight:800;color:var(--ink-strong);margin-bottom:6px}
+.plan-desc{font-size:13px;color:var(--ink-soft);margin-bottom:18px;min-height:20px}
+.plan-price{display:flex;align-items:baseline;gap:6px;margin-bottom:22px}
+.plan-price strong{font-size:36px;font-weight:900;letter-spacing:-.03em;color:var(--ink-strong);line-height:1}
+.plan-price span{font-size:14px;color:var(--ink-light);font-weight:600}
+.plan-features{display:flex;flex-direction:column;gap:11px;margin-bottom:26px;flex:1}
+.plan-feature{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ink);line-height:1.5}
+.plan-feature svg{width:16px;height:16px;color:var(--success);flex:none;margin-top:3px}
+.plan .cta{min-height:50px;padding:14px 24px;font-size:15px;box-shadow:none}
+.plan.popular .cta{box-shadow:0 10px 28px var(--brand-shadow)}
+.plan:not(.popular) .cta{
+  background:#fff;color:var(--ink-strong);
+  border:2px solid var(--line);
+}
+.plan:not(.popular) .cta:hover{background:var(--ink-strong);color:#fff;border-color:var(--ink-strong)}
+
+/* ===== FAQ ===== */
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+  margin-bottom:10px;overflow:hidden;transition:border-color .2s;
+}
+.faq-item.open{border-color:var(--brand)}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px 24px;cursor:pointer;font-size:15px;font-weight:700;color:var(--ink-strong);
+  transition:background .15s;
+}
+.faq-q:hover{background:var(--surface-soft)}
+.faq-toggle{
+  width:26px;height:26px;border-radius:50%;flex:none;
+  background:var(--surface-soft);color:var(--ink);
+  display:grid;place-items:center;transition:all .3s var(--ease);
+}
+.faq-item.open .faq-toggle{background:var(--brand);color:#fff;transform:rotate(45deg)}
+.faq-toggle svg{width:13px;height:13px}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 24px 22px;font-size:14.5px;color:var(--ink);line-height:1.75}
+
+/* ===== Final CTA ===== */
+.final-cta{
+  text-align:center;padding:80px 24px;
+  background:radial-gradient(ellipse 70% 60% at 50% 50%,var(--brand-soft) 0%,transparent 70%),#fff;
+}
+.final-cta h2{margin-bottom:16px;max-width:640px;margin-left:auto;margin-right:auto}
+.final-cta p{font-size:17px;color:var(--ink);max-width:520px;margin:0 auto 32px;line-height:1.65}
+
+/* ===== Footer ===== */
+.footer{
+  background:#111827;color:rgba(255,255,255,.6);
+  padding:48px 0 32px;font-size:13px;
+}
+.footer-inner{
+  max-width:1120px;margin:0 auto;padding:0 24px;
+  display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;
+  align-items:center;
+}
+.footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700}
+.footer-brand-mark{
+  width:28px;height:28px;border-radius:8px;
+  background:var(--brand);display:grid;place-items:center;
+  font-size:13px;font-weight:900;
+}
+.footer-disclosure{
+  max-width:520px;line-height:1.7;
+  font-size:12px;color:rgba(255,255,255,.4);
+}
+
+/* ===== Responsive ===== */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-badge{margin-left:auto;margin-right:auto}
+  .demo-frame{max-width:440px;margin:0 auto}
+  .feature-3up{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .pricing{grid-template-columns:1fr;max-width:420px}
+  .plan.popular{order:-1}
+  .tri-card{padding:26px 22px 28px}
+  .tri-card h3{font-size:1.15rem}
+}
+@media(max-width:560px){
+  .hero{padding:36px 0 52px}
+  .section{padding:56px 0}
+  .gpt-models{grid-template-columns:repeat(4,1fr)}
+  .avatar-circle{width:120px;height:120px;font-size:56px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+<meta name="description" content="Explore five AI tool guide previews and visit the official providers: HeyGen, Speechify, v0, PixVerse and GlobalGPT."><meta name="robots" content="noindex,follow"><link rel="canonical" href="https://haowordtool.com/ai-tools.html"><link rel="stylesheet" href="/assets/site-theme.css"><script src="/assets/site-nav.js" defer=""></script></head>
+<body class="hwt-site"><header class="hwt-header"><div class="hwt-nav"><a href="/" class="hwt-logo"><span class="hwt-mark">H</span>HaoWordTool</a><nav class="hwt-links" aria-label="Main navigation"><a href="/en/affiliate-products.html#shopify-store">Products</a><a href="/ai-tools.html">AI Tools</a><a href="/#reviews">Reviews</a><a href="/checkout.html">Checkout</a></nav><div class="hwt-actions"><a href="/?search=1" data-open-search="" aria-label="Search">Search</a><a href="https://haowordtool.myshopify.com/account">Account</a></div><button id="menuToggle" class="hwt-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button></div><nav id="mobileMenu" class="hwt-mobile" aria-label="Mobile navigation"><a href="/en/affiliate-products.html#shopify-store">Products</a><a href="/ai-tools.html">AI Tools</a><a href="/#reviews">Reviews</a><a href="/checkout.html">Checkout</a><a href="/?search=1" data-open-search="">Search</a><a href="https://haowordtool.myshopify.com/account">Account</a></nav></header><div class="preview-banner">Guide preview · Demonstrations, prices, features and performance claims below are illustrative and have not been independently verified. Check the provider’s website for current terms.</div>
+
+<!-- ==================== SWITCHER ==================== -->
+<div class="switcher">
+  <div class="switcher-inner">
+    <button data-target="t1" class="active"><span class="switcher-emoji">🎬</span>HeyGen</button>
+    <button data-target="t2"><span class="switcher-emoji">🎧</span>Speechify</button>
+    <button data-target="t3"><span class="switcher-emoji">⌨️</span>v0</button>
+    <button data-target="t4"><span class="switcher-emoji">✨</span>PixVerse</button>
+    <button data-target="t5"><span class="switcher-emoji">🧠</span>GlobalGPT</button>
+  </div>
+</div>
+
+<!-- =========================================================
+     TOOL 1 — HEYGEN
+     ========================================================= -->
+<div class="landing active" id="t1" style="--brand:#7C3AED;--brand-dark:#6D28D9;--brand-soft:#F5F3FF;--brand-glow:rgba(124,58,237,.32);--brand-shadow:rgba(124,58,237,.28);--accent:#0B5FFF;--accent-soft:#EBF1FF" data-slug="heygen">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="live-dot"></span>120+ AI avatars · 40+ languages</div>
+        <h1>Create studio-quality videos<br><em>without a camera.</em></h1>
+        <p class="hero-sub">Generate AI avatars that speak 40+ languages in minutes. No filming, no editing, no appearing on camera.</p>
+        <a href="https://www.heygen.com/" class="cta" rel="noopener" target="_blank">Visit HeyGen ↗</a>
+        <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="demo-frame">
+          <span class="demo-tag">Illustrative preview</span>
+          <div class="demo-stage">
+            <div class="avatar-scene">
+              <div class="avatar-circle">🧑‍💼</div>
+              <div class="waveform">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span>
+              </div>
+              <div class="lang-pills">
+                <span class="lang-pill on">EN</span>
+                <span class="lang-pill">ES</span>
+                <span class="lang-pill">JA</span>
+                <span class="lang-pill">FR</span>
+              </div>
+            </div>
+          </div>
+          <span class="demo-live">Illustrative preview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span><div><strong>1,000,000+</strong> videos generated</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>2 min</strong> per video</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>Free</strong> forever plan</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span><div><strong>40+</strong> languages</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 痛点 / 难点 / 解决方案 ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why HeyGen</span>
+        <h2>Filming shouldn't be the hard part</h2>
+        <p>You have something to say. You just don't want to be on camera, spend hours editing, or re-record every time you slip up.</p>
+      </div>
+
+      <div class="tri-section">
+        <!-- 痛点 -->
+        <div class="tri-card pain">
+          <div class="tri-header">
+            <div class="tri-icon">😖</div>
+            <div class="tri-title-block">
+              <span class="tri-label">❌ The Pain</span>
+              <h3>Everything about filming feels exhausting</h3>
+            </div>
+          </div>
+          <p class="tri-intro">You know video converts. You just can't bring yourself to sit in front of a camera and do it.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">📷</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You don't want to be on camera</div>
+                <div class="tri-item-desc">Camera anxiety is real. Every take feels awkward, every playback makes you cringe.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">📝</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You keep forgetting your lines</div>
+                <div class="tri-item-desc">Script in hand looks unprofessional. Teleprompter is obvious. You end up re-recording 20 times.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🌐</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Translating to other markets means starting over</div>
+                <div class="tri-item-desc">You want to reach Spanish, Japanese, or French customers. But re-filming in each language? Impossible.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">⏰</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Your old videos go stale fast</div>
+                <div class="tri-item-desc">Prices change. Features update. But re-filming everything from scratch is too much work.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 难点 -->
+        <div class="tri-card difficulty">
+          <div class="tri-header">
+            <div class="tri-icon">⚠️</div>
+            <div class="tri-title-block">
+              <span class="tri-label">⚠️ The Difficulty</span>
+              <h3>Why the old solutions don't actually work</h3>
+            </div>
+          </div>
+          <p class="tri-intro">You've probably tried one or more of these. They all have the same problem — they solve one thing, but create another.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">💸</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Hiring a videographer is expensive</div>
+                <div class="tri-item-desc">$2,000-$10,000 per shoot day. Plus scripts, locations, actors, editing — easily $5k per video.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🎬</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Editing software has a brutal learning curve</div>
+                <div class="tri-item-desc">Premiere, Final Cut, DaVinci — weeks of tutorials before you can do anything useful.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🤖</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Old AI avatar tools look fake</div>
+                <div class="tri-item-desc">Uncanny valley. Robotic voices. Obvious lip-sync issues. Audiences can tell instantly — and they skip.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🔊</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Dubbing services cost a fortune</div>
+                <div class="tri-item-desc">Professional voice actors in 40 languages would run you $500-$2,000 per video. Every single time.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 解决方案 -->
+        <div class="tri-card solution">
+          <div class="tri-header">
+            <div class="tri-icon">✅</div>
+            <div class="tri-title-block">
+              <span class="tri-label">✓ The Solution</span>
+              <h3>HeyGen removes every one of those blockers</h3>
+            </div>
+          </div>
+          <p class="tri-intro">Type your script. Pick an avatar. Choose a language. Click generate. In 2 minutes, you have a polished video — no camera, no editing, no studio.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">🎭</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">120+ hyper-realistic AI avatars</div>
+                <div class="tri-item-desc">Diverse, professional-looking, and natural on camera. Or clone yourself from a 2-minute video.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🌍</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">One script → 40+ languages</div>
+                <div class="tri-item-desc">Natural voices with native-level accents. Reach global markets without re-filming anything.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">⚡</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Zero editing required</div>
+                <div class="tri-item-desc">Captions, B-roll, music, transitions — all handled. Export in 1080p or 4K, ready to publish.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🔄</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Update any video in seconds</div>
+                <div class="tri-item-desc">Change the price, update the offer, add a new feature — re-render instantly. No re-filming ever.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">See it in action</span>
+        <h2>From script to finished video</h2>
+        <p>Type your script. Pick an avatar. Click generate. That's the whole workflow.</p>
+      </div>
+      <div class="demo-block">
+        <div class="demo-visual">
+          <div class="demo-visual-inner">
+            <div class="avatar-scene" style="grid-template-columns:auto 1fr;display:grid;gap:32px;align-items:center">
+              <div class="avatar-circle" style="margin:0">🧑‍💼</div>
+              <div style="display:grid;gap:16px">
+                <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 18px">
+                  <div style="font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px">Your script</div>
+                  <div style="font-size:13.5px;color:#fff;line-height:1.6">"Hi, I'm Sarah from Acme. Today I want to show you why 10,000 customers switched to our new product..."</div>
+                </div>
+                <div class="waveform" style="height:44px">
+                  <span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span>
+                </div>
+                <div class="lang-pills" style="justify-content:flex-start">
+                  <span class="lang-pill on">EN</span>
+                  <span class="lang-pill">ES</span>
+                  <span class="lang-pill">JA</span>
+                  <span class="lang-pill">FR</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="t1-final">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Pricing</span>
+        <h2>Start free. Upgrade when you're ready.</h2>
+      </div>
+      <p class="preview-banner">Example plan layout — not a current quote. Check pricing and limits on the official website.</p><div class="pricing">
+        <div class="plan">
+          <div class="plan-name">Free</div>
+          <div class="plan-desc">Try it — no card required</div>
+          <div class="plan-price"><strong>$0</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>3 videos per month</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>720p export</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>10 AI avatars</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Watermark included</li>
+          </ul>
+          <a href="https://www.heygen.com/" class="cta cta-block" rel="noopener" target="_blank">Visit HeyGen ↗</a>
+        </div>
+
+        <div class="plan popular">
+          <span class="plan-badge">Most Popular</span>
+          <div class="plan-name">Pro</div>
+          <div class="plan-desc">For creators and marketers</div>
+          <div class="plan-price"><strong>$29</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Unlimited videos</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>1080p export · no watermark</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>All 120+ avatars</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>40+ languages</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Avatar cloning</li>
+          </ul>
+          <a href="https://www.heygen.com/" class="cta cta-block" rel="noopener" target="_blank">Visit HeyGen ↗</a>
+        </div>
+
+        <div class="plan">
+          <div class="plan-name">Team</div>
+          <div class="plan-desc">For agencies and companies</div>
+          <div class="plan-price"><strong>$89</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Everything in Pro</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>5 team seats</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>4K export</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority render queue</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>API access</li>
+          </ul>
+          <a href="https://www.heygen.com/" class="cta cta-block" rel="noopener" target="_blank">Visit HeyGen ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+      <div class="faq-wrap">
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false" aria-controls="t1-answer-0"><span>Do the avatars look real?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></div><div class="faq-a" id="t1-answer-0"><div class="faq-a-inner">Yes. HeyGen avatars are trained on real footage with natural facial expressions and micro-movements. Most viewers can't tell they're AI in a normal feed.</div></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false" aria-controls="t1-answer-1"><span>Can I clone myself?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></div><div class="faq-a" id="t1-answer-1"><div class="faq-a-inner">Yes — upload a 2-minute video of yourself and HeyGen creates a digital twin. You can then generate unlimited videos without ever filming again.</div></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false" aria-controls="t1-answer-2"><span>Are the videos commercially licensed?</span><span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></div><div class="faq-a" id="t1-answer-2"><div class="faq-a-inner">Yes — all videos generated on paid plans come with a full commercial license. Use them in ads, on social media, on your website — anywhere.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Your first video is 2 minutes away.</h2>
+      <p>Type a script. Pick an avatar. That's it.</p>
+      <a href="https://www.heygen.com/" class="cta" style="padding:20px 44px;font-size:17px" rel="noopener" target="_blank">Visit HeyGen ↗</a>
+      <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+    </div>
+  </section>
+
+  
+
+</div>
+
+<!-- =========================================================
+     TOOL 2 — SPEECHIFY
+     ========================================================= -->
+<div class="landing" id="t2" style="--brand:#EA580C;--brand-dark:#C2410C;--brand-soft:#FFF7ED;--brand-glow:rgba(234,88,12,.32);--brand-shadow:rgba(234,88,12,.28);--accent:#0B5FFF;--accent-soft:#EBF1FF" data-slug="speechify">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="live-dot"></span>4x speed · 30+ natural voices</div>
+        <h1>Turn any document<br><em>into an audiobook.</em></h1>
+        <p class="hero-sub">Listen to PDFs, articles, and emails at 4x speed. Read with your ears — during your commute, workout, or chores.</p>
+        <a href="https://speechify.com/" class="cta" rel="noopener" target="_blank">Visit Speechify ↗</a>
+        <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="demo-frame">
+          <span class="demo-tag">Illustrative preview</span>
+          <div class="demo-stage">
+            <div class="speech-scene">
+              <div class="speech-line">
+                <span class="speech-play">▶</span>
+                <span>In the beginning, the printing press changed how we share ideas...</span>
+              </div>
+              <div class="speech-line">
+                <span class="speech-play">▶</span>
+                <span>Fast forward 500 years, and reading is still trapped on paper...</span>
+              </div>
+              <div class="speech-line">
+                <span class="speech-play">▶</span>
+                <span>Until now. Imagine listening to any document at 4x speed...</span>
+              </div>
+              <div class="speech-line">
+                <span class="speech-play">▶</span>
+                <span>Your commute becomes your library. Your walk becomes a lecture hall.</span>
+              </div>
+              <div class="speech-speed">
+                <span class="speed-pill">1x</span>
+                <span class="speed-pill">2x</span>
+                <span class="speed-pill on">4x</span>
+              </div>
+            </div>
+          </div>
+          <span class="demo-live">Illustrative preview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span><div><strong>50,000,000+</strong> users</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>4x</strong> faster reading</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>Free</strong> plan available</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span><div><strong>30+</strong> languages</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 痛点 / 难点 / 解决方案 ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why Speechify</span>
+        <h2>You have more to read than time to read it</h2>
+        <p>Every day, 100+ emails, 20 articles, 3 PDFs, and a book you keep meaning to start. Reading can't keep up with your life.</p>
+      </div>
+
+      <div class="tri-section">
+        <!-- 痛点 -->
+        <div class="tri-card pain">
+          <div class="tri-header">
+            <div class="tri-icon">😩</div>
+            <div class="tri-title-title tri-title-block">
+              <span class="tri-label">❌ The Pain</span>
+              <h3>You're drowning in text with no time to read</h3>
+            </div>
+          </div>
+          <p class="tri-intro">You know you should read more. But between work, commute, gym, family, there's literally no time left.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">📚</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Your reading list keeps growing</div>
+                <div class="tri-item-desc">20+ bookmarks, 5 unread books, 12 PDFs waiting. You know you'll never catch up.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">👀</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Eye strain kills your focus</div>
+                <div class="tri-item-desc">After 8 hours of screens at work, the last thing you want is another screen at home.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🚗</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Your commute is dead time</div>
+                <div class="tri-item-desc">1 hour in the car or train, every day, doing nothing. That's 260 hours per year — wasted.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">😴</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You fall asleep trying to read</div>
+                <div class="tri-item-desc">By the time you get to bed, your brain is done. Two pages in and you're out cold.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 难点 -->
+        <div class="tri-card difficulty">
+          <div class="tri-header">
+            <div class="tri-icon">⚠️</div>
+            <div class="tri-title-block">
+              <span class="tri-label">⚠️ The Difficulty</span>
+              <h3>Existing audio solutions all fall short</h3>
+            </div>
+          </div>
+          <p class="tri-intro">You've probably tried audiobooks or text-to-speech before. Each has a wall that stops you.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">📖</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Audiobooks only cover bestsellers</div>
+                <div class="tri-item-desc">That PDF your boss sent? That industry report? That blog post? None of it has an audiobook version.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🤖</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">System TTS sounds like a robot</div>
+                <div class="tri-item-desc">Siri, Alexa, macOS "read aloud" — the voices are flat and monotone. You tune out after 2 minutes.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🐢</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Reading speed is capped by your brain</div>
+                <div class="tri-item-desc">You read at 200-250 words per minute. Audiobooks at 1x are even slower. There's no way to go faster.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">📱</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">No single app reads everything</div>
+                <div class="tri-item-desc">One app for PDFs. Another for articles. A third for ebooks. You spend more time switching than reading.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 解决方案 -->
+        <div class="tri-card solution">
+          <div class="tri-header">
+            <div class="tri-icon">✅</div>
+            <div class="tri-title-block">
+              <span class="tri-label">✓ The Solution</span>
+              <h3>Speechify reads anything — at 4x speed</h3>
+            </div>
+          </div>
+          <p class="tri-intro">Paste a link, upload a PDF, or open any app. Speechify reads it aloud with human-quality voices. Speed up to 4x. Turn every dead moment into reading time.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">📄</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Reads anything with text</div>
+                <div class="tri-item-desc">PDFs, emails, articles, ebooks, Google Docs, screenshots — if you can see it, Speechify can read it.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🎙️</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Natural voices, not robotic</div>
+                <div class="tri-item-desc">30+ voices with real emotion and intonation. Some narrated by celebrities like Snoop Dogg and Gwyneth Paltrow.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">⚡</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Listen at 4x speed</div>
+                <div class="tri-item-desc">Finish a 300-page book in 3 hours. Get through a week of newsletters in one commute.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🔄</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Sync across every device</div>
+                <div class="tri-item-desc">Start on your phone during the commute. Continue on your laptop at work. Speechify keeps your place.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">See it in action</span>
+        <h2>Text in. Audio out.</h2>
+        <p>Drop any document, article, or PDF. Speechify reads it aloud at the speed you choose.</p>
+      </div>
+      <div class="demo-block">
+        <div class="demo-visual">
+          <div class="demo-visual-inner">
+            <div class="speech-scene">
+              <div class="speech-line">
+                <span class="speech-play">▶</span>
+                <span>Chapter 1 — The future of reading is listening.</span>
+              </div>
+              <div class="speech-line">
+                <span class="speech-play">▶</span>
+                <span>Every minute spent in traffic can become a chapter read aloud.</span>
+              </div>
+              <div class="speech-line">
+                <span class="speech-play">▶</span>
+                <span>The average commuter saves 40 books per year with 4x speed.</span>
+              </div>
+              <div class="speech-line">
+                <span class="speech-play">▶</span>
+                <span>Your reading list just became your listening list.</span>
+              </div>
+              <div class="speech-speed">
+                <span class="speed-pill">1x</span>
+                <span class="speed-pill">2x</span>
+                <span class="speed-pill">3x</span>
+                <span class="speed-pill on">4x</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="t2-final">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Pricing</span><h2>Start free. Upgrade when you're ready.</h2></div>
+      <p class="preview-banner">Example plan layout — not a current quote. Check pricing and limits on the official website.</p><div class="pricing">
+        <div class="plan">
+          <div class="plan-name">Free</div>
+          <div class="plan-desc">Try it — no card required</div>
+          <div class="plan-price"><strong>$0</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Basic voices</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>1x speed</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Limited documents</li>
+          </ul>
+          <a href="https://speechify.com/" class="cta cta-block" rel="noopener" target="_blank">Visit Speechify ↗</a>
+        </div>
+
+        <div class="plan popular">
+          <span class="plan-badge">Most Popular</span>
+          <div class="plan-name">Premium</div>
+          <div class="plan-desc">For readers and students</div>
+          <div class="plan-price"><strong>$11</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30+ premium voices</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>4x speed</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Unlimited documents</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Offline listening</li>
+          </ul>
+          <a href="https://speechify.com/" class="cta cta-block" rel="noopener" target="_blank">Visit Speechify ↗</a>
+        </div>
+
+        <div class="plan">
+          <div class="plan-name">Family</div>
+          <div class="plan-desc">Up to 6 accounts</div>
+          <div class="plan-price"><strong>$25</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Everything in Premium</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>6 accounts</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Kids-safe voices</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Shared library</li>
+          </ul>
+          <a href="https://speechify.com/" class="cta cta-block" rel="noopener" target="_blank">Visit Speechify ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Read with your ears.</h2>
+      <p>Turn your commute into your library. Starting today.</p>
+      <a href="https://speechify.com/" class="cta" style="padding:20px 44px;font-size:17px" rel="noopener" target="_blank">Visit Speechify ↗</a>
+      <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+    </div>
+  </section>
+
+  
+
+</div>
+
+<!-- =========================================================
+     TOOL 3 — V0
+     ========================================================= -->
+<div class="landing" id="t3" style="--brand:#0EA5E9;--brand-dark:#0284C7;--brand-soft:#F0F9FF;--brand-glow:rgba(14,165,233,.32);--brand-shadow:rgba(14,165,233,.28);--accent:#7C3AED;--accent-soft:#F5F3FF" data-slug="v0">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="live-dot"></span>Text prompt → React code</div>
+        <h1>Build UI<br><em>with text prompts.</em></h1>
+        <p class="hero-sub">Describe your idea. Get production-ready React code in seconds. No coding, no setup, no deploy headaches.</p>
+        <a href="https://v0.app/" class="cta" rel="noopener" target="_blank">Visit v0 ↗</a>
+        <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="demo-frame">
+          <span class="demo-tag">Illustrative preview</span>
+          <div class="demo-stage">
+            <div class="v0-scene">
+              <div class="v0-prompt">
+                <div class="v0-icon">v0</div>
+                <div class="v0-text">Build a pricing card with 3 tiers and a highlighted middle plan</div>
+              </div>
+              <div class="v0-code">
+                <div class="v0-code-line"><span class="v0-num">1</span><span class="v0-tag">&lt;div</span> <span class="v0-attr">className</span>=<span class="v0-val">"grid grid-cols-3 gap-6"</span><span class="v0-tag">&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">2</span><span class="v0-tag">&nbsp;&nbsp;&lt;Plan</span> <span class="v0-attr">name</span>=<span class="v0-val">"Starter"</span> <span class="v0-attr">price</span>=<span class="v0-val">{0}</span><span class="v0-tag">/&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">3</span><span class="v0-tag">&nbsp;&nbsp;&lt;Plan</span> <span class="v0-attr">name</span>=<span class="v0-val">"Pro"</span> <span class="v0-attr">price</span>=<span class="v0-val">{29}</span> <span class="v0-attr">popular</span> <span class="v0-tag">/&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">4</span><span class="v0-tag">&nbsp;&nbsp;&lt;Plan</span> <span class="v0-attr">name</span>=<span class="v0-val">"Team"</span> <span class="v0-attr">price</span>=<span class="v0-val">{89}</span><span class="v0-tag">/&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">5</span><span class="v0-tag">&lt;/div&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">6</span><span class="v0-text-code">// ✓ Ready to deploy</span></div>
+              </div>
+            </div>
+          </div>
+          <span class="demo-live">Illustrative preview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span><div><strong>500,000+</strong> developers using</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>10 sec</strong> per component</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>Free</strong> tier available</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span><div><strong>React + Tailwind</strong></div></div>
+    </div>
+  </div>
+
+  <!-- ===== 痛点 / 难点 / 解决方案 ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why v0</span>
+        <h2>You have an idea. You just can't code it.</h2>
+        <p>Designers, founders, PMs — you see the product in your head, but a developer or a no-code tool always gets in the way.</p>
+      </div>
+
+      <div class="tri-section">
+        <!-- 痛点 -->
+        <div class="tri-card pain">
+          <div class="tri-header">
+            <div class="tri-icon">😤</div>
+            <div class="tri-title-block">
+              <span class="tri-label">❌ The Pain</span>
+              <h3>Your ideas keep dying at the "development" stage</h3>
+            </div>
+          </div>
+          <p class="tri-intro">Every product you've ever wanted to build ran into the same wall: you can't code it yourself.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">🎨</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You design in Figma but can't ship it</div>
+                <div class="tri-item-desc">The mockup looks great. But translating it to real, working code requires a developer.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">📝</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You describe a small change and it takes 3 days</div>
+                <div class="tri-item-desc">"Can you move the button 20 pixels?" Suddenly you're waiting on a sprint cycle.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">💸</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Hiring a freelancer costs $2,000+</div>
+                <div class="tri-item-desc">For a simple landing page or prototype, you're looking at $2k-$10k. Before revisions.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🐌</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Learning to code takes months</div>
+                <div class="tri-item-desc">You tried Codecademy. You watched the tutorials. Two weeks in and you still can't build anything real.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 难点 -->
+        <div class="tri-card difficulty">
+          <div class="tri-header">
+            <div class="tri-icon">⚠️</div>
+            <div class="tri-title-block">
+              <span class="tri-label">⚠️ The Difficulty</span>
+              <h3>Every "no-code" solution has limits</h3>
+            </div>
+          </div>
+          <p class="tri-intro">You've tried the alternatives. They either lock you in, look template-y, or hit a ceiling fast.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">🔒</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Webflow and Bubble lock you in</div>
+                <div class="tri-item-desc">You can't export the code. You're stuck paying $30-$100/month forever, and you can't customize beyond the platform.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🎭</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Templates look like templates</div>
+                <div class="tri-item-desc">Every Wix site looks like a Wix site. Users can spot a template from a mile away — trust drops instantly.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">📉</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Generic AI code doesn't actually run</div>
+                <div class="tri-item-desc">ChatGPT writes something that looks like code, but has broken imports, missing styles, and no preview.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🛠️</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You still need to deploy it</div>
+                <div class="tri-item-desc">Even when you get code working, you need hosting, DNS, SSL, and CI/CD. It's another whole project.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 解决方案 -->
+        <div class="tri-card solution">
+          <div class="tri-header">
+            <div class="tri-icon">✅</div>
+            <div class="tri-title-block">
+              <span class="tri-label">✓ The Solution</span>
+              <h3>v0 turns text into shippable code</h3>
+            </div>
+          </div>
+          <p class="tri-intro">Describe what you want in plain English. Get a live preview, real React code, and a one-click deploy link — in under a minute.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">💬</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Natural language to code</div>
+                <div class="tri-item-desc">"Build a pricing page with a highlighted middle plan." That's it. v0 handles the rest.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">👁️</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Live preview as you type</div>
+                <div class="tri-item-desc">See your changes render in real-time. Iterate by describing what you want different — no waiting.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">📦</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Production-ready React code</div>
+                <div class="tri-item-desc">Real React + Tailwind. Copy the code into your project, or export it as a full repository.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🚀</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">One-click deploy</div>
+                <div class="tri-item-desc">Ship to a live URL in seconds. Custom domain, SSL, and CI/CD handled by Vercel.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">See it in action</span><h2>Prompt in. Code out.</h2><p>Watch a landing page get built in real-time.</p></div>
+      <div class="demo-block">
+        <div class="demo-visual">
+          <div class="demo-visual-inner">
+            <div class="v0-scene">
+              <div class="v0-prompt">
+                <div class="v0-icon">v0</div>
+                <div class="v0-text">Build a hero section with a gradient headline, subtitle, and two CTA buttons</div>
+              </div>
+              <div class="v0-code">
+                <div class="v0-code-line"><span class="v0-num">1</span><span class="v0-tag">&lt;section</span> <span class="v0-attr">className</span>=<span class="v0-val">"pt-24 pb-32 text-center"</span><span class="v0-tag">&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">2</span><span class="v0-tag">&nbsp;&nbsp;&lt;h1</span> <span class="v0-attr">className</span>=<span class="v0-val">"text-6xl font-black"</span><span class="v0-tag">&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">3</span><span class="v0-text-code">&nbsp;&nbsp;&nbsp;&nbsp;Better Products, Smarter AI Tools</span></div>
+                <div class="v0-code-line"><span class="v0-num">4</span><span class="v0-tag">&nbsp;&nbsp;&lt;/h1&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">5</span><span class="v0-tag">&nbsp;&nbsp;&lt;Button</span> <span class="v0-attr">size</span>=<span class="v0-val">"lg"</span><span class="v0-tag">&gt;Shop Products&lt;/Button&gt;</span></div>
+                <div class="v0-code-line"><span class="v0-num">6</span><span class="v0-text-code">// ✓ Preview ready · 1.2s</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="t3-final">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Pricing</span><h2>Start free. Upgrade when you're ready.</h2></div>
+      <p class="preview-banner">Example plan layout — not a current quote. Check pricing and limits on the official website.</p><div class="pricing">
+        <div class="plan">
+          <div class="plan-name">Free</div>
+          <div class="plan-desc">Try it — no card required</div>
+          <div class="plan-price"><strong>$0</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>200 messages / month</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Public projects only</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Community support</li>
+          </ul>
+          <a href="https://v0.app/" class="cta cta-block" rel="noopener" target="_blank">Visit v0 ↗</a>
+        </div>
+
+        <div class="plan popular">
+          <span class="plan-badge">Most Popular</span>
+          <div class="plan-name">Premium</div>
+          <div class="plan-desc">For founders and PMs</div>
+          <div class="plan-price"><strong>$20</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Unlimited messages</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Private projects</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom domains</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Figma import</li>
+          </ul>
+          <a href="https://v0.app/" class="cta cta-block" rel="noopener" target="_blank">Visit v0 ↗</a>
+        </div>
+
+        <div class="plan">
+          <div class="plan-name">Team</div>
+          <div class="plan-desc">For teams and agencies</div>
+          <div class="plan-price"><strong>$100</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Everything in Premium</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>5 team seats</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Shared component library</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority support</li>
+          </ul>
+          <a href="https://v0.app/" class="cta cta-block" rel="noopener" target="_blank">Visit v0 ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Ship your idea. Today.</h2>
+      <p>Describe it. v0 builds it. Deploy in one click.</p>
+      <a href="https://v0.app/" class="cta" style="padding:20px 44px;font-size:17px" rel="noopener" target="_blank">Visit v0 ↗</a>
+      <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+    </div>
+  </section>
+
+  
+
+</div>
+
+<!-- =========================================================
+     TOOL 4 — PIXVERSE
+     ========================================================= -->
+<div class="landing" id="t4" style="--brand:#D97706;--brand-dark:#B45309;--brand-soft:#FFFBEB;--brand-glow:rgba(217,119,6,.32);--brand-shadow:rgba(217,119,6,.28);--accent:#DC2626;--accent-soft:#FEF2F2" data-slug="pixverse">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="live-dot"></span>Photo → video in seconds</div>
+        <h1>Bring your photos<br><em>to life.</em></h1>
+        <p class="hero-sub">Generate cinematic AI videos from a single image. Perfect for TikTok, Reels, and Shorts — no filming, no editing.</p>
+        <a href="https://pixverse.ai/en" class="cta" rel="noopener" target="_blank">Visit PixVerse ↗</a>
+        <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="demo-frame">
+          <span class="demo-tag">Illustrative preview</span>
+          <div class="demo-stage">
+            <div class="pix-scene">
+              <div class="pix-photo">
+                <div class="pix-progress"><div class="pix-progress-fill"></div></div>
+              </div>
+              <div class="pix-label">Image → Video</div>
+            </div>
+          </div>
+          <span class="demo-live">Illustrative preview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span><div><strong>5,000,000+</strong> creators using</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>10 sec</strong> per video</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>Free</strong> daily credits</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg></span><div><strong>4K</strong> export</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 痛点 / 难点 / 解决方案 ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why PixVerse</span>
+        <h2>Short video is the highest-ROI channel. But you can't shoot it.</h2>
+        <p>Every creator knows short video converts. Yet nobody has time to film, edit, and ship 30 videos a week.</p>
+      </div>
+
+      <div class="tri-section">
+        <!-- 痛点 -->
+        <div class="tri-card pain">
+          <div class="tri-header">
+            <div class="tri-icon">😵</div>
+            <div class="tri-title-block">
+              <span class="tri-label">❌ The Pain</span>
+              <h3>Video content demands break you in a week</h3>
+            </div>
+          </div>
+          <p class="tri-intro">You know you need 3 posts a day. You also know it's impossible to produce that much.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">📱</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You need 30+ videos per week</div>
+                <div class="tri-item-desc">TikTok and Reels reward volume. But how? You can't film and edit that fast.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">💰</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Hiring creators costs a fortune</div>
+                <div class="tri-item-desc">$100-$500 per video. Even one per day, that's $3,000-$15,000 per month.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🎬</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Filming yourself is awkward</div>
+                <div class="tri-item-desc">Lighting, angles, backgrounds. Half your day is spent just getting "ready to shoot."</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">😰</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You run out of creative ideas</div>
+                <div class="tri-item-desc">After 20 videos, you're repeating yourself. It shows in the numbers.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 难点 -->
+        <div class="tri-card difficulty">
+          <div class="tri-header">
+            <div class="tri-icon">⚠️</div>
+            <div class="tri-title-block">
+              <span class="tri-label">⚠️ The Difficulty</span>
+              <h3>Existing video tools can't keep up</h3>
+            </div>
+          </div>
+          <p class="tri-intro">Stock footage, editing apps, other AI video tools — each has a wall that stops you from scaling.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">📼</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Stock footage looks generic</div>
+                <div class="tri-item-desc">Users spot stock video instantly. It kills authenticity and trust — and the algorithm punishes it.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🎞️</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Editing in CapCut takes 45 minutes per video</div>
+                <div class="tri-item-desc">Cut, caption, transition, music, export. Multiply by 30 videos per week and you've got a full-time job.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🤖</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Other AI video tools are too complex</div>
+                <div class="tri-item-desc">Runway, Sora, Kling — powerful, but steep learning curve, no consistency, and they break often.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🖼️</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You have photos but can't animate them</div>
+                <div class="tri-item-desc">Product shots, lifestyle photos, portraits — they sit in your camera roll doing nothing.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 解决方案 -->
+        <div class="tri-card solution">
+          <div class="tri-header">
+            <div class="tri-icon">✅</div>
+            <div class="tri-title-block">
+              <span class="tri-label">✓ The Solution</span>
+              <h3>PixVerse turns any photo into a viral video</h3>
+            </div>
+          </div>
+          <p class="tri-intro">Upload a photo. Pick a motion preset. Generate. In 10 seconds, you have a cinematic short video ready for TikTok, Reels, or Shorts.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">📸</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Photo → video in one click</div>
+                <div class="tri-item-desc">Any image — product shot, selfie, landscape, artwork — becomes a moving video in seconds.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🎥</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Realistic motion, not slideshows</div>
+                <div class="tri-item-desc">Cinematic camera moves, natural motion, ambient effects. Not a cheap Ken Burns effect.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">⚡</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">10 seconds per video</div>
+                <div class="tri-item-desc">Produce 30 videos in an hour. Test 10 hooks per day. Scale content like never before.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">📱</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Export ready for every platform</div>
+                <div class="tri-item-desc">9:16 for TikTok, Reels, Shorts. 1:1 for feed. 16:9 for YouTube. One click, all ratios.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">See it in action</span><h2>One photo. One video. Ten seconds.</h2><p>Watch a static image become a cinematic shot.</p></div>
+      <div class="demo-block">
+        <div class="demo-visual">
+          <div class="demo-visual-inner">
+            <div class="pix-scene">
+              <div class="pix-photo play">
+                <div class="pix-progress"><div class="pix-progress-fill"></div></div>
+              </div>
+              <div class="pix-label">Image → Cinematic Video</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="t4-final">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Pricing</span><h2>Start free. Upgrade when you're ready.</h2></div>
+      <p class="preview-banner">Example plan layout — not a current quote. Check pricing and limits on the official website.</p><div class="pricing">
+        <div class="plan">
+          <div class="plan-name">Free</div>
+          <div class="plan-desc">Try it — no card required</div>
+          <div class="plan-price"><strong>$0</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Daily free credits</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>720p export</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Watermark included</li>
+          </ul>
+          <a href="https://pixverse.ai/en" class="cta cta-block" rel="noopener" target="_blank">Visit PixVerse ↗</a>
+        </div>
+
+        <div class="plan popular">
+          <span class="plan-badge">Most Popular</span>
+          <div class="plan-name">Pro</div>
+          <div class="plan-desc">For creators</div>
+          <div class="plan-price"><strong>$15</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>1,000 credits / month</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>1080p · no watermark</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Commercial license</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority render</li>
+          </ul>
+          <a href="https://pixverse.ai/en" class="cta cta-block" rel="noopener" target="_blank">Visit PixVerse ↗</a>
+        </div>
+
+        <div class="plan">
+          <div class="plan-name">Studio</div>
+          <div class="plan-desc">For agencies</div>
+          <div class="plan-price"><strong>$59</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>5,000 credits / month</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>4K export</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>API access</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Bulk generation</li>
+          </ul>
+          <a href="https://pixverse.ai/en" class="cta cta-block" rel="noopener" target="_blank">Visit PixVerse ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Your camera roll is a goldmine.</h2>
+      <p>Turn every photo into a short video. Starting today.</p>
+      <a href="https://pixverse.ai/en" class="cta" style="padding:20px 44px;font-size:17px" rel="noopener" target="_blank">Visit PixVerse ↗</a>
+      <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+    </div>
+  </section>
+
+  
+
+</div>
+
+<!-- =========================================================
+     TOOL 5 — GLOBALGPT
+     ========================================================= -->
+<div class="landing" id="t5" style="--brand:#4F46E5;--brand-dark:#4338CA;--brand-soft:#EEF2FF;--brand-glow:rgba(79,70,229,.32);--brand-shadow:rgba(79,70,229,.28);--accent:#DB2777;--accent-soft:#FDF2F8" data-slug="globalgpt">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="live-dot"></span>GPT-4 · Claude · Gemini · Midjourney</div>
+        <h1>All the best AI models<br><em>in one place.</em></h1>
+        <p class="hero-sub">Access GPT-4, Claude, Gemini, and more for one low monthly price. Stop juggling five subscriptions.</p>
+        <a href="https://www.glbgpt.com/" class="cta" rel="noopener" target="_blank">Visit GlobalGPT ↗</a>
+        <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="demo-frame">
+          <span class="demo-tag">Illustrative preview</span>
+          <div class="demo-stage">
+            <div class="gpt-scene">
+              <div class="gpt-models">
+                <div class="gpt-model">🧠</div>
+                <div class="gpt-model">💬</div>
+                <div class="gpt-model">✨</div>
+                <div class="gpt-model">🎨</div>
+              </div>
+              <div class="gpt-chat">
+                <div class="gpt-msg">
+                  <div class="gpt-avatar user">👤</div>
+                  <div class="gpt-text">Help me write a landing page for my SaaS.</div>
+                </div>
+                <div class="gpt-msg">
+                  <div class="gpt-avatar bot">GPT</div>
+                  <div class="gpt-text">Here's a headline that converts...</div>
+                </div>
+                <div class="gpt-msg">
+                  <div class="gpt-avatar bot">CL</div>
+                  <div class="gpt-text">Actually, let me reframe it as a benefit...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="demo-live">Illustrative preview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></span><div><strong>100,000+</strong> users</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div><strong>7</strong> premium models</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><div><strong>Save $80+</strong> per month</div></div>
+      <div class="trust-strip-item"><span class="trust-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 7 12 12 15 15"></polyline></svg></span><div><strong>No</strong> separate accounts</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 痛点 / 难点 / 解决方案 ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why GlobalGPT</span>
+        <h2>You're paying $200/month for AI. You use $40 of it.</h2>
+        <p>ChatGPT Plus, Claude Pro, Gemini Advanced, Midjourney, Perplexity — you signed up for all of them. You use each one a few times a week.</p>
+      </div>
+
+      <div class="tri-section">
+        <!-- 痛点 -->
+        <div class="tri-card pain">
+          <div class="tri-header">
+            <div class="tri-icon">💸</div>
+            <div class="tri-title-block">
+              <span class="tri-label">❌ The Pain</span>
+              <h3>You're paying too much for too many AI tools</h3>
+            </div>
+          </div>
+          <p class="tri-intro">Every AI tool wants $20/month. Sign up for 5 and you're at $100+. But you only use each one a couple of times a week.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">💳</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Your AI subscription bill keeps growing</div>
+                <div class="tri-item-desc">ChatGPT $20 + Claude $20 + Gemini $20 + Midjourney $30 + Perplexity $20 = $110/month and counting.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🔄</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Constantly switching between tabs</div>
+                <div class="tri-item-desc">ChatGPT for writing. Claude for analysis. Gemini for research. Your browser has 12 tabs open at all times.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🎲</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You never know which model is best</div>
+                <div class="tri-item-desc">Each model has strengths and weaknesses. You end up using whichever tab is open, not the best tool for the job.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">📉</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">You're paying for capacity you don't use</div>
+                <div class="tri-item-desc">$20/month per tool is designed for heavy daily use. If you're a casual user, you're overpaying 5x.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 难点 -->
+        <div class="tri-card difficulty">
+          <div class="tri-header">
+            <div class="tri-icon">⚠️</div>
+            <div class="tri-title-block">
+              <span class="tri-label">⚠️ The Difficulty</span>
+              <h3>There's no clean way to consolidate</h3>
+            </div>
+          </div>
+          <p class="tri-intro">You've tried to simplify. But every alternative has a catch.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">🎯</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Picking one means losing the others</div>
+                <div class="tri-item-desc">You can't drop Claude — it's better at long-form analysis. You can't drop ChatGPT — it's better for coding. You need both.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">📱</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Managing 5 separate accounts is chaos</div>
+                <div class="tri-item-desc">5 passwords, 5 billing pages, 5 apps on your phone. One canceled card breaks everything.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">💰</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Annual plans save money but lock you in</div>
+                <div class="tri-item-desc">You can't predict which tools you'll want next year. Committing to annual plans is risky.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🔒</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Free-tier alternatives are too limited</div>
+                <div class="tri-item-desc">ChatGPT free, Claude free — they cap your usage, limit context, and disable the best features.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tri-divider"><div class="tri-divider-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"></path></svg></div></div>
+
+        <!-- 解决方案 -->
+        <div class="tri-card solution">
+          <div class="tri-header">
+            <div class="tri-icon">✅</div>
+            <div class="tri-title-block">
+              <span class="tri-label">✓ The Solution</span>
+              <h3>One subscription. All premium models.</h3>
+            </div>
+          </div>
+          <p class="tri-intro">GlobalGPT gives you access to GPT-4, Claude, Gemini, Midjourney, and more — for one low monthly price. One login, one bill, one interface.</p>
+          <ul class="tri-list">
+            <li class="tri-item">
+              <span class="tri-item-icon">🧠</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">7+ premium models in one place</div>
+                <div class="tri-item-desc">GPT-4, Claude Opus, Gemini Ultra, Midjourney, Perplexity, and more. Switch between them instantly.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">💵</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">Save $80+ per month</div>
+                <div class="tri-item-desc">Instead of paying $110/month for 5 tools, pay $29/month for all of them. Cancel any individual subscription you want.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🖥️</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">One interface for everything</div>
+                <div class="tri-item-desc">No more switching tabs. Ask a question, compare answers from multiple models side-by-side, pick the best one.</div>
+              </div>
+            </li>
+            <li class="tri-item">
+              <span class="tri-item-icon">🔐</span>
+              <div class="tri-item-body">
+                <div class="tri-item-title">One login, one bill, one support</div>
+                <div class="tri-item-desc">No 5-account chaos. Manage everything from one dashboard. Cancel or upgrade anytime.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">See it in action</span><h2>Compare models side-by-side</h2><p>Ask once. See how GPT-4, Claude, and Gemini each answer. Pick the best.</p></div>
+      <div class="demo-block">
+        <div class="demo-visual">
+          <div class="demo-visual-inner">
+            <div class="gpt-scene">
+              <div class="gpt-models">
+                <div class="gpt-model">🧠</div>
+                <div class="gpt-model">💬</div>
+                <div class="gpt-model">✨</div>
+                <div class="gpt-model">🎨</div>
+              </div>
+              <div class="gpt-chat">
+                <div class="gpt-msg">
+                  <div class="gpt-avatar user">👤</div>
+                  <div class="gpt-text">Write a headline for a landing page selling eco-friendly water bottles.</div>
+                </div>
+                <div class="gpt-msg">
+                  <div class="gpt-avatar bot">GPT</div>
+                  <div class="gpt-text">"The last water bottle you'll ever need."</div>
+                </div>
+                <div class="gpt-msg">
+                  <div class="gpt-avatar bot">CL</div>
+                  <div class="gpt-text">"Hydrate without the guilt. Bottled water, reinvented."</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="t5-final">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Pricing</span><h2>Start free. Upgrade when you're ready.</h2></div>
+      <p class="preview-banner">Example plan layout — not a current quote. Check pricing and limits on the official website.</p><div class="pricing">
+        <div class="plan">
+          <div class="plan-name">Free</div>
+          <div class="plan-desc">Try it — no card required</div>
+          <div class="plan-price"><strong>$0</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>100 messages / month</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>GPT-3.5 only</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Standard support</li>
+          </ul>
+          <a href="https://www.glbgpt.com/" class="cta cta-block" rel="noopener" target="_blank">Visit GlobalGPT ↗</a>
+        </div>
+
+        <div class="plan popular">
+          <span class="plan-badge">Most Popular</span>
+          <div class="plan-name">Pro</div>
+          <div class="plan-desc">For individuals</div>
+          <div class="plan-price"><strong>$29</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>All 7 premium models</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Unlimited messages</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Side-by-side compare</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Image generation included</li>
+          </ul>
+          <a href="https://www.glbgpt.com/" class="cta cta-block" rel="noopener" target="_blank">Visit GlobalGPT ↗</a>
+        </div>
+
+        <div class="plan">
+          <div class="plan-name">Team</div>
+          <div class="plan-desc">For teams</div>
+          <div class="plan-price"><strong>$99</strong><span>/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Everything in Pro</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>5 team seats</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Shared chat history</li>
+            <li class="plan-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority support</li>
+          </ul>
+          <a href="https://www.glbgpt.com/" class="cta cta-block" rel="noopener" target="_blank">Visit GlobalGPT ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Stop paying for 5 AI subscriptions.</h2>
+      <p>One login. All the best models. Starting today.</p>
+      <a href="https://www.glbgpt.com/" class="cta" style="padding:20px 44px;font-size:17px" rel="noopener" target="_blank">Visit GlobalGPT ↗</a>
+      <div class="cta-micro">Account, trial eligibility and billing terms are confirmed by the provider.</div>
+    </div>
+  </section>
+
+  
+
+</div>
+
+
+
+
+<script src="/assets/ai-tools.js"></script><footer class="hwt-footer"><div class="hwt-footer-inner"><div><a href="/" class="hwt-logo"><span class="hwt-mark">H</span>HaoWordTool</a><p>Better Products, Smarter AI Tools.</p></div><nav aria-label="Footer"><a href="/en/affiliate-products.html#shopify-store">Products</a><a href="/ai-tools.html">AI Tools</a><a href="/checkout.html">Checkout</a><a href="/en/about.html">About</a><a href="/en/contact.html">Contact</a><a href="/en/privacy.html">Privacy</a><a href="/en/terms.html">Terms</a><a href="/zh/" lang="zh-CN">中文</a></nav><p class="hwt-disclosure">Some links on this site are affiliate links. We may earn a commission at no extra cost to you. Product guide previews are labeled; final prices and terms are confirmed by each seller.</p><small>© 2026 HaoWordTool</small></div></footer></body></html>
