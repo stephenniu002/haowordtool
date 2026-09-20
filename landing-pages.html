@@ -593,7 +593,7 @@ h3{font-size:1rem;font-weight:600;letter-spacing:-.01em}
             </div>
           </div>
           <div class="offer-cta">
-            <div class="seller-match"><strong>Store checkout coming soon</strong><p>This product is not available to order from HaoWordTool yet.</p></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
+            <div class="seller-match"><strong>Store checkout coming soon</strong></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
           </div>
           <div class="offer-trust">
             <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
@@ -769,7 +769,7 @@ h3{font-size:1rem;font-weight:600;letter-spacing:-.01em}
             </div>
           </div>
           <div class="offer-cta">
-            <div class="seller-match"><strong>Store checkout coming soon</strong><p>This product is not available to order from HaoWordTool yet.</p></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
+            <div class="seller-match"><strong>Store checkout coming soon</strong></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
           </div>
           <div class="offer-trust">
             <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
@@ -945,7 +945,7 @@ h3{font-size:1rem;font-weight:600;letter-spacing:-.01em}
             </div>
           </div>
           <div class="offer-cta">
-            <div class="seller-match"><strong>Store checkout coming soon</strong><p>This product is not available to order from HaoWordTool yet.</p></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
+            <div class="seller-match"><strong>Store checkout coming soon</strong></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
           </div>
           <div class="offer-trust">
             <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
@@ -1121,7 +1121,7 @@ h3{font-size:1rem;font-weight:600;letter-spacing:-.01em}
             </div>
           </div>
           <div class="offer-cta">
-            <div class="seller-match"><strong>Store checkout coming soon</strong><p>This product is not available to order from HaoWordTool yet.</p></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
+            <div class="seller-match"><strong>Store checkout coming soon</strong></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
           </div>
           <div class="offer-trust">
             <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
@@ -1298,7 +1298,7 @@ h3{font-size:1rem;font-weight:600;letter-spacing:-.01em}
             </div>
           </div>
           <div class="offer-cta">
-            <div class="seller-match"><strong>Store checkout coming soon</strong><p>This product is not available to order from HaoWordTool yet.</p></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
+            <div class="seller-match"><strong>Store checkout coming soon</strong></div><button type="button" class="btn btn-block add-to-cart-btn" disabled="" title="Store checkout is not available for this product yet">Coming soon</button>
           </div>
           <div class="offer-trust">
             <span class="offer-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30-night trial</span>
@@ -1393,7 +1393,7 @@ const tabs=Array.from(document.querySelectorAll('.switcher [data-target]'));
 const landings=Array.from(document.querySelectorAll('.landing'));
 const sticky=document.getElementById('stickyBar');let current='p1',toastTimer;
 function money(value){return '$'+Number(value).toFixed(2)}
-function updatePrice(){const item=sellers[current];document.getElementById('stickyTitle').textContent=item.name;document.getElementById('stickyPrice').textContent='Not available to order';document.getElementById('stickyWas').textContent='';document.getElementById('stickySave').textContent='';}
+function updatePrice(){const item=sellers[current];document.getElementById('stickyTitle').textContent=item.name;document.getElementById('stickyPrice').textContent='';document.getElementById('stickyPrice').hidden=true;document.getElementById('stickyWas').textContent='';document.getElementById('stickySave').textContent='';}
 function scrollState(){const visible=window.scrollY>500;sticky.style.display=visible?'block':'none';sticky.classList.toggle('show',visible)}
 function activate(id,push,scroll){if(!slugs[id])id='p1';current=id;landings.forEach(el=>{const active=el.id===id;el.classList.toggle('active',active);el.hidden=!active});tabs.forEach(tab=>{const active=tab.dataset.target===id;tab.classList.toggle('active',active);tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1});document.title=titles[id]+' — Design Preview | Haowordtool';updatePrice();if(push)history.pushState(null,'','#'+slugs[id]);if(scroll)window.scrollTo({top:0,behavior:'instant'});scrollState()}
 function route(){const hash=location.hash.slice(1);const id=Object.keys(slugs).find(id=>slugs[id]===hash||id===hash||hash.startsWith(id+'-'))||'p1';activate(id,false,false);if(hash.endsWith('-offer'))document.getElementById(id+'-offer').scrollIntoView({block:'start'})}
