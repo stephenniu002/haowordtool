@@ -3,53 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment received — HaoWordTool</title>
+<title>Submit delivery email — HaoWordTool</title>
 <meta name="robots" content="noindex,follow">
-<meta name="description" content="HaoWordTool payment confirmation and digital delivery instructions.">
+<meta name="description" content="Submit your email address and PayPal order details so HaoWordTool can deliver your purchased digital files or service results.">
 <link rel="canonical" href="https://haowordtool.com/delivery.html">
 <style>
-:root{--ink:#151515;--muted:#666;--line:#e5e5e5;--bg:#fff;--soft:#f7f7f5;--ok:#1f7a4d;--ok-bg:#eaf6ef}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}.wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:18px;margin-bottom:40px}.brand img{width:36px;height:36px;border-radius:9px;object-fit:cover}.badge{display:inline-flex;align-items:center;gap:8px;background:var(--ok-bg);color:var(--ok);font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:20px}h1{font-size:clamp(28px,5vw,42px);line-height:1.12;margin:0 0 12px;letter-spacing:-.04em}.lead{font-size:16px;color:var(--muted);margin:0 0 32px}.order-card{border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:28px;background:var(--soft)}.order-row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}.order-row:last-child{border-bottom:none}.label{color:var(--muted)}.value{font-weight:700;text-align:right;word-break:break-word}.download-box{border:2px solid var(--ink);border-radius:12px;padding:28px;text-align:center;margin-bottom:32px}.download-box h2{font-size:20px;margin:0 0 8px}.download-box p{font-size:14px;color:var(--muted);margin:0 0 22px}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--ink);color:#fff;text-decoration:none;font-size:15px;font-weight:800;padding:13px 24px;border-radius:8px}.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--ink)}.steps{margin:40px 0}.steps h3{font-size:16px;margin:0 0 16px}.steps ol{padding-left:20px;margin:0;color:var(--muted);font-size:14px}.steps li{margin-bottom:10px}.help{border-top:1px solid var(--line);padding-top:32px;margin-top:40px;font-size:14px;color:var(--muted)}.help a{color:var(--ink);font-weight:700}.footer{margin-top:48px;font-size:12px;color:#999;text-align:center}@media(max-width:520px){.wrap{padding:32px 20px 60px}.order-row{display:block}.value{display:block;text-align:left;margin-top:4px}.actions{display:grid}.btn{width:100%}}
+:root{--ink:#151515;--muted:#626b7a;--line:#e5e7eb;--bg:#fff;--soft:#f8fafc;--brand:#0b5fff;--ok:#059669;--ok-bg:#ecfdf5}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);color:var(--ink);line-height:1.6}.wrap{max-width:920px;margin:0 auto;padding:48px 24px 80px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:18px;margin-bottom:36px}.brand img{width:38px;height:38px;border-radius:9px;object-fit:cover}.badge{display:inline-flex;align-items:center;gap:8px;background:var(--ok-bg);color:var(--ok);font-size:13px;font-weight:800;padding:7px 14px;border-radius:999px;margin-bottom:18px}h1{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:0 0 14px;letter-spacing:-.045em}.lead{font-size:17px;color:var(--muted);margin:0 0 32px;max-width:720px}.layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:22px;align-items:start}.card{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 18px 60px rgba(15,23,42,.06);padding:26px}.order-card{background:var(--soft);box-shadow:none}.order-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14px}.order-row:last-child{border-bottom:none}.label{color:var(--muted)}.value{font-weight:800;text-align:right;word-break:break-word}.form-grid{display:grid;gap:14px}label{display:block;font-size:13px;font-weight:800;color:#273142;margin-bottom:6px}input,textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px 14px;font:inherit;color:var(--ink);background:#fff}textarea{min-height:96px;resize:vertical}.hint{font-size:12px;color:var(--muted);margin-top:6px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;background:var(--brand);color:#fff;text-decoration:none;font-size:15px;font-weight:900;padding:14px 22px;border-radius:12px;border:0;cursor:pointer;width:100%;box-shadow:0 12px 30px rgba(11,95,255,.24)}.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}.steps{margin-top:20px}.steps h2,.card h2{font-size:19px;margin:0 0 12px;letter-spacing:-.02em}.steps ol{padding-left:20px;margin:0;color:var(--muted);font-size:14px}.steps li{margin-bottom:10px}.notice{border:1px solid #b9d0ff;background:#ebf1ff;color:#233047;border-radius:14px;padding:16px;font-size:14px;margin-top:18px}.help{border-top:1px solid var(--line);padding-top:26px;margin-top:34px;font-size:14px;color:var(--muted)}.help a{color:var(--ink);font-weight:800}.footer{margin-top:42px;font-size:12px;color:#999;text-align:center}@media(max-width:760px){.layout{grid-template-columns:1fr}.wrap{padding:32px 18px 60px}.order-row{display:block}.value{display:block;text-align:left;margin-top:4px}.card{padding:20px}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <a href="/" class="brand"><img src="/assets/haowordtool-brand.png" alt=""> HaoWordTool</a>
 <div class="badge">✓ Payment return received</div>
-<h1>Thank you. Your order is being prepared.</h1>
-<p class="lead">We received your PayPal return details. Digital files are delivered after payment confirmation. No physical item is shipped.</p>
-<div class="order-card">
+<h1>Submit your delivery email.</h1>
+<p class="lead">After PayPal payment, send us your delivery email and order details. We will match the payment and send the correct digital files or service delivery link. No physical item is shipped.</p>
+<div class="layout">
+<section class="card">
+<h2>Delivery request</h2>
+<div class="form-grid">
+<div><label for="deliveryEmail">Delivery email address</label><input id="deliveryEmail" type="email" autocomplete="email" placeholder="customer@example.com"><p class="hint">Use the email where you want to receive the digital file or delivery link.</p></div>
+<div><label for="paypalEmail">PayPal account email</label><input id="paypalEmail" type="email" placeholder="PayPal payment email"></div>
+<div><label for="transactionId">PayPal transaction ID</label><input id="transactionId" type="text" placeholder="Transaction ID, if shown by PayPal"></div>
+<div><label for="productInput">Product / service purchased</label><input id="productInput" type="text" placeholder="Product name"></div>
+<div><label for="notes">Notes or order requirements</label><textarea id="notes" placeholder="Tell us which file, template or service result you need delivered."></textarea></div>
+<button class="btn" id="sendRequest" type="button">Email my delivery request</button>
+<a class="btn secondary" href="/account.html">Open customer center</a>
+</div>
+<div class="notice">Delivery files are stored securely in HaoWordTool's Google Drive delivery folder. Access is sent after the order is matched with a paid PayPal transaction.</div>
+</section>
+<aside class="card order-card">
+<h2>Order details</h2>
 <div class="order-row"><span class="label">PayPal transaction</span><span class="value" id="orderId">—</span></div>
 <div class="order-row"><span class="label">Product</span><span class="value" id="productName">—</span></div>
 <div class="order-row"><span class="label">Amount</span><span class="value" id="amountPaid">—</span></div>
-<div class="order-row"><span class="label">Delivery</span><span class="value">Digital delivery after confirmation</span></div>
+<div class="order-row"><span class="label">Delivery type</span><span class="value">Digital delivery</span></div>
+<div class="steps"><h2>What happens next</h2><ol><li>Submit your delivery email and PayPal details.</li><li>We confirm the payment status, product and amount.</li><li>We send the matching Google Drive file link or service delivery instructions.</li><li>If anything is missing, support will reply by email.</li></ol></div>
+</aside>
 </div>
-<div class="download-box">
-<h2>Next step</h2>
-<p id="fileInfo">Open your workspace or contact support with this order information. We will match the payment and deliver the digital file or service result.</p>
-<div class="actions"><a class="btn" href="/account.html">Open customer center</a><a class="btn secondary" id="supportLink" href="mailto:love6598878593@gmail.com?subject=HaoWordTool%20delivery%20request">Email support</a></div>
-</div>
-<div class="steps"><h3>What happens next</h3><ol><li>PayPal confirms the payment status and amount.</li><li>We match the product ID and prepare the digital file or service delivery.</li><li>If your purchase is a service package, submit the required brief or materials in the workspace.</li><li>If anything is missing, email support with the transaction ID shown above.</li></ol></div>
-<div class="help"><p>No physical item will be shipped. For help, email <a href="mailto:love6598878593@gmail.com">love6598878593@gmail.com</a> with your PayPal transaction ID.</p></div>
+<div class="help"><p>Need help? Email <a href="mailto:love6598878593@gmail.com">love6598878593@gmail.com</a> with your PayPal transaction ID and delivery email.</p></div>
 <div class="footer">© <span id="year"></span> HaoWordTool. All rights reserved.</div>
 </div>
 <script>
 (function(){
+const supportEmail='love6598878593@gmail.com';
 const params=new URLSearchParams(location.search);
-const productMap={
-'dimple-dumpling':'Dimple the Dumpling','momo-shelf-ghost':'MOMO Shelf Ghost','ghost-granny-square':'Ghost Granny Square','willow-market-bag':'Willow Mesh Market Bag','annual-budget':'Ultimate Annual Budget','finance-dashboard':'Personal Finance Dashboard','wedding-planner':'Wedding Planner','product-photos':'AI Product Photos','product-video':'AI Product Video','voiceover':'AI Voiceover'};
-const order=params.get('tx')||params.get('txn_id')||params.get('order')||params.get('transaction_id')||'—';
+const productMap={'dimple-dumpling':'Dimple the Dumpling','momo-shelf-ghost':'MOMO Shelf Ghost','ghost-granny-square':'Ghost Granny Square','willow-market-bag':'Willow Mesh Market Bag','annual-budget':'Ultimate Annual Budget','finance-dashboard':'Personal Finance Dashboard','wedding-planner':'Wedding Planner','product-photos':'AI Product Photos','product-video':'AI Product Video','voiceover':'AI Voiceover'};
+const order=params.get('tx')||params.get('txn_id')||params.get('order')||params.get('transaction_id')||'';
 const product=params.get('product')||'';
-const item=params.get('item')||productMap[product]||'—';
+const item=params.get('item')||productMap[product]||'';
 const amount=params.get('amount')||'';
-document.getElementById('orderId').textContent=order;
-document.getElementById('productName').textContent=item;
+document.getElementById('orderId').textContent=order||'—';
+document.getElementById('productName').textContent=item||'—';
 document.getElementById('amountPaid').textContent=amount?('$'+amount+' USD'):'—';
-const subject=encodeURIComponent('HaoWordTool delivery request '+(order==='—'?'':order));
-const body=encodeURIComponent('Product: '+item+'
-Amount: '+(amount?('$'+amount+' USD'):'')+'
-Transaction: '+order+'
-');
-document.getElementById('supportLink').href='mailto:love6598878593@gmail.com?subject='+subject+'&body='+body;
+document.getElementById('transactionId').value=order;
+document.getElementById('productInput').value=item;
+document.getElementById('sendRequest').addEventListener('click',()=>{
+  const deliveryEmail=document.getElementById('deliveryEmail').value.trim();
+  const paypalEmail=document.getElementById('paypalEmail').value.trim();
+  const transaction=document.getElementById('transactionId').value.trim();
+  const productName=document.getElementById('productInput').value.trim();
+  const notes=document.getElementById('notes').value.trim();
+  const subject=encodeURIComponent('HaoWordTool delivery request'+(transaction?' '+transaction:''));
+  const body=encodeURIComponent(['Delivery email: '+deliveryEmail,'PayPal email: '+paypalEmail,'Transaction ID: '+transaction,'Product: '+productName,'Amount: '+(amount?('$'+amount+' USD'):''),'Notes: '+notes,'','Please send the matching digital delivery file or Google Drive link.'].join('\n'));
+  location.href='mailto:'+supportEmail+'?subject='+subject+'&body='+body;
+});
 document.getElementById('year').textContent=new Date().getFullYear();
 })();
 </script>

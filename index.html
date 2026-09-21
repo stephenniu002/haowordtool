@@ -618,13 +618,19 @@ h3 { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  align-items: stretch;
 }
 .support-card {
+  min-height: 342px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r-xl);
-  padding: 18px;
+  padding: 20px 18px 18px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   transition: transform .3s var(--ease), box-shadow .3s var(--ease);
 }
 .support-card:hover {
@@ -632,16 +638,16 @@ h3 { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
   box-shadow: var(--shadow-card-hover);
 }
 .support-card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: min(220px, 100%);
+  height: 220px;
   object-fit: contain;
   border-radius: 14px;
   background: #fff;
-  margin-bottom: 14px;
+  margin: 0 auto 18px;
 }
 .support-card h3 {
   font-size: 15px;
-  margin-bottom: 5px;
+  margin: auto 0 5px;
 }
 .support-card p {
   color: var(--ink-soft);
@@ -655,7 +661,8 @@ h3 { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
   .customer-support { padding: 64px 0; }
   .support-panel { padding: 22px; }
   .support-grid { grid-template-columns: 1fr; }
-  .support-card img { max-width: 260px; margin-left: auto; margin-right: auto; }
+  .support-card { min-height: auto; }
+  .support-card img { width: min(240px, 100%); height: 240px; margin-left: auto; margin-right: auto; }
 }
 
 /* ============================================================
@@ -982,3 +989,5 @@ section[id]{scroll-margin-top:88px}:focus-visible{outline:3px solid var(--brand)
 
 
 <footer class="hwt-footer"><div class="hwt-footer-inner"><div><a href="/" class="hwt-logo hwt-full-brand" aria-label="HaoWordTool home" data-i18n-aria-label="homepageLive.t111"><img src="/assets/haowordtool-brand.png" alt="HaoWordTool — Words unlock more possibilities" width="1254" height="1254"></a><p> <span data-i18n="homepageLive.t89">Better Products, Smarter AI Tools.</span> </p></div><nav aria-label="Footer" data-i18n-aria-label="homepageLive.t112"><a href="/account.html"> <span data-i18n="homepageLive.t90">Customer center</span> </a><a href="/en/affiliate-products.html#shopify-store"> <span data-i18n="homepageLive.t91">Products</span> </a><a href="/ai-tools.html"> <span data-i18n="homepageLive.t92">AI Tools</span> </a><a href="/checkout.html"> <span data-i18n="homepageLive.t93">Checkout</span> </a><a href="/en/about.html"> <span data-i18n="homepageLive.t94">About</span> </a><a href="/en/contact.html"> <span data-i18n="homepageLive.t95">Contact</span> </a><a href="/en/privacy.html"> <span data-i18n="homepageLive.t96">Privacy</span> </a><a href="/en/terms.html"> <span data-i18n="homepageLive.t97">Terms</span> </a><a href="/?lang=zh-CN" lang="zh-CN" data-home-language="zh-CN">中文</a></nav><p class="hwt-disclosure"> <span data-i18n="homepageLive.t98">Some links on this site are affiliate links. We may earn a commission at no extra cost to you. Product guide previews are labeled; final prices and terms are confirmed by each seller.</span> </p><small>© 2026 HaoWordTool</small></div></footer><script>if(new URLSearchParams(location.search).get('search')==='1'){document.querySelector('[data-open-search]')?.click()}</script></body></html>
+
+
