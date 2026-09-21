@@ -621,5 +621,55 @@
     "url": "/ai-workspace.html",
     "description": "Prepare your project brief and access your store account.",
     "keywords": "工作台 项目 订单 素材 下载"
+  },
+  {
+    "title": "Premium Digital Product Landing Pages | HaoWordTool",
+    "titleZh": "高级数字商品落地页预览 | HaoWordTool",
+    "url": "/premium-digital-products.html",
+    "description": "Seven minimalist premium product pages for crochet patterns, finance dashboards and planning templates.",
+    "descriptionZh": "七个极简高级数字商品页面预览，适用于钩针图解、预算表和策划模板。",
+    "keywords": "digital products templates crochet budget planner landing page 数字商品 模板 落地页"
+  },
+  {
+    "title": "Dimple the Dumpling",
+    "url": "/premium-digital-products.html#dimple-dumpling",
+    "description": "No-Sew Amigurumi Crochet Pattern. $5.80.",
+    "keywords": "Crochet pattern Dimple the Dumpling digital product"
+  },
+  {
+    "title": "MOMO Shelf Ghost",
+    "url": "/premium-digital-products.html#momo-shelf-ghost",
+    "description": "Spooky-Cute Halloween Crochet Pattern. $9.24.",
+    "keywords": "Seasonal crochet MOMO Shelf Ghost digital product"
+  },
+  {
+    "title": "Ghost Granny Square",
+    "url": "/premium-digital-products.html#ghost-granny-square",
+    "description": "Crochet Pattern + Video Tutorial. $16.00.",
+    "keywords": "Video tutorial Ghost Granny Square digital product"
+  },
+  {
+    "title": "Willow Mesh Market Bag",
+    "url": "/premium-digital-products.html#willow-market-bag",
+    "description": "Beginner-Friendly Crochet Pattern. $13.00.",
+    "keywords": "Everyday crochet Willow Mesh Market Bag digital product"
+  },
+  {
+    "title": "Ultimate Annual Budget",
+    "url": "/premium-digital-products.html#annual-budget",
+    "description": "Google Sheets & Excel Template. $20.28.",
+    "keywords": "Spreadsheet template Ultimate Annual Budget digital product"
+  },
+  {
+    "title": "Personal Finance Dashboard",
+    "url": "/premium-digital-products.html#finance-dashboard",
+    "description": "Budget & Money Tracker. $24.00.",
+    "keywords": "Money dashboard Personal Finance Dashboard digital product"
+  },
+  {
+    "title": "Wedding Planner",
+    "url": "/premium-digital-products.html#wedding-planner",
+    "description": "Printable & Digital Template. $18.00.",
+    "keywords": "Planning template Wedding Planner digital product"
   }
 ]

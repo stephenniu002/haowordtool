@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Willow Mesh Market Bag premium product mockup</title>
+  <desc id="desc">Minimal product preview artwork for HaoWordTool.</desc>
+  <rect width="1200" height="900" fill="#f4f4ef"/>
+  <rect x="88" y="88" width="1024" height="724" rx="34" fill="#fff" stroke="#24231d" stroke-opacity=".08"/>
+  <rect x="148" y="150" width="904" height="538" rx="28" fill="#f4f4ef" stroke="#24231d" stroke-opacity=".1"/>
+  <rect x="204" y="198" width="356" height="442" rx="20" fill="#fff" stroke="#24231d" stroke-opacity=".11"/>
+  <rect x="644" y="198" width="308" height="442" rx="20" fill="#fff" stroke="#24231d" stroke-opacity=".11"/>
+  <text x="238" y="258" fill="#24231d" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Willow Mesh Market Bag</text>
+  <text x="238" y="292" fill="#8a7b55" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">EVERYDAY CROCHET</text>
+  
+    <rect x="118" y="300" width="290" height="11" rx="5.5" fill="#8a7b55" opacity="0.34"/>
+  
+    <rect x="118" y="338" width="264" height="11" rx="5.5" fill="#8a7b55" opacity="0.30000000000000004"/>
+  
+    <rect x="118" y="376" width="238" height="11" rx="5.5" fill="#8a7b55" opacity="0.26"/>
+  
+  <rect x="238" y="488" width="198" height="48" rx="24" fill="#24231d"/>
+  <text x="337" y="519" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">$13.00</text>
+  <circle cx="548" cy="300" r="92" fill="#8a7b55" opacity=".2"/><circle cx="548" cy="300" r="52" fill="#fff" opacity=".95"/><path d="M515 308c45-86 95-54 61 10-24 45-80 46-61-10Z" fill="#8a7b55" opacity=".75"/>
+  <text x="684" y="258" fill="#24231d" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Instant access</text>
+  <text x="684" y="296" fill="#24231d" fill-opacity=".56" font-family="Inter, Arial, sans-serif" font-size="16">Beginner-Friendly Crochet Pattern</text>
+  <rect x="684" y="344" width="212" height="12" rx="6" fill="#8a7b55" opacity=".42"/>
+  <rect x="684" y="378" width="170" height="12" rx="6" fill="#24231d" opacity=".16"/>
+  <rect x="684" y="412" width="232" height="12" rx="6" fill="#24231d" opacity=".12"/>
+  <text x="974" y="736" text-anchor="end" fill="#24231d" fill-opacity=".36" font-family="Inter, Arial, sans-serif" font-size="14">HaoWordTool digital product preview 4</text>
+</svg>

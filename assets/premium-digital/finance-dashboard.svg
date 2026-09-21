@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Personal Finance Dashboard premium product mockup</title>
+  <desc id="desc">Minimal product preview artwork for HaoWordTool.</desc>
+  <rect width="1200" height="900" fill="#edf8f4"/>
+  <rect x="88" y="88" width="1024" height="724" rx="34" fill="#fff" stroke="#11352b" stroke-opacity=".08"/>
+  <rect x="148" y="150" width="904" height="538" rx="28" fill="#edf8f4" stroke="#11352b" stroke-opacity=".1"/>
+  <rect x="204" y="198" width="356" height="442" rx="20" fill="#fff" stroke="#11352b" stroke-opacity=".11"/>
+  <rect x="644" y="198" width="308" height="442" rx="20" fill="#fff" stroke="#11352b" stroke-opacity=".11"/>
+  <text x="238" y="258" fill="#11352b" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Personal Finance Dashboard</text>
+  <text x="238" y="292" fill="#138a67" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">MONEY DASHBOARD</text>
+  
+    <rect x="118" y="300" width="290" height="11" rx="5.5" fill="#138a67" opacity="0.34"/>
+  
+    <rect x="118" y="338" width="264" height="11" rx="5.5" fill="#138a67" opacity="0.30000000000000004"/>
+  
+    <rect x="118" y="376" width="238" height="11" rx="5.5" fill="#138a67" opacity="0.26"/>
+  
+  <rect x="238" y="488" width="198" height="48" rx="24" fill="#11352b"/>
+  <text x="337" y="519" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">$24.00</text>
+  <rect x="472" y="230" width="46" height="180" rx="8" fill="#138a67" opacity=".78"/><rect x="536" y="278" width="46" height="132" rx="8" fill="#11352b" opacity=".22"/><rect x="600" y="196" width="46" height="214" rx="8" fill="#138a67" opacity=".46"/>
+  <text x="684" y="258" fill="#11352b" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Instant access</text>
+  <text x="684" y="296" fill="#11352b" fill-opacity=".56" font-family="Inter, Arial, sans-serif" font-size="16">Budget &amp; Money Tracker</text>
+  <rect x="684" y="344" width="212" height="12" rx="6" fill="#138a67" opacity=".42"/>
+  <rect x="684" y="378" width="170" height="12" rx="6" fill="#11352b" opacity=".16"/>
+  <rect x="684" y="412" width="232" height="12" rx="6" fill="#11352b" opacity=".12"/>
+  <text x="974" y="736" text-anchor="end" fill="#11352b" fill-opacity=".36" font-family="Inter, Arial, sans-serif" font-size="14">HaoWordTool digital product preview 6</text>
+</svg>
