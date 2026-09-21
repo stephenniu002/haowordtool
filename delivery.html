@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment received — HaoWordTool</title>
+<meta name="robots" content="noindex,follow">
+<meta name="description" content="HaoWordTool payment confirmation and digital delivery instructions.">
+<link rel="canonical" href="https://haowordtool.com/delivery.html">
+<style>
+:root{--ink:#151515;--muted:#666;--line:#e5e5e5;--bg:#fff;--soft:#f7f7f5;--ok:#1f7a4d;--ok-bg:#eaf6ef}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}.wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:18px;margin-bottom:40px}.brand img{width:36px;height:36px;border-radius:9px;object-fit:cover}.badge{display:inline-flex;align-items:center;gap:8px;background:var(--ok-bg);color:var(--ok);font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:20px}h1{font-size:clamp(28px,5vw,42px);line-height:1.12;margin:0 0 12px;letter-spacing:-.04em}.lead{font-size:16px;color:var(--muted);margin:0 0 32px}.order-card{border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:28px;background:var(--soft)}.order-row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}.order-row:last-child{border-bottom:none}.label{color:var(--muted)}.value{font-weight:700;text-align:right;word-break:break-word}.download-box{border:2px solid var(--ink);border-radius:12px;padding:28px;text-align:center;margin-bottom:32px}.download-box h2{font-size:20px;margin:0 0 8px}.download-box p{font-size:14px;color:var(--muted);margin:0 0 22px}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--ink);color:#fff;text-decoration:none;font-size:15px;font-weight:800;padding:13px 24px;border-radius:8px}.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--ink)}.steps{margin:40px 0}.steps h3{font-size:16px;margin:0 0 16px}.steps ol{padding-left:20px;margin:0;color:var(--muted);font-size:14px}.steps li{margin-bottom:10px}.help{border-top:1px solid var(--line);padding-top:32px;margin-top:40px;font-size:14px;color:var(--muted)}.help a{color:var(--ink);font-weight:700}.footer{margin-top:48px;font-size:12px;color:#999;text-align:center}@media(max-width:520px){.wrap{padding:32px 20px 60px}.order-row{display:block}.value{display:block;text-align:left;margin-top:4px}.actions{display:grid}.btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a href="/" class="brand"><img src="/assets/haowordtool-brand.png" alt=""> HaoWordTool</a>
+<div class="badge">✓ Payment return received</div>
+<h1>Thank you. Your order is being prepared.</h1>
+<p class="lead">We received your PayPal return details. Digital files are delivered after payment confirmation. No physical item is shipped.</p>
+<div class="order-card">
+<div class="order-row"><span class="label">PayPal transaction</span><span class="value" id="orderId">—</span></div>
+<div class="order-row"><span class="label">Product</span><span class="value" id="productName">—</span></div>
+<div class="order-row"><span class="label">Amount</span><span class="value" id="amountPaid">—</span></div>
+<div class="order-row"><span class="label">Delivery</span><span class="value">Digital delivery after confirmation</span></div>
+</div>
+<div class="download-box">
+<h2>Next step</h2>
+<p id="fileInfo">Open your workspace or contact support with this order information. We will match the payment and deliver the digital file or service result.</p>
+<div class="actions"><a class="btn" href="/account.html">Open customer center</a><a class="btn secondary" id="supportLink" href="mailto:love6598878593@gmail.com?subject=HaoWordTool%20delivery%20request">Email support</a></div>
+</div>
+<div class="steps"><h3>What happens next</h3><ol><li>PayPal confirms the payment status and amount.</li><li>We match the product ID and prepare the digital file or service delivery.</li><li>If your purchase is a service package, submit the required brief or materials in the workspace.</li><li>If anything is missing, email support with the transaction ID shown above.</li></ol></div>
+<div class="help"><p>No physical item will be shipped. For help, email <a href="mailto:love6598878593@gmail.com">love6598878593@gmail.com</a> with your PayPal transaction ID.</p></div>
+<div class="footer">© <span id="year"></span> HaoWordTool. All rights reserved.</div>
+</div>
+<script>
+(function(){
+const params=new URLSearchParams(location.search);
+const productMap={
+'dimple-dumpling':'Dimple the Dumpling','momo-shelf-ghost':'MOMO Shelf Ghost','ghost-granny-square':'Ghost Granny Square','willow-market-bag':'Willow Mesh Market Bag','annual-budget':'Ultimate Annual Budget','finance-dashboard':'Personal Finance Dashboard','wedding-planner':'Wedding Planner','product-photos':'AI Product Photos','product-video':'AI Product Video','voiceover':'AI Voiceover'};
+const order=params.get('tx')||params.get('txn_id')||params.get('order')||params.get('transaction_id')||'—';
+const product=params.get('product')||'';
+const item=params.get('item')||productMap[product]||'—';
+const amount=params.get('amount')||'';
+document.getElementById('orderId').textContent=order;
+document.getElementById('productName').textContent=item;
+document.getElementById('amountPaid').textContent=amount?('$'+amount+' USD'):'—';
+const subject=encodeURIComponent('HaoWordTool delivery request '+(order==='—'?'':order));
+const body=encodeURIComponent('Product: '+item+'
+Amount: '+(amount?('$'+amount+' USD'):'')+'
+Transaction: '+order+'
+');
+document.getElementById('supportLink').href='mailto:love6598878593@gmail.com?subject='+subject+'&body='+body;
+document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
