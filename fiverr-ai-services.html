@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hire Top Freelancers for Trending Services — HaoWordTool</title>
+<style>
+  :root {
+    --hw-bg: #0A1128;
+    --hw-card: #111B3C;
+    --hw-card-hover: #162347;
+    --hw-border: #1E2A4A;
+    --hw-cyan: #00B4D8;
+    --hw-cyan-hover: #0096B8;
+    --hw-cyan-light: #90E0EF;
+    --hw-white: #FFFFFF;
+    --hw-muted: #A0AABF;
+    --hw-pink: #FF4D6D;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    background: var(--hw-bg);
+    color: var(--hw-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 50% 0%, #1A2B5E 0%, var(--hw-bg) 60%);
+    background-attachment: fixed;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== 导航 ===== */
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 0; border-bottom: 1px solid var(--hw-border);
+  }
+  .nav-left { display: flex; align-items: center; gap: 28px; }
+  .nav-brand {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 800; font-size: 17px;
+    color: var(--hw-white); text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .nav-brand span {
+    display: inline-block;
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, var(--hw-cyan) 0%, var(--hw-cyan-light) 100%);
+    color: var(--hw-bg);
+    border-radius: 8px;
+    text-align: center; line-height: 32px;
+    font-size: 15px; font-weight: 800;
+  }
+  .nav-links { display: flex; gap: 24px; font-size: 14px; font-weight: 500; }
+  .nav-links a { color: var(--hw-muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--hw-cyan); }
+  .nav-cta {
+    display: inline-block;
+    background: var(--hw-cyan); color: var(--hw-bg);
+    font-size: 14px; font-weight: 700;
+    padding: 10px 24px; border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: var(--hw-cyan-hover); transform: translateY(-1px); }
+
+  /* ===== Hero ===== */
+  .hero {
+    padding: 80px 0 64px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px; align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0, 180, 216, 0.1);
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    color: var(--hw-cyan);
+    font-size: 13px; font-weight: 700;
+    padding: 8px 16px; border-radius: 999px;
+    margin-bottom: 24px; letter-spacing: 0.02em;
+  }
+  .hero h1 {
+    font-size: 48px; line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    color: var(--hw-white); font-weight: 800;
+  }
+  .hero h1 .accent {
+    background: linear-gradient(135deg, var(--hw-cyan) 0%, var(--hw-cyan-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p {
+    font-size: 17px; color: var(--hw-muted);
+    margin-bottom: 36px; max-width: 520px; line-height: 1.7;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: var(--hw-cyan); color: var(--hw-bg);
+    font-size: 16px; font-weight: 800;
+    padding: 18px 44px; border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    letter-spacing: 0.01em;
+    box-shadow: 0 8px 24px rgba(0, 180, 216, 0.25);
+  }
+  .hero-cta:hover {
+    background: var(--hw-cyan-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 180, 216, 0.35);
+  }
+  .hero-note { font-size: 13px; color: var(--hw-muted); margin-top: 14px; }
+  .hero-visual {
+    background: var(--hw-card);
+    border: 1px solid var(--hw-border);
+    border-radius: 20px;
+    padding: 40px 32px;
+    display: flex; flex-direction: column; gap: 16px;
+    position: relative; overflow: hidden;
+  }
+  .hero-visual::before {
+    content: "";
+    position: absolute; top: -50%; right: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(0,180,216,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-stat {
+    display: flex; align-items: center; gap: 16px;
+    background: rgba(10, 17, 40, 0.6);
+    border: 1px solid var(--hw-border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    position: relative; z-index: 1;
+  }
+  .hero-stat .num {
+    font-size: 28px; font-weight: 800;
+    color: var(--hw-cyan); min-width: 80px;
+    letter-spacing: -0.02em;
+  }
+  .hero-stat .label {
+    font-size: 14px; color: var(--hw-muted);
+    font-weight: 500; line-height: 1.4;
+  }
+
+  /* ===== 通用区块 ===== */
+  .section { margin-bottom: 96px; }
+  .section-label {
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--hw-cyan); margin-bottom: 14px;
+  }
+  .section-title {
+    font-size: 36px; font-weight: 800;
+    letter-spacing: -0.02em; color: var(--hw-white);
+    margin-bottom: 14px; line-height: 1.2;
+  }
+  .section-sub {
+    font-size: 16px; color: var(--hw-muted);
+    margin-bottom: 48px; max-width: 620px; line-height: 1.7;
+  }
+
+  /* ===== 视频演示区块（纯 CSS mockup，无需外部文件） ===== */
+  .video-section { margin-bottom: 96px; }
+  .video-wrapper {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0D1530 0%, #0A1128 100%);
+    border: 1px solid var(--hw-border);
+    box-shadow: 0 20px 60px rgba(0, 180, 216, 0.12);
+    aspect-ratio: 16 / 9;
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  .video-wrapper::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(0,180,216,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .demo-browser {
+    width: 100%;
+    max-width: 720px;
+    background: #0A1128;
+    border: 1px solid var(--hw-border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+  }
+  .demo-browser-bar {
+    display: flex; align-items: center; gap: 6px;
+    padding: 12px 16px;
+    background: #0F1735;
+    border-bottom: 1px solid var(--hw-border);
+  }
+  .demo-browser-bar .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+  }
+  .dot.red { background: #FF5F56; }
+  .dot.yellow { background: #FFBD2E; }
+  .dot.green { background: #27C93F; }
+  .demo-url {
+    margin-left: 12px;
+    font-size: 11px;
+    color: var(--hw-muted);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .demo-body {
+    padding: 24px;
+    position: relative;
+    min-height: 240px;
+  }
+  .demo-line {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .demo-line.w40 { width: 40%; }
+  .demo-line.w60 { width: 60%; }
+  .demo-line.w80 { width: 80%; }
+  .demo-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .demo-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 14px;
+    animation: pulseCard 3s ease-in-out infinite;
+  }
+  .demo-card:nth-child(2) { animation-delay: 0.6s; }
+  .demo-card:nth-child(3) { animation-delay: 1.2s; }
+  .demo-avatar {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--hw-cyan), var(--hw-cyan-light));
+    margin-bottom: 10px;
+  }
+  .demo-cursor {
+    position: absolute;
+    width: 14px; height: 14px;
+    background: var(--hw-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.3);
+    top: 60%; left: 20%;
+    animation: moveCursor 6s ease-in-out infinite;
+    z-index: 2;
+  }
+  .demo-caption {
+    display: flex; align-items: center; gap: 10px;
+    margin-top: 24px;
+    font-size: 13px; color: var(--hw-muted);
+    position: absolute;
+    bottom: 20px; left: 40px;
+    z-index: 1;
+  }
+  .live-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #27C93F;
+    box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.6);
+    animation: pulseDot 1.5s infinite;
+  }
+  @keyframes pulseCard {
+    0%, 100% { transform: translateY(0); border-color: rgba(255,255,255,0.06); }
+    50% { transform: translateY(-3px); border-color: rgba(0,180,216,0.3); }
+  }
+  @keyframes moveCursor {
+    0%, 100% { top: 65%; left: 20%; }
+    25% { top: 35%; left: 50%; }
+    50% { top: 70%; left: 70%; }
+    75% { top: 45%; left: 30%; }
+  }
+  @keyframes pulseDot {
+    0% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.6); }
+    70% { box-shadow: 0 0 0 10px rgba(39, 201, 63, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0); }
+  }
+  .video-features {
+    display: flex; justify-content: center; gap: 40px;
+    margin-top: 28px; flex-wrap: wrap;
+  }
+  .video-feature {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 14px; color: var(--hw-muted); font-weight: 500;
+  }
+  .video-feature .v-icon { font-size: 18px; }
+
+  /* ===== 信任栏 ===== */
+  .trust-bar {
+    display: flex; justify-content: center; gap: 56px;
+    padding: 40px 0;
+    border-top: 1px solid var(--hw-border);
+    border-bottom: 1px solid var(--hw-border);
+    margin: 0 0 80px; flex-wrap: wrap;
+  }
+  .trust-item { text-align: center; }
+  .trust-item .num {
+    font-size: 26px; font-weight: 800;
+    color: var(--hw-white); letter-spacing: -0.02em;
+  }
+  .trust-item .label {
+    font-size: 13px; color: var(--hw-muted); margin-top: 4px;
+  }
+
+  /* ===== 趋势分类 ===== */
+  .trend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .trend-card {
+    background: var(--hw-card);
+    border: 1px solid var(--hw-border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    text-decoration: none; color: inherit;
+    transition: all 0.25s ease;
+    display: block;
+    position: relative; overflow: hidden;
+  }
+  .trend-card::before {
+    content: "";
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--hw-cyan) 0%, var(--hw-cyan-light) 100%);
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .trend-card:hover {
+    background: var(--hw-card-hover);
+    border-color: var(--hw-cyan);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 180, 216, 0.15);
+  }
+  .trend-card:hover::before { opacity: 1; }
+  .trend-icon { font-size: 32px; margin-bottom: 18px; }
+  .trend-card h3 {
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 10px; color: var(--hw-white);
+  }
+  .trend-card p {
+    font-size: 14px; color: var(--hw-muted);
+    margin-bottom: 18px; line-height: 1.6;
+  }
+  .trend-card .trend-link {
+    font-size: 14px; font-weight: 700;
+    color: var(--hw-cyan); letter-spacing: 0.01em;
+  }
+  .trend-badge {
+    display: inline-block;
+    background: rgba(255, 77, 109, 0.15);
+    border: 1px solid rgba(255, 77, 109, 0.3);
+    color: var(--hw-pink);
+    font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 999px;
+    margin-bottom: 12px;
+  }
+
+  /* ===== 为什么选择 ===== */
+  .why-section {
+    background: var(--hw-card);
+    border: 1px solid var(--hw-border);
+    border-radius: 20px;
+    padding: 64px 48px;
+    position: relative; overflow: hidden;
+  }
+  .why-section::before {
+    content: "";
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,180,216,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 36px; margin-top: 48px;
+    position: relative; z-index: 1;
+  }
+  .why-item {
+    position: relative; padding-top: 28px;
+    border-top: 2px solid var(--hw-cyan);
+  }
+  .why-item h3 {
+    font-size: 17px; font-weight: 700;
+    margin-bottom: 10px; color: var(--hw-white);
+  }
+  .why-item p {
+    font-size: 14px; color: var(--hw-muted);
+    line-height: 1.7; margin: 0;
+  }
+
+  /* ===== 方案 ===== */
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .plan-card {
+    background: var(--hw-card);
+    border: 1px solid var(--hw-border);
+    border-radius: 18px;
+    padding: 36px 32px;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+  .plan-card:hover { border-color: rgba(0, 180, 216, 0.4); }
+  .plan-card.featured {
+    border: 2px solid var(--hw-cyan);
+    box-shadow: 0 12px 40px rgba(0, 180, 216, 0.2);
+    background: linear-gradient(180deg, rgba(0,180,216,0.05) 0%, var(--hw-card) 40%);
+  }
+  .plan-card.featured::before {
+    content: "Best for growing teams";
+    position: absolute;
+    top: -13px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--hw-cyan); color: var(--hw-bg);
+    font-size: 11px; font-weight: 800;
+    padding: 5px 16px; border-radius: 999px;
+    letter-spacing: 0.04em; white-space: nowrap;
+  }
+  .plan-name {
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--hw-muted); margin-bottom: 14px;
+  }
+  .plan-price {
+    font-size: 40px; font-weight: 800;
+    color: var(--hw-white); margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+  .plan-price small {
+    font-size: 15px; font-weight: 500; color: var(--hw-muted);
+  }
+  .plan-desc {
+    font-size: 14px; color: var(--hw-muted);
+    margin-bottom: 28px; padding-bottom: 28px;
+    border-bottom: 1px solid var(--hw-border);
+    line-height: 1.6;
+  }
+  .plan-features { list-style: none; padding: 0; margin: 0 0 32px; }
+  .plan-features li {
+    font-size: 14px; padding: 8px 0;
+    color: var(--hw-white);
+    display: flex; align-items: flex-start; gap: 10px;
+    line-height: 1.5;
+  }
+  .plan-features li::before {
+    content: "✓"; color: var(--hw-cyan);
+    font-weight: 800; flex-shrink: 0; margin-top: 1px;
+  }
+  .plan-cta {
+    display: block; text-align: center;
+    background: transparent;
+    border: 2px solid var(--hw-cyan);
+    color: var(--hw-cyan);
+    font-size: 15px; font-weight: 700;
+    padding: 16px; border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .plan-cta:hover { background: var(--hw-cyan); color: var(--hw-bg); }
+  .plan-card.featured .plan-cta {
+    background: var(--hw-cyan); color: var(--hw-bg);
+    border-color: var(--hw-cyan);
+  }
+  .plan-card.featured .plan-cta:hover {
+    background: var(--hw-cyan-hover);
+    border-color: var(--hw-cyan-hover);
+  }
+
+  /* ===== FAQ ===== */
+  .faq-list { max-width: 760px; }
+  .faq-item {
+    border-bottom: 1px solid var(--hw-border);
+    padding: 22px 0;
+  }
+  .faq-item h3 {
+    font-size: 16px; font-weight: 700;
+    margin-bottom: 10px; color: var(--hw-white);
+  }
+  .faq-item p {
+    font-size: 14px; color: var(--hw-muted);
+    margin: 0; line-height: 1.7;
+  }
+
+  /* ===== 底部 CTA ===== */
+  .bottom-cta {
+    text-align: center;
+    padding: 72px 40px;
+    background: linear-gradient(135deg, rgba(0,180,216,0.12) 0%, rgba(0,180,216,0.03) 100%);
+    border: 1px solid rgba(0, 180, 216, 0.25);
+    border-radius: 20px;
+    margin-bottom: 64px;
+    position: relative; overflow: hidden;
+  }
+  .bottom-cta::before {
+    content: "";
+    position: absolute; top: -50%; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(0,180,216,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .bottom-cta h2 {
+    font-size: 34px; font-weight: 800;
+    color: var(--hw-white); margin-bottom: 14px;
+    letter-spacing: -0.02em;
+    position: relative; z-index: 1;
+  }
+  .bottom-cta p {
+    font-size: 16px; color: var(--hw-muted);
+    margin-bottom: 36px; max-width: 520px;
+    margin-left: auto; margin-right: auto;
+    position: relative; z-index: 1;
+  }
+  .bottom-cta .hero-cta { position: relative; z-index: 1; }
+
+  /* ===== 页脚 ===== */
+  .footer {
+    text-align: center;
+    padding: 0 0 56px;
+    font-size: 12px; color: var(--hw-muted);
+    line-height: 1.8;
+  }
+  .footer a { color: var(--hw-cyan); text-decoration: none; }
+  .footer a:hover { color: var(--hw-cyan-light); }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; padding: 48px 0 40px; gap: 36px; }
+    .hero h1 { font-size: 34px; }
+    .hero-visual { padding: 28px 24px; }
+    .trust-bar { gap: 32px; }
+    .section-title { font-size: 28px; }
+    .why-section { padding: 40px 28px; }
+    .bottom-cta { padding: 56px 24px; }
+    .bottom-cta h2 { font-size: 26px; }
+    .nav-links { display: none; }
+    .plan-card { padding: 28px 24px; }
+    .video-wrapper { padding: 24px; }
+  }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 16px; }
+    .hero h1 { font-size: 28px; }
+    .hero-cta { padding: 16px 32px; font-size: 15px; }
+    .trend-grid { grid-template-columns: 1fr; }
+    .plans-grid { grid-template-columns: 1fr; }
+    .hero-stat .num { font-size: 24px; min-width: 70px; }
+    .demo-cards { grid-template-columns: 1fr; }
+    .video-features { gap: 20px; }
+  }
+</style>
+<link rel="canonical" href="https://haowordtool.com/fiverr-ai-services.html"></head>
+<body>
+
+<div class="wrap">
+
+  <!-- ===== 导航 ===== -->
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="/" class="nav-brand"><span>H</span> HaoWordTool</a>
+      <div class="nav-links">
+        <a href="#demo">Demo</a>
+        <a href="#trending">Trending</a>
+        <a href="#plans">Plans</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Ftrending" class="nav-cta" target="_blank" rel="noopener">Browse Trending Services</a>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div>
+      <div class="hero-badge">🔥 Trending on Fiverr · Updated June 2026</div>
+      <h1>Hire top talent for the <span class="accent">fastest-growing services</span></h1>
+      <p>Fiverr's 2026 Business Trends Index analyzed millions of searches to reveal where demand is shifting. These are the categories businesses are investing in right now.</p>
+      <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Ftrending" class="hero-cta" target="_blank" rel="noopener">Browse Trending Services</a>
+      <p class="hero-note">Free to browse. No subscription required.</p>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-stat">
+        <span class="num">+938%</span>
+        <span class="label">Claude Code specialist demand</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">+278%</span>
+        <span class="label">AI services growth in Video & Animation</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">+239%</span>
+        <span class="label">YouTube faceless channel searches</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 视频演示区块（纯 CSS mockup，无外部文件依赖） ===== -->
+  <section class="video-section" id="demo">
+    <div class="section-label">See how it works</div>
+    <h2 class="section-title">How Fiverr works in 40 seconds</h2>
+    <p class="section-sub">See how to browse vetted freelancers, compare packages, and hire the right expert — without the guesswork.</p>
+
+    <div class="video-wrapper">
+      <div class="demo-browser">
+        <div class="demo-browser-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="demo-url">fiverr.com/categories/trending</span>
+        </div>
+        <div class="demo-body">
+          <div class="demo-line w60"></div>
+          <div class="demo-line w80"></div>
+          <div class="demo-cards">
+            <div class="demo-card">
+              <div class="demo-avatar"></div>
+              <div class="demo-line w80"></div>
+              <div class="demo-line w40"></div>
+            </div>
+            <div class="demo-card">
+              <div class="demo-avatar"></div>
+              <div class="demo-line w80"></div>
+              <div class="demo-line w40"></div>
+            </div>
+            <div class="demo-card">
+              <div class="demo-avatar"></div>
+              <div class="demo-line w80"></div>
+              <div class="demo-line w40"></div>
+            </div>
+          </div>
+          <div class="demo-cursor"></div>
+        </div>
+      </div>
+      <div class="demo-caption">
+        <span class="live-dot"></span>
+        <span>Live preview of the Fiverr workflow</span>
+      </div>
+    </div>
+
+    <div class="video-features">
+      <div class="video-feature"><span class="v-icon">🔍</span><span>Browse 750+ categories</span></div>
+      <div class="video-feature"><span class="v-icon">⭐</span><span>Compare vetted sellers</span></div>
+      <div class="video-feature"><span class="v-icon">💳</span><span>Hire with buyer protection</span></div>
+    </div>
+  </section>
+
+  <!-- ===== 信任栏 ===== -->
+  <div class="trust-bar">
+    <div class="trust-item">
+      <div class="num">700+</div>
+      <div class="label">Service categories</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">30 days</div>
+      <div class="label">Cookie attribution window</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">$5+</div>
+      <div class="label">Starting price</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">24/7</div>
+      <div class="label">Support available</div>
+    </div>
+  </div>
+
+  <!-- ===== 趋势分类 ===== -->
+  <section class="section" id="trending">
+    <div class="section-label">Trending Services</div>
+    <h2 class="section-title">Where businesses are investing now</h2>
+    <p class="section-sub">Data from Fiverr's 2026 Business Trends Index, drawn from millions of searches across the platform from November 2025 to April 2026.</p>
+
+    <div class="trend-grid">
+
+      <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fprogramming-tech" class="trend-card" target="_blank" rel="noopener">
+        <div class="trend-badge">+938% demand</div>
+        <div class="trend-icon">🤖</div>
+        <h3>Claude Code & AI Automation</h3>
+        <p>Businesses are hiring specialists to automate workflows, build AI agents, and ship products faster. Related tools: n8n automation (+125%), vibe coding (+61%), AI voice agents (+49%).</p>
+        <span class="trend-link">Browse AI specialists →</span>
+      </a>
+
+      <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fvideo-animation" class="trend-card" target="_blank" rel="noopener">
+        <div class="trend-badge">+278% growth</div>
+        <div class="trend-icon">🎬</div>
+        <h3>AI Video & Animation</h3>
+        <p>The fastest-growing category for AI adoption. AI UGC video ads (+265%), AI video ads (+63%), and human video editing (+36%) are all in demand.</p>
+        <span class="trend-link">Browse video pros →</span>
+      </a>
+
+      <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fdigital-marketing" class="trend-card" target="_blank" rel="noopener">
+        <div class="trend-badge">+239% growth</div>
+        <div class="trend-icon">📈</div>
+        <h3>YouTube & Social Media Content</h3>
+        <p>YouTube faceless channels (+239%), Instagram content (+149%), Instagram Reels editing (+57%), and TikTok marketing (+26%) are all surging. Brands need consistent content engines.</p>
+        <span class="trend-link">Browse content creators →</span>
+      </a>
+
+      <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fprogramming-tech" class="trend-card" target="_blank" rel="noopener">
+        <div class="trend-badge">Shopify niche demand</div>
+        <div class="trend-icon">🛒</div>
+        <h3>Shopify Design & Development</h3>
+        <p>Shopify graphics and design (+348%), Shopify website development (+330%), and speed optimization (+32%). Clients want revenue-impacting improvements, not general expertise.</p>
+        <span class="trend-link">Browse Shopify experts →</span>
+      </a>
+
+      <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fwriting-translation" class="trend-card" target="_blank" rel="noopener">
+        <div class="trend-badge">Human expertise still vital</div>
+        <div class="trend-icon">✍️</div>
+        <h3>Human Editing & Refinement</h3>
+        <p>AI creates drafts, but humans make them publish-ready. Book formatting (+71%), translation (+55%), video editing (+36%), and book editing (+28%) are all growing.</p>
+        <span class="trend-link">Browse editors & writers →</span>
+      </a>
+
+      <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fbusiness" class="trend-card" target="_blank" rel="noopener">
+        <div class="trend-badge">Durable demand</div>
+        <div class="trend-icon">📊</div>
+        <h3>Virtual Assistants & Operations</h3>
+        <p>Data entry, lead list building, CRM enrichment, and virtual assistance remain in demand — tasks buyers always need but rarely want to do themselves.</p>
+        <span class="trend-link">Browse business pros →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== 为什么选择 Fiverr ===== -->
+  <section class="section why-section">
+    <div class="section-label">Why Fiverr</div>
+    <h2 class="section-title">The world's largest freelance marketplace</h2>
+    <p class="section-sub" style="max-width:640px;">Fiverr connects businesses with vetted freelancers across 700+ categories. Every purchase is protected by Fiverr's buyer protection.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Vetted talent pool</h3>
+        <p>Browse portfolios, compare reviews, and message sellers before you order. Look for Level 2 and Top Rated badges for proven professionals.</p>
+      </div>
+      <div class="why-item">
+        <h3>Clear pricing upfront</h3>
+        <p>Every gig shows the exact package price, deliverables, and delivery time before you order. No hidden fees or surprise invoices.</p>
+      </div>
+      <div class="why-item">
+        <h3>Fast turnaround</h3>
+        <p>Many gigs deliver in 24–48 hours. Filter by delivery time to find someone who works on your schedule.</p>
+      </div>
+      <div class="why-item">
+        <h3>Secure payments</h3>
+        <p>Your payment is held until you approve the work. Fiverr's buyer protection covers eligible orders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 方案 ===== -->
+  <section class="section" id="plans">
+    <div class="section-label">Plans</div>
+    <h2 class="section-title">A plan for every stage of growth</h2>
+    <p class="section-sub">Start browsing for free. Upgrade when your team is ready to scale hiring and management.</p>
+
+    <div class="plans-grid">
+
+      <div class="plan-card">
+        <div class="plan-name">Fiverr Pro Essential</div>
+        <div class="plan-price">$0 <small>/ forever</small></div>
+        <div class="plan-desc">For businesses seeking vetted talent and hands-on hiring support. Loyal clients ordering $1,000+ annually access this plan at no cost.</div>
+        <ul class="plan-features">
+          <li>Access to all vetted Pro freelancers</li>
+          <li>Satisfaction guarantee on Pro orders</li>
+          <li>Free shortlisting service</li>
+          <li>Team management tools</li>
+        </ul>
+        <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Ftrending" class="plan-cta" target="_blank" rel="noopener">Start with Essential</a>
+      </div>
+
+      <div class="plan-card featured">
+        <div class="plan-name">Fiverr Pro Advanced</div>
+        <div class="plan-price">$129 <small>/ month</small></div>
+        <div class="plan-desc">Designed for larger businesses and enterprises. Advanced plan empowers smooth scaling with enhanced hiring and management workflows.</div>
+        <ul class="plan-features">
+          <li>Everything in Essential</li>
+          <li>Seamless contract signing</li>
+          <li>Worker classification audits</li>
+          <li>Background checks</li>
+          <li>Dedicated Business Success Manager</li>
+          <li>Monthly business analytics summaries</li>
+        </ul>
+        <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Ftrending" class="plan-cta" target="_blank" rel="noopener">Explore Advanced</a>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Standard Fiverr</div>
+        <div class="plan-price">$0</div>
+        <div class="plan-desc">Best for finding skilled freelancers for any project and budget. Browse the full marketplace of 700+ categories.</div>
+        <ul class="plan-features">
+          <li>Access to all Fiverr categories</li>
+          <li>Fixed-price gigs and hourly hiring</li>
+          <li>Buyer protection on eligible orders</li>
+          <li>24/7 support</li>
+        </ul>
+        <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace" class="plan-cta" target="_blank" rel="noopener">Browse Marketplace</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Common questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>What is Fiverr's 2026 Business Trends Index?</h3>
+        <p>A report by Fiverr International Ltd. analyzing millions of searches across the platform from November 2025 to April 2026. It identifies the fastest-growing services shaping how businesses operate and how AI is changing the way we work.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much does it cost to hire on Fiverr?</h3>
+        <p>Gigs start at $5 for basic services. Typical pricing ranges: entry-level AI-assisted gigs $15–$40, mid-tier workflow or voice gigs $50–$150, and custom automation builds $200–$500+. You see the exact price before ordering.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What payment methods does Fiverr support?</h3>
+        <p>Fiverr Pro Essential supports credit card and PayPal. Pro Advanced adds wire transfers, ACH, SEPA, and BACS, plus deferred payments based on eligibility. The standard marketplace supports major credit cards and PayPal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does Fiverr's affiliate cookie last?</h3>
+        <p>The Fiverr affiliate cookie has a 30-day attribution window from the first click. If a user you refer makes a purchase within 30 days, you earn commission.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 底部 CTA ===== -->
+  <div class="bottom-cta">
+    <h2>Ready to hire top talent?</h2>
+    <p>Browse trending services, compare portfolios and pricing, and start your first project today.</p>
+    <a href="https://go.fiverr.com/visit/?bta=1176043&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Ftrending" class="hero-cta" target="_blank" rel="noopener">Browse Trending Services</a>
+  </div>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <p>This page contains affiliate links. If you make a purchase through them, we may earn a commission at no extra cost to you.</p>
+    <p style="margin-top:6px;">Data source: Fiverr Business Trends Index 2026. © <span id="year"></span> HaoWordTool. All rights reserved.</p>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
