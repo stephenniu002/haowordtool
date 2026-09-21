@@ -572,6 +572,92 @@ h3 { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; }
   font-weight: 600;
 }
 
+
+/* ============================================================
+   CUSTOMER SUPPORT
+   ============================================================ */
+.customer-support {
+  padding: 88px 0;
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+.support-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr);
+  gap: 36px;
+  align-items: start;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-2xl);
+  background: linear-gradient(135deg, #fff 0%, #f8fbff 100%);
+  box-shadow: var(--shadow-card);
+}
+.support-copy h2 { margin-bottom: 14px; }
+.support-copy p {
+  color: var(--ink);
+  line-height: 1.75;
+  max-width: 520px;
+}
+.support-note {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--success);
+  font-size: 14px;
+  font-weight: 700;
+}
+.support-note::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--success);
+}
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.support-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 18px;
+  text-align: center;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.support-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+.support-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #fff;
+  margin-bottom: 14px;
+}
+.support-card h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.support-card p {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.45;
+}
+@media (max-width: 900px) {
+  .support-panel { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .customer-support { padding: 64px 0; }
+  .support-panel { padding: 22px; }
+  .support-grid { grid-template-columns: 1fr; }
+  .support-card img { max-width: 260px; margin-left: auto; margin-right: auto; }
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -841,6 +927,37 @@ section[id]{scroll-margin-top:88px}:focus-visible{outline:3px solid var(--brand)
 
     <p class="affiliate-note">
       <strong> <span data-i18n="homepageLive.t77">Affiliate disclosure:</span> </strong> <span data-i18n="homepageLive.t78">When you buy through links on this site, we may earn a commission. Check the seller’s terms and final price before purchasing.</span> </p>
+  </div>
+</section>
+
+<!-- ==================== CUSTOMER SUPPORT ==================== -->
+<section class="customer-support" id="support">
+  <div class="container">
+    <div class="support-panel">
+      <div class="support-copy">
+        <p class="section-eyebrow">Customer support</p>
+        <h2>Need help with an order?</h2>
+        <p>Scan a QR code to contact HaoWordTool support about product pages, digital delivery, AI service briefs or payment questions.</p>
+        <span class="support-note">Telegram, WhatsApp Business and WeChat are available.</span>
+      </div>
+      <div class="support-grid" aria-label="Customer support QR codes">
+        <article class="support-card">
+          <img src="/assets/contact/telegram-newtonsnew.png" alt="Telegram support QR code for @NEWTONSNEW" width="430" height="604" loading="lazy">
+          <h3>Telegram</h3>
+          <p>@NEWTONSNEW</p>
+        </article>
+        <article class="support-card">
+          <img src="/assets/contact/whatsapp-business.png" alt="WhatsApp Business support QR code" width="307" height="337" loading="lazy">
+          <h3>WhatsApp Business</h3>
+          <p>Scan to message support</p>
+        </article>
+        <article class="support-card">
+          <img src="/assets/contact/wechat-support.png" alt="WeChat support QR code" width="382" height="383" loading="lazy">
+          <h3>WeChat</h3>
+          <p>Scan to add customer service</p>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
 
