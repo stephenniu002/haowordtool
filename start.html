@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HaoWordTool — Better Products, Smarter AI Tools</title>
+<meta name="description" content="HaoWordTool 帮你研究和对比 AI 产品与实物精选好物，并提供真正能解决问题的方法。多语言，服务全球用户。">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f7f8fc;
+    --ink:#0d0d12;
+    --ink-2:#4b4b58;
+    --ink-3:#8c8c9a;
+    --line:#e9e9f0;
+    --brand:#4f46e5;
+    --brand-2:#7c3aed;
+    --accent:#06b6d4;
+    --dark:#08080e;
+    --radius:22px;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  html{scroll-behavior:smooth}
+
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+
+  /* ============ NAV ============ */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .4s var(--ease),border-color .4s var(--ease),backdrop-filter .4s;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(18px) saturate(180%);
+    -webkit-backdrop-filter:blur(18px) saturate(180%);
+    border-bottom-color:var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;
+  }
+  .logo{
+    display:flex;align-items:center;gap:10px;
+    font-weight:700;font-size:18px;letter-spacing:-.02em;
+  }
+  .logo-mark{
+    width:30px;height:30px;border-radius:9px;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2) 60%,var(--accent));
+    display:grid;place-items:center;
+    color:#fff;font-size:14px;font-weight:800;
+    box-shadow:0 4px 14px rgba(79,70,229,.35);
+  }
+  .nav-right{display:flex;align-items:center;gap:14px}
+
+  .lang-switch{
+    display:flex;align-items:center;gap:2px;
+    background:rgba(120,120,150,.09);
+    border-radius:999px;padding:3px;
+  }
+  .lang-switch button{
+    padding:6px 13px;border-radius:999px;
+    font-size:13px;font-weight:600;color:var(--ink-3);
+    transition:all .25s var(--ease);
+  }
+  .lang-switch button.active{
+    background:#fff;color:var(--ink);
+    box-shadow:0 1px 4px rgba(0,0,0,.1);
+  }
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 26px;border-radius:999px;
+    font-size:15px;font-weight:600;letter-spacing:-.01em;
+    transition:all .3s var(--ease);
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    color:#fff;
+    box-shadow:0 6px 22px rgba(79,70,229,.32);
+  }
+  .btn-primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(79,70,229,.42);
+  }
+  .btn-ghost{
+    background:rgba(255,255,255,.07);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.16);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.13)}
+  .btn-outline{
+    background:#fff;color:var(--ink);
+    border:1px solid var(--line);
+    box-shadow:0 1px 3px rgba(0,0,0,.04);
+  }
+  .btn-outline:hover{border-color:#d0d0dd;transform:translateY(-2px)}
+  .nav-cta{padding:10px 20px;font-size:14px}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    background:var(--dark);
+    color:#fff;
+    padding:160px 0 120px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .glow{
+    position:absolute;border-radius:50%;
+    filter:blur(90px);pointer-events:none;z-index:-1;
+  }
+  .glow-1{
+    width:620px;height:620px;
+    background:radial-gradient(circle,rgba(79,70,229,.55),transparent 68%);
+    top:-240px;left:-140px;
+    animation:float1 16s ease-in-out infinite;
+  }
+  .glow-2{
+    width:520px;height:520px;
+    background:radial-gradient(circle,rgba(124,58,237,.45),transparent 68%);
+    top:-100px;right:-120px;
+    animation:float2 20s ease-in-out infinite;
+  }
+  .glow-3{
+    width:460px;height:460px;
+    background:radial-gradient(circle,rgba(6,182,212,.3),transparent 70%);
+    bottom:-260px;left:38%;
+    animation:float1 24s ease-in-out infinite reverse;
+  }
+  @keyframes float1{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%{transform:translate(50px,40px) scale(1.1)}
+  }
+  @keyframes float2{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%{transform:translate(-60px,50px) scale(1.08)}
+  }
+
+  .hero-grid-bg{
+    position:absolute;inset:0;z-index:-1;
+    background-image:
+      linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(ellipse 80% 65% at 50% 30%,#000 20%,transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 65% at 50% 30%,#000 20%,transparent 75%);
+  }
+
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;align-items:center;
+  }
+
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:7px 16px 7px 10px;
+    border-radius:999px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    font-size:13px;font-weight:500;color:rgba(255,255,255,.82);
+    margin-bottom:28px;
+  }
+  .badge-dot{
+    width:7px;height:7px;border-radius:50%;
+    background:#34d399;
+    box-shadow:0 0 0 4px rgba(52,211,153,.18);
+  }
+
+  .hero h1{
+    font-size:clamp(40px,5.4vw,64px);
+    line-height:1.08;
+    letter-spacing:-.035em;
+    font-weight:800;
+    margin-bottom:24px;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(105deg,#a5b4fc,#c4b5fd 45%,#67e8f9);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .hero p.lead{
+    font-size:clamp(16px,1.55vw,18.5px);
+    color:rgba(255,255,255,.62);
+    max-width:540px;
+    margin-bottom:38px;
+    line-height:1.72;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+
+  .trust{
+    display:flex;gap:26px;flex-wrap:wrap;
+    font-size:13.5px;color:rgba(255,255,255,.45);
+  }
+  .trust span{display:flex;align-items:center;gap:7px}
+  .trust svg{width:15px;height:15px;flex-shrink:0;opacity:.75}
+
+  /* ---- Hero visual ---- */
+  .hero-visual{position:relative;perspective:1400px}
+
+  .mock{
+    background:linear-gradient(165deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
+    border:1px solid rgba(255,255,255,.13);
+    border-radius:26px;
+    padding:22px;
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+    box-shadow:0 32px 70px rgba(0,0,0,.5);
+    animation:floatCard 7s ease-in-out infinite;
+  }
+  @keyframes floatCard{
+    0%,100%{transform:translateY(0) rotateX(0deg) rotateY(0deg)}
+    50%{transform:translateY(-14px) rotateX(1.5deg) rotateY(-1.5deg)}
+  }
+
+  .mock-head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-bottom:16px;margin-bottom:16px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .mock-title{font-size:14px;font-weight:700;letter-spacing:-.01em}
+  .mock-pill{
+    font-size:10.5px;font-weight:700;letter-spacing:.05em;
+    padding:4px 10px;border-radius:999px;
+    background:rgba(52,211,153,.14);color:#6ee7b7;
+    text-transform:uppercase;
+  }
+
+  .mock-item{
+    display:flex;align-items:center;gap:13px;
+    padding:13px 14px;border-radius:15px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.06);
+    margin-bottom:9px;
+    transition:all .35s var(--ease);
+  }
+  .mock-item:hover{background:rgba(255,255,255,.085);transform:translateX(4px)}
+  .mock-icon{
+    width:36px;height:36px;border-radius:11px;flex-shrink:0;
+    display:grid;place-items:center;font-size:16px;
+  }
+  .ic-1{background:linear-gradient(135deg,#6366f1,#8b5cf6)}
+  .ic-2{background:linear-gradient(135deg,#06b6d4,#0ea5e9)}
+  .ic-3{background:linear-gradient(135deg,#f59e0b,#ef4444)}
+
+  .mock-txt{flex:1;min-width:0}
+  .mock-txt strong{
+    display:block;font-size:13px;font-weight:650;
+    letter-spacing:-.01em;margin-bottom:3px;
+  }
+  .mock-txt small{
+    display:block;font-size:11.5px;
+    color:rgba(255,255,255,.42);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+
+  .bars{display:flex;gap:3px;align-items:flex-end;height:18px}
+  .bars i{width:3.5px;border-radius:2px;background:rgba(255,255,255,.22)}
+  .bars i:nth-child(1){height:40%}
+  .bars i:nth-child(2){height:68%}
+  .bars i:nth-child(3){height:100%;background:#818cf8}
+
+  .mock-foot{
+    margin-top:16px;padding-top:15px;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;align-items:center;justify-content:space-between;
+    font-size:11.5px;color:rgba(255,255,255,.38);
+  }
+
+  /* ---- Floating lang chips ---- */
+  .chip{
+    position:absolute;
+    padding:8px 15px;border-radius:999px;
+    font-size:12.5px;font-weight:600;
+    background:rgba(255,255,255,.95);
+    color:#15151d;
+    box-shadow:0 10px 28px rgba(0,0,0,.35);
+    animation:chipFloat 6s ease-in-out infinite;
+  }
+  .chip-1{top:-22px;right:8%;animation-delay:0s}
+  .chip-2{bottom:64px;left:-34px;animation-delay:1.6s}
+  .chip-3{bottom:-14px;right:-18px;animation-delay:3.2s}
+  @keyframes chipFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-11px)}
+  }
+
+  /* ============ SECTION BASE ============ */
+  section{padding:110px 0}
+  .sec-head{max-width:660px;margin-bottom:64px}
+  .sec-eyebrow{
+    display:inline-block;
+    font-size:12.5px;font-weight:700;
+    letter-spacing:.11em;text-transform:uppercase;
+    color:var(--brand);
+    margin-bottom:16px;
+  }
+  .sec-head h2{
+    font-size:clamp(30px,3.6vw,44px);
+    line-height:1.15;letter-spacing:-.03em;font-weight:800;
+    margin-bottom:18px;
+  }
+  .sec-head p{
+    font-size:17px;color:var(--ink-2);line-height:1.7;
+  }
+
+  /* ============ FEATURES ============ */
+  .feat-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .feat{
+    position:relative;
+    padding:36px 32px 34px;
+    border-radius:var(--radius);
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    overflow:hidden;
+    transition:all .45s var(--ease);
+  }
+  .feat::after{
+    content:'';
+    position:absolute;inset:0;
+    border-radius:var(--radius);
+    padding:1px;
+    background:linear-gradient(140deg,rgba(79,70,229,.55),transparent 55%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    opacity:0;transition:opacity .45s var(--ease);
+    pointer-events:none;
+  }
+  .feat:hover{
+    background:#fff;
+    transform:translateY(-6px);
+    box-shadow:0 24px 50px rgba(20,20,50,.09);
+  }
+  .feat:hover::after{opacity:1}
+
+  .feat-ic{
+    width:52px;height:52px;border-radius:15px;
+    display:grid;place-items:center;
+    margin-bottom:24px;
+    font-size:23px;
+    box-shadow:0 8px 20px rgba(0,0,0,.11);
+  }
+  .feat h3{
+    font-size:19.5px;font-weight:750;
+    letter-spacing:-.02em;margin-bottom:12px;
+  }
+  .feat p{
+    font-size:15px;color:var(--ink-2);
+    line-height:1.72;margin-bottom:22px;
+  }
+  .feat-list{display:flex;flex-direction:column;gap:9px}
+  .feat-list li{
+    list-style:none;
+    display:flex;align-items:flex-start;gap:9px;
+    font-size:13.5px;color:var(--ink-3);
+  }
+  .feat-list li::before{
+    content:'';
+    width:15px;height:15px;flex-shrink:0;margin-top:3.5px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/13px no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/13px no-repeat;
+  }
+
+  /* ============ LANGUAGES ============ */
+  .langs{
+    background:var(--dark);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .langs .glow{
+    width:700px;height:700px;
+    background:radial-gradient(circle,rgba(79,70,229,.3),transparent 70%);
+    top:-300px;left:50%;transform:translateX(-50%);
+  }
+  .langs .sec-head{margin-left:auto;margin-right:auto;text-align:center}
+  .langs .sec-head h2{color:#fff}
+  .langs .sec-head p{color:rgba(255,255,255,.55)}
+  .langs .sec-eyebrow{color:#a5b4fc}
+
+  .lang-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(138px,1fr));
+    gap:12px;
+    margin-top:8px;
+  }
+  .lang-card{
+    padding:20px 16px;
+    border-radius:16px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.08);
+    text-align:center;
+    transition:all .38s var(--ease);
+  }
+  .lang-card:hover{
+    background:rgba(255,255,255,.1);
+    border-color:rgba(255,255,255,.2);
+    transform:translateY(-4px);
+  }
+  .lang-card .native{
+    font-size:19px;font-weight:700;
+    letter-spacing:-.01em;margin-bottom:5px;
+    display:block;
+  }
+  .lang-card .label{
+    font-size:11.5px;
+    color:rgba(255,255,255,.4);
+    letter-spacing:.04em;
+  }
+
+  /* ============ STEPS ============ */
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    border-top:1px solid var(--line);
+  }
+  .step{
+    padding:44px 34px 44px 0;
+    border-right:1px solid var(--line);
+    position:relative;
+  }
+  .step:last-child{border-right:none;padding-right:0}
+  .step:not(:first-child){padding-left:34px}
+  .step-num{
+    font-size:13px;font-weight:800;
+    letter-spacing:.1em;
+    color:var(--brand);
+    margin-bottom:18px;
+    display:block;
+  }
+  .step h3{
+    font-size:20px;font-weight:750;
+    letter-spacing:-.02em;margin-bottom:12px;
+  }
+  .step p{font-size:15px;color:var(--ink-2);line-height:1.72}
+
+  /* ============ CTA ============ */
+  .cta-band{
+    padding:0 0 110px;
+  }
+  .cta-box{
+    position:relative;
+    border-radius:34px;
+    padding:80px 56px;
+    background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 55%,#0891b2 130%);
+    color:#fff;
+    text-align:center;
+    overflow:hidden;
+    isolation:isolate;
+    box-shadow:0 34px 80px rgba(79,70,229,.34);
+  }
+  .cta-box::before{
+    content:'';
+    position:absolute;inset:0;z-index:-1;
+    background-image:
+      linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+    background-size:52px 52px;
+    mask-image:radial-gradient(ellipse 70% 80% at 50% 50%,#000,transparent 80%);
+    -webkit-mask-image:radial-gradient(ellipse 70% 80% at 50% 50%,#000,transparent 80%);
+  }
+  .cta-box h2{
+    font-size:clamp(30px,4vw,46px);
+    font-weight:800;letter-spacing:-.035em;
+    line-height:1.15;margin-bottom:18px;
+  }
+  .cta-box p{
+    font-size:17.5px;
+    color:rgba(255,255,255,.78);
+    max-width:520px;margin:0 auto 38px;
+    line-height:1.7;
+  }
+  .cta-box .btn{
+    background:#fff;color:#3f37c9;
+    box-shadow:0 12px 34px rgba(0,0,0,.22);
+    padding:16px 34px;font-size:16px;
+  }
+  .cta-box .btn:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(0,0,0,.3)}
+  .cta-note{
+    margin-top:22px;font-size:13.5px;
+    color:rgba(255,255,255,.55);
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    border-top:1px solid var(--line);
+    padding:52px 0 40px;
+    background:var(--bg-soft);
+  }
+  .foot-inner{
+    display:flex;align-items:center;
+    justify-content:space-between;
+    gap:26px;flex-wrap:wrap;
+  }
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+  .foot-links a{
+    font-size:14px;color:var(--ink-2);
+    transition:color .25s;
+  }
+  .foot-links a:hover{color:var(--brand)}
+  .foot-copy{
+    font-size:13px;color:var(--ink-3);
+    margin-top:30px;padding-top:26px;
+    border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;
+    gap:16px;flex-wrap:wrap;
+  }
+
+  /* ============ REVEAL ============ */
+  .reveal{
+    opacity:0;
+    transform:translateY(26px);
+    transition:opacity .8s var(--ease),transform .8s var(--ease);
+  }
+  .reveal.in{opacity:1;transform:none}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1000px){
+    .hero-inner{grid-template-columns:1fr;gap:56px}
+    .hero-visual{max-width:460px;margin:0 auto}
+    .feat-grid{grid-template-columns:1fr;gap:16px}
+    .steps{grid-template-columns:1fr}
+    .step{
+      border-right:none;
+      border-bottom:1px solid var(--line);
+      padding:32px 0;
+    }
+    .step:not(:first-child){padding-left:0}
+    .step:last-child{border-bottom:none;padding-bottom:0}
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:0 20px}
+    .hero{padding:130px 0 90px}
+    section{padding:80px 0}
+    .nav-links{display:none}
+    .cta-box{padding:56px 26px;border-radius:26px}
+    .chip{display:none}
+    .foot-inner{flex-direction:column;align-items:flex-start}
+    .hero-actions .btn{width:100%}
+    .lang-switch button{padding:5px 10px;font-size:12px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-mark">H</span>
+      <span>HaoWordTool</span>
+    </a>
+
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button class="active" data-lang="zh">中文</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#cta" class="btn btn-primary nav-cta" data-i18n="navCta">开始探索</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
+  <div class="hero-grid-bg"></div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span data-i18n="badge">支持 15+ 种语言 · 服务全球用户</span>
+      </div>
+
+      <h1>
+        <span data-i18n="heroTitle1">选对工具，</span><br>
+        <span class="grad" data-i18n="heroTitle2">少走弯路。</span>
+      </h1>
+
+      <p class="lead" data-i18n="heroLead">
+        HaoWordTool 帮你研究和对比 AI 产品与实物精选好物，并提供真正能解决问题的方法——多语言，服务全球用户。
+      </p>
+
+      <div class="hero-actions">
+        <a href="#cta" class="btn btn-primary" data-i18n="heroBtn1">开始探索</a>
+        <a href="#features" class="btn btn-ghost" data-i18n="heroBtn2">了解我们如何评测</a>
+      </div>
+
+      <div class="trust">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <em style="font-style:normal" data-i18n="trust1">透明评测</em>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <em style="font-style:normal" data-i18n="trust2">无夸大宣传</em>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <em style="font-style:normal" data-i18n="trust3">适合谁 / 不适合谁</em>
+        </span>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="hero-visual">
+      <div class="mock">
+        <div class="mock-head">
+          <div class="mock-title" data-i18n="mockTitle">写作助手对比</div>
+          <div class="mock-pill" data-i18n="mockPill">实时更新</div>
+        </div>
+
+        <div class="mock-item">
+          <div class="mock-icon ic-1">◆</div>
+          <div class="mock-txt">
+            <strong data-i18n="mock1t">适合中小团队</strong>
+            <small data-i18n="mock1s">上手快 · 月费透明 · 支持中文</small>
+          </div>
+          <div class="bars"><i></i><i></i><i></i></div>
+        </div>
+
+        <div class="mock-item">
+          <div class="mock-icon ic-2">◇</div>
+          <div class="mock-txt">
+            <strong data-i18n="mock2t">长文场景更强</strong>
+            <small data-i18n="mock2s">需付费解锁 · 有区域限制</small>
+          </div>
+          <div class="bars"><i></i><i></i><i></i></div>
+        </div>
+
+        <div class="mock-item">
+          <div class="mock-icon ic-3">○</div>
+          <div class="mock-txt">
+            <strong data-i18n="mock3t">性价比高但功能少</strong>
+            <small data-i18n="mock3s">适合轻度使用 · 免费额度大</small>
+          </div>
+          <div class="bars"><i></i><i></i><i></i></div>
+        </div>
+
+        <div class="mock-foot">
+          <span data-i18n="mockFoot">含佣金披露 · 价格以官方为准</span>
+          <span>haowordtool.com</span>
+        </div>
+      </div>
+
+      <div class="chip chip-1">🌐 中文</div>
+      <div class="chip chip-2">🌐 English</div>
+      <div class="chip chip-3">🌐 Español</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ FEATURES ============ -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow" data-i18n="featEyebrow">我们提供什么</span>
+      <h2 data-i18n="featTitle">三类内容，一个目的：帮你做出更好的决定</h2>
+      <p data-i18n="featLead">不堆功能参数，不写空洞好评。每一项推荐都告诉你适合谁、不适合谁，以及那些容易被忽略的限制条件。</p>
+    </div>
+
+    <div class="feat-grid">
+      <article class="feat reveal">
+        <div class="feat-ic ic-1">🤖</div>
+        <h3 data-i18n="f1t">AI 产品</h3>
+        <p data-i18n="f1p">对比主流 AI 工具的功能差异、上手门槛、订阅价格和适用人群，告诉你哪些值得用，哪些可以先跳过。</p>
+        <ul class="feat-list">
+          <li data-i18n="f1l1">功能与价格横向对比</li>
+          <li data-i18n="f1l2">是否支持你的语言</li>
+          <li data-i18n="f1l3">区域可用性与限制说明</li>
+        </ul>
+      </article>
+
+      <article class="feat reveal">
+        <div class="feat-ic ic-2">📦</div>
+        <h3 data-i18n="f2t">实物精选</h3>
+        <p data-i18n="f2p">从真实使用出发筛选好物，讲清楚关键参数、实际体验和隐性成本，适合谁买、不适合谁买一目了然。</p>
+        <ul class="feat-list">
+          <li data-i18n="f2l1">选品标准公开透明</li>
+          <li data-i18n="f2l2">实际使用表现与短板</li>
+          <li data-i18n="f2l3">价格库存变动提醒</li>
+        </ul>
+      </article>
+
+      <article class="feat reveal">
+        <div class="feat-ic ic-3">🧩</div>
+        <h3 data-i18n="f3t">问题解决方案</h3>
+        <p data-i18n="f3p">从你遇到的具体问题切入，拆解成因，给出可执行的解决步骤，并推荐真正能派上用场的工具或产品。</p>
+        <ul class="feat-list">
+          <li data-i18n="f3l1">可照做的分步指南</li>
+          <li data-i18n="f3l2">配套工具推荐</li>
+          <li data-i18n="f3l3">常见坑与规避方法</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LANGUAGES ============ -->
+<section class="langs">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow" data-i18n="langEyebrow">全球可用</span>
+      <h2 data-i18n="langTitle">一种内容，多种语言，服务全球用户</h2>
+      <p data-i18n="langLead">不是简单翻译。我们按当地语言、货币、支付方式、可用性和使用习惯重新创作，让你读到真正符合自己情况的内容。</p>
+    </div>
+
+    <div class="lang-grid reveal">
+      <div class="lang-card"><span class="native">中文</span><span class="label">Chinese</span></div>
+      <div class="lang-card"><span class="native">English</span><span class="label">English</span></div>
+      <div class="lang-card"><span class="native">Español</span><span class="label">Spanish</span></div>
+      <div class="lang-card"><span class="native">العربية</span><span class="label">Arabic</span></div>
+      <div class="lang-card"><span class="native">Français</span><span class="label">French</span></div>
+      <div class="lang-card"><span class="native">Deutsch</span><span class="label">German</span></div>
+      <div class="lang-card"><span class="native">Português</span><span class="label">Portuguese</span></div>
+      <div class="lang-card"><span class="native">Русский</span><span class="label">Russian</span></div>
+      <div class="lang-card"><span class="native">日本語</span><span class="label">Japanese</span></div>
+      <div class="lang-card"><span class="native">한국어</span><span class="label">Korean</span></div>
+      <div class="lang-card"><span class="native">हिन्दी</span><span class="label">Hindi</span></div>
+      <div class="lang-card"><span class="native">Bahasa</span><span class="label">Indonesian</span></div>
+      <div class="lang-card"><span class="native">Türkçe</span><span class="label">Turkish</span></div>
+      <div class="lang-card"><span class="native">Tiếng Việt</span><span class="label">Vietnamese</span></div>
+      <div class="lang-card"><span class="native">ไทย</span><span class="label">Thai</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEPS ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow" data-i18n="stepEyebrow">怎么用</span>
+      <h2 data-i18n="stepTitle">三步，找到适合你的答案</h2>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3 data-i18n="s1t">选择你的语言</h3>
+        <p data-i18n="s1p">用你熟悉的语言阅读，内容已按当地价格、支付方式和可用性做了适配。</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3 data-i18n="s2t">找到你的问题</h3>
+        <p data-i18n="s2p">按场景浏览 AI 工具、实物精选或问题解决方案，快速定位你真正关心的部分。</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3 data-i18n="s3t">做出明智决定</h3>
+        <p data-i18n="s3p">看清优缺点、适用人群和隐性成本，再决定买不买、用不用。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-band" id="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2 data-i18n="ctaTitle">别再靠猜做决定</h2>
+      <p data-i18n="ctaLead">访问 HaoWordTool，选择你的语言，找到真正适合你的 AI 工具和精选好物。</p>
+      <a href="https://haowordtool.com" class="btn" data-i18n="ctaBtn">前往 haowordtool.com</a>
+      <div class="cta-note" data-i18n="ctaNote">价格、库存与功能可能变动，请以官方或卖家页面为准。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark">H</span>
+        <span>HaoWordTool</span>
+      </a>
+      <div class="foot-links">
+        <a href="/ai-tools.html" data-i18n="fl1">AI 产品</a>
+        <a href="/affiliate-products.html" data-i18n="fl2">实物精选</a>
+        <a href="#features" data-i18n="fl3">解决方案</a>
+        <a href="/about.html" data-i18n="fl4">关于我们</a>
+      </div>
+    </div>
+    <div class="foot-copy">
+      <span>© 2026 HaoWordTool. Better Products, Smarter AI Tools.</span>
+      <span data-i18n="footNote">部分链接含佣金，不影响我们的评测结论。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ NAV SCROLL ============ */
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ============ REVEAL ============ */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('in'), i * 90);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ============ I18N ============ */
+const i18n = {
+  zh: {
+    navCta: '开始探索',
+    badge: '支持 15+ 种语言 · 服务全球用户',
+    heroTitle1: '选对工具，',
+    heroTitle2: '少走弯路。',
+    heroLead: 'HaoWordTool 帮你研究和对比 AI 产品与实物精选好物，并提供真正能解决问题的方法——多语言，服务全球用户。',
+    heroBtn1: '开始探索',
+    heroBtn2: '了解我们如何评测',
+    trust1: '透明评测',
+    trust2: '无夸大宣传',
+    trust3: '适合谁 / 不适合谁',
+    mockTitle: '写作助手对比',
+    mockPill: '实时更新',
+    mock1t: '适合中小团队',
+    mock1s: '上手快 · 月费透明 · 支持中文',
+    mock2t: '长文场景更强',
+    mock2s: '需付费解锁 · 有区域限制',
+    mock3t: '性价比高但功能少',
+    mock3s: '适合轻度使用 · 免费额度大',
+    mockFoot: '含佣金披露 · 价格以官方为准',
+    featEyebrow: '我们提供什么',
+    featTitle: '三类内容，一个目的：帮你做出更好的决定',
+    featLead: '不堆功能参数，不写空洞好评。每一项推荐都告诉你适合谁、不适合谁，以及那些容易被忽略的限制条件。',
+    f1t: 'AI 产品',
+    f1p: '对比主流 AI 工具的功能差异、上手门槛、订阅价格和适用人群，告诉你哪些值得用，哪些可以先跳过。',
+    f1l1: '功能与价格横向对比',
+    f1l2: '是否支持你的语言',
+    f1l3: '区域可用性与限制说明',
+    f2t: '实物精选',
+    f2p: '从真实使用出发筛选好物，讲清楚关键参数、实际体验和隐性成本，适合谁买、不适合谁买一目了然。',
+    f2l1: '选品标准公开透明',
+    f2l2: '实际使用表现与短板',
+    f2l3: '价格库存变动提醒',
+    f3t: '问题解决方案',
+    f3p: '从你遇到的具体问题切入，拆解成因，给出可执行的解决步骤，并推荐真正能派上用场的工具或产品。',
+    f3l1: '可照做的分步指南',
+    f3l2: '配套工具推荐',
+    f3l3: '常见坑与规避方法',
+    langEyebrow: '全球可用',
+    langTitle: '一种内容，多种语言，服务全球用户',
+    langLead: '不是简单翻译。我们按当地语言、货币、支付方式、可用性和使用习惯重新创作，让你读到真正符合自己情况的内容。',
+    stepEyebrow: '怎么用',
+    stepTitle: '三步，找到适合你的答案',
+    s1t: '选择你的语言',
+    s1p: '用你熟悉的语言阅读，内容已按当地价格、支付方式和可用性做了适配。',
+    s2t: '找到你的问题',
+    s2p: '按场景浏览 AI 工具、实物精选或问题解决方案，快速定位你真正关心的部分。',
+    s3t: '做出明智决定',
+    s3p: '看清优缺点、适用人群和隐性成本，再决定买不买、用不用。',
+    ctaTitle: '别再靠猜做决定',
+    ctaLead: '访问 HaoWordTool，选择你的语言，找到真正适合你的 AI 工具和精选好物。',
+    ctaBtn: '前往 haowordtool.com',
+    ctaNote: '价格、库存与功能可能变动，请以官方或卖家页面为准。',
+    fl1: 'AI 产品',
+    fl2: '实物精选',
+    fl3: '解决方案',
+    fl4: '关于我们',
+    footNote: '部分链接含佣金，不影响我们的评测结论。'
+  },
+  en: {
+    navCta: 'Get Started',
+    badge: 'Available in 15+ languages · For users worldwide',
+    heroTitle1: 'Pick the right tool.',
+    heroTitle2: 'Skip the guesswork.',
+    heroLead: 'HaoWordTool helps you research and compare AI products and curated physical goods — with practical solutions that actually work. In your language, for users worldwide.',
+    heroBtn1: 'Start Exploring',
+    heroBtn2: 'How We Review',
+    trust1: 'Transparent reviews',
+    trust2: 'No hype',
+    trust3: 'Who it\'s for / not for',
+    mockTitle: 'Writing Assistants Compared',
+    mockPill: 'Live',
+    mock1t: 'Great for small teams',
+    mock1s: 'Easy setup · Clear pricing · Multilingual',
+    mock2t: 'Stronger for long-form',
+    mock2s: 'Paid tier needed · Regional limits',
+    mock3t: 'Good value, fewer features',
+    mock3s: 'Best for light use · Generous free tier',
+    mockFoot: 'Affiliate disclosure · Check official pricing',
+    featEyebrow: 'What We Offer',
+    featTitle: 'Three content types. One goal: better decisions.',
+    featLead: 'No feature dumps. No empty praise. Every recommendation tells you who it suits, who it doesn\'t, and the limitations people usually miss.',
+    f1t: 'AI Products',
+    f1p: 'Compare mainstream AI tools on features, learning curve, subscription cost, and audience — so you know what\'s worth it and what to skip.',
+    f1l1: 'Side-by-side feature & price comparison',
+    f1l2: 'Whether it supports your language',
+    f1l3: 'Regional availability & limits',
+    f2t: 'Curated Physical Goods',
+    f2p: 'Products selected from real-world use, with clear specs, hands-on performance, and hidden costs — who should buy it, who shouldn\'t.',
+    f2l1: 'Transparent selection criteria',
+    f2l2: 'Real performance & shortcomings',
+    f2l3: 'Price & stock change reminders',
+    f3t: 'Problem Solutions',
+    f3p: 'Start from the exact problem you face, break down the cause, get actionable steps, and see the tools or products that actually help.',
+    f3l1: 'Step-by-step guides you can follow',
+    f3l2: 'Recommended supporting tools',
+    f3l3: 'Common pitfalls & how to avoid them',
+    langEyebrow: 'Worldwide',
+    langTitle: 'One source, many languages, users everywhere',
+    langLead: 'Not simple translation. We rewrite for local language, currency, payment methods, availability, and habits — so what you read actually fits your situation.',
+    stepEyebrow: 'How It Works',
+    stepTitle: 'Three steps to your answer',
+    s1t: 'Choose your language',
+    s1p: 'Read in the language you know best. Content is adapted to local pricing, payment methods, and availability.',
+    s2t: 'Find your problem',
+    s2p: 'Browse AI tools, curated products, or solutions by scenario — and get straight to what matters to you.',
+    s3t: 'Decide with confidence',
+    s3p: 'See the trade-offs, who it suits, and the hidden costs — before you buy or commit.',
+    ctaTitle: 'Stop deciding by guesswork',
+    ctaLead: 'Visit HaoWordTool, choose your language, and find AI tools and curated products that actually fit you.',
+    ctaBtn: 'Go to haowordtool.com',
+    ctaNote: 'Prices, stock, and features may change. Always check the official or seller page.',
+    fl1: 'AI Products',
+    fl2: 'Curated Goods',
+    fl3: 'Solutions',
+    fl4: 'About',
+    footNote: 'Some links are affiliate links. They don\'t affect our conclusions.'
+  }
+};
+
+function setLang(lang) {
+  const dict = i18n[lang];
+  if (!dict) return;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.title = lang === 'zh'
+    ? 'HaoWordTool — 选对工具，少走弯路'
+    : 'HaoWordTool — Better Products, Smarter AI Tools';
+
+  document.querySelectorAll('.lang-switch button').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+
+  try { localStorage.setItem('hwt-lang', lang); } catch (e) {}
+}
+
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+
+try {
+  const saved = localStorage.getItem('hwt-lang');
+  if (saved && i18n[saved]) setLang(saved);
+} catch (e) {}
+</script>
+
+</body>
+</html>
