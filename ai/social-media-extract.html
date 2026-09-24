@@ -132,6 +132,21 @@
   .step h3{font-size:15px;font-weight:650;margin-bottom:7px}
   .step p{font-size:13.5px;color:var(--muted);line-height:1.65}
 
+  /* 创作引擎 */
+  .engine{border:1px solid rgba(79,209,197,.24);border-radius:20px;overflow:hidden;background:linear-gradient(145deg,rgba(79,209,197,.1),rgba(124,92,255,.08) 55%,rgba(255,255,255,.018));padding:34px}
+  .engine-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+  .engine h2{font-size:clamp(21px,3vw,31px);line-height:1.28;letter-spacing:-.025em;font-weight:800;margin-bottom:13px}
+  .engine p{color:var(--muted);font-size:14.2px;line-height:1.75}
+  .engine-flow{display:grid;gap:10px}
+  .engine-node{border:1px solid var(--border);border-radius:13px;background:rgba(7,7,10,.48);padding:16px}
+  .engine-node span{display:block;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent-3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+  .engine-node strong{display:block;font-size:15px;margin-bottom:6px}
+  .engine-node p{font-size:13px;line-height:1.65}
+  .engine-pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+  .engine-step{border:1px solid var(--border);border-radius:13px;background:rgba(255,255,255,.025);padding:16px}
+  .engine-step b{display:block;font-size:13.5px;margin-bottom:7px}
+  .engine-step p{font-size:12.8px;line-height:1.6}
+
   /* 视频示例 */
   .video-demo{
     max-width:820px;margin:0 auto;
@@ -214,6 +229,7 @@
   /* 响应式 */
   @media(max-width:900px){
     .grid3,.steps,.pricing{grid-template-columns:1fr}
+    .engine-grid,.engine-pipeline{grid-template-columns:1fr}
     .nav-links{display:none}
     .plan.featured{order:-1}
     .pricing{max-width:420px;margin:0 auto}
@@ -253,6 +269,7 @@
       <div class="nav-links">
         <a href="#features" data-zh="功能" data-en="Features">功能</a>
         <a href="#how" data-zh="怎么用" data-en="How it works">怎么用</a>
+        <a href="#engine" data-zh="创作引擎" data-en="Engine">创作引擎</a>
         <a href="#demo" data-zh="示例" data-en="Demo">示例</a>
         <a href="#pricing" data-zh="价格" data-en="Pricing">价格</a>
         <a href="#aireel" data-zh="AIReel" data-en="AIReel">AIReel</a>
@@ -385,6 +402,79 @@
            data-en="Copy scripts, download assets, spot topics from data — all in one page.">
            复制文案、下载素材、看数据找选题，一个页面全搞定。
         </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 创作引擎 -->
+<section class="sec" id="engine" style="padding-top:0">
+  <div class="wrap">
+    <div class="engine">
+      <div class="engine-grid">
+        <div>
+          <div class="aireel-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></svg>
+            <span data-zh="从采集工具到创作引擎" data-en="From capture tool to creation engine">从采集工具到创作引擎</span>
+          </div>
+          <h2 data-zh="把全网素材接入 Obsidian 或 Notion，让知识库持续生长。"
+              data-en="Pipe social data into Obsidian or Notion and let your knowledge base keep growing.">
+            把全网素材接入 Obsidian 或 Notion，让知识库持续生长。
+          </h2>
+          <p data-zh="Social Media Extract 负责抓取公开内容、评论和互动指标；Obsidian 或 Notion 负责存储、组织和协作；AI Agent 负责提炼、双链、标签和结构化归档。这样它就不只是采集工具，而是内容生产系统的前端数据管道。"
+             data-en="Social Media Extract captures public posts, comments and engagement signals. Obsidian or Notion stores and organizes the material. An AI Agent then distills, links, tags and archives it into reusable creation assets.">
+            Social Media Extract 负责抓取公开内容、评论和互动指标；Obsidian 或 Notion 负责存储、组织和协作；AI Agent 负责提炼、双链、标签和结构化归档。这样它就不只是采集工具，而是内容生产系统的前端数据管道。
+          </p>
+        </div>
+        <div class="engine-flow" aria-label="Social Media Extract knowledge engine workflow">
+          <div class="engine-node">
+            <span data-zh="数据源" data-en="Data source">数据源</span>
+            <strong data-zh="TikTok / Instagram / YouTube / X" data-en="TikTok / Instagram / YouTube / X">TikTok / Instagram / YouTube / X</strong>
+            <p data-zh="抓取主页、帖子、视频、评论、广告库和互动指标。"
+               data-en="Collect profiles, posts, videos, comments, ad library references and engagement metrics.">
+              抓取主页、帖子、视频、评论、广告库和互动指标。
+            </p>
+          </div>
+          <div class="engine-node">
+            <span data-zh="知识库" data-en="Knowledge base">知识库</span>
+            <strong data-zh="Obsidian 或 Notion" data-en="Obsidian or Notion">Obsidian 或 Notion</strong>
+            <p data-zh="写入 raw/articles、raw/notes、Processed 或数据库表，保留来源和上下文。"
+               data-en="Write into raw/articles, raw/notes, Processed folders or database tables with source context.">
+              写入 raw/articles、raw/notes、Processed 或数据库表，保留来源和上下文。
+            </p>
+          </div>
+          <div class="engine-node">
+            <span data-zh="AI Agent" data-en="AI Agent">AI Agent</span>
+            <strong data-zh="自动编目、提纯和归档" data-en="Catalog, distill and archive">自动编目、提纯和归档</strong>
+            <p data-zh="按知识库规则生成摘要、标签、双链、选题和可复用创作素材。"
+               data-en="Generate summaries, tags, backlinks, topic ideas and reusable creative assets by rule.">
+              按知识库规则生成摘要、标签、双链、选题和可复用创作素材。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="engine-pipeline">
+        <div class="engine-step">
+          <b data-zh="1. 采集" data-en="1. Capture">1. 采集</b>
+          <p data-zh="从公开社媒内容中持续收集素材、脚本、评论和数据。"
+             data-en="Continuously collect material, scripts, comments and metrics from public social content.">
+            从公开社媒内容中持续收集素材、脚本、评论和数据。
+          </p>
+        </div>
+        <div class="engine-step">
+          <b data-zh="2. 沉淀" data-en="2. Store">2. 沉淀</b>
+          <p data-zh="保存到 Obsidian 文件夹或 Notion 数据库，形成可检索的素材池。"
+             data-en="Save into Obsidian folders or Notion databases as a searchable source library.">
+            保存到 Obsidian 文件夹或 Notion 数据库，形成可检索的素材池。
+          </p>
+        </div>
+        <div class="engine-step">
+          <b data-zh="3. 生产" data-en="3. Create">3. 生产</b>
+          <p data-zh="由 AI Agent 自动整理为选题、笔记、脚本和发布资产。"
+             data-en="Let an AI Agent turn it into topics, notes, scripts and publishing assets.">
+            由 AI Agent 自动整理为选题、笔记、脚本和发布资产。
+          </p>
+        </div>
       </div>
     </div>
   </div>
