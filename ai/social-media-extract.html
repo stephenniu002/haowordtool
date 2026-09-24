@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Social Media Extract — 把全网视频的数据、文案和素材，收进一个页面</title>
-<meta name="description" content="输入一句话，自动抓取、整理、预览、复制、下载。帮你更快找选题、写脚本、做投放参考。" />
+<title>Social Media Extract — 采集 · 沉淀 · 执行 · 编译，一个闭环</title>
+<meta name="description" content="Social Media Extract 采集，Obsidian/Notion 沉淀，Loomy 执行，AI Agent 编译。从全网素材到可调用知识资产，全自动闭环。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,6 +20,7 @@
     --accent-2:#b18cff;
     --accent-3:#4fd1c5;
     --accent-4:#ff6b9d;
+    --accent-5:#f6c177;
     --glow:rgba(124,92,255,.35);
     --radius:14px;
     --maxw:1080px;
@@ -47,6 +48,7 @@
   .orb{position:absolute;border-radius:50%;filter:blur(110px);opacity:.45}
   .orb-1{width:560px;height:560px;background:radial-gradient(circle,rgba(124,92,255,.5),transparent 65%);top:-260px;left:50%;transform:translateX(-50%)}
   .orb-2{width:420px;height:420px;background:radial-gradient(circle,rgba(79,209,197,.18),transparent 65%);top:420px;right:-200px}
+  .orb-3{width:380px;height:380px;background:radial-gradient(circle,rgba(246,193,119,.14),transparent 65%);top:1800px;left:-180px}
 
   .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px;position:relative;z-index:1}
 
@@ -54,7 +56,7 @@
   header{position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);background:rgba(7,7,10,.72);border-bottom:1px solid transparent;transition:.3s}
   header.scrolled{border-bottom-color:var(--border);background:rgba(7,7,10,.88)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
-  .logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:15.5px;letter-spacing:-.02em;flex:none}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:15.5px;letter-spacing:0;flex:none}
   .logo-mark{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(140deg,var(--accent),#4a2fd6);box-shadow:0 0 20px var(--glow);flex:none}
   .logo-mark svg{width:15px;height:15px}
   .nav-links{display:flex;align-items:center;gap:26px}
@@ -95,9 +97,9 @@
   .hero{padding:84px 0 56px;text-align:center}
   .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid var(--border-strong);background:rgba(255,255,255,.035);font-size:12.5px;color:var(--muted);font-weight:500;margin-bottom:24px}
   .badge i{width:6px;height:6px;border-radius:50%;background:var(--accent-3);display:block;box-shadow:0 0 10px var(--accent-3)}
-  h1{font-size:clamp(27px,4.6vw,46px);line-height:1.25;letter-spacing:-.03em;font-weight:800;max-width:760px;margin:0 auto}
+  h1{font-size:clamp(27px,4.6vw,46px);line-height:1.25;letter-spacing:0;font-weight:800;max-width:820px;margin:0 auto}
   .grad{background:linear-gradient(105deg,#c4b1ff,#7c5cff 45%,#4fd1c5);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .sub{font-size:clamp(14.5px,1.7vw,16.5px);color:var(--muted);max-width:580px;margin:20px auto 0;line-height:1.75}
+  .sub{font-size:clamp(14.5px,1.7vw,16.5px);color:var(--muted);max-width:620px;margin:20px auto 0;line-height:1.75}
   .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
   .hero-note{margin-top:14px;font-size:12.5px;color:var(--muted-2)}
 
@@ -111,41 +113,72 @@
 
   /* 区块 */
   .sec{padding:72px 0}
-  .sec-head{text-align:center;max-width:560px;margin:0 auto 40px}
-  .sec-head h2{font-size:clamp(22px,3vw,32px);letter-spacing:-.025em;font-weight:800;line-height:1.3}
+  .sec-head{text-align:center;max-width:600px;margin:0 auto 44px}
+  .sec-head h2{font-size:clamp(22px,3vw,32px);letter-spacing:0;font-weight:800;line-height:1.3}
   .sec-head p{color:var(--muted);margin-top:12px;font-size:14.5px}
 
-  /* 三栏 */
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:.3s}
-  .card:hover{border-color:var(--border-strong);transform:translateY(-3px)}
-  .ico{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(150deg,rgba(124,92,255,.2),rgba(124,92,255,.05));border:1px solid rgba(124,92,255,.28);margin-bottom:16px}
-  .ico svg{width:18px;height:18px;color:var(--accent-2)}
-  .card h3{font-size:15.5px;font-weight:650;margin-bottom:8px;letter-spacing:-.01em}
-  .card p{font-size:13.8px;color:var(--muted);line-height:1.7}
+  /* 四节点生态 */
+  .ecosystem{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .node{
+    position:relative;
+    background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+    border:1px solid var(--border);border-radius:var(--radius);
+    padding:24px 22px;transition:.3s;
+  }
+  .node:hover{border-color:var(--border-strong);transform:translateY(-4px)}
+  .node-head{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+  .node-num{
+    width:26px;height:26px;border-radius:8px;flex:none;
+    display:grid;place-items:center;
+    font-family:var(--mono);font-size:12px;font-weight:700;
+    background:rgba(124,92,255,.16);color:var(--accent-2);
+    border:1px solid rgba(124,92,255,.3);
+  }
+  .node-role{
+    font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted-2);
+  }
+  .node h3{font-size:15.5px;font-weight:650;letter-spacing:0;margin-bottom:8px}
+  .node p{font-size:13.4px;color:var(--muted);line-height:1.7}
+  .node .node-tag{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:11px;font-weight:600;
+    padding:3px 9px;border-radius:999px;
+    margin-top:14px;
+  }
+  .node-1 .node-tag{background:rgba(124,92,255,.14);color:#c4b1ff;border:1px solid rgba(124,92,255,.28)}
+  .node-2 .node-tag{background:rgba(79,209,197,.12);color:#7fe8d8;border:1px solid rgba(79,209,197,.26)}
+  .node-3 .node-tag{background:rgba(246,193,119,.12);color:#f6c177;border:1px solid rgba(246,193,119,.26)}
+  .node-4 .node-tag{background:rgba(255,107,157,.12);color:#ffb3ce;border:1px solid rgba(255,107,157,.26)}
 
-  /* 三步 */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
-  .step{border:1px solid var(--border);border-radius:var(--radius);padding:22px;background:rgba(255,255,255,.018);transition:.3s}
-  .step:hover{border-color:rgba(124,92,255,.4)}
-  .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent-2);display:block;margin-bottom:12px;letter-spacing:.08em}
-  .step h3{font-size:15px;font-weight:650;margin-bottom:7px}
-  .step p{font-size:13.5px;color:var(--muted);line-height:1.65}
-
-  /* 创作引擎 */
-  .engine{border:1px solid rgba(79,209,197,.24);border-radius:20px;overflow:hidden;background:linear-gradient(145deg,rgba(79,209,197,.1),rgba(124,92,255,.08) 55%,rgba(255,255,255,.018));padding:34px}
-  .engine-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
-  .engine h2{font-size:clamp(21px,3vw,31px);line-height:1.28;letter-spacing:-.025em;font-weight:800;margin-bottom:13px}
-  .engine p{color:var(--muted);font-size:14.2px;line-height:1.75}
-  .engine-flow{display:grid;gap:10px}
-  .engine-node{border:1px solid var(--border);border-radius:13px;background:rgba(7,7,10,.48);padding:16px}
-  .engine-node span{display:block;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent-3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
-  .engine-node strong{display:block;font-size:15px;margin-bottom:6px}
-  .engine-node p{font-size:13px;line-height:1.65}
-  .engine-pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
-  .engine-step{border:1px solid var(--border);border-radius:13px;background:rgba(255,255,255,.025);padding:16px}
-  .engine-step b{display:block;font-size:13.5px;margin-bottom:7px}
-  .engine-step p{font-size:12.8px;line-height:1.6}
+  /* 四步流程 */
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:f;position:relative}
+  .flow::before{
+    content:"";position:absolute;top:38px;left:8%;right:8%;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(124,92,255,.3),rgba(79,209,197,.3),rgba(246,193,119,.3),rgba(255,107,157,.3),transparent);
+    z-index:0;
+  }
+  .flow-step{
+    position:relative;z-index:1;text-align:center;
+    padding:24px 16px 20px;
+    background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.008));
+    border:1px solid var(--border);border-radius:var(--radius);
+    transition:.3s;
+  }
+  .flow-step:hover{border-color:rgba(124,92,255,.4);transform:translateY(-3px)}
+  .flow-icon{
+    width:44px;height:44px;border-radius:50%;
+    display:grid;place-items:center;margin:0 auto 14px;
+    background:linear-gradient(150deg,rgba(124,92,255,.22),rgba(124,92,255,.05));
+    border:1px solid rgba(124,92,255,.32);
+  }
+  .flow-icon svg{width:19px;height:19px;color:var(--accent-2)}
+  .flow-step h3{font-size:14.5px;font-weight:650;margin-bottom:6px}
+  .flow-step p{font-size:12.8px;color:var(--muted);line-height:1.6}
+  .flow-step .flow-tool{
+    font-family:var(--mono);font-size:11px;color:var(--accent-2);
+    margin-top:10px;display:block;letter-spacing:.02em;
+  }
 
   /* 视频示例 */
   .video-demo{
@@ -195,13 +228,16 @@
     padding:4px 12px;border-radius:999px;box-shadow:0 6px 20px -6px var(--glow);white-space:nowrap}
   .plan h3{font-size:14.5px;font-weight:650;color:var(--muted);letter-spacing:.01em}
   .price{display:flex;align-items:baseline;gap:5px;margin:12px 0 4px}
-  .price b{font-size:38px;font-weight:800;letter-spacing:-.04em}
+  .price b{font-size:38px;font-weight:800;letter-spacing:0}
   .price span{font-size:13.5px;color:var(--muted-2)}
+  .plan .plan-sub{font-size:13px;color:var(--muted-2);margin-bottom:6px;min-height:18px}
   .plan .credits{font-size:13px;color:var(--accent-2);font-weight:600;margin-bottom:20px}
   .plan ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:18px 0 22px;border-top:1px solid var(--border);padding-top:18px}
   .plan li{display:flex;gap:9px;font-size:13.6px;color:var(--muted);align-items:flex-start;line-height:1.55}
   .plan li svg{width:15px;height:15px;color:var(--accent-2);flex:none;margin-top:3px}
   .plan.featured li{color:var(--text)}
+  .plan li.highlight{color:var(--text)}
+  .plan li.highlight svg{color:var(--accent-3)}
 
   /* AIReel */
   .aireel{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,107,157,.3);
@@ -209,7 +245,7 @@
     padding:44px 40px;text-align:center}
   .aireel-tag{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ffb3ce;margin-bottom:14px}
   .aireel-tag svg{width:13px;height:13px}
-  .aireel h2{font-size:clamp(20px,2.6vw,27px);line-height:1.3;letter-spacing:-.02em;font-weight:750;max-width:560px;margin:0 auto}
+  .aireel h2{font-size:clamp(20px,2.6vw,27px);line-height:1.3;letter-spacing:0;font-weight:750;max-width:560px;margin:0 auto}
   .aireel p{color:var(--muted);margin:14px auto 0;font-size:14.2px;max-width:520px;line-height:1.7}
   .aireel-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;justify-content:center}
 
@@ -217,8 +253,8 @@
   .cta{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(124,92,255,.28);
     background:linear-gradient(160deg,rgba(124,92,255,.16),rgba(124,92,255,.03) 50%,rgba(79,209,197,.06));
     padding:52px 32px;text-align:center}
-  .cta h2{font-size:clamp(21px,3vw,30px);letter-spacing:-.025em;font-weight:800;max-width:560px;margin:0 auto;line-height:1.35}
-  .cta p{color:var(--muted);margin:14px auto 26px;max-width:480px;font-size:14.5px}
+  .cta h2{font-size:clamp(21px,3vw,30px);letter-spacing:0;font-weight:800;max-width:600px;margin:0 auto;line-height:1.35}
+  .cta p{color:var(--muted);margin:14px auto 26px;max-width:520px;font-size:14.5px}
 
   /* 页脚 */
   footer{border-top:1px solid var(--border);margin-top:72px;padding:34px 0}
@@ -227,16 +263,20 @@
   .foot-links a:hover{color:var(--text)}
 
   /* 响应式 */
+  @media(max-width:1000px){
+    .ecosystem{grid-template-columns:repeat(2,1fr)}
+    .flow{grid-template-columns:repeat(2,1fr)}
+    .flow::before{display:none}
+  }
   @media(max-width:900px){
-    .grid3,.steps,.pricing{grid-template-columns:1fr}
-    .engine-grid,.engine-pipeline{grid-template-columns:1fr}
-    .nav-links{display:none}
+    .pricing{grid-template-columns:1fr;max-width:420px;margin:0 auto}
     .plan.featured{order:-1}
-    .pricing{max-width:420px;margin:0 auto}
+    .nav-links{display:none}
   }
   @media(max-width:640px){
     .hero{padding:56px 0 40px}
     .sec{padding:52px 0}
+    .ecosystem,.flow{grid-template-columns:1fr}
     .demo{flex-direction:column;align-items:stretch;padding:14px}
     .demo .btn{width:100%}
     .hero-cta .btn{width:100%}
@@ -251,7 +291,11 @@
 </head>
 <body>
 
-<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<div class="bg">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
 
 <!-- 导航 -->
 <header id="header">
@@ -267,9 +311,8 @@
       </a>
 
       <div class="nav-links">
-        <a href="#features" data-zh="功能" data-en="Features">功能</a>
-        <a href="#how" data-zh="怎么用" data-en="How it works">怎么用</a>
-        <a href="#engine" data-zh="创作引擎" data-en="Engine">创作引擎</a>
+        <a href="#ecosystem" data-zh="生态" data-en="Ecosystem">生态</a>
+        <a href="#flow" data-zh="流程" data-en="Flow">流程</a>
         <a href="#demo" data-zh="示例" data-en="Demo">示例</a>
         <a href="#pricing" data-zh="价格" data-en="Pricing">价格</a>
         <a href="#aireel" data-zh="AIReel" data-en="AIReel">AIReel</a>
@@ -306,33 +349,32 @@
   <div class="wrap">
     <div class="badge">
       <i></i>
-      <span data-zh="已接入 YouTube / X 公开数据" data-en="YouTube / X public data connected">已接入 YouTube / X 公开数据</span>
+      <span data-zh="采集 · 沉淀 · 执行 · 编译 — 完整闭环" data-en="Collect · Store · Execute · Compile — full loop">采集 · 沉淀 · 执行 · 编译 — 完整闭环</span>
     </div>
 
     <h1>
-      <span data-zh="把全网视频的数据、文案和素材，" data-en="Pull video data, scripts and assets from across the web,">把全网视频的数据、文案和素材，</span><span class="grad" data-zh="收进一个页面。" data-en="into one page.">收进一个页面。</span>
+      <span data-zh="把全网视频的数据、文案和素材，" data-en="Pull video data, scripts and assets from across the web,">把全网视频的数据、文案和素材，</span><span class="grad" data-zh="自动收进你的知识库。" data-en="auto-fed into your knowledge base.">自动收进你的知识库。</span>
     </h1>
 
     <p class="sub"
-       data-zh="输入一句话，自动抓取、整理、预览、复制、下载，帮你更快找选题、写脚本、做投放参考。"
-       data-en="Type one line. It auto-fetches, organizes, previews, copies and downloads — so you find topics, write scripts and plan campaigns faster.">
-      输入一句话，自动抓取、整理、预览、复制、下载，帮你更快找选题、写脚本、做投放参考。
+       data-zh="Social Media Extract 负责采集，Obsidian / Notion 负责沉淀，Loomy 负责桌面执行，AI Agent 负责编译。四个角色各司其职，全自动闭环。"
+       data-en="Social Media Extract collects, Obsidian / Notion stores, Loomy executes on desktop, AI Agent compiles. Four roles, one automated loop.">
+      Social Media Extract 负责采集，Obsidian / Notion 负责沉淀，Loomy 负责桌面执行，AI Agent 负责编译。四个角色各司其职，全自动闭环。
     </p>
 
     <div class="hero-cta">
       <a href="#pricing" class="btn btn-primary btn-lg"
          data-zh="查看价格" data-en="See pricing">查看价格</a>
-      <a href="#demo" class="btn btn-ghost btn-lg"
-         data-zh="看示例" data-en="See demo">看示例</a>
+      <a href="#ecosystem" class="btn btn-ghost btn-lg"
+         data-zh="看生态" data-en="See ecosystem">看生态</a>
     </div>
 
     <p class="hero-note"
-       data-zh="不用装插件 · 不用开十几个标签页 · $10 起"
-       data-en="No plugin · No 10+ tabs · From $10">
-      不用装插件 · 不用开十几个标签页 · $10 起
+       data-zh="不用装插件 · 数据本地闭环 · $19 起"
+       data-en="No plugin · Local data loop · From $19">
+      不用装插件 · 数据本地闭环 · $19 起
     </p>
 
-    <!-- 输入演示 -->
     <div class="demo">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input type="text" id="demoInput"
@@ -340,157 +382,124 @@
              data-en-placeholder="Try: camping gear review, fat-loss meals, AI tools…"
              placeholder="试试输入：露营装备测评、减脂餐、AI 工具推荐…" aria-label="关键词" />
       <button class="btn btn-primary" id="demoBtn"
-              data-zh="抓取" data-en="Fetch"
-              onclick="window.open('https://bit.ly/Gavin_kol','_blank')">抓取</button>
+              data-zh="采集" data-en="Collect"
+              onclick="window.open('https://bit.ly/Gavin_kol','_blank')">采集</button>
     </div>
   </div>
 </section>
 
-<!-- 三栏能力 -->
-<section class="sec" id="features">
+<!-- 四节点生态 -->
+<section class="sec" id="ecosystem">
   <div class="wrap">
-    <div class="grid3">
-      <div class="card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
-        <h3 data-zh="播放数据" data-en="Performance data">播放数据</h3>
-        <p data-zh="播放量、点赞、评论、发布时间，一眼对比哪条真的跑起来了。"
-           data-en="Views, likes, comments and publish time — see at a glance which one actually took off.">
-           播放量、点赞、评论、发布时间，一眼对比哪条真的跑起来了。
+    <div class="sec-head">
+      <h2 data-zh="创作引擎的四个节点" data-en="Four nodes of the creation engine">创作引擎的四个节点</h2>
+      <p data-zh="每个节点负责一件事，串起来就是一个完整的自动化生产线。" data-en="Each node does one thing. Together they form a full automated pipeline.">每个节点负责一件事，串起来就是一个完整的自动化生产线。</p>
+    </div>
+
+    <div class="ecosystem">
+
+      <div class="node node-1">
+        <div class="node-head">
+          <span class="node-num">01</span>
+          <span class="node-role" data-zh="采集器" data-en="Collector">采集器</span>
+        </div>
+        <h3 data-zh="Social Media Extract" data-en="Social Media Extract">Social Media Extract</h3>
+        <p data-zh="从 YouTube、X、TikTok 等平台抓取公开的播放数据、口播文案和视频素材。"
+           data-en="Fetches public views, scripts and video assets from YouTube, X, TikTok and more.">
+          从 YouTube、X、TikTok 等平台抓取公开的播放数据、口播文案和视频素材。
         </p>
+        <span class="node-tag" data-zh="输入端" data-en="Input">输入端</span>
       </div>
-      <div class="card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg></div>
-        <h3 data-zh="口播文案" data-en="Spoken script">口播文案</h3>
-        <p data-zh="能拿到字幕的视频，自动提取成文字。直接复制，改改就是你的脚本。"
-           data-en="Videos with captions get auto-transcribed. Copy it, tweak it, and it's your script.">
-           能拿到字幕的视频，自动提取成文字。直接复制，改改就是你的脚本。
+
+      <div class="node node-2">
+        <div class="node-head">
+          <span class="node-num">02</span>
+          <span class="node-role" data-zh="知识库" data-en="Knowledge base">知识库</span>
+        </div>
+        <h3 data-zh="Obsidian / Notion" data-en="Obsidian / Notion">Obsidian / Notion</h3>
+        <p data-zh="采集结果自动写入本地 Markdown 或 Notion 数据库，按 raw / wiki 分层沉淀。"
+           data-en="Collected data flows into local Markdown or Notion databases, layered as raw / wiki.">
+          采集结果自动写入本地 Markdown 或 Notion 数据库，按 raw / wiki 分层沉淀。
         </p>
+        <span class="node-tag" data-zh="沉淀层" data-en="Storage">沉淀层</span>
       </div>
-      <div class="card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m10 9 5 3-5 3V9Z"/></svg></div>
-        <h3 data-zh="视频素材" data-en="Video assets">视频素材</h3>
-        <p data-zh="上传本地视频，按项目归类。预览、下载、整理，散落的素材收进一个库。"
-           data-en="Upload local videos, sort by project. Preview, download, organize — scattered assets in one library.">
-           上传本地视频，按项目归类。预览、下载、整理，散落的素材收进一个库。
+
+      <div class="node node-3">
+        <div class="node-head">
+          <span class="node-num">03</span>
+          <span class="node-role" data-zh="桌面执行器" data-en="Desktop executor">桌面执行器</span>
+        </div>
+        <h3 data-zh="Loomy" data-en="Loomy">Loomy</h3>
+        <p data-zh="授权访问知识库文件夹，把移动、重命名、归档、编译这些动作真正跑起来。支持定时任务。"
+           data-en="Granted access to your knowledge base folder, it runs move, rename, archive, compile for real. Supports scheduled tasks.">
+          授权访问知识库文件夹，把移动、重命名、归档、编译这些动作真正跑起来。支持定时任务。
         </p>
+        <span class="node-tag" data-zh="执行层" data-en="Execution">执行层</span>
       </div>
+
+      <div class="node node-4">
+        <div class="node-head">
+          <span class="node-num">04</span>
+          <span class="node-role" data-zh="编译器" data-en="Compiler">编译器</span>
+        </div>
+        <h3 data-zh="AI Agent" data-en="AI Agent">AI Agent</h3>
+        <p data-zh="按照 AGENTS.md 规则读取原始资料，提纯成概念页、实体页和主题综述。"
+           data-en="Reads raw files per AGENTS.md rules, distills into concept, entity and topic pages.">
+          按照 AGENTS.md 规则读取原始资料，提纯成概念页、实体页和主题综述。
+        </p>
+        <span class="node-tag" data-zh="编译层" data-en="Compile">编译层</span>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- 三步 -->
-<section class="sec" id="how" style="padding-top:0">
+<!-- 四步流程 -->
+<section class="sec" id="flow" style="padding-top:0">
   <div class="wrap">
-    <div class="steps">
-      <div class="step">
-        <h3 data-zh="输入一句话" data-en="Type one line">输入一句话</h3>
-        <p data-zh="关键词、话题、竞品账号，想到什么就输什么。"
-           data-en="Keyword, topic, competitor account — type whatever's on your mind.">
-           关键词、话题、竞品账号，想到什么就输什么。
-        </p>
-      </div>
-      <div class="step">
-        <h3 data-zh="自动抓取整理" data-en="Auto-fetch & organize">自动抓取整理</h3>
-        <p data-zh="数据、文案、素材一起拉回来，按热度排好。"
-           data-en="Data, scripts and assets come back together, sorted by popularity.">
-           数据、文案、素材一起拉回来，按热度排好。
-        </p>
-      </div>
-      <div class="step">
-        <h3 data-zh="直接用" data-en="Use it right away">直接用</h3>
-        <p data-zh="复制文案、下载素材、看数据找选题，一个页面全搞定。"
-           data-en="Copy scripts, download assets, spot topics from data — all in one page.">
-           复制文案、下载素材、看数据找选题，一个页面全搞定。
-        </p>
-      </div>
+    <div class="sec-head">
+      <h2 data-zh="四步走完全流程" data-en="Four steps, full pipeline">四步走完全流程</h2>
+      <p data-zh="从输入一个关键词，到知识库里多出一批可调用的资产。" data-en="From typing one keyword to having callable assets in your knowledge base.">从输入一个关键词，到知识库里多出一批可调用的资产。</p>
     </div>
-  </div>
-</section>
 
-<!-- 创作引擎 -->
-<section class="sec" id="engine" style="padding-top:0">
-  <div class="wrap">
-    <div class="engine">
-      <div class="engine-grid">
-        <div>
-          <div class="aireel-tag">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></svg>
-            <span data-zh="从采集工具到创作引擎" data-en="From capture tool to creation engine">从采集工具到创作引擎</span>
-          </div>
-          <h2 data-zh="把全网素材接入 Obsidian 或 Notion，再交给 Loomy 自动执行。"
-              data-en="Pipe social data into Obsidian or Notion, then let Loomy execute the desktop work.">
-            把全网素材接入 Obsidian 或 Notion，再交给 Loomy 自动执行。
-          </h2>
-          <p data-zh="Social Media Extract 负责抓取公开内容、评论和互动指标；Obsidian 或 Notion 负责存储、组织和协作；Loomy 负责桌面文件操作、目录同步和编译任务；AI Agent 负责提炼、双链、标签和结构化归档。这样它就不只是采集工具，而是内容生产系统的前端数据管道。"
-             data-en="Social Media Extract captures public posts, comments and engagement signals. Obsidian or Notion stores and organizes the material. Loomy executes desktop file operations, folder sync and compile tasks. An AI Agent then distills, links, tags and archives it into reusable creation assets.">
-            Social Media Extract 负责抓取公开内容、评论和互动指标；Obsidian 或 Notion 负责存储、组织和协作；Loomy 负责桌面文件操作、目录同步和编译任务；AI Agent 负责提炼、双链、标签和结构化归档。这样它就不只是采集工具，而是内容生产系统的前端数据管道。
-          </p>
+    <div class="flow">
+
+      <div class="flow-step">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         </div>
-        <div class="engine-flow" aria-label="Social Media Extract knowledge engine workflow">
-          <div class="engine-node">
-            <span data-zh="数据源" data-en="Data source">数据源</span>
-            <strong data-zh="TikTok / Instagram / YouTube / X" data-en="TikTok / Instagram / YouTube / X">TikTok / Instagram / YouTube / X</strong>
-            <p data-zh="抓取主页、帖子、视频、评论、广告库和互动指标。"
-               data-en="Collect profiles, posts, videos, comments, ad library references and engagement metrics.">
-              抓取主页、帖子、视频、评论、广告库和互动指标。
-            </p>
-          </div>
-          <div class="engine-node">
-            <span data-zh="知识库" data-en="Knowledge base">知识库</span>
-            <strong data-zh="Obsidian 或 Notion" data-en="Obsidian or Notion">Obsidian 或 Notion</strong>
-            <p data-zh="写入 raw/articles、raw/notes、Processed 或数据库表，保留来源和上下文。"
-               data-en="Write into raw/articles, raw/notes, Processed folders or database tables with source context.">
-              写入 raw/articles、raw/notes、Processed 或数据库表，保留来源和上下文。
-            </p>
-          </div>
-          <div class="engine-node">
-            <span data-zh="桌面执行器" data-en="Desktop executor">桌面执行器</span>
-            <strong data-zh="Loomy" data-en="Loomy">Loomy</strong>
-            <p data-zh="自动执行文件移动、批量重命名、目录同步、脚本运行和编译任务。"
-               data-en="Run file moves, batch renames, folder sync, local scripts and compile tasks automatically.">
-              自动执行文件移动、批量重命名、目录同步、脚本运行和编译任务。
-            </p>
-          </div>
-          <div class="engine-node">
-            <span data-zh="AI Agent" data-en="AI Agent">AI Agent</span>
-            <strong data-zh="自动编目、提纯和归档" data-en="Catalog, distill and archive">自动编目、提纯和归档</strong>
-            <p data-zh="按知识库规则生成摘要、标签、双链、选题和可复用创作素材。"
-               data-en="Generate summaries, tags, backlinks, topic ideas and reusable creative assets by rule.">
-              按知识库规则生成摘要、标签、双链、选题和可复用创作素材。
-            </p>
-          </div>
-        </div>
+        <h3 data-zh="采集" data-en="Collect">采集</h3>
+        <p data-zh="输入关键词，抓取全网公开的播放数据、文案和素材。" data-en="Type a keyword, fetch public views, scripts and assets.">输入关键词，抓取全网公开的播放数据、文案和素材。</p>
+        <span class="flow-tool">Social Media Extract</span>
       </div>
-      <div class="engine-pipeline">
-        <div class="engine-step">
-          <b data-zh="1. 采集" data-en="1. Capture">1. 采集</b>
-          <p data-zh="从公开社媒内容中持续收集素材、脚本、评论和数据。"
-             data-en="Continuously collect material, scripts, comments and metrics from public social content.">
-            从公开社媒内容中持续收集素材、脚本、评论和数据。
-          </p>
+
+      <div class="flow-step">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
         </div>
-        <div class="engine-step">
-          <b data-zh="2. 沉淀" data-en="2. Store">2. 沉淀</b>
-          <p data-zh="保存到 Obsidian 文件夹或 Notion 数据库，形成可检索的素材池。"
-             data-en="Save into Obsidian folders or Notion databases as a searchable source library.">
-            保存到 Obsidian 文件夹或 Notion 数据库，形成可检索的素材池。
-          </p>
-        </div>
-        <div class="engine-step">
-          <b data-zh="3. 生产" data-en="3. Create">3. 生产</b>
-          <p data-zh="Loomy 负责移动文件、触发脚本、同步目录和执行编译任务。"
-             data-en="Loomy moves files, triggers scripts, syncs folders and runs compile tasks.">
-            Loomy 负责移动文件、触发脚本、同步目录和执行编译任务。
-          </p>
-        </div>
-        <div class="engine-step">
-          <b data-zh="4. 编译" data-en="4. Compile">4. 编译</b>
-          <p data-zh="AI Agent 自动整理为选题、笔记、脚本和可发布资产。"
-             data-en="An AI Agent turns the material into topics, notes, scripts and publishable assets.">
-            AI Agent 自动整理为选题、笔记、脚本和可发布资产。
-          </p>
-        </div>
+        <h3 data-zh="沉淀" data-en="Store">沉淀</h3>
+        <p data-zh="结果自动写入 Obsidian 的 raw/ 目录或 Notion 数据库。" data-en="Results auto-write into Obsidian's raw/ folder or Notion database.">结果自动写入 Obsidian 的 raw/ 目录或 Notion 数据库。</p>
+        <span class="flow-tool">Obsidian / Notion</span>
       </div>
+
+      <div class="flow-step">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.9 2.9M16.2 16.2l2.9 2.9M2 12h4M18 12h4M4.9 19.1l2.9-2.9M16.2 7.8l2.9-2.9"/></svg>
+        </div>
+        <h3 data-zh="执行" data-en="Execute">执行</h3>
+        <p data-zh="Loomy 定时扫描新资料，移动、归档、触发编译流程。" data-en="Loomy scans for new files on schedule, moves, archives and triggers compile.">Loomy 定时扫描新资料，移动、归档、触发编译流程。</p>
+        <span class="flow-tool">Loomy</span>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+        </div>
+        <h3 data-zh="编译" data-en="Compile">编译</h3>
+        <p data-zh="AI Agent 按规则提纯成概念页、实体页、主题综述，建立双链。" data-en="AI Agent distills into concept, entity, topic pages and builds backlinks.">AI Agent 按规则提纯成概念页、实体页、主题综述，建立双链。</p>
+        <span class="flow-tool">AI Agent</span>
+      </div>
+
     </div>
   </div>
 </section>
@@ -499,28 +508,49 @@
 <section class="sec" id="demo" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <h2 data-zh="看一个真实示例" data-en="See a real example">看一个真实示例</h2>
-      <p data-zh="下面这条视频就是用 Social Media Extract 抓取并整理的素材。" data-en="This video was fetched and organized with Social Media Extract.">下面这条视频就是用 Social Media Extract 抓取并整理的素材。</p>
+      <h2 data-zh="看一个流程视频示例" data-en="See a workflow video example">看一个流程视频示例</h2>
+      <p data-zh="这个示例展示素材如何从社媒采集，进入知识库，再由 Loomy 和 AI Agent 自动编译成创作资产。" data-en="This example shows how social content is captured, stored, executed by Loomy and compiled by an AI Agent into creation assets.">这个示例展示素材如何从社媒采集，进入知识库，再由 Loomy 和 AI Agent 自动编译成创作资产。</p>
     </div>
 
     <div class="video-demo">
       <div class="video-demo-head">
         <span class="vd-dot"></span>
-        <b data-zh="示例视频" data-en="Sample video">示例视频</b>
-        <span data-zh="YouTube 公开视频 · 已抓取播放数据与文案" data-en="YouTube public video · data and script fetched">YouTube 公开视频 · 已抓取播放数据与文案</span>
+        <b data-zh="知识引擎演示" data-en="Knowledge engine demo">知识引擎演示</b>
+        <span data-zh="采集 → 沉淀 → Loomy 执行 → AI Agent 编译" data-en="Capture → Store → Loomy execution → AI Agent compile">采集 → 沉淀 → Loomy 执行 → AI Agent 编译</span>
       </div>
       <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/_wthsTUQyy0"
-          title="Social Media Extract 示例视频"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+        <div class="workflow-video" role="img" aria-label="Social Media Extract workflow video example">
+          <div class="workflow-title">
+            <h3 data-zh="从一条热视频，到一组可发布的选题、脚本和知识卡片。"
+                data-en="From one trending video to publishable topics, scripts and knowledge cards.">
+              从一条热视频，到一组可发布的选题、脚本和知识卡片。
+            </h3>
+            <span data-zh="00:18 演示" data-en="00:18 demo">00:18 演示</span>
+          </div>
+          <div class="workflow-lane">
+            <div class="workflow-card">
+              <b data-zh="1. 抓取素材" data-en="1. Capture">1. 抓取素材</b>
+              <p data-zh="输入关键词，收集公开视频、文案、评论和互动数据。" data-en="Enter a topic and collect public videos, captions, comments and engagement data.">输入关键词，收集公开视频、文案、评论和互动数据。</p>
+            </div>
+            <div class="workflow-card">
+              <b data-zh="2. 写入知识库" data-en="2. Store">2. 写入知识库</b>
+              <p data-zh="保存到 Obsidian 文件夹或 Notion 数据库，保留来源。" data-en="Save into Obsidian folders or a Notion database with source context.">保存到 Obsidian 文件夹或 Notion 数据库，保留来源。</p>
+            </div>
+            <div class="workflow-card">
+              <b data-zh="3. Loomy 执行" data-en="3. Loomy runs">3. Loomy 执行</b>
+              <p data-zh="自动移动文件、同步目录、触发脚本和编译任务。" data-en="Move files, sync folders, trigger scripts and run compile tasks.">自动移动文件、同步目录、触发脚本和编译任务。</p>
+            </div>
+            <div class="workflow-card">
+              <b data-zh="4. Agent 编译" data-en="4. Agent compiles">4. Agent 编译</b>
+              <p data-zh="生成摘要、双链、标签、选题和可发布脚本。" data-en="Create summaries, backlinks, tags, topics and publishable scripts.">生成摘要、双链、标签、选题和可发布脚本。</p>
+            </div>
+          </div>
+          <div class="workflow-bar" aria-hidden="true"><span></span></div>
+        </div>
       </div>
       <div class="video-note">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        <span data-zh="播放量、点赞、评论、口播文案已自动抓取整理。" data-en="Views, likes, comments and script were auto-fetched.">播放量、点赞、评论、口播文案已自动抓取整理。</span>
+        <span data-zh="新示例不再依赖外部 YouTube iframe，直接展示完整知识生产闭环。" data-en="The new example no longer depends on an external YouTube iframe and shows the full knowledge-production loop.">新示例不再依赖外部 YouTube iframe，直接展示完整知识生产闭环。</span>
       </div>
     </div>
   </div>
@@ -531,52 +561,63 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 data-zh="选择你的方案" data-en="Choose your plan">选择你的方案</h2>
-      <p data-zh="按抓取条数计费，最低 $10 起。随时升级或取消。" data-en="Pay by fetches. From $10. Upgrade or cancel anytime.">按抓取条数计费，最低 $10 起。随时升级或取消。</p>
+      <p data-zh="按系统能力分档，采集量只是其中一项。随时升级或取消。" data-en="Tiered by system capability. Fetch volume is just one part. Upgrade or cancel anytime.">按系统能力分档，采集量只是其中一项。随时升级或取消。</p>
     </div>
 
     <div class="pricing">
+
+      <!-- 入门版 -->
       <div class="plan">
         <h3 data-zh="入门版" data-en="Starter">入门版</h3>
-        <div class="price"><b>$10</b><span data-zh="/ 月" data-en="/ mo">/ 月</span></div>
-        <div class="credits" data-zh="1,000 条抓取 / 月" data-en="1,000 fetches / mo">1,000 条抓取 / 月</div>
+        <div class="price"><b>$19</b><span data-zh="/ 月" data-en="/ mo">/ 月</span></div>
+        <div class="plan-sub" data-zh="适合已经会自己搭的人" data-en="For those who can build it themselves">适合已经会自己搭的人</div>
+        <div class="credits" data-zh="2,000 条采集 / 月" data-en="2,000 fetches / mo">2,000 条采集 / 月</div>
         <a href="https://bit.ly/Gavin_kol" target="_blank" rel="noopener" class="btn btn-ghost btn-block"
            data-zh="开始使用" data-en="Get started">开始使用</a>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="YouTube / X 数据抓取" data-en="YouTube / X data fetching">YouTube / X 数据抓取</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="口播文案提取" data-en="Script extraction">口播文案提取</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="素材库 5 GB" data-en="5 GB asset library">素材库 5 GB</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="YouTube / X / TikTok 数据采集" data-en="YouTube / X / TikTok data fetching">YouTube / X / TikTok 数据采集</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="基础口播文案提取" data-en="Basic script extraction">基础口播文案提取</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="写入 Obsidian / Notion" data-en="Write to Obsidian / Notion">写入 Obsidian / Notion</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="单账号" data-en="Single seat">单账号</span></li>
         </ul>
       </div>
 
+      <!-- 专业版 -->
       <div class="plan featured">
         <span class="plan-tag" data-zh="最受欢迎" data-en="Most popular">最受欢迎</span>
         <h3 data-zh="专业版" data-en="Pro">专业版</h3>
-        <div class="price"><b>$29</b><span data-zh="/ 月" data-en="/ mo">/ 月</span></div>
-        <div class="credits" data-zh="5,000 条抓取 / 月" data-en="5,000 fetches / mo">5,000 条抓取 / 月</div>
+        <div class="price"><b>$49</b><span data-zh="/ 月" data-en="/ mo">/ 月</span></div>
+        <div class="plan-sub" data-zh="适合不想从零调的人" data-en="For those who don't want to build from scratch">适合不想从零调的人</div>
+        <div class="credits" data-zh="10,000 条采集 / 月" data-en="10,000 fetches / mo">10,000 条采集 / 月</div>
         <a href="https://bit.ly/Gavin_kol" target="_blank" rel="noopener" class="btn btn-primary btn-block"
            data-zh="立即开通" data-en="Get Pro">立即开通</a>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="包含入门版全部功能" data-en="Everything in Starter">包含入门版全部功能</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="素材库 50 GB" data-en="50 GB asset library">素材库 50 GB</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="批量抓取任务" data-en="Bulk fetch jobs">批量抓取任务</span></li>
+          <li class="highlight"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="AGENTS.md 规则包（三层架构 + 10 条维护铁律）" data-en="AGENTS.md rule pack (3-layer + 10 rules)">AGENTS.md 规则包（三层架构 + 10 条维护铁律）</span></li>
+          <li class="highlight"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="Loomy 执行脚本模板（自动扫描 / 归档 / 触发编译）" data-en="Loomy execution templates (scan / archive / trigger)">Loomy 执行脚本模板（自动扫描 / 归档 / 触发编译）</span></li>
+          <li class="highlight"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="知识库目录模板（raw / wiki / schema 开箱即用）" data-en="Knowledge base folder template (raw / wiki / schema)">知识库目录模板（raw / wiki / schema 开箱即用）</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="增量维护 + 周检 Prompt 全套" data-en="Full incremental + weekly review prompts">增量维护 + 周检 Prompt 全套</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="优先客服支持" data-en="Priority support">优先客服支持</span></li>
         </ul>
       </div>
 
+      <!-- 团队版 -->
       <div class="plan">
         <h3 data-zh="团队版" data-en="Team">团队版</h3>
-        <div class="price"><b>$99</b><span data-zh="/ 月" data-en="/ mo">/ 月</span></div>
-        <div class="credits" data-zh="30,000 条抓取 / 月" data-en="30,000 fetches / mo">30,000 条抓取 / 月</div>
+        <div class="price"><b>$149</b><span data-zh="/ 月" data-en="/ mo">/ 月</span></div>
+        <div class="plan-sub" data-zh="适合小团队 / 代运营 / 工作室" data-en="For small teams, agencies and studios">适合小团队 / 代运营 / 工作室</div>
+        <div class="credits" data-zh="50,000 条采集 / 月" data-en="50,000 fetches / mo">50,000 条采集 / 月</div>
         <a href="https://bit.ly/Gavin_kol" target="_blank" rel="noopener" class="btn btn-ghost btn-block"
            data-zh="联系开通" data-en="Contact us">联系开通</a>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="包含专业版全部功能" data-en="Everything in Pro">包含专业版全部功能</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="素材库 500 GB" data-en="500 GB asset library">素材库 500 GB</span></li>
+          <li class="highlight"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="Loomy 定时任务配置（每天 / 每周自动跑）" data-en="Loomy scheduled tasks (daily / weekly)">Loomy 定时任务配置（每天 / 每周自动跑）</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="5 个成员席位" data-en="5 team seats">5 个成员席位</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="多知识库分发（主库 + 多项目同步）" data-en="Multi-vault distribution (main + projects)">多知识库分发（主库 + 多项目同步）</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span data-zh="专属客服通道" data-en="Dedicated support">专属客服通道</span></li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
@@ -611,13 +652,13 @@
 <section class="sec" style="padding-top:0">
   <div class="wrap">
     <div class="cta">
-      <h2 data-zh="输入一句话，把全网视频变成你的选题库和脚本库。"
-          data-en="Type one line and turn the whole web's videos into your topic and script library.">
-        输入一句话，把全网视频变成你的选题库和脚本库。
+      <h2 data-zh="采集、沉淀、执行、编译，一个闭环跑通。"
+          data-en="Collect, store, execute, compile — one loop that works.">
+        采集、沉淀、执行、编译，一个闭环跑通。
       </h2>
-      <p data-zh="$10 起，不用装插件，不用开十几个标签页。"
-         data-en="From $10. No plugin, no 10+ tabs.">
-        $10 起，不用装插件，不用开十几个标签页。
+      <p data-zh="$19 起，按系统能力分档。不用装插件，数据本地闭环。"
+         data-en="From $19. Tiered by system capability. No plugin, local data loop.">
+        $19 起，按系统能力分档。不用装插件，数据本地闭环。
       </p>
       <a href="#pricing" class="btn btn-primary btn-lg"
          data-zh="查看价格" data-en="See pricing">查看价格</a>
@@ -635,6 +676,7 @@
       </span>
       <div class="foot-links">
         <a href="https://scrapecreators.com" target="_blank" rel="noopener">ScrapeCreators</a>
+        <a href="https://loomy.xunfei.cn/" target="_blank" rel="noopener">Loomy</a>
         <a href="https://aireel.go.link/3MgMk" target="_blank" rel="noopener">AIReel App</a>
       </div>
     </div>
@@ -654,11 +696,11 @@ const langLabel = document.getElementById('langLabel');
 const TEXT = {
   zh: {
     langLabel: '中文',
-    title: 'Social Media Extract — 把全网视频的数据、文案和素材，收进一个页面'
+    title: 'Social Media Extract — 采集 · 沉淀 · 执行 · 编译，一个闭环'
   },
   en: {
     langLabel: 'English',
-    title: 'Social Media Extract — Video data, scripts and assets in one page'
+    title: 'Social Media Extract — Collect, Store, Execute, Compile'
   }
 };
 
