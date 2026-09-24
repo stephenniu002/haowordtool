@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Workflow Systems for Digital Sellers | HaoWordTool</title>
+  <meta name="description" content="AI workflow systems for Etsy sellers, creators, and small teams. Start with the Etsy Digital Product SEO Listing System: prompts, worksheet, troubleshooting, and buyer-message workflows.">
+  <link rel="canonical" href="https://haowordtool.com/ai-workflow-systems.html">
+  <meta property="og:title" content="AI Workflow Systems for Digital Sellers">
+  <meta property="og:description" content="Stop selling prompts. Start using tested AI workflows for digital product listings, buyer messages, and seller operations.">
+  <meta property="og:image" content="https://haowordtool.com/assets/gumroad-square-cover-etsy-ai-seo-1600.png">
+  <meta property="og:url" content="https://haowordtool.com/ai-workflow-systems.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site-theme.css">
+  <style>
+    :root {
+      --ink: #0a0a0f;
+      --panel: #12121a;
+      --line: #1f1f2e;
+      --muted: rgba(255,255,255,.62);
+      --soft: rgba(255,255,255,.08);
+      --accent: #6c5ce7;
+      --accent2: #00d2ff;
+      --gold: #f5b041;
+      --green: #34d399;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--ink);
+      color: #fff;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .page-shell { overflow: hidden; }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(10,10,15,.78);
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      min-height: 70px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      font-weight: 900;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: rgba(255,255,255,.68);
+      font-size: 14px;
+    }
+    .nav-links a {
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #fff; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: var(--panel);
+      text-decoration: none;
+      font-weight: 700;
+      color: #fff;
+    }
+    .button.primary {
+      border: 0;
+      background: linear-gradient(135deg, var(--accent), #4b38d8);
+      box-shadow: 0 18px 44px -24px rgba(108,92,231,.9);
+    }
+    .button:hover { transform: translateY(-1px); }
+    .hero {
+      position: relative;
+      padding: 92px 24px 72px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: -25% -10% auto;
+      height: 700px;
+      background:
+        radial-gradient(520px circle at 30% 20%, rgba(108,92,231,.33), transparent 62%),
+        radial-gradient(520px circle at 70% 20%, rgba(0,210,255,.2), transparent 60%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 54px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(18,18,26,.78);
+      color: rgba(255,255,255,.76);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+    h1 {
+      margin: 22px 0 22px;
+      font-size: clamp(42px, 6.2vw, 76px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lead {
+      max-width: 670px;
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0 0 32px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+    .trust-line {
+      margin-top: 18px;
+      color: rgba(255,255,255,.44);
+      font-size: 13px;
+    }
+    .product-visual {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      background: rgba(18,18,26,.72);
+      padding: 18px;
+      box-shadow: 0 24px 80px -48px rgba(0,0,0,.9);
+    }
+    .product-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+    .section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 74px 24px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+    .kicker {
+      color: var(--accent2);
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    .section-head p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 18px;
+      background: var(--panel);
+      padding: 24px;
+    }
+    .card.featured {
+      border-color: rgba(108,92,231,.62);
+      box-shadow: 0 24px 70px -44px rgba(108,92,231,.9);
+    }
+    .label {
+      color: var(--accent2);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 800;
+    }
+    h3 {
+      margin: 12px 0 10px;
+      font-size: 22px;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+    .card p {
+      margin: 0;
+      color: rgba(255,255,255,.58);
+      font-size: 14px;
+    }
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: grid;
+      gap: 10px;
+      color: rgba(255,255,255,.76);
+      font-size: 14px;
+    }
+    .list li:before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+    .price-row {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .price {
+      font-size: 30px;
+      font-weight: 900;
+    }
+    .roadmap {
+      opacity: .72;
+    }
+    .badge {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(245,176,65,.13);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      margin-top: 20px;
+    }
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    .example {
+      border: 1px solid rgba(255,255,255,.1);
+      background: var(--panel);
+      border-radius: 18px;
+      padding: 24px;
+    }
+    .example span {
+      display: block;
+      color: rgba(255,255,255,.42);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 12px;
+    }
+    .example strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .example.good {
+      border-color: rgba(52,211,153,.38);
+      background: rgba(52,211,153,.08);
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 18px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      background: rgba(18,18,26,.72);
+    }
+    th, td {
+      padding: 16px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+    th {
+      color: rgba(255,255,255,.55);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .1em;
+      background: rgba(255,255,255,.03);
+    }
+    td {
+      color: rgba(255,255,255,.72);
+    }
+    .faq {
+      max-width: 860px;
+    }
+    details {
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px;
+      padding: 18px 20px;
+      background: var(--panel);
+      margin-bottom: 12px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+    }
+    details p {
+      color: var(--muted);
+      margin: 14px 0 0;
+    }
+    .final-cta {
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 26px;
+      padding: 48px 28px;
+      background:
+        radial-gradient(520px circle at 50% 0%, rgba(108,92,231,.28), transparent 68%),
+        var(--panel);
+    }
+    footer {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 24px 48px;
+      color: rgba(255,255,255,.42);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+    }
+    footer a {
+      color: rgba(255,255,255,.62);
+      text-decoration: none;
+    }
+    @media (max-width: 900px) {
+      .hero-grid,
+      .cards,
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding-top: 60px;
+      }
+      .product-visual {
+        max-width: 520px;
+      }
+    }
+    @media (max-width: 560px) {
+      .nav-inner,
+      .section,
+      .hero {
+        padding-inline: 18px;
+      }
+      .hero-actions .button,
+      .price-row .button {
+        width: 100%;
+      }
+      .price-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="/">
+          <span class="mark">H</span>
+          <span>HaoWordTool AI Workflows</span>
+        </a>
+        <nav class="nav-links" aria-label="Page navigation">
+          <a href="#live-system">Live System</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="button primary" href="https://lucylove0.gumroad.com/l/nqiji">Buy on Gumroad</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow"><span class="dot"></span> Built for digital sellers and small teams</span>
+            <h1>Stop selling prompts. Start shipping <span class="gradient-text">AI workflows</span>.</h1>
+            <p class="lead">A practical product line for creators who need reusable systems, not random prompt lists. The first live system helps Etsy digital product sellers write clearer titles, tags, descriptions, FAQs, and buyer messages.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="https://lucylove0.gumroad.com/l/nqiji">Get the Etsy SEO System</a>
+              <a class="button" href="#workflow">See what is included</a>
+            </div>
+            <p class="trust-line">Instant Gumroad download. Works with ChatGPT, Claude, Gemini, or another capable AI assistant.</p>
+          </div>
+          <div class="product-visual" aria-label="Etsy Digital Product SEO Listing System product cover">
+            <img src="/assets/gumroad-square-cover-etsy-ai-seo-1600.png" alt="Etsy Digital Product SEO Listing System cover">
+          </div>
+        </div>
+      </section>
+
+      <section id="live-system" class="section">
+        <div class="section-head">
+          <div class="kicker">Live System</div>
+          <h2>One buyer, one workflow, one clear outcome.</h2>
+          <p>The first live product focuses on Etsy digital sellers because their workflow repeats every time they create a new listing: research keywords, write the title, choose tags, explain delivery, answer buyer questions, and create traffic content.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card featured">
+            <div class="label">Available now</div>
+            <h3>Etsy Digital Product SEO Listing System</h3>
+            <p>Turn one digital product idea into a complete, search-aware Etsy listing draft with a guided prompt system and worksheet.</p>
+            <ul class="list">
+              <li>12-step AI prompt workflow</li>
+              <li>Title, description, and 13-tag prompts</li>
+              <li>FAQ, delivery notes, and buyer messages</li>
+              <li>CSV listing worksheet and troubleshooting guide</li>
+            </ul>
+            <div class="price-row">
+              <div>
+                <div class="price">$19</div>
+                <p>Launch price</p>
+              </div>
+              <a class="button primary" href="https://lucylove0.gumroad.com/l/nqiji">Buy Now</a>
+            </div>
+          </article>
+
+          <article class="card roadmap">
+            <div class="label">Roadmap</div>
+            <h3>Prompt OS for Creators</h3>
+            <p>A lightweight workspace for brand voice, prompt versions, output archive, and repeatable content workflows.</p>
+            <ul class="list">
+              <li>Brand voice library</li>
+              <li>Prompt version tracking</li>
+              <li>Output archive structure</li>
+            </ul>
+            <span class="badge">Coming soon</span>
+          </article>
+
+          <article class="card roadmap">
+            <div class="label">Roadmap</div>
+            <h3>Visual Prompt Packs</h3>
+            <p>Visual systems for product images, consistent characters, and repeatable creative directions with real examples.</p>
+            <ul class="list">
+              <li>Product photography recipes</li>
+              <li>Consistent style guides</li>
+              <li>Image example checklists</li>
+            </ul>
+            <span class="badge">Coming soon</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow" class="section">
+        <div class="section-head">
+          <div class="kicker">Why It Works</div>
+          <h2>Buyers do not need more prompts. They need a system they can repeat.</h2>
+          <p>The Etsy SEO system is organized around the actual listing workflow, so each prompt creates a specific part of the final listing instead of producing a generic wall of copy.</p>
+        </div>
+
+        <div class="comparison">
+          <div class="example">
+            <span>Before</span>
+            <strong>Meal Planner Printable, Planner PDF, Weekly Planner, Food Planner</strong>
+          </div>
+          <div class="example good">
+            <span>After</span>
+            <strong>Printable Meal Planner Bundle, Weekly Menu and Grocery List PDF, Minimalist Kitchen Binder Inserts</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="section">
+        <div class="section-head">
+          <div class="kicker">Product Line</div>
+          <h2>Build from one proven workflow, then expand carefully.</h2>
+          <p>Only the Etsy system is live today. The remaining product lines are intentionally shown as roadmap items until they have working files, examples, and delivery assets.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Product Type</th>
+                <th>Status</th>
+                <th>Audience</th>
+                <th>Delivery</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vertical Prompt Suite</td>
+                <td>Live: Etsy SEO system</td>
+                <td>Etsy digital product sellers</td>
+                <td>Gumroad file download</td>
+              </tr>
+              <tr>
+                <td>AI Workspace System</td>
+                <td>Roadmap</td>
+                <td>Creators and solo operators</td>
+                <td>Template plus prompt library</td>
+              </tr>
+              <tr>
+                <td>Visual Prompt Pack</td>
+                <td>Roadmap</td>
+                <td>Product and content creators</td>
+                <td>Prompt pack with examples</td>
+              </tr>
+              <tr>
+                <td>Done-for-you Workflow</td>
+                <td>Roadmap</td>
+                <td>Small teams with repeatable tasks</td>
+                <td>Scoped service project</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="section-head">
+          <div class="kicker">FAQ</div>
+          <h2>Common questions</h2>
+        </div>
+
+        <details>
+          <summary>Does this guarantee Etsy ranking or sales?</summary>
+          <p>No. The system helps sellers create clearer and more search-aware listing drafts, but it does not guarantee ranking, traffic, marketplace approval, or sales.</p>
+        </details>
+        <details>
+          <summary>What AI tools does it work with?</summary>
+          <p>It is designed for ChatGPT, Claude, Gemini, or another capable AI assistant. The prompts are written as reusable workflows rather than tool-specific shortcuts.</p>
+        </details>
+        <details>
+          <summary>Is this only for Etsy?</summary>
+          <p>The workflow is optimized for Etsy digital product listings, especially titles, tags, descriptions, delivery notes, and buyer messages. Many pieces can also be adapted for Gumroad or Shopify digital products.</p>
+        </details>
+        <details>
+          <summary>Can I resell the raw files?</summary>
+          <p>No. The product is for your own shop or business workflow. Reselling, redistributing, or publishing the raw files as a competing prompt pack is not included.</p>
+        </details>
+      </section>
+
+      <section class="section">
+        <div class="final-cta">
+          <div class="kicker">Start Small</div>
+          <h2>Use one workflow on your next product listing.</h2>
+          <p class="lead" style="margin-left:auto;margin-right:auto;">The fastest way to validate AI products is not to create a giant prompt library. Start with one repetitive job and make it easier to finish.</p>
+          <a class="button primary" href="https://lucylove0.gumroad.com/l/nqiji">Get the Etsy SEO Listing System</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 HaoWordTool. AI workflow systems for creators and small teams.</span>
+      <span><a href="/">Home</a> · <a href="/services/disclosure.html">Disclosure</a> · <a href="https://lucylove0.gumroad.com/l/nqiji">Gumroad product</a></span>
+    </footer>
+  </div>
+</body>
+</html>
