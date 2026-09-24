@@ -142,7 +142,7 @@
   .engine-node span{display:block;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent-3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
   .engine-node strong{display:block;font-size:15px;margin-bottom:6px}
   .engine-node p{font-size:13px;line-height:1.65}
-  .engine-pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+  .engine-pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
   .engine-step{border:1px solid var(--border);border-radius:13px;background:rgba(255,255,255,.025);padding:16px}
   .engine-step b{display:block;font-size:13.5px;margin-bottom:7px}
   .engine-step p{font-size:12.8px;line-height:1.6}
@@ -417,13 +417,13 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></svg>
             <span data-zh="从采集工具到创作引擎" data-en="From capture tool to creation engine">从采集工具到创作引擎</span>
           </div>
-          <h2 data-zh="把全网素材接入 Obsidian 或 Notion，让知识库持续生长。"
-              data-en="Pipe social data into Obsidian or Notion and let your knowledge base keep growing.">
-            把全网素材接入 Obsidian 或 Notion，让知识库持续生长。
+          <h2 data-zh="把全网素材接入 Obsidian 或 Notion，再交给 Loomy 自动执行。"
+              data-en="Pipe social data into Obsidian or Notion, then let Loomy execute the desktop work.">
+            把全网素材接入 Obsidian 或 Notion，再交给 Loomy 自动执行。
           </h2>
-          <p data-zh="Social Media Extract 负责抓取公开内容、评论和互动指标；Obsidian 或 Notion 负责存储、组织和协作；AI Agent 负责提炼、双链、标签和结构化归档。这样它就不只是采集工具，而是内容生产系统的前端数据管道。"
-             data-en="Social Media Extract captures public posts, comments and engagement signals. Obsidian or Notion stores and organizes the material. An AI Agent then distills, links, tags and archives it into reusable creation assets.">
-            Social Media Extract 负责抓取公开内容、评论和互动指标；Obsidian 或 Notion 负责存储、组织和协作；AI Agent 负责提炼、双链、标签和结构化归档。这样它就不只是采集工具，而是内容生产系统的前端数据管道。
+          <p data-zh="Social Media Extract 负责抓取公开内容、评论和互动指标；Obsidian 或 Notion 负责存储、组织和协作；Loomy 负责桌面文件操作、目录同步和编译任务；AI Agent 负责提炼、双链、标签和结构化归档。这样它就不只是采集工具，而是内容生产系统的前端数据管道。"
+             data-en="Social Media Extract captures public posts, comments and engagement signals. Obsidian or Notion stores and organizes the material. Loomy executes desktop file operations, folder sync and compile tasks. An AI Agent then distills, links, tags and archives it into reusable creation assets.">
+            Social Media Extract 负责抓取公开内容、评论和互动指标；Obsidian 或 Notion 负责存储、组织和协作；Loomy 负责桌面文件操作、目录同步和编译任务；AI Agent 负责提炼、双链、标签和结构化归档。这样它就不只是采集工具，而是内容生产系统的前端数据管道。
           </p>
         </div>
         <div class="engine-flow" aria-label="Social Media Extract knowledge engine workflow">
@@ -441,6 +441,14 @@
             <p data-zh="写入 raw/articles、raw/notes、Processed 或数据库表，保留来源和上下文。"
                data-en="Write into raw/articles, raw/notes, Processed folders or database tables with source context.">
               写入 raw/articles、raw/notes、Processed 或数据库表，保留来源和上下文。
+            </p>
+          </div>
+          <div class="engine-node">
+            <span data-zh="桌面执行器" data-en="Desktop executor">桌面执行器</span>
+            <strong data-zh="Loomy" data-en="Loomy">Loomy</strong>
+            <p data-zh="自动执行文件移动、批量重命名、目录同步、脚本运行和编译任务。"
+               data-en="Run file moves, batch renames, folder sync, local scripts and compile tasks automatically.">
+              自动执行文件移动、批量重命名、目录同步、脚本运行和编译任务。
             </p>
           </div>
           <div class="engine-node">
@@ -470,9 +478,16 @@
         </div>
         <div class="engine-step">
           <b data-zh="3. 生产" data-en="3. Create">3. 生产</b>
-          <p data-zh="由 AI Agent 自动整理为选题、笔记、脚本和发布资产。"
-             data-en="Let an AI Agent turn it into topics, notes, scripts and publishing assets.">
-            由 AI Agent 自动整理为选题、笔记、脚本和发布资产。
+          <p data-zh="Loomy 负责移动文件、触发脚本、同步目录和执行编译任务。"
+             data-en="Loomy moves files, triggers scripts, syncs folders and runs compile tasks.">
+            Loomy 负责移动文件、触发脚本、同步目录和执行编译任务。
+          </p>
+        </div>
+        <div class="engine-step">
+          <b data-zh="4. 编译" data-en="4. Compile">4. 编译</b>
+          <p data-zh="AI Agent 自动整理为选题、笔记、脚本和可发布资产。"
+             data-en="An AI Agent turns the material into topics, notes, scripts and publishable assets.">
+            AI Agent 自动整理为选题、笔记、脚本和可发布资产。
           </p>
         </div>
       </div>
