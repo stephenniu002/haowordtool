@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haowordtool AI 课程 — 4 门实战课，掌握可落地的 AI 技能</title>
+<meta name="description" content="AI Animation Studio、AI Agents from Zero to One、TikTok Shop Seller Playbook、AI Photo Editing Freelancer。一次购买，永久访问。">
+<link rel="canonical" href="https://haowordtool.com/courses.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#07070a;
+    --surface:rgba(255,255,255,.035);
+    --surface-2:rgba(255,255,255,.012);
+    --border:rgba(255,255,255,.08);
+    --border-strong:rgba(255,255,255,.14);
+    --text:#f4f4f7;
+    --muted:#9b9baa;
+    --muted-2:#6e6e80;
+    --accent:#7c5cff;
+    --accent-2:#b18cff;
+    --accent-3:#4fd1c5;
+    --glow:rgba(124,92,255,.35);
+    --maxw:1180px;
+    --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+  .bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 90% 55% at 50% 0%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 90% 55% at 50% 0%,#000 20%,transparent 75%)}
+  .orb{position:absolute;border-radius:50%;filter:blur(110px);opacity:.4}
+  .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(124,92,255,.5),transparent 65%);top:-280px;left:50%;transform:translateX(-50%)}
+  .orb-2{width:460px;height:460px;background:radial-gradient(circle,rgba(79,209,197,.2),transparent 65%);top:500px;right:-220px}
+  .orb-3{width:400px;height:400px;background:radial-gradient(circle,rgba(255,107,157,.14),transparent 65%);top:1800px;left:-200px}
+
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+
+  /* 导航 */
+  header{position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);background:rgba(7,7,10,.72);border-bottom:1px solid transparent;transition:.3s}
+  header.scrolled{border-bottom-color:var(--border);background:rgba(7,7,10,.9)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:14px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15.5px;letter-spacing:-.02em;flex:none}
+  .logo-mark{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(140deg,var(--accent),#4a2fd6);box-shadow:0 0 20px var(--glow);flex:none}
+  .logo-mark svg{width:15px;height:15px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{font-size:13.5px;color:var(--muted);font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--text)}
+  .nav-right{display:flex;align-items:center;gap:12px;flex:none}
+
+  /* 语言切换 */
+  .lang{position:relative}
+  .lang-btn{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--muted);
+    border:1px solid var(--border-strong);border-radius:9px;padding:7px 11px;transition:.2s;background:rgba(255,255,255,.02)}
+  .lang-btn:hover{color:var(--text);background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22)}
+  .lang-btn svg{width:14px;height:14px}
+  .lang-btn .caret{width:12px;height:12px;transition:transform .25s}
+  .lang.open .lang-btn .caret{transform:rotate(180deg)}
+  .lang-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:150px;
+    background:rgba(16,16,22,.98);border:1px solid var(--border-strong);border-radius:11px;
+    padding:6px;box-shadow:0 20px 50px -12px rgba(0,0,0,.9);backdrop-filter:blur(14px);
+    opacity:0;visibility:hidden;transform:translateY(-6px);transition:.2s;z-index:200}
+  .lang.open .lang-menu{opacity:1;visibility:visible;transform:none}
+  .lang-item{display:flex;align-items:center;gap:9px;width:100%;font-size:13.5px;font-weight:500;
+    color:var(--muted);padding:8px 10px;border-radius:7px;transition:.15s;text-align:left}
+  .lang-item:hover{background:rgba(255,255,255,.06);color:var(--text)}
+  .lang-item.active{color:var(--text);background:rgba(124,92,255,.16)}
+  .lang-item .tick{margin-left:auto;width:14px;height:14px;color:var(--accent-2);opacity:0;flex:none}
+  .lang-item.active .tick{opacity:1}
+
+  /* 按钮 */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:600;border-radius:10px;padding:11px 20px;transition:.18s;white-space:nowrap}
+  .btn-primary{background:linear-gradient(180deg,#8a6bff,var(--accent));color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.22) inset,0 8px 28px -8px var(--glow)}
+  .btn-primary:hover{transform:translateY(-1.5px);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 14px 36px -8px var(--glow)}
+  .btn-ghost{border:1px solid var(--border-strong);color:var(--text);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22)}
+  .btn-lg{padding:15px 28px;font-size:15px;border-radius:12px}
+
+  /* Hero */
+  .hero{padding:80px 0 52px;text-align:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid var(--border-strong);background:rgba(255,255,255,.035);font-size:12.5px;color:var(--muted);font-weight:500;margin-bottom:24px}
+  .badge i{width:6px;height:6px;border-radius:50%;background:var(--accent-3);display:block;box-shadow:0 0 10px var(--accent-3)}
+  h1{font-size:clamp(30px,4.6vw,48px);line-height:1.18;letter-spacing:-.03em;font-weight:800;max-width:840px;margin:0 auto}
+  .grad{background:linear-gradient(105deg,#c4b1ff,#7c5cff 45%,#4fd1c5);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:clamp(14.5px,1.7vw,16.5px);color:var(--muted);max-width:680px;margin:20px auto 0;line-height:1.75}
+  .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+  .hero-note{margin-top:14px;font-size:12.5px;color:var(--muted-2)}
+
+  .sec{padding:64px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+  .sec-head h2{font-size:clamp(22px,3vw,32px);letter-spacing:-.025em;font-weight:800;line-height:1.3}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:14.5px}
+
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .course-card{background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s;display:flex;flex-direction:column;position:relative}
+  .course-card:hover{border-color:var(--border-strong);transform:translateY(-5px);box-shadow:0 24px 60px -30px rgba(0,0,0,.9)}
+  .course-img{width:100%;aspect-ratio:16/9;background:#0d0b1a;position:relative;overflow:hidden}
+  .course-img svg{display:block;width:100%;height:100%}
+  .course-body{padding:26px;display:flex;flex-direction:column;flex:1}
+  .course-tag{display:inline-flex;align-self:flex-start;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:14px}
+  .tag-purple{background:rgba(124,92,255,.14);color:#c4b1ff;border:1px solid rgba(124,92,255,.28)}
+  .tag-cyan{background:rgba(79,209,197,.12);color:#7fe8d8;border:1px solid rgba(79,209,197,.26)}
+  .tag-pink{background:rgba(255,107,157,.12);color:#ffb3ce;border:1px solid rgba(255,107,157,.26)}
+  .tag-gold{background:rgba(246,193,119,.12);color:#f6c177;border:1px solid rgba(246,193,119,.26)}
+  .tag-blue{background:rgba(90,160,255,.12);color:#a3c6ff;border:1px solid rgba(90,160,255,.26)}
+  .tag-green{background:rgba(110,231,168,.12);color:#9aefc2;border:1px solid rgba(110,231,168,.26)}
+  .course-body h3{font-size:19px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px;line-height:1.3}
+  .course-audience{font-size:12.5px;color:var(--muted-2);margin-bottom:14px;font-weight:500}
+  .course-body .desc{font-size:13.8px;color:var(--muted);line-height:1.7;flex:1;margin-bottom:18px}
+  .course-modules{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+  .course-modules li{display:flex;gap:9px;font-size:13px;color:var(--muted);align-items:flex-start;line-height:1.55}
+  .course-modules li svg{width:13px;height:13px;color:var(--accent-3);flex:none;margin-top:4px}
+  .course-price-box{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;border-top:1px solid var(--border)}
+  .price-info{display:flex;flex-direction:column;gap:2px}
+  .price-num{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .price-label{font-size:11.5px;color:var(--muted-2);font-weight:500}
+  .buy-btn{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:650;padding:12px 24px;border-radius:10px;background:linear-gradient(180deg,#8a6bff,var(--accent));color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.22) inset,0 8px 24px -8px var(--glow);transition:.18s;white-space:nowrap}
+  .buy-btn:hover{transform:translateY(-1.5px);box-shadow:0 1px 0 rgba(255,255,255,.28) inset,0 14px 32px -8px var(--glow)}
+  .buy-btn svg{width:15px;height:15px}
+
+  .bundle{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(124,92,255,.45);background:linear-gradient(150deg,rgba(124,92,255,.16),rgba(124,92,255,.04) 50%,rgba(79,209,197,.08));padding:48px 44px;box-shadow:0 40px 90px -40px var(--glow)}
+  .bundle::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 80% 100% at 50% 0%,#000,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 80% 100% at 50% 0%,#000,transparent 70%)}
+  .bundle > *{position:relative}
+  .bundle-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+  .bundle-badge{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c4b1ff;background:rgba(124,92,255,.18);border:1px solid rgba(124,92,255,.35);padding:4px 12px;border-radius:999px}
+  .bundle-badge svg{width:13px;height:13px}
+  .bundle h2{font-size:clamp(22px,3vw,32px);letter-spacing:-.025em;font-weight:800;line-height:1.25;max-width:560px}
+  .bundle p{color:var(--muted);margin-top:14px;font-size:15px;max-width:560px;line-height:1.7}
+  .bundle-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:26px 0 30px;max-width:640px}
+  .bundle-list li{display:flex;gap:9px;font-size:14px;color:var(--text);align-items:flex-start;line-height:1.5}
+  .bundle-list li svg{width:15px;height:15px;color:var(--accent-3);flex:none;margin-top:3px}
+  .bundle-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,.1)}
+  .bundle-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .bundle-price .old{font-size:16px;color:var(--muted-2);text-decoration:line-through;font-weight:500}
+  .bundle-price .new{font-size:42px;font-weight:800;letter-spacing:-.04em;line-height:1;background:linear-gradient(180deg,#fff,#c4b1ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .bundle-price .save{font-size:12px;font-weight:700;color:#7fe8d8;background:rgba(79,209,197,.14);border:1px solid rgba(79,209,197,.3);padding:3px 10px;border-radius:999px}
+  .bundle-btn{display:inline-flex;align-items:center;gap:9px;font-size:16px;font-weight:700;padding:16px 34px;border-radius:13px;background:linear-gradient(180deg,#8a6bff,var(--accent));color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 12px 36px -10px var(--glow);transition:.18s;white-space:nowrap}
+  .bundle-btn:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.3) inset,0 20px 44px -10px var(--glow)}
+  .bundle-btn svg{width:17px;height:17px}
+
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+  .trust-item{text-align:center;padding:20px 14px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02)}
+  .trust-item svg{width:22px;height:22px;color:var(--accent-2);margin:0 auto 10px;display:block}
+  .trust-item b{display:block;font-size:13.5px;font-weight:650;margin-bottom:3px}
+  .trust-item span{font-size:12px;color:var(--muted-2)}
+
+  .faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+  details{border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.022);overflow:hidden;transition:border-color .25s,background .25s}
+  details[open]{border-color:var(--border-strong);background:rgba(255,255,255,.04)}
+  summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:15px;font-weight:600;letter-spacing:-.01em}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{width:22px;height:22px;flex:none;position:relative;border-radius:50%;border:1px solid var(--border-strong);transition:transform .3s,background .3s}
+  summary .plus::before,summary .plus::after{content:"";position:absolute;top:50%;left:50%;background:var(--muted);transform:translate(-50%,-50%);transition:opacity .25s,background .25s}
+  summary .plus::before{width:9px;height:1.5px}
+  summary .plus::after{width:1.5px;height:9px}
+  details[open] summary .plus{transform:rotate(90deg);background:rgba(124,92,255,.2);border-color:rgba(124,92,255,.5)}
+  details[open] summary .plus::before,details[open] summary .plus::after{background:var(--accent-2)}
+  details[open] summary .plus::after{opacity:0}
+  .faq-body{padding:0 22px 20px;font-size:14.2px;color:var(--muted);line-height:1.8}
+
+  footer{border-top:1px solid var(--border);margin-top:72px;padding:36px 0}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted-2)}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+  .foot-links a:hover{color:var(--text)}
+
+  @media(max-width:900px){.grid2{grid-template-columns:1fr}.nav-links{display:none}.trust{grid-template-columns:repeat(2,1fr)}.bundle{padding:36px 26px}.bundle-list{grid-template-columns:1fr}}
+  @media(max-width:640px){.hero{padding:56px 0 40px}.sec{padding:48px 0}.hero-cta .btn{width:100%}.course-price-box{flex-direction:column;align-items:stretch;gap:14px}.buy-btn{width:100%;justify-content:center}.bundle-foot{flex-direction:column;align-items:stretch}.bundle-btn{width:100%;justify-content:center}.trust{grid-template-columns:1fr 1fr}.foot{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<div class="bg">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<header id="header">
+  <div class="wrap">
+    <nav class="nav">
+      <a href="https://haowordtool.com/" class="logo">
+        <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></span>
+        Haowordtool AI
+      </a>
+      <div class="nav-links">
+        <a href="#courses" data-zh="课程" data-en="Courses">课程</a>
+        <a href="#bundle" data-zh="打包优惠" data-en="Bundle">打包优惠</a>
+        <a href="#faq" data-zh="常见问题" data-en="FAQ">常见问题</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang" id="lang">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+            <span id="langLabel">中文</span>
+            <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="lang-menu" role="menu">
+            <button class="lang-item active" data-lang="zh" role="menuitem">
+              中文
+              <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </button>
+            <button class="lang-item" data-lang="en" role="menuitem">
+              English
+              <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </button>
+          </div>
+        </div>
+        <a href="#courses" class="btn btn-primary" data-zh="浏览课程" data-en="Browse courses">浏览课程</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="badge">
+      <i></i>
+      <span data-zh-html="<b id='heroCount'>4</b> 门实战课 · 一次购买永久访问"
+            data-en-html="<b id='heroCount'>4</b> practical courses · Buy once, access forever">
+        <b id="heroCount">4</b> 门实战课 · 一次购买永久访问
+      </span>
+    </div>
+    <h1>
+      <span data-zh="用 AI 掌握" data-en="Master in-demand skills">用 AI 掌握</span><br>
+      <span class="grad" data-zh="可落地的实战技能" data-en="with hands-on AI courses">可落地的实战技能</span>
+    </h1>
+    <p class="sub"
+       data-zh="每门课都聚焦一个高需求方向，配有模板、Prompt 和操作清单，学完就能上手。"
+       data-en="Each course focuses on a high-demand skill, with templates, prompts, and step-by-step playbooks you can use right away.">
+      每门课都聚焦一个高需求方向，配有模板、Prompt 和操作清单，学完就能上手。
+    </p>
+    <div class="hero-cta">
+      <a href="#courses" class="btn btn-primary btn-lg" data-zh="查看全部课程 →" data-en="View all courses →">查看全部课程 →</a>
+      <a href="#bundle" class="btn btn-ghost btn-lg" id="bundleCta" data-zh="打包优惠" data-en="Bundle deal">打包优惠</a>
+    </div>
+    <p class="hero-note"
+       data-zh="支持 Visa / Mastercard / PayPal"
+       data-en="Visa / Mastercard / PayPal accepted">
+      支持 Visa / Mastercard / PayPal
+    </p>
+  </div>
+</section>
+
+<section class="sec" id="courses">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-zh="全部课程" data-en="All courses">全部课程</h2>
+      <p data-zh="选一门开始，或者直接买打包版省更多。" data-en="Start with one, or grab the bundle and save more.">选一门开始，或者直接买打包版省更多。</p>
+    </div>
+    <div class="grid2" id="courseGrid"></div>
+  </div>
+</section>
+
+<section class="sec" id="bundle" style="padding-top:0">
+  <div class="wrap">
+    <div class="bundle">
+      <div class="bundle-head">
+        <span class="bundle-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+          <span data-zh="全部打包" data-en="Full bundle">全部打包</span>
+        </span>
+      </div>
+      <h2 id="bundleTitle">四门课一起买，省更多</h2>
+      <p data-zh="一次购买，全部课程解锁，永久访问，后续更新免费。"
+         data-en="Buy once, unlock every course. Permanent access, free future updates.">
+        一次购买，全部课程解锁，永久访问，后续更新免费。
+      </p>
+      <ul class="bundle-list" id="bundleList"></ul>
+      <div class="bundle-foot">
+        <div class="bundle-price">
+          <span class="old" id="bundleOld">$0</span>
+          <span class="new" id="bundleNew">$0</span>
+          <span class="save" id="bundleSave">省 $0</span>
+        </div>
+        <a href="#" class="bundle-btn" id="bundleBtn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+          <span id="bundleBtnText">立即购买打包版</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <b data-zh="安全支付" data-en="Secure payment">安全支付</b>
+        <span data-zh="Visa / Mastercard / PayPal" data-en="Visa / Mastercard / PayPal">Visa / Mastercard / PayPal</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+        <b data-zh="学员支持" data-en="Learner support">学员支持</b>
+        <span data-zh="遇到问题联系我们" data-en="Contact us if you need help">遇到问题联系我们</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <b data-zh="永久访问" data-en="Lifetime access">永久访问</b>
+        <span data-zh="一次购买，永久观看" data-en="Buy once, watch forever">一次购买，永久观看</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg>
+        <b data-zh="持续更新" data-en="Ongoing updates">持续更新</b>
+        <span data-zh="课程升级免费获取" data-en="Free course upgrades">课程升级免费获取</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-zh="常见问题" data-en="Frequently asked questions">常见问题</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary><span data-zh="购买后怎么收到课程？" data-en="How do I receive the course after payment?">购买后怎么收到课程？</span> <span class="plus"></span></summary>
+        <div class="faq-body"
+             data-zh="付款成功后，系统会自动将课程访问链接发送到你填写的邮箱。同时你也可以随时通过购买平台（Gumroad）的客户门户重新获取链接。"
+             data-en="After payment, the course access link will be sent automatically to the email you provided. You can also retrieve the link anytime through the Gumroad customer portal.">
+          付款成功后，系统会自动将课程访问链接发送到你填写的邮箱。同时你也可以随时通过购买平台（Gumroad）的客户门户重新获取链接。
+        </div>
+      </details>
+      <details>
+        <summary><span data-zh="课程可以永久访问吗？" data-en="Is the access permanent?">课程可以永久访问吗？</span> <span class="plus"></span></summary>
+        <div class="faq-body"
+             data-zh="可以。一次购买，永久访问。课程更新后，你也会收到通知，无需额外付费。"
+             data-en="Yes. Buy once, access forever. When the course updates, you'll be notified — no extra cost.">
+          可以。一次购买，永久访问。课程更新后，你也会收到通知，无需额外付费。
+        </div>
+      </details>
+      <details>
+        <summary><span data-zh="我是完全的新手，能学会吗？" data-en="I'm a complete beginner. Can I follow along?">我是完全的新手，能学会吗？</span> <span class="plus"></span></summary>
+        <div class="faq-body"
+             data-zh="可以。每门课都从最基础的工具操作讲起，每一步都有演示和可复制的 Prompt。你不需要任何编程或设计背景。"
+             data-en="Yes. Every course starts with the basics, with demos and copy-paste prompts at every step. No coding or design background required.">
+          可以。每门课都从最基础的工具操作讲起，每一步都有演示和可复制的 Prompt。你不需要任何编程或设计背景。
+        </div>
+      </details>
+      <details>
+        <summary><span data-zh="可以单独买一门课吗？" data-en="Can I buy a single course?">可以单独买一门课吗？</span> <span class="plus"></span></summary>
+        <div class="faq-body"
+             data-zh="可以。每门课都有独立的购买按钮。如果你只对某一个方向感兴趣，直接买那一门就好。如果你对两门以上感兴趣，打包版更划算。"
+             data-en="Yes. Each course has its own buy button. If only one direction interests you, just buy that one. If you're interested in two or more, the bundle is more cost-effective.">
+          可以。每门课都有独立的购买按钮。如果你只对某一个方向感兴趣，直接买那一门就好。如果你对两门以上感兴趣，打包版更划算。
+        </div>
+      </details>
+      <details>
+        <summary><span data-zh="购买后遇到问题怎么办？" data-en="What if I have issues after purchase?">购买后遇到问题怎么办？</span> <span class="plus"></span></summary>
+        <div class="faq-body"
+             data-zh="请通过 Gumroad 订单页面的「联系卖家」功能联系我们，说明你遇到的问题，我们会尽快帮你解决。"
+             data-en="Contact us via the &quot;contact seller&quot; option on your Gumroad order page, describe the issue, and we'll help you resolve it as soon as possible.">
+          请通过 Gumroad 订单页面的「联系卖家」功能联系我们，说明你遇到的问题，我们会尽快帮你解决。
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span data-zh="© 2026 Haowordtool AI · 用 AI 掌握可落地的实战技能"
+            data-en="© 2026 Haowordtool AI · Master in-demand skills with AI">
+        © 2026 Haowordtool AI · 用 AI 掌握可落地的实战技能
+      </span>
+      <div class="foot-links">
+        <a href="#" data-zh="隐私政策" data-en="Privacy Policy">隐私政策</a>
+        <a href="#" data-zh="服务条款" data-en="Terms of Service">服务条款</a>
+        <a href="#" data-zh="联系我们" data-en="Contact">联系我们</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   课程数据 —— 中英双语
+   ========================================================= */
+const courses = [
+  {
+    title: "AI Animation Studio",
+    titleCn: "动画短剧全流程",
+    tag: { zh: "动画短剧", en: "Animation" },
+    tagClass: "tag-purple",
+    theme: "purple",
+    audience: {
+      zh: "适合想做动画短剧、故事视频的创作者",
+      en: "For creators who want to make animated shorts or story videos"
+    },
+    desc: {
+      zh: "从脚本、分镜、角色设定到成片输出的完整流程。用 AI 工具完成一部动画短剧的全链路制作，不需要绘画或动画基础。",
+      en: "A complete workflow from script and storyboard to character design and final cut. Produce a full animated short with AI — no drawing or animation experience required."
+    },
+    modules: {
+      zh: ["故事结构与脚本生成", "角色设定与视觉一致性", "分镜、配音与剪辑成片"],
+      en: ["Story structure & script generation", "Character design & visual consistency", "Storyboard, voiceover & editing"]
+    },
+    price: 79.99,
+    link: "https://gumroad.com/l/ai-animation-studio"
+  },
+  {
+    title: "AI Agents from Zero to One",
+    titleCn: "实用自动化",
+    tag: { zh: "实用自动化", en: "Automation" },
+    tagClass: "tag-cyan",
+    theme: "cyan",
+    audience: {
+      zh: "适合想用自动化提升效率的个人和团队",
+      en: "For individuals and teams who want to boost efficiency with automation"
+    },
+    desc: {
+      zh: "从零开始理解 AI Agent 的工作原理，并用实际案例搭建可运行的自动化工作流。不写代码，用可视化和 Prompt 驱动。",
+      en: "Understand how AI Agents work from scratch, then build real, runnable automation workflows. No coding — driven by visual tools and prompts."
+    },
+    modules: {
+      zh: ["Agent 核心概念与运行机制", "主流平台选型与搭建演示", "5 个可复用的自动化场景"],
+      en: ["Core concepts & how Agents run", "Platform selection & setup walkthrough", "5 reusable automation scenarios"]
+    },
+    price: 89.99,
+    link: "https://gumroad.com/l/ai-agents-zero-to-one"
+  },
+  {
+    title: "TikTok Shop Seller Playbook",
+    titleCn: "美区开店带货",
+    tag: { zh: "美区带货", en: "TikTok Shop" },
+    tagClass: "tag-pink",
+    theme: "pink",
+    audience: {
+      zh: "适合想进入美区 TikTok Shop 的卖家",
+      en: "For sellers who want to enter the US TikTok Shop market"
+    },
+    desc: {
+      zh: "美区 TikTok Shop 开店、选品、内容制作、达人合作到订单履约的完整操作手册。用 AI 工具提升选品和内容效率。",
+      en: "A complete playbook covering US TikTok Shop setup, product selection, content creation, creator partnerships, and order fulfillment — with AI tools to speed up every step."
+    },
+    modules: {
+      zh: ["美区开店流程与合规要点", "选品逻辑与 AI 辅助分析", "短视频带货内容与达人合作"],
+      en: ["US store setup & compliance", "Product selection & AI-assisted analysis", "Short-video content & creator partnerships"]
+    },
+    price: 79.99,
+    link: "https://gumroad.com/l/tiktok-shop-playbook"
+  },
+  {
+    title: "AI Photo Editing Freelancer",
+    titleCn: "修图接单",
+    tag: { zh: "修图接单", en: "Photo Editing" },
+    tagClass: "tag-gold",
+    theme: "gold",
+    audience: {
+      zh: "适合想用修图技能接单的自由职业者",
+      en: "For freelancers who want to take on photo editing gigs"
+    },
+    desc: {
+      zh: "从 AI 修图工具操作到客户沟通、报价、交付的完整接单流程。覆盖电商产品图、人像精修、批量处理等高频需求。",
+      en: "A full freelance workflow from AI editing tools to client communication, quoting, and delivery. Covers e-commerce product shots, portrait retouching, and batch processing."
+    },
+    modules: {
+      zh: ["主流 AI 修图工具实操", "电商产品图与人像精修案例", "接单平台、报价与客户沟通"],
+      en: ["Hands-on with major AI editing tools", "E-commerce & portrait retouching cases", "Gig platforms, pricing & client communication"]
+    },
+    price: 59.99,
+    link: "https://gumroad.com/l/ai-photo-editing"
+  }
+];
+
+/* 打包优惠配置 */
+const bundleConfig = {
+  discount: 69.97,
+  link: "https://gumroad.com/l/all-courses-bundle"
+};
+
+/* 双语 UI 文案 */
+const UI_TEXT = {
+  zh: {
+    langLabel: "中文",
+    title: "Haowordtool AI 课程 — 4 门实战课，掌握可落地的 AI 技能",
+    bundleTitle: (n, d) => `${n} 门课一起买，省 $${d}`,
+    bundleBtn: (p) => `立即购买打包版 · $${p}`,
+    bundleCta: (d) => `打包优惠 · 省 $${d}`,
+    bundleSave: (d) => `省 $${d}`,
+    buyBtn: "立即购买",
+    priceLabel: "一次买断 · 永久访问",
+    modulesSuffix: "（"
+  },
+  en: {
+    langLabel: "English",
+    title: "Haowordtool AI — 4 Practical Courses to Master AI Skills",
+    bundleTitle: (n, d) => `Buy all ${n} courses together, save $${d}`,
+    bundleBtn: (p) => `Get the bundle · $${p}`,
+    bundleCta: (d) => `Bundle deal · Save $${d}`,
+    bundleSave: (d) => `Save $${d}`,
+    buyBtn: "Buy now",
+    priceLabel: "One-time payment · Lifetime access",
+    modulesSuffix: " ("
+  }
+};
+
+let currentLang = "zh";
+
+/* =========================================================
+   封面 SVG 主题
+   ========================================================= */
+const themes = {
+  purple: {
+    bg1: "#0d0b1a", bg2: "#1a1035", c1: "#7c5cff", c2: "#b18cff",
+    icon: `<rect x="-80" y="-55" width="160" height="110" rx="10" fill="none" stroke="url(#accent)" stroke-width="3"/>
+           <circle cx="-55" cy="-30" r="6" fill="#7c5cff"/><circle cx="-55" cy="0" r="6" fill="#7c5cff"/><circle cx="-55" cy="30" r="6" fill="#7c5cff"/>
+           <circle cx="55" cy="-30" r="6" fill="#7c5cff"/><circle cx="55" cy="0" r="6" fill="#7c5cff"/><circle cx="55" cy="30" r="6" fill="#7c5cff"/>
+           <polygon points="-15,-20 25,0 -15,20" fill="url(#accent)"/>`
+  },
+  cyan: {
+    bg1: "#071210", bg2: "#0a1f1a", c1: "#4fd1c5", c2: "#7fe8d8",
+    icon: `<line x1="-70" y1="-30" x2="0" y2="0" stroke="#4fd1c5" stroke-width="1.5" opacity=".5"/>
+           <line x1="70" y1="-30" x2="0" y2="0" stroke="#4fd1c5" stroke-width="1.5" opacity=".5"/>
+           <line x1="-70" y1="30" x2="0" y2="0" stroke="#4fd1c5" stroke-width="1.5" opacity=".5"/>
+           <line x1="70" y1="30" x2="0" y2="0" stroke="#4fd1c5" stroke-width="1.5" opacity=".5"/>
+           <circle cx="0" cy="0" r="18" fill="none" stroke="url(#accent)" stroke-width="2.5"/>
+           <circle cx="0" cy="0" r="7" fill="#4fd1c5"/>
+           <circle cx="-70" cy="-30" r="10" fill="none" stroke="#4fd1c5" stroke-width="2" opacity=".7"/>
+           <circle cx="70" cy="-30" r="10" fill="none" stroke="#4fd1c5" stroke-width="2" opacity=".7"/>
+           <circle cx="-70" cy="30" r="10" fill="none" stroke="#4fd1c5" stroke-width="2" opacity=".7"/>
+           <circle cx="70" cy="30" r="10" fill="none" stroke="#4fd1c5" stroke-width="2" opacity=".7"/>`
+  },
+  pink: {
+    bg1: "#1a0710", bg2: "#2a0f1e", c1: "#ff6b9d", c2: "#ffb3ce",
+    icon: `<path d="M-55,-40 L-65,-40 L-75,60 L75,60 L65,-40 L55,-40" fill="none" stroke="url(#accent)" stroke-width="2.5" stroke-linejoin="round"/>
+           <path d="M-30,-40 A30,30 0 0 1 30,-40" fill="none" stroke="#ff6b9d" stroke-width="2.5"/>
+           <rect x="-25" y="-5" width="50" height="35" rx="4" fill="none" stroke="#ffb3ce" stroke-width="2"/>
+           <line x1="-10" y1="8" x2="10" y2="8" stroke="#ffb3ce" stroke-width="2" stroke-linecap="round"/>
+           <line x1="-10" y1="18" x2="10" y2="18" stroke="#ffb3ce" stroke-width="2" stroke-linecap="round"/>`
+  },
+  gold: {
+    bg1: "#1a1408", bg2: "#2a2010", c1: "#f6c177", c2: "#ffe0a3",
+    icon: `<rect x="-70" y="-50" width="140" height="100" rx="8" fill="none" stroke="url(#accent)" stroke-width="2.5"/>
+           <circle cx="-35" cy="-20" r="14" fill="none" stroke="#f6c177" stroke-width="2"/>
+           <path d="M-70,30 L-30,-10 L10,30 L40,0 L70,30" fill="none" stroke="#ffe0a3" stroke-width="2" stroke-linejoin="round"/>
+           <line x1="50" y1="-50" x2="70" y2="-70" stroke="#f6c177" stroke-width="2" stroke-linecap="round"/>
+           <line x1="70" y1="-50" x2="50" y2="-70" stroke="#f6c177" stroke-width="2" stroke-linecap="round"/>`
+  },
+  blue: {
+    bg1: "#08111f", bg2: "#0d1d33", c1: "#5aa0ff", c2: "#a3c6ff",
+    icon: `<rect x="-70" y="-45" width="140" height="90" rx="8" fill="none" stroke="url(#accent)" stroke-width="2.5"/>
+           <polygon points="-20,-20 25,0 -20,20" fill="url(#accent)"/>
+           <line x1="-50" y1="-30" x2="-50" y2="30" stroke="#5aa0ff" stroke-width="1.5" opacity=".5"/>
+           <line x1="50" y1="-30" x2="50" y2="30" stroke="#5aa0ff" stroke-width="1.5" opacity=".5"/>`
+  },
+  green: {
+    bg1: "#07160e", bg2: "#0d2418", c1: "#6ee7a8", c2: "#9aefc2",
+    icon: `<path d="M-60,40 L-60,-20 L0,-50 L60,-20 L60,40 Z" fill="none" stroke="url(#accent)" stroke-width="2.5" stroke-linejoin="round"/>
+           <path d="M-25,10 L-5,-10 L15,10 L35,-15" fill="none" stroke="#9aefc2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+           <circle cx="0" cy="-20" r="6" fill="#6ee7a8"/>`
+  }
+};
+
+/* =========================================================
+   封面渲染
+   ========================================================= */
+function renderCover(course, idx) {
+  const t = themes[course.theme] || themes.purple;
+  const gid = "g" + idx;
+  const subtitle = currentLang === "zh" ? course.titleCn : "";
+  return `
+  <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="bg${gid}" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="${t.bg1}"/>
+        <stop offset="100%" stop-color="${t.bg2}"/>
+      </linearGradient>
+      <linearGradient id="accent${gid}" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="${t.c1}"/>
+        <stop offset="100%" stop-color="${t.c2}"/>
+      </linearGradient>
+      <radialGradient id="glow${gid}" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" stop-color="${t.c1}" stop-opacity=".28"/>
+        <stop offset="100%" stop-color="${t.c1}" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="800" height="450" fill="url(#bg${gid})"/>
+    <rect width="800" height="450" fill="url(#glow${gid})"/>
+    <g transform="translate(400,175)" opacity=".92">${t.icon.replace(/url\(#accent\)/g, `url(#accent${gid})`)}</g>
+    <text x="400" y="315" text-anchor="middle" font-family="Inter,sans-serif" font-size="30" font-weight="800" fill="#f4f4f7" letter-spacing="-1">${course.title}</text>
+    ${subtitle ? `<text x="400" y="352" text-anchor="middle" font-family="Inter,sans-serif" font-size="15" font-weight="500" fill="#9b9baa">${subtitle}</text>` : ""}
+    <rect x="350" y="382" width="100" height="3" rx="1.5" fill="url(#accent${gid})"/>
+  </svg>`;
+}
+
+/* =========================================================
+   渲染课程卡片
+   ========================================================= */
+function renderCourses() {
+  const grid = document.getElementById("courseGrid");
+  const t = UI_TEXT[currentLang];
+  grid.innerHTML = courses.map((c, i) => `
+    <div class="course-card">
+      <div class="course-img">${renderCover(c, i)}</div>
+      <div class="course-body">
+        <span class="course-tag ${c.tagClass}">${c.tag[currentLang]}</span>
+        <h3>${c.title}</h3>
+        <p class="course-audience">${c.audience[currentLang]}</p>
+        <p class="desc">${c.desc[currentLang]}</p>
+        <ul class="course-modules">
+          ${c.modules[currentLang].map(m => `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> ${m}</li>`).join("")}
+        </ul>
+        <div class="course-price-box">
+          <div class="price-info">
+            <span class="price-num">$${c.price.toFixed(2)}</span>
+            <span class="price-label">${t.priceLabel}</span>
+          </div>
+          <a href="${c.link}" class="buy-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+            ${t.buyBtn}
+          </a>
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* =========================================================
+   渲染打包区
+   ========================================================= */
+function renderBundle() {
+  const t = UI_TEXT[currentLang];
+  const total = courses.reduce((sum, c) => sum + c.price, 0);
+  const finalPrice = Math.max(total - bundleConfig.discount, 0);
+
+  document.getElementById("heroCount").textContent = courses.length;
+  document.getElementById("bundleTitle").textContent = t.bundleTitle(courses.length, bundleConfig.discount.toFixed(2));
+  document.getElementById("bundleOld").textContent = `$${total.toFixed(2)}`;
+  document.getElementById("bundleNew").textContent = `$${finalPrice.toFixed(2)}`;
+  document.getElementById("bundleSave").textContent = t.bundleSave(bundleConfig.discount.toFixed(2));
+  document.getElementById("bundleBtn").href = bundleConfig.link;
+  document.getElementById("bundleBtnText").textContent = t.bundleBtn(finalPrice.toFixed(2));
+  document.getElementById("bundleCta").textContent = t.bundleCta(bundleConfig.discount.toFixed(2));
+
+  document.getElementById("bundleList").innerHTML = courses.map(c => `
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      ${c.title} ($${c.price.toFixed(2)})
+    </li>
+  `).join("");
+}
+
+/* =========================================================
+   语言切换
+   ========================================================= */
+const langWrap = document.getElementById("lang");
+const langBtn = document.getElementById("langBtn");
+const langLabel = document.getElementById("langLabel");
+
+function setLang(lang) {
+  currentLang = lang;
+  const t = UI_TEXT[lang];
+
+  // 更新 data-zh / data-en 属性
+  document.querySelectorAll("[data-zh]").forEach(el => {
+    const val = el.getAttribute("data-" + lang);
+    if (val !== null) el.textContent = val;
+  });
+
+  // 更新 data-zh-html / data-en-html（包含 HTML 的）
+  document.querySelectorAll("[data-zh-html]").forEach(el => {
+    const val = el.getAttribute("data-" + lang + "-html");
+    if (val !== null) el.innerHTML = val;
+  });
+
+  // 更新 placeholder（如果有）
+  document.querySelectorAll("[data-zh-placeholder]").forEach(el => {
+    const val = el.getAttribute("data-" + lang + "-placeholder");
+    if (val !== null) el.setAttribute("placeholder", val);
+  });
+
+  // 更新语言按钮
+  langLabel.textContent = t.langLabel;
+
+  // 更新 html lang
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+
+  // 更新页面标题
+  document.title = t.title;
+
+  // 更新选中态
+  document.querySelectorAll(".lang-item").forEach(item => {
+    item.classList.toggle("active", item.dataset.lang === lang);
+  });
+
+  // 重新渲染卡片和打包区
+  renderCourses();
+  renderBundle();
+
+  // 保存
+  try { localStorage.setItem("hw_lang", lang); } catch (e) {}
+}
+
+langBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const open = langWrap.classList.toggle("open");
+  langBtn.setAttribute("aria-expanded", open ? "true" : "false");
+});
+
+document.querySelectorAll(".lang-item").forEach(item => {
+  item.addEventListener("click", () => {
+    setLang(item.dataset.lang);
+    langWrap.classList.remove("open");
+    langBtn.setAttribute("aria-expanded", "false");
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!langWrap.contains(e.target)) {
+    langWrap.classList.remove("open");
+    langBtn.setAttribute("aria-expanded", "false");
+  }
+});
+
+/* =========================================================
+   初始化
+   ========================================================= */
+let savedLang = "zh";
+try { savedLang = localStorage.getItem("hw_lang") || "zh"; } catch (e) {}
+setLang(savedLang);
+
+const header = document.getElementById("header");
+window.addEventListener("scroll", () => header.classList.toggle("scrolled", window.scrollY > 12), { passive: true });
+</script>
+</body>
+</html>
