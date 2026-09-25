@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Einheitenrechner</title>
+<meta name="description" content="Kostenloser Einheitenrechner. Länge, Gewicht, Temperatur sofort umrechnen.">
+<link rel="canonical" href="https://haowordtool.com/de/tools/unit-converter.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/unit-converter.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/unit-converter.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/unit-converter.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/conversor-de-unidades.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/muhawwil-wahdat.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/konverter-edinits.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/unit-converter.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Welche Einheiten werden unterstützt?","acceptedAnswer":{"@type":"Answer","text":"Länge: 8 Einheiten. Gewicht: 6 Einheiten. Temperatur: 3 Einheiten."}},{"@type":"Question","name":"Wie genau ist die Umrechnung?","acceptedAnswer":{"@type":"Answer","text":"Bis zu 6 Dezimalstellen."}}]}</script>
+</head><body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch" aria-label="Sprache">
+    <a href="/tools/unit-converter.html" hreflang="en">EN</a><a href="/ja/tools/unit-converter.html" hreflang="ja">JA</a><a href="/de/tools/unit-converter.html" class="active" hreflang="de">DE</a><a href="/es/tools/conversor-de-unidades.html" hreflang="es">ES</a><a href="/ar/tools/muhawwil-wahdat.html" hreflang="ar">AR</a><a href="/ru/tools/konverter-edinits.html" hreflang="ru">RU</a>
+  </div></div>
+</nav></div></header>
+<main><div class="wrap tool-page">
+  <a href="../index.html" class="back">← Zurück zu allen Tools</a>
+  <h1 style="margin-top:16px">Einheitenrechner</h1><p class="lead">Länge, Gewicht, Temperatur.</p><div class="card" style="max-width:520px">
+    <div style="margin-bottom:16px"><label for="cat">Kategorie</label><select id="cat">
+      <option value="length">Länge</option>
+      <option value="weight">Gewicht</option>
+      <option value="temp">Temperatur</option>
+    </select></div>
+    <div style="margin-bottom:16px"><label for="v">Wert</label><input type="number" id="v" value="1" step="any"></div>
+    <div class="grid2">
+      <div><label for="from">Von Einheit</label><select id="from"></select></div>
+      <div><label for="to">Zu Einheit</label><select id="to"></select></div>
+    </div>
+    <div class="btn-row"><button class="btn btn-primary btn-block" id="go">Umrechnen</button></div>
+    <div class="result" id="out" style="display:none"><div class="result-label">Ergebnis</div><div class="result-value" id="res"></div></div></div><div class="seo-content"><h2>Über den Einheitenrechner</h2><p>Rechnet Länge (m, km, cm, mm, mi, yd, ft, in), Gewicht (kg, g, mg, t, lb, oz) und Temperatur (°C, °F, K) um.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Welche Einheiten werden unterstützt?</h3><p>Länge: 8 Einheiten. Gewicht: 6 Einheiten. Temperatur: 3 Einheiten.</p></div><div class="faq-item"><h3>Wie genau ist die Umrechnung?</h3><p>Bis zu 6 Dezimalstellen.</p></div></div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div></div></main>
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · Alles kostenlos</span>
+<div class="foot-links"><a href="#">Datenschutz</a><a href="#">AGB</a><a href="#">Kontakt</a></div>
+</div></div></footer>
+<script type="application/json" id="relatedData">["calculator","word-counter"]</script>
+<script src="/assets/related-tools.js" defer></script><script>const units={length:{m:1,km:1000,cm:.01,mm:.001,mi:1609.344,yd:.9144,ft:.3048,in:.0254},weight:{kg:1,g:.001,mg:1e-6,t:1000,lb:.45359237,oz:.028349523},temp:{c:1,f:1,k:1}};
+const labels={length:{m:"m",km:"km",cm:"cm",mm:"mm",mi:"mi",yd:"yd",ft:"ft",in:"in"},weight:{kg:"kg",g:"g",mg:"mg",t:"t",lb:"lb",oz:"oz"},temp:{c:"°C",f:"°F",k:"K"}};
+const cat=document.getElementById("cat"),from=document.getElementById("from"),to=document.getElementById("to");
+function fill(){from.innerHTML="";to.innerHTML="";Object.keys(units[cat.value]).forEach(k=>{from.innerHTML+='<option value="'+k+'">'+labels[cat.value][k]+'</option>';to.innerHTML+='<option value="'+k+'">'+labels[cat.value][k]+'</option>';});from.selectedIndex=0;to.selectedIndex=1;}
+cat.onchange=fill;fill();
+document.getElementById("go").onclick=()=>{const v=parseFloat(document.getElementById("v").value)||0;let res;if(cat.value==="temp"){const c=from.value==="c"?v:from.value==="f"?(v-32)*5/9:v-273.15;res=to.value==="c"?c:to.value==="f"?c*9/5+32:c+273.15;}else{res=v*units[cat.value][from.value]/units[cat.value][to.value];}document.getElementById("res").textContent=res.toFixed(6).replace(/\.?0+$/,"")+" "+labels[cat.value][to.value];document.getElementById("out").style.display="block";};</script>
+</body>
+</html>

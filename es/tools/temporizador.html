@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temporizador</title>
+<meta name="description" content="Temporizador y cronómetro online gratis. Precisión de 1/100 s. Sin registro.">
+<link rel="canonical" href="https://haowordtool.com/es/tools/temporizador.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/timer.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/timer.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/timer.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/temporizador.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/almuaqqit.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/taymer.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/timer.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Puedo pausar?","acceptedAnswer":{"@type":"Answer","text":"Sí, el tiempo continúa exactamente al reanudar."}},{"@type":"Question","name":"¿Funciona en segundo plano?","acceptedAnswer":{"@type":"Answer","text":"Al cambiar de pestaña la visualización puede pausarse."}}]}</script>
+</head><body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch" aria-label="Idioma">
+    <a href="/tools/timer.html" hreflang="en">EN</a><a href="/ja/tools/timer.html" hreflang="ja">JA</a><a href="/de/tools/timer.html" hreflang="de">DE</a><a href="/es/tools/temporizador.html" class="active" hreflang="es">ES</a><a href="/ar/tools/almuaqqit.html" hreflang="ar">AR</a><a href="/ru/tools/taymer.html" hreflang="ru">RU</a>
+  </div></div>
+</nav></div></header>
+<main><div class="wrap tool-page">
+  <a href="../index.html" class="back">← Volver a todas las herramientas</a>
+  <h1 style="margin-top:16px">Temporizador</h1><p class="lead">Cronómetro con precisión de 1/100 s.</p><div class="card" style="max-width:440px;text-align:center">
+    <div class="timer-display" id="disp">00:00<span style="font-size:.45em;color:var(--muted-2)">.00</span></div>
+    <div class="btn-row" style="justify-content:center;margin-top:20px">
+      <button class="btn btn-primary" id="start">Iniciar</button>
+      <button class="btn btn-ghost" id="reset">Reiniciar</button>
+    </div></div><div class="seo-content"><h2>Sobre el temporizador</h2><p>Cronómetro preciso con centésimas de segundo. Iniciar, pausar y reiniciar.</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Puedo pausar?</h3><p>Sí, el tiempo continúa exactamente al reanudar.</p></div><div class="faq-item"><h3>¿Funciona en segundo plano?</h3><p>Al cambiar de pestaña la visualización puede pausarse.</p></div></div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div></div></main>
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · Todo gratis</span>
+<div class="foot-links"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Contacto</a></div>
+</div></div></footer>
+<script type="application/json" id="relatedData">["world-clock","age-calculator"]</script>
+<script src="/assets/related-tools.js" defer></script><script>let t0=0,el=0,run=false,raf;const disp=document.getElementById("disp"),sb=document.getElementById("start");
+function fmt(ms){const m=Math.floor(ms/60000),s=Math.floor(ms%60000/1000),c=Math.floor(ms%1000/10);return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")+'<span style="font-size:.45em;color:var(--muted-2)">.'+String(c).padStart(2,"0")+"</span>";}
+function tick(){disp.innerHTML=fmt(el+(run?Date.now()-t0:0));if(run)raf=requestAnimationFrame(tick);}
+sb.onclick=()=>{if(run){el+=Date.now()-t0;run=false;cancelAnimationFrame(raf);sb.textContent="Continuar";}else{t0=Date.now();run=true;sb.textContent="Pausar";tick();}};
+document.getElementById("reset").onclick=()=>{el=0;run=false;cancelAnimationFrame(raf);sb.textContent="Iniciar";disp.innerHTML=fmt(0);};</script>
+</body>
+</html>

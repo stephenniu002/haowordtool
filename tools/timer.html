@@ -7,8 +7,12 @@
 <meta name="description" content="Free online stopwatch and timer. Precise timing down to centiseconds, no signup required.">
 <link rel="canonical" href="https://haowordtool.com/tools/timer.html">
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/timer.html">
-<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/timer.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/timer.html">
 <link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/timer.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/temporizador.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/almuaqqit.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/taymer.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/timer.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,7 +37,12 @@
       <button class="btn btn-ghost" id="reset">Reset</button>
     </div>
   </div>
-</div></main>
+</div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
+</main>
 
 <footer><div class="wrap"><div class="foot">
   <span>© 2026 Haowordtool Tools · Free forever</span>
@@ -80,5 +89,8 @@ reset.onclick = () => {
 const header = document.getElementById("header");
 addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["world-clock","age-calculator","bmi-calculator"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body>
 </html>

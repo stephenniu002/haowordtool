@@ -400,6 +400,69 @@
       "photoTitle": "Photos de produits IA",
       "videoTitle": "Vidéo produit IA",
       "voiceTitle": "Voix off IA"
+    },
+    "freeTools": {
+      "title": "Outils gratuits",
+      "subtitle": "14 outils en ligne gratuits — convertisseurs, calculatrices, outils d'image et utilitaires du quotidien. Sans inscription, tout fonctionne dans votre navigateur.",
+      "viewAll": "Voir tous les outils",
+      "tools": {
+        "currencyConverter": {
+          "name": "Convertisseur de devises",
+          "desc": "Taux en direct, plus de 30 devises"
+        },
+        "calculator": {
+          "name": "Calculatrice",
+          "desc": "Calculs de base, compatible clavier"
+        },
+        "mortgageCalculator": {
+          "name": "Calculateur hypothécaire",
+          "desc": "Mensualité et intérêts totaux"
+        },
+        "unitConverter": {
+          "name": "Convertisseur d'unités",
+          "desc": "Longueur, poids, température"
+        },
+        "wordCounter": {
+          "name": "Compteur de mots",
+          "desc": "Mots, caractères, temps de lecture"
+        },
+        "imageCompressor": {
+          "name": "Compresseur d'image",
+          "desc": "Réduisez JPG / PNG dans le navigateur"
+        },
+        "resizeImage": {
+          "name": "Redimensionner l'image",
+          "desc": "Dimensions personnalisées, ratio conservé"
+        },
+        "qrCodeGenerator": {
+          "name": "Générateur de QR code",
+          "desc": "URL ou texte en QR code"
+        },
+        "whatIsMyIp": {
+          "name": "Quelle est mon IP",
+          "desc": "IP publique, localisation et FAI"
+        },
+        "passwordGenerator": {
+          "name": "Générateur de mots de passe",
+          "desc": "Mots de passe forts, générés localement"
+        },
+        "bmiCalculator": {
+          "name": "Calculateur d'IMC",
+          "desc": "Indice de masse corporelle avec tranches"
+        },
+        "ageCalculator": {
+          "name": "Calculateur d'âge",
+          "desc": "Âge exact et compte à rebours d'anniversaire"
+        },
+        "timer": {
+          "name": "Minuteur / Chronomètre",
+          "desc": "Précision au 1/100e de seconde"
+        },
+        "worldClock": {
+          "name": "Horloge mondiale",
+          "desc": "Heure actuelle des grandes villes"
+        }
+      }
     }
   }
 }

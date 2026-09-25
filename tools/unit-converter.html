@@ -8,10 +8,20 @@
 <link rel="canonical" href="https://haowordtool.com/tools/unit-converter.html">
 
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/unit-converter.html">
-<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/unit-converter.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/unit-converter.html">
 <link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/unit-converter.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/conversor-de-unidades.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/muhawwil-wahdat.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/konverter-edinits.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/unit-converter.html">
 <!--
-<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/einheitenrechner.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/unit-converter.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/unit-converter.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/unit-converter.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/conversor-de-unidades.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/muhawwil-wahdat.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/konverter-edinits.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/unit-converter.html">
 -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +42,11 @@
       <div class="nav-right">
         <div class="lang-switch" aria-label="Language">
           <a href="/tools/unit-converter.html" class="active" hreflang="en">EN</a>
+          <a href="/de/tools/unit-converter.html" hreflang="de">DE</a>
+          <a href="/ja/tools/unit-converter.html" hreflang="ja">JA</a>
+          <a href="/es/tools/conversor-de-unidades.html" hreflang="es">ES</a>
+          <a href="/ar/tools/muhawwil-wahdat.html" hreflang="ar">AR</a>
+          <a href="/ru/tools/konverter-edinits.html" hreflang="ru">RU</a>
         </div>
       </div>
     </nav>
@@ -76,6 +91,10 @@
       </div>
     </div>
   </div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
 </main>
 
 <footer>
@@ -135,5 +154,8 @@ document.getElementById("go").onclick = () => {
 const header = document.getElementById("header");
 addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["currency-converter","calculator","word-counter"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body>
 </html>

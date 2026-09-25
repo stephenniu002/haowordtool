@@ -400,6 +400,69 @@
       "photoTitle": "AI Product Photos",
       "videoTitle": "AI Product Video",
       "voiceTitle": "AI Voiceover"
+    },
+    "freeTools": {
+      "title": "Free Tools",
+      "subtitle": "14 free online tools — converters, calculators, image tools and everyday helpers. No sign-up, everything runs in your browser.",
+      "viewAll": "View all tools",
+      "tools": {
+        "currencyConverter": {
+          "name": "Currency Converter",
+          "desc": "Live rates, 30+ currencies"
+        },
+        "calculator": {
+          "name": "Calculator",
+          "desc": "Basic math with keyboard support"
+        },
+        "mortgageCalculator": {
+          "name": "Mortgage Calculator",
+          "desc": "Monthly payment & total interest"
+        },
+        "unitConverter": {
+          "name": "Unit Converter",
+          "desc": "Length, weight, temperature"
+        },
+        "wordCounter": {
+          "name": "Word Counter",
+          "desc": "Words, characters, reading time"
+        },
+        "imageCompressor": {
+          "name": "Image Compressor",
+          "desc": "Shrink JPG / PNG in your browser"
+        },
+        "resizeImage": {
+          "name": "Resize Image",
+          "desc": "Custom dimensions, keep ratio"
+        },
+        "qrCodeGenerator": {
+          "name": "QR Code Generator",
+          "desc": "URL or text to QR code"
+        },
+        "whatIsMyIp": {
+          "name": "What Is My IP",
+          "desc": "Public IP, location & ISP"
+        },
+        "passwordGenerator": {
+          "name": "Password Generator",
+          "desc": "Strong passwords, generated locally"
+        },
+        "bmiCalculator": {
+          "name": "BMI Calculator",
+          "desc": "Body mass index with ranges"
+        },
+        "ageCalculator": {
+          "name": "Age Calculator",
+          "desc": "Exact age & birthday countdown"
+        },
+        "timer": {
+          "name": "Timer / Stopwatch",
+          "desc": "1/100s precision stopwatch"
+        },
+        "worldClock": {
+          "name": "World Clock",
+          "desc": "Current time in major cities"
+        }
+      }
     }
   }
 }

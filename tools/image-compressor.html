@@ -7,8 +7,12 @@
 <meta name="description" content="Free online image compressor. Reduce JPG, PNG and WebP file size directly in your browser. No upload, no watermark.">
 <link rel="canonical" href="https://haowordtool.com/tools/image-compressor.html">
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/image-compressor.html">
-<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/image-compressor.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/image-compressor.html">
 <link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/image-compressor.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/compresor-de-imagenes.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/daghit-alsuwar.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/szhatie-izobrazheniy.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/image-compressor.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -50,7 +54,12 @@
       <div class="result-value" id="info"></div>
     </div>
   </div>
-</div></main>
+</div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
+</main>
 
 <footer><div class="wrap"><div class="foot">
   <span>© 2026 Haowordtool Tools · Free forever</span>
@@ -104,5 +113,8 @@ go.onclick = () => {
 const header = document.getElementById("header");
 addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["resize-image","qr-code-generator","password-generator"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body>
 </html>

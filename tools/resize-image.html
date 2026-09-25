@@ -7,8 +7,12 @@
 <meta name="description" content="Free online image resizer. Change width and height with optional aspect ratio lock. Runs in your browser.">
 <link rel="canonical" href="https://haowordtool.com/tools/resize-image.html">
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/resize-image.html">
-<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/resize-image.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/resize-image.html">
 <link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/resize-image.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/redimensionar-imagen.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/taghyir-hajm-alsura.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/izmenit-razmer.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/resize-image.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -47,7 +51,12 @@
       <a id="dl" class="btn btn-primary" style="display:none" download="resized.png">Download resized</a>
     </div>
   </div>
-</div></main>
+</div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
+</main>
 
 <footer><div class="wrap"><div class="foot">
   <span>© 2026 Haowordtool Tools · Free forever</span>
@@ -95,5 +104,8 @@ dl.onclick = e => {
 const header = document.getElementById("header");
 addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["image-compressor","qr-code-generator","world-clock"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body>
 </html>

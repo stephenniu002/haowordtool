@@ -400,6 +400,69 @@
       "photoTitle": "AI 商品写真",
       "videoTitle": "AI 商品動画",
       "voiceTitle": "AI ナレーション"
+    },
+    "freeTools": {
+      "title": "無料ツール",
+      "subtitle": "14の無料オンラインツール——換算、計算機、画像ツール、暮らしの便利ツール。登録不要、すべてブラウザで動作します。",
+      "viewAll": "すべてのツールを見る",
+      "tools": {
+        "currencyConverter": {
+          "name": "通貨換算",
+          "desc": "リアルタイムレート、30以上の通貨"
+        },
+        "calculator": {
+          "name": "電卓",
+          "desc": "基本計算、キーボード対応"
+        },
+        "mortgageCalculator": {
+          "name": "住宅ローン計算",
+          "desc": "月々の返済額と総利息"
+        },
+        "unitConverter": {
+          "name": "単位換算",
+          "desc": "長さ、重さ、温度"
+        },
+        "wordCounter": {
+          "name": "文字数カウント",
+          "desc": "単語数、文字数、読了時間"
+        },
+        "imageCompressor": {
+          "name": "画像圧縮",
+          "desc": "ブラウザでJPG・PNGを圧縮"
+        },
+        "resizeImage": {
+          "name": "画像リサイズ",
+          "desc": "自由なサイズ、比率保持"
+        },
+        "qrCodeGenerator": {
+          "name": "QRコード生成",
+          "desc": "URLやテキストをQRコードに"
+        },
+        "whatIsMyIp": {
+          "name": "IPアドレス確認",
+          "desc": "グローバルIP、地域、ISP"
+        },
+        "passwordGenerator": {
+          "name": "パスワード生成",
+          "desc": "強固なパスワードをローカル生成"
+        },
+        "bmiCalculator": {
+          "name": "BMI計算",
+          "desc": "指数と判定区分つき"
+        },
+        "ageCalculator": {
+          "name": "年齢計算",
+          "desc": "正確な年齢と誕生日カウントダウン"
+        },
+        "timer": {
+          "name": "タイマー / ストップウォッチ",
+          "desc": "1/100秒精度"
+        },
+        "worldClock": {
+          "name": "世界時計",
+          "desc": "主要都市の現在時刻"
+        }
+      }
     }
   }
 }

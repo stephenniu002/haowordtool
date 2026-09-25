@@ -400,6 +400,69 @@
       "photoTitle": "KI-Produktfotos",
       "videoTitle": "KI-Produktvideo",
       "voiceTitle": "KI-Sprachaufnahme"
+    },
+    "freeTools": {
+      "title": "Kostenlose Tools",
+      "subtitle": "14 kostenlose Online-Tools — Umrechner, Rechner, Bild-Tools und Alltagshelfer. Keine Anmeldung, alles läuft in Ihrem Browser.",
+      "viewAll": "Alle Tools ansehen",
+      "tools": {
+        "currencyConverter": {
+          "name": "Währungsrechner",
+          "desc": "Live-Kurse, über 30 Währungen"
+        },
+        "calculator": {
+          "name": "Taschenrechner",
+          "desc": "Grundrechenarten mit Tastatur"
+        },
+        "mortgageCalculator": {
+          "name": "Hypothekenrechner",
+          "desc": "Monatsrate und Gesamtzinsen"
+        },
+        "unitConverter": {
+          "name": "Einheitenrechner",
+          "desc": "Länge, Gewicht, Temperatur"
+        },
+        "wordCounter": {
+          "name": "Wortzähler",
+          "desc": "Wörter, Zeichen, Lesezeit"
+        },
+        "imageCompressor": {
+          "name": "Bildkomprimierung",
+          "desc": "JPG / PNG im Browser verkleinern"
+        },
+        "resizeImage": {
+          "name": "Bildgröße ändern",
+          "desc": "Eigene Maße, Seitenverhältnis"
+        },
+        "qrCodeGenerator": {
+          "name": "QR-Code-Generator",
+          "desc": "URL oder Text als QR-Code"
+        },
+        "whatIsMyIp": {
+          "name": "Meine IP-Adresse",
+          "desc": "Öffentliche IP, Standort & Anbieter"
+        },
+        "passwordGenerator": {
+          "name": "Passwort-Generator",
+          "desc": "Starke Passwörter, lokal erzeugt"
+        },
+        "bmiCalculator": {
+          "name": "BMI-Rechner",
+          "desc": "Body-Mass-Index mit Bereichen"
+        },
+        "ageCalculator": {
+          "name": "Altersrechner",
+          "desc": "Genaues Alter & Geburtstags-Countdown"
+        },
+        "timer": {
+          "name": "Timer / Stoppuhr",
+          "desc": "1/100-Sekunden-Genauigkeit"
+        },
+        "worldClock": {
+          "name": "Weltuhr",
+          "desc": "Aktuelle Zeit in Metropolen"
+        }
+      }
     }
   }
 }

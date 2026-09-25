@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة العمر</title>
+<meta name="description" content="حاسبة عمر مجانية. العمر الدقيق بالسنوات والأشهر والأيام مع العد التنازلي لعيد الميلاد.">
+<link rel="canonical" href="https://haowordtool.com/ar/tools/hasibat-aleumr.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/age-calculator.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/age-calculator.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/age-calculator.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/calculadora-de-edad.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/hasibat-aleumr.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/kalkulyator-vozrasta.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/age-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"هل تُراعى السنوات الكبيسة؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يستخدم الحساب تواريخ تقويمية حقيقية."}},{"@type":"Question","name":"هل تُحفظ البيانات؟","acceptedAnswer":{"@type":"Answer","text":"لا، كل شيء يعمل داخل المتصفح."}}]}</script>
+</head><body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch" aria-label="اللغة">
+    <a href="/tools/age-calculator.html" hreflang="en">EN</a><a href="/ja/tools/age-calculator.html" hreflang="ja">JA</a><a href="/de/tools/age-calculator.html" hreflang="de">DE</a><a href="/es/tools/calculadora-de-edad.html" hreflang="es">ES</a><a href="/ar/tools/hasibat-aleumr.html" class="active" hreflang="ar">AR</a><a href="/ru/tools/kalkulyator-vozrasta.html" hreflang="ru">RU</a>
+  </div></div>
+</nav></div></header>
+<main><div class="wrap tool-page">
+  <a href="../index.html" class="back">عودة إلى كل الأدوات →</a>
+  <h1 style="margin-top:16px">حاسبة العمر</h1><p class="lead">العمر الدقيق بالسنوات والأشهر والأيام.</p><div class="card" style="max-width:480px">
+    <div style="margin-bottom:16px"><label for="b">تاريخ الميلاد</label><input type="date" id="b"></div>
+    <div class="btn-row"><button class="btn btn-primary btn-block" id="go">احسب العمر</button></div>
+    <div class="result" id="out" style="display:none"><div class="result-label" id="lbl"></div><div class="result-value" id="res"></div><div class="result-note" id="note"></div></div></div><div class="seo-content"><h2>عن حاسبة العمر</h2><p>تحسب العمر الدقيق بالسنوات والأشهر والأيام، وعدد الأيام حتى عيد الميلاد القادم.</p><h3>أسئلة شائعة</h3><div class="faq-item"><h3>هل تُراعى السنوات الكبيسة؟</h3><p>نعم، يستخدم الحساب تواريخ تقويمية حقيقية.</p></div><div class="faq-item"><h3>هل تُحفظ البيانات؟</h3><p>لا، كل شيء يعمل داخل المتصفح.</p></div></div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div></div></main>
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · مجاني بالكامل</span>
+<div class="foot-links"><a href="#">الخصوصية</a><a href="#">الشروط</a><a href="#">اتصل</a></div>
+</div></div></footer>
+<script type="application/json" id="relatedData">["world-clock","timer"]</script>
+<script src="/assets/related-tools.js" defer></script><script>document.getElementById("go").onclick=()=>{const b=new Date(document.getElementById("b").value);if(isNaN(b))return;const n=new Date();let y=n.getFullYear()-b.getFullYear(),m=n.getMonth()-b.getMonth(),d=n.getDate()-b.getDate();if(d<0){m--;d+=new Date(n.getFullYear(),n.getMonth(),0).getDate();}if(m<0){y--;m+=12;}document.getElementById("lbl").textContent="عمرك";document.getElementById("res").textContent=y+" سنة · "+m+" شهر · "+d+" يوم";let nb=new Date(n.getFullYear(),b.getMonth(),b.getDate());if(nb<n)nb=new Date(n.getFullYear()+1,b.getMonth(),b.getDate());const days=Math.ceil((nb-n)/86400000);document.getElementById("note").textContent=days+" يوم حتى عيد الميلاد";document.getElementById("out").style.display="block";};</script>
+</body>
+</html>

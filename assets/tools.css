@@ -155,3 +155,40 @@ footer{border-top:1px solid var(--border);padding:26px 0;position:relative;z-ind
 .faq-item h3{margin:0 0 8px;font-size:15px;color:var(--text)}
 .faq-item p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
 @media(max-width:720px){.seo-content{margin-top:40px}}
+
+/* Related Tools */
+.related-tools{margin-top:56px;padding-top:32px;border-top:1px solid var(--border)}
+.related-tools h2{font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:20px}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.related-card{display:flex;align-items:center;gap:14px;padding:16px 18px;background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:12px;transition:border-color .25s,transform .25s,background .25s}
+.related-card:hover{border-color:var(--border-strong);transform:translateY(-2px);background:rgba(124,92,255,.04)}
+.related-card .r-icon{width:36px;height:36px;border-radius:10px;flex:none;display:grid;place-items:center;background:linear-gradient(150deg,rgba(124,92,255,.18),rgba(124,92,255,.05));border:1px solid rgba(124,92,255,.25)}
+.related-card .r-icon svg{width:17px;height:17px;color:var(--accent-2)}
+.related-card b{display:block;font-size:14px;font-weight:650;letter-spacing:-.01em;line-height:1.3}
+.related-card span{font-size:12px;color:var(--muted-2);display:block;margin-top:2px;line-height:1.4}
+@media(max-width:760px){.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.related-grid{grid-template-columns:1fr}}
+
+/* RTL 支持（阿拉伯语） */
+[dir="rtl"] body{font-family:'Noto Sans Arabic','Cairo',system-ui,sans-serif}
+[dir="rtl"] .nav{flex-direction:row-reverse}
+[dir="rtl"] .nav-right{flex-direction:row-reverse}
+[dir="rtl"] .logo{flex-direction:row-reverse}
+[dir="rtl"] .lang-switch{flex-direction:row-reverse}
+[dir="rtl"] .tool-arrow{right:auto;left:16px}
+[dir="rtl"] .tool:hover .tool-arrow{transform:translate(-3px,-3px)}
+[dir="rtl"] .back svg,[dir="rtl"] .related-card .r-icon svg,[dir="rtl"] .related-tools .r-icon svg{transform:scaleX(-1)}
+[dir="rtl"] .tool-icon,[dir="rtl"] .ico,[dir="rtl"] .g-icon{margin-right:0;margin-left:12px}
+[dir="rtl"] .card,[dir="rtl"] .tool,[dir="rtl"] .related-card{text-align:right}
+[dir="rtl"] .hero,[dir="rtl"] .sec-head,[dir="rtl"] .tool-header{text-align:center}
+[dir="rtl"] .field label,[dir="rtl"] label{text-align:right}
+[dir="rtl"] input,[dir="rtl"] textarea,[dir="rtl"] select{text-align:right;direction:rtl}
+[dir="rtl"] input[type=number],[dir="rtl"] .result-value,[dir="rtl"] .stat-num,[dir="rtl"] .clock-item .time{direction:ltr;text-align:left}
+[dir="rtl"] .check-row{flex-direction:row-reverse}
+[dir="rtl"] .stat-box,[dir="rtl"] .calc-display{text-align:center}
+[dir="rtl"] .pw-output{direction:ltr;text-align:left}
+[dir="rtl"] .foot{flex-direction:row-reverse}
+[dir="rtl"] .foot-links{flex-direction:row-reverse}
+[dir="rtl"] .search svg{left:auto;right:18px}
+[dir="rtl"] .search input{padding:14px 48px 14px 18px}
+[dir="rtl"] .group-head .g-sub{margin-left:0;margin-right:auto}

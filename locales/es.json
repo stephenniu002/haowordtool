@@ -400,6 +400,69 @@
       "photoTitle": "Fotos de producto con IA",
       "videoTitle": "Vídeo de producto con IA",
       "voiceTitle": "Locución con IA"
+    },
+    "freeTools": {
+      "title": "Herramientas gratuitas",
+      "subtitle": "14 herramientas online gratuitas — conversores, calculadoras, herramientas de imagen y utilidades diarias. Sin registro, todo funciona en tu navegador.",
+      "viewAll": "Ver todas las herramientas",
+      "tools": {
+        "currencyConverter": {
+          "name": "Conversor de monedas",
+          "desc": "Tipos en vivo, más de 30 monedas"
+        },
+        "calculator": {
+          "name": "Calculadora",
+          "desc": "Aritmética básica con teclado"
+        },
+        "mortgageCalculator": {
+          "name": "Calculadora hipotecaria",
+          "desc": "Cuota mensual e intereses totales"
+        },
+        "unitConverter": {
+          "name": "Conversor de unidades",
+          "desc": "Longitud, peso, temperatura"
+        },
+        "wordCounter": {
+          "name": "Contador de palabras",
+          "desc": "Palabras, caracteres, tiempo de lectura"
+        },
+        "imageCompressor": {
+          "name": "Compresor de imágenes",
+          "desc": "Reduce JPG / PNG en el navegador"
+        },
+        "resizeImage": {
+          "name": "Redimensionar imagen",
+          "desc": "Tamaño personalizado, proporción"
+        },
+        "qrCodeGenerator": {
+          "name": "Generador de QR",
+          "desc": "URL o texto a código QR"
+        },
+        "whatIsMyIp": {
+          "name": "Mi dirección IP",
+          "desc": "IP pública, ubicación e ISP"
+        },
+        "passwordGenerator": {
+          "name": "Generador de contraseñas",
+          "desc": "Contraseñas seguras, generadas localmente"
+        },
+        "bmiCalculator": {
+          "name": "Calculadora de IMC",
+          "desc": "Índice de masa corporal con rangos"
+        },
+        "ageCalculator": {
+          "name": "Calculadora de edad",
+          "desc": "Edad exacta y cuenta atrás de cumpleaños"
+        },
+        "timer": {
+          "name": "Temporizador / Cronómetro",
+          "desc": "Precisión de 1/100 s"
+        },
+        "worldClock": {
+          "name": "Reloj mundial",
+          "desc": "Hora actual en grandes ciudades"
+        }
+      }
     }
   }
 }

@@ -10,9 +10,8 @@
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/currency-converter.html">
 <link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/currency-converter.html">
 <!--
-<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/waehrungsrechner.html">
-<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/currency-converter.html">
-<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/conversor-de-monedas.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/currency-converter.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/currency-converter.html">
 -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,11 +32,6 @@
       <div class="nav-right">
         <div class="lang-switch" aria-label="Language">
           <a href="/tools/currency-converter.html" class="active" hreflang="en">EN</a>
-          <!--
-          <a href="/de/tools/waehrungsrechner.html" hreflang="de">DE</a>
-          <a href="/ja/tools/currency-converter.html" hreflang="ja">JA</a>
-          <a href="/es/tools/conversor-de-monedas.html" hreflang="es">ES</a>
-          -->
         </div>
       </div>
     </nav>
@@ -82,6 +76,10 @@
 
     <p class="hint">Rates in this demo are static. For production, connect a live forex API such as exchangerate.host or fixer.io.</p>
   </div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
 </main>
 
 <footer>
@@ -119,5 +117,8 @@ convert();
 const header = document.getElementById("header");
 addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["calculator","mortgage-calculator","unit-converter"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body>
 </html>

@@ -7,7 +7,11 @@
 <meta name="description" content="世界の主要都市の現在時刻をリアルタイムで表示。ニューヨーク、ロンドン、東京、北京、シドニーなど。無料、登録不要。">
 <link rel="canonical" href="https://haowordtool.com/ja/tools/world-clock.html">
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/world-clock.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/world-clock.html">
 <link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/world-clock.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/reloj-mundial.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/saat-alealam.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/mirovye-chasy.html">
 <link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/world-clock.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +73,12 @@
     <div class="faq-item"><h3>都市を追加できますか？</h3><p>現在は固定リストです。カスタマイズ機能は今後のアップデートで予定しています。</p></div>
     <div class="faq-item"><h3>時刻は正確ですか？</h3><p>お使いのデバイスのシステム時刻を基準に、各都市のタイムゾーンに変換して表示します。</p></div>
   </div>
-</div></main>
+</div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
+</main>
 
 <footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · すべて無料</span>
 <div class="foot-links"><a href="#">プライバシー</a><a href="#">利用規約</a><a href="#">お問い合わせ</a></div>
@@ -81,4 +90,7 @@ function tick(){const list=document.getElementById("list");list.innerHTML=cities
 tick();setInterval(tick,1000);
 const header=document.getElementById("header");addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>12),{passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["timer","age-calculator","what-is-my-ip"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body></html>

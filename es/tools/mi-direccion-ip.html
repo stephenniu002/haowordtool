@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Dirección IP</title>
+<meta name="description" content="Consulta tu IP gratis. IP pública, ubicación e ISP. Sin registro.">
+<link rel="canonical" href="https://haowordtool.com/es/tools/mi-direccion-ip.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/what-is-my-ip.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/what-is-my-ip.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/what-is-my-ip.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/mi-direccion-ip.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/anawani-ip.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/moy-ip.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/what-is-my-ip.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué revela mi IP?","acceptedAnswer":{"@type":"Answer","text":"Ubicación aproximada y proveedor. No una dirección exacta."}},{"@type":"Question","name":"¿Cambia mi IP?","acceptedAnswer":{"@type":"Answer","text":"En la mayoría de conexiones, sí, periódicamente."}}]}</script>
+</head><body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch" aria-label="Idioma">
+    <a href="/tools/what-is-my-ip.html" hreflang="en">EN</a><a href="/ja/tools/what-is-my-ip.html" hreflang="ja">JA</a><a href="/de/tools/what-is-my-ip.html" hreflang="de">DE</a><a href="/es/tools/mi-direccion-ip.html" class="active" hreflang="es">ES</a><a href="/ar/tools/anawani-ip.html" hreflang="ar">AR</a><a href="/ru/tools/moy-ip.html" hreflang="ru">RU</a>
+  </div></div>
+</nav></div></header>
+<main><div class="wrap tool-page">
+  <a href="../index.html" class="back">← Volver a todas las herramientas</a>
+  <h1 style="margin-top:16px">Mi Dirección IP</h1><p class="lead">IP pública, ubicación e ISP.</p><div class="card" style="max-width:560px">
+    <div style="text-align:center;padding:8px 0 4px"><div style="font-size:12px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.08em;font-weight:600">Tu IP pública</div>
+    <div id="ip" class="result-value" style="margin-top:8px">…</div></div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="stat-box"><div class="stat-label">City</div><div class="stat-num" id="city">–</div></div>
+      <div class="stat-box"><div class="stat-label">ISP</div><div class="stat-num" id="isp" style="font-size:15px">–</div></div>
+    </div>
+    <p class="result-note" style="margin-top:18px">Esta página usa APIs públicas (ipify.org, ipapi.co). Tu IP no se almacena.</p></div><div class="seo-content"><h2>Sobre Mi dirección IP</h2><p>Muestra tu IP pública, ubicación aproximada y proveedor de internet.</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Qué revela mi IP?</h3><p>Ubicación aproximada y proveedor. No una dirección exacta.</p></div><div class="faq-item"><h3>¿Cambia mi IP?</h3><p>En la mayoría de conexiones, sí, periódicamente.</p></div></div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div></div></main>
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · Todo gratis</span>
+<div class="foot-links"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Contacto</a></div>
+</div></div></footer>
+<script type="application/json" id="relatedData">["password-generator","world-clock","qr-code-generator"]</script>
+<script src="/assets/related-tools.js" defer></script><script>fetch("https://api.ipify.org?format=json").then(r=>r.json()).then(d=>{document.getElementById("ip").textContent=d.ip;}).catch(()=>{document.getElementById("ip").textContent="n/a";});
+fetch("https://ipapi.co/json/").then(r=>r.json()).then(d=>{document.getElementById("city").textContent=(d.city||"–")+", "+(d.country_name||"");document.getElementById("isp").textContent=d.org||"–";}).catch(()=>{});</script>
+</body>
+</html>

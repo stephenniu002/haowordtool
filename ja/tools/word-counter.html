@@ -7,7 +7,11 @@
 <meta name="description" content="無料の文字数カウントツール。文字数、単語数、行数、読了時間をリアルタイムで表示。ブログや SEO に最適。">
 <link rel="canonical" href="https://haowordtool.com/ja/tools/word-counter.html">
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/word-counter.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/word-counter.html">
 <link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/word-counter.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/contador-de-palabras.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/addad-alkalimat.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/schetchik-slov.html">
 <link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/word-counter.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +82,12 @@
     <div class="faq-item"><h3>読了時間の計算方法は？</h3><p>一般的に 1 分あたり 200 語（日本語の場合は 400 〜 600 文字）を目安に算出しています。</p></div>
     <div class="faq-item"><h3>データは保存されますか？</h3><p>いいえ。すべてブラウザ内で処理され、サーバーには送信されません。</p></div>
   </div>
-</div></main>
+</div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
+</main>
 
 <footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · すべて無料</span>
 <div class="foot-links"><a href="#">プライバシー</a><a href="#">利用規約</a><a href="#">お問い合わせ</a></div>
@@ -90,4 +99,7 @@ function upd(){const v=t.value;document.getElementById("chars").textContent=v.le
 t.oninput=upd;upd();
 const header=document.getElementById("header");addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>12),{passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["calculator","age-calculator"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body></html>

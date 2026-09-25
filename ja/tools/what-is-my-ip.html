@@ -7,7 +7,11 @@
 <meta name="description" content="あなたのグローバル IP アドレス、おおよその位置、ISP を瞬時に表示。無料、登録不要。">
 <link rel="canonical" href="https://haowordtool.com/ja/tools/what-is-my-ip.html">
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/what-is-my-ip.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/what-is-my-ip.html">
 <link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/what-is-my-ip.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/mi-direccion-ip.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/anawani-ip.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/moy-ip.html">
 <link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/what-is-my-ip.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +80,12 @@
     <div class="faq-item"><h3>IP アドレスは変わりますか？</h3><p>はい。多くの ISP は動的 IP を割り当てるため、ルーターの再起動や接続のたびに変わることがあります。</p></div>
     <div class="faq-item"><h3>VPN を使うとどうなりますか？</h3><p>VPN 接続中は、VPN サーバーの IP アドレスが表示されます。元の IP は隠されます。</p></div>
   </div>
-</div></main>
+</div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
+</main>
 
 <footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · すべて無料</span>
 <div class="foot-links"><a href="#">プライバシー</a><a href="#">利用規約</a><a href="#">お問い合わせ</a></div>
@@ -86,4 +95,7 @@
 (async()=>{try{const r=await fetch("https://api.ipify.org?format=json");const d=await r.json();document.getElementById("ip").textContent=d.ip;try{const r2=await fetch("https://ipapi.co/"+d.ip+"/json/");const d2=await r2.json();const parts=[d2.city,d2.region,d2.country_name].filter(Boolean);document.getElementById("loc").textContent=parts.join(", ")+(d2.org?" · "+d2.org:"");}catch(e){document.getElementById("loc").textContent="位置情報を取得できません";}}catch(e){document.getElementById("ip").textContent="IP を取得できません";document.getElementById("loc").textContent="";}})();
 const header=document.getElementById("header");addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>12),{passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["password-generator","world-clock","qr-code-generator"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body></html>

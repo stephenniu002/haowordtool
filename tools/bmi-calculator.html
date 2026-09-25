@@ -38,7 +38,12 @@
       <div class="result-note" id="note"></div>
     </div>
   </div>
-</div></main>
+</div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
+</main>
 
 <footer><div class="wrap"><div class="foot">
   <span>© 2026 Haowordtool Tools · Free forever</span>
@@ -65,5 +70,8 @@ document.getElementById("go").click();
 const header = document.getElementById("header");
 addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
 </script>
+
+<script type="application/json" id="relatedData">["age-calculator","word-counter","timer"]</script>
+<script src="/assets/related-tools.js" defer></script>
 </body>
 </html>
