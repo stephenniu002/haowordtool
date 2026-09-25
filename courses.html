@@ -122,6 +122,8 @@
   .buy-btn{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:650;padding:12px 24px;border-radius:10px;background:linear-gradient(180deg,#8a6bff,var(--accent));color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.22) inset,0 8px 24px -8px var(--glow);transition:.18s;white-space:nowrap}
   .buy-btn:hover{transform:translateY(-1.5px);box-shadow:0 1px 0 rgba(255,255,255,.28) inset,0 14px 32px -8px var(--glow)}
   .buy-btn svg{width:15px;height:15px}
+  .buy-btn-disabled{background:#3a3a44;box-shadow:none;cursor:not-allowed;color:#a9a9b3}
+  .buy-btn-disabled:hover{transform:none;box-shadow:none}
 
   .bundle{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(124,92,255,.45);background:linear-gradient(150deg,rgba(124,92,255,.16),rgba(124,92,255,.04) 50%,rgba(79,209,197,.08));padding:48px 44px;box-shadow:0 40px 90px -40px var(--glow)}
   .bundle::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 80% 100% at 50% 0%,#000,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 80% 100% at 50% 0%,#000,transparent 70%)}
@@ -142,6 +144,8 @@
   .bundle-btn{display:inline-flex;align-items:center;gap:9px;font-size:16px;font-weight:700;padding:16px 34px;border-radius:13px;background:linear-gradient(180deg,#8a6bff,var(--accent));color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 12px 36px -10px var(--glow);transition:.18s;white-space:nowrap}
   .bundle-btn:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.3) inset,0 20px 44px -10px var(--glow)}
   .bundle-btn svg{width:17px;height:17px}
+  .bundle-btn-disabled{background:#3a3a44;box-shadow:none;cursor:not-allowed;color:#a9a9b3}
+  .bundle-btn-disabled:hover{transform:none;box-shadow:none}
 
   .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
   .trust-item{text-align:center;padding:20px 14px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02)}
@@ -398,7 +402,7 @@ const courses = [
       en: ["Story structure & script generation", "Character design & visual consistency", "Storyboard, voiceover & editing"]
     },
     price: 79.99,
-    link: "https://gumroad.com/l/ai-animation-studio"
+    link: "https://lucylove0.gumroad.com/l/ai-animation-studio"
   },
   {
     title: "AI Agents from Zero to One",
@@ -419,7 +423,7 @@ const courses = [
       en: ["Core concepts & how Agents run", "Platform selection & setup walkthrough", "5 reusable automation scenarios"]
     },
     price: 89.99,
-    link: "https://gumroad.com/l/ai-agents-zero-to-one"
+    link: "https://lucylove0.gumroad.com/l/ai-agents-zero-to-one"
   },
   {
     title: "TikTok Shop Seller Playbook",
@@ -440,7 +444,8 @@ const courses = [
       en: ["US store setup & compliance", "Product selection & AI-assisted analysis", "Short-video content & creator partnerships"]
     },
     price: 79.99,
-    link: "https://gumroad.com/l/tiktok-shop-playbook"
+    link: "https://gumroad.com/l/tiktok-shop-playbook",
+    comingSoon: true
   },
   {
     title: "AI Photo Editing Freelancer",
@@ -461,14 +466,16 @@ const courses = [
       en: ["Hands-on with major AI editing tools", "E-commerce & portrait retouching cases", "Gig platforms, pricing & client communication"]
     },
     price: 59.99,
-    link: "https://gumroad.com/l/ai-photo-editing"
+    link: "https://gumroad.com/l/ai-photo-editing",
+    comingSoon: true
   }
 ];
 
 /* 打包优惠配置 */
 const bundleConfig = {
   discount: 69.97,
-  link: "https://gumroad.com/l/all-courses-bundle"
+  link: "https://gumroad.com/l/all-courses-bundle",
+  comingSoon: true
 };
 
 /* 双语 UI 文案 */
@@ -481,6 +488,7 @@ const UI_TEXT = {
     bundleCta: (d) => `打包优惠 · 省 $${d}`,
     bundleSave: (d) => `省 $${d}`,
     buyBtn: "立即购买",
+    comingSoon: "即将上线",
     priceLabel: "一次买断 · 永久访问",
     modulesSuffix: "（"
   },
@@ -492,6 +500,7 @@ const UI_TEXT = {
     bundleCta: (d) => `Bundle deal · Save $${d}`,
     bundleSave: (d) => `Save $${d}`,
     buyBtn: "Buy now",
+    comingSoon: "Coming soon",
     priceLabel: "One-time payment · Lifetime access",
     modulesSuffix: " ("
   }
@@ -608,10 +617,11 @@ function renderCourses() {
             <span class="price-num">$${c.price.toFixed(2)}</span>
             <span class="price-label">${t.priceLabel}</span>
           </div>
-          <a href="${c.link}" class="buy-btn" target="_blank" rel="noopener">
+          <a href="${c.link}" class="buy-btn" target="_blank" rel="noopener" ${c.comingSoon ? 'style="display:none"' : ""}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
             ${t.buyBtn}
           </a>
+          ${c.comingSoon ? `<span class="buy-btn buy-btn-disabled">${t.comingSoon}</span>` : ""}
         </div>
       </div>
     </div>
@@ -631,8 +641,13 @@ function renderBundle() {
   document.getElementById("bundleOld").textContent = `$${total.toFixed(2)}`;
   document.getElementById("bundleNew").textContent = `$${finalPrice.toFixed(2)}`;
   document.getElementById("bundleSave").textContent = t.bundleSave(bundleConfig.discount.toFixed(2));
-  document.getElementById("bundleBtn").href = bundleConfig.link;
-  document.getElementById("bundleBtnText").textContent = t.bundleBtn(finalPrice.toFixed(2));
+  const bundleBtn = document.getElementById("bundleBtn");
+  if (bundleConfig.comingSoon) {
+    bundleBtn.outerHTML = `<span class="bundle-btn bundle-btn-disabled" id="bundleBtn"><span>${t.comingSoon}</span></span>`;
+  } else {
+    bundleBtn.href = bundleConfig.link;
+    document.getElementById("bundleBtnText").textContent = t.bundleBtn(finalPrice.toFixed(2));
+  }
   document.getElementById("bundleCta").textContent = t.bundleCta(bundleConfig.discount.toFixed(2));
 
   document.getElementById("bundleList").innerHTML = courses.map(c => `
