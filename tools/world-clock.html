@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Clock — Current Time Around the World</title>
+<meta name="description" content="See current time in major cities around the world. Free, always up to date, no signup.">
+<link rel="canonical" href="https://haowordtool.com/tools/world-clock.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/world-clock.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/world-clock.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/tools.css">
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch"><a href="/tools/world-clock.html" class="active" hreflang="en">EN</a></div></div>
+</nav></div></header>
+
+<main><div class="wrap tool-page">
+  <a href="index.html" class="back">← Back to all tools</a>
+  <h1 style="margin-top:16px">World Clock</h1>
+  <p class="lead">Current local time in major cities. Updates every second.</p>
+
+  <div class="card">
+    <div id="list" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px"></div>
+  </div>
+</div></main>
+
+<footer><div class="wrap"><div class="foot">
+  <span>© 2026 Haowordtool Tools · Free forever</span>
+  <div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></div>
+</div></div></footer>
+
+<script>
+const cities = [
+  {name:"New York", tz:"America/New_York"},
+  {name:"Los Angeles", tz:"America/Los_Angeles"},
+  {name:"London", tz:"Europe/London"},
+  {name:"Paris", tz:"Europe/Paris"},
+  {name:"Berlin", tz:"Europe/Berlin"},
+  {name:"Tokyo", tz:"Asia/Tokyo"},
+  {name:"Beijing", tz:"Asia/Shanghai"},
+  {name:"Singapore", tz:"Asia/Singapore"},
+  {name:"Sydney", tz:"Australia/Sydney"},
+  {name:"Dubai", tz:"Asia/Dubai"},
+  {name:"São Paulo", tz:"America/Sao_Paulo"},
+  {name:"Mexico City", tz:"America/Mexico_City"}
+];
+
+function tick(){
+  const list = document.getElementById("list");
+  list.innerHTML = cities.map(c => {
+    const now = new Date();
+    const fmt = new Intl.DateTimeFormat("en-GB", {
+      timeZone: c.tz, hour:"2-digit", minute:"2-digit", second:"2-digit", hour12:false
+    }).format(now);
+    const dateFmt = new Intl.DateTimeFormat("en-US", {
+      timeZone: c.tz, weekday:"short", month:"short", day:"numeric"
+    }).format(now);
+    return `<div style="padding:16px 18px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02);display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div>
+        <div style="font-size:14.5px;font-weight:650">${c.name}</div>
+        <div style="font-size:11.5px;color:var(--muted-2);margin-top:2px">${dateFmt}</div>
+      </div>
+      <div style="font-family:var(--mono);font-size:17px;font-weight:600;color:var(--accent-2)">${fmt}</div>
+    </div>`;
+  }).join("");
+}
+tick();
+setInterval(tick, 1000);
+
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
+</script>
+</body>
+</html>
