@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конвертер валют</title>
+<meta name="description" content="Бесплатный конвертер валют. Конвертируйте USD, EUR, JPY, CNY и более 30 валют.">
+<link rel="canonical" href="https://haowordtool.com/ru/tools/konverter-valyut.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/currency-converter.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/currency-converter.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/currency-converter.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/conversor-de-monedas.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/muhawwil-umlat.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/konverter-valyut.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/currency-converter.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Какие валюты поддерживаются?","acceptedAnswer":{"@type":"Answer","text":"Доллары США, евро, иены, юани, британские фунты и более 30 основных валют."}},{"@type":"Question","name":"Показанные курсы точные?","acceptedAnswer":{"@type":"Answer","text":"Курсы на этой странице — фиксированные приблизительные значения и могут отличаться от реальных рыночных курсов."}}]}</script>
+</head><body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch" aria-label="Язык">
+    <a href="/tools/currency-converter.html" hreflang="en">EN</a><a href="/ja/tools/currency-converter.html" hreflang="ja">JA</a><a href="/de/tools/currency-converter.html" hreflang="de">DE</a><a href="/es/tools/conversor-de-monedas.html" hreflang="es">ES</a><a href="/ar/tools/muhawwil-umlat.html" hreflang="ar">AR</a><a href="/ru/tools/konverter-valyut.html" class="active" hreflang="ru">RU</a>
+  </div></div>
+</nav></div></header>
+<main><div class="wrap tool-page">
+  <a href="../index.html" class="back">← Назад ко всем инструментам</a>
+  <h1 style="margin-top:16px">Конвертер валют</h1><p class="lead">Конвертация между 30+ валютами. Курсы приблизительные и приведены только для справки.</p><div class="card">
+    <div class="grid2">
+      <div><label for="amount">Сумма</label><input type="number" id="amount" value="100" min="0" step="any"></div>
+      <div><label for="from">Из</label><select id="from"></select></div>
+    </div>
+    <div style="text-align:center;margin:14px 0"><button class="btn btn-ghost" id="swap" style="padding:8px 16px">⇅ Поменять</button></div>
+    <div class="grid2">
+      <div><label for="to">В</label><select id="to"></select></div>
+      <div style="display:flex;align-items:flex-end"><button class="btn btn-primary btn-block" id="go">Конвертировать</button></div>
+    </div>
+    <div class="result" id="out" style="display:none"><div class="result-label">Результат</div><div class="result-value" id="val"></div><div class="result-note" id="rate"></div></div>
+  </div>
+  <p class="hint">Курсы в этой демо-версии статичны. Для продакшена подключите forex-API, например exchangerate.host или fixer.io.</p>
+  <div class="seo-content"><h2>О конвертере валют</h2><p>Конвертирует доллары США (USD), евро (EUR), японские иены (JPY), китайские юани (CNY), британские фунты (GBP) и более 30 других валют.</p><h3>Частые вопросы</h3><div class="faq-item"><h3>Какие валюты поддерживаются?</h3><p>Доллары США, евро, иены, юани, британские фунты и более 30 основных валют.</p></div><div class="faq-item"><h3>Показанные курсы точные?</h3><p>Курсы на этой странице — фиксированные приблизительные значения и могут отличаться от реальных рыночных курсов.</p></div></div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div></div></main>
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · Всё бесплатно</span>
+<div class="foot-links"><a href="#">Приватность</a><a href="#">Условия</a><a href="#">Контакты</a></div>
+</div></div></footer>
+<script type="application/json" id="relatedData">["calculator","mortgage-calculator","unit-converter"]</script>
+<script src="/assets/related-tools.js" defer></script>
+<script>const currencies = ["USD","EUR","CNY","JPY","GBP","KRW","INR","AUD","CAD","CHF","HKD","SGD","TWD","BRL","RUB","MXN","TRY","THB","VND","IDR","NZD","SEK","NOK","DKK","PLN","ZAR","AED","SAR","PHP","MYR"];
+const rates = {USD:1,EUR:.92,CNY:7.18,JPY:149.5,GBP:.79,KRW:1330,INR:83.2,AUD:1.52,CAD:1.36,CHF:.88,HKD:7.82,SGD:1.34,TWD:31.9,BRL:5.05,RUB:92.5,MXN:17.1,TRY:32.3,THB:35.6,VND:24700,IDR:15800,NZD:1.64,SEK:10.4,NOK:10.6,DKK:6.85,PLN:3.98,ZAR:18.6,AED:3.67,SAR:3.75,PHP:56.2,MYR:4.72};
+const f = document.getElementById("from"), t = document.getElementById("to");
+currencies.forEach(c => { f.innerHTML += `<option value="${c}">${c}</option>`; t.innerHTML += `<option value="${c}">${c}</option>`; });
+f.value = "USD"; t.value = "RUB";
+function convert(){
+  const amt = parseFloat(document.getElementById("amount").value) || 0;
+  const v = amt / rates[f.value] * rates[t.value];
+  document.getElementById("val").textContent = v.toFixed(2) + " " + t.value;
+  document.getElementById("rate").textContent = `1 ${f.value} = ${(rates[t.value]/rates[f.value]).toFixed(4)} ${t.value}`;
+  document.getElementById("out").style.display = "block";
+}
+document.getElementById("go").onclick = convert;
+document.getElementById("swap").onclick = () => { const a = f.value; f.value = t.value; t.value = a; convert(); };
+convert();
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI 計算 — ボディマス指数</title>
+<meta name="description" content="無料の BMI 計算ツール。身長と体重を入力して BMI と健康的な体重範囲をチェック。">
+<link rel="canonical" href="https://haowordtool.com/ja/tools/bmi-calculator.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/bmi-calculator.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/bmi-calculator.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/bmi-calculator.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/calculadora-imc.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/hasibat-muashir-kutlat-aljism.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/kalkulyator-imt.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/bmi-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"BMI とは？","acceptedAnswer":{"@type":"Answer","text":"体重(kg) を身長(m) の2乗で割った値で、体格の目安となる指標です。"}},{"@type":"Question","name":"健康的な BMI の目安は？","acceptedAnswer":{"@type":"Answer","text":"一般的に 18.5～24.9 が標準体重の範囲とされています。"}}]}</script>
+</head><body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch" aria-label="言語">
+    <a href="/tools/bmi-calculator.html" hreflang="en">EN</a><a href="/ja/tools/bmi-calculator.html" class="active" hreflang="ja">JA</a><a href="/de/tools/bmi-calculator.html" hreflang="de">DE</a><a href="/es/tools/calculadora-imc.html" hreflang="es">ES</a><a href="/ar/tools/hasibat-muashir-kutlat-aljism.html" hreflang="ar">AR</a><a href="/ru/tools/kalkulyator-imt.html" hreflang="ru">RU</a>
+  </div></div>
+</nav></div></header>
+<main><div class="wrap tool-page">
+  <a href="index.html" class="back">← すべてのツールに戻る</a>
+  <h1 style="margin-top:16px">BMI 計算</h1><p class="lead">身長と体重から BMI（ボディマス指数）を計算します。</p><div class="card" style="max-width:520px">
+    <div class="grid2">
+      <div><label for="h">身長 (cm)</label><input type="number" id="h" value="170" min="50" max="250"></div>
+      <div><label for="w">体重 (kg)</label><input type="number" id="w" value="65" min="10" max="400"></div>
+    </div>
+    <div class="btn-row"><button class="btn btn-primary btn-block" id="go">BMI を計算</button></div>
+    <div class="result" id="out" style="display:none"><div class="result-label">あなたの BMI</div><div class="result-value" id="val"></div><div class="result-note" id="note"></div></div>
+  </div>
+  <div class="seo-content"><h2>BMI 計算ツールについて</h2><p>身長（cm）と体重（kg）を入力するだけで、BMI と4段階の体型判定を表示します。</p><h3>よくある質問</h3><div class="faq-item"><h3>BMI とは？</h3><p>体重(kg) を身長(m) の2乗で割った値で、体格の目安となる指標です。</p></div><div class="faq-item"><h3>健康的な BMI の目安は？</h3><p>一般的に 18.5～24.9 が標準体重の範囲とされています。</p></div></div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div></div></main>
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · すべて無料</span>
+<div class="foot-links"><a href="#">プライバシー</a><a href="#">利用規約</a><a href="#">お問い合わせ</a></div>
+</div></div></footer>
+<script type="application/json" id="relatedData">["age-calculator","word-counter","timer"]</script>
+<script src="/assets/related-tools.js" defer></script>
+<script>document.getElementById("go").onclick = () => {
+  const h = parseFloat(document.getElementById("h").value) / 100;
+  const w = parseFloat(document.getElementById("w").value);
+  if (!h || !w) return;
+  const bmi = w / (h * h);
+  let note;
+  if (bmi < 18.5) note = "低体重（18.5 未満）"; else if (bmi < 25) note = "標準体重（18.5–24.9）"; else if (bmi < 30) note = "肥満傾向（25–29.9）"; else note = "肥満（30 以上）";
+  document.getElementById("val").textContent = bmi.toFixed(1);
+  document.getElementById("note").textContent = note;
+  document.getElementById("out").style.display = "block";
+};
+document.getElementById("go").click();
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});</script>
+</body>
+</html>

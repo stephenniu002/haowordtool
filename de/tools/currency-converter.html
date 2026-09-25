@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Währungsrechner</title>
+<meta name="description" content="Kostenloser Währungsrechner. USD, EUR, JPY, CNY und über 30 Währungen umrechnen.">
+<link rel="canonical" href="https://haowordtool.com/de/tools/currency-converter.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/currency-converter.html">
+<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/currency-converter.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/currency-converter.html">
+<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/conversor-de-monedas.html">
+<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/muhawwil-umlat.html">
+<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/konverter-valyut.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/currency-converter.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Welche Währungen werden unterstützt?","acceptedAnswer":{"@type":"Answer","text":"US-Dollar, Euro, Yen, Yuan, Britische Pfund und über 30 weitere wichtige Währungen."}},{"@type":"Question","name":"Sind die angezeigten Kurse genau?","acceptedAnswer":{"@type":"Answer","text":"Die Kurse auf dieser Seite sind feste Näherungswerte und können von den tatsächlichen Handelskursen abweichen."}}]}</script>
+</head><body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch" aria-label="Sprache">
+    <a href="/tools/currency-converter.html" hreflang="en">EN</a><a href="/ja/tools/currency-converter.html" hreflang="ja">JA</a><a href="/de/tools/currency-converter.html" class="active" hreflang="de">DE</a><a href="/es/tools/conversor-de-monedas.html" hreflang="es">ES</a><a href="/ar/tools/muhawwil-umlat.html" hreflang="ar">AR</a><a href="/ru/tools/konverter-valyut.html" hreflang="ru">RU</a>
+  </div></div>
+</nav></div></header>
+<main><div class="wrap tool-page">
+  <a href="../index.html" class="back">← Zurück zu allen Tools</a>
+  <h1 style="margin-top:16px">Währungsrechner</h1><p class="lead">Über 30 Währungen umrechnen. Die Kurse sind Näherungswerte und dienen nur zur Orientierung.</p><div class="card">
+    <div class="grid2">
+      <div><label for="amount">Betrag</label><input type="number" id="amount" value="100" min="0" step="any"></div>
+      <div><label for="from">Von</label><select id="from"></select></div>
+    </div>
+    <div style="text-align:center;margin:14px 0"><button class="btn btn-ghost" id="swap" style="padding:8px 16px">⇅ Tauschen</button></div>
+    <div class="grid2">
+      <div><label for="to">Zu</label><select id="to"></select></div>
+      <div style="display:flex;align-items:flex-end"><button class="btn btn-primary btn-block" id="go">Umrechnen</button></div>
+    </div>
+    <div class="result" id="out" style="display:none"><div class="result-label">Ergebnis</div><div class="result-value" id="val"></div><div class="result-note" id="rate"></div></div>
+  </div>
+  <p class="hint">Die Kurse in dieser Demo sind statisch. Für den Produktivbetrieb binden Sie eine Forex-API wie exchangerate.host oder fixer.io an.</p>
+  <div class="seo-content"><h2>Über den Währungsrechner</h2><p>Rechnet US-Dollar (USD), Euro (EUR), Japanische Yen (JPY), Chinesische Yuan (CNY), Britische Pfund (GBP) und über 30 weitere Währungen um.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Welche Währungen werden unterstützt?</h3><p>US-Dollar, Euro, Yen, Yuan, Britische Pfund und über 30 weitere wichtige Währungen.</p></div><div class="faq-item"><h3>Sind die angezeigten Kurse genau?</h3><p>Die Kurse auf dieser Seite sind feste Näherungswerte und können von den tatsächlichen Handelskursen abweichen.</p></div></div>
+<div class="related-tools">
+  <h2 id="relatedTitle">Related Tools</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</div></div></main>
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · Alles kostenlos</span>
+<div class="foot-links"><a href="#">Datenschutz</a><a href="#">AGB</a><a href="#">Kontakt</a></div>
+</div></div></footer>
+<script type="application/json" id="relatedData">["calculator","mortgage-calculator","unit-converter"]</script>
+<script src="/assets/related-tools.js" defer></script>
+<script>const currencies = ["USD","EUR","CNY","JPY","GBP","KRW","INR","AUD","CAD","CHF","HKD","SGD","TWD","BRL","RUB","MXN","TRY","THB","VND","IDR","NZD","SEK","NOK","DKK","PLN","ZAR","AED","SAR","PHP","MYR"];
+const rates = {USD:1,EUR:.92,CNY:7.18,JPY:149.5,GBP:.79,KRW:1330,INR:83.2,AUD:1.52,CAD:1.36,CHF:.88,HKD:7.82,SGD:1.34,TWD:31.9,BRL:5.05,RUB:92.5,MXN:17.1,TRY:32.3,THB:35.6,VND:24700,IDR:15800,NZD:1.64,SEK:10.4,NOK:10.6,DKK:6.85,PLN:3.98,ZAR:18.6,AED:3.67,SAR:3.75,PHP:56.2,MYR:4.72};
+const f = document.getElementById("from"), t = document.getElementById("to");
+currencies.forEach(c => { f.innerHTML += `<option value="${c}">${c}</option>`; t.innerHTML += `<option value="${c}">${c}</option>`; });
+f.value = "USD"; t.value = "EUR";
+function convert(){
+  const amt = parseFloat(document.getElementById("amount").value) || 0;
+  const v = amt / rates[f.value] * rates[t.value];
+  document.getElementById("val").textContent = v.toFixed(2) + " " + t.value;
+  document.getElementById("rate").textContent = `1 ${f.value} = ${(rates[t.value]/rates[f.value]).toFixed(4)} ${t.value}`;
+  document.getElementById("out").style.display = "block";
+}
+document.getElementById("go").onclick = convert;
+document.getElementById("swap").onclick = () => { const a = f.value; f.value = t.value; t.value = a; convert(); };
+convert();
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});</script>
+</body>
+</html>
