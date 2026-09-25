@@ -38,7 +38,7 @@
   <div class="related-grid" id="relatedGrid"></div>
 </div></div></main>
 <footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · Всё бесплатно</span>
-<div class="foot-links"><a href="#">Приватность</a><a href="#">Условия</a><a href="#">Контакты</a></div>
+<div class="foot-links"><a href="/privacy.html">Приватность</a><a href="/terms.html">Условия</a><a href="/contact.html">Контакты</a></div>
 </div></div></footer>
 <script type="application/json" id="relatedData">["world-clock","timer"]</script>
 <script src="/assets/related-tools.js" defer></script><script>document.getElementById("go").onclick=()=>{const b=new Date(document.getElementById("b").value);if(isNaN(b))return;const n=new Date();let y=n.getFullYear()-b.getFullYear(),m=n.getMonth()-b.getMonth(),d=n.getDate()-b.getDate();if(d<0){m--;d+=new Date(n.getFullYear(),n.getMonth(),0).getDate();}if(m<0){y--;m+=12;}document.getElementById("lbl").textContent="Ваш возраст";document.getElementById("res").textContent=y+" лет · "+m+" месяцев · "+d+" дней";let nb=new Date(n.getFullYear(),b.getMonth(),b.getDate());if(nb<n)nb=new Date(n.getFullYear()+1,b.getMonth(),b.getDate());const days=Math.ceil((nb-n)/86400000);document.getElementById("note").textContent=days+" дней до дня рождения";document.getElementById("out").style.display="block";};</script>

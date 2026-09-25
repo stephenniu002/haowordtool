@@ -6,13 +6,13 @@
 <title>Calculadora de Edad</title>
 <meta name="description" content="Calculadora de edad gratis. Edad exacta en años, meses y días, más cuenta atrás del cumpleaños.">
 <link rel="canonical" href="https://haowordtool.com/es/tools/calculadora-de-edad.html">
-<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/age-calculator.html">
-<link rel="alternate" hreflang="de" href="https://haowordtool.com/de/tools/age-calculator.html">
-<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/age-calculator.html">
-<link rel="alternate" hreflang="es" href="https://haowordtool.com/es/tools/calculadora-de-edad.html">
-<link rel="alternate" hreflang="ar" href="https://haowordtool.com/ar/tools/hasibat-aleumr.html">
-<link rel="alternate" hreflang="ru" href="https://haowordtool.com/ru/tools/kalkulyator-vozrasta.html">
-<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/age-calculator.html">
+
+
+
+
+
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
   <div class="related-grid" id="relatedGrid"></div>
 </div></div></main>
 <footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · Todo gratis</span>
-<div class="foot-links"><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Contacto</a></div>
+<div class="foot-links"><a href="/es/privacy.html">Privacidad</a><a href="/es/terms.html">Términos</a><a href="/es/contact.html">Contacto</a></div>
 </div></div></footer>
 <script type="application/json" id="relatedData">["world-clock","timer"]</script>
 <script src="/assets/related-tools.js" defer></script><script>document.getElementById("go").onclick=()=>{const b=new Date(document.getElementById("b").value);if(isNaN(b))return;const n=new Date();let y=n.getFullYear()-b.getFullYear(),m=n.getMonth()-b.getMonth(),d=n.getDate()-b.getDate();if(d<0){m--;d+=new Date(n.getFullYear(),n.getMonth(),0).getDate();}if(m<0){y--;m+=12;}document.getElementById("lbl").textContent="Tu edad";document.getElementById("res").textContent=y+" años · "+m+" meses · "+d+" días";let nb=new Date(n.getFullYear(),b.getMonth(),b.getDate());if(nb<n)nb=new Date(n.getFullYear()+1,b.getMonth(),b.getDate());const days=Math.ceil((nb-n)/86400000);document.getElementById("note").textContent=days+" días hasta el cumpleaños";document.getElementById("out").style.display="block";};</script>
