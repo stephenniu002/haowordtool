@@ -143,3 +143,15 @@ footer{border-top:1px solid var(--border);padding:26px 0;position:relative;z-ind
   main{padding:32px 0 48px}
   .foot{flex-direction:column;text-align:center}
 }
+
+/* SEO content + FAQ blocks (used by ja tool pages) */
+.seo-content{max-width:860px;margin:56px auto 0;color:var(--muted)}
+.seo-content h2{font-size:22px;color:var(--text);margin:0 0 14px;letter-spacing:-.01em}
+.seo-content>h3{font-size:15.5px;color:var(--text);margin:26px 0 10px}
+.seo-content p{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+.seo-content ul{margin:0 0 12px;padding-left:20px;font-size:14.5px;line-height:1.8}
+.seo-content li{margin-bottom:6px}
+.faq-item{border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:12px 0;background:rgba(255,255,255,.02)}
+.faq-item h3{margin:0 0 8px;font-size:15px;color:var(--text)}
+.faq-item p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
+@media(max-width:720px){.seo-content{margin-top:40px}}

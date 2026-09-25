@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IP アドレス確認 — 自分のグローバル IP を確認</title>
+<meta name="description" content="あなたのグローバル IP アドレス、おおよその位置、ISP を瞬時に表示。無料、登録不要。">
+<link rel="canonical" href="https://haowordtool.com/ja/tools/what-is-my-ip.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/what-is-my-ip.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/what-is-my-ip.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/what-is-my-ip.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+<style>body{font-family:'Noto Sans JP','Inter',system-ui,sans-serif}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "IP アドレスで何がわかりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "おおよその都市、地域、国、ISP（プロバイダ）がわかります。ただし、正確な住所や個人情報は特定できません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "IP アドレスは変わりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。多くの ISP は動的 IP を割り当てるため、ルーターの再起動や接続のたびに変わることがあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "VPN を使うとどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VPN 接続中は、VPN サーバーの IP アドレスが表示されます。元の IP は隠されます。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch"><a href="/tools/what-is-my-ip.html" hreflang="en">EN</a><a href="/ja/tools/what-is-my-ip.html" class="active" hreflang="ja">JA</a></div></div>
+</nav></div></header>
+
+<main><div class="wrap tool-page">
+  <a href="../index.html" class="back">← すべてのツールに戻る</a>
+  <h1 style="margin-top:16px">IP アドレス確認</h1>
+  <p class="lead">あなたのグローバル IP アドレスとおおよその位置を表示します。</p>
+
+  <div class="card" style="max-width:560px">
+    <div class="result" id="out">
+      <div class="result-label">あなたのグローバル IP</div>
+      <div class="result-value" id="ip">…</div>
+      <div class="result-note" id="loc">位置情報を取得中…</div>
+    </div>
+    <div style="margin-top:14px;font-size:12.5px;color:var(--muted-2);line-height:1.6">本ツールは公開 API（ipify.org および ipapi.co）を使用しています。IP は当サイトには保存されません。</div>
+  </div>
+
+  <div class="seo-content">
+    <h2>IP アドレスとは</h2>
+    <p>IP アドレスは、インターネット上のデバイスを識別する番号です。グローバル IP はインターネット接続時に ISP から割り当てられ、プライベート IP は家庭内・社内ネットワークで使用されます。</p>
+    <h3>よくある質問</h3>
+    <div class="faq-item"><h3>IP アドレスで何がわかりますか？</h3><p>おおよその都市、地域、国、ISP（プロバイダ）がわかります。ただし、正確な住所や個人情報は特定できません。</p></div>
+    <div class="faq-item"><h3>IP アドレスは変わりますか？</h3><p>はい。多くの ISP は動的 IP を割り当てるため、ルーターの再起動や接続のたびに変わることがあります。</p></div>
+    <div class="faq-item"><h3>VPN を使うとどうなりますか？</h3><p>VPN 接続中は、VPN サーバーの IP アドレスが表示されます。元の IP は隠されます。</p></div>
+  </div>
+</div></main>
+
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · すべて無料</span>
+<div class="foot-links"><a href="#">プライバシー</a><a href="#">利用規約</a><a href="#">お問い合わせ</a></div>
+</div></div></footer>
+
+<script>
+(async()=>{try{const r=await fetch("https://api.ipify.org?format=json");const d=await r.json();document.getElementById("ip").textContent=d.ip;try{const r2=await fetch("https://ipapi.co/"+d.ip+"/json/");const d2=await r2.json();const parts=[d2.city,d2.region,d2.country_name].filter(Boolean);document.getElementById("loc").textContent=parts.join(", ")+(d2.org?" · "+d2.org:"");}catch(e){document.getElementById("loc").textContent="位置情報を取得できません";}}catch(e){document.getElementById("ip").textContent="IP を取得できません";document.getElementById("loc").textContent="";}})();
+const header=document.getElementById("header");addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>12),{passive:true});
+</script>
+</body></html>

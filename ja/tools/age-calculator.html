@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>年齢計算 — 正確な年齢を年月日で計算</title>
+<meta name="description" content="無料の年齢計算ツール。生年月日から正確な年齢を年月日で計算し、次の誕生日までの日数も表示。">
+<link rel="canonical" href="https://haowordtool.com/ja/tools/age-calculator.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/age-calculator.html">
+<link rel="alternate" hreflang="ja" href="https://haowordtool.com/ja/tools/age-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/age-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/tools.css">
+<style>body{font-family:'Noto Sans JP','Inter',system-ui,sans-serif}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "うるう年の影響は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "自動的に考慮されます。2 月 29 日生まれの場合も正確に計算されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "数え年と満年齢の違いは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "本ツールは満年齢（現在の年齢）を表示します。数え年は生まれた時点で 1 歳とし、正月に 1 歳加算する日本古来の方式です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "入力した生年月日は保存されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。すべてブラウザ内で計算されます。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="../index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch"><a href="/tools/age-calculator.html" hreflang="en">EN</a><a href="/ja/tools/age-calculator.html" class="active" hreflang="ja">JA</a></div></div>
+</nav></div></header>
+
+<main><div class="wrap tool-page">
+  <a href="../index.html" class="back">← すべてのツールに戻る</a>
+  <h1 style="margin-top:16px">年齢計算</h1>
+  <p class="lead">生年月日から正確な年齢を計算。次の誕生日までの日数も表示します。</p>
+
+  <div class="card" style="max-width:520px">
+    <label for="dob">生年月日</label>
+    <input type="date" id="dob" value="2000-01-01">
+    <div class="btn-row"><button class="btn btn-primary btn-block" id="go">年齢を計算</button></div>
+    <div class="result" id="out" style="display:none">
+      <div class="result-label">あなたの年齢</div>
+      <div class="result-value" id="val"></div>
+      <div class="result-note" id="note"></div>
+    </div>
+  </div>
+
+  <div class="seo-content">
+    <h2>年齢計算ツールについて</h2>
+    <p>生年月日を入力するだけで、今日時点での正確な年齢を「年・月・日」で表示します。次の誕生日までの残り日数も計算します。</p>
+    <h3>よくある質問</h3>
+    <div class="faq-item"><h3>うるう年の影響は？</h3><p>自動的に考慮されます。2 月 29 日生まれの場合も正確に計算されます。</p></div>
+    <div class="faq-item"><h3>数え年と満年齢の違いは？</h3><p>本ツールは満年齢（現在の年齢）を表示します。数え年は生まれた時点で 1 歳とし、正月に 1 歳加算する日本古来の方式です。</p></div>
+    <div class="faq-item"><h3>入力した生年月日は保存されますか？</h3><p>いいえ。すべてブラウザ内で計算されます。</p></div>
+  </div>
+</div></main>
+
+<footer><div class="wrap"><div class="foot"><span>© 2026 Haowordtool Tools · すべて無料</span>
+<div class="foot-links"><a href="#">プライバシー</a><a href="#">利用規約</a><a href="#">お問い合わせ</a></div>
+</div></div></footer>
+
+<script>
+document.getElementById("go").onclick=()=>{const dob=new Date(document.getElementById("dob").value);if(isNaN(dob))return;const now=new Date();let y=now.getFullYear()-dob.getFullYear();let m=now.getMonth()-dob.getMonth();let d=now.getDate()-dob.getDate();if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate();}if(m<0){y--;m+=12;}document.getElementById("val").textContent=`${y} 歳 ${m} か月 ${d} 日`;const next=new Date(now.getFullYear(),dob.getMonth(),dob.getDate());if(next<now)next.setFullYear(next.getFullYear()+1);const days=Math.ceil((next-now)/86400000);document.getElementById("note").textContent=days===0?"お誕生日おめでとうございます！":`次の誕生日まで ${days} 日`;document.getElementById("out").style.display="block";};
+document.getElementById("go").click();
+const header=document.getElementById("header");addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>12),{passive:true});
+</script>
+</body></html>

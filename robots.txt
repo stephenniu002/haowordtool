@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /*?*utm_
 Sitemap: https://haowordtool.com/sitemap.xml
