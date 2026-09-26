@@ -403,64 +403,64 @@
     },
     "freeTools": {
       "title": "무료 도구",
-      "subtitle": "14개의 무료 온라인 도구 — 변환기, 계산기, 이미지 도구와 일상 도우미. 가입 없이 브라우저에서 바로 실행됩니다.",
+      "subtitle": "무료 온라인 도구 14개: 변환, 계산, 이미지, QR, IP, 비밀번호, 시간.",
       "viewAll": "모든 도구 보기",
       "tools": {
         "currencyConverter": {
           "name": "환율 변환기",
-          "desc": "실시간 환율, 30개 이상 통화"
+          "desc": "환율 · 통화"
         },
         "calculator": {
           "name": "계산기",
-          "desc": "기본 연산, 키보드 지원"
+          "desc": "계산 · 키보드"
         },
         "mortgageCalculator": {
           "name": "주택담보대출 계산기",
-          "desc": "월 상환액 및 총 이자"
+          "desc": "주택담보 · 이자"
         },
         "unitConverter": {
           "name": "단위 변환기",
-          "desc": "길이, 무게, 온도"
+          "desc": "길이 · 무게"
         },
         "wordCounter": {
           "name": "글자 수 세기",
-          "desc": "단어, 문자, 읽기 시간"
+          "desc": "단어 · 읽기"
         },
         "imageCompressor": {
           "name": "이미지 압축",
-          "desc": "브라우저에서 JPG / PNG 압축"
+          "desc": "JPG · PNG"
         },
         "resizeImage": {
           "name": "이미지 크기 조정",
-          "desc": "사용자 지정 크기, 비율 유지"
+          "desc": "크기 · 비율"
         },
         "qrCodeGenerator": {
           "name": "QR 코드 생성기",
-          "desc": "URL 또는 텍스트를 QR 코드로"
+          "desc": "링크 · 텍스트"
         },
         "whatIsMyIp": {
           "name": "내 IP 확인",
-          "desc": "공인 IP, 위치 및 ISP"
+          "desc": "IP · 위치"
         },
         "passwordGenerator": {
           "name": "비밀번호 생성기",
-          "desc": "강력한 비밀번호, 로컬 생성"
+          "desc": "비밀번호 · 로컬"
         },
         "bmiCalculator": {
           "name": "BMI 계산기",
-          "desc": "체질량지수 및 구간"
+          "desc": "BMI · 범위"
         },
         "ageCalculator": {
           "name": "나이 계산기",
-          "desc": "정확한 나이 및 생일 카운트다운"
+          "desc": "나이 · 생일"
         },
         "timer": {
           "name": "타이머 / 스톱워치",
-          "desc": "1/100초 정밀 스톱워치"
+          "desc": "타이머 · 스톱워치"
         },
         "worldClock": {
           "name": "세계 시계",
-          "desc": "주요 도시 현재 시간"
+          "desc": "시간 · 도시"
         }
       }
     }

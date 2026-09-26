@@ -403,64 +403,64 @@
     },
     "freeTools": {
       "title": "Herramientas gratuitas",
-      "subtitle": "14 herramientas online gratuitas — conversores, calculadoras, herramientas de imagen y utilidades diarias. Sin registro, todo funciona en tu navegador.",
+      "subtitle": "14 herramientas gratis: conversión, cálculo, imágenes, QR, IP, contraseñas y tiempo.",
       "viewAll": "Ver todas las herramientas",
       "tools": {
         "currencyConverter": {
           "name": "Conversor de monedas",
-          "desc": "Tipos en vivo, más de 30 monedas"
+          "desc": "Tipos · Moneda"
         },
         "calculator": {
           "name": "Calculadora",
-          "desc": "Aritmética básica con teclado"
+          "desc": "Cálculo · Teclado"
         },
         "mortgageCalculator": {
           "name": "Calculadora hipotecaria",
-          "desc": "Cuota mensual e intereses totales"
+          "desc": "Hipoteca · Interés"
         },
         "unitConverter": {
           "name": "Conversor de unidades",
-          "desc": "Longitud, peso, temperatura"
+          "desc": "Longitud · Peso"
         },
         "wordCounter": {
           "name": "Contador de palabras",
-          "desc": "Palabras, caracteres, tiempo de lectura"
+          "desc": "Palabras · Lectura"
         },
         "imageCompressor": {
           "name": "Compresor de imágenes",
-          "desc": "Reduce JPG / PNG en el navegador"
+          "desc": "JPG · PNG"
         },
         "resizeImage": {
           "name": "Redimensionar imagen",
-          "desc": "Tamaño personalizado, proporción"
+          "desc": "Tamaño · Proporción"
         },
         "qrCodeGenerator": {
           "name": "Generador de QR",
-          "desc": "URL o texto a código QR"
+          "desc": "Enlace · Texto"
         },
         "whatIsMyIp": {
           "name": "Mi dirección IP",
-          "desc": "IP pública, ubicación e ISP"
+          "desc": "IP · Ubicación"
         },
         "passwordGenerator": {
           "name": "Generador de contraseñas",
-          "desc": "Contraseñas seguras, generadas localmente"
+          "desc": "Contraseña · Local"
         },
         "bmiCalculator": {
           "name": "Calculadora de IMC",
-          "desc": "Índice de masa corporal con rangos"
+          "desc": "IMC · Rango"
         },
         "ageCalculator": {
           "name": "Calculadora de edad",
-          "desc": "Edad exacta y cuenta atrás de cumpleaños"
+          "desc": "Edad · Cumpleaños"
         },
         "timer": {
           "name": "Temporizador / Cronómetro",
-          "desc": "Precisión de 1/100 s"
+          "desc": "Temporizador · Cronómetro"
         },
         "worldClock": {
           "name": "Reloj mundial",
-          "desc": "Hora actual en grandes ciudades"
+          "desc": "Hora · Ciudades"
         }
       }
     }

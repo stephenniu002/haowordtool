@@ -403,64 +403,64 @@
     },
     "freeTools": {
       "title": "Outils gratuits",
-      "subtitle": "14 outils en ligne gratuits — convertisseurs, calculatrices, outils d'image et utilitaires du quotidien. Sans inscription, tout fonctionne dans votre navigateur.",
+      "subtitle": "14 outils gratuits : conversion, calcul, images, QR, IP, mots de passe et temps.",
       "viewAll": "Voir tous les outils",
       "tools": {
         "currencyConverter": {
           "name": "Convertisseur de devises",
-          "desc": "Taux en direct, plus de 30 devises"
+          "desc": "Taux · Devises"
         },
         "calculator": {
           "name": "Calculatrice",
-          "desc": "Calculs de base, compatible clavier"
+          "desc": "Calcul · Clavier"
         },
         "mortgageCalculator": {
           "name": "Calculateur hypothécaire",
-          "desc": "Mensualité et intérêts totaux"
+          "desc": "Crédit · Intérêts"
         },
         "unitConverter": {
           "name": "Convertisseur d'unités",
-          "desc": "Longueur, poids, température"
+          "desc": "Longueur · Poids"
         },
         "wordCounter": {
           "name": "Compteur de mots",
-          "desc": "Mots, caractères, temps de lecture"
+          "desc": "Mots · Lecture"
         },
         "imageCompressor": {
           "name": "Compresseur d'image",
-          "desc": "Réduisez JPG / PNG dans le navigateur"
+          "desc": "JPG · PNG"
         },
         "resizeImage": {
           "name": "Redimensionner l'image",
-          "desc": "Dimensions personnalisées, ratio conservé"
+          "desc": "Taille · Ratio"
         },
         "qrCodeGenerator": {
           "name": "Générateur de QR code",
-          "desc": "URL ou texte en QR code"
+          "desc": "Lien · Texte"
         },
         "whatIsMyIp": {
           "name": "Quelle est mon IP",
-          "desc": "IP publique, localisation et FAI"
+          "desc": "IP · Localisation"
         },
         "passwordGenerator": {
           "name": "Générateur de mots de passe",
-          "desc": "Mots de passe forts, générés localement"
+          "desc": "Mot de passe · Local"
         },
         "bmiCalculator": {
           "name": "Calculateur d'IMC",
-          "desc": "Indice de masse corporelle avec tranches"
+          "desc": "IMC · Plage"
         },
         "ageCalculator": {
           "name": "Calculateur d'âge",
-          "desc": "Âge exact et compte à rebours d'anniversaire"
+          "desc": "Âge · Anniversaire"
         },
         "timer": {
           "name": "Minuteur / Chronomètre",
-          "desc": "Précision au 1/100e de seconde"
+          "desc": "Minuteur · Chrono"
         },
         "worldClock": {
           "name": "Horloge mondiale",
-          "desc": "Heure actuelle des grandes villes"
+          "desc": "Heure · Villes"
         }
       }
     }

@@ -403,64 +403,64 @@
     },
     "freeTools": {
       "title": "無料ツール",
-      "subtitle": "14の無料オンラインツール——換算、計算機、画像ツール、暮らしの便利ツール。登録不要、すべてブラウザで動作します。",
+      "subtitle": "14個の無料オンラインツール：換算、計算、画像、QR、IP、パスワード、時間。",
       "viewAll": "すべてのツールを見る",
       "tools": {
         "currencyConverter": {
           "name": "通貨換算",
-          "desc": "リアルタイムレート、30以上の通貨"
+          "desc": "為替 · 通貨"
         },
         "calculator": {
           "name": "電卓",
-          "desc": "基本計算、キーボード対応"
+          "desc": "計算 · キーボード"
         },
         "mortgageCalculator": {
           "name": "住宅ローン計算",
-          "desc": "月々の返済額と総利息"
+          "desc": "住宅ローン · 利息"
         },
         "unitConverter": {
           "name": "単位換算",
-          "desc": "長さ、重さ、温度"
+          "desc": "長さ · 重さ"
         },
         "wordCounter": {
           "name": "文字数カウント",
-          "desc": "単語数、文字数、読了時間"
+          "desc": "単語 · 読書"
         },
         "imageCompressor": {
           "name": "画像圧縮",
-          "desc": "ブラウザでJPG・PNGを圧縮"
+          "desc": "JPG · PNG"
         },
         "resizeImage": {
           "name": "画像リサイズ",
-          "desc": "自由なサイズ、比率保持"
+          "desc": "サイズ · 比率"
         },
         "qrCodeGenerator": {
           "name": "QRコード生成",
-          "desc": "URLやテキストをQRコードに"
+          "desc": "リンク · テキスト"
         },
         "whatIsMyIp": {
           "name": "IPアドレス確認",
-          "desc": "グローバルIP、地域、ISP"
+          "desc": "IP · 位置"
         },
         "passwordGenerator": {
           "name": "パスワード生成",
-          "desc": "強固なパスワードをローカル生成"
+          "desc": "パスワード · ローカル"
         },
         "bmiCalculator": {
           "name": "BMI計算",
-          "desc": "指数と判定区分つき"
+          "desc": "BMI · 範囲"
         },
         "ageCalculator": {
           "name": "年齢計算",
-          "desc": "正確な年齢と誕生日カウントダウン"
+          "desc": "年齢 · 誕生日"
         },
         "timer": {
           "name": "タイマー / ストップウォッチ",
-          "desc": "1/100秒精度"
+          "desc": "タイマー · 秒表"
         },
         "worldClock": {
           "name": "世界時計",
-          "desc": "主要都市の現在時刻"
+          "desc": "時間 · 都市"
         }
       }
     }

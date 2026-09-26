@@ -403,64 +403,64 @@
     },
     "freeTools": {
       "title": "免费工具",
-      "subtitle": "14 个免费在线工具——换算、计算器、图片工具和日常小帮手。无需注册，所有操作都在浏览器中完成。",
+      "subtitle": "14 个免费在线工具：换算、计算、图片、二维码、IP、密码、时间。",
       "viewAll": "查看全部工具",
       "tools": {
         "currencyConverter": {
           "name": "货币换算",
-          "desc": "实时汇率，支持 30+ 种货币"
+          "desc": "汇率 · 货币"
         },
         "calculator": {
           "name": "计算器",
-          "desc": "基础运算，支持键盘输入"
+          "desc": "数学 · 键盘"
         },
         "mortgageCalculator": {
           "name": "房贷计算器",
-          "desc": "月供与总利息"
+          "desc": "房贷 · 利息"
         },
         "unitConverter": {
           "name": "单位换算",
-          "desc": "长度、重量、温度"
+          "desc": "长度 · 重量"
         },
         "wordCounter": {
           "name": "字数统计",
-          "desc": "字数、字符数、阅读时长"
+          "desc": "字数 · 阅读"
         },
         "imageCompressor": {
           "name": "图片压缩",
-          "desc": "在浏览器中压缩 JPG / PNG"
+          "desc": "JPG · PNG"
         },
         "resizeImage": {
           "name": "图片缩放",
-          "desc": "自定义尺寸，保持比例"
+          "desc": "尺寸 · 比例"
         },
         "qrCodeGenerator": {
           "name": "二维码生成器",
-          "desc": "链接或文本转二维码"
+          "desc": "链接 · 文本"
         },
         "whatIsMyIp": {
           "name": "我的 IP 查询",
-          "desc": "公网 IP、位置与运营商"
+          "desc": "IP · 位置"
         },
         "passwordGenerator": {
           "name": "密码生成器",
-          "desc": "高强度密码，本地生成"
+          "desc": "密码 · 本地"
         },
         "bmiCalculator": {
           "name": "BMI 计算器",
-          "desc": "身体质量指数与区间"
+          "desc": "BMI · 区间"
         },
         "ageCalculator": {
           "name": "年龄计算器",
-          "desc": "精确年龄与生日倒计时"
+          "desc": "年龄 · 生日"
         },
         "timer": {
           "name": "计时器 / 秒表",
-          "desc": "1/100 秒精度秒表"
+          "desc": "计时 · 秒表"
         },
         "worldClock": {
           "name": "世界时钟",
-          "desc": "主要城市当前时间"
+          "desc": "时间 · 城市"
         }
       }
     }
