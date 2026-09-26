@@ -403,7 +403,7 @@
     },
     "freeTools": {
       "title": "Kostenlose Tools",
-      "subtitle": "14 kostenlose Online-Tools: Umrechnen, Rechnen, Bilder, QR, IP, Passwörter und Zeit.",
+      "subtitle": "15 kostenlose Online-Tools: Umrechnen, Rechnen, Bilder, QR, IP, Passwörter, Speed und Zeit.",
       "viewAll": "Alle Tools ansehen",
       "tools": {
         "currencyConverter": {
@@ -461,6 +461,10 @@
         "worldClock": {
           "name": "Weltuhr",
           "desc": "Zeit · Städte"
+        },
+        "speedTest": {
+          "name": "Internet-Speedtest",
+          "desc": "Download · Upload"
         }
       }
     }

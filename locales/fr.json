@@ -403,7 +403,7 @@
     },
     "freeTools": {
       "title": "Outils gratuits",
-      "subtitle": "14 outils gratuits : conversion, calcul, images, QR, IP, mots de passe et temps.",
+      "subtitle": "15 outils gratuits : conversion, calcul, images, QR, IP, mots de passe, vitesse et temps.",
       "viewAll": "Voir tous les outils",
       "tools": {
         "currencyConverter": {
@@ -461,6 +461,10 @@
         "worldClock": {
           "name": "Horloge mondiale",
           "desc": "Heure · Villes"
+        },
+        "speedTest": {
+          "name": "Test de vitesse Internet",
+          "desc": "Débit · Ping"
         }
       }
     }

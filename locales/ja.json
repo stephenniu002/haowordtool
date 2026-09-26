@@ -403,7 +403,7 @@
     },
     "freeTools": {
       "title": "無料ツール",
-      "subtitle": "14個の無料オンラインツール：換算、計算、画像、QR、IP、パスワード、時間。",
+      "subtitle": "15個の無料オンラインツール：換算、計算、画像、QR、IP、パスワード、速度、時間。",
       "viewAll": "すべてのツールを見る",
       "tools": {
         "currencyConverter": {
@@ -461,6 +461,10 @@
         "worldClock": {
           "name": "世界時計",
           "desc": "時間 · 都市"
+        },
+        "speedTest": {
+          "name": "インターネット速度テスト",
+          "desc": "下り · 上り"
         }
       }
     }
