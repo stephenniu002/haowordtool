@@ -1053,5 +1053,813 @@
     "url": "/fiverr-ai-services.html",
     "description": "A HaoWordTool guide to hiring Fiverr freelancers for product photos, videos, voiceovers, landing pages and trending business services.",
     "keywords": "fiverr ai services freelance product photos product video voiceover landing page affiliate marketplace"
+  },
+  {
+    "title": "SKILL BANK",
+    "titleZh": "SKILL BANK 技能库",
+    "description": "100 original AI workflow kits for creators, marketers and technical teams.",
+    "descriptionZh": "100个独立AI技能，含工作流程、模板、案例与质量标准。",
+    "keywords": "skills skill bank workflow templates 技能库",
+    "url": "/skill-bank.html"
+  },
+  {
+    "title": "Agent Session Handoff",
+    "titleZh": "智能体会话交接",
+    "description": "Turn session notes, changed files, test results into a restart brief with the next executable action.",
+    "descriptionZh": "整理当前进度、已改文件和未完成测试，生成可接着执行的交接单",
+    "keywords": "skill bank Agent Operations",
+    "url": "/skill-bank.html#agent-session-handoff"
+  },
+  {
+    "title": "Project Memory Curator",
+    "titleZh": "项目记忆整理",
+    "description": "Turn dated decisions, corrections, project constraints into a compact memory proposal with provenance.",
+    "descriptionZh": "归并项目决策，标注冲突、适用范围和被新决定替代的旧规则",
+    "keywords": "skill bank Agent Operations",
+    "url": "/skill-bank.html#project-memory-curator"
+  },
+  {
+    "title": "Agent Workspace Setup Brief",
+    "titleZh": "智能体工作区配置规划",
+    "description": "Turn agent names, operating system, repo tooling, allowed integrations into a capability matrix and reversible setup plan.",
+    "descriptionZh": "对照操作系统和现有工具，列出必要配置、可选插件与验证步骤",
+    "keywords": "skill bank Agent Operations",
+    "url": "/skill-bank.html#agent-workspace-setup-brief"
+  },
+  {
+    "title": "Task Scope Calibrator",
+    "titleZh": "开发任务范围判断",
+    "description": "Turn requested change, affected modules, operational risk into a proportionate implementation and verification brief.",
+    "descriptionZh": "从用户可见行为划定修改范围，并选择相称的验证方法",
+    "keywords": "skill bank Agent Operations",
+    "url": "/skill-bank.html#task-scope-calibrator"
+  },
+  {
+    "title": "Agent Review Evidence Ledger",
+    "titleZh": "智能体验收证据台账",
+    "description": "Turn diff summary, commands run, logs, open issues into an evidence table supporting a completion decision.",
+    "descriptionZh": "把完成声明逐项对应到实际日志、文件和测试结果",
+    "keywords": "skill bank Agent Operations",
+    "url": "/skill-bank.html#agent-review-evidence-ledger"
+  },
+  {
+    "title": "Product Demo Shot Planner",
+    "titleZh": "产品演示分镜规划",
+    "description": "Turn product screenshots, real features, duration, aspect ratio into a timecoded product demonstration shot list.",
+    "descriptionZh": "把真实产品功能编排成有时码的演示镜头清单",
+    "keywords": "skill bank Video Production",
+    "url": "/skill-bank.html#product-demo-shot-planner"
+  },
+  {
+    "title": "Motion Timing Sheet",
+    "titleZh": "动效帧级时间表",
+    "description": "Turn approved storyboard, frame rate, clip length into a frame-accurate animation timing table.",
+    "descriptionZh": "把分镜时长换算成帧，安排动画进入、停留和退出",
+    "keywords": "skill bank Video Production",
+    "url": "/skill-bank.html#motion-timing-sheet"
+  },
+  {
+    "title": "Screen Recording Edit Brief",
+    "titleZh": "录屏剪辑执行单",
+    "description": "Turn screen recording transcript, important clicks, target length into an edit decision list that keeps actions understandable.",
+    "descriptionZh": "识别录屏中的关键动作，输出保留、删减和强调位置",
+    "keywords": "skill bank Video Production",
+    "url": "/skill-bank.html#screen-recording-edit-brief"
+  },
+  {
+    "title": "Video Asset Readiness Audit",
+    "titleZh": "视频素材就绪检查",
+    "description": "Turn shot list, asset inventory, licenses, export settings into an asset gap report and render-readiness checklist.",
+    "descriptionZh": "逐镜头核对素材文件、分辨率、字体、音频和使用权限",
+    "keywords": "skill bank Video Production",
+    "url": "/skill-bank.html#video-asset-readiness-audit"
+  },
+  {
+    "title": "Square to Vertical Storyboard",
+    "titleZh": "方屏转竖屏分镜",
+    "description": "Turn approved square video, safe-area constraints, vertical destination into a 9:16 reframing and pacing plan.",
+    "descriptionZh": "逐镜头选择裁切、重排或留边，并调整文字和停留时间",
+    "keywords": "skill bank Video Production",
+    "url": "/skill-bank.html#square-to-vertical-storyboard"
+  },
+  {
+    "title": "Multi Model Answer Rubric",
+    "titleZh": "多模型回答评分",
+    "description": "Turn three model responses, source packet, task success criteria into a blind comparison with evidence-based scores.",
+    "descriptionZh": "隐藏模型名称，按证据、准确性和任务要求比较回答",
+    "keywords": "skill bank AI Workspaces",
+    "url": "/skill-bank.html#multi-model-answer-rubric"
+  },
+  {
+    "title": "Assistant Role Brief Designer",
+    "titleZh": "专用助手角色设计",
+    "description": "Turn recurring task, allowed sources, output examples into a focused assistant instruction brief.",
+    "descriptionZh": "为一个反复出现的任务定义输入、职责、输出和边界",
+    "keywords": "skill bank AI Workspaces",
+    "url": "/skill-bank.html#assistant-role-brief-designer"
+  },
+  {
+    "title": "Prompt Experiment Notebook",
+    "titleZh": "提示词实验记录",
+    "description": "Turn baseline prompt, test inputs, candidate change into a reproducible prompt comparison record.",
+    "descriptionZh": "固定测试输入和评分规则，记录单一提示词改动的效果",
+    "keywords": "skill bank AI Workspaces",
+    "url": "/skill-bank.html#prompt-experiment-notebook"
+  },
+  {
+    "title": "Knowledge Chat Source Check",
+    "titleZh": "知识问答来源核验",
+    "description": "Turn question, retrieved passages, draft response into an answer with claim-to-source mappings.",
+    "descriptionZh": "逐条核对回答中的事实是否被给定来源直接支持",
+    "keywords": "skill bank AI Workspaces",
+    "url": "/skill-bank.html#knowledge-chat-source-check"
+  },
+  {
+    "title": "AI Workspace Migration Checklist",
+    "titleZh": "AI工作区迁移检查",
+    "description": "Turn old client inventory, export formats, destination features into a migration map and smoke-test plan.",
+    "descriptionZh": "分别梳理提示词、对话、附件和知识库的迁移方式",
+    "keywords": "skill bank AI Workspaces",
+    "url": "/skill-bank.html#ai-workspace-migration-checklist"
+  },
+  {
+    "title": "Series Continuity Ledger",
+    "titleZh": "长篇小说连续性台账",
+    "description": "Turn chapter summaries, character facts, timeline into a canon ledger with conflicts and unresolved threads.",
+    "descriptionZh": "整理人物事实、事件时间线、秘密知情范围与冲突",
+    "keywords": "skill bank Fiction Writing",
+    "url": "/skill-bank.html#series-continuity-ledger"
+  },
+  {
+    "title": "Chapter Promise Planner",
+    "titleZh": "章节承诺与推进规划",
+    "description": "Turn previous ending, active plot threads, desired chapter length into a scene outline that pays off one reader promise.",
+    "descriptionZh": "承接上一章悬念，安排本章实质推进和结尾后果",
+    "keywords": "skill bank Fiction Writing",
+    "url": "/skill-bank.html#chapter-promise-planner"
+  },
+  {
+    "title": "Character Voice Contrast",
+    "titleZh": "人物对白差异设计",
+    "description": "Turn dialogue samples, character background, scene objective into a voice matrix and revised dialogue sample.",
+    "descriptionZh": "比较人物句式、用词和应对压力的方式，修改对白",
+    "keywords": "skill bank Fiction Writing",
+    "url": "/skill-bank.html#character-voice-contrast"
+  },
+  {
+    "title": "Foreshadowing Payoff Map",
+    "titleZh": "伏笔回收对照表",
+    "description": "Turn manuscript outline, planted clues, planned reveals into a clue-to-payoff table with reader visibility.",
+    "descriptionZh": "把已出现的线索对应到后续揭示，标记遗漏和突兀反转",
+    "keywords": "skill bank Fiction Writing",
+    "url": "/skill-bank.html#foreshadowing-payoff-map"
+  },
+  {
+    "title": "Scene Revision Diagnostic",
+    "titleZh": "小说场景修订诊断",
+    "description": "Turn one scene, intended emotion, viewpoint rules into an annotated revision plan plus a short revised excerpt.",
+    "descriptionZh": "检查场景目标、阻力、视角和叙述，给出局部修订示例",
+    "keywords": "skill bank Fiction Writing",
+    "url": "/skill-bank.html#scene-revision-diagnostic"
+  },
+  {
+    "title": "Repository Architecture Map",
+    "titleZh": "代码仓库架构地图",
+    "description": "Turn repository tree, entry points, deployment notes into a component diagram with evidence-linked edges.",
+    "descriptionZh": "从入口和模块证据还原组件及调用关系",
+    "keywords": "skill bank Architecture Diagrams",
+    "url": "/skill-bank.html#repository-architecture-map"
+  },
+  {
+    "title": "Request Journey Diagram",
+    "titleZh": "请求链路时序图",
+    "description": "Turn endpoint handler, middleware, service calls into a request sequence with failure branches.",
+    "descriptionZh": "追踪一次请求的鉴权、调用、事务和异步副作用",
+    "keywords": "skill bank Architecture Diagrams",
+    "url": "/skill-bank.html#request-journey-diagram"
+  },
+  {
+    "title": "Data Lifecycle Diagram",
+    "titleZh": "数据生命周期图",
+    "description": "Turn data sources, stores, retention policy, export paths into a data lifecycle map with ownership and deletion paths.",
+    "descriptionZh": "梳理数据采集、转换、复制、存储和删除的流向",
+    "keywords": "skill bank Architecture Diagrams",
+    "url": "/skill-bank.html#data-lifecycle-diagram"
+  },
+  {
+    "title": "Integration Boundary Map",
+    "titleZh": "系统集成边界图",
+    "description": "Turn systems list, credentials model, event schemas into a boundary diagram and interface inventory.",
+    "descriptionZh": "标记系统归属、数据方向、传输方式和重试去重责任",
+    "keywords": "skill bank Architecture Diagrams",
+    "url": "/skill-bank.html#integration-boundary-map"
+  },
+  {
+    "title": "Deployment Topology Brief",
+    "titleZh": "部署拓扑说明",
+    "description": "Turn deployment manifests, regions, dependencies into an environment-specific topology with open questions.",
+    "descriptionZh": "按一个具体环境区分服务、实例、公共入口和依赖",
+    "keywords": "skill bank Architecture Diagrams",
+    "url": "/skill-bank.html#deployment-topology-brief"
+  },
+  {
+    "title": "Knowledge Corpus Intake",
+    "titleZh": "知识库资料入库规划",
+    "description": "Turn document inventory, intended questions, access scopes into an ingestion plan with document IDs and provenance.",
+    "descriptionZh": "给文档分配稳定ID，记录权威性、权限和时效",
+    "keywords": "skill bank Knowledge Systems",
+    "url": "/skill-bank.html#knowledge-corpus-intake"
+  },
+  {
+    "title": "Entity Resolution Review",
+    "titleZh": "知识图谱实体消歧",
+    "description": "Turn entity mentions, source IDs, candidate links into an entity merge proposal with confidence and evidence.",
+    "descriptionZh": "根据证据判断相似名称是否属于同一实体",
+    "keywords": "skill bank Knowledge Systems",
+    "url": "/skill-bank.html#entity-resolution-review"
+  },
+  {
+    "title": "Retrieval Evaluation Set",
+    "titleZh": "检索评估题集设计",
+    "description": "Turn corpus snapshot, representative questions, correct sources into a labeled retrieval benchmark with hard negatives.",
+    "descriptionZh": "编写可回答、无答案和近似干扰问题，并标注正确来源",
+    "keywords": "skill bank Knowledge Systems",
+    "url": "/skill-bank.html#retrieval-evaluation-set"
+  },
+  {
+    "title": "Knowledge Freshness Audit",
+    "titleZh": "知识时效巡检",
+    "description": "Turn stored claims, source dates, update cadence into a refresh queue ranked by decision impact.",
+    "descriptionZh": "识别易变事实，比较来源日期并形成刷新队列",
+    "keywords": "skill bank Knowledge Systems",
+    "url": "/skill-bank.html#knowledge-freshness-audit"
+  },
+  {
+    "title": "Evidence Linked Answer Builder",
+    "titleZh": "证据关联回答编写",
+    "description": "Turn user question, source snippets, audience into a concise answer with citations and uncertainty boundaries.",
+    "descriptionZh": "用给定材料构建回答，并逐句关联证据和不确定性",
+    "keywords": "skill bank Knowledge Systems",
+    "url": "/skill-bank.html#evidence-linked-answer-builder"
+  },
+  {
+    "title": "Long Task Checkpoint Kit",
+    "titleZh": "长任务断点续办",
+    "description": "Turn goal, current files, completed steps, blockers into a restartable checkpoint with completion conditions.",
+    "descriptionZh": "记录目标、最后验证状态、完成条件和下一步操作",
+    "keywords": "skill bank Persistent Planning",
+    "url": "/skill-bank.html#long-task-checkpoint-kit"
+  },
+  {
+    "title": "Research Findings Register",
+    "titleZh": "研究发现登记",
+    "description": "Turn research question, sources, notes, contradictory findings into a findings register with confidence and open questions.",
+    "descriptionZh": "按结论合并来源，保留反例、置信度和待解问题",
+    "keywords": "skill bank Persistent Planning",
+    "url": "/skill-bank.html#research-findings-register"
+  },
+  {
+    "title": "Project Blocker Triage",
+    "titleZh": "项目阻塞项分诊",
+    "description": "Turn task list, dependencies, recent failures into a ranked blocker board with unblock actions.",
+    "descriptionZh": "区分真正依赖外部条件的阻塞与尚未完成的工作",
+    "keywords": "skill bank Persistent Planning",
+    "url": "/skill-bank.html#project-blocker-triage"
+  },
+  {
+    "title": "Decision Log Maintainer",
+    "titleZh": "决策日志维护",
+    "description": "Turn options considered, constraints, decisions, dates into a concise architectural or product decision log.",
+    "descriptionZh": "记录选项、取舍、后果和重新评估的触发条件",
+    "keywords": "skill bank Persistent Planning",
+    "url": "/skill-bank.html#decision-log-maintainer"
+  },
+  {
+    "title": "Completion Gate Designer",
+    "titleZh": "交付完成标准设计",
+    "description": "Turn task objective, deliverables, risk level into an evidence-based done checklist.",
+    "descriptionZh": "把目标转成可观察的交付条件和所需证据",
+    "keywords": "skill bank Persistent Planning",
+    "url": "/skill-bank.html#completion-gate-designer"
+  },
+  {
+    "title": "Design Brief Translator",
+    "titleZh": "设计需求转译",
+    "description": "Turn business goal, audience, reference screenshots into a buildable design brief with constraints.",
+    "descriptionZh": "把抽象风格要求转成布局、交互、素材和验收约束",
+    "keywords": "skill bank Product Design",
+    "url": "/skill-bank.html#design-brief-translator"
+  },
+  {
+    "title": "Dashboard Information Hierarchy",
+    "titleZh": "运营看板信息排序",
+    "description": "Turn metrics, user decisions, update cadence into a dashboard layout and metric dictionary.",
+    "descriptionZh": "根据用户要做的决策排列指标，并定义单位和更新状态",
+    "keywords": "skill bank Product Design",
+    "url": "/skill-bank.html#dashboard-information-hierarchy"
+  },
+  {
+    "title": "Prototype State Matrix",
+    "titleZh": "原型状态矩阵",
+    "description": "Turn screens, user actions, data dependencies into a complete interaction state matrix.",
+    "descriptionZh": "补齐加载、空白、错误、成功及恢复操作等界面状态",
+    "keywords": "skill bank Product Design",
+    "url": "/skill-bank.html#prototype-state-matrix"
+  },
+  {
+    "title": "Brand Token Extractor",
+    "titleZh": "品牌设计变量提取",
+    "description": "Turn approved brand assets, current UI screenshots into a token proposal with provenance and usage rules.",
+    "descriptionZh": "从已认可素材识别颜色、间距和组件角色，输出变量建议",
+    "keywords": "skill bank Product Design",
+    "url": "/skill-bank.html#brand-token-extractor"
+  },
+  {
+    "title": "Pitch Deck Story Architect",
+    "titleZh": "路演幻灯片叙事",
+    "description": "Turn product facts, audience, evidence, desired action into a slide narrative with proof and asset requests.",
+    "descriptionZh": "围绕观众决策安排页面顺序、证据和素材需求",
+    "keywords": "skill bank Product Design",
+    "url": "/skill-bank.html#pitch-deck-story-architect"
+  },
+  {
+    "title": "Transcript to Clip Map",
+    "titleZh": "长视频精彩片段定位",
+    "description": "Turn timecoded transcript, audience, clip duration into a shortlist of self-contained clips with cut points.",
+    "descriptionZh": "从带时间码的文字稿挑选完整、可独立理解的片段",
+    "keywords": "skill bank Creator Workflows",
+    "url": "/skill-bank.html#transcript-to-clip-map"
+  },
+  {
+    "title": "Subtitle Localization Brief",
+    "titleZh": "字幕本地化方案",
+    "description": "Turn source subtitles, target locale, glossary into localized subtitle text with timing concerns.",
+    "descriptionZh": "结合目标地区和术语表调整字幕，并标记阅读时长问题",
+    "keywords": "skill bank Creator Workflows",
+    "url": "/skill-bank.html#subtitle-localization-brief"
+  },
+  {
+    "title": "Voiceover Production Sheet",
+    "titleZh": "配音制作执行单",
+    "description": "Turn approved script, pronunciation notes, runtime into a recording-ready script with pauses and emphasis.",
+    "descriptionZh": "区分口播正文与导演提示，标注停顿、重音和发音疑问",
+    "keywords": "skill bank Creator Workflows",
+    "url": "/skill-bank.html#voiceover-production-sheet"
+  },
+  {
+    "title": "Video Version Delivery Matrix",
+    "titleZh": "视频多版本交付矩阵",
+    "description": "Turn master video, destinations, language versions into a delivery matrix with filenames and QC checks.",
+    "descriptionZh": "列出不同语言、比例和平台所需版本及验收状态",
+    "keywords": "skill bank Creator Workflows",
+    "url": "/skill-bank.html#video-version-delivery-matrix"
+  },
+  {
+    "title": "Creator Asset Provenance Log",
+    "titleZh": "创作者素材来源台账",
+    "description": "Turn asset files, creator permissions, usage terms into an asset provenance register for a production.",
+    "descriptionZh": "记录图片、音乐和视频素材的来源与使用条件",
+    "keywords": "skill bank Creator Workflows",
+    "url": "/skill-bank.html#creator-asset-provenance-log"
+  },
+  {
+    "title": "Agent Role Decomposition",
+    "titleZh": "多智能体职责拆分",
+    "description": "Turn goal, work units, shared files, available agents into a role allocation plan with ownership boundaries.",
+    "descriptionZh": "按独立交付物划分角色，并明确共享接口负责人",
+    "keywords": "skill bank Agent Teams",
+    "url": "/skill-bank.html#agent-role-decomposition"
+  },
+  {
+    "title": "Parallel Work Dependency Map",
+    "titleZh": "并行任务依赖规划",
+    "description": "Turn task graph, estimated effort, shared resources into a parallel execution plan with critical dependencies.",
+    "descriptionZh": "画出任务先后依赖，区分可并行研究和共享写入",
+    "keywords": "skill bank Agent Teams",
+    "url": "/skill-bank.html#parallel-work-dependency-map"
+  },
+  {
+    "title": "Agent Handoff Contract",
+    "titleZh": "智能体交接契约",
+    "description": "Turn producer role, consumer role, required artifact into a typed handoff specification and acceptance examples.",
+    "descriptionZh": "定义交接数据字段、路径、状态和验收示例",
+    "keywords": "skill bank Agent Teams",
+    "url": "/skill-bank.html#agent-handoff-contract"
+  },
+  {
+    "title": "Agent Output Reconciler",
+    "titleZh": "多智能体结果整合",
+    "description": "Turn conflicting proposals, tests, shared objective into a conflict resolution memo and integrated plan.",
+    "descriptionZh": "比较方案假设和证据，处理冲突并形成一致方案",
+    "keywords": "skill bank Agent Teams",
+    "url": "/skill-bank.html#agent-output-reconciler"
+  },
+  {
+    "title": "Multi Agent Run Retrospective",
+    "titleZh": "多智能体执行复盘",
+    "description": "Turn run log, output quality, retries, costs into a bottleneck report with one measurable next experiment.",
+    "descriptionZh": "分析交接返工、等待、重试和成本，设计下一次改进实验",
+    "keywords": "skill bank Agent Teams",
+    "url": "/skill-bank.html#multi-agent-run-retrospective"
+  },
+  {
+    "title": "Dotnet Upgrade Readiness",
+    "titleZh": "Dotnet升级就绪评估",
+    "description": "Turn project files, target frameworks, dependency inventory into an upgrade impact report and staged migration plan.",
+    "descriptionZh": "梳理目标框架、依赖和行为变化，制定分阶段升级计划",
+    "keywords": "skill bank .NET Engineering",
+    "url": "/skill-bank.html#dotnet-upgrade-readiness"
+  },
+  {
+    "title": "Async Cancellation Review",
+    "titleZh": "异步取消链路审查",
+    "description": "Turn async C# call chain, cancellation tokens, timeout policy into a cancellation propagation review with focused test cases.",
+    "descriptionZh": "追踪C#异步调用中的取消令牌、超时和阻塞等待",
+    "keywords": "skill bank .NET Engineering",
+    "url": "/skill-bank.html#async-cancellation-review"
+  },
+  {
+    "title": "Dependency Injection Lifetime Audit",
+    "titleZh": "依赖注入生命周期审计",
+    "description": "Turn service registrations, constructors, disposal rules into a service lifetime map and concrete mismatch findings.",
+    "descriptionZh": "检查单例、作用域和临时服务之间的引用及释放",
+    "keywords": "skill bank .NET Engineering",
+    "url": "/skill-bank.html#dependency-injection-lifetime-audit"
+  },
+  {
+    "title": "Dotnet API Contract Tests",
+    "titleZh": "Dotnet接口契约测试",
+    "description": "Turn endpoint contracts, validation rules, error schema into a contract test plan with representative fixtures.",
+    "descriptionZh": "根据接口约定设计成功、错误和校验用例",
+    "keywords": "skill bank .NET Engineering",
+    "url": "/skill-bank.html#dotnet-api-contract-tests"
+  },
+  {
+    "title": "Dotnet Performance Investigation",
+    "titleZh": "Dotnet性能调查",
+    "description": "Turn slow endpoint, workload, profiling evidence into a hypothesis-driven investigation plan.",
+    "descriptionZh": "用基线、分析证据和可证伪假设规划性能排查",
+    "keywords": "skill bank .NET Engineering",
+    "url": "/skill-bank.html#dotnet-performance-investigation"
+  },
+  {
+    "title": "Semantic Search Schema Brief",
+    "titleZh": "语义搜索结构设计",
+    "description": "Turn document fields, filter requirements, embedding model into a vector collection schema and indexing rationale.",
+    "descriptionZh": "定义向量维度、元数据、过滤字段和稳定文档ID",
+    "keywords": "skill bank Vector Search",
+    "url": "/skill-bank.html#semantic-search-schema-brief"
+  },
+  {
+    "title": "Vector Retrieval Benchmark",
+    "titleZh": "向量检索基准方案",
+    "description": "Turn query set, relevance labels, index configurations into a benchmark plan with quality and latency metrics.",
+    "descriptionZh": "固定语料和问题集，比较召回质量与尾部延迟",
+    "keywords": "skill bank Vector Search",
+    "url": "/skill-bank.html#vector-retrieval-benchmark"
+  },
+  {
+    "title": "Metadata Filter Test Designer",
+    "titleZh": "元数据过滤测试",
+    "description": "Turn filterable fields, sample documents, access boundaries into a filter truth table and retrieval test cases.",
+    "descriptionZh": "设计包含、排除、空值和跨租户的检索用例",
+    "keywords": "skill bank Vector Search",
+    "url": "/skill-bank.html#metadata-filter-test-designer"
+  },
+  {
+    "title": "Embedding Migration Planner",
+    "titleZh": "嵌入模型迁移规划",
+    "description": "Turn old and new embedding settings, corpus size, downtime constraints into a versioned re-embedding and cutover plan.",
+    "descriptionZh": "设计版本标记、重建索引、验证、切换和回退步骤",
+    "keywords": "skill bank Vector Search",
+    "url": "/skill-bank.html#embedding-migration-planner"
+  },
+  {
+    "title": "Search Relevance Failure Triage",
+    "titleZh": "搜索相关性故障分诊",
+    "description": "Turn bad queries, retrieved results, relevance labels into a categorized relevance failure report.",
+    "descriptionZh": "区分召回、过滤、分块和排序阶段的问题",
+    "keywords": "skill bank Vector Search",
+    "url": "/skill-bank.html#search-relevance-failure-triage"
+  },
+  {
+    "title": "Achievement Evidence Collector",
+    "titleZh": "履历成果证据整理",
+    "description": "Turn work notes, responsibilities, verified metrics into a factual achievement inventory for a resume.",
+    "descriptionZh": "从真实工作资料提取行动、范围和结果，标记缺少的量化证据",
+    "keywords": "skill bank Career Materials",
+    "url": "/skill-bank.html#achievement-evidence-collector"
+  },
+  {
+    "title": "Resume Job Match Matrix",
+    "titleZh": "简历岗位匹配矩阵",
+    "description": "Turn resume, job description, verified experience into a requirement-to-evidence map and editing priorities.",
+    "descriptionZh": "对照招聘要求与真实经历，区分匹配证据和能力缺口",
+    "keywords": "skill bank Career Materials",
+    "url": "/skill-bank.html#resume-job-match-matrix"
+  },
+  {
+    "title": "Resume Layout Readability Audit",
+    "titleZh": "简历版式可读性检查",
+    "description": "Turn resume PDF or screenshot, target page count into a layout correction list and plain-text reading check.",
+    "descriptionZh": "检查层级、密度、文本提取顺序和关键信息可读性",
+    "keywords": "skill bank Career Materials",
+    "url": "/skill-bank.html#resume-layout-readability-audit"
+  },
+  {
+    "title": "Career Transition Story Builder",
+    "titleZh": "转行经历叙事",
+    "description": "Turn past roles, target role, transferable accomplishments into a concise transition narrative and supporting bullets.",
+    "descriptionZh": "把原有工作成果映射到目标岗位需要的可迁移能力",
+    "keywords": "skill bank Career Materials",
+    "url": "/skill-bank.html#career-transition-story-builder"
+  },
+  {
+    "title": "Resume Version Control Kit",
+    "titleZh": "简历版本管理",
+    "description": "Turn master resume, target roles, application list into a version register and controlled tailoring workflow.",
+    "descriptionZh": "保留事实主版本并记录每个岗位的改动与提交文件",
+    "keywords": "skill bank Career Materials",
+    "url": "/skill-bank.html#resume-version-control-kit"
+  },
+  {
+    "title": "Skill Installation Readiness",
+    "titleZh": "Skill安装前检查",
+    "description": "Turn untrusted skill folder, host capabilities, intended use into a read-only pre-install review report.",
+    "descriptionZh": "只读检查技能入口、脚本以及网络和文件访问需求",
+    "keywords": "skill bank Skill Quality",
+    "url": "/skill-bank.html#skill-installation-readiness"
+  },
+  {
+    "title": "Skill Data Flow Audit",
+    "titleZh": "Skill数据流审计",
+    "description": "Turn skill instructions, scripts, external endpoints into a source-to-destination data flow table.",
+    "descriptionZh": "追踪读取的数据、处理过程和外发目的地",
+    "keywords": "skill bank Skill Quality",
+    "url": "/skill-bank.html#skill-data-flow-audit"
+  },
+  {
+    "title": "Prompt Injection Boundary Review",
+    "titleZh": "提示注入边界检查",
+    "description": "Turn trusted task, retrieved text, agent action rules into a boundary review and benign adversarial test set.",
+    "descriptionZh": "区分用户任务与资料中的指令，设计无害对抗测试",
+    "keywords": "skill bank Skill Quality",
+    "url": "/skill-bank.html#prompt-injection-boundary-review"
+  },
+  {
+    "title": "Skill Dependency Inventory",
+    "titleZh": "Skill依赖清单",
+    "description": "Turn skill folder, package manifests, download commands into a dependency inventory with provenance gaps.",
+    "descriptionZh": "梳理安装包、远端下载、版本固定情况和来源",
+    "keywords": "skill bank Skill Quality",
+    "url": "/skill-bank.html#skill-dependency-inventory"
+  },
+  {
+    "title": "Skill Finding Remediation Brief",
+    "titleZh": "Skill问题修复规划",
+    "description": "Turn scanner findings, source files, intended behavior into a prioritized fix plan with retest criteria.",
+    "descriptionZh": "对扫描发现进行复核，制定最小修复与回归检查",
+    "keywords": "skill bank Skill Quality",
+    "url": "/skill-bank.html#skill-finding-remediation-brief"
+  },
+  {
+    "title": "Feature Acceptance Brief",
+    "titleZh": "功能验收需求单",
+    "description": "Turn feature request, user journey, existing behavior into a concise specification with measurable acceptance cases.",
+    "descriptionZh": "把请求转成触发条件、可见结果和边界用例",
+    "keywords": "skill bank Engineering Practice",
+    "url": "/skill-bank.html#feature-acceptance-brief"
+  },
+  {
+    "title": "Refactor Scope Review",
+    "titleZh": "重构范围审查",
+    "description": "Turn proposed refactor, callers, tests, ownership boundaries into a bounded refactor plan with behavioral invariants.",
+    "descriptionZh": "检查要消除的复杂度、调用方和必须保持的行为",
+    "keywords": "skill bank Engineering Practice",
+    "url": "/skill-bank.html#refactor-scope-review"
+  },
+  {
+    "title": "Regression Test Selector",
+    "titleZh": "回归测试选择",
+    "description": "Turn code diff, historical failures, existing test suite into a risk-ranked set of regression tests.",
+    "descriptionZh": "根据差异和真实失败模式选择必要测试",
+    "keywords": "skill bank Engineering Practice",
+    "url": "/skill-bank.html#regression-test-selector"
+  },
+  {
+    "title": "Feature Flag Rollout Brief",
+    "titleZh": "功能开关发布规划",
+    "description": "Turn feature behavior, audience segments, monitoring into a staged rollout and rollback plan.",
+    "descriptionZh": "设计分批开放、监控指标、回滚触发条件和责任人",
+    "keywords": "skill bank Engineering Practice",
+    "url": "/skill-bank.html#feature-flag-rollout-brief"
+  },
+  {
+    "title": "Deprecation Migration Guide",
+    "titleZh": "废弃接口迁移指南",
+    "description": "Turn old API, replacement, usage patterns, timeline into a migration guide with compatibility notes.",
+    "descriptionZh": "对照旧用法和替代方案说明行为差异与验证方法",
+    "keywords": "skill bank Engineering Practice",
+    "url": "/skill-bank.html#deprecation-migration-guide"
+  },
+  {
+    "title": "Offline Data Model Planner",
+    "titleZh": "离线数据模型规划",
+    "description": "Turn entities, offline actions, conflict expectations into a local-first schema and persistence brief.",
+    "descriptionZh": "区分用户数据、派生状态、持久化需求和离线操作",
+    "keywords": "skill bank Local First Data",
+    "url": "/skill-bank.html#offline-data-model-planner"
+  },
+  {
+    "title": "Sync Conflict Scenario Kit",
+    "titleZh": "同步冲突场景设计",
+    "description": "Turn shared entities, merge rules, user workflows into a conflict test matrix and expected resolutions.",
+    "descriptionZh": "设计并发编辑、删除与修改冲突及期望合并结果",
+    "keywords": "skill bank Local First Data",
+    "url": "/skill-bank.html#sync-conflict-scenario-kit"
+  },
+  {
+    "title": "Local Persistence Recovery Plan",
+    "titleZh": "本地存储恢复方案",
+    "description": "Turn storage mechanism, schema versions, backup strategy into a recovery and migration test plan.",
+    "descriptionZh": "规划中断写入、旧版本数据和迁移失败的恢复测试",
+    "keywords": "skill bank Local First Data",
+    "url": "/skill-bank.html#local-persistence-recovery-plan"
+  },
+  {
+    "title": "Reactive Subscription Audit",
+    "titleZh": "响应式订阅审计",
+    "description": "Turn store subscriptions, component tree, update traces into a subscription map and unnecessary-render findings.",
+    "descriptionZh": "追踪组件真正读取的数据及监听清理情况",
+    "keywords": "skill bank Local First Data",
+    "url": "/skill-bank.html#reactive-subscription-audit"
+  },
+  {
+    "title": "Offline UX State Brief",
+    "titleZh": "离线界面状态说明",
+    "description": "Turn network transitions, local writes, sync policy into a state model for saved, pending and conflicted data.",
+    "descriptionZh": "区分设备本地保存、等待同步和冲突状态",
+    "keywords": "skill bank Local First Data",
+    "url": "/skill-bank.html#offline-ux-state-brief"
+  },
+  {
+    "title": "Campaign Export Health Check",
+    "titleZh": "广告导出数据体检",
+    "description": "Turn authorized campaign CSV, date range, currency into a data quality report before performance analysis.",
+    "descriptionZh": "核对字段、日期、币种、缺失值和总额一致性",
+    "keywords": "skill bank Paid Media Analysis",
+    "url": "/skill-bank.html#campaign-export-health-check"
+  },
+  {
+    "title": "Creative Test Hypothesis Builder",
+    "titleZh": "广告创意测试假设",
+    "description": "Turn product facts, prior ad results, audience research into a controlled creative test brief.",
+    "descriptionZh": "一次检验一个信息或创意变量，并预先定义观察规则",
+    "keywords": "skill bank Paid Media Analysis",
+    "url": "/skill-bank.html#creative-test-hypothesis-builder"
+  },
+  {
+    "title": "Landing Page Message Match Audit",
+    "titleZh": "广告落地页一致性审查",
+    "description": "Turn ad copy, landing page, offer terms into a claim-by-claim message consistency report.",
+    "descriptionZh": "逐项比较广告承诺、价格、资格和落地页内容",
+    "keywords": "skill bank Paid Media Analysis",
+    "url": "/skill-bank.html#landing-page-message-match-audit"
+  },
+  {
+    "title": "Campaign Metric Explanation",
+    "titleZh": "广告指标通俗解释",
+    "description": "Turn impressions, clicks, spend, conversions, attribution notes into a plain-English performance explanation with formulas.",
+    "descriptionZh": "根据给定数据计算比率并说明分母和归因限制",
+    "keywords": "skill bank Paid Media Analysis",
+    "url": "/skill-bank.html#campaign-metric-explanation"
+  },
+  {
+    "title": "Ad Experiment Readout",
+    "titleZh": "广告实验结果解读",
+    "description": "Turn test design, variant results, sample sizes, dates into an experiment readout with uncertainty and next action.",
+    "descriptionZh": "核对实验执行和样本，区分观察差异与证据强度",
+    "keywords": "skill bank Paid Media Analysis",
+    "url": "/skill-bank.html#ad-experiment-readout"
+  },
+  {
+    "title": "Application Threat Boundary Brief",
+    "titleZh": "应用威胁边界梳理",
+    "description": "Turn architecture, sensitive operations, deployment scope into a scoped threat model with defensive controls.",
+    "descriptionZh": "围绕授权范围识别资产、入口、信任边界和防御措施",
+    "keywords": "skill bank Defensive Code Review",
+    "url": "/skill-bank.html#application-threat-boundary-brief"
+  },
+  {
+    "title": "Authorization Matrix Reviewer",
+    "titleZh": "接口授权矩阵审查",
+    "description": "Turn roles, endpoints, tenant model, access tests into an authorization matrix and missing checks report.",
+    "descriptionZh": "按角色、对象归属和租户设计允许及拒绝测试",
+    "keywords": "skill bank Defensive Code Review",
+    "url": "/skill-bank.html#authorization-matrix-reviewer"
+  },
+  {
+    "title": "Secret Handling Code Review",
+    "titleZh": "密钥处理代码审查",
+    "description": "Turn configuration code, logging paths, deployment settings into a secret-handling findings report with redacted evidence.",
+    "descriptionZh": "追踪密钥存储、日志、错误响应和客户端打包路径",
+    "keywords": "skill bank Defensive Code Review",
+    "url": "/skill-bank.html#secret-handling-code-review"
+  },
+  {
+    "title": "Input Validation Boundary Tests",
+    "titleZh": "输入校验边界测试",
+    "description": "Turn input schema, parsers, storage boundaries into a defensive validation test suite specification.",
+    "descriptionZh": "同时检查语法、业务约束、超长和异常值",
+    "keywords": "skill bank Defensive Code Review",
+    "url": "/skill-bank.html#input-validation-boundary-tests"
+  },
+  {
+    "title": "Security Fix Verification Brief",
+    "titleZh": "安全修复验证方案",
+    "description": "Turn reported flaw, patch, authorized local fixture into a regression verification plan and residual-risk note.",
+    "descriptionZh": "在本地授权样例复现原问题并验证相邻和正常路径",
+    "keywords": "skill bank Defensive Code Review",
+    "url": "/skill-bank.html#security-fix-verification-brief"
+  },
+  {
+    "title": "Meeting Decision Digest",
+    "titleZh": "会议决策与行动摘要",
+    "description": "Turn meeting transcript, attendee roles, known deadlines into a decision digest and action register.",
+    "descriptionZh": "从会议记录区分讨论、明确决定、责任人和未决事项",
+    "keywords": "skill bank Document Workflows",
+    "url": "/skill-bank.html#meeting-decision-digest"
+  },
+  {
+    "title": "Document Revision Comparator",
+    "titleZh": "文档修订差异对照",
+    "description": "Turn old and new document versions, review purpose into a material-change summary with section references.",
+    "descriptionZh": "对齐新旧章节，区分排版变化与日期、数字和含义变化",
+    "keywords": "skill bank Document Workflows",
+    "url": "/skill-bank.html#document-revision-comparator"
+  },
+  {
+    "title": "Spreadsheet Assumption Register",
+    "titleZh": "表格假设登记",
+    "description": "Turn spreadsheet formulas, inputs, scenario labels into an assumption inventory and formula review checklist.",
+    "descriptionZh": "区分输入和公式，追踪关键结果依赖的假设、常数与单位",
+    "keywords": "skill bank Document Workflows",
+    "url": "/skill-bank.html#spreadsheet-assumption-register"
+  },
+  {
+    "title": "Report Evidence Organizer",
+    "titleZh": "报告证据整理",
+    "description": "Turn source documents, draft findings, report outline into an evidence map and report assembly plan.",
+    "descriptionZh": "为来源分配编号，把报告结论对应到直接证据并标出缺口",
+    "keywords": "skill bank Document Workflows",
+    "url": "/skill-bank.html#report-evidence-organizer"
+  },
+  {
+    "title": "Client Deliverable QA",
+    "titleZh": "客户交付物质量检查",
+    "description": "Turn final files, agreed scope, formats, delivery requirements into a client-ready delivery checklist and issue log.",
+    "descriptionZh": "按约定核对文件数量、格式、可打开性和占位内容",
+    "keywords": "skill bank Document Workflows",
+    "url": "/skill-bank.html#client-deliverable-qa"
+  },
+  {
+    "title": "Pull Request Risk Brief",
+    "titleZh": "合并请求风险摘要",
+    "description": "Turn diff, callers, runtime context, test results into a risk-ranked review briefing.",
+    "descriptionZh": "从差异定位行为变化和受影响契约，安排审查重点",
+    "keywords": "skill bank Code Review Delivery",
+    "url": "/skill-bank.html#pull-request-risk-brief"
+  },
+  {
+    "title": "Finding Reproduction Writer",
+    "titleZh": "代码问题复现说明",
+    "description": "Turn suspected bug, relevant lines, input conditions into a minimal reproduction and actionable finding.",
+    "descriptionZh": "写出触发条件、位置、实际与预期结果和验证状态",
+    "keywords": "skill bank Code Review Delivery",
+    "url": "/skill-bank.html#finding-reproduction-writer"
+  },
+  {
+    "title": "Review False Positive Triage",
+    "titleZh": "代码审查误报分诊",
+    "description": "Turn automated findings, code context, test evidence into a triaged findings table with rationale.",
+    "descriptionZh": "检查路径可达性、保护条件和证据，分类自动发现",
+    "keywords": "skill bank Code Review Delivery",
+    "url": "/skill-bank.html#review-false-positive-triage"
+  },
+  {
+    "title": "Patch Verification Matrix",
+    "titleZh": "补丁验证矩阵",
+    "description": "Turn fix diff, original issue, supported environments into a focused verification matrix for the patch.",
+    "descriptionZh": "把原问题、相邻行为和支持环境对应到检查状态",
+    "keywords": "skill bank Code Review Delivery",
+    "url": "/skill-bank.html#patch-verification-matrix"
+  },
+  {
+    "title": "Release Review Summary",
+    "titleZh": "发布审查总结",
+    "description": "Turn merged changes, review findings, test outcomes into a release-facing summary with known limitations.",
+    "descriptionZh": "按用户可见变化组织交付、测试证据和已知限制",
+    "keywords": "skill bank Code Review Delivery",
+    "url": "/skill-bank.html#release-review-summary"
   }
 ]
