@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3LV3GH9T5X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-3LV3GH9T5X');
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Social Media Extract — 采集 · 沉淀 · 执行 · 编译，一个闭环</title>
@@ -63,6 +70,17 @@
   .nav-links a{font-size:13.5px;color:var(--muted);font-weight:500;transition:color .2s}
   .nav-links a:hover{color:var(--text)}
   .nav-right{display:flex;align-items:center;gap:12px;flex:none}
+  /* 汉堡菜单（移动端） */
+  .burger{display:none;flex-direction:column;justify-content:center;gap:5px;padding:9px 10px;
+    border:1px solid var(--border-strong);border-radius:9px;background:rgba(255,255,255,.02);flex:none}
+  .burger span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:transform .25s,opacity .2s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{display:none;border-top:1px solid var(--border);padding:6px 0 16px;background:rgba(7,7,10,.98)}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:13px 4px;font-size:15px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border)}
+  .mobile-menu a:last-child{border-bottom:none}
 
   /* 语言切换 */
   .lang{position:relative}
@@ -272,6 +290,7 @@
     .pricing{grid-template-columns:1fr;max-width:420px;margin:0 auto}
     .plan.featured{order:-1}
     .nav-links{display:none}
+    .burger{display:flex}
   }
   @media(max-width:640px){
     .hero{padding:56px 0 40px}
@@ -284,6 +303,7 @@
     .aireel{padding:32px 22px}
     .aireel-cta .btn{width:100%}
     .foot{flex-direction:column;text-align:center}
+    .nav-right .btn{display:none}
     .video-demo-head{flex-wrap:wrap}
     .video-demo-head span{margin-left:0;width:100%}
   }
@@ -340,7 +360,17 @@
         <a href="https://bit.ly/Gavin_kol" target="_blank" rel="noopener" class="btn btn-primary"
            data-zh="开始使用" data-en="Get started">开始使用</a>
       </div>
+        <button class="burger" id="burger" aria-label="菜单" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
     </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#ecosystem" data-zh="生态" data-en="Ecosystem">生态</a>
+        <a href="#flow" data-zh="流程" data-en="Flow">流程</a>
+        <a href="#demo" data-zh="示例" data-en="Demo">示例</a>
+        <a href="#pricing" data-zh="价格" data-en="Pricing">价格</a>
+        <a href="#aireel" data-zh="AIReel" data-en="AIReel">AIReel</a>
+      </div>
   </div>
 </header>
 
@@ -639,7 +669,7 @@
         工具做完了，怎么让人一眼看懂？截图丢进去，几分钟出一条 AI 宣传片，不用剪辑、不用配音。
       </p>
       <div class="aireel-cta">
-        <a href="https://bit.ly/Gavin_kol" target="_blank" rel="noopener" class="btn btn-primary"
+        <a href="https://www.aireel.net/" target="_blank" rel="noopener" class="btn btn-primary"
            data-zh="打开 Web 版" data-en="Open Web version">打开 Web 版</a>
         <a href="https://aireel.go.link/3MgMk" target="_blank" rel="noopener" class="btn btn-ghost"
            data-zh="下载 Android App" data-en="Download Android App">下载 Android App</a>
@@ -755,6 +785,28 @@ document.addEventListener('click', (e) => {
 let saved = 'zh';
 try { saved = localStorage.getItem('sf_lang') || 'zh'; } catch(e) {}
 setLang(saved);
+
+/* ---------- 汉堡菜单 ---------- */
+const burgerBtn = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burgerBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const open = mobileMenu.classList.toggle('open');
+  burgerBtn.classList.toggle('open', open);
+  burgerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  burgerBtn.classList.remove('open');
+  burgerBtn.setAttribute('aria-expanded', 'false');
+}));
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) {
+    mobileMenu.classList.remove('open');
+    burgerBtn.classList.remove('open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+  }
+});
 </script>
 </body>
 </html>
