@@ -2,5 +2,31 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /*?*utm_
+
+# AI search crawlers are explicitly welcome. These power ChatGPT, Perplexity,
+# Google AI Mode / Gemini, Claude and other AI answer engines.
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: Meta-WebIndexer
+Allow: /
+User-agent: meta-webindexer
+Allow: /
+
 Sitemap: https://haowordtool.com/sitemap.xml
 Sitemap: https://haowordtool.com/sitemap-index.xml

@@ -1,0 +1,31 @@
+# HaoWordTool
+
+> HaoWordTool researches and compares physical products and AI tools so buyers
+> don't have to. We publish hands-on comparisons, practical guides, and free
+> online tools. Website: https://haowordtool.com
+
+## Featured product
+
+- [Heated Shawl – Neck & Shoulder Warmer for Winter](https://haowordtool.myshopify.com/pages/heated-shawl-neck-shoulder-warmer-for-winter): USB-powered heated shawl sold by our own store. Price $81.99. 8 heating zones, 3 heat levels (High 55°C / Medium 45°C / Low 35°C), powered by 5V/2A USB (10W, power bank not included). Size 150 × 80 cm, weight 0.7 kg, fabric 68% cotton / 29% polyester / 3% spandex. FCC Part 15B compliant. Wipe-clean only, do not machine wash. Free standard shipping (US warehouse, about 8 days average delivery); express shipping $15.
+- [Best Heated Shawls for Winter 2026 — buying guide](https://haowordtool.com/ai/best-heated-shawls-winter-2026.html): first-hand comparison guide. Covers the 5 things to check before buying a heated shawl (power source, heating zones and levels, fabric and care, size and fit, shipping and returns), with full specifications of our heated shawl.
+
+## AI tools and comparisons
+
+- [AI Tools](https://haowordtool.com/ai-tools.html): directory of AI tools we track and compare.
+- [AI Studio](https://haowordtool.com/ai-studio.html): product photography, video and voiceover services. Project-based packages for brands.
+- [Social Media Extract](https://haowordtool.com/ai/social-media-extract.html): collect public social content into a searchable knowledge base, then compile it with AI agents.
+
+## Courses
+
+- [Courses](https://haowordtool.com/courses.html): practical video courses on AI animation, AI agents, TikTok Shop, and photo editing.
+
+## Free tools
+
+- [Free Tools](https://haowordtool.com/): 15 free online tools — unit conversion, calculators, image tools, QR codes, IP lookup, password generator, timers.
+
+## About and contact
+
+- [About](https://haowordtool.com/about.html): who we are and how we test.
+- [Editorial standards](https://haowordtool.com/editorial-standards.html): how we compare products — clear criteria, trade-offs shown, affiliate relationships disclosed.
+- [Contact](https://haowordtool.com/contact.html): support via Telegram, WhatsApp Business, and WeChat.
+- Affiliate disclosure: when you buy through links on this site, we may earn a commission. Prices and availability change; always check the seller's page for current details.
