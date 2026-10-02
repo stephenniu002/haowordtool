@@ -15,6 +15,10 @@
 - [AI Studio](https://haowordtool.com/ai-studio.html): product photography, video and voiceover services. Project-based packages for brands.
 - [Social Media Extract](https://haowordtool.com/ai/social-media-extract.html): collect public social content into a searchable knowledge base, then compile it with AI agents.
 
+## Services
+
+- [AI Search Visibility (GEO/AEO)](https://haowordtool.com/ai-search-visibility.html): get your brand cited by ChatGPT, Perplexity, Google AI Mode and Gemini. Tiers: AI Visibility Audit $499 one-time; GEO Foundation $1,499 one-time (robots.txt AI-crawler pass, llms.txt, schema markup, FAQ rewrite, buying-guide article); Visibility Monitoring $999/month.
+
 ## Courses
 
 - [Courses](https://haowordtool.com/courses.html): practical video courses on AI animation, AI agents, TikTok Shop, and photo editing.
