@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>haoword.audio — AI Audio Studio: Text to Speech, Voice Cloning &amp; More</title>
+<meta name="description" content="haoword.audio is HaoWordTool's AI audio studio: text to speech, voice cloning, speech to text, vocal separation, AI sound effects. Natural voices and a long-form story studio. Tools launching soon.">
+<link rel="canonical" href="https://haowordtool.com/en/audio/">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/en/audio/">
+<link rel="alternate" hreflang="zh" href="https://haowordtool.com/audio/">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/en/audio/">
+<meta property="og:title" content="haoword.audio — AI Audio Studio">
+<meta property="og:description" content="Text to speech, voice cloning, speech to text, vocal separation, AI sound effects. Give your next idea its own voice.">
+<meta property="og:url" content="https://haowordtool.com/en/audio/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"haoword.audio","url":"https://haowordtool.com/en/audio/","inLanguage":"en","applicationCategory":"MultimediaApplication","operatingSystem":"Web","description":"AI audio studio: text to speech, voice cloning, speech to text, vocal separation, AI sound effects.","offers":{"@type":"Offer","availability":"https://schema.org/PreOrder"},"isPartOf":{"@type":"WebSite","name":"haowordtool","url":"https://haowordtool.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[
+{"@type":"Question","name":"Which tool should I use for narration, dialogue, or audiobooks?","acceptedAnswer":{"@type":"Answer","text":"Use Text to Speech for solo narration, Text to Dialogue for multi-character conversations, and the Voice Studio for long-form content that needs repeated revision — organize scripts, assign voices, and preview on a timeline."}},
+{"@type":"Question","name":"Can I try it for free? Do I need to sign in?","acceptedAnswer":{"@type":"Answer","text":"Once tools launch, sample demos and built-in voices are available without signing in. AI generation tools require sign-in and consume credits; new users receive trial credits on registration."}},
+{"@type":"Question","name":"How do credits work for AI generation?","acceptedAnswer":{"@type":"Answer","text":"Billing is based on text length, audio duration, or number of generations. The estimated cost is shown before each generation. See the pricing page for more credit options."}},
+{"@type":"Question","name":"Can I use my own voice for voiceovers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Voice Cloning accepts your own recordings or authorized voice samples. Clear vocals with minimal background noise produce the most natural results."}},
+{"@type":"Question","name":"What audio formats and size limits apply to uploads?","acceptedAnswer":{"@type":"Answer","text":"Common formats like MP3, WAV, and M4A are supported. Duration and size limits vary by tool — check the upload area of the tool you choose."}},
+{"@type":"Question","name":"Where do I download results? Can I keep editing later?","acceptedAnswer":{"@type":"Answer","text":"Preview and download directly on the tool page; past tasks live in History; Voice Studio projects can be reopened and edited. Generated files have a retention period, so download important work promptly."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://haowordtool.com/en/"},
+{"@type":"ListItem","position":2,"name":"AI Audio Studio","item":"https://haowordtool.com/en/audio/"}
+]}
+</script>
+<style>
+:root{--bg:#ffffff;--text:#1a1a2e;--muted:#6b7280;--border:#e5e7eb;--accent:#7c3aed;--accent-hover:#6d28d9;--panel:#f9fafb;--radius:10px;--max-w:960px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:#fff;position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.logo{font-weight:700;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:-0.01em}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:20px}
+nav a:hover{color:var(--text)}
+nav a.active{color:var(--accent);font-weight:600}
+.breadcrumb{font-size:13px;color:var(--muted);padding:16px 0 0}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+.hero{text-align:center;padding:48px 0 32px}
+.hero-badge{display:inline-block;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;background:#f5f3ff;color:var(--accent);margin-bottom:16px;border:1px solid #ddd6fe}
+h1{font-size:34px;font-weight:800;line-height:1.35;letter-spacing:-0.02em;margin:0 0 12px;background:linear-gradient(120deg,#7c3aed,#db2777);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{color:var(--muted);font-size:16px;max-width:640px;margin:0 auto 24px}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 28px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;transition:all 0.15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);color:#fff;text-decoration:none}
+.btn-ghost{border:1px solid var(--border);color:var(--text);background:#fff}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.coming-note{margin-top:20px;font-size:13px;color:#9ca3af}
+.ad-slot{background:var(--panel);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:#9ca3af;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;margin:24px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+h2{font-size:22px;font-weight:700;margin:44px 0 8px;letter-spacing:-0.01em}
+.section-intro{color:var(--muted);font-size:15px;margin:0 0 16px}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:20px 0 8px}
+.tool-card{border:1px solid var(--border);border-radius:var(--radius);padding:20px;background:#fff;display:flex;flex-direction:column;transition:all 0.15s}
+.tool-card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(124,58,237,0.1)}
+.tc-icon{font-size:30px;margin-bottom:10px}
+.tc-title{font-weight:700;font-size:16px;margin-bottom:6px}
+.tc-desc{font-size:13px;color:var(--muted);margin-bottom:14px;flex-grow:1}
+.soon-pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 10px;border-radius:20px;background:#fef3c7;color:#92400e;margin-bottom:10px;align-self:flex-start}
+.btn-try{display:inline-block;text-align:center;padding:9px 0;border-radius:7px;font-size:14px;font-weight:600;background:#f5f3ff;color:var(--accent);border:1px solid #ddd6fe;cursor:not-allowed;opacity:0.75}
+.scene-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:20px 0 8px}
+.scene-card{border:1px solid var(--border);border-radius:var(--radius);padding:24px;background:linear-gradient(180deg,#fff,var(--panel))}
+.sc-icon{font-size:32px;margin-bottom:10px}
+.sc-title{font-weight:700;font-size:17px;margin-bottom:8px}
+.sc-tags{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:8px}
+.sc-desc{font-size:14px;color:var(--muted)}
+.studio-banner{border-radius:14px;padding:36px 32px;background:linear-gradient(135deg,#1e1b4b,#7c3aed 60%,#db2777);color:#fff;margin:20px 0 8px}
+.studio-banner h3{font-size:20px;font-weight:700;margin-bottom:10px}
+.studio-banner p{color:#e9e5f7;font-size:15px;margin-bottom:0}
+.matrix-group{margin:20px 0 8px}
+.mg-title{font-size:16px;font-weight:700;margin:18px 0 10px;color:var(--text)}
+.mg-title .mg-emoji{margin-right:8px}
+.matrix-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.mx-item{border:1px solid var(--border);border-radius:8px;padding:14px 16px;background:#fff}
+.mx-name{font-weight:700;font-size:14px;margin-bottom:2px}
+.mx-name .mx-soon{font-size:10px;font-weight:600;background:#fef3c7;color:#92400e;border-radius:10px;padding:1px 8px;margin-left:8px;vertical-align:middle}
+.mx-desc{font-size:13px;color:var(--muted)}
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:600;font-size:16px;margin-bottom:6px;color:var(--text)}
+.faq-a{color:#4b5563;font-size:15px;margin:0}
+.end-cta{text-align:center;padding:40px 24px;margin:40px 0;border-radius:14px;background:linear-gradient(135deg,#f5f3ff,#fdf2f8);border:1px solid #ede9fe}
+.end-cta h2{margin:0 0 10px;border:none;padding:0;display:block}
+.end-cta p{color:var(--muted);margin-bottom:20px}
+footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-size:13px;color:var(--muted)}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.footer-inner a{color:var(--muted);text-decoration:none;margin-left:16px}
+.footer-inner a:hover{color:var(--accent)}
+@media (max-width:600px){h1{font-size:26px}h2{font-size:19px}nav a{margin-left:12px;font-size:13px}.tool-grid{grid-template-columns:1fr 1fr}.hero{padding:32px 0 24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/en/" class="logo">hao<span>word</span>tool</a>
+    <nav>
+      <a href="/tools/">Tools</a>
+      <a href="/en/games/">Game Guides</a>
+      <a href="/en/audio/" class="active">Audio</a>
+      <a href="/en/about.html">About</a>
+      <a href="/audio/" style="border:1px solid var(--border);border-radius:6px;padding:4px 10px;">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <div class="breadcrumb">
+    <a href="/en/">Home</a><span>›</span>
+    AI Audio Studio
+  </div>
+
+  <section class="hero">
+    <div class="hero-badge">🎧 Coming Soon</div>
+    <h1>Give your next idea its own voice.</h1>
+    <p class="hero-sub">haoword.audio is HaoWordTool's AI audio studio: generate speech or sound effects, clone voices, turn recordings into text, or split vocals from music.</p>
+    <div class="hero-ctas">
+      <a href="#tools" class="btn btn-primary">Explore Tools</a>
+      <a href="#faq" class="btn btn-ghost">FAQ</a>
+    </div>
+    <p class="coming-note">Tools are in final polish — try them as soon as they launch.</p>
+  </section>
+
+  <div class="ad-slot">Advertisement</div>
+
+  <h2 id="tools">Core Tools</h2>
+  <p class="section-intro">Five entry points covering the full audio pipeline, from creation to processing. All tools launching soon.</p>
+  <div class="tool-grid">
+    <div class="tool-card">
+      <div class="tc-icon">🎙️</div>
+      <div class="tc-title">Text to Speech</div>
+      <div class="tc-desc">Type text, get natural, fluent AI voice narration.</div>
+      <span class="soon-pill">Coming soon</span>
+      <span class="btn-try" title="Coming soon">Try</span>
+    </div>
+    <div class="tool-card">
+      <div class="tc-icon">🧬</div>
+      <div class="tc-title">Voice Cloning</div>
+      <div class="tc-desc">Upload a 30-second sample, recreate a signature voice.</div>
+      <span class="soon-pill">Coming soon</span>
+      <span class="btn-try" title="Coming soon">Try</span>
+    </div>
+    <div class="tool-card">
+      <div class="tc-icon">📝</div>
+      <div class="tc-title">Speech to Text</div>
+      <div class="tc-desc">Turn long recordings into editable text and subtitles.</div>
+      <span class="soon-pill">Coming soon</span>
+      <span class="btn-try" title="Coming soon">Try</span>
+    </div>
+    <div class="tool-card">
+      <div class="tc-icon">🎚️</div>
+      <div class="tc-title">Vocal Separation</div>
+      <div class="tc-desc">Cleanly split a mix into vocals and backing track.</div>
+      <span class="soon-pill">Coming soon</span>
+      <span class="btn-try" title="Coming soon">Try</span>
+    </div>
+    <div class="tool-card">
+      <div class="tc-icon">🔊</div>
+      <div class="tc-title">AI Sound Effects</div>
+      <div class="tc-desc">Describe a scene, generate original ambience and SFX.</div>
+      <span class="soon-pill">Coming soon</span>
+      <span class="btn-try" title="Coming soon">Try</span>
+    </div>
+  </div>
+
+  <h2>Voices that don't sound like AI</h2>
+  <p class="section-intro">Preview character dialogue, natural conversation, and expressive narration — then start creating your own voice.</p>
+  <div class="scene-grid">
+    <div class="scene-card">
+      <div class="sc-icon">🎭</div>
+      <div class="sc-title">Character Acting</div>
+      <div class="sc-tags">Dramatic · Expressive · Memorable</div>
+      <div class="sc-desc">Distinctive character voices for short dramas, games, and audio content, with natural emotional range.</div>
+    </div>
+    <div class="scene-card">
+      <div class="sc-icon">💬</div>
+      <div class="sc-title">Natural Conversation</div>
+      <div class="sc-tags">Natural · Warm · Easy to follow</div>
+      <div class="sc-desc">Chat-like pacing that feels human — ideal for podcasts, support, and tutorials.</div>
+    </div>
+    <div class="scene-card">
+      <div class="sc-icon">📖</div>
+      <div class="sc-title">Narration</div>
+      <div class="sc-tags">Immersive · Nuanced · Clear</div>
+      <div class="sc-desc">Long-form narration that stays expressive throughout, so listeners finish the whole chapter.</div>
+    </div>
+  </div>
+
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="studio-banner">
+    <h3>More than one line — string the whole story together.</h3>
+    <p>Organize scripts, assign voices line by line, and preview continuously on a timeline in the Voice Studio. Built for dialogue and long-form content that needs repeated polish — start from a paragraph, or open the studio and structure the entire story.</p>
+  </div>
+
+  <h2>From creation to processing — find your tool</h2>
+  <p class="section-intro">All 11 tools, each explained in one line.</p>
+
+  <div class="matrix-group">
+    <div class="mg-title"><span class="mg-emoji">✨</span>Create</div>
+    <div class="matrix-list">
+      <div class="mx-item"><div class="mx-name">Text to Speech<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Turn scripts into expressive solo narration.</div></div>
+      <div class="mx-item"><div class="mx-name">Voice Cloning<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Generate new voices from authorized samples.</div></div>
+      <div class="mx-item"><div class="mx-name">Text to Dialogue<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Assign voices per line, build multi-character dialogue.</div></div>
+      <div class="mx-item"><div class="mx-name">Sound Effect Generation<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Describe a scene, generate original ambience or SFX.</div></div>
+      <div class="mx-item"><div class="mx-name">AI Cover<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Explore new vocal tones and arrangements for songs you have rights to.</div></div>
+    </div>
+  </div>
+
+  <div class="matrix-group">
+    <div class="mg-title"><span class="mg-emoji">🔄</span>Transform</div>
+    <div class="matrix-list">
+      <div class="mx-item"><div class="mx-name">Voice Changer<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Reshape a recorded performance with a target voice.</div></div>
+      <div class="mx-item"><div class="mx-name">AI Dubbing<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Translate audio and video while keeping expression and rhythm.</div></div>
+      <div class="mx-item"><div class="mx-name">Noise Reduction<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Reduce room tone and interference in recordings.</div></div>
+    </div>
+  </div>
+
+  <div class="matrix-group">
+    <div class="mg-title"><span class="mg-emoji">✂️</span>Separate</div>
+    <div class="matrix-list">
+      <div class="mx-item"><div class="mx-name">Vocal Separation<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Split a mix into vocals and backing track.</div></div>
+      <div class="mx-item"><div class="mx-name">Stem Separation<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Separate drums, bass, vocals and more for remixing.</div></div>
+      <div class="mx-item"><div class="mx-name">Speech to Text<span class="mx-soon">Coming soon</span></div><div class="mx-desc">Convert speech into editable text and subtitles.</div></div>
+    </div>
+  </div>
+
+  <h2 id="faq">FAQ</h2>
+  <div class="faq-item">
+    <div class="faq-q">Which tool should I use for narration, dialogue, or audiobooks?</div>
+    <p class="faq-a">Use Text to Speech for solo narration, Text to Dialogue for multi-character conversations, and the Voice Studio for long-form content that needs repeated revision — organize scripts, assign voices, and preview on a timeline.</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I try it for free? Do I need to sign in?</div>
+    <p class="faq-a">Once tools launch, sample demos and built-in voices are available without signing in. AI generation tools require sign-in and consume credits; new users receive trial credits on registration.</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How do credits work for AI generation?</div>
+    <p class="faq-a">Billing is based on text length, audio duration, or number of generations. The estimated cost is shown before each generation. See the pricing page for more credit options.</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I use my own voice for voiceovers?</div>
+    <p class="faq-a">Yes. Voice Cloning accepts your own recordings or authorized voice samples. Clear vocals with minimal background noise produce the most natural results.</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What audio formats and size limits apply to uploads?</div>
+    <p class="faq-a">Common formats like MP3, WAV, and M4A are supported. Duration and size limits vary by tool — check the upload area of the tool you choose.</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Where do I download results? Can I keep editing later?</div>
+    <p class="faq-a">Preview and download directly on the tool page; past tasks live in History; Voice Studio projects can be reopened and edited. Generated files have a retention period, so download important work promptly.</p>
+  </div>
+
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="end-cta">
+    <h2>Give your next idea its own voice.</h2>
+    <p>haoword.audio tools are launching soon — stay tuned.</p>
+    <a href="/audio/" class="btn btn-ghost">← 查看中文版</a>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 haowordtool.com · haoword.audio</div>
+    <div>
+      <a href="/en/about.html">About</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/en/contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

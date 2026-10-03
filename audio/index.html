@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>haoword.audio — AI 音频工作台：文字转语音、声音克隆、语音转文字</title>
+<meta name="description" content="haoword.audio 是 HaoWordTool 的 AI 音频工作台：文字转语音、声音克隆、语音转文字、人声分离、AI 音效。自然语音、长篇故事工作室，工具即将上线。">
+<link rel="canonical" href="https://haowordtool.com/audio/">
+<link rel="alternate" hreflang="zh" href="https://haowordtool.com/audio/">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/en/audio/">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/en/audio/">
+<meta property="og:title" content="haoword.audio — AI 音频工作台">
+<meta property="og:description" content="文字转语音、声音克隆、语音转文字、人声分离、AI 音效。让你的下一个想法，有自己的声音。">
+<meta property="og:url" content="https://haowordtool.com/audio/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"haoword.audio","url":"https://haowordtool.com/audio/","inLanguage":"zh-CN","applicationCategory":"MultimediaApplication","operatingSystem":"Web","description":"AI 音频工作台：文字转语音、声音克隆、语音转文字、人声分离、AI 音效。","offers":{"@type":"Offer","availability":"https://schema.org/PreOrder"},"isPartOf":{"@type":"WebSite","name":"haowordtool","url":"https://haowordtool.com/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"zh-CN","mainEntity":[
+{"@type":"Question","name":"我想做旁白、对话或有声书，应该用 haoword.audio 的哪个工具？","acceptedAnswer":{"@type":"Answer","text":"单人旁白用「文字转语音」；多人对白用「文本转对话」；长篇或需要反复修改的内容用「语音工作室」，可以在时间线上组织脚本、分配音色并连续试听。"}},
+{"@type":"Question","name":"可以免费体验吗？需要登录吗？","acceptedAnswer":{"@type":"Answer","text":"工具正式上线后，示例试听和内置音色无需登录即可体验；AI 生成工具需要登录并消耗积分，新用户注册后会获得体验积分。"}},
+{"@type":"Question","name":"AI 生成如何消耗积分？","acceptedAnswer":{"@type":"Answer","text":"按文字长度、音频时长或生成次数计费，生成前页面会显示预计消耗。更多积分方案请查看定价页。"}},
+{"@type":"Question","name":"可以用我自己的声音来配音吗？","acceptedAnswer":{"@type":"Answer","text":"可以。「声音克隆」支持上传你自己的录音或已获得授权的声音样本，建议人声清晰、背景干扰少，效果更自然。"}},
+{"@type":"Question","name":"上传音频时有哪些格式和大小限制？","acceptedAnswer":{"@type":"Answer","text":"支持 MP3、WAV、M4A 等常见格式，各工具的时长与大小限制不同，具体以所选工具上传区的说明为准。"}},
+{"@type":"Question","name":"生成后在哪里下载？下次还能继续编辑吗？","acceptedAnswer":{"@type":"Answer","text":"在工具页可直接试听和下载；「历史记录」可查看过往任务；语音工作室的项目可重新打开继续编辑。请注意生成文件有保存期限，重要作品请及时下载。"}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://haowordtool.com/"},
+{"@type":"ListItem","position":2,"name":"AI 音频工作台","item":"https://haowordtool.com/audio/"}
+]}
+</script>
+<style>
+:root{--bg:#ffffff;--text:#1a1a2e;--muted:#6b7280;--border:#e5e7eb;--accent:#7c3aed;--accent-hover:#6d28d9;--panel:#f9fafb;--radius:10px;--max-w:960px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:#fff;position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.logo{font-weight:700;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:-0.01em}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:20px}
+nav a:hover{color:var(--text)}
+nav a.active{color:var(--accent);font-weight:600}
+.breadcrumb{font-size:13px;color:var(--muted);padding:16px 0 0}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+/* Hero */
+.hero{text-align:center;padding:48px 0 32px}
+.hero-badge{display:inline-block;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;background:#f5f3ff;color:var(--accent);margin-bottom:16px;border:1px solid #ddd6fe}
+h1{font-size:34px;font-weight:800;line-height:1.4;letter-spacing:-0.02em;margin:0 0 12px;background:linear-gradient(120deg,#7c3aed,#db2777);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{color:var(--muted);font-size:16px;max-width:640px;margin:0 auto 24px}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 28px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;transition:all 0.15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);color:#fff;text-decoration:none}
+.btn-ghost{border:1px solid var(--border);color:var(--text);background:#fff}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.coming-note{margin-top:20px;font-size:13px;color:#9ca3af}
+.ad-slot{background:var(--panel);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:#9ca3af;font-size:12px;letter-spacing:0.05em;margin:24px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+h2{font-size:22px;font-weight:700;margin:44px 0 8px;letter-spacing:-0.01em}
+.section-intro{color:var(--muted);font-size:15px;margin:0 0 16px}
+/* 工具入口卡片 */
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:20px 0 8px}
+.tool-card{border:1px solid var(--border);border-radius:var(--radius);padding:20px;background:#fff;display:flex;flex-direction:column;transition:all 0.15s}
+.tool-card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(124,58,237,0.1)}
+.tc-icon{font-size:30px;margin-bottom:10px}
+.tc-title{font-weight:700;font-size:16px;margin-bottom:6px}
+.tc-desc{font-size:13px;color:var(--muted);margin-bottom:14px;flex-grow:1}
+.soon-pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 10px;border-radius:20px;background:#fef3c7;color:#92400e;margin-bottom:10px;align-self:flex-start}
+.btn-try{display:inline-block;text-align:center;padding:9px 0;border-radius:7px;font-size:14px;font-weight:600;background:#f5f3ff;color:var(--accent);border:1px solid #ddd6fe;cursor:not-allowed;opacity:0.75}
+/* 场景卡片 */
+.scene-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:20px 0 8px}
+.scene-card{border:1px solid var(--border);border-radius:var(--radius);padding:24px;background:linear-gradient(180deg,#fff,var(--panel))}
+.sc-icon{font-size:32px;margin-bottom:10px}
+.sc-title{font-weight:700;font-size:17px;margin-bottom:8px}
+.sc-tags{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:8px}
+.sc-desc{font-size:14px;color:var(--muted)}
+/* 故事工作室横幅 */
+.studio-banner{border-radius:14px;padding:36px 32px;background:linear-gradient(135deg,#1e1b4b,#7c3aed 60%,#db2777);color:#fff;margin:20px 0 8px}
+.studio-banner h3{font-size:20px;font-weight:700;margin-bottom:10px}
+.studio-banner p{color:#e9e5f7;font-size:15px;margin-bottom:0}
+/* 工具矩阵 */
+.matrix-group{margin:20px 0 8px}
+.mg-title{font-size:16px;font-weight:700;margin:18px 0 10px;color:var(--text)}
+.mg-title .mg-emoji{margin-right:8px}
+.matrix-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.mx-item{border:1px solid var(--border);border-radius:8px;padding:14px 16px;background:#fff}
+.mx-name{font-weight:700;font-size:14px;margin-bottom:2px}
+.mx-name .mx-soon{font-size:10px;font-weight:600;background:#fef3c7;color:#92400e;border-radius:10px;padding:1px 8px;margin-left:8px;vertical-align:middle}
+.mx-desc{font-size:13px;color:var(--muted)}
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:600;font-size:16px;margin-bottom:6px;color:var(--text)}
+.faq-a{color:#4b5563;font-size:15px;margin:0}
+/* 结尾 CTA */
+.end-cta{text-align:center;padding:40px 24px;margin:40px 0;border-radius:14px;background:linear-gradient(135deg,#f5f3ff,#fdf2f8);border:1px solid #ede9fe}
+.end-cta h2{margin:0 0 10px;border:none;padding:0;display:block}
+.end-cta p{color:var(--muted);margin-bottom:20px}
+footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-size:13px;color:var(--muted)}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.footer-inner a{color:var(--muted);text-decoration:none;margin-left:16px}
+.footer-inner a:hover{color:var(--accent)}
+@media (max-width:600px){h1{font-size:26px}h2{font-size:19px}nav a{margin-left:12px;font-size:13px}.tool-grid{grid-template-columns:1fr 1fr}.hero{padding:32px 0 24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">hao<span>word</span>tool</a>
+    <nav>
+      <a href="/tools/">工具</a>
+      <a href="/games/">游戏攻略</a>
+      <a href="/audio/" class="active">音频</a>
+      <a href="/about/">关于</a>
+      <a href="/en/audio/" style="border:1px solid var(--border);border-radius:6px;padding:4px 10px;">EN</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <div class="breadcrumb">
+    <a href="/">首页</a><span>›</span>
+    AI 音频工作台
+  </div>
+
+  <section class="hero">
+    <div class="hero-badge">🎧 即将上线 · Coming Soon</div>
+    <h1>让你的下一个想法，有自己的声音。</h1>
+    <p class="hero-sub">haoword.audio 是 HaoWordTool 的 AI 音频工作台：生成语音或音效、克隆声音、把录音转成文字，或分离音乐中的人声和伴奏。</p>
+    <div class="hero-ctas">
+      <a href="#tools" class="btn btn-primary">探索工具</a>
+      <a href="#faq" class="btn btn-ghost">常见问题</a>
+    </div>
+    <p class="coming-note">工具正在最后打磨中，上线后第一时间开放试用。</p>
+  </section>
+
+  <div class="ad-slot">广告</div>
+
+  <h2 id="tools">核心工具</h2>
+  <p class="section-intro">五个入口，覆盖从创作到处理的完整音频链路。全部工具即将上线。</p>
+  <div class="tool-grid">
+    <div class="tool-card">
+      <div class="tc-icon">🎙️</div>
+      <div class="tc-title">文字转语音</div>
+      <div class="tc-desc">输入文字，生成自然流畅的 AI 语音旁白。</div>
+      <span class="soon-pill">即将上线</span>
+      <span class="btn-try" title="即将上线">试用</span>
+    </div>
+    <div class="tool-card">
+      <div class="tc-icon">🧬</div>
+      <div class="tc-title">声音克隆</div>
+      <div class="tc-desc">上传 30 秒录音，复刻专属音色。</div>
+      <span class="soon-pill">即将上线</span>
+      <span class="btn-try" title="即将上线">试用</span>
+    </div>
+    <div class="tool-card">
+      <div class="tc-icon">📝</div>
+      <div class="tc-title">语音转文字</div>
+      <div class="tc-desc">长录音一键转成可编辑文字和字幕。</div>
+      <span class="soon-pill">即将上线</span>
+      <span class="btn-try" title="即将上线">试用</span>
+    </div>
+    <div class="tool-card">
+      <div class="tc-icon">🎚️</div>
+      <div class="tc-title">人声分离</div>
+      <div class="tc-desc">把混音干净分离为人声与伴奏。</div>
+      <span class="soon-pill">即将上线</span>
+      <span class="btn-try" title="即将上线">试用</span>
+    </div>
+    <div class="tool-card">
+      <div class="tc-icon">🔊</div>
+      <div class="tc-title">AI 音效</div>
+      <div class="tc-desc">描述场景，生成原创环境声与音效。</div>
+      <span class="soon-pill">即将上线</span>
+      <span class="btn-try" title="即将上线">试用</span>
+    </div>
+  </div>
+
+  <h2>听起来不像 AI 的语音</h2>
+  <p class="section-intro">试听角色对话、自然交流与富有表现力的旁白，然后开始创作你自己的声音。</p>
+  <div class="scene-grid">
+    <div class="scene-card">
+      <div class="sc-icon">🎭</div>
+      <div class="sc-title">角色演绎</div>
+      <div class="sc-tags">戏剧感 · 表现力 · 有记忆点</div>
+      <div class="sc-desc">为短剧、游戏和有声内容打造辨识度拉满的角色声音，情绪起伏自然。</div>
+    </div>
+    <div class="scene-card">
+      <div class="sc-icon">💬</div>
+      <div class="sc-title">自然对话</div>
+      <div class="sc-tags">自然 · 温暖 · 易于跟随</div>
+      <div class="sc-desc">像真人聊天一样的对话节奏，适合播客、客服与教学内容。</div>
+    </div>
+    <div class="scene-card">
+      <div class="sc-icon">📖</div>
+      <div class="sc-title">旁白讲述</div>
+      <div class="sc-tags">沉浸 · 细腻 · 清晰</div>
+      <div class="sc-desc">长篇旁白保持稳定表现力，听众可以一口气听完一整章。</div>
+    </div>
+  </div>
+
+  <div class="ad-slot">广告</div>
+
+  <div class="studio-banner">
+    <h3>不止一句话，把整个故事串起来。</h3>
+    <p>在语音工作室中组织脚本、按行分配音色，并在时间线上连续试听。适合需要反复打磨的对话和长篇内容——从一段文字开始，或打开工作室，组织完整的故事。</p>
+  </div>
+
+  <h2>从创作到处理，找到你的工具</h2>
+  <p class="section-intro">全部 11 个工具，一句话讲清各自的用途。</p>
+
+  <div class="matrix-group">
+    <div class="mg-title"><span class="mg-emoji">✨</span>创作</div>
+    <div class="matrix-list">
+      <div class="mx-item"><div class="mx-name">文字转语音<span class="mx-soon">即将上线</span></div><div class="mx-desc">把脚本变成富有表现力的单人旁白。</div></div>
+      <div class="mx-item"><div class="mx-name">声音克隆<span class="mx-soon">即将上线</span></div><div class="mx-desc">基于已获授权的声音样本生成新语音。</div></div>
+      <div class="mx-item"><div class="mx-name">文本转对话<span class="mx-soon">即将上线</span></div><div class="mx-desc">按行分配音色，构建多角色对话。</div></div>
+      <div class="mx-item"><div class="mx-name">音效生成<span class="mx-soon">即将上线</span></div><div class="mx-desc">描述场景，生成原创环境声或音效。</div></div>
+      <div class="mx-item"><div class="mx-name">AI 翻唱<span class="mx-soon">即将上线</span></div><div class="mx-desc">为你有权使用的歌曲探索新的声线与编曲。</div></div>
+    </div>
+  </div>
+
+  <div class="matrix-group">
+    <div class="mg-title"><span class="mg-emoji">🔄</span>转换</div>
+    <div class="matrix-list">
+      <div class="mx-item"><div class="mx-name">变声器<span class="mx-soon">即将上线</span></div><div class="mx-desc">用目标音色重塑已录制的表演。</div></div>
+      <div class="mx-item"><div class="mx-name">AI 配音<span class="mx-soon">即将上线</span></div><div class="mx-desc">翻译音视频，并尽量保留表达与节奏。</div></div>
+      <div class="mx-item"><div class="mx-name">音频降噪<span class="mx-soon">即将上线</span></div><div class="mx-desc">降低录音中的房间底噪与干扰。</div></div>
+    </div>
+  </div>
+
+  <div class="matrix-group">
+    <div class="mg-title"><span class="mg-emoji">✂️</span>分离</div>
+    <div class="matrix-list">
+      <div class="mx-item"><div class="mx-name">人声分离<span class="mx-soon">即将上线</span></div><div class="mx-desc">将混音分离为人声与伴奏。</div></div>
+      <div class="mx-item"><div class="mx-name">音轨分离<span class="mx-soon">即将上线</span></div><div class="mx-desc">分离鼓、贝斯、人声等，便于混音二创。</div></div>
+      <div class="mx-item"><div class="mx-name">语音转文字<span class="mx-soon">即将上线</span></div><div class="mx-desc">把语音转换成可编辑文字和字幕。</div></div>
+    </div>
+  </div>
+
+  <h2 id="faq">常见问题</h2>
+  <div class="faq-item">
+    <div class="faq-q">我想做旁白、对话或有声书，应该用哪个工具？</div>
+    <p class="faq-a">单人旁白用「文字转语音」；多人对白用「文本转对话」；长篇或需要反复修改的内容用「语音工作室」，可以在时间线上组织脚本、分配音色并连续试听。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">可以免费体验吗？需要登录吗？</div>
+    <p class="faq-a">工具正式上线后，示例试听和内置音色无需登录即可体验；AI 生成工具需要登录并消耗积分，新用户注册后会获得体验积分。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">AI 生成如何消耗积分？</div>
+    <p class="faq-a">按文字长度、音频时长或生成次数计费，生成前页面会显示预计消耗。更多积分方案请查看定价页。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">可以用我自己的声音来配音吗？</div>
+    <p class="faq-a">可以。「声音克隆」支持上传你自己的录音或已获得授权的声音样本，建议人声清晰、背景干扰少，效果更自然。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">上传音频时有哪些格式和大小限制？</div>
+    <p class="faq-a">支持 MP3、WAV、M4A 等常见格式，各工具的时长与大小限制不同，具体以所选工具上传区的说明为准。</p>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">生成后在哪里下载？下次还能继续编辑吗？</div>
+    <p class="faq-a">在工具页可直接试听和下载；「历史记录」可查看过往任务；语音工作室的项目可重新打开继续编辑。请注意生成文件有保存期限，重要作品请及时下载。</p>
+  </div>
+
+  <div class="ad-slot">广告</div>
+
+  <div class="end-cta">
+    <h2>让你的下一个想法，有自己的声音。</h2>
+    <p>haoword.audio 工具即将上线，敬请期待。</p>
+    <a href="/en/audio/" class="btn btn-ghost">View in English →</a>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 haowordtool.com · haoword.audio</div>
+    <div>
+      <a href="/about/">关于</a>
+      <a href="/privacy/">隐私政策</a>
+      <a href="/contact/">联系我们</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
