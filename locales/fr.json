@@ -467,6 +467,11 @@
           "desc": "Débit · Ping"
         }
       }
+    },
+    "games": {
+      "title": "Jeux tendance",
+      "subtitle": "Guides, astuces et outils pour les jeux les plus populaires.",
+      "viewAll": "Voir tous les jeux"
     }
   }
 }

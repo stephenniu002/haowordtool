@@ -467,6 +467,11 @@
           "desc": "Download · Upload"
         }
       }
+    },
+    "games": {
+      "title": "Trend-Spiele",
+      "subtitle": "Anleitungen, Tipps und Tools für die beliebtesten Spiele.",
+      "viewAll": "Alle Spiele ansehen"
     }
   }
 }

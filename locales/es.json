@@ -467,6 +467,11 @@
           "desc": "Descarga · Subida"
         }
       }
+    },
+    "games": {
+      "title": "Juegos en tendencia",
+      "subtitle": "Guías, consejos y herramientas para los juegos más populares.",
+      "viewAll": "Ver todos los juegos"
     }
   }
 }
