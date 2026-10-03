@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Counter — Free Online Character Count Tool | haowordtool</title>
+<meta name="description" content="免费在线字符统计工具。实时统计字符数（含空格/不含空格）、字数、句子数。内置 Twitter、Instagram、SEO meta 描述等平台字符限制参考。">
+<link rel="canonical" href="https://haowordtool.com/tools/character-counter/">
+<meta property="og:title" content="Character Counter — Free Online Character Count Tool">
+<meta property="og:description" content="统计字符数（含空格/不含空格），内置平台字符限制参考。">
+<meta property="og:url" content="https://haowordtool.com/tools/character-counter/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Character Counter","url":"https://haowordtool.com/tools/character-counter/","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"免费在线字符统计工具。统计字符数（含空格/不含空格），内置平台字符限制参考。"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"zh-CN","mainEntity":[
+{"@type":"Question","name":"Twitter 一条推文最多多少字符？","acceptedAnswer":{"@type":"Answer","text":"Twitter / X 的单条推文限制是 280 字符。"}},
+{"@type":"Question","name":"Instagram 简介最多多少字符？","acceptedAnswer":{"@type":"Answer","text":"Instagram 简介（Bio）限制是 150 字符，帖子标题限制是 2,200 字符。"}},
+{"@type":"Question","name":"SEO meta 描述最多多少字符？","acceptedAnswer":{"@type":"Answer","text":"SEO meta 描述建议控制在 155–160 字符以内，超过部分会被搜索引擎截断。"}},
+{"@type":"Question","name":"空格算字符吗？","acceptedAnswer":{"@type":"Answer","text":"取决于平台规则。本工具同时显示含空格和不含空格的字符数，方便你对照不同平台要求。"}},
+{"@type":"Question","name":"这个字符统计工具免费吗？","acceptedAnswer":{"@type":"Answer","text":"是的。完全免费，无需注册，浏览器本地运行。"}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://haowordtool.com/"},
+{"@type":"ListItem","position":2,"name":"工具","item":"https://haowordtool.com/tools/"},
+{"@type":"ListItem","position":3,"name":"Character Counter","item":"https://haowordtool.com/tools/character-counter/"}
+]}
+</script>
+<style>
+:root{--bg:#ffffff;--text:#1a1a2e;--muted:#6b7280;--border:#e5e7eb;--accent:#2563eb;--accent-hover:#1d4ed8;--panel:#f9fafb;--radius:10px;--max-w:820px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:#fff;position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.logo{font-weight:700;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:-0.01em}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:20px}
+nav a:hover{color:var(--text)}
+.breadcrumb{font-size:13px;color:var(--muted);padding:16px 0 0}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+h1{font-size:28px;font-weight:700;line-height:1.4;letter-spacing:-0.02em;margin:20px 0 6px}
+.subtitle{color:var(--muted);font-size:15px;margin-bottom:8px}
+.update-date{color:#9ca3af;font-size:13px;margin-bottom:24px}
+.ad-slot{background:var(--panel);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:#9ca3af;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;margin:24px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+.tool{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:8px}
+.tool textarea{width:100%;min-height:200px;border:none;padding:18px;font-size:16px;font-family:inherit;line-height:1.6;resize:vertical;outline:none;color:var(--text)}
+.tool textarea::placeholder{color:#9ca3af}
+.tool-bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;border-top:1px solid var(--border);background:var(--panel);align-items:center}
+.btn{border:1px solid var(--border);background:#fff;color:var(--text);padding:7px 14px;border-radius:6px;font-size:13px;cursor:pointer;font-family:inherit;transition:all 0.15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent);margin-left:auto}
+.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);overflow:hidden;margin-bottom:32px}
+.stat{background:#fff;padding:14px 12px;text-align:center}
+.stat-value{font-size:22px;font-weight:700;color:var(--accent);line-height:1.2;font-variant-numeric:tabular-nums}
+.stat-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px}
+h2{font-size:21px;font-weight:700;margin:40px 0 14px;letter-spacing:-0.01em}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+p{margin-bottom:16px;color:#374151}
+ul,ol{margin:0 0 16px 22px;color:#374151}
+li{margin-bottom:8px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.limit-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+.limit-table th,.limit-table td{border:1px solid var(--border);padding:10px 14px;text-align:left}
+.limit-table th{background:var(--panel);font-weight:600}
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:600;font-size:16px;margin-bottom:6px;color:var(--text)}
+.faq-a{color:#4b5563;font-size:15px;margin:0}
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0 40px}
+.related a{display:block;border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-decoration:none;color:var(--text);transition:all 0.15s}
+.related a:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(37,99,235,0.08);text-decoration:none}
+.related .r-title{font-weight:600;font-size:15px;margin-bottom:4px}
+.related .r-desc{font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-size:13px;color:var(--muted)}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.footer-inner a{color:var(--muted);text-decoration:none;margin-left:16px}
+.footer-inner a:hover{color:var(--accent)}
+@media (max-width:600px){h1{font-size:23px}h2{font-size:19px}.stat-value{font-size:19px}.stats{grid-template-columns:repeat(3,1fr)}.btn-primary{margin-left:0}nav a{margin-left:12px;font-size:13px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">hao<span>word</span>tool</a>
+    <nav><a href="/tools/">工具</a><a href="/games/">游戏攻略</a><a href="/about/">关于</a></nav>
+  </div>
+</header>
+<main class="container">
+  <div class="breadcrumb"><a href="/">首页</a><span>›</span><a href="/tools/">工具</a><span>›</span>Character Counter</div>
+  <h1>Character Counter — 免费在线字符统计工具</h1>
+  <p class="subtitle">统计字符数（含空格/不含空格）、字数、句子数。内置平台字符限制参考。</p>
+  <p class="update-date">最后更新：2026 年 10 月 3 日</p>
+  <div class="ad-slot">Advertisement</div>
+  <div class="tool">
+    <textarea id="input" placeholder="在此粘贴或输入文本..." aria-label="文本输入"></textarea>
+    <div class="tool-bar">
+      <button class="btn" onclick="copyText()">复制</button>
+      <button class="btn" onclick="clearText()">清空</button>
+      <button class="btn" onclick="pasteText()">粘贴</button>
+      <button class="btn btn-primary" onclick="trimText()">去除首尾空格</button>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-value" id="chars">0</div><div class="stat-label">Characters</div></div>
+    <div class="stat"><div class="stat-value" id="charsNoSpace">0</div><div class="stat-label">No Spaces</div></div>
+    <div class="stat"><div class="stat-value" id="words">0</div><div class="stat-label">Words</div></div>
+    <div class="stat"><div class="stat-value" id="sentences">0</div><div class="stat-label">Sentences</div></div>
+    <div class="stat"><div class="stat-value" id="paragraphs">0</div><div class="stat-label">Paragraphs</div></div>
+    <div class="stat"><div class="stat-value" id="lines">0</div><div class="stat-label">Lines</div></div>
+  </div>
+  <div class="ad-slot">Advertisement</div>
+  <h2>什么是字符统计工具？</h2>
+  <p>字符统计工具用于计算一段文本中的字符数量，通常包含两种情况：<strong>含空格</strong>和<strong>不含空格</strong>。不同平台对字符数的计算规则不同，比如 Twitter 把每个 URL 统一算作 23 字符，而 Instagram 的简介限制是按字符数计算的。</p>
+  <p>本工具在浏览器本地运行，输入文本不会上传到服务器。</p>
+  <h2>平台字符限制参考</h2>
+  <table class="limit-table">
+    <tr><th>平台</th><th>限制</th></tr>
+    <tr><td>Twitter / X 推文</td><td>280 字符</td></tr>
+    <tr><td>Twitter / X 用户名</td><td>15 字符</td></tr>
+    <tr><td>Instagram 简介（Bio）</td><td>150 字符</td></tr>
+    <tr><td>Instagram 帖子标题</td><td>2,200 字符</td></tr>
+    <tr><td>Facebook 帖子</td><td>63,206 字符</td></tr>
+    <tr><td>LinkedIn 帖子</td><td>3,000 字符</td></tr>
+    <tr><td>SEO Meta 描述</td><td>155–160 字符</td></tr>
+    <tr><td>SEO Title 标签</td><td>50–60 字符</td></tr>
+    <tr><td>SMS 短信</td><td>160 字符</td></tr>
+    <tr><td>YouTube 标题</td><td>100 字符</td></tr>
+  </table>
+  <h2>什么时候用字符统计</h2>
+  <ul>
+    <li><strong>社交媒体</strong>：发推文、写 Instagram 简介前确认不超限</li>
+    <li><strong>SEO 优化</strong>：控制 Meta 描述和 Title 标签长度</li>
+    <li><strong>广告投放</strong>：Google Ads、Facebook Ads 的标题和描述字符限制</li>
+    <li><strong>短信营销</strong>：SMS 单条 160 字符，超出会分条计费</li>
+    <li><strong>学术写作</strong>：部分论文有字符数而非字数限制</li>
+  </ul>
+  <h2>字符统计 vs 字数统计</h2>
+  <p>字符统计计算的是单个字符数量，字数统计计算的是单词数量。英文中一个单词平均约 5–6 个字符，所以 280 字符的推文大约相当于 45–55 个英文单词。中文中一个汉字算一个字符，所以 280 字符大约等于 280 个汉字。</p>
+  <p>需要字数统计请用 <a href="/tools/word-counter/">Word Counter</a>。</p>
+  <div class="ad-slot">Advertisement</div>
+  <h2>常见问题 FAQ</h2>
+  <div class="faq-item"><div class="faq-q">Twitter 一条推文最多多少字符？</div><p class="faq-a">Twitter / X 的单条推文限制是 280 字符。</p></div>
+  <div class="faq-item"><div class="faq-q">Instagram 简介最多多少字符？</div><p class="faq-a">Instagram 简介（Bio）限制是 150 字符，帖子标题限制是 2,200 字符。</p></div>
+  <div class="faq-item"><div class="faq-q">SEO meta 描述最多多少字符？</div><p class="faq-a">SEO meta 描述建议控制在 155–160 字符以内，超过部分会被搜索引擎截断。</p></div>
+  <div class="faq-item"><div class="faq-q">空格算字符吗？</div><p class="faq-a">取决于平台规则。本工具同时显示含空格和不含空格的字符数，方便你对照不同平台要求。</p></div>
+  <div class="faq-item"><div class="faq-q">这个字符统计工具免费吗？</div><p class="faq-a">是的。完全免费，无需注册，浏览器本地运行。</p></div>
+  <h2>相关工具</h2>
+  <div class="related">
+    <a href="/tools/word-counter/"><div class="r-title">Word Counter</div><div class="r-desc">统计字数、句子数、段落数和阅读时间。</div></a>
+    <a href="/tools/case-converter/"><div class="r-title">Case Converter</div><div class="r-desc">一键转换大小写格式。</div></a>
+    <a href="/tools/remove-line-breaks/"><div class="r-title">Remove Line Breaks</div><div class="r-desc">去除换行、多余空格和制表符。</div></a>
+    <a href="/tools/text-diff/"><div class="r-title">Text Diff</div><div class="r-desc">对比两段文本，高亮差异。</div></a>
+  </div>
+  <p style="text-align:center;margin-top:16px"><a href="/tools/">查看全部 5 个免费文字工具 →</a></p>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 haowordtool.com</div>
+    <div><a href="/about/">关于</a><a href="/privacy/">隐私政策</a><a href="/contact/">联系我们</a></div>
+  </div>
+</footer>
+<script>
+const input = document.getElementById('input');
+function updateStats(){
+  const t = input.value;
+  document.getElementById('chars').textContent = t.length.toLocaleString();
+  document.getElementById('charsNoSpace').textContent = t.replace(/\s/g,'').length.toLocaleString();
+  const words = t.trim() ? t.trim().split(/\s+/).length : 0;
+  document.getElementById('words').textContent = words.toLocaleString();
+  const sentences = t.trim() ? (t.match(/[.!?。！？]+(\s|$)/g) || []).length || 1 : 0;
+  document.getElementById('sentences').textContent = sentences.toLocaleString();
+  const paragraphs = t.trim() ? t.split(/\n\s*\n/).filter(p=>p.trim()).length : 0;
+  document.getElementById('paragraphs').textContent = paragraphs.toLocaleString();
+  document.getElementById('lines').textContent = t ? t.split('\n').length.toLocaleString() : '0';
+}
+input.addEventListener('input', updateStats);
+function copyText(){if(!input.value)return;navigator.clipboard.writeText(input.value).then(()=>{const b=event.target;const o=b.textContent;b.textContent='已复制!';setTimeout(()=>b.textContent=o,1200)})}
+function clearText(){input.value='';updateStats();input.focus()}
+function pasteText(){navigator.clipboard.readText().then(t=>{input.value+=t;updateStats()}).catch(()=>input.focus())}
+function trimText(){input.value=input.value.replace(/^\s+|\s+$/g,'');updateStats()}
+updateStats();
+</script>
+</body>
+</html>

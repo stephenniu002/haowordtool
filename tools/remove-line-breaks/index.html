@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove Line Breaks — 免费在线去除换行工具 | haowordtool</title>
+<meta name="description" content="免费在线去除换行工具。一键清理换行符、多余空格和制表符。处理 PDF 复制、Excel 数据、邮件格式问题的常用工具。">
+<link rel="canonical" href="https://haowordtool.com/tools/remove-line-breaks/">
+<meta property="og:title" content="Remove Line Breaks — 免费在线去除换行工具">
+<meta property="og:description" content="一键去除换行符、多余空格和制表符。">
+<meta property="og:url" content="https://haowordtool.com/tools/remove-line-breaks/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Remove Line Breaks","url":"https://haowordtool.com/tools/remove-line-breaks/","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"免费在线去除换行工具。一键清理换行符、多余空格和制表符。"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"zh-CN","mainEntity":[
+{"@type":"Question","name":"怎么在 Word 里去除换行？","acceptedAnswer":{"@type":"Answer","text":"在 Word 里按 Ctrl+H 打开查找替换，查找 ^p 替换为空，即可删除段落标记。手动换行符是 ^l。"}},
+{"@type":"Question","name":"怎么在 Excel 里去除换行？","acceptedAnswer":{"@type":"Answer","text":"Excel 里可以用 Ctrl+H 查找替换，在查找框按 Ctrl+J 输入换行符，替换框留空，全部替换即可。"}},
+{"@type":"Question","name":"换行符和段落标记有什么区别？","acceptedAnswer":{"@type":"Answer","text":"换行符（Line Break）只换行不分段，段落标记（Paragraph Break）会创建新段落。Word 里换行符是 ^l，段落标记是 ^p。"}},
+{"@type":"Question","name":"这个去除换行工具免费吗？","acceptedAnswer":{"@type":"Answer","text":"是的。完全免费，无需注册，浏览器本地运行。"}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://haowordtool.com/"},
+{"@type":"ListItem","position":2,"name":"工具","item":"https://haowordtool.com/tools/"},
+{"@type":"ListItem","position":3,"name":"Remove Line Breaks","item":"https://haowordtool.com/tools/remove-line-breaks/"}
+]}
+</script>
+<style>
+:root{--bg:#ffffff;--text:#1a1a2e;--muted:#6b7280;--border:#e5e7eb;--accent:#2563eb;--accent-hover:#1d4ed8;--panel:#f9fafb;--radius:10px;--max-w:820px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:#fff;position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.logo{font-weight:700;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:-0.01em}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:20px}
+nav a:hover{color:var(--text)}
+.breadcrumb{font-size:13px;color:var(--muted);padding:16px 0 0}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+h1{font-size:28px;font-weight:700;line-height:1.4;letter-spacing:-0.02em;margin:20px 0 6px}
+.subtitle{color:var(--muted);font-size:15px;margin-bottom:8px}
+.update-date{color:#9ca3af;font-size:13px;margin-bottom:24px}
+.ad-slot{background:var(--panel);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:#9ca3af;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;margin:24px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+.tool{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:8px}
+.tool textarea{width:100%;min-height:180px;border:none;padding:18px;font-size:16px;font-family:inherit;line-height:1.6;resize:vertical;outline:none;color:var(--text)}
+.tool textarea::placeholder{color:#9ca3af}
+.tool-bar{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;border-top:1px solid var(--border);background:var(--panel);align-items:center}
+.btn{border:1px solid var(--border);background:#fff;color:var(--text);padding:7px 14px;border-radius:6px;font-size:13px;cursor:pointer;font-family:inherit;transition:all 0.15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent);margin-left:auto}
+.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff}
+.options{padding:14px 16px;background:#fff;border-top:1px solid var(--border);font-size:14px;display:flex;flex-wrap:wrap;gap:16px}
+.options label{display:flex;align-items:center;gap:6px;cursor:pointer;color:#4b5563}
+.options input[type="checkbox"]{cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);overflow:hidden;margin-bottom:32px}
+.stat{background:#fff;padding:14px 12px;text-align:center}
+.stat-value{font-size:20px;font-weight:700;color:var(--accent);line-height:1.2;font-variant-numeric:tabular-nums}
+.stat-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;margin-top:2px}
+h2{font-size:21px;font-weight:700;margin:40px 0 14px;letter-spacing:-0.01em}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+p{margin-bottom:16px;color:#374151}
+ul,ol{margin:0 0 16px 22px;color:#374151}
+li{margin-bottom:8px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:600;font-size:16px;margin-bottom:6px;color:var(--text)}
+.faq-a{color:#4b5563;font-size:15px;margin:0}
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0 40px}
+.related a{display:block;border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-decoration:none;color:var(--text);transition:all 0.15s}
+.related a:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(37,99,235,0.08);text-decoration:none}
+.related .r-title{font-weight:600;font-size:15px;margin-bottom:4px}
+.related .r-desc{font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-size:13px;color:var(--muted)}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.footer-inner a{color:var(--muted);text-decoration:none;margin-left:16px}
+.footer-inner a:hover{color:var(--accent)}
+@media (max-width:600px){h1{font-size:23px}h2{font-size:19px}.stat-value{font-size:17px}.stats{grid-template-columns:repeat(2,1fr)}.btn-primary{margin-left:0}nav a{margin-left:12px;font-size:13px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">hao<span>word</span>tool</a>
+    <nav><a href="/tools/">工具</a><a href="/games/">游戏攻略</a><a href="/about/">关于</a></nav>
+  </div>
+</header>
+<main class="container">
+  <div class="breadcrumb"><a href="/">首页</a><span>›</span><a href="/tools/">工具</a><span>›</span>Remove Line Breaks</div>
+  <h1>Remove Line Breaks — 免费在线去除换行工具</h1>
+  <p class="subtitle">一键清理换行符、多余空格和制表符。处理 PDF 复制、Excel 数据、邮件格式问题。</p>
+  <p class="update-date">最后更新：2026 年 10 月 3 日</p>
+  <div class="ad-slot">Advertisement</div>
+  <div class="tool">
+    <textarea id="input" placeholder="在此粘贴需要清理的文本..." aria-label="文本输入"></textarea>
+    <div class="options">
+      <label><input type="checkbox" id="opt-breaks" checked> 去除换行符</label>
+      <label><input type="checkbox" id="opt-spaces" checked> 合并多余空格</label>
+      <label><input type="checkbox" id="opt-tabs" checked> 去除制表符</label>
+      <label><input type="checkbox" id="opt-trim"> 去除每行首尾空格</label>
+    </div>
+    <div class="tool-bar">
+      <button class="btn" onclick="copyText()">复制</button>
+      <button class="btn" onclick="clearText()">清空</button>
+      <button class="btn" onclick="pasteText()">粘贴</button>
+      <button class="btn btn-primary" onclick="processText()">一键清理</button>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-value" id="before-lines">0</div><div class="stat-label">原行数</div></div>
+    <div class="stat"><div class="stat-value" id="before-chars">0</div><div class="stat-label">原字符数</div></div>
+    <div class="stat"><div class="stat-value" id="after-lines">0</div><div class="stat-label">现行数</div></div>
+    <div class="stat"><div class="stat-value" id="after-chars">0</div><div class="stat-label">现字符数</div></div>
+  </div>
+  <div class="ad-slot">Advertisement</div>
+  <h2>什么是换行符？</h2>
+  <p>换行符是文本中表示"换行"的不可见字符。不同系统对换行的表示不同：Windows 用 CRLF，Unix/Linux/macOS 用 LF。当你从 PDF、网页或 Excel 复制文本时，经常会带入大量换行符和多余空格，导致格式混乱。这个工具帮你一键清理。</p>
+  <h2>什么时候需要去除换行</h2>
+  <ul>
+    <li><strong>PDF 复制</strong>：PDF 文本复制后常带硬换行，粘到别处格式乱</li>
+    <li><strong>Excel 数据</strong>：单元格里的换行导致批量处理时出错</li>
+    <li><strong>SEO 内容</strong>：Meta 描述和标题不能含换行符</li>
+    <li><strong>邮件正文</strong>：不同邮件客户端对换行处理不一致</li>
+    <li><strong>代码注释</strong>：把多行注释合并为单行</li>
+    <li><strong>数据库导入</strong>：CSV 字段中的换行会导致导入失败</li>
+  </ul>
+  <h2>换行符与段落标记的区别</h2>
+  <p><strong>换行符（Line Break）</strong>只换行不分段。<strong>段落标记（Paragraph Break）</strong>会创建新段落。本工具默认同时处理两种。</p>
+  <h2>在不同软件里去除换行</h2>
+  <h3>Word</h3><p>按 Ctrl+H 打开查找替换。查找段落标记或换行符，替换框留空，全部替换。</p>
+  <h3>Excel</h3><p>按 Ctrl+H。在查找框内按 Ctrl+J 输入换行符，替换框留空，全部替换。</p>
+  <h3>Google Docs</h3><p>按 Ctrl+H，查找换行符，替换为空。勾选"使用正则表达式"。</p>
+  <div class="ad-slot">Advertisement</div>
+  <h2>常见问题 FAQ</h2>
+  <div class="faq-item"><div class="faq-q">怎么在 Word 里去除换行？</div><p class="faq-a">在 Word 里按 Ctrl+H 打开查找替换，查找段落标记替换为空，即可删除。手动换行符单独处理。</p></div>
+  <div class="faq-item"><div class="faq-q">怎么在 Excel 里去除换行？</div><p class="faq-a">Excel 里可以用 Ctrl+H 查找替换，在查找框按 Ctrl+J 输入换行符，替换框留空，全部替换即可。</p></div>
+  <div class="faq-item"><div class="faq-q">换行符和段落标记有什么区别？</div><p class="faq-a">换行符只换行不分段，段落标记会创建新段落。</p></div>
+  <div class="faq-item"><div class="faq-q">这个去除换行工具免费吗？</div><p class="faq-a">是的。完全免费，无需注册，浏览器本地运行。</p></div>
+  <h2>相关工具</h2>
+  <div class="related">
+    <a href="/tools/word-counter/"><div class="r-title">Word Counter</div><div class="r-desc">统计字数、句子数、段落数和阅读时间。</div></a>
+    <a href="/tools/character-counter/"><div class="r-title">Character Counter</div><div class="r-desc">统计字符数，内置平台限制参考。</div></a>
+    <a href="/tools/case-converter/"><div class="r-title">Case Converter</div><div class="r-desc">一键转换大小写格式。</div></a>
+    <a href="/tools/text-diff/"><div class="r-title">Text Diff</div><div class="r-desc">对比两段文本，高亮差异。</div></a>
+  </div>
+  <p style="text-align:center;margin-top:16px"><a href="/tools/">查看全部 5 个免费文字工具 →</a></p>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 haowordtool.com</div>
+    <div><a href="/about/">关于</a><a href="/privacy/">隐私政策</a><a href="/contact/">联系我们</a></div>
+  </div>
+</footer>
+<script>
+const input = document.getElementById('input');
+let originalText = '';
+function updateStats(){
+  const t = input.value;
+  document.getElementById('after-lines').textContent = t ? t.split('\n').length.toLocaleString() : '0';
+  document.getElementById('after-chars').textContent = t.length.toLocaleString();
+  if(originalText){
+    document.getElementById('before-lines').textContent = originalText.split('\n').length.toLocaleString();
+    document.getElementById('before-chars').textContent = originalText.length.toLocaleString();
+  }
+}
+input.addEventListener('input', ()=>{originalText = input.value;updateStats()});
+function processText(){
+  originalText = input.value;
+  let t = input.value;
+  if(document.getElementById('opt-breaks').checked){t = t.replace(/\r\n|\r|\n/g, ' ')}
+  if(document.getElementById('opt-tabs').checked){t = t.replace(/\t/g, ' ')}
+  if(document.getElementById('opt-spaces').checked){t = t.replace(/ {2,}/g, ' ')}
+  if(document.getElementById('opt-trim').checked){t = t.split('\n').map(l=>l.trim()).join('\n')}
+  input.value = t.trim();
+  updateStats();
+}
+function copyText(){if(!input.value)return;navigator.clipboard.writeText(input.value).then(()=>{const b=event.target;const o=b.textContent;b.textContent='已复制!';setTimeout(()=>b.textContent=o,1200)})}
+function clearText(){input.value='';originalText='';updateStats();input.focus()}
+function pasteText(){navigator.clipboard.readText().then(t=>{input.value+=t;originalText=input.value;updateStats()}).catch(()=>input.focus())}
+updateStats();
+</script>
+</body>
+</html>

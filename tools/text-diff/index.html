@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Diff — 免费在线文本对比工具 | haowordtool</title>
+<meta name="description" content="免费在线文本对比工具。左右并排对比两段文本，高亮显示新增、删除和修改内容。适合校对、版本对比、代码检查。">
+<link rel="canonical" href="https://haowordtool.com/tools/text-diff/">
+<meta property="og:title" content="Text Diff — 免费在线文本对比工具">
+<meta property="og:description" content="左右并排对比两段文本，高亮显示差异。">
+<meta property="og:url" content="https://haowordtool.com/tools/text-diff/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Text Diff","url":"https://haowordtool.com/tools/text-diff/","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"免费在线文本对比工具。左右并排对比两段文本，高亮显示差异。"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"zh-CN","mainEntity":[
+{"@type":"Question","name":"怎么在线对比两段文本？","acceptedAnswer":{"@type":"Answer","text":"把两段文本分别粘贴到左右两个文本框，点击对比按钮，差异部分会自动高亮显示。"}},
+{"@type":"Question","name":"怎么对比两个 Word 文档？","acceptedAnswer":{"@type":"Answer","text":"分别打开两个 Word 文档，全选复制内容，粘贴到本工具的左右文本框，即可对比差异。"}},
+{"@type":"Question","name":"可以用这个工具对比代码吗？","acceptedAnswer":{"@type":"Answer","text":"可以。工具支持纯文本对比，包括代码。但不会做语法高亮，只做逐行差异对比。"}},
+{"@type":"Question","name":"这个工具会保存我的文本吗？","acceptedAnswer":{"@type":"Answer","text":"不会。对比完全在浏览器本地运行，文本不会上传到服务器。"}},
+{"@type":"Question","name":"这个文本对比工具免费吗？","acceptedAnswer":{"@type":"Answer","text":"是的。完全免费，无需注册。"}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://haowordtool.com/"},
+{"@type":"ListItem","position":2,"name":"工具","item":"https://haowordtool.com/tools/"},
+{"@type":"ListItem","position":3,"name":"Text Diff","item":"https://haowordtool.com/tools/text-diff/"}
+]}
+</script>
+<style>
+:root{--bg:#ffffff;--text:#1a1a2e;--muted:#6b7280;--border:#e5e7eb;--accent:#2563eb;--accent-hover:#1d4ed8;--panel:#f9fafb;--radius:10px;--max-w:1000px;--add-bg:#dcfce7;--add-border:#16a34a;--del-bg:#fee2e2;--del-border:#dc2626;--mod-bg:#fef3c7;--mod-border:#d97706}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:#fff;position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.logo{font-weight:700;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:-0.01em}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:20px}
+nav a:hover{color:var(--text)}
+.breadcrumb{font-size:13px;color:var(--muted);padding:16px 0 0}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{margin:0 6px}
+h1{font-size:28px;font-weight:700;line-height:1.4;letter-spacing:-0.02em;margin:20px 0 6px}
+.subtitle{color:var(--muted);font-size:15px;margin-bottom:8px}
+.update-date{color:#9ca3af;font-size:13px;margin-bottom:24px}
+.ad-slot{background:var(--panel);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:#9ca3af;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;margin:24px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+.diff-inputs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.diff-panel{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.diff-panel .panel-head{padding:10px 14px;background:var(--panel);border-bottom:1px solid var(--border);font-size:13px;font-weight:600;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+.diff-panel textarea{width:100%;min-height:180px;border:none;padding:14px;font-size:14px;font-family:Consolas,Monaco,"Courier New",monospace;line-height:1.6;resize:vertical;outline:none;color:var(--text);flex-grow:1}
+.diff-panel textarea::placeholder{color:#9ca3af}
+.diff-actions{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.btn{border:1px solid var(--border);background:#fff;color:var(--text);padding:8px 16px;border-radius:6px;font-size:14px;cursor:pointer;font-family:inherit;transition:all 0.15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff}
+.diff-output{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:32px;display:none}
+.diff-output.visible{display:block}
+.diff-output .output-head{padding:12px 16px;background:var(--panel);border-bottom:1px solid var(--border);font-size:13px;font-weight:600;color:var(--muted);display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.diff-output .legend{display:flex;gap:14px;font-size:12px;flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:5px}
+.legend .swatch{width:12px;height:12px;border-radius:3px;display:inline-block}
+.legend .sw-add{background:var(--add-bg);border:1px solid var(--add-border)}
+.legend .sw-del{background:var(--del-bg);border:1px solid var(--del-border)}
+.legend .sw-mod{background:var(--mod-bg);border:1px solid var(--mod-border)}
+.diff-output .output-body{padding:0;font-family:Consolas,Monaco,"Courier New",monospace;font-size:13px;line-height:1.7;max-height:600px;overflow-y:auto}
+.diff-line{padding:4px 14px;border-left:3px solid transparent;white-space:pre-wrap;word-break:break-all}
+.diff-line.add{background:var(--add-bg);border-left-color:var(--add-border)}
+.diff-line.del{background:var(--del-bg);border-left-color:var(--del-border)}
+.diff-line.mod{background:var(--mod-bg);border-left-color:var(--mod-border)}
+.diff-line.equal{color:#6b7280}
+.diff-empty{padding:20px;text-align:center;color:var(--muted);font-size:14px}
+h2{font-size:21px;font-weight:700;margin:40px 0 14px;letter-spacing:-0.01em}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+p{margin-bottom:16px;color:#374151}
+ul,ol{margin:0 0 16px 22px;color:#374151}
+li{margin-bottom:8px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:600;font-size:16px;margin-bottom:6px;color:var(--text)}
+.faq-a{color:#4b5563;font-size:15px;margin:0}
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0 40px}
+.related a{display:block;border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-decoration:none;color:var(--text);transition:all 0.15s}
+.related a:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(37,99,235,0.08);text-decoration:none}
+.related .r-title{font-weight:600;font-size:15px;margin-bottom:4px}
+.related .r-desc{font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-size:13px;color:var(--muted)}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.footer-inner a{color:var(--muted);text-decoration:none;margin-left:16px}
+.footer-inner a:hover{color:var(--accent)}
+@media (max-width:700px){h1{font-size:23px}h2{font-size:19px}.diff-inputs{grid-template-columns:1fr}nav a{margin-left:12px;font-size:13px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">hao<span>word</span>tool</a>
+    <nav><a href="/tools/">工具</a><a href="/games/">游戏攻略</a><a href="/about/">关于</a></nav>
+  </div>
+</header>
+<main class="container">
+  <div class="breadcrumb"><a href="/">首页</a><span>›</span><a href="/tools/">工具</a><span>›</span>Text Diff</div>
+  <h1>Text Diff — 免费在线文本对比工具</h1>
+  <p class="subtitle">左右并排对比两段文本，高亮显示新增、删除和修改内容。</p>
+  <p class="update-date">最后更新：2026 年 10 月 3 日</p>
+  <div class="ad-slot">Advertisement</div>
+  <div class="diff-inputs">
+    <div class="diff-panel">
+      <div class="panel-head"><span>原始文本（A）</span><span id="a-stats">0 行</span></div>
+      <textarea id="text-a" placeholder="在此粘贴原始文本..."></textarea>
+    </div>
+    <div class="diff-panel">
+      <div class="panel-head"><span>对比文本（B）</span><span id="b-stats">0 行</span></div>
+      <textarea id="text-b" placeholder="在此粘贴新文本..."></textarea>
+    </div>
+  </div>
+  <div class="diff-actions">
+    <button class="btn btn-primary" onclick="runDiff()">对比差异</button>
+    <button class="btn" onclick="clearAll()">清空</button>
+    <button class="btn" onclick="swapTexts()">交换 A / B</button>
+    <button class="btn" onclick="copyDiff()">复制结果</button>
+  </div>
+  <div class="diff-output" id="output">
+    <div class="output-head">
+      <span>对比结果</span>
+      <div class="legend">
+        <span><span class="swatch sw-add"></span>新增</span>
+        <span><span class="swatch sw-del"></span>删除</span>
+        <span><span class="swatch sw-mod"></span>修改</span>
+      </div>
+      <span id="diff-summary" style="margin-left:auto"></span>
+    </div>
+    <div class="output-body" id="output-body"></div>
+  </div>
+  <div class="ad-slot">Advertisement</div>
+  <h2>什么是文本对比？</h2>
+  <p>文本对比（Text Diff）是把两段文本逐行比较，标出哪些内容是新增、删除或修改的操作。本工具在浏览器本地运行，文本不会上传到服务器。</p>
+  <h2>什么时候用文本对比</h2>
+  <ul>
+    <li><strong>文档校对</strong>：对比修改前后的版本，确认改动是否正确</li>
+    <li><strong>合同审查</strong>：对比两个版本的合同，找出条款变化</li>
+    <li><strong>代码检查</strong>：对比代码提交前后的差异</li>
+    <li><strong>翻译校对</strong>：对比原文和译文，确认内容一致</li>
+    <li><strong>文案优化</strong>：对比修改前后的文案效果</li>
+  </ul>
+  <h2>怎么用这个工具</h2>
+  <ol>
+    <li>把原始文本粘贴到左侧（A）文本框</li>
+    <li>把新文本粘贴到右侧（B）文本框</li>
+    <li>点击"对比差异"按钮</li>
+    <li>结果区域会显示逐行对比，绿色为新增、红色为删除、黄色为修改</li>
+  </ol>
+  <h2>对比逻辑说明</h2>
+  <p>本工具采用逐行对比。对比规则：完全相同的行标记为"相同"；只在 B 中出现的行标记为"新增"；只在 A 中出现的行标记为"删除"；相似但不完全相同的行标记为"修改"。</p>
+  <div class="ad-slot">Advertisement</div>
+  <h2>常见问题 FAQ</h2>
+  <div class="faq-item"><div class="faq-q">怎么在线对比两段文本？</div><p class="faq-a">把两段文本分别粘贴到左右两个文本框，点击对比按钮，差异部分会自动高亮显示。</p></div>
+  <div class="faq-item"><div class="faq-q">怎么对比两个 Word 文档？</div><p class="faq-a">分别打开两个 Word 文档，全选复制内容，粘贴到本工具的左右文本框，即可对比差异。</p></div>
+  <div class="faq-item"><div class="faq-q">可以用这个工具对比代码吗？</div><p class="faq-a">可以。工具支持纯文本对比，包括代码。但不会做语法高亮，只做逐行差异对比。</p></div>
+  <div class="faq-item"><div class="faq-q">这个工具会保存我的文本吗？</div><p class="faq-a">不会。对比完全在浏览器本地运行，文本不会上传到服务器。</p></div>
+  <div class="faq-item"><div class="faq-q">这个文本对比工具免费吗？</div><p class="faq-a">是的。完全免费，无需注册。</p></div>
+  <h2>相关工具</h2>
+  <div class="related">
+    <a href="/tools/word-counter/"><div class="r-title">Word Counter</div><div class="r-desc">统计字数、句子数、段落数和阅读时间。</div></a>
+    <a href="/tools/character-counter/"><div class="r-title">Character Counter</div><div class="r-desc">统计字符数，内置平台限制参考。</div></a>
+    <a href="/tools/case-converter/"><div class="r-title">Case Converter</div><div class="r-desc">一键转换大小写格式。</div></a>
+    <a href="/tools/remove-line-breaks/"><div class="r-title">Remove Line Breaks</div><div class="r-desc">去除换行、多余空格和制表符。</div></a>
+  </div>
+  <p style="text-align:center;margin-top:16px"><a href="/tools/">查看全部 5 个免费文字工具 →</a></p>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 haowordtool.com</div>
+    <div><a href="/about/">关于</a><a href="/privacy/">隐私政策</a><a href="/contact/">联系我们</a></div>
+  </div>
+</footer>
+<script>
+const textA = document.getElementById('text-a');
+const textB = document.getElementById('text-b');
+function updateStats(){
+  document.getElementById('a-stats').textContent = textA.value ? textA.value.split('\n').length + ' 行' : '0 行';
+  document.getElementById('b-stats').textContent = textB.value ? textB.value.split('\n').length + ' 行' : '0 行';
+}
+textA.addEventListener('input', updateStats);
+textB.addEventListener('input', updateStats);
+function runDiff(){
+  const a = textA.value.split('\n');
+  const b = textB.value.split('\n');
+  const output = document.getElementById('output-body');
+  const summary = document.getElementById('diff-summary');
+  output.innerHTML = '';
+  if(!textA.value && !textB.value){
+    output.innerHTML = '<div class="diff-empty">请在两段文本框中输入内容后再对比。</div>';
+    document.getElementById('output').classList.add('visible');
+    return;
+  }
+  const m = a.length, n = b.length;
+  const dp = Array.from({length: m+1}, ()=>new Array(n+1).fill(0));
+  for(let i=1;i<=m;i++){for(let j=1;j<=n;j++){
+    if(a[i-1] === b[j-1]) dp[i][j] = dp[i-1][j-1] + 1;
+    else dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+  }}
+  const result = [];
+  let i = m, j = n;
+  while(i > 0 || j > 0){
+    if(i > 0 && j > 0 && a[i-1] === b[j-1]){result.unshift({type:'equal', text:a[i-1], aLine:i, bLine:j});i--;j--;}
+    else if(j > 0 && (i === 0 || dp[i][j-1] >= dp[i-1][j])){result.unshift({type:'add', text:b[j-1], aLine:null, bLine:j});j--;}
+    else if(i > 0){result.unshift({type:'del', text:a[i-1], aLine:i, bLine:null});i--;}
+  }
+  let addCount = 0, delCount = 0, modCount = 0;
+  result.forEach(r=>{if(r.type==='add')addCount++;else if(r.type==='del')delCount++;});
+  const merged = [];
+  for(let k=0;k<result.length;k++){
+    if(result[k].type==='del' && k+1<result.length && result[k+1].type==='add'){
+      merged.push({type:'mod', aText:result[k].text, bText:result[k+1].text, aLine:result[k].aLine, bLine:result[k+1].bLine});modCount++;k++;
+    } else {merged.push(result[k]);}
+  }
+  merged.forEach(r=>{
+    const div = document.createElement('div');
+    div.className = 'diff-line ' + r.type;
+    const lineNum = r.type === 'add' ? r.bLine : (r.type === 'del' ? r.aLine : (r.aLine || r.bLine));
+    if(r.type === 'mod'){div.textContent = '~ ' + r.aText + '  →  ' + r.bText;}
+    else{div.innerHTML = '<span style="display:inline-block;min-width:36px;color:#9ca3af;margin-right:10px;font-size:12px">' + (lineNum || '') + '</span>' + (r.type==='add'?'+ ':r.type==='del'?'- ':'  ') + escapeHtml(r.text);}
+    output.appendChild(div);
+  });
+  if(merged.length === 0){output.innerHTML = '<div class="diff-empty">两段文本完全相同。</div>';}
+  summary.textContent = '新增 ' + addCount + ' 行 · 删除 ' + delCount + ' 行 · 修改 ' + modCount + ' 行';
+  document.getElementById('output').classList.add('visible');
+  document.getElementById('output').scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+function escapeHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function clearAll(){textA.value='';textB.value='';document.getElementById('output-body').innerHTML='';document.getElementById('output').classList.remove('visible');updateStats();textA.focus();}
+function swapTexts(){const t=textA.value;textA.value=textB.value;textB.value=t;updateStats();}
+function copyDiff(){const output=document.getElementById('output-body');if(!output.textContent.trim())return;navigator.clipboard.writeText(output.textContent).then(()=>{const b=event.target;const o=b.textContent;b.textContent='已复制!';setTimeout(()=>b.textContent=o,1200);});}
+updateStats();
+</script>
+</body>
+</html>
