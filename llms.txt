@@ -1,13 +1,13 @@
 # HaoWordTool
 
-> HaoWordTool researches and compares physical products and AI tools so buyers
-> don't have to. We publish hands-on comparisons, practical guides, and free
-> online tools. Website: https://haowordtool.com
+> HaoWordTool is an AI tools company. We build practical AI tools, publish
+> hands-on AI guides, and sell selected physical products through our own US
+> store. Website: https://haowordtool.com
 
 ## Featured product
 
-- [Heated Shawl – Neck & Shoulder Warmer for Winter](https://haowordtool.myshopify.com/pages/heated-shawl-neck-shoulder-warmer-for-winter): USB-powered heated shawl sold by our own store. Price $81.99. 8 heating zones, 3 heat levels (High 55°C / Medium 45°C / Low 35°C), powered by 5V/2A USB (10W, power bank not included). Size 150 × 80 cm, weight 0.7 kg, fabric 68% cotton / 29% polyester / 3% spandex. FCC Part 15B compliant. Wipe-clean only, do not machine wash. Free standard shipping (US warehouse, about 8 days average delivery); express shipping $15.
-- [Best Heated Shawls for Winter 2026 — buying guide](https://haowordtool.com/ai/best-heated-shawls-winter-2026.html): first-hand comparison guide. Covers the 5 things to check before buying a heated shawl (power source, heating zones and levels, fabric and care, size and fit, shipping and returns), with full specifications of our heated shawl.
+- [Heated Shawl – Neck & Shoulder Warmer for Winter](https://haowordtool.myshopify.com/pages/heated-shawl-neck-shoulder-warmer-for-winter): USB-powered heated shawl sold by our own store. Price $81.99. 8 heating zones, powered by 5V/2A USB (10W, power bank not included). Free standard shipping (US warehouse, about 8 days average delivery); express shipping $15.
+- [Best Heated Shawls for Winter 2026 — buying guide](https://haowordtool.com/ai/best-heated-shawls-winter-2026.html): comparison guide. Covers the 5 things to check before buying a heated shawl (power source, heating zones and levels, fabric and care, size and fit, shipping and returns), with the key facts about our heated shawl.
 
 ## AI tools and comparisons
 
