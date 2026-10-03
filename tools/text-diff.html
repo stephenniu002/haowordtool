@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Diff — Free Online Text Comparison Tool</title>
+<meta name="description" content="Free online text diff checker. Compare two texts side by side and highlight differences instantly. No sign-up required.">
+<link rel="canonical" href="https://haowordtool.com/tools/text-diff.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/tools.css">
+<style>
+.diff-out{font-family:var(--mono);font-size:13px;line-height:1.7;border:1px solid var(--border-strong);border-radius:12px;overflow:hidden;background:rgba(0,0,0,.25)}
+.diff-line{padding:6px 14px;border-bottom:1px solid rgba(255,255,255,.04);white-space:pre-wrap;word-break:break-word}
+.diff-line:last-child{border-bottom:none}
+.diff-same{color:var(--muted)}
+.diff-del{background:rgba(245,101,101,.10);color:#fca5a5}
+.diff-add{background:rgba(79,209,197,.10);color:#7de8dc}
+.diff-empty{padding:22px;text-align:center;color:var(--muted-2);font-family:var(--font)}
+.diff-legend{display:flex;gap:16px;flex-wrap:wrap;margin:14px 0 10px;font-size:12.5px;color:var(--muted)}
+.diff-legend i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Text Diff",
+  "url": "https://haowordtool.com/tools/text-diff.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Free online text diff checker. Compare two texts side by side and highlight differences instantly. No sign-up required."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How do I compare two texts online?","acceptedAnswer":{"@type":"Answer","text":"Paste the original text into the left box and the modified version into the right box, then click Compare. Added lines are highlighted green and removed lines red."}},
+    {"@type":"Question","name":"How do I compare two Word documents?","acceptedAnswer":{"@type":"Answer","text":"Copy the text from each Word document and paste the two versions into this tool. For a built-in option, Word's Review tab also has a Compare feature."}},
+    {"@type":"Question","name":"Can I compare code with this tool?","acceptedAnswer":{"@type":"Answer","text":"Yes. Paste two code snippets and the tool compares them line by line, highlighting added and removed lines — handy for reviewing small changes."}},
+    {"@type":"Question","name":"Does this tool store my text?","acceptedAnswer":{"@type":"Answer","text":"No. The comparison runs entirely in your browser with JavaScript. Your text is never uploaded or stored anywhere."}},
+    {"@type":"Question","name":"Is this text diff tool free?","acceptedAnswer":{"@type":"Answer","text":"Yes — free forever, with no sign-up required."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://haowordtool.com/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://haowordtool.com/tools/"},
+    {"@type":"ListItem","position":3,"name":"Text Diff","item":"https://haowordtool.com/tools/text-diff.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch"><a href="/tools/text-diff.html" class="active" hreflang="en">EN</a></div></div>
+</nav></div></header>
+
+<main><div class="wrap tool-page">
+  <a href="index.html" class="back">← Back to all tools</a>
+  <h1 style="margin-top:16px">Text Diff — Free Online Text Comparison Tool</h1>
+  <p class="lead">Paste two versions of a text and see exactly what changed. All processing happens in your browser.</p>
+
+  <div class="card">
+    <div class="grid2">
+      <div><label for="textA">Original text</label><textarea id="textA" placeholder="Paste the original text here…" style="min-height:200px"></textarea></div>
+      <div><label for="textB">Modified text</label><textarea id="textB" placeholder="Paste the modified text here…" style="min-height:200px"></textarea></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="compareBtn">Compare texts</button>
+      <button class="btn btn-ghost" id="swapBtn">Swap</button>
+      <button class="btn btn-ghost" id="clearBtn">Clear</button>
+    </div>
+    <div id="resultWrap" style="display:none;margin-top:18px">
+      <div class="result-label">Differences</div>
+      <div class="diff-legend">
+        <span><i style="background:rgba(245,101,101,.5)"></i>Removed</span>
+        <span><i style="background:rgba(79,209,197,.5)"></i>Added</span>
+        <span id="diffStats" style="margin-left:auto;font-weight:600"></span>
+      </div>
+      <div class="diff-out" id="diffOut"></div>
+    </div>
+  </div>
+
+  <div class="seo-content">
+    <h2>What Is a Text Diff Tool?</h2>
+    <p>A text diff tool compares two versions of a text and highlights exactly what changed — which lines were added, removed or left untouched. "Diff" comes from the classic Unix <code>diff</code> command that programmers have used for decades to review code changes.</p>
+    <p>This online version works the same way without any setup: paste the original on the left, the new version on the right, and get a color-coded result instantly. Removed lines show in red, added lines in green, unchanged lines stay neutral.</p>
+
+    <h2>How to Use This Text Diff Checker</h2>
+    <p><strong>Step 1 — Paste the original text</strong> into the left box.</p>
+    <p><strong>Step 2 — Paste the modified text</strong> into the right box.</p>
+    <p><strong>Step 3 — Click "Compare texts".</strong> The highlighted diff appears below, with a summary of how many lines were added and removed.</p>
+    <p>Use <strong>Swap</strong> to reverse the two sides, or <strong>Clear</strong> to start over.</p>
+
+    <h2>When to Use Text Diff</h2>
+    <h3>Comparing Document Versions</h3>
+    <p>See exactly what changed between two drafts of a contract, article or report — no more reading both versions side by side line by line.</p>
+    <h3>Checking Code Changes</h3>
+    <p>Paste two code snippets to review what was modified before committing or deploying. The line-by-line view makes small but critical changes obvious.</p>
+    <h3>Proofreading Edits</h3>
+    <p>Compare your draft before and after an editor's pass to see every edit. Great for learning from corrections and for approving changes.</p>
+    <h3>Detecting Plagiarism</h3>
+    <p>Compare a submitted text against a suspected source. Large unchanged blocks stand out immediately in the diff view.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq-item"><h3>How do I compare two texts online?</h3><p>Paste the original text into the left box and the modified version into the right box, then click Compare. Added lines are highlighted green and removed lines red.</p></div>
+    <div class="faq-item"><h3>How do I compare two Word documents?</h3><p>Copy the text from each Word document and paste the two versions into this tool. For a built-in option, Word's Review tab also has a Compare feature.</p></div>
+    <div class="faq-item"><h3>Can I compare code with this tool?</h3><p>Yes. Paste two code snippets and the tool compares them line by line, highlighting added and removed lines — handy for reviewing small changes.</p></div>
+    <div class="faq-item"><h3>Does this tool store my text?</h3><p>No. The comparison runs entirely in your browser with JavaScript. Your text is never uploaded or stored anywhere.</p></div>
+    <div class="faq-item"><h3>Is this text diff tool free?</h3><p>Yes — free forever, with no sign-up required.</p></div>
+  </div>
+</div>
+<div class="related-tools">
+  <h2>Related Tools</h2>
+  <div class="related-grid">
+    <a href="word-counter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg></span><div><b>Word Counter</b><span>Open tool</span></div></a>
+    <a href="character-counter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></span><div><b>Character Counter</b><span>Open tool</span></div></a>
+    <a href="case-converter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><b>Case Converter</b><span>Open tool</span></div></a>
+    <a href="remove-line-breaks.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><div><b>Remove Line Breaks</b><span>Open tool</span></div></a>
+  </div>
+</div>
+</main>
+
+<footer><div class="wrap"><div class="foot">
+  <span>© 2026 Haowordtool Tools · Free forever</span>
+  <div class="foot-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></div>
+</div></div></footer>
+
+<script>
+const textA = document.getElementById("textA");
+const textB = document.getElementById("textB");
+const diffOut = document.getElementById("diffOut");
+const resultWrap = document.getElementById("resultWrap");
+const diffStats = document.getElementById("diffStats");
+
+function esc(s){
+  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+
+function diffLines(a, b){
+  const A = a.split("\n"), B = b.split("\n");
+  const m = A.length, n = B.length;
+  const dp = [];
+  for (let i = 0; i <= m; i++) dp.push(new Uint32Array(n + 1));
+  for (let i = m - 1; i >= 0; i--)
+    for (let j = n - 1; j >= 0; j--)
+      dp[i][j] = (A[i] === B[j]) ? dp[i+1][j+1] + 1 : Math.max(dp[i+1][j], dp[i][j+1]);
+  const ops = [];
+  let i = 0, j = 0;
+  while (i < m && j < n){
+    if (A[i] === B[j]) { ops.push({t:"same", v:A[i]}); i++; j++; }
+    else if (dp[i+1][j] >= dp[i][j+1]) { ops.push({t:"del", v:A[i]}); i++; }
+    else { ops.push({t:"add", v:B[j]}); j++; }
+  }
+  while (i < m) ops.push({t:"del", v:A[i++]});
+  while (j < n) ops.push({t:"add", v:B[j++]});
+  return ops;
+}
+
+function compare(){
+  if (!textA.value && !textB.value) {
+    diffOut.innerHTML = '<div class="diff-empty">Paste text into both boxes, then click Compare.</div>';
+    resultWrap.style.display = "block";
+    diffStats.textContent = "";
+    return;
+  }
+  const ops = diffLines(textA.value, textB.value);
+  let added = 0, removed = 0;
+  const html = ops.map(op => {
+    const line = op.v === "" ? " " : esc(op.v);
+    if (op.t === "del") { removed++; return '<div class="diff-line diff-del">− ' + line + "</div>"; }
+    if (op.t === "add") { added++; return '<div class="diff-line diff-add">+ ' + line + "</div>"; }
+    return '<div class="diff-line diff-same">&nbsp;&nbsp;' + line + "</div>";
+  }).join("");
+  diffOut.innerHTML = html || '<div class="diff-empty">The two texts are identical.</div>';
+  diffStats.textContent = added + " added · " + removed + " removed";
+  resultWrap.style.display = "block";
+}
+
+document.getElementById("compareBtn").addEventListener("click", compare);
+document.getElementById("swapBtn").addEventListener("click", () => {
+  const tmp = textA.value; textA.value = textB.value; textB.value = tmp;
+  if (resultWrap.style.display === "block") compare();
+});
+document.getElementById("clearBtn").addEventListener("click", () => {
+  textA.value = ""; textB.value = ""; resultWrap.style.display = "none"; textA.focus();
+});
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
+</script>
+</body>
+</html>

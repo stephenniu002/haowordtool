@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Converter — Free Online Text Case Changer</title>
+<meta name="description" content="Free online case converter. Convert text to uppercase, lowercase, title case, sentence case, and more. No sign-up required.">
+<link rel="canonical" href="https://haowordtool.com/tools/case-converter.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/tools.css">
+<style>
+.case-btns{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.case-btn{font-family:var(--mono);font-size:13px;font-weight:600;padding:10px 16px;border-radius:10px;border:1px solid var(--border-strong);background:rgba(255,255,255,.03);color:var(--text);transition:.18s;cursor:pointer}
+.case-btn:hover{background:rgba(124,92,255,.12);border-color:rgba(124,92,255,.5);transform:translateY(-1px)}
+.case-btn:active{transform:translateY(0)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Case Converter",
+  "url": "https://haowordtool.com/tools/case-converter.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Free online case converter. Convert text to uppercase, lowercase, title case, sentence case, and more. No sign-up required."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is title case?","acceptedAnswer":{"@type":"Answer","text":"Title case capitalizes the first letter of each major word in a headline or title. Minor words like 'a', 'an', 'the', 'and' and 'of' stay lowercase unless they are the first or last word."}},
+    {"@type":"Question","name":"What is the difference between camelCase and PascalCase?","acceptedAnswer":{"@type":"Answer","text":"camelCase starts with a lowercase letter (myVariableName) and is common for variables and functions. PascalCase capitalizes every word including the first (MyClassName) and is common for classes and components."}},
+    {"@type":"Question","name":"How do I convert text to uppercase?","acceptedAnswer":{"@type":"Answer","text":"Paste your text into the input box above and click the UPPERCASE button. The converted text appears instantly in the output box."}},
+    {"@type":"Question","name":"Does this case converter work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. The tool works in any modern mobile browser — paste your text, tap a conversion button, and copy the result."}},
+    {"@type":"Question","name":"Is this case converter free?","acceptedAnswer":{"@type":"Answer","text":"Yes — free forever. It runs entirely in your browser with no sign-up, and your text never leaves your device."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://haowordtool.com/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://haowordtool.com/tools/"},
+    {"@type":"ListItem","position":3,"name":"Case Converter","item":"https://haowordtool.com/tools/case-converter.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch"><a href="/tools/case-converter.html" class="active" hreflang="en">EN</a></div></div>
+</nav></div></header>
+
+<main><div class="wrap tool-page">
+  <a href="index.html" class="back">← Back to all tools</a>
+  <h1 style="margin-top:16px">Case Converter — Free Online Text Case Changer</h1>
+  <p class="lead">Paste your text, pick a case style, and copy the result. All processing happens in your browser.</p>
+
+  <div class="card">
+    <label for="input">Your text</label>
+    <textarea id="input" placeholder="Paste or type text here…" style="min-height:180px"></textarea>
+    <div class="case-btns">
+      <button class="case-btn" data-case="upper">UPPERCASE</button>
+      <button class="case-btn" data-case="lower">lowercase</button>
+      <button class="case-btn" data-case="title">Title Case</button>
+      <button class="case-btn" data-case="sentence">Sentence case</button>
+      <button class="case-btn" data-case="camel">camelCase</button>
+      <button class="case-btn" data-case="pascal">PascalCase</button>
+      <button class="case-btn" data-case="snake">snake_case</button>
+      <button class="case-btn" data-case="kebab">kebab-case</button>
+    </div>
+    <label for="output">Converted text</label>
+    <textarea id="output" readonly placeholder="Converted text will appear here…" style="min-height:180px;background:rgba(124,92,255,.04)"></textarea>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="copyBtn">Copy result</button>
+      <button class="btn btn-ghost" id="clearBtn">Clear</button>
+    </div>
+    <p class="hint" id="copyHint" style="display:none;color:var(--accent-3);font-weight:600">✓ Copied to clipboard</p>
+  </div>
+
+  <div class="seo-content">
+    <h2>What Is a Case Converter?</h2>
+    <p>A case converter is an online tool that changes the capitalization of your text in one click — from ALL CAPS to lowercase, from a sentence to a programmer-friendly variable name. Instead of retyping or hunting through menu options in Word, you paste, click, and copy.</p>
+    <p>This converter supports eight styles: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case and kebab-case — covering everything from headlines and essays to code identifiers and URL slugs.</p>
+
+    <h2>How to Use This Case Converter</h2>
+    <p><strong>Step 1 — Paste your text</strong> into the input box.</p>
+    <p><strong>Step 2 — Click a case button.</strong> The converted text appears instantly in the output box.</p>
+    <p><strong>Step 3 — Copy the result</strong> with the Copy button and use it anywhere.</p>
+
+    <h2>Case Types Explained</h2>
+    <h3>Uppercase</h3>
+    <p>EVERY LETTER CAPITALIZED. Used for headings, warnings, abbreviations and emphasis. Example: "FREE SHIPPING ON ALL ORDERS".</p>
+    <h3>Lowercase</h3>
+    <p>every letter in small caps. Used for normal body text, email addresses and casual writing. Example: "free shipping on all orders".</p>
+    <h3>Title Case</h3>
+    <p>Each Major Word Capitalized. The standard for book titles, article headlines and YouTube titles. Minor words (a, an, the, and, of) stay lowercase unless first or last.</p>
+    <h3>Sentence Case</h3>
+    <p>Only the first letter of each sentence is capitalized. The default for essays, emails and normal prose. Example: "Free shipping on all orders. No minimum spend."</p>
+    <h3>camelCase</h3>
+    <p>First word lowercase, subsequent words capitalized, no spaces: <code>freeShippingOnAllOrders</code>. The convention for variables and functions in JavaScript, Java and many other languages.</p>
+    <h3>PascalCase</h3>
+    <p>Every word capitalized, no spaces: <code>FreeShippingOnAllOrders</code>. Used for class names, React components and C# types.</p>
+    <h3>snake_case</h3>
+    <p>All lowercase with underscores: <code>free_shipping_on_all_orders</code>. Common in Python, Ruby, database columns and file names.</p>
+    <h3>kebab-case</h3>
+    <p>All lowercase with hyphens: <code>free-shipping-on-all-orders</code>. The standard for URL slugs, CSS classes and HTML attributes.</p>
+
+    <h2>When to Use Each Case Type</h2>
+    <h3>Programming and Code</h3>
+    <p>Match your language's convention: camelCase for JavaScript variables, PascalCase for classes and components, snake_case for Python, kebab-case for CSS classes and URLs.</p>
+    <h3>Headlines and Titles</h3>
+    <p>Use Title Case for article headlines, book titles and video titles. Use UPPERCASE sparingly for banners and call-to-action buttons where you want maximum punch.</p>
+    <h3>Academic Writing</h3>
+    <p>Stick to Sentence case for body text and follow your style guide (APA, MLA, Chicago) for headings. Random capitalization is one of the fastest ways to look unprofessional in a paper.</p>
+    <h3>Social Media</h3>
+    <p>Title Case works well for post hooks and profile headlines. Sentence case reads most naturally in captions. Avoid full UPPERCASE posts — readers interpret it as shouting.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq-item"><h3>What is title case?</h3><p>Title case capitalizes the first letter of each major word in a headline or title. Minor words like "a", "an", "the", "and" and "of" stay lowercase unless they are the first or last word.</p></div>
+    <div class="faq-item"><h3>What is the difference between camelCase and PascalCase?</h3><p>camelCase starts with a lowercase letter (myVariableName) and is common for variables and functions. PascalCase capitalizes every word including the first (MyClassName) and is common for classes and components.</p></div>
+    <div class="faq-item"><h3>How do I convert text to uppercase?</h3><p>Paste your text into the input box above and click the UPPERCASE button. The converted text appears instantly in the output box.</p></div>
+    <div class="faq-item"><h3>Does this case converter work on mobile?</h3><p>Yes. The tool works in any modern mobile browser — paste your text, tap a conversion button, and copy the result.</p></div>
+    <div class="faq-item"><h3>Is this case converter free?</h3><p>Yes — free forever. It runs entirely in your browser with no sign-up, and your text never leaves your device.</p></div>
+  </div>
+</div>
+<div class="related-tools">
+  <h2>Related Tools</h2>
+  <div class="related-grid">
+    <a href="word-counter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg></span><div><b>Word Counter</b><span>Open tool</span></div></a>
+    <a href="character-counter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></span><div><b>Character Counter</b><span>Open tool</span></div></a>
+    <a href="remove-line-breaks.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><div><b>Remove Line Breaks</b><span>Open tool</span></div></a>
+    <a href="text-diff.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/></svg></span><div><b>Text Diff</b><span>Open tool</span></div></a>
+  </div>
+</div>
+</main>
+
+<footer><div class="wrap"><div class="foot">
+  <span>© 2026 Haowordtool Tools · Free forever</span>
+  <div class="foot-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></div>
+</div></div></footer>
+
+<script>
+const input = document.getElementById("input");
+const output = document.getElementById("output");
+const copyHint = document.getElementById("copyHint");
+
+function splitWords(s){
+  return s.replace(/[''']/g, "").split(/[^A-Za-z0-9]+/).filter(Boolean);
+}
+function cap(w){ return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(); }
+
+const converters = {
+  upper: s => s.toUpperCase(),
+  lower: s => s.toLowerCase(),
+  title: s => s.toLowerCase().replace(/(^|[\s(\["'])(\S)/g, (m, p, c) => p + c.toUpperCase()),
+  sentence: s => s.toLowerCase().replace(/(^\s*[a-z])|([.!?…]\s+[a-z])/g, m => m.toUpperCase()),
+  camel: s => { const w = splitWords(s); return w.length ? w[0].toLowerCase() + w.slice(1).map(cap).join("") : ""; },
+  pascal: s => splitWords(s).map(cap).join(""),
+  snake: s => splitWords(s).map(w => w.toLowerCase()).join("_"),
+  kebab: s => splitWords(s).map(w => w.toLowerCase()).join("-")
+};
+
+document.querySelectorAll(".case-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    output.value = converters[btn.dataset.case](input.value);
+    copyHint.style.display = "none";
+  });
+});
+
+document.getElementById("copyBtn").addEventListener("click", async () => {
+  if (!output.value) return;
+  try { await navigator.clipboard.writeText(output.value); }
+  catch(e){ output.select(); document.execCommand("copy"); }
+  copyHint.style.display = "block";
+  setTimeout(() => copyHint.style.display = "none", 2000);
+});
+document.getElementById("clearBtn").addEventListener("click", () => {
+  input.value = ""; output.value = ""; copyHint.style.display = "none"; input.focus();
+});
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove Line Breaks — Free Online Line Break Remover</title>
+<meta name="description" content="Free online tool to remove line breaks, extra spaces, and unwanted formatting from text. Paste, clean, and copy in seconds.">
+<link rel="canonical" href="https://haowordtool.com/tools/remove-line-breaks.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/tools.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Remove Line Breaks",
+  "url": "https://haowordtool.com/tools/remove-line-breaks.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Free online tool to remove line breaks, extra spaces, and unwanted formatting from text. Paste, clean, and copy in seconds."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How do I remove line breaks in Word?","acceptedAnswer":{"@type":"Answer","text":"In Word, press Ctrl+H to open Find and Replace. To remove paragraph marks, enter ^p in 'Find what' and a space in 'Replace with'. To remove manual line breaks (Shift+Enter), enter ^l instead."}},
+    {"@type":"Question","name":"How do I remove line breaks in Excel?","acceptedAnswer":{"@type":"Answer","text":"In Excel, use Find and Replace (Ctrl+H), enter Ctrl+J in the 'Find what' box, and replace with a space. Or use the formula =SUBSTITUTE(SUBSTITUTE(A1,CHAR(10),\" \"),CHAR(13),\" \")."}},
+    {"@type":"Question","name":"How do I remove line breaks in Google Docs?","acceptedAnswer":{"@type":"Answer","text":"In Google Docs, open Find and Replace (Ctrl+H), check 'Match using regular expressions', enter \\n in 'Find' and a space in 'Replace with', then click Replace all."}},
+    {"@type":"Question","name":"What is the difference between a line break and a paragraph break?","acceptedAnswer":{"@type":"Answer","text":"A line break (Shift+Enter) moves text to the next line within the same paragraph. A paragraph break (Enter) ends the paragraph and starts a new one with paragraph spacing."}},
+    {"@type":"Question","name":"Is this tool free?","acceptedAnswer":{"@type":"Answer","text":"Yes — free forever. It runs entirely in your browser with no sign-up, and your text never leaves your device."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://haowordtool.com/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://haowordtool.com/tools/"},
+    {"@type":"ListItem","position":3,"name":"Remove Line Breaks","item":"https://haowordtool.com/tools/remove-line-breaks.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header"><div class="wrap"><nav class="nav">
+  <a href="index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Haowordtool Tools</a>
+  <div class="nav-right"><div class="lang-switch"><a href="/tools/remove-line-breaks.html" class="active" hreflang="en">EN</a></div></div>
+</nav></div></header>
+
+<main><div class="wrap tool-page">
+  <a href="index.html" class="back">← Back to all tools</a>
+  <h1 style="margin-top:16px">Remove Line Breaks — Free Online Line Break Remover</h1>
+  <p class="lead">Paste messy text, choose cleanup options, and copy the result. All processing happens in your browser.</p>
+
+  <div class="card">
+    <label for="input">Your text</label>
+    <textarea id="input" placeholder="Paste text with unwanted line breaks here…" style="min-height:180px"></textarea>
+    <div class="grid2" style="margin-top:16px">
+      <label class="check-row"><input type="checkbox" id="optBreaks" checked> Remove line breaks</label>
+      <label class="check-row"><input type="checkbox" id="optSpace" checked> Replace with space</label>
+      <label class="check-row"><input type="checkbox" id="optExtra" checked> Remove extra spaces</label>
+      <label class="check-row"><input type="checkbox" id="optTabs" checked> Remove tabs</label>
+    </div>
+    <label for="output" style="margin-top:18px">Cleaned text</label>
+    <textarea id="output" readonly placeholder="Cleaned text will appear here…" style="min-height:180px;background:rgba(124,92,255,.04)"></textarea>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="copyBtn">Copy result</button>
+      <button class="btn btn-ghost" id="clearBtn">Clear</button>
+    </div>
+    <p class="hint" id="copyHint" style="display:none;color:var(--accent-3);font-weight:600">✓ Copied to clipboard</p>
+    <p class="hint" id="statHint"></p>
+  </div>
+
+  <div class="seo-content">
+    <h2>What Is a Line Break?</h2>
+    <p>A line break is an invisible character that moves text to the next line. There are two kinds: a <strong>manual line break</strong> (created with Shift+Enter), which stays inside the same paragraph, and a <strong>paragraph break</strong> (created with Enter), which starts a brand-new paragraph. When you copy text from PDFs, websites or spreadsheets, these breaks often land in the wrong places — chopping sentences in half or adding double spacing.</p>
+    <p>This tool strips those unwanted breaks and formatting artifacts in one click, turning messy copied text into clean, flowing paragraphs.</p>
+
+    <h2>How to Use This Tool</h2>
+    <p><strong>Step 1 — Paste your text</strong> into the input box. The cleaned result updates live below.</p>
+    <p><strong>Step 2 — Choose options.</strong> Toggle the checkboxes: remove all line breaks, replace them with a space (recommended, so words don't merge), collapse extra spaces, and strip tabs.</p>
+    <p><strong>Step 3 — Copy the result</strong> and paste it wherever you need clean text.</p>
+
+    <h2>When to Remove Line Breaks</h2>
+    <h3>Cleaning PDF Copy-Paste Text</h3>
+    <p>Text copied from PDFs usually breaks at the end of every visual line, not at sentence boundaries. Removing line breaks (with "replace with space" on) reassembles the original paragraphs instantly.</p>
+    <h3>Preparing Text for SEO</h3>
+    <p>Meta descriptions, title tags and alt text must be single-line. Stray line breaks from a spreadsheet or doc can break your markup or get stripped unpredictably by the CMS.</p>
+    <h3>Formatting Data for Spreadsheets</h3>
+    <p>Line breaks inside spreadsheet cells cause display and import problems. Clean the text first, then paste it into Excel or Google Sheets as clean single-line values.</p>
+    <h3>Fixing Emails and Documents</h3>
+    <p>Forwarded emails and chat exports often contain hard-wrapped lines. Removing the breaks restores readable paragraphs you can quote or archive.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq-item"><h3>How do I remove line breaks in Word?</h3><p>In Word, press Ctrl+H to open Find and Replace. Enter <code>^p</code> in "Find what" to remove paragraph marks, or <code>^l</code> to remove manual line breaks (Shift+Enter), and replace with a space.</p></div>
+    <div class="faq-item"><h3>How do I remove line breaks in Excel?</h3><p>Use Find and Replace (Ctrl+H), enter Ctrl+J in "Find what", and replace with a space. Or use the formula <code>=SUBSTITUTE(SUBSTITUTE(A1,CHAR(10)," "),CHAR(13)," ")</code>.</p></div>
+    <div class="faq-item"><h3>How do I remove line breaks in Google Docs?</h3><p>Open Find and Replace (Ctrl+H), check "Match using regular expressions", enter <code>\n</code> in "Find" and a space in "Replace with", then click Replace all.</p></div>
+    <div class="faq-item"><h3>What is the difference between a line break and a paragraph break?</h3><p>A line break (Shift+Enter) moves text to the next line within the same paragraph. A paragraph break (Enter) ends the paragraph and starts a new one with paragraph spacing.</p></div>
+    <div class="faq-item"><h3>Is this tool free?</h3><p>Yes — free forever. It runs entirely in your browser with no sign-up, and your text never leaves your device.</p></div>
+  </div>
+</div>
+<div class="related-tools">
+  <h2>Related Tools</h2>
+  <div class="related-grid">
+    <a href="word-counter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg></span><div><b>Word Counter</b><span>Open tool</span></div></a>
+    <a href="character-counter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></span><div><b>Character Counter</b><span>Open tool</span></div></a>
+    <a href="case-converter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><b>Case Converter</b><span>Open tool</span></div></a>
+    <a href="text-diff.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/></svg></span><div><b>Text Diff</b><span>Open tool</span></div></a>
+  </div>
+</div>
+</main>
+
+<footer><div class="wrap"><div class="foot">
+  <span>© 2026 Haowordtool Tools · Free forever</span>
+  <div class="foot-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></div>
+</div></div></footer>
+
+<script>
+const input = document.getElementById("input");
+const output = document.getElementById("output");
+const copyHint = document.getElementById("copyHint");
+const statHint = document.getElementById("statHint");
+const opts = ["optBreaks","optSpace","optExtra","optTabs"].map(id => document.getElementById(id));
+
+function clean(){
+  let s = input.value;
+  const before = s.length;
+  if (document.getElementById("optTabs").checked) s = s.replace(/\t/g, " ");
+  if (document.getElementById("optBreaks").checked) {
+    s = s.replace(/\r\n|\r|\n/g, document.getElementById("optSpace").checked ? " " : "");
+  }
+  if (document.getElementById("optExtra").checked) {
+    s = s.replace(/ {2,}/g, " ").replace(/^\s+|\s+$/g, "");
+  }
+  output.value = s;
+  const removed = before - s.length;
+  statHint.textContent = input.value ? ("Removed " + removed + " character" + (removed === 1 ? "" : "s") + " · output: " + s.length + " characters") : "";
+  copyHint.style.display = "none";
+}
+input.addEventListener("input", clean);
+opts.forEach(o => o.addEventListener("change", clean));
+clean();
+
+document.getElementById("copyBtn").addEventListener("click", async () => {
+  if (!output.value) return;
+  try { await navigator.clipboard.writeText(output.value); }
+  catch(e){ output.select(); document.execCommand("copy"); }
+  copyHint.style.display = "block";
+  setTimeout(() => copyHint.style.display = "none", 2000);
+});
+document.getElementById("clearBtn").addEventListener("click", () => {
+  input.value = ""; clean(); input.focus();
+});
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
+</script>
+</body>
+</html>
