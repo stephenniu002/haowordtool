@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 游戏攻略大全 — 最新热门游戏入门与进阶指南 | haowordtool</title>
-<meta name="description" content="2026 最新游戏攻略合集。涵盖 GTA 6、Phantom Blade Zero、COD: MW4、Castlevania、Block Blast!、Sprunki、Subway Surfers、Ludo King 等热门游戏的发售日、玩法、技巧与入门指南。">
+<meta name="description" content="2026 最新游戏攻略合集。GTA 6、Phantom Blade Zero、COD: MW4、Castlevania 等 8 款游戏 Hub，加 22 篇怎么玩、角色大全、Mod 解析文章，持续更新。">
 <link rel="canonical" href="https://haowordtool.com/games/">
 <meta property="og:title" content="2026 游戏攻略大全 — 最新热门游戏入门与进阶指南">
-<meta property="og:description" content="GTA 6、Phantom Blade Zero、COD: MW4、Castlevania 等 8 款热门游戏攻略合集。">
+<meta property="og:description" content="8 款游戏攻略 Hub + 22 篇怎么玩、角色、Mod 解析文章。">
 <meta property="og:url" content="https://haowordtool.com/games/">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CollectionPage","name":"2026 游戏攻略大全","description":"2026 最新游戏攻略合集，涵盖 8 款热门游戏的发售日、玩法、技巧与入门指南。","url":"https://haowordtool.com/games/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"haowordtool","url":"https://haowordtool.com/"}}
+{"@context":"https://schema.org","@type":"CollectionPage","name":"2026 游戏攻略大全","description":"2026 最新游戏攻略合集：8 款游戏 Hub 与 22 篇攻略文章。","url":"https://haowordtool.com/games/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"haowordtool","url":"https://haowordtool.com/"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ItemList","name":"2026 游戏攻略列表","itemListElement":[
@@ -54,6 +54,21 @@ h2{font-size:22px;font-weight:700;margin:44px 0 16px;letter-spacing:-0.01em;padd
 p{margin-bottom:16px;color:#374151}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
+/* 快速入口 */
+.quick-entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:20px 0 8px}
+.qe-card{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-decoration:none;color:var(--text);transition:all 0.15s;background:#fff}
+.qe-card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(37,99,235,0.1);text-decoration:none}
+.qe-icon{font-size:26px;flex-shrink:0}
+.qe-text .qe-title{font-weight:700;font-size:15px;line-height:1.4}
+.qe-text .qe-desc{font-size:13px;color:var(--muted);line-height:1.5}
+/* 场景卡片 */
+.scene-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:20px 0 8px}
+.scene-card{border:1px solid var(--border);border-radius:var(--radius);padding:22px;background:linear-gradient(180deg,#fff,var(--panel))}
+.scene-card .sc-icon{font-size:30px;margin-bottom:10px}
+.scene-card .sc-title{font-weight:700;font-size:17px;margin-bottom:8px}
+.scene-card .sc-desc{font-size:14px;color:var(--muted);margin-bottom:12px}
+.scene-card .sc-link{font-size:14px;font-weight:600}
+/* 游戏卡片 */
 .game-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:20px 0 40px}
 .game-card{border:1px solid var(--border);border-radius:var(--radius);padding:22px;transition:all 0.15s;display:flex;flex-direction:column;text-decoration:none;color:var(--text)}
 .game-card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(37,99,235,0.1);text-decoration:none}
@@ -64,6 +79,17 @@ a:hover{text-decoration:underline}
 .game-card .gc-meta{font-size:13px;color:#9ca3af;border-top:1px solid var(--border);padding-top:10px;display:flex;justify-content:space-between}
 .game-card .gc-meta strong{color:var(--accent);font-weight:600}
 .section-intro{color:var(--muted);font-size:15px;margin:-8px 0 16px}
+/* 博客列表 */
+.blog-list{margin:20px 0 40px}
+.blog-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);align-items:flex-start}
+.blog-item:hover{text-decoration:none}
+.blog-item:hover .blog-title{color:var(--accent)}
+.blog-item:last-child{border-bottom:none}
+.blog-date{flex-shrink:0;width:86px;font-size:13px;color:#9ca3af;padding-top:2px}
+.blog-body{flex-grow:1}
+.blog-title{font-weight:700;font-size:16px;line-height:1.5;margin-bottom:4px}
+.blog-excerpt{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:6px}
+.blog-badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;background:#eff6ff;color:var(--accent);margin-right:6px}
 .faq-item{border-bottom:1px solid var(--border);padding:16px 0}
 .faq-item:last-child{border-bottom:none}
 .faq-q{font-weight:600;font-size:16px;margin-bottom:6px;color:var(--text)}
@@ -72,7 +98,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-si
 .footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .footer-inner a{color:var(--muted);text-decoration:none;margin-left:16px}
 .footer-inner a:hover{color:var(--accent)}
-@media (max-width:600px){h1{font-size:24px}h2{font-size:19px}.game-grid{grid-template-columns:1fr}nav a{margin-left:12px;font-size:13px}}
+@media (max-width:600px){h1{font-size:24px}h2{font-size:19px}.game-grid,.scene-grid{grid-template-columns:1fr}nav a{margin-left:12px;font-size:13px}.blog-date{width:70px}}
 </style>
 </head>
 <body>
@@ -92,11 +118,57 @@ footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-si
     游戏攻略
   </div>
   <h1>2026 游戏攻略大全</h1>
-  <p class="subtitle">8 款热门游戏的发售日、玩法、技巧与入门指南。持续更新。</p>
+  <p class="subtitle">8 款热门游戏 Hub + 22 篇攻略文章。发售信息、怎么玩、角色、Mod 解析，一站找齐。</p>
   <p class="update-date">最后更新：2026 年 10 月 3 日</p>
+
+  <div class="quick-entries">
+    <a href="#games" class="qe-card">
+      <div class="qe-icon">🎮</div>
+      <div class="qe-text"><div class="qe-title">游戏攻略 Hub</div><div class="qe-desc">8 款热门游戏，发售日与玩法总览</div></div>
+    </a>
+    <a href="#scenes" class="qe-card">
+      <div class="qe-icon">🌱</div>
+      <div class="qe-text"><div class="qe-title">新手入门</div><div class="qe-desc">怎么玩系列，5 分钟上手</div></div>
+    </a>
+    <a href="#blog" class="qe-card">
+      <div class="qe-icon">👥</div>
+      <div class="qe-text"><div class="qe-title">角色与 Mod</div><div class="qe-desc">角色大全、Phase 与 World Tour 解析</div></div>
+    </a>
+    <a href="#blog" class="qe-card">
+      <div class="qe-icon">📰</div>
+      <div class="qe-text"><div class="qe-title">最新文章</div><div class="qe-desc">22 篇攻略文章，按时间更新</div></div>
+    </a>
+  </div>
+
   <div class="ad-slot">Advertisement</div>
-  <p>本页收录 haowordtool 目前所有游戏攻略。每篇攻略独立成页，涵盖发售信息、核心玩法、新手技巧、常见错误和 FAQ。按游戏类型和状态分组，方便你快速找到需要的攻略。</p>
-  <h2>即将发售 · 大作</h2>
+
+  <h2 id="scenes">你是哪种玩家？</h2>
+  <p class="section-intro">按你的需求直达对应内容，不用翻整站。</p>
+  <div class="scene-grid">
+    <div class="scene-card">
+      <div class="sc-icon">🌱</div>
+      <div class="sc-title">刚入坑？先看怎么玩</div>
+      <div class="sc-desc">每款游戏一篇入门指南：操作、第一步做什么、新手最容易踩的坑。</div>
+      <a class="sc-link" href="/games/how-to-play-gta-6/">从 GTA 6 入门指南开始 →</a>
+    </div>
+    <div class="scene-card">
+      <div class="sc-icon">📈</div>
+      <div class="sc-title">想冲高分？看进阶技巧</div>
+      <div class="sc-desc">Hub 页里的核心机制、武器系统与常见错误，帮你突破瓶颈。</div>
+      <a class="sc-link" href="/games/block-blast/">Block Blast! 7 个核心策略 →</a>
+    </div>
+    <div class="scene-card">
+      <div class="sc-icon">🎭</div>
+      <div class="sc-title">角色党？看角色大全</div>
+      <div class="sc-desc">双主角、武器库、恐怖 Mod 角色与 World Tour 专属角色解析。</div>
+      <a class="sc-link" href="/games/sprunki-characters/">Sprunki 角色大全 →</a>
+    </div>
+  </div>
+
+  <h2 id="games">游戏攻略 Hub</h2>
+  <p class="section-intro">每款游戏一个 Hub：发售信息、核心玩法、新手技巧、FAQ 全收录。</p>
+
+  <h2 style="font-size:18px;border:none;margin:28px 0 8px;padding:0;display:block">即将发售 · 大作</h2>
   <p class="section-intro">2026 年秋季最受关注的几款大作，发售前先了解全部确认信息。</p>
   <div class="game-grid">
     <a href="/games/gta-6/" class="game-card">
@@ -120,8 +192,10 @@ footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-si
       <div class="gc-meta"><span>发售：<strong>2026.10.15</strong></span><span>PS5 / Xbox / Switch / PC</span></div>
     </a>
   </div>
+
   <div class="ad-slot">Advertisement</div>
-  <h2>长期热门 · 休闲</h2>
+
+  <h2 style="font-size:18px;border:none;margin:28px 0 8px;padding:0;display:block">长期热门 · 休闲</h2>
   <p class="section-intro">搜索需求稳定、长生命周期的休闲游戏，适合碎片时间。</p>
   <div class="game-grid">
     <a href="/games/block-blast/" class="game-card">
@@ -145,7 +219,104 @@ footer{border-top:1px solid var(--border);padding:32px 0;margin-top:40px;font-si
       <div class="gc-meta"><span>平台：<strong>iOS / Android / PC</strong></span><span>免费</span></div>
     </a>
   </div>
+
   <div class="ad-slot">Advertisement</div>
+
+  <h2 id="blog">最新文章</h2>
+  <p class="section-intro">全部攻略文章列表：怎么玩、角色大全、Mod 解析、World Tour 专页，按更新时间排序。</p>
+  <div class="blog-list">
+    <a href="/games/gta-6-characters/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">GTA 6 角色大全 — Jason 与 Lucia 双主角解析</div><div class="blog-excerpt">系列首款双主角：Jason Duval 与 Lucia Caminos 的切换机制、独立属性与剧情影响。</div><span class="blog-badge">角色</span><span class="blog-badge">GTA 6</span></div>
+    </a>
+    <a href="/games/phantom-blade-zero-characters/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Phantom Blade Zero 角色大全 — 魂、Boss 战与武器解析</div><div class="blog-excerpt">主角魂的背景、30+ 主武器、25 种影之武与四档难度下的配装思路。</div><span class="blog-badge">角色</span><span class="blog-badge">影之刃零</span></div>
+    </a>
+    <a href="/games/cod-modern-warfare-4-characters/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">COD: Modern Warfare 4 角色大全 — 朴玄俊与 33 种武器</div><div class="blog-excerpt">战役主角朴玄俊、33 种首发武器、Gunny 配枪系统与 Apex 配件解析。</div><span class="blog-badge">角色</span><span class="blog-badge">COD</span></div>
+    </a>
+    <a href="/games/castlevania-belmonts-curse-characters/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Castlevania: Belmont's Curse 角色大全 — Rose Belmont</div><div class="blog-excerpt">主角 Rose Belmont、神圣之光格挡、30+ 武器与魔导器系统全解析。</div><span class="blog-badge">角色</span><span class="blog-badge">恶魔城</span></div>
+    </a>
+    <a href="/games/sprunki-phase-6/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Sprunki Phase 6 攻略 — 猩红太阳主题</div><div class="blog-excerpt">The Scarlet Sun：火焰美学、独家音频库与 Coronal Mass Ejection 隐藏动画。</div><span class="blog-badge">Mod</span><span class="blog-badge">Sprunki</span></div>
+    </a>
+    <a href="/games/sprunki-phase-5/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Sprunki Phase 5 攻略 — Anti Shifted 恐怖系列</div><div class="blog-excerpt">Anti Shifted: Phase 5 等恐怖 mod 版本解析。内容警告：仅适合成年玩家。</div><span class="blog-badge">Mod</span><span class="blog-badge">Sprunki</span></div>
+    </a>
+    <a href="/games/subway-surfers-transylvania/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Subway Surfers 特兰西瓦尼亚 World Tour — 万圣节主题</div><div class="blog-excerpt">10 月 5 日–11 月 1 日：吸血鬼主题、哥特城堡场景与万圣节活动全解析。</div><span class="blog-badge">World Tour</span><span class="blog-badge">Subway</span></div>
+    </a>
+    <a href="/games/subway-surfers-bali/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Subway Surfers 巴厘岛 World Tour — 专属角色与活动</div><div class="blog-excerpt">热带海岛主题：专属角色 Lestari 与 Golden Guardian、限时任务全解析。</div><span class="blog-badge">World Tour</span><span class="blog-badge">Subway</span></div>
+    </a>
+    <a href="/games/how-to-play-gta-6/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">怎么玩 GTA 6 — 操作、角色与新手入门</div><div class="blog-excerpt">双主角切换、基础操作、新手第一步做什么、常见错误。</div><span class="blog-badge">怎么玩</span><span class="blog-badge">GTA 6</span></div>
+    </a>
+    <a href="/games/how-to-play-phantom-blade-zero/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">怎么玩 Phantom Blade Zero — 战斗、武器与入门</div><div class="blog-excerpt">Kungfupunk 战斗系统、武器切换、难度选择与新手技巧。</div><span class="blog-badge">怎么玩</span><span class="blog-badge">影之刃零</span></div>
+    </a>
+    <a href="/games/how-to-play-cod-modern-warfare-4/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">怎么玩 COD: Modern Warfare 4 — 操作、地图与配枪</div><div class="blog-excerpt">基础操作、12 张新地图要点、Gunny 配枪与新手模式推荐。</div><span class="blog-badge">怎么玩</span><span class="blog-badge">COD</span></div>
+    </a>
+    <a href="/games/how-to-play-castlevania-belmonts-curse/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">怎么玩 Castlevania: Belmont's Curse — 战斗与探索入门</div><div class="blog-excerpt">神圣之光格挡、鞭子三种用法、地图探索与新手路线。</div><span class="blog-badge">怎么玩</span><span class="blog-badge">恶魔城</span></div>
+    </a>
+    <a href="/games/how-to-play-block-blast/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">怎么玩 Block Blast! — 新手入门与高分技巧</div><div class="blog-excerpt">基础规则、连击机制、棋盘管理与突破 10 万分的 7 个策略。</div><span class="blog-badge">怎么玩</span><span class="blog-badge">Block Blast</span></div>
+    </a>
+    <a href="/games/how-to-play-sprunki/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">怎么玩 Sprunki — 音乐创作入门</div><div class="blog-excerpt">拖放混音、角色搭配、阶段变化与恐怖模式触发方式。</div><span class="blog-badge">怎么玩</span><span class="blog-badge">Sprunki</span></div>
+    </a>
+    <a href="/games/how-to-play-subway-surfers/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">怎么玩 Subway Surfers — 跑酷入门与高分策略</div><div class="blog-excerpt">基础操作、滑板时机、磁铁与喷气背包搭配、新手误区。</div><span class="blog-badge">怎么玩</span><span class="blog-badge">Subway</span></div>
+    </a>
+    <a href="/games/how-to-play-ludo-king/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">怎么玩 Ludo King — 规则与获胜策略</div><div class="blog-excerpt">基础规则、代币管理、安全格使用与锦标赛模式入门。</div><span class="blog-badge">怎么玩</span><span class="blog-badge">Ludo King</span></div>
+    </a>
+    <a href="/games/sprunki-characters/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Sprunki 角色大全 — 所有角色的声音与阶段</div><div class="blog-excerpt">20+ 角色的音色特点、Normal 与 Horror 阶段变化、混音搭配建议。</div><span class="blog-badge">角色</span><span class="blog-badge">Sprunki</span></div>
+    </a>
+    <a href="/games/sprunki-phase-3/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Sprunki Phase 3 攻略 — 暗黑风格 mod</div><div class="blog-excerpt">Phase 3 的暗黑视觉、角色变化与触发方式，新手入门恐怖 mod。</div><span class="blog-badge">Mod</span><span class="blog-badge">Sprunki</span></div>
+    </a>
+    <a href="/games/sprunki-phase-4/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Sprunki Phase 4 攻略 — 更多角色与恐怖阶段</div><div class="blog-excerpt">Phase 4 新增角色、更深的恐怖阶段与隐藏内容解析。</div><span class="blog-badge">Mod</span><span class="blog-badge">Sprunki</span></div>
+    </a>
+    <a href="/games/sprunki-wenda-treatment/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Sprunki Wenda Treatment — 粉丝 mod 解析</div><div class="blog-excerpt">Wenda 主题粉丝 mod：剧情、角色设计与玩法特色。</div><span class="blog-badge">Mod</span><span class="blog-badge">Sprunki</span></div>
+    </a>
+    <a href="/games/subway-surfers-characters/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Subway Surfers 角色大全 — 解锁与能力解析</div><div class="blog-excerpt">全部角色的解锁条件、专属滑板与能力搭配建议。</div><span class="blog-badge">角色</span><span class="blog-badge">Subway</span></div>
+    </a>
+    <a href="/games/subway-surfers-world-tour/" class="blog-item">
+      <div class="blog-date">10-03</div>
+      <div class="blog-body"><div class="blog-title">Subway Surfers World Tour 总览 — 2026 巡回日历</div><div class="blog-excerpt">2026 全年 World Tour 日历：城市主题、专属角色与限时活动汇总。</div><span class="blog-badge">World Tour</span><span class="blog-badge">Subway</span></div>
+    </a>
+  </div>
+
+  <div class="ad-slot">Advertisement</div>
+
   <h2>怎么用这些攻略</h2>
   <p>每篇攻略都按统一结构组织，方便快速定位：</p>
   <ul style="margin:0 0 16px 22px;color:#374151">
