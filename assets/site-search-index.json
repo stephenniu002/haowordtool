@@ -1,1865 +1,2441 @@
 [
-  {
-    "title": "About HaoWordStudio",
-    "url": "/about.html",
-    "description": "Who runs HaoWordStudio, what the site publishes, how its browser tools and practical tutorials are tested, and how corrections are handled.",
-    "keywords": ""
-  },
-  {
-    "title": "Customer center — HaoWordTool",
-    "url": "/account.html",
-    "description": "Sign in or create your HaoWordTool store account with an email verification code. View orders and manage your profile securely through Shopify.",
-    "keywords": ""
-  },
-  {
-    "title": "联盟产品工作台 | HaoWordTool",
-    "url": "/affiliate-dashboard.html",
-    "description": "管理 HaoWordTool 的 100 个联盟产品内容方向、Amazon ASIN 状态与 Fiverr 分流入口。",
-    "keywords": ""
-  },
-  {
-    "title": "Affiliate Marketing Landing Page | HaoWordTool",
-    "url": "/affiliate-marketing.html",
-    "description": "Turn AI video traffic from Pinterest, YouTube, TikTok and social channels into leads, follow-up conversations and paid offers with HaoWordTool.",
-    "keywords": ""
-  },
-  {
-    "title": "100 Products You Can Promote with AI | HaoWordTool",
-    "url": "/affiliate-products.html",
-    "description": "Browse 100 product ideas across 10 categories, each matched with an AI content, publishing and lead-follow-up workflow.",
-    "keywords": ""
-  },
-  {
-    "title": "一人公司 AI 工作流入口 | HaoWord Studio",
-    "url": "/ai-one-person-company-guide.html",
-    "description": "输入你的选题、产品和盈利目标，HaoWord 一人公司入口会把任务交给 n8n COO，生成内容获客、私域承接、成交交付和复盘优化的 AI 员工任务链。",
-    "keywords": ""
-  },
-  {
-    "title": "Word Patterns, Spelling & Puzzle Strategy Library",
-    "url": "/blog.html",
-    "description": "Browse 23 original guides to anagrams, spelling, vocabulary learning, crossword constraints, and word-game strategy.",
-    "keywords": ""
-  },
-  {
-    "title": "Your checkout — HaoWordTool",
-    "url": "/checkout.html",
-    "description": "Choose HaoWordTool products, review your order and continue to secure Shopify payment.",
-    "keywords": ""
-  },
-  {
-    "title": "Contact HaoWordStudio",
-    "url": "/contact.html",
-    "description": "Contact HaoWordStudio about tutorial corrections, broken examples, accessibility, privacy or product support.",
-    "keywords": ""
-  },
-  {
-    "title": "Custom Website Design and Template Setup | HaoWordStudio",
-    "url": "/custom-web-design.html",
-    "description": "Request a fixed-scope custom website: template setup from $79, a three-page business launch from $149, or a custom front-end build from $199.",
-    "keywords": ""
-  },
-  {
-    "title": "Editorial and Testing Standards | HaoWordStudio",
-    "url": "/editorial-standards.html",
-    "description": "How HaoWordStudio plans, tests, updates and corrects its software tutorials, examples and word-reference articles.",
-    "keywords": ""
-  },
-  {
-    "title": "Affiliate Marketing Funnel for Creators | HaoWordTool",
-    "url": "/en/affiliate-marketing.html",
-    "description": "Turn AI video traffic from Pinterest, YouTube, TikTok and social channels into leads, follow-up conversations and paid offers with HaoWordTool.",
-    "keywords": ""
-  },
-  {
-    "title": "AI Affiliate Product Ideas: 100 Visual Campaigns | HaoWordTool",
-    "url": "/en/affiliate-products.html",
-    "description": "Browse 100 product ideas across 10 categories, each matched with an AI content, publishing and lead-follow-up workflow.",
-    "keywords": ""
-  },
-  {
-    "title": "Online HTML, CSS & JavaScript Editor | HaoWord Studio",
-    "url": "/en/app-builder.html",
-    "description": "Run static HTML, CSS and JavaScript, preview mobile layouts and export a ZIP. Free browser workspace with step-by-step tutorials and a working sample.",
-    "keywords": ""
-  },
-  {
-    "title": "IELTS Academic Writing Task 2: Build a Clear Essay Plan | HaoWordStudio",
-    "url": "/en/ielts/academic-writing-task-2-plan.html",
-    "description": "A complete IELTS Academic Writing Task 2 planning lesson with an original practice question, position test, paragraph map, timed exercise and self-review checklist.",
-    "keywords": ""
-  },
-  {
-    "title": "Free IELTS Lessons for Writing and Speaking | HaoWordStudio",
-    "url": "/en/ielts/index.html",
-    "description": "Practice IELTS Writing Task 2 planning and Speaking Part 2 organization with original exercises, timed routines and self-review checklists.",
-    "keywords": ""
-  },
-  {
-    "title": "IELTS Speaking Part 2: Make a One-Minute Plan | HaoWordStudio",
-    "url": "/en/ielts/speaking-part-2-one-minute-plan.html",
-    "description": "Practice IELTS Speaking Part 2 with an original cue card, a timed one-minute note plan, a complete sample response and a recording checklist.",
-    "keywords": ""
-  },
-  {
-    "title": "Free creative tools & professional service guides | HaoWord Studio",
-    "url": "/en/index.html",
-    "description": "Create with free app and video tools. Compare logo design, website and video editing services with practical briefs and delivery checklists.",
-    "keywords": ""
-  },
-  {
-    "title": "AI website templates: how to choose, test and customize one | HaoWord Studio",
-    "url": "/en/learn/ai-website-templates.html",
-    "description": "Evaluate AI-generated website templates by structure, responsive behavior, interactions and export quality before using them for a real project.",
-    "keywords": ""
-  },
-  {
-    "title": "How to customize an HTML website template step by step | HaoWordStudio",
-    "url": "/en/learn/customize-html-template.html",
-    "description": "Customize a working HTML website template by replacing its text, colors, links and form behavior, then test the mobile layout and exported ZIP.",
-    "keywords": ""
-  },
-  {
-    "title": "How to export HTML, CSS and JavaScript as a working ZIP | HaoWord Studio",
-    "url": "/en/learn/export-html-css-js-zip.html",
-    "description": "Export a static project, extract it into a fresh folder and verify its files and interactions. Understand the difference between source files, hosting and an App installer.",
-    "keywords": ""
-  },
-  {
-    "title": "HTML, CSS and JavaScript online editor: a practical workflow | HaoWord Studio",
-    "url": "/en/learn/html-css-javascript-online-editor.html",
-    "description": "Use a browser editor to separate three files, run a real interactive page, diagnose common errors and export the result safely.",
-    "keywords": ""
-  },
-  {
-    "title": "Learn to run, preview and export a static web project | HaoWord Studio",
-    "url": "/en/learn/index.html",
-    "description": "Three hands-on HTML, CSS and JavaScript tutorials with a shared, downloadable daily-plan example.",
-    "keywords": ""
-  },
-  {
-    "title": "Landing page HTML template: build and test a working example | HaoWord Studio",
-    "url": "/en/learn/landing-page-html-template.html",
-    "description": "Create a responsive product landing page with semantic HTML, focused CSS and a working email validation interaction.",
-    "keywords": ""
-  },
-  {
-    "title": "Portfolio website source code: build a responsive personal site | HaoWord Studio",
-    "url": "/en/learn/portfolio-website-source-code.html",
-    "description": "Download and customize a complete portfolio example with project cards, accessible navigation and a working category filter.",
-    "keywords": ""
-  },
-  {
-    "title": "How to preview a webpage at mobile width | HaoWord Studio",
-    "url": "/en/learn/preview-mobile-webpage.html",
-    "description": "Use a 390px preview to test wrapping, forms and long task labels. Follow a responsive CSS example and learn what still needs a real phone test.",
-    "keywords": ""
-  },
-  {
-    "title": "How to run AI-generated HTML, CSS and JavaScript | HaoWord Studio",
-    "url": "/en/learn/run-ai-html.html",
-    "description": "Import a working daily-plan example, edit its heading and test real JavaScript interactions. Learn which AI code can run without a build step.",
-    "keywords": ""
-  },
-  {
-    "title": "How our recommendations and affiliate links work | HaoWord Studio",
-    "url": "/en/services/disclosure.html",
-    "description": "Understand our editorial guides, third-party links, affiliate commissions and service selection approach.",
-    "keywords": ""
-  },
-  {
-    "title": "Service guides: design, websites & video | HaoWord Studio",
-    "url": "/en/services/index.html",
-    "description": "Compare logo design, website and video editing options with practical briefs, delivery checklists and links to service providers.",
-    "keywords": ""
-  },
-  {
-    "title": "Logo & brand design buyer’s guide | HaoWord Studio",
-    "url": "/en/services/logo-design.html",
-    "description": "Understand the brief, source files and usage terms before hiring a logo designer.",
-    "keywords": ""
-  },
-  {
-    "title": "Video editing & captions buyer’s guide | HaoWord Studio",
-    "url": "/en/services/video-editing.html",
-    "description": "Define the footage, editing scope, caption languages and export formats in one brief.",
-    "keywords": ""
-  },
-  {
-    "title": "Websites & landing pages buyer’s guide | HaoWord Studio",
-    "url": "/en/services/website-design.html",
-    "description": "Compare templates, do-it-yourself tools and custom builds for your stage of business.",
-    "keywords": ""
-  },
-  {
-    "title": "Daily plan · HTML learning example",
-    "url": "/examples/daily-plan-en/index.html",
-    "description": "A free daily-plan example for importing HTML, CSS and JavaScript, checking mobile layouts and exporting a ZIP.",
-    "keywords": ""
-  },
-  {
-    "title": "每日计划 · 教程示例",
-    "url": "/examples/daily-plan/index.html",
-    "description": "用于学习 HTML、CSS 和 JavaScript 导入、手机预览与 ZIP 导出的免费示例。",
-    "keywords": ""
-  },
-  {
-    "title": "Northstar — landing-page example",
-    "url": "/examples/landing-page-en/index.html",
-    "description": "A working plain HTML, CSS and JavaScript landing-page example with an interactive email form.",
-    "keywords": ""
-  },
-  {
-    "title": "Alex Chen — portfolio example",
-    "url": "/examples/portfolio-en/index.html",
-    "description": "A working plain HTML, CSS and JavaScript portfolio example with accessible project filters.",
-    "keywords": ""
-  },
-  {
-    "title": "Frequently Asked Questions | Letter Solver Pro",
-    "url": "/faq.html",
-    "description": "Answers about exact anagrams, subsets, wildcard tiles, word lists, scores, privacy, missing words, and responsible use.",
-    "keywords": ""
-  },
-  {
-    "title": "Join the Fiverr Affiliate Program | HaoWordTool",
-    "url": "/fiverr-affiliate-program.html",
-    "description": "A dedicated Fiverr Affiliate Program recruitment page for creators, publishers and marketers.",
-    "keywords": ""
-  },
-  {
-    "title": "Fiverr Marketplace Services | HaoWordTool",
-    "url": "/fiverr-services.html",
-    "description": "Compare Fiverr Marketplace service paths for AI video, Pinterest, landing pages, social media and chatbots.",
-    "keywords": ""
-  },
-  {
-    "title": "Exact Anagram or Subset Search? Choose with Worked Examples | Letter Solver Pro",
-    "url": "/guides/anagram-solver-vs-word-finder.html",
-    "description": "Compare LISTEN, LIST and repeated-letter racks to choose the right search mode, understand length filters, and avoid positional-pattern mistakes.",
-    "keywords": ""
-  },
-  {
-    "title": "Use Anagrams for Spelling Practice Without Memorizing Noise | Letter Solver Pro",
-    "url": "/guides/anagrams-for-spelling-practice.html",
-    "description": "A classroom-ready routine that links letter order, sound, meaning, and recall.",
-    "keywords": ""
-  },
-  {
-    "title": "Common Letter Pairs and Clusters for Faster Solving | Letter Solver Pro",
-    "url": "/guides/common-letter-pairs-and-clusters.html",
-    "description": "Train your eye to group letters into useful chunks without inventing impossible spellings.",
-    "keywords": ""
-  },
-  {
-    "title": "Solve Crossword Constraints Step by Step | Letter Solver Pro",
-    "url": "/guides/crossword-constraints-step-by-step.html",
-    "description": "Combine pattern, clue type, tense, number, and crossings in a disciplined order.",
-    "keywords": ""
-  },
-  {
-    "title": "Why Word Lists Disagree—and How to Avoid False Positives | Letter Solver Pro",
-    "url": "/guides/dictionary-differences-and-false-positives.html",
-    "description": "Understand dictionary scope, inflections, names, abbreviations, and regional variation before trusting a result.",
-    "keywords": ""
-  },
-  {
-    "title": "A Better Method for Five-Letter Word Puzzles | Letter Solver Pro",
-    "url": "/guides/five-letter-word-solving-method.html",
-    "description": "Use position information, letter frequency, and contradiction tracking instead of chasing fashionable starter words.",
-    "keywords": ""
-  },
-  {
-    "title": "From Solver Result to Real Vocabulary | Letter Solver Pro",
-    "url": "/guides/from-solver-result-to-real-vocabulary.html",
-    "description": "A five-minute follow-up that turns a result list into words you can recognize and use.",
-    "keywords": ""
-  },
-  {
-    "title": "How an Anagram Algorithm Works | Letter Solver Pro",
-    "url": "/guides/how-anagram-algorithms-work.html",
-    "description": "A plain-language explanation of letter signatures, multisets, wildcards, filtering, and ranking.",
-    "keywords": ""
-  },
-  {
-    "title": "How to Unscramble Letters Systematically | Letter Solver Pro",
-    "url": "/guides/how-to-unscramble-letters-systematically.html",
-    "description": "A repeatable five-pass method for turning a mixed letter rack into useful words without relying on random guessing.",
-    "keywords": ""
-  },
-  {
-    "title": "Letter Frequency Without the Myths | Letter Solver Pro",
-    "url": "/guides/letter-frequency-without-myths.html",
-    "description": "How corpus frequency helps puzzle solving—and where simplistic frequency charts mislead.",
-    "keywords": ""
-  },
-  {
-    "title": "Plural -S and Past -ED in Letter Puzzles | Letter Solver Pro",
-    "url": "/guides/plural-s-and-ed-endings.html",
-    "description": "Use grammatical endings to expand a rack while avoiding forms that do not exist.",
-    "keywords": ""
-  },
-  {
-    "title": "Use Prefixes and Suffixes to Find Longer Anagrams | Letter Solver Pro",
-    "url": "/guides/prefixes-and-suffixes-for-anagrams.html",
-    "description": "A practical guide to treating affixes as structural clues rather than loose letter groups.",
-    "keywords": ""
-  },
-  {
-    "title": "Q Words Without U: Patterns, Meanings, and Game Use | Letter Solver Pro",
-    "url": "/guides/q-words-without-u-explained.html",
-    "description": "A short, usable reference to the unusual Q words that matter in English-language word games.",
-    "keywords": ""
-  },
-  {
-    "title": "Rack Management Between Turns | Letter Solver Pro",
-    "url": "/guides/rack-management-between-turns.html",
-    "description": "A practical framework for deciding what to play, keep, or exchange.",
-    "keywords": ""
-  },
-  {
-    "title": "Responsible Use of Word Solvers | Letter Solver Pro",
-    "url": "/guides/responsible-use-of-word-solvers.html",
-    "description": "When a solver teaches, when it spoils, and how to use one without undermining a game or assignment.",
-    "keywords": ""
-  },
-  {
-    "title": "Scrabble Letter Values: Score, Scarcity, and Opportunity | Letter Solver Pro",
-    "url": "/guides/scrabble-letter-values-explained.html",
-    "description": "Why a high-value tile is not always valuable, and how board multipliers change the calculation.",
-    "keywords": ""
-  },
-  {
-    "title": "Seven-Letter Bingo Strategy: From Rack to Play | Letter Solver Pro",
-    "url": "/guides/seven-letter-bingo-strategy.html",
-    "description": "How to identify bingo-friendly racks, preserve flexible letters, and compare score with board position.",
-    "keywords": ""
-  },
-  {
-    "title": "A 30-Day Word-Pattern Practice Plan | Letter Solver Pro",
-    "url": "/guides/thirty-day-word-pattern-practice.html",
-    "description": "Ten minutes a day to improve anagram speed, spelling awareness, and usable vocabulary.",
-    "keywords": ""
-  },
-  {
-    "title": "Reading the Vowel–Consonant Balance in a Letter Rack | Letter Solver Pro",
-    "url": "/guides/vowels-and-consonants-in-word-racks.html",
-    "description": "Learn what a rack’s vowel ratio tells you, when to search for a digraph, and how to rescue vowel-heavy or consonant-heavy combinations.",
-    "keywords": ""
-  },
-  {
-    "title": "How to Use Blank Tiles in a Word Unscrambler | Letter Solver Pro",
-    "url": "/guides/wildcard-blank-tile-strategy.html",
-    "description": "Work through CART? and LET?, identify the letters supplied by blanks, calculate their scores, and check your answers with three exercises.",
-    "keywords": ""
-  },
-  {
-    "title": "Learn Vocabulary Through Word Families | Letter Solver Pro",
-    "url": "/guides/word-families-for-vocabulary.html",
-    "description": "Turn one solved word into a durable network of meanings, forms, and collocations.",
-    "keywords": ""
-  },
-  {
-    "title": "Using Word Puzzles in an ESL Classroom | Letter Solver Pro",
-    "url": "/guides/word-puzzles-in-esl-classrooms.html",
-    "description": "Five activities that produce speaking and vocabulary practice instead of silent busywork.",
-    "keywords": ""
-  },
-  {
-    "title": "Words Ending in -ING: Spelling Rules You Can Actually Use | Letter Solver Pro",
-    "url": "/guides/words-ending-in-ing-guide.html",
-    "description": "A decision guide for adding -ing, including silent e, doubled consonants, and exceptions.",
-    "keywords": ""
-  },
-  {
-    "title": "How Letter Solver Pro Works: Matching, Ranking & Limits",
-    "url": "/how-it-works.html",
-    "description": "Read the exact matching method, wildcard behavior, ranking logic, dictionary scope, privacy model, and known limitations.",
-    "keywords": ""
-  },
-  {
-    "title": "IELTS English Course | HaoWordStudio",
-    "url": "/ielts-course.html",
-    "description": "Order the HaoWordStudio IELTS English course for private delivery through Google Drive after payment is confirmed.",
-    "keywords": ""
-  },
-  {
-    "title": "Haowordtool — Better Products, Smarter AI Tools",
-    "url": "/",
-    "description": "Explore physical products, AI tools and practical buying guides with Haowordtool. Better Products, Smarter AI Tools.",
-    "keywords": ""
-  },
-  {
-    "title": "Five Product Landing Pages — Design Preview | Haowordtool",
-    "url": "/landing-pages.html",
-    "description": "Explore five product landing page designs: bug zapper, pressure washer, vegetable cutter, spin scrubber and pet feeder. Interactive design preview.",
-    "keywords": ""
-  },
-  {
-    "title": "WhatsApp AI 自动回复机器人 | HaoWord Studio",
-    "url": "/local-ai.html",
-    "description": "查看 Ollama 本地 AI 采购询盘实测、演示视频及部署调试服务。先评估电脑和业务资料，再确认书面报价；WhatsApp 自动收发仍待联调。",
-    "keywords": ""
-  },
-  {
-    "title": "多平台视频发布检查清单 | HaoWord Studio",
-    "url": "/multi-platform-publishing-checklist.html",
-    "description": "多平台视频发布前的检查清单：素材、标题、标签、账号、发布时间、人工审批和复盘数据。",
-    "keywords": ""
-  },
-  {
-    "title": "产品与服务价格 | HaoWord Studio",
-    "url": "/pricing.html",
-    "description": "查看 HaoWord Studio 免费网页工具、$9 和 $29 模板包、IELTS 英语课程以及定制网站服务的价格、交付方式和购买流程。",
-    "keywords": ""
-  },
-  {
-    "title": "Privacy Policy | HaoWordStudio",
-    "url": "/privacy.html",
-    "description": "How HaoWordStudio handles browser-based searches, hosting logs, cookies, advertising, email, and user privacy choices.",
-    "keywords": ""
-  },
-  {
-    "title": "推荐与佣金说明 | HaoWord Studio",
-    "url": "/services/disclosure.html",
-    "description": "了解本站服务指南、第三方链接、联盟佣金及服务商选择标准。",
-    "keywords": ""
-  },
-  {
-    "title": "精选服务｜设计、建站与视频制作指南 | HaoWord Studio",
-    "url": "/services/index.html",
-    "description": "比较 Logo 设计、网站搭建和视频剪辑方案。查看交付清单、需求模板与第三方服务入口。",
-    "keywords": ""
-  },
-  {
-    "title": "Logo 与品牌设计选择指南 | HaoWord Studio",
-    "url": "/services/logo-design.html",
-    "description": "从品牌定位、源文件到商用范围，弄清一套 Logo 应该交付什么。",
-    "keywords": ""
-  },
-  {
-    "title": "视频剪辑与字幕选择指南 | HaoWord Studio",
-    "url": "/services/video-editing.html",
-    "description": "把素材整理、剪辑范围、字幕语言与导出规格写进同一份需求。",
-    "keywords": ""
-  },
-  {
-    "title": "网站与落地页选择指南 | HaoWord Studio",
-    "url": "/services/website-design.html",
-    "description": "比较模板、自助搭建与定制开发，找到适合当前业务阶段的方案。",
-    "keywords": ""
-  },
-  {
-    "title": "Multi-platform Social Publisher Setup | HaoWord Studio",
-    "url": "/social-publisher.html",
-    "description": "Request setup of social-auto-upload for Douyin (China), TikTok (international), Xiaohongshu (小红书), Bilibili, YouTube and more. A scoped installation service with platform checks and a practical handover.",
-    "keywords": ""
-  },
-  {
-    "title": "HTML Website Template Packs | HaoWordStudio",
-    "url": "/templates.html",
-    "description": "Buy responsive HTML, CSS and JavaScript website template packs with working source files, documentation and commercial-use licensing.",
-    "keywords": ""
-  },
-  {
-    "title": "Terms of Use | HaoWordStudio",
-    "url": "/terms.html",
-    "description": "Terms governing permitted use, accuracy limits, intellectual property, game rules, disclaimers, and changes.",
-    "keywords": ""
-  },
-  {
-    "title": "2026 Top 100 Viral Products for Affiliate Marketing | HaoWordTool",
-    "url": "/top-100-products-2026.html",
-    "description": "An original 2026 top 100 product-opportunity list for Pinterest, YouTube Shorts, TikTok and affiliate marketing content. Built for free-traffic testing and human-approved offers.",
-    "keywords": ""
-  },
-  {
-    "title": "Word Unscrambler & Exact Anagram Solver | Letter Solver Pro",
-    "url": "/unscrambler.html",
-    "description": "Find common English words from up to 15 letters, filter by length, use wildcards, and understand the transparent letter-count algorithm.",
-    "keywords": ""
-  },
-  {
-    "title": "HaoWordStudio Video Guides: Edit, Test, Export and Buy Templates",
-    "url": "/videos.html",
-    "description": "Watch five narrated HaoWordStudio guides showing how to run AI website code, edit files, test mobile layouts, export a ZIP and order template packs.",
-    "keywords": ""
-  },
-  {
-    "title": "Solar Bug Zapper",
-    "titleZh": "太阳能灭蚊灯",
-    "url": "/landing-pages.html#bug-zapper",
-    "description": "Explore an outdoor bug-zapper concept.",
-    "descriptionZh": "了解户外灭蚊灯的产品概念。",
-    "keywords": "商品 产品 预览"
-  },
-  {
-    "title": "Cordless Pressure Washer",
-    "titleZh": "无线高压清洗机",
-    "url": "/landing-pages.html#pressure-washer",
-    "description": "Explore cordless cleaning for outdoor jobs.",
-    "descriptionZh": "了解户外无线清洗方案。",
-    "keywords": "商品 产品 预览"
-  },
-  {
-    "title": "Electric Vegetable Cutter",
-    "titleZh": "电动切菜机",
-    "url": "/landing-pages.html#veggie-cutter",
-    "description": "Explore a compact kitchen-prep concept.",
-    "descriptionZh": "了解小巧的厨房备菜工具概念。",
-    "keywords": "商品 产品 预览"
-  },
-  {
-    "title": "Electric Spin Scrubber",
-    "titleZh": "电动旋转清洁刷",
-    "url": "/landing-pages.html#spin-scrubber",
-    "description": "Explore a powered brush for everyday cleaning.",
-    "descriptionZh": "了解适合日常清洁的电动刷。",
-    "keywords": "商品 产品 预览"
-  },
-  {
-    "title": "Smart Pet Feeder",
-    "titleZh": "智能宠物喂食器",
-    "url": "/landing-pages.html#pet-feeder",
-    "description": "Explore scheduled feeding with a camera.",
-    "descriptionZh": "了解带摄像头的定时喂食方案。",
-    "keywords": "商品 产品 预览"
-  },
-  {
-    "title": "Reviews — editorial previews",
-    "titleZh": "评测 — 编辑预览",
-    "url": "/reviews.html",
-    "description": "Ten unverified product and AI review previews.",
-    "keywords": "测评 比较 产品 AI"
-  },
-  {
-    "title": "Exploring Bug Zappers",
-    "url": "/reviews.html#bug-zapper",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 bug-zapper"
-  },
-  {
-    "title": "Exploring Noise-Cancelling Earbuds",
-    "url": "/reviews.html#anc-earbuds",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 anc-earbuds"
-  },
-  {
-    "title": "Exploring Fitness Bands",
-    "url": "/reviews.html#fitness-band",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 fitness-band"
-  },
-  {
-    "title": "Exploring Mini Projectors for Bedroom Movie Nights",
-    "url": "/reviews.html#mini-projector",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 mini-projector"
-  },
-  {
-    "title": "Exploring Air Purifiers for Small Rooms",
-    "url": "/reviews.html#air-purifier",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 air-purifier"
-  },
-  {
-    "title": "Exploring Electric Spin Scrubbers",
-    "url": "/reviews.html#spin-scrubber",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 spin-scrubber"
-  },
-  {
-    "title": "Exploring Cordless Pressure Washers",
-    "url": "/reviews.html#pressure-washer",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 pressure-washer"
-  },
-  {
-    "title": "Exploring AI Product Photo Generators for E-commerce",
-    "url": "/reviews.html#ai-product-photos",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 ai-product-photos"
-  },
-  {
-    "title": "Exploring AI UGC Video Ad Generators",
-    "url": "/reviews.html#ugc-video-ads",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 ugc-video-ads"
-  },
-  {
-    "title": "Exploring AI Chatbots for E-commerce",
-    "url": "/reviews.html#ai-chatbot",
-    "description": "Review preview. Scores, specifications and prices are unverified.",
-    "keywords": "reviews 评测 预览 ai-chatbot"
-  },
-  {
-    "title": "HaoWordTool AI Studio",
-    "url": "/ai-tools.html",
-    "description": "Product photo, video and voiceover project packages.",
-    "keywords": "AI 商品图 视频 配音 自营 制作 套餐"
-  },
-  {
-    "title": "AI Product Photos",
-    "url": "/ai-tools.html#product-photos",
-    "description": "5 product scene images; one revision.",
-    "keywords": "HaoWordTool AI Studio Product photos, brand details and scene requirements"
-  },
-  {
-    "title": "AI Product Video",
-    "url": "/ai-tools.html#product-video",
-    "description": "One 15-second product video; one revision.",
-    "keywords": "HaoWordTool AI Studio Product assets, selling points and target language"
-  },
-  {
-    "title": "AI Voiceover",
-    "url": "/ai-tools.html#voiceover",
-    "description": "One voiceover, up to 300 words; one revision.",
-    "keywords": "HaoWordTool AI Studio Final script, language and voice style"
-  },
-  {
-    "title": "AI creative workspace",
-    "url": "/ai-workspace.html",
-    "description": "Prepare your project brief and access your store account.",
-    "keywords": "工作台 项目 订单 素材 下载"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/premium-digital-products.html#dimple-dumpling",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/premium-digital-products.html#momo-shelf-ghost",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/premium-digital-products.html#ghost-granny-square",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/premium-digital-products.html#willow-market-bag",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/premium-digital-products.html#annual-budget",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/premium-digital-products.html#finance-dashboard",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/premium-digital-products.html#wedding-planner",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "Digital products | HaoWordTool",
-    "url": "/premium-digital-products.html",
-    "description": "Minimal digital products from HaoWordTool, each with its own product page and PayPal checkout link.",
-    "keywords": "digital products templates crochet budget planner 数字商品 模板"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/premium-digital/dimple-dumpling.html",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/premium-digital/momo-shelf-ghost.html",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/premium-digital/ghost-granny-square.html",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/premium-digital/willow-market-bag.html",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/premium-digital/annual-budget.html",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/premium-digital/finance-dashboard.html",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/premium-digital/wedding-planner.html",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "数字商品 | HaoWordTool",
-    "url": "/zh/premium-digital-products.html",
-    "description": "HaoWordTool 数字商品，每个商品都有独立页面和 PayPal 付款链接。",
-    "keywords": "digital products templates crochet budget planner 数字商品 模板"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/zh/premium-digital/dimple-dumpling.html",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/zh/premium-digital/momo-shelf-ghost.html",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/zh/premium-digital/ghost-granny-square.html",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/zh/premium-digital/willow-market-bag.html",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/zh/premium-digital/annual-budget.html",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/zh/premium-digital/finance-dashboard.html",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/zh/premium-digital/wedding-planner.html",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "デジタル商品 | HaoWordTool",
-    "url": "/ja/premium-digital-products.html",
-    "description": "HaoWordTool のデジタル商品。各商品に個別ページと PayPal 決済リンクがあります。",
-    "keywords": "digital products templates crochet budget planner 数字商品 模板"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/ja/premium-digital/dimple-dumpling.html",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/ja/premium-digital/momo-shelf-ghost.html",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/ja/premium-digital/ghost-granny-square.html",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/ja/premium-digital/willow-market-bag.html",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/ja/premium-digital/annual-budget.html",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/ja/premium-digital/finance-dashboard.html",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/ja/premium-digital/wedding-planner.html",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "Produits numériques | HaoWordTool",
-    "url": "/fr/premium-digital-products.html",
-    "description": "Produits numériques HaoWordTool avec une page produit et un lien PayPal distincts pour chaque article.",
-    "keywords": "digital products templates crochet budget planner 数字商品 模板"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/fr/premium-digital/dimple-dumpling.html",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/fr/premium-digital/momo-shelf-ghost.html",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/fr/premium-digital/ghost-granny-square.html",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/fr/premium-digital/willow-market-bag.html",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/fr/premium-digital/annual-budget.html",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/fr/premium-digital/finance-dashboard.html",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/fr/premium-digital/wedding-planner.html",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "Digitale Produkte | HaoWordTool",
-    "url": "/de/premium-digital-products.html",
-    "description": "Digitale Produkte von HaoWordTool, jeweils mit eigener Produktseite und eigenem PayPal-Zahlungslink.",
-    "keywords": "digital products templates crochet budget planner 数字商品 模板"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/de/premium-digital/dimple-dumpling.html",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/de/premium-digital/momo-shelf-ghost.html",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/de/premium-digital/ghost-granny-square.html",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/de/premium-digital/willow-market-bag.html",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/de/premium-digital/annual-budget.html",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/de/premium-digital/finance-dashboard.html",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/de/premium-digital/wedding-planner.html",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "Productos digitales | HaoWordTool",
-    "url": "/es/premium-digital-products.html",
-    "description": "Productos digitales de HaoWordTool, cada uno con su propia página y enlace de pago PayPal.",
-    "keywords": "digital products templates crochet budget planner 数字商品 模板"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/es/premium-digital/dimple-dumpling.html",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/es/premium-digital/momo-shelf-ghost.html",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/es/premium-digital/ghost-granny-square.html",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/es/premium-digital/willow-market-bag.html",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/es/premium-digital/annual-budget.html",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/es/premium-digital/finance-dashboard.html",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/es/premium-digital/wedding-planner.html",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "디지털 상품 | HaoWordTool",
-    "url": "/ko/premium-digital-products.html",
-    "description": "HaoWordTool 디지털 상품입니다. 각 상품은 독립 페이지와 PayPal 결제 링크를 가집니다.",
-    "keywords": "digital products templates crochet budget planner 数字商品 模板"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/ko/premium-digital/dimple-dumpling.html",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/ko/premium-digital/momo-shelf-ghost.html",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/ko/premium-digital/ghost-granny-square.html",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/ko/premium-digital/willow-market-bag.html",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/ko/premium-digital/annual-budget.html",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/ko/premium-digital/finance-dashboard.html",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/ko/premium-digital/wedding-planner.html",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "Цифровые товары | HaoWordTool",
-    "url": "/ru/premium-digital-products.html",
-    "description": "Цифровые товары HaoWordTool: у каждого товара отдельная страница и отдельная ссылка PayPal.",
-    "keywords": "digital products templates crochet budget planner 数字商品 模板"
-  },
-  {
-    "title": "Dimple 小笼包玩偶",
-    "url": "/ru/premium-digital/dimple-dumpling.html",
-    "description": "免缝合钩针玩偶图解. $5.80.",
-    "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
-  },
-  {
-    "title": "MOMO 置物架幽灵",
-    "url": "/ru/premium-digital/momo-shelf-ghost.html",
-    "description": "可爱万圣节钩针图解. $9.24.",
-    "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
-  },
-  {
-    "title": "幽灵祖母方格",
-    "url": "/ru/premium-digital/ghost-granny-square.html",
-    "description": "钩针图解 + 视频教程. $16.00.",
-    "keywords": "视频教程 幽灵祖母方格 digital product"
-  },
-  {
-    "title": "Willow 网眼购物袋",
-    "url": "/ru/premium-digital/willow-market-bag.html",
-    "description": "适合新手的钩针图解. $13.00.",
-    "keywords": "日常钩针 Willow 网眼购物袋 digital product"
-  },
-  {
-    "title": "年度预算模板",
-    "url": "/ru/premium-digital/annual-budget.html",
-    "description": "Google Sheets 与 Excel 模板. $20.28.",
-    "keywords": "电子表格模板 年度预算模板 digital product"
-  },
-  {
-    "title": "个人财务看板",
-    "url": "/ru/premium-digital/finance-dashboard.html",
-    "description": "预算与资金追踪工具. $24.00.",
-    "keywords": "财务看板 个人财务看板 digital product"
-  },
-  {
-    "title": "婚礼策划模板",
-    "url": "/ru/premium-digital/wedding-planner.html",
-    "description": "可打印与数字模板. $18.00.",
-    "keywords": "计划模板 婚礼策划模板 digital product"
-  },
-  {
-    "title": "Fiverr AI Services | HaoWordTool",
-    "url": "/fiverr-ai-services.html",
-    "description": "A HaoWordTool guide to hiring Fiverr freelancers for product photos, videos, voiceovers, landing pages and trending business services.",
-    "keywords": "fiverr ai services freelance product photos product video voiceover landing page affiliate marketplace"
-  },
-  {
-    "title": "SKILL BANK",
-    "titleZh": "SKILL BANK 技能库",
-    "description": "100 original AI workflow kits for creators, marketers and technical teams.",
-    "descriptionZh": "100个独立AI技能，含工作流程、模板、案例与质量标准。",
-    "keywords": "skills skill bank workflow templates 技能库",
-    "url": "/skill-bank.html"
-  },
-  {
-    "title": "Agent Session Handoff",
-    "titleZh": "智能体会话交接",
-    "description": "Turn session notes, changed files, test results into a restart brief with the next executable action.",
-    "descriptionZh": "整理当前进度、已改文件和未完成测试，生成可接着执行的交接单",
-    "keywords": "skill bank Agent Operations",
-    "url": "/skill-bank.html#agent-session-handoff"
-  },
-  {
-    "title": "Project Memory Curator",
-    "titleZh": "项目记忆整理",
-    "description": "Turn dated decisions, corrections, project constraints into a compact memory proposal with provenance.",
-    "descriptionZh": "归并项目决策，标注冲突、适用范围和被新决定替代的旧规则",
-    "keywords": "skill bank Agent Operations",
-    "url": "/skill-bank.html#project-memory-curator"
-  },
-  {
-    "title": "Agent Workspace Setup Brief",
-    "titleZh": "智能体工作区配置规划",
-    "description": "Turn agent names, operating system, repo tooling, allowed integrations into a capability matrix and reversible setup plan.",
-    "descriptionZh": "对照操作系统和现有工具，列出必要配置、可选插件与验证步骤",
-    "keywords": "skill bank Agent Operations",
-    "url": "/skill-bank.html#agent-workspace-setup-brief"
-  },
-  {
-    "title": "Task Scope Calibrator",
-    "titleZh": "开发任务范围判断",
-    "description": "Turn requested change, affected modules, operational risk into a proportionate implementation and verification brief.",
-    "descriptionZh": "从用户可见行为划定修改范围，并选择相称的验证方法",
-    "keywords": "skill bank Agent Operations",
-    "url": "/skill-bank.html#task-scope-calibrator"
-  },
-  {
-    "title": "Agent Review Evidence Ledger",
-    "titleZh": "智能体验收证据台账",
-    "description": "Turn diff summary, commands run, logs, open issues into an evidence table supporting a completion decision.",
-    "descriptionZh": "把完成声明逐项对应到实际日志、文件和测试结果",
-    "keywords": "skill bank Agent Operations",
-    "url": "/skill-bank.html#agent-review-evidence-ledger"
-  },
-  {
-    "title": "Product Demo Shot Planner",
-    "titleZh": "产品演示分镜规划",
-    "description": "Turn product screenshots, real features, duration, aspect ratio into a timecoded product demonstration shot list.",
-    "descriptionZh": "把真实产品功能编排成有时码的演示镜头清单",
-    "keywords": "skill bank Video Production",
-    "url": "/skill-bank.html#product-demo-shot-planner"
-  },
-  {
-    "title": "Motion Timing Sheet",
-    "titleZh": "动效帧级时间表",
-    "description": "Turn approved storyboard, frame rate, clip length into a frame-accurate animation timing table.",
-    "descriptionZh": "把分镜时长换算成帧，安排动画进入、停留和退出",
-    "keywords": "skill bank Video Production",
-    "url": "/skill-bank.html#motion-timing-sheet"
-  },
-  {
-    "title": "Screen Recording Edit Brief",
-    "titleZh": "录屏剪辑执行单",
-    "description": "Turn screen recording transcript, important clicks, target length into an edit decision list that keeps actions understandable.",
-    "descriptionZh": "识别录屏中的关键动作，输出保留、删减和强调位置",
-    "keywords": "skill bank Video Production",
-    "url": "/skill-bank.html#screen-recording-edit-brief"
-  },
-  {
-    "title": "Video Asset Readiness Audit",
-    "titleZh": "视频素材就绪检查",
-    "description": "Turn shot list, asset inventory, licenses, export settings into an asset gap report and render-readiness checklist.",
-    "descriptionZh": "逐镜头核对素材文件、分辨率、字体、音频和使用权限",
-    "keywords": "skill bank Video Production",
-    "url": "/skill-bank.html#video-asset-readiness-audit"
-  },
-  {
-    "title": "Square to Vertical Storyboard",
-    "titleZh": "方屏转竖屏分镜",
-    "description": "Turn approved square video, safe-area constraints, vertical destination into a 9:16 reframing and pacing plan.",
-    "descriptionZh": "逐镜头选择裁切、重排或留边，并调整文字和停留时间",
-    "keywords": "skill bank Video Production",
-    "url": "/skill-bank.html#square-to-vertical-storyboard"
-  },
-  {
-    "title": "Multi Model Answer Rubric",
-    "titleZh": "多模型回答评分",
-    "description": "Turn three model responses, source packet, task success criteria into a blind comparison with evidence-based scores.",
-    "descriptionZh": "隐藏模型名称，按证据、准确性和任务要求比较回答",
-    "keywords": "skill bank AI Workspaces",
-    "url": "/skill-bank.html#multi-model-answer-rubric"
-  },
-  {
-    "title": "Assistant Role Brief Designer",
-    "titleZh": "专用助手角色设计",
-    "description": "Turn recurring task, allowed sources, output examples into a focused assistant instruction brief.",
-    "descriptionZh": "为一个反复出现的任务定义输入、职责、输出和边界",
-    "keywords": "skill bank AI Workspaces",
-    "url": "/skill-bank.html#assistant-role-brief-designer"
-  },
-  {
-    "title": "Prompt Experiment Notebook",
-    "titleZh": "提示词实验记录",
-    "description": "Turn baseline prompt, test inputs, candidate change into a reproducible prompt comparison record.",
-    "descriptionZh": "固定测试输入和评分规则，记录单一提示词改动的效果",
-    "keywords": "skill bank AI Workspaces",
-    "url": "/skill-bank.html#prompt-experiment-notebook"
-  },
-  {
-    "title": "Knowledge Chat Source Check",
-    "titleZh": "知识问答来源核验",
-    "description": "Turn question, retrieved passages, draft response into an answer with claim-to-source mappings.",
-    "descriptionZh": "逐条核对回答中的事实是否被给定来源直接支持",
-    "keywords": "skill bank AI Workspaces",
-    "url": "/skill-bank.html#knowledge-chat-source-check"
-  },
-  {
-    "title": "AI Workspace Migration Checklist",
-    "titleZh": "AI工作区迁移检查",
-    "description": "Turn old client inventory, export formats, destination features into a migration map and smoke-test plan.",
-    "descriptionZh": "分别梳理提示词、对话、附件和知识库的迁移方式",
-    "keywords": "skill bank AI Workspaces",
-    "url": "/skill-bank.html#ai-workspace-migration-checklist"
-  },
-  {
-    "title": "Series Continuity Ledger",
-    "titleZh": "长篇小说连续性台账",
-    "description": "Turn chapter summaries, character facts, timeline into a canon ledger with conflicts and unresolved threads.",
-    "descriptionZh": "整理人物事实、事件时间线、秘密知情范围与冲突",
-    "keywords": "skill bank Fiction Writing",
-    "url": "/skill-bank.html#series-continuity-ledger"
-  },
-  {
-    "title": "Chapter Promise Planner",
-    "titleZh": "章节承诺与推进规划",
-    "description": "Turn previous ending, active plot threads, desired chapter length into a scene outline that pays off one reader promise.",
-    "descriptionZh": "承接上一章悬念，安排本章实质推进和结尾后果",
-    "keywords": "skill bank Fiction Writing",
-    "url": "/skill-bank.html#chapter-promise-planner"
-  },
-  {
-    "title": "Character Voice Contrast",
-    "titleZh": "人物对白差异设计",
-    "description": "Turn dialogue samples, character background, scene objective into a voice matrix and revised dialogue sample.",
-    "descriptionZh": "比较人物句式、用词和应对压力的方式，修改对白",
-    "keywords": "skill bank Fiction Writing",
-    "url": "/skill-bank.html#character-voice-contrast"
-  },
-  {
-    "title": "Foreshadowing Payoff Map",
-    "titleZh": "伏笔回收对照表",
-    "description": "Turn manuscript outline, planted clues, planned reveals into a clue-to-payoff table with reader visibility.",
-    "descriptionZh": "把已出现的线索对应到后续揭示，标记遗漏和突兀反转",
-    "keywords": "skill bank Fiction Writing",
-    "url": "/skill-bank.html#foreshadowing-payoff-map"
-  },
-  {
-    "title": "Scene Revision Diagnostic",
-    "titleZh": "小说场景修订诊断",
-    "description": "Turn one scene, intended emotion, viewpoint rules into an annotated revision plan plus a short revised excerpt.",
-    "descriptionZh": "检查场景目标、阻力、视角和叙述，给出局部修订示例",
-    "keywords": "skill bank Fiction Writing",
-    "url": "/skill-bank.html#scene-revision-diagnostic"
-  },
-  {
-    "title": "Repository Architecture Map",
-    "titleZh": "代码仓库架构地图",
-    "description": "Turn repository tree, entry points, deployment notes into a component diagram with evidence-linked edges.",
-    "descriptionZh": "从入口和模块证据还原组件及调用关系",
-    "keywords": "skill bank Architecture Diagrams",
-    "url": "/skill-bank.html#repository-architecture-map"
-  },
-  {
-    "title": "Request Journey Diagram",
-    "titleZh": "请求链路时序图",
-    "description": "Turn endpoint handler, middleware, service calls into a request sequence with failure branches.",
-    "descriptionZh": "追踪一次请求的鉴权、调用、事务和异步副作用",
-    "keywords": "skill bank Architecture Diagrams",
-    "url": "/skill-bank.html#request-journey-diagram"
-  },
-  {
-    "title": "Data Lifecycle Diagram",
-    "titleZh": "数据生命周期图",
-    "description": "Turn data sources, stores, retention policy, export paths into a data lifecycle map with ownership and deletion paths.",
-    "descriptionZh": "梳理数据采集、转换、复制、存储和删除的流向",
-    "keywords": "skill bank Architecture Diagrams",
-    "url": "/skill-bank.html#data-lifecycle-diagram"
-  },
-  {
-    "title": "Integration Boundary Map",
-    "titleZh": "系统集成边界图",
-    "description": "Turn systems list, credentials model, event schemas into a boundary diagram and interface inventory.",
-    "descriptionZh": "标记系统归属、数据方向、传输方式和重试去重责任",
-    "keywords": "skill bank Architecture Diagrams",
-    "url": "/skill-bank.html#integration-boundary-map"
-  },
-  {
-    "title": "Deployment Topology Brief",
-    "titleZh": "部署拓扑说明",
-    "description": "Turn deployment manifests, regions, dependencies into an environment-specific topology with open questions.",
-    "descriptionZh": "按一个具体环境区分服务、实例、公共入口和依赖",
-    "keywords": "skill bank Architecture Diagrams",
-    "url": "/skill-bank.html#deployment-topology-brief"
-  },
-  {
-    "title": "Knowledge Corpus Intake",
-    "titleZh": "知识库资料入库规划",
-    "description": "Turn document inventory, intended questions, access scopes into an ingestion plan with document IDs and provenance.",
-    "descriptionZh": "给文档分配稳定ID，记录权威性、权限和时效",
-    "keywords": "skill bank Knowledge Systems",
-    "url": "/skill-bank.html#knowledge-corpus-intake"
-  },
-  {
-    "title": "Entity Resolution Review",
-    "titleZh": "知识图谱实体消歧",
-    "description": "Turn entity mentions, source IDs, candidate links into an entity merge proposal with confidence and evidence.",
-    "descriptionZh": "根据证据判断相似名称是否属于同一实体",
-    "keywords": "skill bank Knowledge Systems",
-    "url": "/skill-bank.html#entity-resolution-review"
-  },
-  {
-    "title": "Retrieval Evaluation Set",
-    "titleZh": "检索评估题集设计",
-    "description": "Turn corpus snapshot, representative questions, correct sources into a labeled retrieval benchmark with hard negatives.",
-    "descriptionZh": "编写可回答、无答案和近似干扰问题，并标注正确来源",
-    "keywords": "skill bank Knowledge Systems",
-    "url": "/skill-bank.html#retrieval-evaluation-set"
-  },
-  {
-    "title": "Knowledge Freshness Audit",
-    "titleZh": "知识时效巡检",
-    "description": "Turn stored claims, source dates, update cadence into a refresh queue ranked by decision impact.",
-    "descriptionZh": "识别易变事实，比较来源日期并形成刷新队列",
-    "keywords": "skill bank Knowledge Systems",
-    "url": "/skill-bank.html#knowledge-freshness-audit"
-  },
-  {
-    "title": "Evidence Linked Answer Builder",
-    "titleZh": "证据关联回答编写",
-    "description": "Turn user question, source snippets, audience into a concise answer with citations and uncertainty boundaries.",
-    "descriptionZh": "用给定材料构建回答，并逐句关联证据和不确定性",
-    "keywords": "skill bank Knowledge Systems",
-    "url": "/skill-bank.html#evidence-linked-answer-builder"
-  },
-  {
-    "title": "Long Task Checkpoint Kit",
-    "titleZh": "长任务断点续办",
-    "description": "Turn goal, current files, completed steps, blockers into a restartable checkpoint with completion conditions.",
-    "descriptionZh": "记录目标、最后验证状态、完成条件和下一步操作",
-    "keywords": "skill bank Persistent Planning",
-    "url": "/skill-bank.html#long-task-checkpoint-kit"
-  },
-  {
-    "title": "Research Findings Register",
-    "titleZh": "研究发现登记",
-    "description": "Turn research question, sources, notes, contradictory findings into a findings register with confidence and open questions.",
-    "descriptionZh": "按结论合并来源，保留反例、置信度和待解问题",
-    "keywords": "skill bank Persistent Planning",
-    "url": "/skill-bank.html#research-findings-register"
-  },
-  {
-    "title": "Project Blocker Triage",
-    "titleZh": "项目阻塞项分诊",
-    "description": "Turn task list, dependencies, recent failures into a ranked blocker board with unblock actions.",
-    "descriptionZh": "区分真正依赖外部条件的阻塞与尚未完成的工作",
-    "keywords": "skill bank Persistent Planning",
-    "url": "/skill-bank.html#project-blocker-triage"
-  },
-  {
-    "title": "Decision Log Maintainer",
-    "titleZh": "决策日志维护",
-    "description": "Turn options considered, constraints, decisions, dates into a concise architectural or product decision log.",
-    "descriptionZh": "记录选项、取舍、后果和重新评估的触发条件",
-    "keywords": "skill bank Persistent Planning",
-    "url": "/skill-bank.html#decision-log-maintainer"
-  },
-  {
-    "title": "Completion Gate Designer",
-    "titleZh": "交付完成标准设计",
-    "description": "Turn task objective, deliverables, risk level into an evidence-based done checklist.",
-    "descriptionZh": "把目标转成可观察的交付条件和所需证据",
-    "keywords": "skill bank Persistent Planning",
-    "url": "/skill-bank.html#completion-gate-designer"
-  },
-  {
-    "title": "Design Brief Translator",
-    "titleZh": "设计需求转译",
-    "description": "Turn business goal, audience, reference screenshots into a buildable design brief with constraints.",
-    "descriptionZh": "把抽象风格要求转成布局、交互、素材和验收约束",
-    "keywords": "skill bank Product Design",
-    "url": "/skill-bank.html#design-brief-translator"
-  },
-  {
-    "title": "Dashboard Information Hierarchy",
-    "titleZh": "运营看板信息排序",
-    "description": "Turn metrics, user decisions, update cadence into a dashboard layout and metric dictionary.",
-    "descriptionZh": "根据用户要做的决策排列指标，并定义单位和更新状态",
-    "keywords": "skill bank Product Design",
-    "url": "/skill-bank.html#dashboard-information-hierarchy"
-  },
-  {
-    "title": "Prototype State Matrix",
-    "titleZh": "原型状态矩阵",
-    "description": "Turn screens, user actions, data dependencies into a complete interaction state matrix.",
-    "descriptionZh": "补齐加载、空白、错误、成功及恢复操作等界面状态",
-    "keywords": "skill bank Product Design",
-    "url": "/skill-bank.html#prototype-state-matrix"
-  },
-  {
-    "title": "Brand Token Extractor",
-    "titleZh": "品牌设计变量提取",
-    "description": "Turn approved brand assets, current UI screenshots into a token proposal with provenance and usage rules.",
-    "descriptionZh": "从已认可素材识别颜色、间距和组件角色，输出变量建议",
-    "keywords": "skill bank Product Design",
-    "url": "/skill-bank.html#brand-token-extractor"
-  },
-  {
-    "title": "Pitch Deck Story Architect",
-    "titleZh": "路演幻灯片叙事",
-    "description": "Turn product facts, audience, evidence, desired action into a slide narrative with proof and asset requests.",
-    "descriptionZh": "围绕观众决策安排页面顺序、证据和素材需求",
-    "keywords": "skill bank Product Design",
-    "url": "/skill-bank.html#pitch-deck-story-architect"
-  },
-  {
-    "title": "Transcript to Clip Map",
-    "titleZh": "长视频精彩片段定位",
-    "description": "Turn timecoded transcript, audience, clip duration into a shortlist of self-contained clips with cut points.",
-    "descriptionZh": "从带时间码的文字稿挑选完整、可独立理解的片段",
-    "keywords": "skill bank Creator Workflows",
-    "url": "/skill-bank.html#transcript-to-clip-map"
-  },
-  {
-    "title": "Subtitle Localization Brief",
-    "titleZh": "字幕本地化方案",
-    "description": "Turn source subtitles, target locale, glossary into localized subtitle text with timing concerns.",
-    "descriptionZh": "结合目标地区和术语表调整字幕，并标记阅读时长问题",
-    "keywords": "skill bank Creator Workflows",
-    "url": "/skill-bank.html#subtitle-localization-brief"
-  },
-  {
-    "title": "Voiceover Production Sheet",
-    "titleZh": "配音制作执行单",
-    "description": "Turn approved script, pronunciation notes, runtime into a recording-ready script with pauses and emphasis.",
-    "descriptionZh": "区分口播正文与导演提示，标注停顿、重音和发音疑问",
-    "keywords": "skill bank Creator Workflows",
-    "url": "/skill-bank.html#voiceover-production-sheet"
-  },
-  {
-    "title": "Video Version Delivery Matrix",
-    "titleZh": "视频多版本交付矩阵",
-    "description": "Turn master video, destinations, language versions into a delivery matrix with filenames and QC checks.",
-    "descriptionZh": "列出不同语言、比例和平台所需版本及验收状态",
-    "keywords": "skill bank Creator Workflows",
-    "url": "/skill-bank.html#video-version-delivery-matrix"
-  },
-  {
-    "title": "Creator Asset Provenance Log",
-    "titleZh": "创作者素材来源台账",
-    "description": "Turn asset files, creator permissions, usage terms into an asset provenance register for a production.",
-    "descriptionZh": "记录图片、音乐和视频素材的来源与使用条件",
-    "keywords": "skill bank Creator Workflows",
-    "url": "/skill-bank.html#creator-asset-provenance-log"
-  },
-  {
-    "title": "Agent Role Decomposition",
-    "titleZh": "多智能体职责拆分",
-    "description": "Turn goal, work units, shared files, available agents into a role allocation plan with ownership boundaries.",
-    "descriptionZh": "按独立交付物划分角色，并明确共享接口负责人",
-    "keywords": "skill bank Agent Teams",
-    "url": "/skill-bank.html#agent-role-decomposition"
-  },
-  {
-    "title": "Parallel Work Dependency Map",
-    "titleZh": "并行任务依赖规划",
-    "description": "Turn task graph, estimated effort, shared resources into a parallel execution plan with critical dependencies.",
-    "descriptionZh": "画出任务先后依赖，区分可并行研究和共享写入",
-    "keywords": "skill bank Agent Teams",
-    "url": "/skill-bank.html#parallel-work-dependency-map"
-  },
-  {
-    "title": "Agent Handoff Contract",
-    "titleZh": "智能体交接契约",
-    "description": "Turn producer role, consumer role, required artifact into a typed handoff specification and acceptance examples.",
-    "descriptionZh": "定义交接数据字段、路径、状态和验收示例",
-    "keywords": "skill bank Agent Teams",
-    "url": "/skill-bank.html#agent-handoff-contract"
-  },
-  {
-    "title": "Agent Output Reconciler",
-    "titleZh": "多智能体结果整合",
-    "description": "Turn conflicting proposals, tests, shared objective into a conflict resolution memo and integrated plan.",
-    "descriptionZh": "比较方案假设和证据，处理冲突并形成一致方案",
-    "keywords": "skill bank Agent Teams",
-    "url": "/skill-bank.html#agent-output-reconciler"
-  },
-  {
-    "title": "Multi Agent Run Retrospective",
-    "titleZh": "多智能体执行复盘",
-    "description": "Turn run log, output quality, retries, costs into a bottleneck report with one measurable next experiment.",
-    "descriptionZh": "分析交接返工、等待、重试和成本，设计下一次改进实验",
-    "keywords": "skill bank Agent Teams",
-    "url": "/skill-bank.html#multi-agent-run-retrospective"
-  },
-  {
-    "title": "Dotnet Upgrade Readiness",
-    "titleZh": "Dotnet升级就绪评估",
-    "description": "Turn project files, target frameworks, dependency inventory into an upgrade impact report and staged migration plan.",
-    "descriptionZh": "梳理目标框架、依赖和行为变化，制定分阶段升级计划",
-    "keywords": "skill bank .NET Engineering",
-    "url": "/skill-bank.html#dotnet-upgrade-readiness"
-  },
-  {
-    "title": "Async Cancellation Review",
-    "titleZh": "异步取消链路审查",
-    "description": "Turn async C# call chain, cancellation tokens, timeout policy into a cancellation propagation review with focused test cases.",
-    "descriptionZh": "追踪C#异步调用中的取消令牌、超时和阻塞等待",
-    "keywords": "skill bank .NET Engineering",
-    "url": "/skill-bank.html#async-cancellation-review"
-  },
-  {
-    "title": "Dependency Injection Lifetime Audit",
-    "titleZh": "依赖注入生命周期审计",
-    "description": "Turn service registrations, constructors, disposal rules into a service lifetime map and concrete mismatch findings.",
-    "descriptionZh": "检查单例、作用域和临时服务之间的引用及释放",
-    "keywords": "skill bank .NET Engineering",
-    "url": "/skill-bank.html#dependency-injection-lifetime-audit"
-  },
-  {
-    "title": "Dotnet API Contract Tests",
-    "titleZh": "Dotnet接口契约测试",
-    "description": "Turn endpoint contracts, validation rules, error schema into a contract test plan with representative fixtures.",
-    "descriptionZh": "根据接口约定设计成功、错误和校验用例",
-    "keywords": "skill bank .NET Engineering",
-    "url": "/skill-bank.html#dotnet-api-contract-tests"
-  },
-  {
-    "title": "Dotnet Performance Investigation",
-    "titleZh": "Dotnet性能调查",
-    "description": "Turn slow endpoint, workload, profiling evidence into a hypothesis-driven investigation plan.",
-    "descriptionZh": "用基线、分析证据和可证伪假设规划性能排查",
-    "keywords": "skill bank .NET Engineering",
-    "url": "/skill-bank.html#dotnet-performance-investigation"
-  },
-  {
-    "title": "Semantic Search Schema Brief",
-    "titleZh": "语义搜索结构设计",
-    "description": "Turn document fields, filter requirements, embedding model into a vector collection schema and indexing rationale.",
-    "descriptionZh": "定义向量维度、元数据、过滤字段和稳定文档ID",
-    "keywords": "skill bank Vector Search",
-    "url": "/skill-bank.html#semantic-search-schema-brief"
-  },
-  {
-    "title": "Vector Retrieval Benchmark",
-    "titleZh": "向量检索基准方案",
-    "description": "Turn query set, relevance labels, index configurations into a benchmark plan with quality and latency metrics.",
-    "descriptionZh": "固定语料和问题集，比较召回质量与尾部延迟",
-    "keywords": "skill bank Vector Search",
-    "url": "/skill-bank.html#vector-retrieval-benchmark"
-  },
-  {
-    "title": "Metadata Filter Test Designer",
-    "titleZh": "元数据过滤测试",
-    "description": "Turn filterable fields, sample documents, access boundaries into a filter truth table and retrieval test cases.",
-    "descriptionZh": "设计包含、排除、空值和跨租户的检索用例",
-    "keywords": "skill bank Vector Search",
-    "url": "/skill-bank.html#metadata-filter-test-designer"
-  },
-  {
-    "title": "Embedding Migration Planner",
-    "titleZh": "嵌入模型迁移规划",
-    "description": "Turn old and new embedding settings, corpus size, downtime constraints into a versioned re-embedding and cutover plan.",
-    "descriptionZh": "设计版本标记、重建索引、验证、切换和回退步骤",
-    "keywords": "skill bank Vector Search",
-    "url": "/skill-bank.html#embedding-migration-planner"
-  },
-  {
-    "title": "Search Relevance Failure Triage",
-    "titleZh": "搜索相关性故障分诊",
-    "description": "Turn bad queries, retrieved results, relevance labels into a categorized relevance failure report.",
-    "descriptionZh": "区分召回、过滤、分块和排序阶段的问题",
-    "keywords": "skill bank Vector Search",
-    "url": "/skill-bank.html#search-relevance-failure-triage"
-  },
-  {
-    "title": "Achievement Evidence Collector",
-    "titleZh": "履历成果证据整理",
-    "description": "Turn work notes, responsibilities, verified metrics into a factual achievement inventory for a resume.",
-    "descriptionZh": "从真实工作资料提取行动、范围和结果，标记缺少的量化证据",
-    "keywords": "skill bank Career Materials",
-    "url": "/skill-bank.html#achievement-evidence-collector"
-  },
-  {
-    "title": "Resume Job Match Matrix",
-    "titleZh": "简历岗位匹配矩阵",
-    "description": "Turn resume, job description, verified experience into a requirement-to-evidence map and editing priorities.",
-    "descriptionZh": "对照招聘要求与真实经历，区分匹配证据和能力缺口",
-    "keywords": "skill bank Career Materials",
-    "url": "/skill-bank.html#resume-job-match-matrix"
-  },
-  {
-    "title": "Resume Layout Readability Audit",
-    "titleZh": "简历版式可读性检查",
-    "description": "Turn resume PDF or screenshot, target page count into a layout correction list and plain-text reading check.",
-    "descriptionZh": "检查层级、密度、文本提取顺序和关键信息可读性",
-    "keywords": "skill bank Career Materials",
-    "url": "/skill-bank.html#resume-layout-readability-audit"
-  },
-  {
-    "title": "Career Transition Story Builder",
-    "titleZh": "转行经历叙事",
-    "description": "Turn past roles, target role, transferable accomplishments into a concise transition narrative and supporting bullets.",
-    "descriptionZh": "把原有工作成果映射到目标岗位需要的可迁移能力",
-    "keywords": "skill bank Career Materials",
-    "url": "/skill-bank.html#career-transition-story-builder"
-  },
-  {
-    "title": "Resume Version Control Kit",
-    "titleZh": "简历版本管理",
-    "description": "Turn master resume, target roles, application list into a version register and controlled tailoring workflow.",
-    "descriptionZh": "保留事实主版本并记录每个岗位的改动与提交文件",
-    "keywords": "skill bank Career Materials",
-    "url": "/skill-bank.html#resume-version-control-kit"
-  },
-  {
-    "title": "Skill Installation Readiness",
-    "titleZh": "Skill安装前检查",
-    "description": "Turn untrusted skill folder, host capabilities, intended use into a read-only pre-install review report.",
-    "descriptionZh": "只读检查技能入口、脚本以及网络和文件访问需求",
-    "keywords": "skill bank Skill Quality",
-    "url": "/skill-bank.html#skill-installation-readiness"
-  },
-  {
-    "title": "Skill Data Flow Audit",
-    "titleZh": "Skill数据流审计",
-    "description": "Turn skill instructions, scripts, external endpoints into a source-to-destination data flow table.",
-    "descriptionZh": "追踪读取的数据、处理过程和外发目的地",
-    "keywords": "skill bank Skill Quality",
-    "url": "/skill-bank.html#skill-data-flow-audit"
-  },
-  {
-    "title": "Prompt Injection Boundary Review",
-    "titleZh": "提示注入边界检查",
-    "description": "Turn trusted task, retrieved text, agent action rules into a boundary review and benign adversarial test set.",
-    "descriptionZh": "区分用户任务与资料中的指令，设计无害对抗测试",
-    "keywords": "skill bank Skill Quality",
-    "url": "/skill-bank.html#prompt-injection-boundary-review"
-  },
-  {
-    "title": "Skill Dependency Inventory",
-    "titleZh": "Skill依赖清单",
-    "description": "Turn skill folder, package manifests, download commands into a dependency inventory with provenance gaps.",
-    "descriptionZh": "梳理安装包、远端下载、版本固定情况和来源",
-    "keywords": "skill bank Skill Quality",
-    "url": "/skill-bank.html#skill-dependency-inventory"
-  },
-  {
-    "title": "Skill Finding Remediation Brief",
-    "titleZh": "Skill问题修复规划",
-    "description": "Turn scanner findings, source files, intended behavior into a prioritized fix plan with retest criteria.",
-    "descriptionZh": "对扫描发现进行复核，制定最小修复与回归检查",
-    "keywords": "skill bank Skill Quality",
-    "url": "/skill-bank.html#skill-finding-remediation-brief"
-  },
-  {
-    "title": "Feature Acceptance Brief",
-    "titleZh": "功能验收需求单",
-    "description": "Turn feature request, user journey, existing behavior into a concise specification with measurable acceptance cases.",
-    "descriptionZh": "把请求转成触发条件、可见结果和边界用例",
-    "keywords": "skill bank Engineering Practice",
-    "url": "/skill-bank.html#feature-acceptance-brief"
-  },
-  {
-    "title": "Refactor Scope Review",
-    "titleZh": "重构范围审查",
-    "description": "Turn proposed refactor, callers, tests, ownership boundaries into a bounded refactor plan with behavioral invariants.",
-    "descriptionZh": "检查要消除的复杂度、调用方和必须保持的行为",
-    "keywords": "skill bank Engineering Practice",
-    "url": "/skill-bank.html#refactor-scope-review"
-  },
-  {
-    "title": "Regression Test Selector",
-    "titleZh": "回归测试选择",
-    "description": "Turn code diff, historical failures, existing test suite into a risk-ranked set of regression tests.",
-    "descriptionZh": "根据差异和真实失败模式选择必要测试",
-    "keywords": "skill bank Engineering Practice",
-    "url": "/skill-bank.html#regression-test-selector"
-  },
-  {
-    "title": "Feature Flag Rollout Brief",
-    "titleZh": "功能开关发布规划",
-    "description": "Turn feature behavior, audience segments, monitoring into a staged rollout and rollback plan.",
-    "descriptionZh": "设计分批开放、监控指标、回滚触发条件和责任人",
-    "keywords": "skill bank Engineering Practice",
-    "url": "/skill-bank.html#feature-flag-rollout-brief"
-  },
-  {
-    "title": "Deprecation Migration Guide",
-    "titleZh": "废弃接口迁移指南",
-    "description": "Turn old API, replacement, usage patterns, timeline into a migration guide with compatibility notes.",
-    "descriptionZh": "对照旧用法和替代方案说明行为差异与验证方法",
-    "keywords": "skill bank Engineering Practice",
-    "url": "/skill-bank.html#deprecation-migration-guide"
-  },
-  {
-    "title": "Offline Data Model Planner",
-    "titleZh": "离线数据模型规划",
-    "description": "Turn entities, offline actions, conflict expectations into a local-first schema and persistence brief.",
-    "descriptionZh": "区分用户数据、派生状态、持久化需求和离线操作",
-    "keywords": "skill bank Local First Data",
-    "url": "/skill-bank.html#offline-data-model-planner"
-  },
-  {
-    "title": "Sync Conflict Scenario Kit",
-    "titleZh": "同步冲突场景设计",
-    "description": "Turn shared entities, merge rules, user workflows into a conflict test matrix and expected resolutions.",
-    "descriptionZh": "设计并发编辑、删除与修改冲突及期望合并结果",
-    "keywords": "skill bank Local First Data",
-    "url": "/skill-bank.html#sync-conflict-scenario-kit"
-  },
-  {
-    "title": "Local Persistence Recovery Plan",
-    "titleZh": "本地存储恢复方案",
-    "description": "Turn storage mechanism, schema versions, backup strategy into a recovery and migration test plan.",
-    "descriptionZh": "规划中断写入、旧版本数据和迁移失败的恢复测试",
-    "keywords": "skill bank Local First Data",
-    "url": "/skill-bank.html#local-persistence-recovery-plan"
-  },
-  {
-    "title": "Reactive Subscription Audit",
-    "titleZh": "响应式订阅审计",
-    "description": "Turn store subscriptions, component tree, update traces into a subscription map and unnecessary-render findings.",
-    "descriptionZh": "追踪组件真正读取的数据及监听清理情况",
-    "keywords": "skill bank Local First Data",
-    "url": "/skill-bank.html#reactive-subscription-audit"
-  },
-  {
-    "title": "Offline UX State Brief",
-    "titleZh": "离线界面状态说明",
-    "description": "Turn network transitions, local writes, sync policy into a state model for saved, pending and conflicted data.",
-    "descriptionZh": "区分设备本地保存、等待同步和冲突状态",
-    "keywords": "skill bank Local First Data",
-    "url": "/skill-bank.html#offline-ux-state-brief"
-  },
-  {
-    "title": "Campaign Export Health Check",
-    "titleZh": "广告导出数据体检",
-    "description": "Turn authorized campaign CSV, date range, currency into a data quality report before performance analysis.",
-    "descriptionZh": "核对字段、日期、币种、缺失值和总额一致性",
-    "keywords": "skill bank Paid Media Analysis",
-    "url": "/skill-bank.html#campaign-export-health-check"
-  },
-  {
-    "title": "Creative Test Hypothesis Builder",
-    "titleZh": "广告创意测试假设",
-    "description": "Turn product facts, prior ad results, audience research into a controlled creative test brief.",
-    "descriptionZh": "一次检验一个信息或创意变量，并预先定义观察规则",
-    "keywords": "skill bank Paid Media Analysis",
-    "url": "/skill-bank.html#creative-test-hypothesis-builder"
-  },
-  {
-    "title": "Landing Page Message Match Audit",
-    "titleZh": "广告落地页一致性审查",
-    "description": "Turn ad copy, landing page, offer terms into a claim-by-claim message consistency report.",
-    "descriptionZh": "逐项比较广告承诺、价格、资格和落地页内容",
-    "keywords": "skill bank Paid Media Analysis",
-    "url": "/skill-bank.html#landing-page-message-match-audit"
-  },
-  {
-    "title": "Campaign Metric Explanation",
-    "titleZh": "广告指标通俗解释",
-    "description": "Turn impressions, clicks, spend, conversions, attribution notes into a plain-English performance explanation with formulas.",
-    "descriptionZh": "根据给定数据计算比率并说明分母和归因限制",
-    "keywords": "skill bank Paid Media Analysis",
-    "url": "/skill-bank.html#campaign-metric-explanation"
-  },
-  {
-    "title": "Ad Experiment Readout",
-    "titleZh": "广告实验结果解读",
-    "description": "Turn test design, variant results, sample sizes, dates into an experiment readout with uncertainty and next action.",
-    "descriptionZh": "核对实验执行和样本，区分观察差异与证据强度",
-    "keywords": "skill bank Paid Media Analysis",
-    "url": "/skill-bank.html#ad-experiment-readout"
-  },
-  {
-    "title": "Application Threat Boundary Brief",
-    "titleZh": "应用威胁边界梳理",
-    "description": "Turn architecture, sensitive operations, deployment scope into a scoped threat model with defensive controls.",
-    "descriptionZh": "围绕授权范围识别资产、入口、信任边界和防御措施",
-    "keywords": "skill bank Defensive Code Review",
-    "url": "/skill-bank.html#application-threat-boundary-brief"
-  },
-  {
-    "title": "Authorization Matrix Reviewer",
-    "titleZh": "接口授权矩阵审查",
-    "description": "Turn roles, endpoints, tenant model, access tests into an authorization matrix and missing checks report.",
-    "descriptionZh": "按角色、对象归属和租户设计允许及拒绝测试",
-    "keywords": "skill bank Defensive Code Review",
-    "url": "/skill-bank.html#authorization-matrix-reviewer"
-  },
-  {
-    "title": "Secret Handling Code Review",
-    "titleZh": "密钥处理代码审查",
-    "description": "Turn configuration code, logging paths, deployment settings into a secret-handling findings report with redacted evidence.",
-    "descriptionZh": "追踪密钥存储、日志、错误响应和客户端打包路径",
-    "keywords": "skill bank Defensive Code Review",
-    "url": "/skill-bank.html#secret-handling-code-review"
-  },
-  {
-    "title": "Input Validation Boundary Tests",
-    "titleZh": "输入校验边界测试",
-    "description": "Turn input schema, parsers, storage boundaries into a defensive validation test suite specification.",
-    "descriptionZh": "同时检查语法、业务约束、超长和异常值",
-    "keywords": "skill bank Defensive Code Review",
-    "url": "/skill-bank.html#input-validation-boundary-tests"
-  },
-  {
-    "title": "Security Fix Verification Brief",
-    "titleZh": "安全修复验证方案",
-    "description": "Turn reported flaw, patch, authorized local fixture into a regression verification plan and residual-risk note.",
-    "descriptionZh": "在本地授权样例复现原问题并验证相邻和正常路径",
-    "keywords": "skill bank Defensive Code Review",
-    "url": "/skill-bank.html#security-fix-verification-brief"
-  },
-  {
-    "title": "Meeting Decision Digest",
-    "titleZh": "会议决策与行动摘要",
-    "description": "Turn meeting transcript, attendee roles, known deadlines into a decision digest and action register.",
-    "descriptionZh": "从会议记录区分讨论、明确决定、责任人和未决事项",
-    "keywords": "skill bank Document Workflows",
-    "url": "/skill-bank.html#meeting-decision-digest"
-  },
-  {
-    "title": "Document Revision Comparator",
-    "titleZh": "文档修订差异对照",
-    "description": "Turn old and new document versions, review purpose into a material-change summary with section references.",
-    "descriptionZh": "对齐新旧章节，区分排版变化与日期、数字和含义变化",
-    "keywords": "skill bank Document Workflows",
-    "url": "/skill-bank.html#document-revision-comparator"
-  },
-  {
-    "title": "Spreadsheet Assumption Register",
-    "titleZh": "表格假设登记",
-    "description": "Turn spreadsheet formulas, inputs, scenario labels into an assumption inventory and formula review checklist.",
-    "descriptionZh": "区分输入和公式，追踪关键结果依赖的假设、常数与单位",
-    "keywords": "skill bank Document Workflows",
-    "url": "/skill-bank.html#spreadsheet-assumption-register"
-  },
-  {
-    "title": "Report Evidence Organizer",
-    "titleZh": "报告证据整理",
-    "description": "Turn source documents, draft findings, report outline into an evidence map and report assembly plan.",
-    "descriptionZh": "为来源分配编号，把报告结论对应到直接证据并标出缺口",
-    "keywords": "skill bank Document Workflows",
-    "url": "/skill-bank.html#report-evidence-organizer"
-  },
-  {
-    "title": "Client Deliverable QA",
-    "titleZh": "客户交付物质量检查",
-    "description": "Turn final files, agreed scope, formats, delivery requirements into a client-ready delivery checklist and issue log.",
-    "descriptionZh": "按约定核对文件数量、格式、可打开性和占位内容",
-    "keywords": "skill bank Document Workflows",
-    "url": "/skill-bank.html#client-deliverable-qa"
-  },
-  {
-    "title": "Pull Request Risk Brief",
-    "titleZh": "合并请求风险摘要",
-    "description": "Turn diff, callers, runtime context, test results into a risk-ranked review briefing.",
-    "descriptionZh": "从差异定位行为变化和受影响契约，安排审查重点",
-    "keywords": "skill bank Code Review Delivery",
-    "url": "/skill-bank.html#pull-request-risk-brief"
-  },
-  {
-    "title": "Finding Reproduction Writer",
-    "titleZh": "代码问题复现说明",
-    "description": "Turn suspected bug, relevant lines, input conditions into a minimal reproduction and actionable finding.",
-    "descriptionZh": "写出触发条件、位置、实际与预期结果和验证状态",
-    "keywords": "skill bank Code Review Delivery",
-    "url": "/skill-bank.html#finding-reproduction-writer"
-  },
-  {
-    "title": "Review False Positive Triage",
-    "titleZh": "代码审查误报分诊",
-    "description": "Turn automated findings, code context, test evidence into a triaged findings table with rationale.",
-    "descriptionZh": "检查路径可达性、保护条件和证据，分类自动发现",
-    "keywords": "skill bank Code Review Delivery",
-    "url": "/skill-bank.html#review-false-positive-triage"
-  },
-  {
-    "title": "Patch Verification Matrix",
-    "titleZh": "补丁验证矩阵",
-    "description": "Turn fix diff, original issue, supported environments into a focused verification matrix for the patch.",
-    "descriptionZh": "把原问题、相邻行为和支持环境对应到检查状态",
-    "keywords": "skill bank Code Review Delivery",
-    "url": "/skill-bank.html#patch-verification-matrix"
-  },
-  {
-    "title": "Release Review Summary",
-    "titleZh": "发布审查总结",
-    "description": "Turn merged changes, review findings, test outcomes into a release-facing summary with known limitations.",
-    "descriptionZh": "按用户可见变化组织交付、测试证据和已知限制",
-    "keywords": "skill bank Code Review Delivery",
-    "url": "/skill-bank.html#release-review-summary"
-  }
+ {
+  "title": "About HaoWordStudio",
+  "url": "/about.html",
+  "description": "Who runs HaoWordStudio, what the site publishes, how its browser tools and practical tutorials are tested, and how corrections are handled.",
+  "keywords": ""
+ },
+ {
+  "title": "Customer center — HaoWordTool",
+  "url": "/account.html",
+  "description": "Sign in or create your HaoWordTool store account with an email verification code. View orders and manage your profile securely through Shopify.",
+  "keywords": ""
+ },
+ {
+  "title": "联盟产品工作台 | HaoWordTool",
+  "url": "/affiliate-dashboard.html",
+  "description": "管理 HaoWordTool 的 100 个联盟产品内容方向、Amazon ASIN 状态与 Fiverr 分流入口。",
+  "keywords": ""
+ },
+ {
+  "title": "Affiliate Marketing Landing Page | HaoWordTool",
+  "url": "/affiliate-marketing.html",
+  "description": "Turn AI video traffic from Pinterest, YouTube, TikTok and social channels into leads, follow-up conversations and paid offers with HaoWordTool.",
+  "keywords": ""
+ },
+ {
+  "title": "100 Products You Can Promote with AI | HaoWordTool",
+  "url": "/affiliate-products.html",
+  "description": "Browse 100 product ideas across 10 categories, each matched with an AI content, publishing and lead-follow-up workflow.",
+  "keywords": ""
+ },
+ {
+  "title": "一人公司 AI 工作流入口 | HaoWord Studio",
+  "url": "/ai-one-person-company-guide.html",
+  "description": "输入你的选题、产品和盈利目标，HaoWord 一人公司入口会把任务交给 n8n COO，生成内容获客、私域承接、成交交付和复盘优化的 AI 员工任务链。",
+  "keywords": ""
+ },
+ {
+  "title": "Word Patterns, Spelling & Puzzle Strategy Library",
+  "url": "/blog.html",
+  "description": "Browse 23 original guides to anagrams, spelling, vocabulary learning, crossword constraints, and word-game strategy.",
+  "keywords": ""
+ },
+ {
+  "title": "Your checkout — HaoWordTool",
+  "url": "/checkout.html",
+  "description": "Choose HaoWordTool products, review your order and continue to secure Shopify payment.",
+  "keywords": ""
+ },
+ {
+  "title": "Contact HaoWordStudio",
+  "url": "/contact.html",
+  "description": "Contact HaoWordStudio about tutorial corrections, broken examples, accessibility, privacy or product support.",
+  "keywords": ""
+ },
+ {
+  "title": "Custom Website Design and Template Setup | HaoWordStudio",
+  "url": "/custom-web-design.html",
+  "description": "Request a fixed-scope custom website: template setup from $79, a three-page business launch from $149, or a custom front-end build from $199.",
+  "keywords": ""
+ },
+ {
+  "title": "Editorial and Testing Standards | HaoWordStudio",
+  "url": "/editorial-standards.html",
+  "description": "How HaoWordStudio plans, tests, updates and corrects its software tutorials, examples and word-reference articles.",
+  "keywords": ""
+ },
+ {
+  "title": "Affiliate Marketing Funnel for Creators | HaoWordTool",
+  "url": "/en/affiliate-marketing.html",
+  "description": "Turn AI video traffic from Pinterest, YouTube, TikTok and social channels into leads, follow-up conversations and paid offers with HaoWordTool.",
+  "keywords": ""
+ },
+ {
+  "title": "AI Affiliate Product Ideas: 100 Visual Campaigns | HaoWordTool",
+  "url": "/en/affiliate-products.html",
+  "description": "Browse 100 product ideas across 10 categories, each matched with an AI content, publishing and lead-follow-up workflow.",
+  "keywords": ""
+ },
+ {
+  "title": "Online HTML, CSS & JavaScript Editor | HaoWord Studio",
+  "url": "/en/app-builder.html",
+  "description": "Run static HTML, CSS and JavaScript, preview mobile layouts and export a ZIP. Free browser workspace with step-by-step tutorials and a working sample.",
+  "keywords": ""
+ },
+ {
+  "title": "IELTS Academic Writing Task 2: Build a Clear Essay Plan | HaoWordStudio",
+  "url": "/en/ielts/academic-writing-task-2-plan.html",
+  "description": "A complete IELTS Academic Writing Task 2 planning lesson with an original practice question, position test, paragraph map, timed exercise and self-review checklist.",
+  "keywords": ""
+ },
+ {
+  "title": "Free IELTS Lessons for Writing and Speaking | HaoWordStudio",
+  "url": "/en/ielts/index.html",
+  "description": "Practice IELTS Writing Task 2 planning and Speaking Part 2 organization with original exercises, timed routines and self-review checklists.",
+  "keywords": ""
+ },
+ {
+  "title": "IELTS Speaking Part 2: Make a One-Minute Plan | HaoWordStudio",
+  "url": "/en/ielts/speaking-part-2-one-minute-plan.html",
+  "description": "Practice IELTS Speaking Part 2 with an original cue card, a timed one-minute note plan, a complete sample response and a recording checklist.",
+  "keywords": ""
+ },
+ {
+  "title": "Free creative tools & professional service guides | HaoWord Studio",
+  "url": "/en/index.html",
+  "description": "Create with free app and video tools. Compare logo design, website and video editing services with practical briefs and delivery checklists.",
+  "keywords": ""
+ },
+ {
+  "title": "AI website templates: how to choose, test and customize one | HaoWord Studio",
+  "url": "/en/learn/ai-website-templates.html",
+  "description": "Evaluate AI-generated website templates by structure, responsive behavior, interactions and export quality before using them for a real project.",
+  "keywords": ""
+ },
+ {
+  "title": "How to customize an HTML website template step by step | HaoWordStudio",
+  "url": "/en/learn/customize-html-template.html",
+  "description": "Customize a working HTML website template by replacing its text, colors, links and form behavior, then test the mobile layout and exported ZIP.",
+  "keywords": ""
+ },
+ {
+  "title": "How to export HTML, CSS and JavaScript as a working ZIP | HaoWord Studio",
+  "url": "/en/learn/export-html-css-js-zip.html",
+  "description": "Export a static project, extract it into a fresh folder and verify its files and interactions. Understand the difference between source files, hosting and an App installer.",
+  "keywords": ""
+ },
+ {
+  "title": "HTML, CSS and JavaScript online editor: a practical workflow | HaoWord Studio",
+  "url": "/en/learn/html-css-javascript-online-editor.html",
+  "description": "Use a browser editor to separate three files, run a real interactive page, diagnose common errors and export the result safely.",
+  "keywords": ""
+ },
+ {
+  "title": "Learn to run, preview and export a static web project | HaoWord Studio",
+  "url": "/en/learn/index.html",
+  "description": "Three hands-on HTML, CSS and JavaScript tutorials with a shared, downloadable daily-plan example.",
+  "keywords": ""
+ },
+ {
+  "title": "Landing page HTML template: build and test a working example | HaoWord Studio",
+  "url": "/en/learn/landing-page-html-template.html",
+  "description": "Create a responsive product landing page with semantic HTML, focused CSS and a working email validation interaction.",
+  "keywords": ""
+ },
+ {
+  "title": "Portfolio website source code: build a responsive personal site | HaoWord Studio",
+  "url": "/en/learn/portfolio-website-source-code.html",
+  "description": "Download and customize a complete portfolio example with project cards, accessible navigation and a working category filter.",
+  "keywords": ""
+ },
+ {
+  "title": "How to preview a webpage at mobile width | HaoWord Studio",
+  "url": "/en/learn/preview-mobile-webpage.html",
+  "description": "Use a 390px preview to test wrapping, forms and long task labels. Follow a responsive CSS example and learn what still needs a real phone test.",
+  "keywords": ""
+ },
+ {
+  "title": "How to run AI-generated HTML, CSS and JavaScript | HaoWord Studio",
+  "url": "/en/learn/run-ai-html.html",
+  "description": "Import a working daily-plan example, edit its heading and test real JavaScript interactions. Learn which AI code can run without a build step.",
+  "keywords": ""
+ },
+ {
+  "title": "How our recommendations and affiliate links work | HaoWord Studio",
+  "url": "/en/services/disclosure.html",
+  "description": "Understand our editorial guides, third-party links, affiliate commissions and service selection approach.",
+  "keywords": ""
+ },
+ {
+  "title": "Service guides: design, websites & video | HaoWord Studio",
+  "url": "/en/services/index.html",
+  "description": "Compare logo design, website and video editing options with practical briefs, delivery checklists and links to service providers.",
+  "keywords": ""
+ },
+ {
+  "title": "Logo & brand design buyer’s guide | HaoWord Studio",
+  "url": "/en/services/logo-design.html",
+  "description": "Understand the brief, source files and usage terms before hiring a logo designer.",
+  "keywords": ""
+ },
+ {
+  "title": "Video editing & captions buyer’s guide | HaoWord Studio",
+  "url": "/en/services/video-editing.html",
+  "description": "Define the footage, editing scope, caption languages and export formats in one brief.",
+  "keywords": ""
+ },
+ {
+  "title": "Websites & landing pages buyer’s guide | HaoWord Studio",
+  "url": "/en/services/website-design.html",
+  "description": "Compare templates, do-it-yourself tools and custom builds for your stage of business.",
+  "keywords": ""
+ },
+ {
+  "title": "Daily plan · HTML learning example",
+  "url": "/examples/daily-plan-en/index.html",
+  "description": "A free daily-plan example for importing HTML, CSS and JavaScript, checking mobile layouts and exporting a ZIP.",
+  "keywords": ""
+ },
+ {
+  "title": "每日计划 · 教程示例",
+  "url": "/examples/daily-plan/index.html",
+  "description": "用于学习 HTML、CSS 和 JavaScript 导入、手机预览与 ZIP 导出的免费示例。",
+  "keywords": ""
+ },
+ {
+  "title": "Northstar — landing-page example",
+  "url": "/examples/landing-page-en/index.html",
+  "description": "A working plain HTML, CSS and JavaScript landing-page example with an interactive email form.",
+  "keywords": ""
+ },
+ {
+  "title": "Alex Chen — portfolio example",
+  "url": "/examples/portfolio-en/index.html",
+  "description": "A working plain HTML, CSS and JavaScript portfolio example with accessible project filters.",
+  "keywords": ""
+ },
+ {
+  "title": "Frequently Asked Questions | Letter Solver Pro",
+  "url": "/faq.html",
+  "description": "Answers about exact anagrams, subsets, wildcard tiles, word lists, scores, privacy, missing words, and responsible use.",
+  "keywords": ""
+ },
+ {
+  "title": "Join the Fiverr Affiliate Program | HaoWordTool",
+  "url": "/fiverr-affiliate-program.html",
+  "description": "A dedicated Fiverr Affiliate Program recruitment page for creators, publishers and marketers.",
+  "keywords": ""
+ },
+ {
+  "title": "Fiverr Marketplace Services | HaoWordTool",
+  "url": "/fiverr-services.html",
+  "description": "Compare Fiverr Marketplace service paths for AI video, Pinterest, landing pages, social media and chatbots.",
+  "keywords": ""
+ },
+ {
+  "title": "Exact Anagram or Subset Search? Choose with Worked Examples | Letter Solver Pro",
+  "url": "/guides/anagram-solver-vs-word-finder.html",
+  "description": "Compare LISTEN, LIST and repeated-letter racks to choose the right search mode, understand length filters, and avoid positional-pattern mistakes.",
+  "keywords": ""
+ },
+ {
+  "title": "Use Anagrams for Spelling Practice Without Memorizing Noise | Letter Solver Pro",
+  "url": "/guides/anagrams-for-spelling-practice.html",
+  "description": "A classroom-ready routine that links letter order, sound, meaning, and recall.",
+  "keywords": ""
+ },
+ {
+  "title": "Common Letter Pairs and Clusters for Faster Solving | Letter Solver Pro",
+  "url": "/guides/common-letter-pairs-and-clusters.html",
+  "description": "Train your eye to group letters into useful chunks without inventing impossible spellings.",
+  "keywords": ""
+ },
+ {
+  "title": "Solve Crossword Constraints Step by Step | Letter Solver Pro",
+  "url": "/guides/crossword-constraints-step-by-step.html",
+  "description": "Combine pattern, clue type, tense, number, and crossings in a disciplined order.",
+  "keywords": ""
+ },
+ {
+  "title": "Why Word Lists Disagree—and How to Avoid False Positives | Letter Solver Pro",
+  "url": "/guides/dictionary-differences-and-false-positives.html",
+  "description": "Understand dictionary scope, inflections, names, abbreviations, and regional variation before trusting a result.",
+  "keywords": ""
+ },
+ {
+  "title": "A Better Method for Five-Letter Word Puzzles | Letter Solver Pro",
+  "url": "/guides/five-letter-word-solving-method.html",
+  "description": "Use position information, letter frequency, and contradiction tracking instead of chasing fashionable starter words.",
+  "keywords": ""
+ },
+ {
+  "title": "From Solver Result to Real Vocabulary | Letter Solver Pro",
+  "url": "/guides/from-solver-result-to-real-vocabulary.html",
+  "description": "A five-minute follow-up that turns a result list into words you can recognize and use.",
+  "keywords": ""
+ },
+ {
+  "title": "How an Anagram Algorithm Works | Letter Solver Pro",
+  "url": "/guides/how-anagram-algorithms-work.html",
+  "description": "A plain-language explanation of letter signatures, multisets, wildcards, filtering, and ranking.",
+  "keywords": ""
+ },
+ {
+  "title": "How to Unscramble Letters Systematically | Letter Solver Pro",
+  "url": "/guides/how-to-unscramble-letters-systematically.html",
+  "description": "A repeatable five-pass method for turning a mixed letter rack into useful words without relying on random guessing.",
+  "keywords": ""
+ },
+ {
+  "title": "Letter Frequency Without the Myths | Letter Solver Pro",
+  "url": "/guides/letter-frequency-without-myths.html",
+  "description": "How corpus frequency helps puzzle solving—and where simplistic frequency charts mislead.",
+  "keywords": ""
+ },
+ {
+  "title": "Plural -S and Past -ED in Letter Puzzles | Letter Solver Pro",
+  "url": "/guides/plural-s-and-ed-endings.html",
+  "description": "Use grammatical endings to expand a rack while avoiding forms that do not exist.",
+  "keywords": ""
+ },
+ {
+  "title": "Use Prefixes and Suffixes to Find Longer Anagrams | Letter Solver Pro",
+  "url": "/guides/prefixes-and-suffixes-for-anagrams.html",
+  "description": "A practical guide to treating affixes as structural clues rather than loose letter groups.",
+  "keywords": ""
+ },
+ {
+  "title": "Q Words Without U: Patterns, Meanings, and Game Use | Letter Solver Pro",
+  "url": "/guides/q-words-without-u-explained.html",
+  "description": "A short, usable reference to the unusual Q words that matter in English-language word games.",
+  "keywords": ""
+ },
+ {
+  "title": "Rack Management Between Turns | Letter Solver Pro",
+  "url": "/guides/rack-management-between-turns.html",
+  "description": "A practical framework for deciding what to play, keep, or exchange.",
+  "keywords": ""
+ },
+ {
+  "title": "Responsible Use of Word Solvers | Letter Solver Pro",
+  "url": "/guides/responsible-use-of-word-solvers.html",
+  "description": "When a solver teaches, when it spoils, and how to use one without undermining a game or assignment.",
+  "keywords": ""
+ },
+ {
+  "title": "Scrabble Letter Values: Score, Scarcity, and Opportunity | Letter Solver Pro",
+  "url": "/guides/scrabble-letter-values-explained.html",
+  "description": "Why a high-value tile is not always valuable, and how board multipliers change the calculation.",
+  "keywords": ""
+ },
+ {
+  "title": "Seven-Letter Bingo Strategy: From Rack to Play | Letter Solver Pro",
+  "url": "/guides/seven-letter-bingo-strategy.html",
+  "description": "How to identify bingo-friendly racks, preserve flexible letters, and compare score with board position.",
+  "keywords": ""
+ },
+ {
+  "title": "A 30-Day Word-Pattern Practice Plan | Letter Solver Pro",
+  "url": "/guides/thirty-day-word-pattern-practice.html",
+  "description": "Ten minutes a day to improve anagram speed, spelling awareness, and usable vocabulary.",
+  "keywords": ""
+ },
+ {
+  "title": "Reading the Vowel–Consonant Balance in a Letter Rack | Letter Solver Pro",
+  "url": "/guides/vowels-and-consonants-in-word-racks.html",
+  "description": "Learn what a rack’s vowel ratio tells you, when to search for a digraph, and how to rescue vowel-heavy or consonant-heavy combinations.",
+  "keywords": ""
+ },
+ {
+  "title": "How to Use Blank Tiles in a Word Unscrambler | Letter Solver Pro",
+  "url": "/guides/wildcard-blank-tile-strategy.html",
+  "description": "Work through CART? and LET?, identify the letters supplied by blanks, calculate their scores, and check your answers with three exercises.",
+  "keywords": ""
+ },
+ {
+  "title": "Learn Vocabulary Through Word Families | Letter Solver Pro",
+  "url": "/guides/word-families-for-vocabulary.html",
+  "description": "Turn one solved word into a durable network of meanings, forms, and collocations.",
+  "keywords": ""
+ },
+ {
+  "title": "Using Word Puzzles in an ESL Classroom | Letter Solver Pro",
+  "url": "/guides/word-puzzles-in-esl-classrooms.html",
+  "description": "Five activities that produce speaking and vocabulary practice instead of silent busywork.",
+  "keywords": ""
+ },
+ {
+  "title": "Words Ending in -ING: Spelling Rules You Can Actually Use | Letter Solver Pro",
+  "url": "/guides/words-ending-in-ing-guide.html",
+  "description": "A decision guide for adding -ing, including silent e, doubled consonants, and exceptions.",
+  "keywords": ""
+ },
+ {
+  "title": "How Letter Solver Pro Works: Matching, Ranking & Limits",
+  "url": "/how-it-works.html",
+  "description": "Read the exact matching method, wildcard behavior, ranking logic, dictionary scope, privacy model, and known limitations.",
+  "keywords": ""
+ },
+ {
+  "title": "IELTS English Course | HaoWordStudio",
+  "url": "/ielts-course.html",
+  "description": "Order the HaoWordStudio IELTS English course for private delivery through Google Drive after payment is confirmed.",
+  "keywords": ""
+ },
+ {
+  "title": "Haowordtool — Better Products, Smarter AI Tools",
+  "url": "/",
+  "description": "Explore physical products, AI tools and practical buying guides with Haowordtool. Better Products, Smarter AI Tools.",
+  "keywords": ""
+ },
+ {
+  "title": "Five Product Landing Pages — Design Preview | Haowordtool",
+  "url": "/landing-pages.html",
+  "description": "Explore five product landing page designs: bug zapper, pressure washer, vegetable cutter, spin scrubber and pet feeder. Interactive design preview.",
+  "keywords": ""
+ },
+ {
+  "title": "WhatsApp AI 自动回复机器人 | HaoWord Studio",
+  "url": "/local-ai.html",
+  "description": "查看 Ollama 本地 AI 采购询盘实测、演示视频及部署调试服务。先评估电脑和业务资料，再确认书面报价；WhatsApp 自动收发仍待联调。",
+  "keywords": ""
+ },
+ {
+  "title": "多平台视频发布检查清单 | HaoWord Studio",
+  "url": "/multi-platform-publishing-checklist.html",
+  "description": "多平台视频发布前的检查清单：素材、标题、标签、账号、发布时间、人工审批和复盘数据。",
+  "keywords": ""
+ },
+ {
+  "title": "产品与服务价格 | HaoWord Studio",
+  "url": "/pricing.html",
+  "description": "查看 HaoWord Studio 免费网页工具、$9 和 $29 模板包、IELTS 英语课程以及定制网站服务的价格、交付方式和购买流程。",
+  "keywords": ""
+ },
+ {
+  "title": "Privacy Policy | HaoWordStudio",
+  "url": "/privacy.html",
+  "description": "How HaoWordStudio handles browser-based searches, hosting logs, cookies, advertising, email, and user privacy choices.",
+  "keywords": ""
+ },
+ {
+  "title": "推荐与佣金说明 | HaoWord Studio",
+  "url": "/services/disclosure.html",
+  "description": "了解本站服务指南、第三方链接、联盟佣金及服务商选择标准。",
+  "keywords": ""
+ },
+ {
+  "title": "精选服务｜设计、建站与视频制作指南 | HaoWord Studio",
+  "url": "/services/index.html",
+  "description": "比较 Logo 设计、网站搭建和视频剪辑方案。查看交付清单、需求模板与第三方服务入口。",
+  "keywords": ""
+ },
+ {
+  "title": "Logo 与品牌设计选择指南 | HaoWord Studio",
+  "url": "/services/logo-design.html",
+  "description": "从品牌定位、源文件到商用范围，弄清一套 Logo 应该交付什么。",
+  "keywords": ""
+ },
+ {
+  "title": "视频剪辑与字幕选择指南 | HaoWord Studio",
+  "url": "/services/video-editing.html",
+  "description": "把素材整理、剪辑范围、字幕语言与导出规格写进同一份需求。",
+  "keywords": ""
+ },
+ {
+  "title": "网站与落地页选择指南 | HaoWord Studio",
+  "url": "/services/website-design.html",
+  "description": "比较模板、自助搭建与定制开发，找到适合当前业务阶段的方案。",
+  "keywords": ""
+ },
+ {
+  "title": "Multi-platform Social Publisher Setup | HaoWord Studio",
+  "url": "/social-publisher.html",
+  "description": "Request setup of social-auto-upload for Douyin (China), TikTok (international), Xiaohongshu (小红书), Bilibili, YouTube and more. A scoped installation service with platform checks and a practical handover.",
+  "keywords": ""
+ },
+ {
+  "title": "HTML Website Template Packs | HaoWordStudio",
+  "url": "/templates.html",
+  "description": "Buy responsive HTML, CSS and JavaScript website template packs with working source files, documentation and commercial-use licensing.",
+  "keywords": ""
+ },
+ {
+  "title": "Terms of Use | HaoWordStudio",
+  "url": "/terms.html",
+  "description": "Terms governing permitted use, accuracy limits, intellectual property, game rules, disclaimers, and changes.",
+  "keywords": ""
+ },
+ {
+  "title": "2026 Top 100 Viral Products for Affiliate Marketing | HaoWordTool",
+  "url": "/top-100-products-2026.html",
+  "description": "An original 2026 top 100 product-opportunity list for Pinterest, YouTube Shorts, TikTok and affiliate marketing content. Built for free-traffic testing and human-approved offers.",
+  "keywords": ""
+ },
+ {
+  "title": "Word Unscrambler & Exact Anagram Solver | Letter Solver Pro",
+  "url": "/unscrambler.html",
+  "description": "Find common English words from up to 15 letters, filter by length, use wildcards, and understand the transparent letter-count algorithm.",
+  "keywords": ""
+ },
+ {
+  "title": "HaoWordStudio Video Guides: Edit, Test, Export and Buy Templates",
+  "url": "/videos.html",
+  "description": "Watch five narrated HaoWordStudio guides showing how to run AI website code, edit files, test mobile layouts, export a ZIP and order template packs.",
+  "keywords": ""
+ },
+ {
+  "title": "Solar Bug Zapper",
+  "titleZh": "太阳能灭蚊灯",
+  "url": "/landing-pages.html#bug-zapper",
+  "description": "Explore an outdoor bug-zapper concept.",
+  "descriptionZh": "了解户外灭蚊灯的产品概念。",
+  "keywords": "商品 产品 预览"
+ },
+ {
+  "title": "Cordless Pressure Washer",
+  "titleZh": "无线高压清洗机",
+  "url": "/landing-pages.html#pressure-washer",
+  "description": "Explore cordless cleaning for outdoor jobs.",
+  "descriptionZh": "了解户外无线清洗方案。",
+  "keywords": "商品 产品 预览"
+ },
+ {
+  "title": "Electric Vegetable Cutter",
+  "titleZh": "电动切菜机",
+  "url": "/landing-pages.html#veggie-cutter",
+  "description": "Explore a compact kitchen-prep concept.",
+  "descriptionZh": "了解小巧的厨房备菜工具概念。",
+  "keywords": "商品 产品 预览"
+ },
+ {
+  "title": "Electric Spin Scrubber",
+  "titleZh": "电动旋转清洁刷",
+  "url": "/landing-pages.html#spin-scrubber",
+  "description": "Explore a powered brush for everyday cleaning.",
+  "descriptionZh": "了解适合日常清洁的电动刷。",
+  "keywords": "商品 产品 预览"
+ },
+ {
+  "title": "Smart Pet Feeder",
+  "titleZh": "智能宠物喂食器",
+  "url": "/landing-pages.html#pet-feeder",
+  "description": "Explore scheduled feeding with a camera.",
+  "descriptionZh": "了解带摄像头的定时喂食方案。",
+  "keywords": "商品 产品 预览"
+ },
+ {
+  "title": "Reviews — editorial previews",
+  "titleZh": "评测 — 编辑预览",
+  "url": "/reviews.html",
+  "description": "Ten unverified product and AI review previews.",
+  "keywords": "测评 比较 产品 AI"
+ },
+ {
+  "title": "Exploring Bug Zappers",
+  "url": "/reviews.html#bug-zapper",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 bug-zapper"
+ },
+ {
+  "title": "Exploring Noise-Cancelling Earbuds",
+  "url": "/reviews.html#anc-earbuds",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 anc-earbuds"
+ },
+ {
+  "title": "Exploring Fitness Bands",
+  "url": "/reviews.html#fitness-band",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 fitness-band"
+ },
+ {
+  "title": "Exploring Mini Projectors for Bedroom Movie Nights",
+  "url": "/reviews.html#mini-projector",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 mini-projector"
+ },
+ {
+  "title": "Exploring Air Purifiers for Small Rooms",
+  "url": "/reviews.html#air-purifier",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 air-purifier"
+ },
+ {
+  "title": "Exploring Electric Spin Scrubbers",
+  "url": "/reviews.html#spin-scrubber",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 spin-scrubber"
+ },
+ {
+  "title": "Exploring Cordless Pressure Washers",
+  "url": "/reviews.html#pressure-washer",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 pressure-washer"
+ },
+ {
+  "title": "Exploring AI Product Photo Generators for E-commerce",
+  "url": "/reviews.html#ai-product-photos",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 ai-product-photos"
+ },
+ {
+  "title": "Exploring AI UGC Video Ad Generators",
+  "url": "/reviews.html#ugc-video-ads",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 ugc-video-ads"
+ },
+ {
+  "title": "Exploring AI Chatbots for E-commerce",
+  "url": "/reviews.html#ai-chatbot",
+  "description": "Review preview. Scores, specifications and prices are unverified.",
+  "keywords": "reviews 评测 预览 ai-chatbot"
+ },
+ {
+  "title": "HaoWordTool AI Studio",
+  "url": "/ai-tools.html",
+  "description": "Product photo, video and voiceover project packages.",
+  "keywords": "AI 商品图 视频 配音 自营 制作 套餐"
+ },
+ {
+  "title": "AI Product Photos",
+  "url": "/ai-tools.html#product-photos",
+  "description": "5 product scene images; one revision.",
+  "keywords": "HaoWordTool AI Studio Product photos, brand details and scene requirements"
+ },
+ {
+  "title": "AI Product Video",
+  "url": "/ai-tools.html#product-video",
+  "description": "One 15-second product video; one revision.",
+  "keywords": "HaoWordTool AI Studio Product assets, selling points and target language"
+ },
+ {
+  "title": "AI Voiceover",
+  "url": "/ai-tools.html#voiceover",
+  "description": "One voiceover, up to 300 words; one revision.",
+  "keywords": "HaoWordTool AI Studio Final script, language and voice style"
+ },
+ {
+  "title": "AI creative workspace",
+  "url": "/ai-workspace.html",
+  "description": "Prepare your project brief and access your store account.",
+  "keywords": "工作台 项目 订单 素材 下载"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/premium-digital-products.html#dimple-dumpling",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/premium-digital-products.html#momo-shelf-ghost",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/premium-digital-products.html#ghost-granny-square",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/premium-digital-products.html#willow-market-bag",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/premium-digital-products.html#annual-budget",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/premium-digital-products.html#finance-dashboard",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/premium-digital-products.html#wedding-planner",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "Digital products | HaoWordTool",
+  "url": "/premium-digital-products.html",
+  "description": "Minimal digital products from HaoWordTool, each with its own product page and PayPal checkout link.",
+  "keywords": "digital products templates crochet budget planner 数字商品 模板"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/premium-digital/dimple-dumpling.html",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/premium-digital/momo-shelf-ghost.html",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/premium-digital/ghost-granny-square.html",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/premium-digital/willow-market-bag.html",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/premium-digital/annual-budget.html",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/premium-digital/finance-dashboard.html",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/premium-digital/wedding-planner.html",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "数字商品 | HaoWordTool",
+  "url": "/zh/premium-digital-products.html",
+  "description": "HaoWordTool 数字商品，每个商品都有独立页面和 PayPal 付款链接。",
+  "keywords": "digital products templates crochet budget planner 数字商品 模板"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/zh/premium-digital/dimple-dumpling.html",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/zh/premium-digital/momo-shelf-ghost.html",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/zh/premium-digital/ghost-granny-square.html",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/zh/premium-digital/willow-market-bag.html",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/zh/premium-digital/annual-budget.html",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/zh/premium-digital/finance-dashboard.html",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/zh/premium-digital/wedding-planner.html",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "デジタル商品 | HaoWordTool",
+  "url": "/ja/premium-digital-products.html",
+  "description": "HaoWordTool のデジタル商品。各商品に個別ページと PayPal 決済リンクがあります。",
+  "keywords": "digital products templates crochet budget planner 数字商品 模板"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/ja/premium-digital/dimple-dumpling.html",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/ja/premium-digital/momo-shelf-ghost.html",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/ja/premium-digital/ghost-granny-square.html",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/ja/premium-digital/willow-market-bag.html",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/ja/premium-digital/annual-budget.html",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/ja/premium-digital/finance-dashboard.html",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/ja/premium-digital/wedding-planner.html",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "Produits numériques | HaoWordTool",
+  "url": "/fr/premium-digital-products.html",
+  "description": "Produits numériques HaoWordTool avec une page produit et un lien PayPal distincts pour chaque article.",
+  "keywords": "digital products templates crochet budget planner 数字商品 模板"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/fr/premium-digital/dimple-dumpling.html",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/fr/premium-digital/momo-shelf-ghost.html",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/fr/premium-digital/ghost-granny-square.html",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/fr/premium-digital/willow-market-bag.html",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/fr/premium-digital/annual-budget.html",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/fr/premium-digital/finance-dashboard.html",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/fr/premium-digital/wedding-planner.html",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "Digitale Produkte | HaoWordTool",
+  "url": "/de/premium-digital-products.html",
+  "description": "Digitale Produkte von HaoWordTool, jeweils mit eigener Produktseite und eigenem PayPal-Zahlungslink.",
+  "keywords": "digital products templates crochet budget planner 数字商品 模板"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/de/premium-digital/dimple-dumpling.html",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/de/premium-digital/momo-shelf-ghost.html",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/de/premium-digital/ghost-granny-square.html",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/de/premium-digital/willow-market-bag.html",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/de/premium-digital/annual-budget.html",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/de/premium-digital/finance-dashboard.html",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/de/premium-digital/wedding-planner.html",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "Productos digitales | HaoWordTool",
+  "url": "/es/premium-digital-products.html",
+  "description": "Productos digitales de HaoWordTool, cada uno con su propia página y enlace de pago PayPal.",
+  "keywords": "digital products templates crochet budget planner 数字商品 模板"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/es/premium-digital/dimple-dumpling.html",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/es/premium-digital/momo-shelf-ghost.html",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/es/premium-digital/ghost-granny-square.html",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/es/premium-digital/willow-market-bag.html",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/es/premium-digital/annual-budget.html",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/es/premium-digital/finance-dashboard.html",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/es/premium-digital/wedding-planner.html",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "디지털 상품 | HaoWordTool",
+  "url": "/ko/premium-digital-products.html",
+  "description": "HaoWordTool 디지털 상품입니다. 각 상품은 독립 페이지와 PayPal 결제 링크를 가집니다.",
+  "keywords": "digital products templates crochet budget planner 数字商品 模板"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/ko/premium-digital/dimple-dumpling.html",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/ko/premium-digital/momo-shelf-ghost.html",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/ko/premium-digital/ghost-granny-square.html",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/ko/premium-digital/willow-market-bag.html",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/ko/premium-digital/annual-budget.html",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/ko/premium-digital/finance-dashboard.html",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/ko/premium-digital/wedding-planner.html",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "Цифровые товары | HaoWordTool",
+  "url": "/ru/premium-digital-products.html",
+  "description": "Цифровые товары HaoWordTool: у каждого товара отдельная страница и отдельная ссылка PayPal.",
+  "keywords": "digital products templates crochet budget planner 数字商品 模板"
+ },
+ {
+  "title": "Dimple 小笼包玩偶",
+  "url": "/ru/premium-digital/dimple-dumpling.html",
+  "description": "免缝合钩针玩偶图解. $5.80.",
+  "keywords": "钩针图解 Dimple 小笼包玩偶 digital product"
+ },
+ {
+  "title": "MOMO 置物架幽灵",
+  "url": "/ru/premium-digital/momo-shelf-ghost.html",
+  "description": "可爱万圣节钩针图解. $9.24.",
+  "keywords": "节日钩针 MOMO 置物架幽灵 digital product"
+ },
+ {
+  "title": "幽灵祖母方格",
+  "url": "/ru/premium-digital/ghost-granny-square.html",
+  "description": "钩针图解 + 视频教程. $16.00.",
+  "keywords": "视频教程 幽灵祖母方格 digital product"
+ },
+ {
+  "title": "Willow 网眼购物袋",
+  "url": "/ru/premium-digital/willow-market-bag.html",
+  "description": "适合新手的钩针图解. $13.00.",
+  "keywords": "日常钩针 Willow 网眼购物袋 digital product"
+ },
+ {
+  "title": "年度预算模板",
+  "url": "/ru/premium-digital/annual-budget.html",
+  "description": "Google Sheets 与 Excel 模板. $20.28.",
+  "keywords": "电子表格模板 年度预算模板 digital product"
+ },
+ {
+  "title": "个人财务看板",
+  "url": "/ru/premium-digital/finance-dashboard.html",
+  "description": "预算与资金追踪工具. $24.00.",
+  "keywords": "财务看板 个人财务看板 digital product"
+ },
+ {
+  "title": "婚礼策划模板",
+  "url": "/ru/premium-digital/wedding-planner.html",
+  "description": "可打印与数字模板. $18.00.",
+  "keywords": "计划模板 婚礼策划模板 digital product"
+ },
+ {
+  "title": "Fiverr AI Services | HaoWordTool",
+  "url": "/fiverr-ai-services.html",
+  "description": "A HaoWordTool guide to hiring Fiverr freelancers for product photos, videos, voiceovers, landing pages and trending business services.",
+  "keywords": "fiverr ai services freelance product photos product video voiceover landing page affiliate marketplace"
+ },
+ {
+  "title": "SKILL BANK",
+  "titleZh": "SKILL BANK 技能库",
+  "description": "100 original AI workflow kits for creators, marketers and technical teams.",
+  "descriptionZh": "100个独立AI技能，含工作流程、模板、案例与质量标准。",
+  "keywords": "skills skill bank workflow templates 技能库",
+  "url": "/skill-bank.html"
+ },
+ {
+  "title": "Agent Session Handoff",
+  "titleZh": "智能体会话交接",
+  "description": "Turn session notes, changed files, test results into a restart brief with the next executable action.",
+  "descriptionZh": "整理当前进度、已改文件和未完成测试，生成可接着执行的交接单",
+  "keywords": "skill bank Agent Operations",
+  "url": "/skill-bank.html#agent-session-handoff"
+ },
+ {
+  "title": "Project Memory Curator",
+  "titleZh": "项目记忆整理",
+  "description": "Turn dated decisions, corrections, project constraints into a compact memory proposal with provenance.",
+  "descriptionZh": "归并项目决策，标注冲突、适用范围和被新决定替代的旧规则",
+  "keywords": "skill bank Agent Operations",
+  "url": "/skill-bank.html#project-memory-curator"
+ },
+ {
+  "title": "Agent Workspace Setup Brief",
+  "titleZh": "智能体工作区配置规划",
+  "description": "Turn agent names, operating system, repo tooling, allowed integrations into a capability matrix and reversible setup plan.",
+  "descriptionZh": "对照操作系统和现有工具，列出必要配置、可选插件与验证步骤",
+  "keywords": "skill bank Agent Operations",
+  "url": "/skill-bank.html#agent-workspace-setup-brief"
+ },
+ {
+  "title": "Task Scope Calibrator",
+  "titleZh": "开发任务范围判断",
+  "description": "Turn requested change, affected modules, operational risk into a proportionate implementation and verification brief.",
+  "descriptionZh": "从用户可见行为划定修改范围，并选择相称的验证方法",
+  "keywords": "skill bank Agent Operations",
+  "url": "/skill-bank.html#task-scope-calibrator"
+ },
+ {
+  "title": "Agent Review Evidence Ledger",
+  "titleZh": "智能体验收证据台账",
+  "description": "Turn diff summary, commands run, logs, open issues into an evidence table supporting a completion decision.",
+  "descriptionZh": "把完成声明逐项对应到实际日志、文件和测试结果",
+  "keywords": "skill bank Agent Operations",
+  "url": "/skill-bank.html#agent-review-evidence-ledger"
+ },
+ {
+  "title": "Product Demo Shot Planner",
+  "titleZh": "产品演示分镜规划",
+  "description": "Turn product screenshots, real features, duration, aspect ratio into a timecoded product demonstration shot list.",
+  "descriptionZh": "把真实产品功能编排成有时码的演示镜头清单",
+  "keywords": "skill bank Video Production",
+  "url": "/skill-bank.html#product-demo-shot-planner"
+ },
+ {
+  "title": "Motion Timing Sheet",
+  "titleZh": "动效帧级时间表",
+  "description": "Turn approved storyboard, frame rate, clip length into a frame-accurate animation timing table.",
+  "descriptionZh": "把分镜时长换算成帧，安排动画进入、停留和退出",
+  "keywords": "skill bank Video Production",
+  "url": "/skill-bank.html#motion-timing-sheet"
+ },
+ {
+  "title": "Screen Recording Edit Brief",
+  "titleZh": "录屏剪辑执行单",
+  "description": "Turn screen recording transcript, important clicks, target length into an edit decision list that keeps actions understandable.",
+  "descriptionZh": "识别录屏中的关键动作，输出保留、删减和强调位置",
+  "keywords": "skill bank Video Production",
+  "url": "/skill-bank.html#screen-recording-edit-brief"
+ },
+ {
+  "title": "Video Asset Readiness Audit",
+  "titleZh": "视频素材就绪检查",
+  "description": "Turn shot list, asset inventory, licenses, export settings into an asset gap report and render-readiness checklist.",
+  "descriptionZh": "逐镜头核对素材文件、分辨率、字体、音频和使用权限",
+  "keywords": "skill bank Video Production",
+  "url": "/skill-bank.html#video-asset-readiness-audit"
+ },
+ {
+  "title": "Square to Vertical Storyboard",
+  "titleZh": "方屏转竖屏分镜",
+  "description": "Turn approved square video, safe-area constraints, vertical destination into a 9:16 reframing and pacing plan.",
+  "descriptionZh": "逐镜头选择裁切、重排或留边，并调整文字和停留时间",
+  "keywords": "skill bank Video Production",
+  "url": "/skill-bank.html#square-to-vertical-storyboard"
+ },
+ {
+  "title": "Multi Model Answer Rubric",
+  "titleZh": "多模型回答评分",
+  "description": "Turn three model responses, source packet, task success criteria into a blind comparison with evidence-based scores.",
+  "descriptionZh": "隐藏模型名称，按证据、准确性和任务要求比较回答",
+  "keywords": "skill bank AI Workspaces",
+  "url": "/skill-bank.html#multi-model-answer-rubric"
+ },
+ {
+  "title": "Assistant Role Brief Designer",
+  "titleZh": "专用助手角色设计",
+  "description": "Turn recurring task, allowed sources, output examples into a focused assistant instruction brief.",
+  "descriptionZh": "为一个反复出现的任务定义输入、职责、输出和边界",
+  "keywords": "skill bank AI Workspaces",
+  "url": "/skill-bank.html#assistant-role-brief-designer"
+ },
+ {
+  "title": "Prompt Experiment Notebook",
+  "titleZh": "提示词实验记录",
+  "description": "Turn baseline prompt, test inputs, candidate change into a reproducible prompt comparison record.",
+  "descriptionZh": "固定测试输入和评分规则，记录单一提示词改动的效果",
+  "keywords": "skill bank AI Workspaces",
+  "url": "/skill-bank.html#prompt-experiment-notebook"
+ },
+ {
+  "title": "Knowledge Chat Source Check",
+  "titleZh": "知识问答来源核验",
+  "description": "Turn question, retrieved passages, draft response into an answer with claim-to-source mappings.",
+  "descriptionZh": "逐条核对回答中的事实是否被给定来源直接支持",
+  "keywords": "skill bank AI Workspaces",
+  "url": "/skill-bank.html#knowledge-chat-source-check"
+ },
+ {
+  "title": "AI Workspace Migration Checklist",
+  "titleZh": "AI工作区迁移检查",
+  "description": "Turn old client inventory, export formats, destination features into a migration map and smoke-test plan.",
+  "descriptionZh": "分别梳理提示词、对话、附件和知识库的迁移方式",
+  "keywords": "skill bank AI Workspaces",
+  "url": "/skill-bank.html#ai-workspace-migration-checklist"
+ },
+ {
+  "title": "Series Continuity Ledger",
+  "titleZh": "长篇小说连续性台账",
+  "description": "Turn chapter summaries, character facts, timeline into a canon ledger with conflicts and unresolved threads.",
+  "descriptionZh": "整理人物事实、事件时间线、秘密知情范围与冲突",
+  "keywords": "skill bank Fiction Writing",
+  "url": "/skill-bank.html#series-continuity-ledger"
+ },
+ {
+  "title": "Chapter Promise Planner",
+  "titleZh": "章节承诺与推进规划",
+  "description": "Turn previous ending, active plot threads, desired chapter length into a scene outline that pays off one reader promise.",
+  "descriptionZh": "承接上一章悬念，安排本章实质推进和结尾后果",
+  "keywords": "skill bank Fiction Writing",
+  "url": "/skill-bank.html#chapter-promise-planner"
+ },
+ {
+  "title": "Character Voice Contrast",
+  "titleZh": "人物对白差异设计",
+  "description": "Turn dialogue samples, character background, scene objective into a voice matrix and revised dialogue sample.",
+  "descriptionZh": "比较人物句式、用词和应对压力的方式，修改对白",
+  "keywords": "skill bank Fiction Writing",
+  "url": "/skill-bank.html#character-voice-contrast"
+ },
+ {
+  "title": "Foreshadowing Payoff Map",
+  "titleZh": "伏笔回收对照表",
+  "description": "Turn manuscript outline, planted clues, planned reveals into a clue-to-payoff table with reader visibility.",
+  "descriptionZh": "把已出现的线索对应到后续揭示，标记遗漏和突兀反转",
+  "keywords": "skill bank Fiction Writing",
+  "url": "/skill-bank.html#foreshadowing-payoff-map"
+ },
+ {
+  "title": "Scene Revision Diagnostic",
+  "titleZh": "小说场景修订诊断",
+  "description": "Turn one scene, intended emotion, viewpoint rules into an annotated revision plan plus a short revised excerpt.",
+  "descriptionZh": "检查场景目标、阻力、视角和叙述，给出局部修订示例",
+  "keywords": "skill bank Fiction Writing",
+  "url": "/skill-bank.html#scene-revision-diagnostic"
+ },
+ {
+  "title": "Repository Architecture Map",
+  "titleZh": "代码仓库架构地图",
+  "description": "Turn repository tree, entry points, deployment notes into a component diagram with evidence-linked edges.",
+  "descriptionZh": "从入口和模块证据还原组件及调用关系",
+  "keywords": "skill bank Architecture Diagrams",
+  "url": "/skill-bank.html#repository-architecture-map"
+ },
+ {
+  "title": "Request Journey Diagram",
+  "titleZh": "请求链路时序图",
+  "description": "Turn endpoint handler, middleware, service calls into a request sequence with failure branches.",
+  "descriptionZh": "追踪一次请求的鉴权、调用、事务和异步副作用",
+  "keywords": "skill bank Architecture Diagrams",
+  "url": "/skill-bank.html#request-journey-diagram"
+ },
+ {
+  "title": "Data Lifecycle Diagram",
+  "titleZh": "数据生命周期图",
+  "description": "Turn data sources, stores, retention policy, export paths into a data lifecycle map with ownership and deletion paths.",
+  "descriptionZh": "梳理数据采集、转换、复制、存储和删除的流向",
+  "keywords": "skill bank Architecture Diagrams",
+  "url": "/skill-bank.html#data-lifecycle-diagram"
+ },
+ {
+  "title": "Integration Boundary Map",
+  "titleZh": "系统集成边界图",
+  "description": "Turn systems list, credentials model, event schemas into a boundary diagram and interface inventory.",
+  "descriptionZh": "标记系统归属、数据方向、传输方式和重试去重责任",
+  "keywords": "skill bank Architecture Diagrams",
+  "url": "/skill-bank.html#integration-boundary-map"
+ },
+ {
+  "title": "Deployment Topology Brief",
+  "titleZh": "部署拓扑说明",
+  "description": "Turn deployment manifests, regions, dependencies into an environment-specific topology with open questions.",
+  "descriptionZh": "按一个具体环境区分服务、实例、公共入口和依赖",
+  "keywords": "skill bank Architecture Diagrams",
+  "url": "/skill-bank.html#deployment-topology-brief"
+ },
+ {
+  "title": "Knowledge Corpus Intake",
+  "titleZh": "知识库资料入库规划",
+  "description": "Turn document inventory, intended questions, access scopes into an ingestion plan with document IDs and provenance.",
+  "descriptionZh": "给文档分配稳定ID，记录权威性、权限和时效",
+  "keywords": "skill bank Knowledge Systems",
+  "url": "/skill-bank.html#knowledge-corpus-intake"
+ },
+ {
+  "title": "Entity Resolution Review",
+  "titleZh": "知识图谱实体消歧",
+  "description": "Turn entity mentions, source IDs, candidate links into an entity merge proposal with confidence and evidence.",
+  "descriptionZh": "根据证据判断相似名称是否属于同一实体",
+  "keywords": "skill bank Knowledge Systems",
+  "url": "/skill-bank.html#entity-resolution-review"
+ },
+ {
+  "title": "Retrieval Evaluation Set",
+  "titleZh": "检索评估题集设计",
+  "description": "Turn corpus snapshot, representative questions, correct sources into a labeled retrieval benchmark with hard negatives.",
+  "descriptionZh": "编写可回答、无答案和近似干扰问题，并标注正确来源",
+  "keywords": "skill bank Knowledge Systems",
+  "url": "/skill-bank.html#retrieval-evaluation-set"
+ },
+ {
+  "title": "Knowledge Freshness Audit",
+  "titleZh": "知识时效巡检",
+  "description": "Turn stored claims, source dates, update cadence into a refresh queue ranked by decision impact.",
+  "descriptionZh": "识别易变事实，比较来源日期并形成刷新队列",
+  "keywords": "skill bank Knowledge Systems",
+  "url": "/skill-bank.html#knowledge-freshness-audit"
+ },
+ {
+  "title": "Evidence Linked Answer Builder",
+  "titleZh": "证据关联回答编写",
+  "description": "Turn user question, source snippets, audience into a concise answer with citations and uncertainty boundaries.",
+  "descriptionZh": "用给定材料构建回答，并逐句关联证据和不确定性",
+  "keywords": "skill bank Knowledge Systems",
+  "url": "/skill-bank.html#evidence-linked-answer-builder"
+ },
+ {
+  "title": "Long Task Checkpoint Kit",
+  "titleZh": "长任务断点续办",
+  "description": "Turn goal, current files, completed steps, blockers into a restartable checkpoint with completion conditions.",
+  "descriptionZh": "记录目标、最后验证状态、完成条件和下一步操作",
+  "keywords": "skill bank Persistent Planning",
+  "url": "/skill-bank.html#long-task-checkpoint-kit"
+ },
+ {
+  "title": "Research Findings Register",
+  "titleZh": "研究发现登记",
+  "description": "Turn research question, sources, notes, contradictory findings into a findings register with confidence and open questions.",
+  "descriptionZh": "按结论合并来源，保留反例、置信度和待解问题",
+  "keywords": "skill bank Persistent Planning",
+  "url": "/skill-bank.html#research-findings-register"
+ },
+ {
+  "title": "Project Blocker Triage",
+  "titleZh": "项目阻塞项分诊",
+  "description": "Turn task list, dependencies, recent failures into a ranked blocker board with unblock actions.",
+  "descriptionZh": "区分真正依赖外部条件的阻塞与尚未完成的工作",
+  "keywords": "skill bank Persistent Planning",
+  "url": "/skill-bank.html#project-blocker-triage"
+ },
+ {
+  "title": "Decision Log Maintainer",
+  "titleZh": "决策日志维护",
+  "description": "Turn options considered, constraints, decisions, dates into a concise architectural or product decision log.",
+  "descriptionZh": "记录选项、取舍、后果和重新评估的触发条件",
+  "keywords": "skill bank Persistent Planning",
+  "url": "/skill-bank.html#decision-log-maintainer"
+ },
+ {
+  "title": "Completion Gate Designer",
+  "titleZh": "交付完成标准设计",
+  "description": "Turn task objective, deliverables, risk level into an evidence-based done checklist.",
+  "descriptionZh": "把目标转成可观察的交付条件和所需证据",
+  "keywords": "skill bank Persistent Planning",
+  "url": "/skill-bank.html#completion-gate-designer"
+ },
+ {
+  "title": "Design Brief Translator",
+  "titleZh": "设计需求转译",
+  "description": "Turn business goal, audience, reference screenshots into a buildable design brief with constraints.",
+  "descriptionZh": "把抽象风格要求转成布局、交互、素材和验收约束",
+  "keywords": "skill bank Product Design",
+  "url": "/skill-bank.html#design-brief-translator"
+ },
+ {
+  "title": "Dashboard Information Hierarchy",
+  "titleZh": "运营看板信息排序",
+  "description": "Turn metrics, user decisions, update cadence into a dashboard layout and metric dictionary.",
+  "descriptionZh": "根据用户要做的决策排列指标，并定义单位和更新状态",
+  "keywords": "skill bank Product Design",
+  "url": "/skill-bank.html#dashboard-information-hierarchy"
+ },
+ {
+  "title": "Prototype State Matrix",
+  "titleZh": "原型状态矩阵",
+  "description": "Turn screens, user actions, data dependencies into a complete interaction state matrix.",
+  "descriptionZh": "补齐加载、空白、错误、成功及恢复操作等界面状态",
+  "keywords": "skill bank Product Design",
+  "url": "/skill-bank.html#prototype-state-matrix"
+ },
+ {
+  "title": "Brand Token Extractor",
+  "titleZh": "品牌设计变量提取",
+  "description": "Turn approved brand assets, current UI screenshots into a token proposal with provenance and usage rules.",
+  "descriptionZh": "从已认可素材识别颜色、间距和组件角色，输出变量建议",
+  "keywords": "skill bank Product Design",
+  "url": "/skill-bank.html#brand-token-extractor"
+ },
+ {
+  "title": "Pitch Deck Story Architect",
+  "titleZh": "路演幻灯片叙事",
+  "description": "Turn product facts, audience, evidence, desired action into a slide narrative with proof and asset requests.",
+  "descriptionZh": "围绕观众决策安排页面顺序、证据和素材需求",
+  "keywords": "skill bank Product Design",
+  "url": "/skill-bank.html#pitch-deck-story-architect"
+ },
+ {
+  "title": "Transcript to Clip Map",
+  "titleZh": "长视频精彩片段定位",
+  "description": "Turn timecoded transcript, audience, clip duration into a shortlist of self-contained clips with cut points.",
+  "descriptionZh": "从带时间码的文字稿挑选完整、可独立理解的片段",
+  "keywords": "skill bank Creator Workflows",
+  "url": "/skill-bank.html#transcript-to-clip-map"
+ },
+ {
+  "title": "Subtitle Localization Brief",
+  "titleZh": "字幕本地化方案",
+  "description": "Turn source subtitles, target locale, glossary into localized subtitle text with timing concerns.",
+  "descriptionZh": "结合目标地区和术语表调整字幕，并标记阅读时长问题",
+  "keywords": "skill bank Creator Workflows",
+  "url": "/skill-bank.html#subtitle-localization-brief"
+ },
+ {
+  "title": "Voiceover Production Sheet",
+  "titleZh": "配音制作执行单",
+  "description": "Turn approved script, pronunciation notes, runtime into a recording-ready script with pauses and emphasis.",
+  "descriptionZh": "区分口播正文与导演提示，标注停顿、重音和发音疑问",
+  "keywords": "skill bank Creator Workflows",
+  "url": "/skill-bank.html#voiceover-production-sheet"
+ },
+ {
+  "title": "Video Version Delivery Matrix",
+  "titleZh": "视频多版本交付矩阵",
+  "description": "Turn master video, destinations, language versions into a delivery matrix with filenames and QC checks.",
+  "descriptionZh": "列出不同语言、比例和平台所需版本及验收状态",
+  "keywords": "skill bank Creator Workflows",
+  "url": "/skill-bank.html#video-version-delivery-matrix"
+ },
+ {
+  "title": "Creator Asset Provenance Log",
+  "titleZh": "创作者素材来源台账",
+  "description": "Turn asset files, creator permissions, usage terms into an asset provenance register for a production.",
+  "descriptionZh": "记录图片、音乐和视频素材的来源与使用条件",
+  "keywords": "skill bank Creator Workflows",
+  "url": "/skill-bank.html#creator-asset-provenance-log"
+ },
+ {
+  "title": "Agent Role Decomposition",
+  "titleZh": "多智能体职责拆分",
+  "description": "Turn goal, work units, shared files, available agents into a role allocation plan with ownership boundaries.",
+  "descriptionZh": "按独立交付物划分角色，并明确共享接口负责人",
+  "keywords": "skill bank Agent Teams",
+  "url": "/skill-bank.html#agent-role-decomposition"
+ },
+ {
+  "title": "Parallel Work Dependency Map",
+  "titleZh": "并行任务依赖规划",
+  "description": "Turn task graph, estimated effort, shared resources into a parallel execution plan with critical dependencies.",
+  "descriptionZh": "画出任务先后依赖，区分可并行研究和共享写入",
+  "keywords": "skill bank Agent Teams",
+  "url": "/skill-bank.html#parallel-work-dependency-map"
+ },
+ {
+  "title": "Agent Handoff Contract",
+  "titleZh": "智能体交接契约",
+  "description": "Turn producer role, consumer role, required artifact into a typed handoff specification and acceptance examples.",
+  "descriptionZh": "定义交接数据字段、路径、状态和验收示例",
+  "keywords": "skill bank Agent Teams",
+  "url": "/skill-bank.html#agent-handoff-contract"
+ },
+ {
+  "title": "Agent Output Reconciler",
+  "titleZh": "多智能体结果整合",
+  "description": "Turn conflicting proposals, tests, shared objective into a conflict resolution memo and integrated plan.",
+  "descriptionZh": "比较方案假设和证据，处理冲突并形成一致方案",
+  "keywords": "skill bank Agent Teams",
+  "url": "/skill-bank.html#agent-output-reconciler"
+ },
+ {
+  "title": "Multi Agent Run Retrospective",
+  "titleZh": "多智能体执行复盘",
+  "description": "Turn run log, output quality, retries, costs into a bottleneck report with one measurable next experiment.",
+  "descriptionZh": "分析交接返工、等待、重试和成本，设计下一次改进实验",
+  "keywords": "skill bank Agent Teams",
+  "url": "/skill-bank.html#multi-agent-run-retrospective"
+ },
+ {
+  "title": "Dotnet Upgrade Readiness",
+  "titleZh": "Dotnet升级就绪评估",
+  "description": "Turn project files, target frameworks, dependency inventory into an upgrade impact report and staged migration plan.",
+  "descriptionZh": "梳理目标框架、依赖和行为变化，制定分阶段升级计划",
+  "keywords": "skill bank .NET Engineering",
+  "url": "/skill-bank.html#dotnet-upgrade-readiness"
+ },
+ {
+  "title": "Async Cancellation Review",
+  "titleZh": "异步取消链路审查",
+  "description": "Turn async C# call chain, cancellation tokens, timeout policy into a cancellation propagation review with focused test cases.",
+  "descriptionZh": "追踪C#异步调用中的取消令牌、超时和阻塞等待",
+  "keywords": "skill bank .NET Engineering",
+  "url": "/skill-bank.html#async-cancellation-review"
+ },
+ {
+  "title": "Dependency Injection Lifetime Audit",
+  "titleZh": "依赖注入生命周期审计",
+  "description": "Turn service registrations, constructors, disposal rules into a service lifetime map and concrete mismatch findings.",
+  "descriptionZh": "检查单例、作用域和临时服务之间的引用及释放",
+  "keywords": "skill bank .NET Engineering",
+  "url": "/skill-bank.html#dependency-injection-lifetime-audit"
+ },
+ {
+  "title": "Dotnet API Contract Tests",
+  "titleZh": "Dotnet接口契约测试",
+  "description": "Turn endpoint contracts, validation rules, error schema into a contract test plan with representative fixtures.",
+  "descriptionZh": "根据接口约定设计成功、错误和校验用例",
+  "keywords": "skill bank .NET Engineering",
+  "url": "/skill-bank.html#dotnet-api-contract-tests"
+ },
+ {
+  "title": "Dotnet Performance Investigation",
+  "titleZh": "Dotnet性能调查",
+  "description": "Turn slow endpoint, workload, profiling evidence into a hypothesis-driven investigation plan.",
+  "descriptionZh": "用基线、分析证据和可证伪假设规划性能排查",
+  "keywords": "skill bank .NET Engineering",
+  "url": "/skill-bank.html#dotnet-performance-investigation"
+ },
+ {
+  "title": "Semantic Search Schema Brief",
+  "titleZh": "语义搜索结构设计",
+  "description": "Turn document fields, filter requirements, embedding model into a vector collection schema and indexing rationale.",
+  "descriptionZh": "定义向量维度、元数据、过滤字段和稳定文档ID",
+  "keywords": "skill bank Vector Search",
+  "url": "/skill-bank.html#semantic-search-schema-brief"
+ },
+ {
+  "title": "Vector Retrieval Benchmark",
+  "titleZh": "向量检索基准方案",
+  "description": "Turn query set, relevance labels, index configurations into a benchmark plan with quality and latency metrics.",
+  "descriptionZh": "固定语料和问题集，比较召回质量与尾部延迟",
+  "keywords": "skill bank Vector Search",
+  "url": "/skill-bank.html#vector-retrieval-benchmark"
+ },
+ {
+  "title": "Metadata Filter Test Designer",
+  "titleZh": "元数据过滤测试",
+  "description": "Turn filterable fields, sample documents, access boundaries into a filter truth table and retrieval test cases.",
+  "descriptionZh": "设计包含、排除、空值和跨租户的检索用例",
+  "keywords": "skill bank Vector Search",
+  "url": "/skill-bank.html#metadata-filter-test-designer"
+ },
+ {
+  "title": "Embedding Migration Planner",
+  "titleZh": "嵌入模型迁移规划",
+  "description": "Turn old and new embedding settings, corpus size, downtime constraints into a versioned re-embedding and cutover plan.",
+  "descriptionZh": "设计版本标记、重建索引、验证、切换和回退步骤",
+  "keywords": "skill bank Vector Search",
+  "url": "/skill-bank.html#embedding-migration-planner"
+ },
+ {
+  "title": "Search Relevance Failure Triage",
+  "titleZh": "搜索相关性故障分诊",
+  "description": "Turn bad queries, retrieved results, relevance labels into a categorized relevance failure report.",
+  "descriptionZh": "区分召回、过滤、分块和排序阶段的问题",
+  "keywords": "skill bank Vector Search",
+  "url": "/skill-bank.html#search-relevance-failure-triage"
+ },
+ {
+  "title": "Achievement Evidence Collector",
+  "titleZh": "履历成果证据整理",
+  "description": "Turn work notes, responsibilities, verified metrics into a factual achievement inventory for a resume.",
+  "descriptionZh": "从真实工作资料提取行动、范围和结果，标记缺少的量化证据",
+  "keywords": "skill bank Career Materials",
+  "url": "/skill-bank.html#achievement-evidence-collector"
+ },
+ {
+  "title": "Resume Job Match Matrix",
+  "titleZh": "简历岗位匹配矩阵",
+  "description": "Turn resume, job description, verified experience into a requirement-to-evidence map and editing priorities.",
+  "descriptionZh": "对照招聘要求与真实经历，区分匹配证据和能力缺口",
+  "keywords": "skill bank Career Materials",
+  "url": "/skill-bank.html#resume-job-match-matrix"
+ },
+ {
+  "title": "Resume Layout Readability Audit",
+  "titleZh": "简历版式可读性检查",
+  "description": "Turn resume PDF or screenshot, target page count into a layout correction list and plain-text reading check.",
+  "descriptionZh": "检查层级、密度、文本提取顺序和关键信息可读性",
+  "keywords": "skill bank Career Materials",
+  "url": "/skill-bank.html#resume-layout-readability-audit"
+ },
+ {
+  "title": "Career Transition Story Builder",
+  "titleZh": "转行经历叙事",
+  "description": "Turn past roles, target role, transferable accomplishments into a concise transition narrative and supporting bullets.",
+  "descriptionZh": "把原有工作成果映射到目标岗位需要的可迁移能力",
+  "keywords": "skill bank Career Materials",
+  "url": "/skill-bank.html#career-transition-story-builder"
+ },
+ {
+  "title": "Resume Version Control Kit",
+  "titleZh": "简历版本管理",
+  "description": "Turn master resume, target roles, application list into a version register and controlled tailoring workflow.",
+  "descriptionZh": "保留事实主版本并记录每个岗位的改动与提交文件",
+  "keywords": "skill bank Career Materials",
+  "url": "/skill-bank.html#resume-version-control-kit"
+ },
+ {
+  "title": "Skill Installation Readiness",
+  "titleZh": "Skill安装前检查",
+  "description": "Turn untrusted skill folder, host capabilities, intended use into a read-only pre-install review report.",
+  "descriptionZh": "只读检查技能入口、脚本以及网络和文件访问需求",
+  "keywords": "skill bank Skill Quality",
+  "url": "/skill-bank.html#skill-installation-readiness"
+ },
+ {
+  "title": "Skill Data Flow Audit",
+  "titleZh": "Skill数据流审计",
+  "description": "Turn skill instructions, scripts, external endpoints into a source-to-destination data flow table.",
+  "descriptionZh": "追踪读取的数据、处理过程和外发目的地",
+  "keywords": "skill bank Skill Quality",
+  "url": "/skill-bank.html#skill-data-flow-audit"
+ },
+ {
+  "title": "Prompt Injection Boundary Review",
+  "titleZh": "提示注入边界检查",
+  "description": "Turn trusted task, retrieved text, agent action rules into a boundary review and benign adversarial test set.",
+  "descriptionZh": "区分用户任务与资料中的指令，设计无害对抗测试",
+  "keywords": "skill bank Skill Quality",
+  "url": "/skill-bank.html#prompt-injection-boundary-review"
+ },
+ {
+  "title": "Skill Dependency Inventory",
+  "titleZh": "Skill依赖清单",
+  "description": "Turn skill folder, package manifests, download commands into a dependency inventory with provenance gaps.",
+  "descriptionZh": "梳理安装包、远端下载、版本固定情况和来源",
+  "keywords": "skill bank Skill Quality",
+  "url": "/skill-bank.html#skill-dependency-inventory"
+ },
+ {
+  "title": "Skill Finding Remediation Brief",
+  "titleZh": "Skill问题修复规划",
+  "description": "Turn scanner findings, source files, intended behavior into a prioritized fix plan with retest criteria.",
+  "descriptionZh": "对扫描发现进行复核，制定最小修复与回归检查",
+  "keywords": "skill bank Skill Quality",
+  "url": "/skill-bank.html#skill-finding-remediation-brief"
+ },
+ {
+  "title": "Feature Acceptance Brief",
+  "titleZh": "功能验收需求单",
+  "description": "Turn feature request, user journey, existing behavior into a concise specification with measurable acceptance cases.",
+  "descriptionZh": "把请求转成触发条件、可见结果和边界用例",
+  "keywords": "skill bank Engineering Practice",
+  "url": "/skill-bank.html#feature-acceptance-brief"
+ },
+ {
+  "title": "Refactor Scope Review",
+  "titleZh": "重构范围审查",
+  "description": "Turn proposed refactor, callers, tests, ownership boundaries into a bounded refactor plan with behavioral invariants.",
+  "descriptionZh": "检查要消除的复杂度、调用方和必须保持的行为",
+  "keywords": "skill bank Engineering Practice",
+  "url": "/skill-bank.html#refactor-scope-review"
+ },
+ {
+  "title": "Regression Test Selector",
+  "titleZh": "回归测试选择",
+  "description": "Turn code diff, historical failures, existing test suite into a risk-ranked set of regression tests.",
+  "descriptionZh": "根据差异和真实失败模式选择必要测试",
+  "keywords": "skill bank Engineering Practice",
+  "url": "/skill-bank.html#regression-test-selector"
+ },
+ {
+  "title": "Feature Flag Rollout Brief",
+  "titleZh": "功能开关发布规划",
+  "description": "Turn feature behavior, audience segments, monitoring into a staged rollout and rollback plan.",
+  "descriptionZh": "设计分批开放、监控指标、回滚触发条件和责任人",
+  "keywords": "skill bank Engineering Practice",
+  "url": "/skill-bank.html#feature-flag-rollout-brief"
+ },
+ {
+  "title": "Deprecation Migration Guide",
+  "titleZh": "废弃接口迁移指南",
+  "description": "Turn old API, replacement, usage patterns, timeline into a migration guide with compatibility notes.",
+  "descriptionZh": "对照旧用法和替代方案说明行为差异与验证方法",
+  "keywords": "skill bank Engineering Practice",
+  "url": "/skill-bank.html#deprecation-migration-guide"
+ },
+ {
+  "title": "Offline Data Model Planner",
+  "titleZh": "离线数据模型规划",
+  "description": "Turn entities, offline actions, conflict expectations into a local-first schema and persistence brief.",
+  "descriptionZh": "区分用户数据、派生状态、持久化需求和离线操作",
+  "keywords": "skill bank Local First Data",
+  "url": "/skill-bank.html#offline-data-model-planner"
+ },
+ {
+  "title": "Sync Conflict Scenario Kit",
+  "titleZh": "同步冲突场景设计",
+  "description": "Turn shared entities, merge rules, user workflows into a conflict test matrix and expected resolutions.",
+  "descriptionZh": "设计并发编辑、删除与修改冲突及期望合并结果",
+  "keywords": "skill bank Local First Data",
+  "url": "/skill-bank.html#sync-conflict-scenario-kit"
+ },
+ {
+  "title": "Local Persistence Recovery Plan",
+  "titleZh": "本地存储恢复方案",
+  "description": "Turn storage mechanism, schema versions, backup strategy into a recovery and migration test plan.",
+  "descriptionZh": "规划中断写入、旧版本数据和迁移失败的恢复测试",
+  "keywords": "skill bank Local First Data",
+  "url": "/skill-bank.html#local-persistence-recovery-plan"
+ },
+ {
+  "title": "Reactive Subscription Audit",
+  "titleZh": "响应式订阅审计",
+  "description": "Turn store subscriptions, component tree, update traces into a subscription map and unnecessary-render findings.",
+  "descriptionZh": "追踪组件真正读取的数据及监听清理情况",
+  "keywords": "skill bank Local First Data",
+  "url": "/skill-bank.html#reactive-subscription-audit"
+ },
+ {
+  "title": "Offline UX State Brief",
+  "titleZh": "离线界面状态说明",
+  "description": "Turn network transitions, local writes, sync policy into a state model for saved, pending and conflicted data.",
+  "descriptionZh": "区分设备本地保存、等待同步和冲突状态",
+  "keywords": "skill bank Local First Data",
+  "url": "/skill-bank.html#offline-ux-state-brief"
+ },
+ {
+  "title": "Campaign Export Health Check",
+  "titleZh": "广告导出数据体检",
+  "description": "Turn authorized campaign CSV, date range, currency into a data quality report before performance analysis.",
+  "descriptionZh": "核对字段、日期、币种、缺失值和总额一致性",
+  "keywords": "skill bank Paid Media Analysis",
+  "url": "/skill-bank.html#campaign-export-health-check"
+ },
+ {
+  "title": "Creative Test Hypothesis Builder",
+  "titleZh": "广告创意测试假设",
+  "description": "Turn product facts, prior ad results, audience research into a controlled creative test brief.",
+  "descriptionZh": "一次检验一个信息或创意变量，并预先定义观察规则",
+  "keywords": "skill bank Paid Media Analysis",
+  "url": "/skill-bank.html#creative-test-hypothesis-builder"
+ },
+ {
+  "title": "Landing Page Message Match Audit",
+  "titleZh": "广告落地页一致性审查",
+  "description": "Turn ad copy, landing page, offer terms into a claim-by-claim message consistency report.",
+  "descriptionZh": "逐项比较广告承诺、价格、资格和落地页内容",
+  "keywords": "skill bank Paid Media Analysis",
+  "url": "/skill-bank.html#landing-page-message-match-audit"
+ },
+ {
+  "title": "Campaign Metric Explanation",
+  "titleZh": "广告指标通俗解释",
+  "description": "Turn impressions, clicks, spend, conversions, attribution notes into a plain-English performance explanation with formulas.",
+  "descriptionZh": "根据给定数据计算比率并说明分母和归因限制",
+  "keywords": "skill bank Paid Media Analysis",
+  "url": "/skill-bank.html#campaign-metric-explanation"
+ },
+ {
+  "title": "Ad Experiment Readout",
+  "titleZh": "广告实验结果解读",
+  "description": "Turn test design, variant results, sample sizes, dates into an experiment readout with uncertainty and next action.",
+  "descriptionZh": "核对实验执行和样本，区分观察差异与证据强度",
+  "keywords": "skill bank Paid Media Analysis",
+  "url": "/skill-bank.html#ad-experiment-readout"
+ },
+ {
+  "title": "Application Threat Boundary Brief",
+  "titleZh": "应用威胁边界梳理",
+  "description": "Turn architecture, sensitive operations, deployment scope into a scoped threat model with defensive controls.",
+  "descriptionZh": "围绕授权范围识别资产、入口、信任边界和防御措施",
+  "keywords": "skill bank Defensive Code Review",
+  "url": "/skill-bank.html#application-threat-boundary-brief"
+ },
+ {
+  "title": "Authorization Matrix Reviewer",
+  "titleZh": "接口授权矩阵审查",
+  "description": "Turn roles, endpoints, tenant model, access tests into an authorization matrix and missing checks report.",
+  "descriptionZh": "按角色、对象归属和租户设计允许及拒绝测试",
+  "keywords": "skill bank Defensive Code Review",
+  "url": "/skill-bank.html#authorization-matrix-reviewer"
+ },
+ {
+  "title": "Secret Handling Code Review",
+  "titleZh": "密钥处理代码审查",
+  "description": "Turn configuration code, logging paths, deployment settings into a secret-handling findings report with redacted evidence.",
+  "descriptionZh": "追踪密钥存储、日志、错误响应和客户端打包路径",
+  "keywords": "skill bank Defensive Code Review",
+  "url": "/skill-bank.html#secret-handling-code-review"
+ },
+ {
+  "title": "Input Validation Boundary Tests",
+  "titleZh": "输入校验边界测试",
+  "description": "Turn input schema, parsers, storage boundaries into a defensive validation test suite specification.",
+  "descriptionZh": "同时检查语法、业务约束、超长和异常值",
+  "keywords": "skill bank Defensive Code Review",
+  "url": "/skill-bank.html#input-validation-boundary-tests"
+ },
+ {
+  "title": "Security Fix Verification Brief",
+  "titleZh": "安全修复验证方案",
+  "description": "Turn reported flaw, patch, authorized local fixture into a regression verification plan and residual-risk note.",
+  "descriptionZh": "在本地授权样例复现原问题并验证相邻和正常路径",
+  "keywords": "skill bank Defensive Code Review",
+  "url": "/skill-bank.html#security-fix-verification-brief"
+ },
+ {
+  "title": "Meeting Decision Digest",
+  "titleZh": "会议决策与行动摘要",
+  "description": "Turn meeting transcript, attendee roles, known deadlines into a decision digest and action register.",
+  "descriptionZh": "从会议记录区分讨论、明确决定、责任人和未决事项",
+  "keywords": "skill bank Document Workflows",
+  "url": "/skill-bank.html#meeting-decision-digest"
+ },
+ {
+  "title": "Document Revision Comparator",
+  "titleZh": "文档修订差异对照",
+  "description": "Turn old and new document versions, review purpose into a material-change summary with section references.",
+  "descriptionZh": "对齐新旧章节，区分排版变化与日期、数字和含义变化",
+  "keywords": "skill bank Document Workflows",
+  "url": "/skill-bank.html#document-revision-comparator"
+ },
+ {
+  "title": "Spreadsheet Assumption Register",
+  "titleZh": "表格假设登记",
+  "description": "Turn spreadsheet formulas, inputs, scenario labels into an assumption inventory and formula review checklist.",
+  "descriptionZh": "区分输入和公式，追踪关键结果依赖的假设、常数与单位",
+  "keywords": "skill bank Document Workflows",
+  "url": "/skill-bank.html#spreadsheet-assumption-register"
+ },
+ {
+  "title": "Report Evidence Organizer",
+  "titleZh": "报告证据整理",
+  "description": "Turn source documents, draft findings, report outline into an evidence map and report assembly plan.",
+  "descriptionZh": "为来源分配编号，把报告结论对应到直接证据并标出缺口",
+  "keywords": "skill bank Document Workflows",
+  "url": "/skill-bank.html#report-evidence-organizer"
+ },
+ {
+  "title": "Client Deliverable QA",
+  "titleZh": "客户交付物质量检查",
+  "description": "Turn final files, agreed scope, formats, delivery requirements into a client-ready delivery checklist and issue log.",
+  "descriptionZh": "按约定核对文件数量、格式、可打开性和占位内容",
+  "keywords": "skill bank Document Workflows",
+  "url": "/skill-bank.html#client-deliverable-qa"
+ },
+ {
+  "title": "Pull Request Risk Brief",
+  "titleZh": "合并请求风险摘要",
+  "description": "Turn diff, callers, runtime context, test results into a risk-ranked review briefing.",
+  "descriptionZh": "从差异定位行为变化和受影响契约，安排审查重点",
+  "keywords": "skill bank Code Review Delivery",
+  "url": "/skill-bank.html#pull-request-risk-brief"
+ },
+ {
+  "title": "Finding Reproduction Writer",
+  "titleZh": "代码问题复现说明",
+  "description": "Turn suspected bug, relevant lines, input conditions into a minimal reproduction and actionable finding.",
+  "descriptionZh": "写出触发条件、位置、实际与预期结果和验证状态",
+  "keywords": "skill bank Code Review Delivery",
+  "url": "/skill-bank.html#finding-reproduction-writer"
+ },
+ {
+  "title": "Review False Positive Triage",
+  "titleZh": "代码审查误报分诊",
+  "description": "Turn automated findings, code context, test evidence into a triaged findings table with rationale.",
+  "descriptionZh": "检查路径可达性、保护条件和证据，分类自动发现",
+  "keywords": "skill bank Code Review Delivery",
+  "url": "/skill-bank.html#review-false-positive-triage"
+ },
+ {
+  "title": "Patch Verification Matrix",
+  "titleZh": "补丁验证矩阵",
+  "description": "Turn fix diff, original issue, supported environments into a focused verification matrix for the patch.",
+  "descriptionZh": "把原问题、相邻行为和支持环境对应到检查状态",
+  "keywords": "skill bank Code Review Delivery",
+  "url": "/skill-bank.html#patch-verification-matrix"
+ },
+ {
+  "title": "Release Review Summary",
+  "titleZh": "发布审查总结",
+  "description": "Turn merged changes, review findings, test outcomes into a release-facing summary with known limitations.",
+  "descriptionZh": "按用户可见变化组织交付、测试证据和已知限制",
+  "keywords": "skill bank Code Review Delivery",
+  "url": "/skill-bank.html#release-review-summary"
+ },
+ {
+  "title": "Block Blast Guide 2026 — How to Play, Ranked Mode, Tips & High Score Strategy | HaoWordTool",
+  "url": "/games/block-blast/",
+  "description": "Block Blast 2026 guide: how to play, new Ranked Clash Mode explained, high-score combo strategy, tips and tricks. The viral block puzzle game taking over TikTok.",
+  "keywords": "block blast guide 2026   how to play, ranked mode, tips & high score strategy   haowordtool"
+ },
+ {
+  "title": "Castlevania: Belmont's Curse 攻略 2026：发售日、角色、玩法与入门指南 | HaoWordTool",
+  "url": "/games/castlevania-belmonts-curse/",
+  "description": "2026 最新 Castlevania: Belmont's Curse 攻略。涵盖发售日期、平台、主角 Rose Belmont、武器系统、探索机制与新手技巧。适合 Metroidvania 玩家。",
+  "keywords": "castlevania: belmont's curse 攻略 2026：发售日、角色、玩法与入门指南   haowordtool"
+ },
+ {
+  "title": "Castlevania: Belmont's Curse 角色介绍 — Rose Belmont 与神圣之光格挡 Characters 全解析",
+  "url": "/games/castlevania-belmonts-curse-characters/",
+  "description": "Castlevania: Belmont's Curse角色介绍（characters）：恶魔城贝尔蒙特的诅咒角色详解。主角 Rose Belmont、Trevor Belmont、30+ 主武器、25 种副武器、魔导器与逆炼符全解析。",
+  "keywords": "castlevania: belmont's curse 角色介绍   rose belmont 与神圣之光格挡 characters 全解析"
+ },
+ {
+  "title": "COD: Modern Warfare 4 攻略 2026：发售日、战役、多人模式与新手入门指南 | HaoWordTool",
+  "url": "/games/cod-modern-warfare-4/",
+  "description": "2026 最新 COD: Modern Warfare 4 攻略。涵盖发售日期、平台、朝鲜半岛战役、12 张多人地图、DMZ 撤离模式、武器系统与预购版本。",
+  "keywords": "cod: modern warfare 4 攻略 2026：发售日、战役、多人模式与新手入门指南   haowordtool"
+ },
+ {
+  "title": "COD: Modern Warfare 4 角色介绍 — 朴玄俊与 33 种武器 Characters 全解析",
+  "url": "/games/cod-modern-warfare-4-characters/",
+  "description": "COD: Modern Warfare 4角色介绍（characters）：现代战争4角色详解。战役主角朴玄俊、33 种武器、Gunny 配枪系统与多人角色全解析。",
+  "keywords": "cod: modern warfare 4 角色介绍   朴玄俊与 33 种武器 characters 全解析"
+ },
+ {
+  "title": "GTA 6 攻略 2026：发售日、预载指南、版本对比与平台确认 | HaoWordTool",
+  "url": "/games/gta-6/",
+  "description": "2026 最新 GTA 6 攻略 Hub。涵盖发售日期、预载时间、标准版vs终极版对比、平台确认、PC版状态、地图规模与收藏版信息。",
+  "keywords": "gta 6 攻略 2026：发售日、预载指南、版本对比与平台确认   haowordtool"
+ },
+ {
+  "title": "GTA 6 角色介绍 — Jason Duval 与 Lucia Caminos 双主角 Characters 全解析",
+  "url": "/games/gta-6-characters/",
+  "description": "GTA 6角色介绍（characters）：GTA 6 双主角详解。Jason Duval 与 Lucia Caminos 的背景、技能、切换机制与角色关系全解析。2026 年 11 月 19 日发售。",
+  "keywords": "gta 6 角色介绍   jason duval 与 lucia caminos 双主角 characters 全解析"
+ },
+ {
+  "title": "How to Play Block Blast! — Controls, Combos &amp; Beginner Tips",
+  "url": "/games/how-to-play-block-blast/",
+  "description": "Block Blast! 怎么玩？8×8 棋盘规则、连击机制、3×3 预留、新手技巧与常见错误全解析。",
+  "keywords": "how to play block blast!   controls, combos &amp; beginner tips"
+ },
+ {
+  "title": "How to Play Castlevania: Belmont's Curse — Combat, Weapons &amp; Tips",
+  "url": "/games/how-to-play-castlevania-belmonts-curse/",
+  "description": "恶魔城贝尔蒙特的诅咒怎么玩？操作说明、神圣之光格挡、鞭子探索、武器系统与新手技巧全解析。",
+  "keywords": "how to play castlevania: belmont's curse   combat, weapons &amp; tips"
+ },
+ {
+  "title": "How to Play COD: Modern Warfare 4 — Controls, Maps &amp; Loadouts",
+  "url": "/games/how-to-play-cod-modern-warfare-4/",
+  "description": "现代战争4怎么玩？操作说明、12 张多人地图、DMZ 模式、33 种武器、Gunny 配枪系统与新手入门技巧。",
+  "keywords": "how to play cod: modern warfare 4   controls, maps &amp; loadouts"
+ },
+ {
+  "title": "How to Play GTA 6 — Controls, Characters &amp; Beginner Guide (2026)",
+  "url": "/games/how-to-play-gta-6/",
+  "description": "GTA 6 怎么玩？双主角切换、操作说明、核心玩法、新手入门技巧。2026 年 11 月 19 日发售后可用。",
+  "keywords": "how to play gta 6   controls, characters &amp; beginner guide (2026)"
+ },
+ {
+  "title": "How to Play Ludo King — Rules, Dice &amp; Beginner Strategy",
+  "url": "/games/how-to-play-ludo-king/",
+  "description": "Ludo King 怎么玩？掷骰子规则、安全格、代币管理、路障战术与新手入门技巧全解析。",
+  "keywords": "how to play ludo king   rules, dice &amp; beginner strategy"
+ },
+ {
+  "title": "How to Play Phantom Blade Zero — Combat, Weapons &amp; Difficulty Guide",
+  "url": "/games/how-to-play-phantom-blade-zero/",
+  "description": "影之刃零怎么玩？战斗系统、武器重铸、难度模式、新手入门技巧全解析。2026 年 10 月 29 日发售。",
+  "keywords": "how to play phantom blade zero   combat, weapons &amp; difficulty guide"
+ },
+ {
+  "title": "How to Play Sprunki — Characters, Phases &amp; Controls Guide",
+  "url": "/games/how-to-play-sprunki/",
+  "description": "Sprunki 怎么玩？角色拖拽、混音叠加、恐怖阶段触发、角色搭配与新手技巧全解析。",
+  "keywords": "how to play sprunki   characters, phases &amp; controls guide"
+ },
+ {
+  "title": "How to Play Subway Surfers — Controls, Hoverboards &amp; Tips",
+  "url": "/games/how-to-play-subway-surfers/",
+  "description": "地铁跑酷怎么玩？滑动操作、滑板使用、金币收集、秘密之星路线与新手技巧全解析。",
+  "keywords": "how to play subway surfers   controls, hoverboards &amp; tips"
+ },
+ {
+  "title": "2026 游戏攻略大全 — 最新热门游戏入门与进阶指南 | haowordtool",
+  "url": "/games/",
+  "description": "2026 最新游戏攻略合集。GTA 6、Phantom Blade Zero、COD: MW4、Castlevania 等 8 款游戏 Hub，加 22 篇怎么玩、角色大全、Mod 解析文章，持续更新。",
+  "keywords": "2026 游戏攻略大全   最新热门游戏入门与进阶指南   haowordtool"
+ },
+ {
+  "title": "Ludo King 攻略 2026：获胜策略、代币管理与常见错误 | HaoWordTool",
+  "url": "/games/ludo-king/",
+  "description": "2026 最新 Ludo King 攻略。讲解骰子策略、安全格使用、代币管理和锦标赛技巧。适合想提高胜率的玩家。",
+  "keywords": "ludo king 攻略 2026：获胜策略、代币管理与常见错误   haowordtool"
+ },
+ {
+  "title": "Phantom Blade Zero 攻略 2026：发售日、玩法、武器系统与入门指南 | HaoWordTool",
+  "url": "/games/phantom-blade-zero/",
+  "description": "2026 最新 Phantom Blade Zero 攻略。涵盖发售日期、平台、主角魂、武器系统、难度模式、预购版本与新手技巧。适合武侠动作RPG玩家。",
+  "keywords": "phantom blade zero 攻略 2026：发售日、玩法、武器系统与入门指南   haowordtool"
+ },
+ {
+  "title": "Phantom Blade Zero 角色介绍 — 魂、Boss 战与 30+ 主武器 Characters 全解析",
+  "url": "/games/phantom-blade-zero-characters/",
+  "description": "Phantom Blade Zero角色介绍（characters）：影之刃零角色与武器详解。主角魂、30+ 主武器、25 种影之武副武器、Apex 配件与角色搭配全解析。",
+  "keywords": "phantom blade zero 角色介绍   魂、boss 战与 30+ 主武器 characters 全解析"
+ },
+ {
+  "title": "Sprunki Guide — How to Play, Characters, Phases & Mods | HaoWordTool",
+  "url": "/games/sprunki/",
+  "description": "Complete Sprunki game guide: how to play, all characters, phases 1-5, popular mods, tips and tricks. Free browser music game.",
+  "keywords": "sprunki guide   how to play, characters, phases & mods   haowordtool"
+ },
+ {
+  "title": "Sprunki 高手进阶指南 — 专业技巧、音色设计与发布",
+  "url": "/games/sprunki-advanced-guide/",
+  "description": "Sprunki 高手进阶：留白、音色对比、动态编排、个人风格与作品发布全攻略。",
+  "keywords": "sprunki 高手进阶指南   专业技巧、音色设计与发布"
+ },
+ {
+  "title": "Sprunki Black Hat 触发详解 — 黑帽用法与恐怖模式激活",
+  "url": "/games/sprunki-black-hat-trigger/",
+  "description": "Sprunki Black Hat 怎么用？黑帽位置、拖放触发、恐怖模式激活后的音画变化全解析。",
+  "keywords": "sprunki black hat 触发详解   黑帽用法与恐怖模式激活"
+ },
+ {
+  "title": "Sprunki 角色介绍 — 所有角色、声音与阶段 Characters 全解析",
+  "url": "/games/sprunki-characters/",
+  "description": "Sprunki角色介绍（characters）：Sprunki 所有角色列表与详解。Oren、Raddy、Clukr、Fun Bot、Vineria、Gray、Brud、Garnold、Owakcx、Sky、Mr. Sun 等角色的声音、阶段和搭配。",
+  "keywords": "sprunki 角色介绍   所有角色、声音与阶段 characters 全解析"
+ },
+ {
+  "title": "Sprunki 克鲁克 角色介绍 — 机械节奏精准打击 Characters",
+  "url": "/games/sprunki-clukr/",
+  "description": "Sprunki克鲁克（Clukr）角色介绍（characters）：银色机械机器人造型，机械镲片音色，节奏精准。普通/恐怖模式对比、混音定位与搭配技巧全解析。",
+  "keywords": "sprunki 克鲁克 角色介绍   机械节奏精准打击 characters"
+ },
+ {
+  "title": "Sprunki 连击组合技巧 — 最佳角色搭配与 Combo 触发全解析",
+  "url": "/games/sprunki-combo-tips/",
+  "description": "Sprunki 连击组合技巧：最佳角色搭配、Combo 动画触发条件与实战技巧全解析。",
+  "keywords": "sprunki 连击组合技巧   最佳角色搭配与 combo 触发全解析"
+ },
+ {
+  "title": "Sprunki 德普尔 角色介绍 — 紫色小龙铜管俏皮音色 Characters",
+  "url": "/games/sprunki-durple/",
+  "description": "Sprunki德普尔（Durple）角色介绍（characters）：紫色龙形造型，小号/铜管俏皮音色。普通/恐怖模式对比、混音定位与搭配技巧全解析。",
+  "keywords": "sprunki 德普尔 角色介绍   紫色小龙铜管俏皮音色 characters"
+ },
+ {
+  "title": "Sprunki 格雷 角色介绍 — 神秘低音，音乐盒音色 Characters",
+  "url": "/games/sprunki-gray/",
+  "description": "Sprunki格雷（Gray）角色介绍（characters）：灰色神秘角色的音乐盒低音音色、普通与恐怖模式对比、混音搭配技巧全解析。",
+  "keywords": "sprunki 格雷 角色介绍   神秘低音，音乐盒音色 characters"
+ },
+ {
+  "title": "Sprunki 隐藏彩蛋大全 — 秘密角色与隐藏动画解锁",
+  "url": "/games/sprunki-hidden-easter-eggs/",
+  "description": "Sprunki 隐藏彩蛋：Black Hat 触发、秘密角色、隐藏动画与挖彩蛋方法论。",
+  "keywords": "sprunki 隐藏彩蛋大全   秘密角色与隐藏动画解锁"
+ },
+ {
+  "title": "Sprunki 恐怖模式完全指南 — Black Hat 触发与全角色变身",
+  "url": "/games/sprunki-horror-mode-guide/",
+  "description": "Sprunki 恐怖模式怎么触发？黑帽（Black Hat）使用方法、全角色黑化变身与技巧全解析。",
+  "keywords": "sprunki 恐怖模式完全指南   black hat 触发与全角色变身"
+ },
+ {
+  "title": "Sprunki 杰文 角色介绍 — 神秘邪教风低音 Characters",
+  "url": "/games/sprunki-jevin/",
+  "description": "Sprunki杰文（Jevin）角色介绍（characters）：深蓝邪教风造型，神秘低沉音色，人气 lore 角色。普通/恐怖模式对比、混音定位与搭配技巧全解析。",
+  "keywords": "sprunki 杰文 角色介绍   神秘邪教风低音 characters"
+ },
+ {
+  "title": "Sprunki 混音教程 — 新手一步步做出第一首曲子",
+  "url": "/games/sprunki-mixing-tutorial/",
+  "description": "Sprunki 新手混音教程：三层结构、10 步做出第一首曲子，新手常犯错误全解析。",
+  "keywords": "sprunki 混音教程   新手一步步做出第一首曲子"
+ },
+ {
+  "title": "Sprunki 手机怎么玩 — 触屏操作与最佳设置指南",
+  "url": "/games/sprunki-mobile-guide/",
+  "description": "Sprunki 手机玩法：浏览器选择、触屏技巧、最佳设置与手机电脑对比。",
+  "keywords": "sprunki 手机怎么玩   触屏操作与最佳设置指南"
+ },
+ {
+  "title": "Sprunki 奥伦 角色介绍 — 外星 DJ，beatbox 节拍核心 Characters",
+  "url": "/games/sprunki-oren/",
+  "description": "Sprunki奥伦（Oren）角色介绍（characters）：橙色外星 DJ 的 beatbox 节拍、普通与恐怖模式对比、混音搭配技巧全解析。",
+  "keywords": "sprunki 奥伦 角色介绍   外星 dj，beatbox 节拍核心 characters"
+ },
+ {
+  "title": "Sprunki Phase 3 攻略 — 角色、触发方式与特色全解析",
+  "url": "/games/sprunki-phase-3/",
+  "description": "Sprunki Phase 3 怎么玩？Phase 3 的角色、声音、恐怖元素和触发方式全解析。暗黑风格 mod 入门指南。",
+  "keywords": "sprunki phase 3 攻略   角色、触发方式与特色全解析"
+ },
+ {
+  "title": "Sprunki Phase 4 攻略 — 角色、触发方式与特色全解析",
+  "url": "/games/sprunki-phase-4/",
+  "description": "Sprunki Phase 4 怎么玩？Phase 4 的角色、声音、恐怖元素和触发方式全解析。延续 Phase 3 暗黑风格的新版本。",
+  "keywords": "sprunki phase 4 攻略   角色、触发方式与特色全解析"
+ },
+ {
+  "title": "Sprunki Phase 5 攻略 — 角色、触发方式与特色全解析",
+  "url": "/games/sprunki-phase-5/",
+  "description": "Sprunki Phase 5 怎么玩？Phase 5 的恐怖 mod 版本、Anti Shifted 系列、角色设计与触发方式全解析。",
+  "keywords": "sprunki phase 5 攻略   角色、触发方式与特色全解析"
+ },
+ {
+  "title": "Sprunki Phase 6 攻略 — 猩红太阳、角色与特色全解析",
+  "url": "/games/sprunki-phase-6/",
+  "description": "Sprunki Phase 6 怎么玩？The Scarlet Sun 猩红太阳主题、角色设计、隐藏动画与触发方式全解析。",
+  "keywords": "sprunki phase 6 攻略   猩红太阳、角色与特色全解析"
+ },
+ {
+  "title": "Sprunki Phase 7 攻略 — 新内容、角色与进入方法全解析",
+  "url": "/games/sprunki-phase-7/",
+  "description": "Sprunki Phase 7 怎么玩？新阶段相对 Phase 6 的变化、新角色、进入方法与技巧全解析。",
+  "keywords": "sprunki phase 7 攻略   新内容、角色与进入方法全解析"
+ },
+ {
+  "title": "Sprunki 热门 Mod 合集 — 最火的 6 个 mod 与玩法",
+  "url": "/games/sprunki-popular-mods/",
+  "description": "Sprunki mod 有哪些？最火的 Phase 系列、Wenda Treatment 等 mod 合集与游玩方法全解析。",
+  "keywords": "sprunki 热门 mod 合集   最火的 6 个 mod 与玩法"
+ },
+ {
+  "title": "Sprunki 拉迪 角色介绍 — 红色高能暴躁节拍 Characters",
+  "url": "/games/sprunki-raddy/",
+  "description": "Sprunki拉迪（Raddy）角色介绍（characters）：红色暴躁高能角色，激烈节拍，恐怖模式爆发力强。普通/恐怖模式对比、混音定位与搭配技巧全解析。",
+  "keywords": "sprunki 拉迪 角色介绍   红色高能暴躁节拍 characters"
+ },
+ {
+  "title": "Sprunki Scratch 自制 Mod 教程 — 一步步做自己的 mod",
+  "url": "/games/sprunki-scratch-mod-tutorial/",
+  "description": "怎么自制 Sprunki mod？Scratch 可视化教程：角色、声音、拖拽逻辑、黑化模式，一步步教你做自己的 mod。",
+  "keywords": "sprunki scratch 自制 mod 教程   一步步做自己的 mod"
+ },
+ {
+  "title": "Sprunki 西蒙 角色介绍 — 人气王，开朗节奏担当 Characters",
+  "url": "/games/sprunki-simon/",
+  "description": "Sprunki西蒙（Simon）角色介绍（characters）：黄色开朗人气王的音色、普通与恐怖模式对比、混音搭配技巧全解析。",
+  "keywords": "sprunki 西蒙 角色介绍   人气王，开朗节奏担当 characters"
+ },
+ {
+  "title": "Sprunki 坦纳 角色介绍 — 西部牛仔口哨音色 Characters",
+  "url": "/games/sprunki-tunner/",
+  "description": "Sprunki坦纳（Tunner）角色介绍（characters）：棕色牛仔造型的口哨音色角色，西部悠闲风。普通/恐怖模式对比、混音定位与搭配技巧全解析。",
+  "keywords": "sprunki 坦纳 角色介绍   西部牛仔口哨音色 characters"
+ },
+ {
+  "title": "Sprunki 薇内莉娅 角色介绍 — 植物系自然环境音 Characters",
+  "url": "/games/sprunki-vineria/",
+  "description": "Sprunki薇内莉娅（Vineria）角色介绍（characters）：绿色植物系角色的自然环境音色、普通与恐怖模式对比、混音搭配技巧全解析。",
+  "keywords": "sprunki 薇内莉娅 角色介绍   植物系自然环境音 characters"
+ },
+ {
+  "title": "Sprunki 温达 角色介绍 — 猫系女主角，优雅音色 Characters",
+  "url": "/games/sprunki-wenda/",
+  "description": "Sprunki温达（Wenda）角色介绍（characters）：白色猫系女主角的音色特点、普通与恐怖模式对比、混音搭配技巧全解析。",
+  "keywords": "sprunki 温达 角色介绍   猫系女主角，优雅音色 characters"
+ },
+ {
+  "title": "Sprunki Wenda Treatment 攻略 — 角色、特色与触发方式",
+  "url": "/games/sprunki-wenda-treatment/",
+  "description": "Sprunki Wenda Treatment 怎么玩？Wenda Treatment mod 的角色、恐怖元素和触发方式全解析。",
+  "keywords": "sprunki wenda treatment 攻略   角色、特色与触发方式"
+ },
+ {
+  "title": "Subway Surfers 攻略 2026：高分技巧、角色解锁与隐藏捷径 | HaoWordTool",
+  "url": "/games/subway-surfers/",
+  "description": "2026 最新 Subway Surfers 攻略。讲解高分策略、滑板使用、角色解锁、秘密之星路线和常见错误。适合想突破 100 万分的玩家。",
+  "keywords": "subway surfers 攻略 2026：高分技巧、角色解锁与隐藏捷径   haowordtool"
+ },
+ {
+  "title": "Subway Surfers 巴厘岛 World Tour — 专属角色与活动全解析",
+  "url": "/games/subway-surfers-bali/",
+  "description": "Subway Surfers 巴厘岛 World Tour 全解析。专属角色 Lestari、Golden Guardian，热带海岛主题场景，限时活动和任务攻略。2026 年上半年巡回。",
+  "keywords": "subway surfers 巴厘岛 world tour   专属角色与活动全解析"
+ },
+ {
+  "title": "Subway Surfers 角色介绍 — 所有角色、解锁方式与推荐 Characters 全解析",
+  "url": "/games/subway-surfers-characters/",
+  "description": "Subway Surfers角色介绍（characters）：Subway Surfers 所有角色列表与详解。Jake、Tricky、Fresh、Yutani、Spike 等角色的解锁方式、能力和推荐用法。",
+  "keywords": "subway surfers 角色介绍   所有角色、解锁方式与推荐 characters 全解析"
+ },
+ {
+  "title": "Subway Surfers 特兰西瓦尼亚 World Tour — 万圣节主题全解析",
+  "url": "/games/subway-surfers-transylvania/",
+  "description": "Subway Surfers 特兰西瓦尼亚 World Tour 全解析。2026 年 10 月 5 日至 11 月 1 日，万圣节吸血鬼主题，哥特城堡场景，专属角色与限时活动。",
+  "keywords": "subway surfers 特兰西瓦尼亚 world tour   万圣节主题全解析"
+ },
+ {
+  "title": "Subway Surfers World Tour 2026 — 城市主题、角色与更新汇总",
+  "url": "/games/subway-surfers-world-tour/",
+  "description": "Subway Surfers World Tour 2026 汇总。所有世界巡回城市主题、专属角色、限时活动和更新内容。巴厘岛、特兰西瓦尼亚等。",
+  "keywords": "subway surfers world tour 2026   城市主题、角色与更新汇总"
+ },
+ {
+  "title": "Castlevania: Belmont's Curse Guide — Release Date, Gameplay & Tips | HaoWordTool",
+  "url": "/en/games/castlevania-belmonts-curse/",
+  "description": "The complete Castlevania: Belmont's Curse guide for 2026: release date, platforms, protagonist Rose Belmont, weapon system, exploration mechanics, and beginner tips. For Metroidvania players.",
+  "keywords": "castlevania: belmont's curse guide   release date, gameplay & tips   haowordtool"
+ },
+ {
+  "title": "Castlevania: Belmont's Curse Characters — Rose Belmont, Weapons & Holy Light Parry | HaoWordTool",
+  "url": "/en/games/castlevania-belmonts-curse-characters/",
+  "description": "Complete Castlevania: Belmont's Curse characters guide: Rose Belmont, Trevor Belmont, 30+ main weapons, 25 sub-weapons, Arcana and Reforge Charms explained.",
+  "keywords": "castlevania: belmont's curse characters   rose belmont, weapons & holy light parry   haowordtool"
+ },
+ {
+  "title": "COD: Modern Warfare 4 Guide — Release Date, Gameplay & Tips | HaoWordTool",
+  "url": "/en/games/cod-modern-warfare-4/",
+  "description": "The complete COD: Modern Warfare 4 guide for 2026: release date, platforms, Korean Peninsula campaign, 12 multiplayer maps, returning DMZ extraction mode, weapon system, and editions.",
+  "keywords": "cod: modern warfare 4 guide   release date, gameplay & tips   haowordtool"
+ },
+ {
+  "title": "COD: Modern Warfare 4 Characters — Park Hyun-joon &amp; 33 Weapons | HaoWordTool",
+  "url": "/en/games/cod-modern-warfare-4-characters/",
+  "description": "Modern Warfare 4 characters guide: campaign protagonist Park Hyun-joon, 33 launch weapons, the Gunny loadout system, and multiplayer roles.",
+  "keywords": "cod: modern warfare 4 characters   park hyun joon &amp; 33 weapons   haowordtool"
+ },
+ {
+  "title": "GTA 6 Guide — Release Date, Gameplay & Tips | HaoWordTool",
+  "url": "/en/games/gta-6/",
+  "description": "The complete GTA 6 guide for 2026: release date, preload times, Standard vs Ultimate edition comparison, platform confirmation, PC status, map size, and collector's edition details.",
+  "keywords": "gta 6 guide   release date, gameplay & tips   haowordtool"
+ },
+ {
+  "title": "GTA 6 Characters — Jason Duval & Lucia Caminos Dual Protagonists | HaoWordTool",
+  "url": "/en/games/gta-6-characters/",
+  "description": "GTA 6 characters guide: Jason Duval and Lucia Caminos backgrounds, abilities, character switching mechanics, and relationship system. Releasing November 19, 2026.",
+  "keywords": "gta 6 characters   jason duval & lucia caminos dual protagonists   haowordtool"
+ },
+ {
+  "title": "How to Play Block Blast! — Beginner Guide & Tips | HaoWordTool",
+  "url": "/en/games/how-to-play-block-blast/",
+  "description": "How to play Block Blast! 8x8 board rules, combo mechanics, 3x3 reserves, beginner tips and common mistakes explained.",
+  "keywords": "how to play block blast!   beginner guide & tips   haowordtool"
+ },
+ {
+  "title": "How to Play Castlevania: Belmont's Curse — Beginner Guide &amp; Tips | HaoWordTool",
+  "url": "/en/games/how-to-play-castlevania-belmonts-curse/",
+  "description": "How to play Belmont's Curse? Controls, the Holy Light parry, whip exploration, weapon systems, and beginner tips explained.",
+  "keywords": "how to play castlevania: belmont's curse   beginner guide &amp; tips   haowordtool"
+ },
+ {
+  "title": "How to Play COD: Modern Warfare 4 — Beginner Guide &amp; Tips | HaoWordTool",
+  "url": "/en/games/how-to-play-cod-modern-warfare-4/",
+  "description": "How to play Modern Warfare 4? Controls, 12 multiplayer maps, DMZ mode, 33 weapons, the Gunny loadout system, and beginner tips.",
+  "keywords": "how to play cod: modern warfare 4   beginner guide &amp; tips   haowordtool"
+ },
+ {
+  "title": "How to Play GTA 6 — Beginner Guide &amp; Tips | HaoWordTool",
+  "url": "/en/games/how-to-play-gta-6/",
+  "description": "How to play GTA 6? Dual protagonist switching, controls, core mechanics, and beginner tips. Available after the November 19, 2026 launch.",
+  "keywords": "how to play gta 6   beginner guide &amp; tips   haowordtool"
+ },
+ {
+  "title": "How to Play Ludo King — Beginner Guide & Tips | HaoWordTool",
+  "url": "/en/games/how-to-play-ludo-king/",
+  "description": "How to play Ludo King? Dice rules, safe squares, token management, blockade tactics and beginner tips explained.",
+  "keywords": "how to play ludo king   beginner guide & tips   haowordtool"
+ },
+ {
+  "title": "How to Play Phantom Blade Zero — Beginner Guide &amp; Tips | HaoWordTool",
+  "url": "/en/games/how-to-play-phantom-blade-zero/",
+  "description": "How to play Phantom Blade Zero? Combat system, weapon reforging, difficulty modes, and beginner tips explained. Launches October 29, 2026.",
+  "keywords": "how to play phantom blade zero   beginner guide &amp; tips   haowordtool"
+ },
+ {
+  "title": "How to Play Sprunki — Beginner Guide & Tips | HaoWordTool",
+  "url": "/en/games/how-to-play-sprunki/",
+  "description": "How to play Sprunki? Character dragging, mix layering, horror phase triggers, character combos and beginner tips explained.",
+  "keywords": "how to play sprunki   beginner guide & tips   haowordtool"
+ },
+ {
+  "title": "How to Play Subway Surfers — Beginner Guide & Tips | HaoWordTool",
+  "url": "/en/games/how-to-play-subway-surfers/",
+  "description": "How to play Subway Surfers? Swipe controls, hoverboard usage, coin collecting, secret star routes and beginner tips explained.",
+  "keywords": "how to play subway surfers   beginner guide & tips   haowordtool"
+ },
+ {
+  "title": "Game Guides 2026 — How to Play, Characters & Tips | HaoWordTool",
+  "url": "/en/games/",
+  "description": "2026's latest game guide collection. 8 game hubs for GTA 6, Phantom Blade Zero, COD: MW4, Castlevania and more, plus 22 how-to-play, character and mod articles. Updated regularly.",
+  "keywords": "game guides 2026   how to play, characters & tips   haowordtool"
+ },
+ {
+  "title": "Phantom Blade Zero Guide — Release Date, Gameplay & Tips | HaoWordTool",
+  "url": "/en/games/phantom-blade-zero/",
+  "description": "The complete Phantom Blade Zero guide for 2026: release date, platforms, protagonist Soul, weapon system, difficulty modes, editions, and beginner tips. For wuxia action RPG players.",
+  "keywords": "phantom blade zero guide   release date, gameplay & tips   haowordtool"
+ },
+ {
+  "title": "Phantom Blade Zero Characters — Soul, Boss Fights &amp; 30+ Main Weapons | HaoWordTool",
+  "url": "/en/games/phantom-blade-zero-characters/",
+  "description": "Phantom Blade Zero characters guide: protagonist Soul, 30+ main weapons, 25 Shadow Arsenal sub-weapons, Apex accessories, and loadout tips.",
+  "keywords": "phantom blade zero characters   soul, boss fights &amp; 30+ main weapons   haowordtool"
+ },
+ {
+  "title": "Advanced Sprunki Guide &mdash; Pro Techniques & Sound Design | HaoWordTool",
+  "url": "/en/games/sprunki-advanced-guide/",
+  "description": "Advanced Sprunki guide: arrangement techniques, sound design principles, recording tips, and how to get your mixes featured.",
+  "keywords": "advanced sprunki guide &mdash; pro techniques & sound design   haowordtool"
+ },
+ {
+  "title": "Sprunki Black Hat — What It Does & How to Trigger Horror Mode | HaoWordTool",
+  "url": "/en/games/sprunki-black-hat-trigger/",
+  "description": "The Sprunki Black Hat explained: what it does, exactly how to use it to trigger Horror Mode, and troubleshooting tips.",
+  "keywords": "sprunki black hat   what it does & how to trigger horror mode   haowordtool"
+ },
+ {
+  "title": "Sprunki Characters — All Characters, Sounds & Phases | HaoWordTool",
+  "url": "/en/games/sprunki-characters/",
+  "description": "Complete Sprunki characters list: Oren, Raddy, Clukr, Fun Bot, Vineria, Gray, Brud, Garnold, Owakcx, Sky, Mr. Sun and more — sounds, phases and combos explained.",
+  "keywords": "sprunki characters   all characters, sounds & phases   haowordtool"
+ },
+ {
+  "title": "Clukr Sprunki — the silver robot with mechanical precision | HaoWordTool",
+  "url": "/en/games/sprunki-clukr/",
+  "description": "Clukr Sprunki deep dive: metallic robot sound, precise rhythms, normal vs horror mode, best combos and FAQs.",
+  "keywords": "clukr sprunki   the silver robot with mechanical precision   haowordtool"
+ },
+ {
+  "title": "Best Sprunki Combos &mdash; Top Character Combinations & Tips | HaoWordTool",
+  "url": "/en/games/sprunki-combo-tips/",
+  "description": "Best Sprunki combos explained: how character combinations trigger animations, combo-building principles, and tips for discovering hidden combos.",
+  "keywords": "best sprunki combos &mdash; top character combinations & tips   haowordtool"
+ },
+ {
+  "title": "Durple Sprunki — the playful dragon with brass swagger | HaoWordTool",
+  "url": "/en/games/sprunki-durple/",
+  "description": "Durple Sprunki deep dive: purple dragon, trumpet brass sound, normal vs horror mode, best combos and FAQs.",
+  "keywords": "durple sprunki   the playful dragon with brass swagger   haowordtool"
+ },
+ {
+  "title": "Gray Sprunki — the calm mysterious character with music-box depth | HaoWordTool",
+  "url": "/en/games/sprunki-gray/",
+  "description": "Gray Sprunki guide: the calm gray character's deep music-box sounds, role as bass foundation, horror mode, best combos and 5 FAQs.",
+  "keywords": "gray sprunki   the calm mysterious character with music box depth   haowordtool"
+ },
+ {
+  "title": "Sprunki Hidden Easter Eggs &mdash; Secret Characters & Animations | HaoWordTool",
+  "url": "/en/games/sprunki-hidden-easter-eggs/",
+  "description": "Sprunki hidden easter eggs: the black hat horror trigger, secret animations, character transformations, and how to hunt secrets yourself.",
+  "keywords": "sprunki hidden easter eggs &mdash; secret characters & animations   haowordtool"
+ },
+ {
+  "title": "Sprunki Horror Mode Guide — How to Trigger & All Transformations | HaoWordTool",
+  "url": "/en/games/sprunki-horror-mode-guide/",
+  "description": "Complete Sprunki Horror Mode guide: how to trigger it with the Black Hat, every character's horror transformation, and pro tips.",
+  "keywords": "sprunki horror mode guide   how to trigger & all transformations   haowordtool"
+ },
+ {
+  "title": "Jevin Sprunki — the cultist whose dark lore broke the fandom | HaoWordTool",
+  "url": "/en/games/sprunki-jevin/",
+  "description": "Jevin Sprunki deep dive: dark chant sound, cultist lore, normal vs horror mode, best combos and FAQs.",
+  "keywords": "jevin sprunki   the cultist whose dark lore broke the fandom   haowordtool"
+ },
+ {
+  "title": "Sprunki Mixing Tutorial &mdash; Build Your First Track Step by Step | HaoWordTool",
+  "url": "/en/games/sprunki-mixing-tutorial/",
+  "description": "Sprunki mixing tutorial for beginners: layer beats and melodies step by step, balance your mix, and build your first complete track.",
+  "keywords": "sprunki mixing tutorial &mdash; build your first track step by step   haowordtool"
+ },
+ {
+  "title": "How to Play Sprunki on Mobile &mdash; Browser Tips & Touch Controls | HaoWordTool",
+  "url": "/en/games/sprunki-mobile-guide/",
+  "description": "Play Sprunki on mobile: browser setup, touch controls, fullscreen tips, performance fixes, and how to record mixes on iPhone and Android.",
+  "keywords": "how to play sprunki on mobile &mdash; browser tips & touch controls   haowordtool"
+ },
+ {
+  "title": "Oren Sprunki — the orange alien DJ and beatboxer behind every great mix | HaoWordTool",
+  "url": "/en/games/sprunki-oren/",
+  "description": "Oren Sprunki guide: the orange alien DJ's beatbox rhythms, role as mix foundation, horror mode, best combos and 5 FAQs.",
+  "keywords": "oren sprunki   the orange alien dj and beatboxer behind every great mix   haowordtool"
+ },
+ {
+  "title": "Sprunki Phase 7 — What's New in the Latest Phase | HaoWordTool",
+  "url": "/en/games/sprunki-phase-7/",
+  "description": "Sprunki Phase 7 explained: what's new vs Phase 6, new characters, visual changes, and how to access the latest phase.",
+  "keywords": "sprunki phase 7   what's new in the latest phase   haowordtool"
+ },
+ {
+  "title": "Most Popular Sprunki Mods — Top Picks & How to Play Them | HaoWordTool",
+  "url": "/en/games/sprunki-popular-mods/",
+  "description": "The most popular Sprunki mods ranked: Phase 3, Phase 4, Wenda Treatment and more. What mods are and how to play each one.",
+  "keywords": "most popular sprunki mods   top picks & how to play them   haowordtool"
+ },
+ {
+  "title": "Raddy Sprunki — the red powerhouse of intense beats | HaoWordTool",
+  "url": "/en/games/sprunki-raddy/",
+  "description": "Raddy Sprunki deep dive: aggressive red character, intense beats, normal vs horror mode, best combos and FAQs.",
+  "keywords": "raddy sprunki   the red powerhouse of intense beats   haowordtool"
+ },
+ {
+  "title": "How to Make a Sprunki Mod on Scratch — Beginner Tutorial | HaoWordTool",
+  "url": "/en/games/sprunki-scratch-mod-tutorial/",
+  "description": "Step-by-step beginner tutorial: build your own Sprunki mod on Scratch — characters, sounds, and publishing explained.",
+  "keywords": "how to make a sprunki mod on scratch   beginner tutorial   haowordtool"
+ },
+ {
+  "title": "Simon Sprunki — the cheerful yellow fan favorite with fast upbeat sounds | HaoWordTool",
+  "url": "/en/games/sprunki-simon/",
+  "description": "Simon Sprunki guide: the cheerful yellow character's upbeat sound, role in your mix, horror mode transformation, best combos and 5 FAQs.",
+  "keywords": "simon sprunki   the cheerful yellow fan favorite with fast upbeat sounds   haowordtool"
+ },
+ {
+  "title": "Tunner Sprunki — the laid-back cowboy whose whistle steals every mix | HaoWordTool",
+  "url": "/en/games/sprunki-tunner/",
+  "description": "Tunner Sprunki deep dive: whistle sound, western theme, normal vs horror mode, best combos and FAQs.",
+  "keywords": "tunner sprunki   the laid back cowboy whose whistle steals every mix   haowordtool"
+ },
+ {
+  "title": "Vineria Sprunki — the green nature spirit with organic vine-like sounds | HaoWordTool",
+  "url": "/en/games/sprunki-vineria/",
+  "description": "Vineria Sprunki guide: the green nature-themed character's organic sounds, ambient role, horror mode, best combos and 5 FAQs.",
+  "keywords": "vineria sprunki   the green nature spirit with organic vine like sounds   haowordtool"
+ },
+ {
+  "title": "Wenda Sprunki — the iconic white cat-like heroine with graceful sounds | HaoWordTool",
+  "url": "/en/games/sprunki-wenda/",
+  "description": "Wenda Sprunki guide: the iconic cat-like heroine's graceful sound, role in your mix, horror mode, best combos and 5 FAQs.",
+  "keywords": "wenda sprunki   the iconic white cat like heroine with graceful sounds   haowordtool"
+ },
+ {
+  "title": "Subway Surfers Characters — All Characters, Unlock Methods & Picks | HaoWordTool",
+  "url": "/en/games/subway-surfers-characters/",
+  "description": "Complete Subway Surfers characters list: Jake, Tricky, Fresh, Yutani, Spike and more — unlock methods, abilities and recommendations.",
+  "keywords": "subway surfers characters   all characters, unlock methods & picks   haowordtool"
+ },
+ {
+  "title": "博客 — 游戏攻略与 AI 工具文章 | haowordtool",
+  "url": "/blog/",
+  "description": "haowordtool 博客：游戏攻略、角色解析、Mod 教程与 AI 工具文章合集。",
+  "keywords": "博客   游戏攻略与 ai 工具文章   haowordtool"
+ },
+ {
+  "title": "Blog — Game Guides &amp; AI Tool Articles | HaoWordTool",
+  "url": "/en/blog/",
+  "description": "HaoWordTool blog: game guides, character breakdowns, mod tutorials and AI tool articles.",
+  "keywords": "blog   game guides &amp; ai tool articles   haowordtool"
+ },
+ {
+  "title": "haoword.audio — AI 音频工作台：文字转语音、声音克隆、语音转文字",
+  "url": "/audio/",
+  "description": "haoword.audio 是 HaoWordTool 的 AI 音频工作台：文字转语音、声音克隆、语音转文字、人声分离、AI 音效。自然语音、长篇故事工作室，工具即将上线。",
+  "keywords": "haoword.audio   ai 音频工作台：文字转语音、声音克隆、语音转文字"
+ },
+ {
+  "title": "haoword.audio — AI Audio Studio: Text to Speech, Voice Cloning &amp; More",
+  "url": "/en/audio/",
+  "description": "haoword.audio is HaoWordTool's AI audio studio: text to speech, voice cloning, speech to text, vocal separation, AI sound effects. Natural voices and a long-form story studio. Tools launching soon.",
+  "keywords": "haoword.audio   ai audio studio: text to speech, voice cloning &amp; more"
+ },
+ {
+  "title": "haoword.audio 定价 — AI 音频工具套餐 | haoword.audio",
+  "url": "/audio/pricing/",
+  "description": "haoword.audio 积分套餐定价：Basic $7.9/月、Pro $15.9/月、Ultra $29.9/月（年付）。用积分使用文字转语音、声音克隆、语音转文字等 AI 音频工具。",
+  "keywords": "haoword.audio 定价   ai 音频工具套餐   haoword.audio"
+ },
+ {
+  "title": "haoword.audio Pricing — AI Audio Plans | haoword.audio",
+  "url": "/en/audio/pricing/",
+  "description": "haoword.audio credit plan pricing: Basic $7.9/mo, Pro $15.9/mo, Ultra $29.9/mo (annual). Use credits for text to speech, voice cloning, speech to text and more AI audio tools.",
+  "keywords": "haoword.audio pricing   ai audio plans   haoword.audio"
+ }
 ]
