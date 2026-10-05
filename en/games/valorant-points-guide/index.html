@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Valorant Points Guide: Prices & Safe Ways to Buy VP</title>
+  <meta name="description" content="A practical Valorant Points guide: VP price tiers, official purchase options, region-lock rules, gift cards and smart spending tips.">
+  <link rel="canonical" href="https://haowordtool.com/en/games/valorant-points-guide/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Valorant Points Guide: Prices & Safe Ways to Buy VP">
+  <meta property="og:description" content="VP prices, official ways to buy, region rules and spending tips.">
+  <meta property="og:url" content="https://haowordtool.com/en/games/valorant-points-guide/">
+  <meta property="og:image" content="https://haowordtool.com/assets/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Valorant Points Guide">
+  <meta name="twitter:description" content="VP prices, official ways to buy, region rules and spending tips.">
+  <meta name="twitter:image" content="https://haowordtool.com/assets/og-image.png">
+
+  <style>
+    :root {
+      --ink: #07121f;
+      --ink-soft: #0d1e31;
+      --panel: rgba(10, 30, 48, .9);
+      --panel-light: rgba(18, 44, 65, .92);
+      --line: rgba(145, 205, 229, .22);
+      --white: #f3fbff;
+      --muted: #a9c0ce;
+      --cyan: #4de3ff;
+      --orange: #ff8a3d;
+      --orange-hot: #ff562e;
+      --yellow: #ffd166;
+      --green: #69e2a6;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--white);
+      background:
+        radial-gradient(circle at 85% 8%, rgba(255, 121, 50, .18), transparent 26rem),
+        linear-gradient(180deg, #071421 0%, #0b1c2d 52%, #07111d 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .shell { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px);
+      background: rgba(5, 17, 29, .86); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 66px; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 900;
+      letter-spacing: .04em; text-decoration: none; }
+    .brand-mark { width: 34px; height: 34px; display: grid; place-items: center;
+      background: var(--orange); color: #09121b;
+      clip-path: polygon(18% 0, 100% 0, 82% 100%, 0 100%); font-weight: 1000; }
+    .brand span:last-child { color: var(--cyan); }
+    .nav-links { display: flex; align-items: center; gap: 20px; color: var(--muted); font-size: .9rem; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--white); }
+    .hero { position: relative; overflow: hidden; min-height: 560px; display: grid; align-items: end;
+      background:
+        linear-gradient(90deg, rgba(5, 17, 29, .96) 0%, rgba(5, 17, 29, .82) 40%, rgba(5, 17, 29, .55) 100%),
+        radial-gradient(circle at 80% 20%, rgba(77, 227, 255, .14), transparent 30rem),
+        linear-gradient(180deg, #0a1a2b, #07111d); }
+    .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 120px;
+      background: linear-gradient(180deg, transparent, var(--ink)); }
+    .hero-copy { position: relative; z-index: 1; max-width: 650px; padding: 100px 0; }
+    .eyebrow { display: inline-flex; margin-bottom: 18px; padding: 7px 12px;
+      border: 1px solid rgba(77, 227, 255, .42); background: rgba(7, 25, 39, .72);
+      color: var(--cyan); font-size: .72rem; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
+    h1, h2, h3 { margin: 0; line-height: 1.08; letter-spacing: -.035em; }
+    h1 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); max-width: 720px; text-transform: uppercase; }
+    h1 em { color: var(--orange); font-style: normal; }
+    .hero-copy p { max-width: 580px; margin: 24px 0 0; color: #d8ecf3; font-size: clamp(1.05rem, 2vw, 1.24rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+      padding: 0 18px; border: 1px solid transparent; text-decoration: none; font-weight: 850; font-size: .9rem;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--orange); color: #09121b; }
+    .button-secondary { border-color: rgba(243, 251, 255, .3); color: var(--white); background: rgba(7, 17, 28, .4); }
+    main { position: relative; z-index: 2; margin-top: -34px; }
+    .trust-row { display: grid; grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line); background: rgba(7, 21, 34, .96); }
+    .trust-item { min-height: 100px; padding: 22px 24px; border-right: 1px solid var(--line); }
+    .trust-item:last-child { border-right: 0; }
+    .trust-item strong { display: block; margin-bottom: 5px; color: var(--yellow);
+      font-size: .83rem; letter-spacing: .12em; text-transform: uppercase; }
+    .trust-item span { color: var(--muted); font-size: .94rem; }
+    section { padding: 76px 0; }
+    .section-label { margin-bottom: 13px; color: var(--orange); font-size: .75rem;
+      font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+    .section-title { max-width: 760px; font-size: clamp(2rem, 4vw, 3.5rem); }
+    .intro { display: grid; grid-template-columns: 1.2fr .8fr; gap: 56px; align-items: start; }
+    .intro p { color: var(--muted); font-size: 1.06rem; }
+    .notice { padding: 22px; border-left: 3px solid var(--cyan);
+      background: rgba(19, 52, 70, .6); color: #d9f7ff; }
+    .notice strong { color: var(--cyan); }
+    .route-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; }
+    .route-card { display: flex; flex-direction: column; min-height: 250px; padding: 26px;
+      border: 1px solid var(--line); background: var(--panel); }
+    .route-card h3 { margin-top: 24px; font-size: 1.5rem; }
+    .route-card p { flex: 1; color: var(--muted); font-size: .94rem; }
+    .route-tag { align-self: flex-start; padding: 5px 9px; background: rgba(255, 138, 61, .14);
+      color: var(--orange); font-size: .7rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .route-card a { display: inline-flex; align-items: center; gap: 8px; color: var(--cyan);
+      text-decoration: none; font-weight: 800; }
+    .guide-section { background: #091a2a; border-block: 1px solid var(--line); }
+    .guide-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; margin-top: 34px; }
+    .steps { display: grid; gap: 12px; }
+    .step { display: grid; grid-template-columns: 46px 1fr; gap: 16px; padding: 19px;
+      border: 1px solid var(--line); background: rgba(17, 43, 62, .68); }
+    .step-number { display: grid; place-items: center; width: 36px; height: 36px;
+      background: var(--orange); color: var(--ink); font-weight: 1000;
+      clip-path: polygon(18% 0, 100% 0, 82% 100%, 0 100%); }
+    .step h3 { margin-bottom: 6px; font-size: 1.1rem; }
+    .step p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .side-panel { padding: 28px; border: 1px solid rgba(255, 138, 61, .4);
+      background: linear-gradient(145deg, rgba(255, 112, 48, .15), transparent 45%), rgba(13, 29, 45, .92); }
+    .side-panel h3 { font-size: 1.65rem; }
+    .side-panel p { color: var(--muted); }
+    .code-example { margin: 22px 0; padding: 14px 16px; border: 1px dashed rgba(77, 227, 255, .45);
+      color: var(--cyan); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .06em; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 30px; font-size: .95rem; }
+    .compare-table th, .compare-table td { border: 1px solid var(--line); padding: 14px 16px; text-align: left; vertical-align: top; }
+    .compare-table th { background: rgba(17, 43, 62, .8); color: var(--yellow); font-size: .8rem;
+      letter-spacing: .1em; text-transform: uppercase; }
+    .compare-table td { color: var(--muted); }
+    .compare-table td:first-child { color: var(--white); font-weight: 700; }
+    .warning-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 34px; }
+    .warning { padding: 22px; border-top: 3px solid var(--orange); background: var(--panel); }
+    .warning h3 { margin-bottom: 10px; font-size: 1.05rem; }
+    .warning p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .ad-slot { display: grid; place-items: center; min-height: 118px; margin-top: 34px;
+      border: 1px dashed rgba(169, 192, 206, .35); color: #7490a0; letter-spacing: .12em;
+      font-size: .72rem; text-transform: uppercase; }
+    .tools-crosslink { padding: 26px; border: 1px solid var(--line); background: var(--panel); margin-top: 40px; }
+    .tools-crosslink h2 { font-size: 1.4rem; margin-bottom: 8px; }
+    .tools-crosslink p { color: var(--muted); margin: 0 0 4px; }
+    .tools-crosslink ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+    .tools-crosslink li { color: var(--muted); font-size: .95rem; }
+    .tools-crosslink a { color: var(--cyan); text-decoration: none; font-weight: 700; }
+    .tools-crosslink a:hover { text-decoration: underline; }
+    .faq { max-width: 850px; margin-top: 30px; }
+    details { border-bottom: 1px solid var(--line); padding: 17px 0; }
+    summary { cursor: pointer; color: var(--white); font-weight: 800; }
+    details p { max-width: 760px; color: var(--muted); margin: 13px 0 0; }
+    footer { padding: 30px 0 42px; border-top: 1px solid var(--line); color: #718897; font-size: .82rem; }
+    footer a { color: var(--cyan); text-decoration: none; }
+    .affiliate-notice { margin: 18px 0 0; padding: 14px 18px; border: 1px solid rgba(255, 138, 61, .45);
+      border-left: 3px solid var(--orange); background: rgba(13, 29, 45, .92);
+      color: #d9c9b8; font-size: .85rem; }
+    .affiliate-notice a { color: var(--cyan); text-decoration: underline; }
+    @media (max-width: 850px) {
+      .nav-links { display: none; }
+      .hero { min-height: 560px; }
+      .hero-copy { padding: 80px 0 86px; }
+      .trust-row, .route-grid, .warning-grid { grid-template-columns: 1fr; }
+      .trust-item { border-right: 0; border-bottom: 1px solid var(--line); }
+      .trust-item:last-child { border-bottom: 0; }
+      .intro, .guide-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(var(--max), calc(100% - 28px)); }
+      h1 { font-size: clamp(2.4rem, 14vw, 3.8rem); }
+      section { padding: 56px 0; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+    }
+
+  </style>
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Valorant Points Guide: Prices, Safe Ways to Buy VP and Spending Tips", "description": "A practical guide to Valorant Points prices, official purchase options and safe spending habits.", "mainEntityOfPage": "https://haowordtool.com/en/games/valorant-points-guide/", "image": "https://haowordtool.com/assets/og-image.png", "author": {"@type": "Organization", "name": "HaoWordTool"}, "publisher": {"@type": "Organization", "name": "HaoWordTool", "url": "https://haowordtool.com/"}}, {"@type": "VideoGame", "name": "Valorant", "genre": "Tactical Shooter", "gamePlatform": ["PC", "PlayStation 5", "Xbox Series X|S"], "publisher": {"@type": "Organization", "name": "Riot Games"}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Can I transfer VP to another region?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no. VP is tied to your account's region. Contact Riot support if you believe your region is set incorrectly."}}, {"@type": "Question", "name": "Are third-party VP sellers safe?", "acceptedAnswer": {"@type": "Answer", "text": "No. Unofficial VP sellers risk revoked points and account penalties. Use the in-client store or authorized gift cards."}}, {"@type": "Question", "name": "Do Valorant Points expire?", "acceptedAnswer": {"@type": "Answer", "text": "No. VP stays in your account until you spend it."}}, {"@type": "Question", "name": "What's the difference between VP and Radianite?", "acceptedAnswer": {"@type": "Answer", "text": "VP is bought with real money for skins and passes. Radianite upgrades skin variants and comes from the battle pass or separate purchase."}}, {"@type": "Question", "name": "Is this an official Riot Games page?", "acceptedAnswer": {"@type": "Answer", "text": "No. This is an independent informational guide. It does not sell VP or collect account credentials."}}]}
+  </script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="https://haowordtool.com/">
+        <span class="brand-mark">H</span>
+        <span>HAO<span>WORD</span>TOOL</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#buy">Buy</a>
+        <a href="#steps">Steps</a>
+        <a href="#safety">Safety</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="shell hero-copy">
+      <div class="eyebrow">Valorant Player Guide</div>
+
+      <h1>
+        Buy Valorant<br>
+        <em>Points right.</em>
+      </h1>
+
+      <p>
+        Valorant Points explained: price tiers, official ways to buy, region rules, and how to get the most value from every purchase.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#buy">Where to Buy</a>
+        <a class="button button-secondary" href="#safety">Spending Tips</a>
+      </div>
+    </div>
+  </section>
+
+<div class="shell">
+    <div class="affiliate-notice" role="note">
+      <strong>Disclosure:</strong> This page contains affiliate links. If you click through and make a purchase, we may earn a commission at no extra cost to you. <a href="https://haowordtool.com/en/affiliate-disclosure.html">Learn more</a>
+    </div>
+  </div>
+
+  <main>
+    <div class="shell">
+      <div class="trust-row">
+        <div class="trust-item">
+          <strong>Before paying</strong>
+          <span>VP is locked to your account&#x27;s region — check it first.</span>
+        </div>
+        <div class="trust-item">
+          <strong>Use official routes</strong>
+          <span>Buy in the Riot client or from authorized card sellers.</span>
+        </div>
+        <div class="trust-item">
+          <strong>Keep your account safe</strong>
+          <span>Never share your Riot ID password or 2FA codes.</span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="shell intro">
+        <div>
+          <div class="section-label">A quick orientation</div>
+          <h2 class="section-title">VP is region-locked. Buy it right the first time.</h2>
+
+          <p>
+            Valorant Points (VP) are Valorant&#x27;s premium currency, spent on weapon skins, agents, and the battle pass. They are purchased with real money inside the Riot client or via official gift cards.
+          </p>
+          <p>
+            The key detail: VP and your account region are linked. Points bought in one region generally cannot move to another, so always buy for the region your account actually plays in.
+          </p>
+        </div>
+
+        <aside class="notice">
+          <strong>Region warning:</strong> If you created your Riot account while traveling or with a VPN, your store region may surprise you. Check the region shown in the client store before buying VP or gift cards.
+        </aside>
+      </div>
+    </section>
+
+    <section id="buy" class="guide-section">
+      <div class="shell">
+        <div class="section-label">Choose your route</div>
+        <h2 class="section-title">Start with a source you can verify.</h2>
+
+        <div class="route-grid">
+          <article class="route-card">
+            <span class="route-tag">In-client store</span>
+            <h3>Riot Client</h3>
+            <p>
+              The default and safest option: buy VP directly inside the Valorant client with your usual payment method.
+            </p>
+            <a href="https://playvalorant.com/" target="_blank" rel="noopener">
+              Visit PlayValorant.com
+              <span aria-hidden="true">→</span>
+            </a>
+          </article><article class="route-card">
+            <span class="route-tag">Gift cards</span>
+            <h3>Riot / Valorant Gift Cards</h3>
+            <p>
+              Prepaid cards from recognized retailers. Match the card&#x27;s region to your account region before buying. &lt;!-- AFFILIATE SLOT: insert approved affiliate link here --&gt;
+            </p>
+            <a href="https://playvalorant.com/" target="_blank" rel="noopener">
+              Check official options
+              <span aria-hidden="true">→</span>
+            </a>
+          </article><article class="route-card">
+            <span class="route-tag">Console stores</span>
+            <h3>PlayStation &amp; Xbox Stores</h3>
+            <p>
+              Console players can buy VP through their platform store, tied to the linked Riot account.
+            </p>
+            <a href="https://playvalorant.com/" target="_blank" rel="noopener">
+              Console info
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="ad-slot">
+          Advertisement space
+        </div>
+      </div>
+    </section>
+
+    <section id="steps">
+      <div class="shell">
+        <div class="section-label">How buying works</div>
+        <h2 class="section-title">Buy VP in four steps</h2>
+
+        <div class="guide-grid">
+          <div class="steps">
+            <article class="step">
+              <span class="step-number">1</span>
+              <div>
+                <h3>Check your region</h3>
+                <p>Open the in-game store and note the currency shown — that is your account&#x27;s purchase region.</p>
+              </div>
+            </article><article class="step">
+              <span class="step-number">2</span>
+              <div>
+                <h3>Choose an amount</h3>
+                <p>Pick a VP bundle. Larger bundles usually give bonus VP, improving the per-point value.</p>
+              </div>
+            </article><article class="step">
+              <span class="step-number">3</span>
+              <div>
+                <h3>Pay in the client</h3>
+                <p>Complete the purchase inside the Valorant client or redeem a matching-region gift card.</p>
+              </div>
+            </article><article class="step">
+              <span class="step-number">4</span>
+              <div>
+                <h3>Confirm the balance</h3>
+                <p>Check your VP total in the client before buying skins or the battle pass.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="side-panel">
+            <h3>Typical US price tiers</h3>
+
+            <p>
+              Riot sells VP in fixed bundles with bonus points at higher tiers. As a rough reference, 475 VP has historically cost around $4.99, scaling to 11,000 VP near $99.99. Prices vary by country and change over time.
+            </p>
+            <div class="code-example">475 VP ≈ $4.99
+1,000 VP ≈ $9.99
+2,050 VP ≈ $19.99
+3,650 VP ≈ $34.99
+5,350 VP ≈ $49.99</div>
+
+            <p>
+              Reference points only. Regional pricing and taxes change the final total.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety" class="guide-section">
+      <div class="shell">
+        <div class="section-label">Spend smarter</div>
+        <h2 class="section-title">Three checks before you spend</h2>
+
+        <div class="warning-grid">
+          <article class="warning">
+            <h3>Skins don&#x27;t aim for you</h3>
+            <p>
+              Skins are cosmetic only. If your budget is tight, the battle pass usually returns more content per VP than single skins.
+            </p>
+          </article><article class="warning">
+            <h3>Watch the Night Market</h3>
+            <p>
+              The rotating Night Market offers personalized discounts — waiting for it can save significant VP on skins you want.
+            </p>
+          </article><article class="warning">
+            <h3>Bundle math matters</h3>
+            <p>
+              Higher tiers include bonus VP. If you plan multiple purchases, one larger bundle often beats several small ones.
+            </p>
+          </article>
+        </div>
+
+        <section class="tools-crosslink"><h2>Free Tools for Gamers</h2><p>Writing a game review or Reddit post? Try our free tools:</p><ul><li><a href="/en/tools/word-counter.html">Word Counter</a> — check your review length</li><li><a href="/en/tools/character-counter.html">Character Counter</a> — for bios and captions</li><li><a href="/en/tools/case-converter.html">Case Converter</a> — fix your titles</li><li><a href="/ai-tools.html">AI Writing Tools</a> — polish your content</li></ul></section>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="shell">
+        <div class="section-label">Common questions</div>
+        <h2 class="section-title">Valorant FAQ</h2>
+
+        <div class="faq">
+          <details>
+            <summary>Can I transfer VP to another region?</summary>
+            <p>
+              Generally no. VP is tied to your account&#x27;s region. Contact Riot support if you believe your region is set incorrectly.
+            </p>
+          </details><details>
+            <summary>Are third-party VP sellers safe?</summary>
+            <p>
+              No. Unofficial VP sellers risk revoked points and account penalties. Use the in-client store or authorized gift cards.
+            </p>
+          </details><details>
+            <summary>Do Valorant Points expire?</summary>
+            <p>
+              No. VP stays in your account until you spend it.
+            </p>
+          </details><details>
+            <summary>What&#x27;s the difference between VP and Radianite?</summary>
+            <p>
+              VP is bought with real money for skins and passes. Radianite upgrades skin variants and comes from the battle pass or separate purchase.
+            </p>
+          </details><details>
+            <summary>Is this an official Riot Games page?</summary>
+            <p>
+              No. This is an independent informational guide. It does not sell VP or collect account credentials.
+            </p>
+          </details>
+        </div>
+        <p style="color:var(--muted);font-size:.85rem;margin-top:24px;">Last updated: October 5, 2026. Prices and availability change over time — always confirm at the official store before paying.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      Part of <a href="https://haowordtool.com/">HaoWordTool</a> game guides
+      and free writing tools. Valorant and Riot Games are trademarks of their
+      respective owners. This page is an independent guide and is not an official Riot Games page.<br>
+      <a href="https://haowordtool.com/en/affiliate-disclosure.html">Affiliate Disclosure</a> ·
+      <a href="https://haowordtool.com/en/cookie-policy.html">Cookie Policy</a> ·
+      <a href="https://haowordtool.com/privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+</body>
+</html>
