@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gears of War: E-Day 가이드, 출시일 및 Game Pass</title>
+  <meta name="description" content="출시일, Game Pass 상세 정보, 초보자 팁, 빠른 시작 가이드가 포함된 실용적인 Gears of War: E-Day 개요입니다.">
+  <link rel="canonical" href="https://haowordtool.com/ko/games/gears-of-war-e-day/">
+  <link rel="alternate" hreflang="ko" href="https://haowordtool.com/ko/games/gears-of-war-e-day/">
+  <link rel="alternate" hreflang="en" href="https://haowordtool.com/en/games/gears-of-war-e-day/">
+  <link rel="alternate" hreflang="x-default" href="https://haowordtool.com/en/games/gears-of-war-e-day/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Gears of War: E-Day 가이드, 출시일 및 Game Pass">
+  <meta property="og:description" content="Emergence Day에 대비하세요: 빠른 개요, 초보자 가이드, Game Pass 상세 정보.">
+  <meta property="og:image" content="https://haowordtool.com/en/games/gears-of-war-e-day/assets/gears-of-war-e-day-key-visual.png">
+  <meta property="og:url" content="https://haowordtool.com/ko/games/gears-of-war-e-day/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#11100e">
+  <style>
+    :root {
+      --ink: #161412;
+      --muted: #a9a39a;
+      --paper: #e9e4d8;
+      --panel: #211f1b;
+      --line: #4d4740;
+      --ember: #e33c20;
+      --ember-soft: #ff7b38;
+      --steel: #b6c0bd;
+      --max: 1160px;
+      --display: "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+      --body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--paper);
+      background: var(--ink);
+      font-family: var(--body);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--ember-soft); outline-offset: 4px; }
+    .shell { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    .topbar {
+      border-bottom: 1px solid rgba(233, 228, 216, .18);
+      background: rgba(17, 16, 14, .94);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(12px);
+    }
+    .topbar-inner { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: var(--display); font-size: 18px; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+    .brand span { color: var(--ember); }
+    .nav { display: flex; gap: 20px; font-size: 13px; color: var(--muted); }
+    .nav a { text-decoration: none; }
+    .nav a:hover { color: var(--paper); }
+
+    .hero {
+      min-height: 680px;
+      display: grid;
+      align-items: end;
+      background:
+        linear-gradient(90deg, rgba(17,16,14,.96) 0%, rgba(17,16,14,.72) 35%, rgba(17,16,14,.16) 72%, rgba(17,16,14,.78) 100%),
+        linear-gradient(0deg, rgba(17,16,14,.96) 0%, rgba(17,16,14,.06) 55%),
+        url("assets/gears-of-war-e-day-key-visual.png") center / cover no-repeat;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-content { padding: 96px 0 72px; max-width: 720px; }
+    .eyebrow { color: var(--ember-soft); font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    h1, h2, h3 { margin: 0; font-family: var(--display); line-height: .98; text-transform: uppercase; }
+    h1 { max-width: 720px; margin-top: 18px; font-size: clamp(54px, 10vw, 112px); letter-spacing: -.025em; }
+    .hero-copy { max-width: 600px; margin: 26px 0 0; color: #d0cac0; font-size: clamp(17px, 2.4vw, 22px); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border: 1px solid var(--ember); background: var(--ember); color: #fff7ee; font-weight: 800; text-decoration: none; }
+    .button:hover { background: #ff5531; border-color: #ff5531; }
+    .button.secondary { border-color: var(--steel); background: transparent; color: var(--paper); }
+    .button.secondary:hover { background: rgba(182,192,189,.12); }
+
+    .signal { background: var(--ember); color: #1d100c; }
+    .signal-inner { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .signal-item { padding: 22px 18px; border-right: 1px solid rgba(29,16,12,.25); }
+    .signal-item:last-child { border-right: 0; }
+    .signal-label { display: block; font-size: 11px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+    .signal-value { display: block; margin-top: 3px; font-family: var(--display); font-size: 22px; text-transform: uppercase; }
+
+    main { background: var(--paper); color: var(--ink); }
+    .section { padding: 84px 0; }
+    .section + .section { border-top: 1px solid #c7c0b4; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 420px); gap: 48px; align-items: end; margin-bottom: 40px; }
+    .section-kicker { color: #a52b19; font-size: 12px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+    h2 { margin-top: 10px; font-size: clamp(40px, 6vw, 72px); }
+    .section-intro { margin: 0; color: #5f5a53; font-size: 17px; }
+    .facts { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #9c9488; border-bottom: 1px solid #9c9488; }
+    .fact { padding: 22px 18px 24px 0; border-right: 1px solid #c7c0b4; }
+    .fact + .fact { padding-left: 18px; }
+    .fact:last-child { border-right: 0; }
+    .fact-label { display: block; color: #756e65; font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .fact-value { display: block; margin-top: 6px; font-size: 20px; font-weight: 850; }
+
+    .guide-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; }
+    .guide-panel { padding: 30px; background: var(--panel); color: var(--paper); border-top: 4px solid var(--ember); }
+    .guide-panel h3 { font-size: 32px; }
+    .guide-panel p { color: #cbc4b9; }
+    .guide-list { display: grid; gap: 18px; margin: 26px 0 0; padding: 0; list-style: none; }
+    .guide-list li { display: grid; grid-template-columns: 32px 1fr; gap: 12px; align-items: start; }
+    .guide-list strong { color: #fff8ee; }
+    .marker { color: var(--ember-soft); font-family: var(--display); font-size: 24px; line-height: 1; }
+    .side-note { padding: 30px; border: 1px solid #aaa296; background: #f5f1e9; }
+    .side-note h3 { font-size: 28px; }
+    .side-note p { color: #5f5a53; }
+
+    .ad-slot { min-height: 90px; display: grid; place-items: center; border: 1px dashed #aaa296; color: #8a8177; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .ad-slot span { padding: 0 10px; background: var(--paper); }
+    .tool-band { background: #171614; color: var(--paper); }
+    .tool-band .section-intro { color: #bcb5ab; }
+    .tool-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 30px; }
+    .tool-link { padding: 20px; border: 1px solid #514c45; text-decoration: none; }
+    .tool-link:hover { border-color: var(--ember); background: #24211d; }
+    .tool-link strong { display: block; color: #fff7ee; }
+    .tool-link span { display: block; margin-top: 5px; color: #aaa39a; font-size: 14px; }
+
+    .faq { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; }
+    details { padding: 20px 0; border-top: 1px solid #aaa296; }
+    details:last-child, details:nth-last-child(2) { border-bottom: 1px solid #aaa296; }
+    summary { cursor: pointer; font-weight: 850; }
+    details p { margin-bottom: 0; color: #5f5a53; }
+    footer { padding: 32px 0 48px; background: var(--ink); color: #9d978e; font-size: 13px; }
+    footer a { color: var(--paper); }
+
+    @media (max-width: 760px) {
+      .nav { display: none; }
+      .hero { min-height: 620px; background-position: 43% center; }
+      .hero-content { padding: 72px 0 50px; }
+      .signal-inner, .facts, .tool-links { grid-template-columns: 1fr; }
+      .signal-item { border-right: 0; border-bottom: 1px solid rgba(29,16,12,.25); }
+      .signal-item:last-child { border-bottom: 0; }
+      .fact, .fact + .fact { padding: 18px 0; border-right: 0; border-bottom: 1px solid #c7c0b4; }
+      .fact:last-child { border-bottom: 0; }
+      .section { padding: 62px 0; }
+      .section-head, .guide-grid, .faq { grid-template-columns: 1fr; gap: 24px; }
+      .guide-panel, .side-note { padding: 24px; }
+      details:last-child, details:nth-last-child(2) { border-bottom: 0; }
+      details:last-child { border-bottom: 1px solid #aaa296; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Gears of War: E-Day 가이드, 출시일 및 Game Pass",
+    "description": "출시 정보, 초보자 팁, Game Pass 상세 정보가 포함된 실용적인 개요입니다.",
+    "mainEntityOfPage": "https://haowordtool.com/en/games/gears-of-war-e-day/",
+    "publisher": { "@type": "Organization", "name": "HaoWordTool" },
+    "about": { "@type": "VideoGame", "name": "Gears of War: E-Day", "genre": "Third-person cover shooter" }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="https://haowordtool.com/">Hao<span>Word</span>Tool</a>
+      <nav class="nav" aria-label="페이지 탐색">
+        <a href="#overview">개요</a>
+        <a href="#guide">초보자 가이드</a>
+        <a href="#tools">무료 도구</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="shell hero-content">
+      <div class="eyebrow">Gears of War: E-Day / 필드 가이드</div>
+      <h1 id="page-title">Emergence Day에 대비하세요.</h1>
+      <p class="hero-copy">Marcus Fenix와 Dom Santiago의 오리진 스토리를 위한 실용적인 시작점: 출시일부터 신규 플레이어가 알아야 할 첫 번째 정보까지.</p>
+      <div class="hero-actions">
+        <a class="button" href="#guide">초보자 가이드 읽기</a>
+        <a class="button secondary" href="https://haowordtool.com/en/games/how-to-play-gears-of-war-e-day/">전체 가이드 열기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="signal" aria-label="주요 게임 정보">
+    <div class="shell signal-inner">
+      <div class="signal-item"><span class="signal-label">출시</span><span class="signal-value">2026년 10월 6일</span></div>
+      <div class="signal-item"><span class="signal-label">출시 당일 플레이</span><span class="signal-value">Game Pass</span></div>
+      <div class="signal-item"><span class="signal-label">플랫폼</span><span class="signal-value">Xbox / PC / Steam</span></div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="overview">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-kicker">여기서 시작</div><h2>E-Day란?</h2></div>
+          <p class="section-intro">Gears of War: E-Day는 원작으로부터 14년 전으로 돌아가 최초의 Locust 공격과 두 명의 전설적인 병사를 만든 순간을 보여줍니다.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><span class="fact-label">개발사</span><span class="fact-value">The Coalition</span></div>
+          <div class="fact"><span class="fact-label">장르</span><span class="fact-value">3인칭 커버 슈터</span></div>
+          <div class="fact"><span class="fact-label">캠페인</span><span class="fact-value">솔로 및 협동</span></div>
+          <div class="fact"><span class="fact-label">출시 액세스</span><span class="fact-value">Game Pass Ultimate / PC</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell"><div class="ad-slot" aria-label="광고 영역"><span>광고</span></div></div>
+
+    <section class="section" id="guide">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-kicker">첫 강하</div><h2>엄폐물부터 시작하세요.</h2></div>
+          <p class="section-intro">이 시리즈는 인내심, 위치 선정, 팀워크에 보답합니다. 첫 플레이에 가져가야 할 습관들입니다.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-panel">
+            <h3>신규 플레이어를 위한 세 가지 습관</h3>
+            <ul class="guide-list">
+              <li><span class="marker">01</span><div><strong>엄폐물에서 엄폐물로 이동하세요.</strong><br>개활지는 좋은 계획이 사라지는 곳입니다. 환경을 활용해 각 돌격을 통제하세요.</div></li>
+              <li><span class="marker">02</span><div><strong>압박을 나누세요.</strong><br>협동 플레이에서는 분대를 나누기보다 목표를 지정하고 목적 있는 부활을 하세요.</div></li>
+              <li><span class="marker">03</span><div><strong>무기의 리듬을 익히세요.</strong><br>재장전 타이밍과 점사 제어가 모든 목표에 탄창을 비우는 것보다 중요합니다.</div></li>
+            </ul>
+          </article>
+          <aside class="side-note">
+            <h3>출시 전 준비</h3>
+            <p>전체 플레이 방법 가이드를 북마크해 두세요. 리뷰, 분대 게시글, 출시일 스레드를 작성한다면 글자 수 세기 도구를 곁에 두세요.</p>
+            <a class="button" href="https://haowordtool.com/en/games/how-to-play-gears-of-war-e-day/">전체 가이드 보기</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tool-band" id="tools">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-kicker">무료 글쓰기 도구</div><h2>기대를 게시글로 바꾸세요.</h2></div>
+          <p class="section-intro">리뷰, 가이드, 출시일 소셜 게시글을 작성 중이신가요? HaoWordTool이 공개 전에 깔끔하게 다듬어 드립니다.</p>
+        </div>
+        <div class="tool-links">
+          <a class="tool-link" href="https://haowordtool.com/en/tools/word-counter.html"><strong>Word Counter</strong><span>리뷰와 가이드 길이를 확인하세요.</span></a>
+          <a class="tool-link" href="https://haowordtool.com/en/tools/character-counter.html"><strong>Character Counter</strong><span>소셜 제한 글자 수에 맞추세요.</span></a>
+          <a class="tool-link" href="https://haowordtool.com/en/tools/case-converter.html"><strong>Case Converter</strong><span>제목과 헤딩을 빠르게 정리하세요.</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-kicker">빠른 답변</div><h2>강하 전에.</h2></div>
+          <p class="section-intro">검색, 소셜, Game Pass 추천을 통해 찾아온 독자를 위한 간략한 참조 자료입니다.</p>
+        </div>
+        <div class="faq">
+          <details open><summary>Gears of War: E-Day는 언제 출시되나요?</summary><p>공식 출시일은 2026년 10월 6일입니다.</p></details>
+          <details><summary>E-Day는 Game Pass에 포함되나요?</summary><p>Game Pass Ultimate 및 PC Game Pass로 출시 당일 액세스가 예정되어 있습니다.</p></details>
+          <details><summary>이전 작품들을 먼저 플레이해야 하나요?</summary><p>아니요. E-Day는 오리진 스토리이므로 새로운 시작점으로 설계되었으며, 오랜 팬들에게도 보답하는 요소를 담고 있습니다.</p></details>
+          <details><summary>더 긴 가이드는 어디에서 볼 수 있나요?</summary><p>게임 접근법에 대한 더 긴 개요는 전체 초보자 가이드를 참고하세요.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">HaoWordTool 게임 가이드 및 무료 글쓰기 도구의 일부입니다. 콘텐츠와 이용 가능 여부는 공식 Xbox 업데이트를 통해 확인하시기 바랍니다.</div>
+  </footer>
+</body>
+</html>
