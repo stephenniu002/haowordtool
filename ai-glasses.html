@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Glasses · 解放双手，看见未来 | Free Your Hands, See the Future</title>
+<title>HAOGE AI Smart Glasses $180 - Real-Time Translation, 8MP Camera | Free Your Hands</title>
+<meta name="description" content="HAOGE AI Smart Glasses only $180. Real-time translation in 100+ languages, 8MP first-person camera, 32GB storage, hands-free calls. Half the price of Ray-Ban Meta. Order now.">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2290925698341223');fbq('track', 'PageView');
+</script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; color: #1a1a1a; line-height: 1.6; }
@@ -107,7 +117,7 @@
     <h1>解放双手，看见未来<span class="en">Free Your Hands, See the Future</span></h1>
     <p>一副 AI 眼镜，第一视角记录、实时翻译、智能导航、远程指导<span class="en">One AI glasses: first-person recording, real-time translation, smart navigation, remote guidance</span></p>
     <div class="btns">
-      <button class="btn btn-primary">立即购买 $180<span class="en">Buy Now $180</span></button>
+      <button class="btn btn-primary" onclick="window.open('https://wa.me/447947099290?text='+encodeURIComponent('Hi, I want to order HAOGE AI Glasses ($180)'),'_blank')">立即购买 $180<span class="en">Buy Now $180</span></button>
       <button class="btn btn-outline" onclick="document.getElementById('demo-video').scrollIntoView({behavior:'smooth'})">观看演示<span class="en">Watch Demo</span></button>
     </div>
     <div class="small">已服务 10,000+ 用户 · 全球支持 PayPal<span class="en">Trusted by 10,000+ users · PayPal accepted worldwide</span></div>
@@ -258,8 +268,8 @@
           <li>✅ 8 小时续航 / 8-hour battery</li>
           <li>✅ 全球配送 / Worldwide shipping</li>
         </ul>
-        <div class="paypal-badge">支持 PayPal 安全支付 / Secure PayPal Payment</div>
-        <div id="paypal-button-container"></div>
+        <div class="paypal-badge">WhatsApp 下单 / Order via WhatsApp</div>
+        <div><button class="btn btn-primary" style="width:100%;margin:20px 0;" onclick="window.open('https://wa.me/447947099290?text='+encodeURIComponent('Hi, I want to order HAOGE AI Glasses ($180)'),'_blank')">立即订购 $180 / Order Now $180</button></div>
         <p class="pay-note">7 天无理由退换 · 全球免运费 / 7-day returns · Free worldwide shipping</p>
       </div>
     </div>
@@ -303,46 +313,11 @@
 <!-- 页脚 -->
 <footer>
   <div class="container">
-    <p>AI 眼镜 · 解放双手，看见未来<span class="en">AI Glasses · Free Your Hands, See the Future</span></p>
-    <p>Price: $180 USD · Payment: PayPal · Free Worldwide Shipping</p>
-    <p>Email: support@ai-glasses.com | WhatsApp: +1 XXX XXX XXXX</p>
-    <p>© 2025 AI Glasses. All rights reserved.</p>
+    <p>HAOGE AI Glasses · 解放双手，看见未来<span class="en">Free Your Hands, See the Future</span></p>
+    <p>Price: $180 USD · WhatsApp: +44 7947 099290</p>
+    <p>© 2026 HAOGE. All rights reserved.</p>
   </div>
 </footer>
-
-<!-- PayPal SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
-<script>
-  paypal.Buttons({
-    style: {
-      layout: 'vertical',
-      color:  'gold',
-      shape:  'pill',
-      label:  'paypal',
-      height: 48
-    },
-    createOrder: function(data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          description: 'AI Glasses · Standard · $180',
-          amount: {
-            value: '180.00',
-            currency_code: 'USD'
-          }
-        }]
-      });
-    },
-    onApprove: function(data, actions) {
-      return actions.order.capture().then(function(details) {
-        alert('支付成功！感谢 ' + details.payer.name.given_name + ' / Payment successful! Thank you ' + details.payer.name.given_name);
-      });
-    },
-    onError: function(err) {
-      console.error('PayPal error:', err);
-      alert('支付出现问题，请稍后重试 / Payment error, please try again.');
-    }
-  }).render('#paypal-button-container');
-</script>
 
 </body>
 </html>
