@@ -272,10 +272,10 @@
     <h2>预约体验<span class="en">Book a Demo</span></h2>
     <p>填写信息，我们的顾问会尽快联系你<span class="en">Fill in your info and our team will reach out shortly</span></p>
     <div class="form-box">
-      <input type="text" placeholder="姓名 / Name">
-      <input type="email" placeholder="邮箱 / Email">
-      <input type="tel" placeholder="手机号 / Phone">
-      <select>
+      <input type="text" id="f-name" placeholder="姓名 / Name">
+      <input type="email" id="f-email" placeholder="邮箱 / Email">
+      <input type="tel" id="f-phone" placeholder="手机号 / Phone">
+      <select id="f-job">
         <option value="">选择职业 / Occupation</option>
         <option>装修工人 / Construction</option>
         <option>汽修工人 / Auto Repair</option>
@@ -285,8 +285,18 @@
         <option>警察 / Police</option>
         <option>其他 / Other</option>
       </select>
-      <button class="btn btn-primary" style="width:100%;">提交预约 / Submit</button>
+      <button class="btn btn-primary" style="width:100%;" onclick="bookDemo()">提交预约 / Submit</button>
     </div>
+    <script>
+    function bookDemo() {
+      var name = document.getElementById('f-name').value || '-';
+      var email = document.getElementById('f-email').value || '-';
+      var phone = document.getElementById('f-phone').value || '-';
+      var job = document.getElementById('f-job').value || '-';
+      var msg = 'HAOGE AI Glasses demo booking:\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nOccupation: ' + job;
+      window.open('https://wa.me/447947099290?text=' + encodeURIComponent(msg), '_blank');
+    }
+    </script>
   </div>
 </section>
 
