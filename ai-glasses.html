@@ -25,7 +25,9 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
   .hero { background: linear-gradient(rgba(10,10,26,0.75), rgba(10,42,74,0.75)), url('product-hero-bg.webp') center/cover no-repeat; color: #fff; padding: 140px 0 120px; text-align: center; }
   .hero h1 { font-size: 52px; font-weight: 800; margin-bottom: 20px; letter-spacing: 2px; }
   .hero p { font-size: 20px; opacity: 0.85; margin-bottom: 40px; }
-  .hero .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .hero .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .hero .btns > div[id^="paypal-container"] { min-width: 250px; max-width: 100%; }
+  .hero .btns > div[id^="paypal-container"] iframe { min-width: 250px !important; }
   .btn { padding: 14px 36px; border-radius: 50px; font-size: 16px; font-weight: 600; cursor: pointer; border: none; transition: all 0.3s; }
   .btn-primary { background: linear-gradient(90deg, #00d4ff, #0066ff); color: #fff; }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,102,255,0.4); }
@@ -297,7 +299,7 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
           <li>✅ PayPal 安全支付 / Secure PayPal checkout</li>
         </ul>
         <div class="paypal-badge">PayPal 安全支付 / Secure PayPal Checkout</div>
-        <div><div id="paypal-container-JAU99NGLGJ6N8-2"></div></div>
+        <div style="min-width: 250px; max-width: 100%;"><div id="paypal-container-JAU99NGLGJ6N8-2"></div></div>
         <p class="pay-note">运费 $80，7–15 天到美国 · 7 天质量问题包退 / $80 shipping, 7–15 days to USA · 7-day return for quality issues</p>
       </div>
     </div>
