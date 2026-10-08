@@ -25,9 +25,7 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
   .hero { background: linear-gradient(rgba(10,10,26,0.75), rgba(10,42,74,0.75)), url('product-hero-bg.webp') center/cover no-repeat; color: #fff; padding: 140px 0 120px; text-align: center; }
   .hero h1 { font-size: 52px; font-weight: 800; margin-bottom: 20px; letter-spacing: 2px; }
   .hero p { font-size: 20px; opacity: 0.85; margin-bottom: 40px; }
-  .hero .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center; }
-  .hero .btns > div[id^="paypal-container"] { min-width: 250px; max-width: 100%; }
-  .hero .btns > div[id^="paypal-container"] iframe { min-width: 250px !important; }
+  .hero .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
   .btn { padding: 14px 36px; border-radius: 50px; font-size: 16px; font-weight: 600; cursor: pointer; border: none; transition: all 0.3s; }
   .btn-primary { background: linear-gradient(90deg, #00d4ff, #0066ff); color: #fff; }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,102,255,0.4); }
@@ -137,7 +135,7 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
     <h1>解放双手，看见未来<span class="en">Free Your Hands, See the Future</span></h1>
     <p>一副 AI 眼镜，第一视角记录、实时翻译、AI 录音<span class="en">One AI glasses: first-person recording, real-time translation, AI recording</span></p>
     <div class="btns">
-      <div id="paypal-container-JAU99NGLGJ6N8"></div>
+      <button class="btn btn-primary" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">立即购买 $180<span class="en">Buy Now $180</span></button>
       <button class="btn btn-outline" onclick="document.getElementById('demo-video').scrollIntoView({behavior:'smooth'})">观看演示<span class="en">Watch Demo</span></button>
     </div>
     <div class="small">全球支持 PayPal<span class="en">PayPal accepted worldwide</span></div>
@@ -282,7 +280,7 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
 </section>
 
 <!-- 价格 -->
-<section class="pricing">
+<section class="pricing" id="buy">
   <div class="container">
     <h2>一副 AI 眼镜，$180<span class="en">One Pair of AI Glasses, $180</span></h2>
     <div class="price-single">
@@ -299,7 +297,7 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
           <li>✅ PayPal 安全支付 / Secure PayPal checkout</li>
         </ul>
         <div class="paypal-badge">PayPal 安全支付 / Secure PayPal Checkout</div>
-        <div style="min-width: 250px; max-width: 100%;"><div id="paypal-container-JAU99NGLGJ6N8-2"></div></div>
+        <div><div id="paypal-container-JAU99NGLGJ6N8-2"></div></div>
         <p class="pay-note">运费 $80，7–15 天到美国 · 7 天质量问题包退 / $80 shipping, 7–15 days to USA · 7-day return for quality issues</p>
       </div>
     </div>
@@ -396,9 +394,6 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
 
 <script src="https://www.paypal.com/sdk/js?client-id=BAAySocMjVdK6FOujVOANs1YyUm466W89o1Eagke10MXyekfmhN8iBhHiko3h8_mlMC5z4EhZRX5tF33rs&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 <script>
-  paypal.HostedButtons({
-    hostedButtonId: "JAU99NGLGJ6N8",
-  }).render("#paypal-container-JAU99NGLGJ6N8");
   paypal.HostedButtons({
     hostedButtonId: "JAU99NGLGJ6N8",
   }).render("#paypal-container-JAU99NGLGJ6N8-2");
