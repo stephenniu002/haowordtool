@@ -287,6 +287,7 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
       <input type="text" id="f-name" placeholder="Name">
       <input type="email" id="f-email" placeholder="Email">
       <input type="tel" id="f-phone" placeholder="Phone">
+      <input type="text" id="f-address" placeholder="Shipping Address">
       <select id="f-job">
         <option value="">Occupation</option>
         <option>Construction</option>
@@ -304,8 +305,9 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
       var name = document.getElementById('f-name').value || '-';
       var email = document.getElementById('f-email').value || '-';
       var phone = document.getElementById('f-phone').value || '-';
+      var address = document.getElementById('f-address').value || '-';
       var job = document.getElementById('f-job').value || '-';
-      var msg = 'HAOGE AI Glasses demo booking:\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nOccupation: ' + job;
+      var msg = 'HAOGE AI Glasses demo booking:\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nAddress: ' + address + '\nOccupation: ' + job;
       fbq('track', 'Lead');
       window.open('https://wa.me/447947099290?text=' + encodeURIComponent(msg), '_blank');
     }
