@@ -89,6 +89,18 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
   .paypal-badge { display: inline-block; background: #ffc439; color: #003087; font-weight: 700; font-size: 13px; padding: 6px 14px; border-radius: 20px; margin: 16px 0; }
   #paypal-button-container { margin: 20px 0; }
   .pay-note { font-size: 13px; color: #888; }
+  .reviews { padding: 60px 0; }
+  .review { background: #1a1a2e; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .review-stars { color: #ffc107; font-size: 18px; margin-bottom: 8px; }
+  .review p { margin: 0 0 8px; }
+  .review small { color: #888; }
+  .no-reviews { color: #888; text-align: center; padding: 30px 0; }
+  .review-form { background: #1a1a2e; border-radius: 12px; padding: 24px; margin-top: 24px; }
+  .review-form h3 { margin-top: 0; }
+  .review-form input, .review-form textarea { width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #333; border-radius: 8px; background: #0f0f1a; color: #fff; box-sizing: border-box; }
+  .stars { font-size: 28px; cursor: pointer; margin-bottom: 12px; }
+  .stars span { color: #ffc107; margin-right: 4px; }
+
 
   /* Form */
   .form-section { padding: 80px 0; background: #0a0a1a; color: #fff; text-align: center; }
@@ -273,6 +285,59 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
         <div><div id="paypal-container-JAU99NGLGJ6N8-2"></div></div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- Reviews -->
+<section class="reviews">
+  <div class="container">
+    <h2>Customer Reviews</h2>
+    <div id="reviews-list"></div>
+    <div class="review-form">
+      <h3>Write a Review</h3>
+      <input type="text" id="r-name" placeholder="Your Name">
+      <div class="stars">
+        <span onclick="setRating(1)">&#9733;</span><span onclick="setRating(2)">&#9733;</span><span onclick="setRating(3)">&#9733;</span><span onclick="setRating(4)">&#9733;</span><span onclick="setRating(5)">&#9733;</span>
+      </div>
+      <textarea id="r-text" placeholder="Share your experience..." rows="4"></textarea>
+      <button class="btn btn-primary" onclick="submitReview()">Submit Review</button>
+    </div>
+    <script>
+    var currentRating = 5;
+    function setRating(n) {
+      currentRating = n;
+      var stars = document.querySelectorAll('.stars span');
+      stars.forEach(function(s, i) { s.style.color = i < n ? '#ffc107' : '#444'; });
+    }
+    function loadReviews() {
+      var list = document.getElementById('reviews-list');
+      var reviews = JSON.parse(localStorage.getItem('haoge_reviews') || '[]');
+      if (reviews.length === 0) {
+        list.innerHTML = '<p class="no-reviews">No reviews yet. Be the first to share your experience!</p>';
+        return;
+      }
+      list.innerHTML = reviews.map(function(r) {
+        var stars = '&#9733;'.repeat(r.rating) + '&#9734;'.repeat(5 - r.rating);
+        return '<div class="review"><div class="review-stars">' + stars + '</div><p>' + r.text + '</p><small>- ' + r.name + '</small></div>';
+      }).join('');
+    }
+    function submitReview() {
+      var name = document.getElementById('r-name').value.trim() || 'Anonymous';
+      var text = document.getElementById('r-text').value.trim();
+      if (!text) { alert('Please write your review first.'); return; }
+      var reviews = JSON.parse(localStorage.getItem('haoge_reviews') || '[]');
+      reviews.unshift({name: name, rating: currentRating, text: text, date: new Date().toISOString()});
+      localStorage.setItem('haoge_reviews', JSON.stringify(reviews));
+      // Also send to business via WhatsApp
+      var msg = 'New product review (HAOGE AI Glasses):\nName: ' + name + '\nRating: ' + currentRating + '/5\n' + text;
+      window.open('https://wa.me/447947099290?text=' + encodeURIComponent(msg), '_blank');
+      document.getElementById('r-text').value = '';
+      loadReviews();
+    }
+    setRating(5);
+    loadReviews();
+    </script>
   </div>
 </section>
 
