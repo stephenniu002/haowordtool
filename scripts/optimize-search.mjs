@@ -28,7 +28,7 @@ export function optimize(pages) {
       head = head.replace(/<link\b[^>]*>/gi, tag => attr(tag, 'hreflang') ? '' : tag);
       if (provisional || file === 'share.html') {
         head = head.replace(/<meta\b[^>]*>/gi, tag => attr(tag, 'name') === 'robots' ? '' : tag);
-        head = head.replace('</head>', '<meta name="robots" content="noindex,follow"></head>');
+        head = head.replace('</head>', '<meta name="robots" content="index,follow"></head>');
       }
       if (!canonicalOf(head)) head = head.replace('</head>', `<link rel="canonical" href="${urlOf(file)}"></head>`);
       return head;
