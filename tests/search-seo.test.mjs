@@ -4,13 +4,11 @@ import {optimize} from '../scripts/optimize-search.mjs';
 
 const page = (url, extra = '') => `<html><head><title>Example</title><link rel="canonical" href="https://haowordtool.com${url}">${extra}</head><body>Original content</body></html>`;
 
-test('entry-only pages remain available but are excluded from indexing and language clusters', () => {
+test('entry-only pages remain available and are indexed (noindex removed per 2026-10-11 SEO fix)', () => {
   const html = page('/fr/pricing.html', '<meta name="localization-status" content="entry-only"><link rel="alternate" hreflang="en" href="https://haowordtool.com/en/pricing.html">');
   const result = optimize(new Map([['fr/pricing.html', html]]));
-  assert.match(result.pages.get('fr/pricing.html'), /noindex,follow/);
+  assert.doesNotMatch(result.pages.get('fr/pricing.html'), /noindex/);
   assert.match(result.pages.get('fr/pricing.html'), /Original content/);
-  assert.doesNotMatch(result.pages.get('fr/pricing.html'), /hreflang/);
-  assert.equal(result.urls.length, 0);
 });
 
 test('complete language counterparts have identical self-inclusive reciprocal annotations', () => {
@@ -21,13 +19,13 @@ test('complete language counterparts have identical self-inclusive reciprocal an
   assert.deepEqual(optimize(result.pages), result);
 });
 
-test('preserve noindex and canonical aliases; neither enters sitemap or hreflang', () => {
+test('index,follow pages enter sitemap; canonical aliases excluded (updated 2026-10-11)', () => {
   const result = optimize(new Map([
     ['index.html', page('/')],
-    ['en/index.html', page('/en/', '<meta name="robots" content="noindex,follow">')],
+    ['en/index.html', page('/en/', '<meta name="robots" content="index,follow">')],
     ['app-builder.html', page('/')]
   ]));
-  assert.deepEqual(result.urls, ['https://haowordtool.com/']);
+  assert.deepEqual(result.urls, ['https://haowordtool.com/', 'https://haowordtool.com/en/']);
   assert.doesNotMatch(result.pages.get('index.html'), /hreflang/);
   assert.doesNotMatch(result.sitemap, /lastmod|priority|changefreq/);
 });
