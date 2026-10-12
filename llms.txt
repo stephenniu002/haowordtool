@@ -1,10 +1,14 @@
 # HaoWordTool
 
-> HaoWordTool is an AI tools company. We build practical AI tools, publish
-> hands-on AI guides, and sell selected physical products through our own US
+> HaoWordTool publishes game guides, word-game tools, and hands-on AI tutorials,
+> plus practical AI tools and selected physical products sold through our own US
 > store. Website: https://haowordtool.com
 
-## Featured product
+## Featured products
+
+- [HAOGE AI Smart Glasses](https://haowordtool.com/ai-glasses.html): AI translation glasses, $180. Order via our Shopify store: https://haowordtool.myshopify.com/products/haoge-ai-smart-glasses
+
+## Heated shawl
 
 - [Heated Shawl – Neck & Shoulder Warmer for Winter](https://haowordtool.myshopify.com/pages/heated-shawl-neck-shoulder-warmer-for-winter): USB-powered heated shawl sold by our own store. Price $81.99. 8 heating zones, powered by 5V/2A USB (10W, power bank not included). Free standard shipping (US warehouse, about 8 days average delivery); express shipping $15.
 - [Best Heated Shawls for Winter 2026 — buying guide](https://haowordtool.com/ai/best-heated-shawls-winter-2026.html): comparison guide. Covers the 5 things to check before buying a heated shawl (power source, heating zones and levels, fabric and care, size and fit, shipping and returns), with the key facts about our heated shawl.
@@ -26,6 +30,73 @@
 ## Free tools
 
 - [Free Tools](https://haowordtool.com/): 15 free online tools — unit conversion, calculators, image tools, QR codes, IP lookup, password generator, timers.
+
+
+## Game guides
+
+Our most-visited content: step-by-step game guides, character lists, and tips.
+- [Castlevania: Belmont's Curse Characters — Rose Belmont, Weapons & Holy Light Par](https://haowordtool.com/en/games/castlevania-belmonts-curse-characters/)
+- [Castlevania: Belmont's Curse Guide — Release Date, Gameplay & Tips | HaoWordTool](https://haowordtool.com/en/games/castlevania-belmonts-curse/)
+- [COD: Modern Warfare 4 Characters — Park Hyun-joon & 33 Weapons | HaoWordTool](https://haowordtool.com/en/games/cod-modern-warfare-4-characters/)
+- [COD: Modern Warfare 4 Guide — Release Date, Gameplay & Tips | HaoWordTool](https://haowordtool.com/en/games/cod-modern-warfare-4/)
+- [Deep Rock Galactic: Survivor Guide — PS5 Out Today, Platforms, Classes](https://haowordtool.com/en/games/deep-rock-galactic-survivor/)
+- [Fortnite V-Bucks Guide: Prices & Safe Ways to Buy](https://haowordtool.com/en/games/fortnite-v-bucks-guide/)
+- [Free Fire MAX Top Up Guide: Diamonds, UID and Safe Official Options](https://haowordtool.com/en/games/free-fire-max-top-up/)
+- [Gears of War: E-Day Guide, Release Date and Game Pass](https://haowordtool.com/en/games/gears-of-war-e-day/)
+- [GTA 6 Characters — Jason Duval & Lucia Caminos Dual Protagonists | HaoWordTool](https://haowordtool.com/en/games/gta-6-characters/)
+- [GTA 6 Guide — Release Date, Gameplay & Tips | HaoWordTool](https://haowordtool.com/en/games/gta-6/)
+- [How to Play Block Blast! — Beginner Guide & Tips | HaoWordTool](https://haowordtool.com/en/games/how-to-play-block-blast/)
+- [How to Play Castlevania: Belmont's Curse — Beginner Guide & Tips | HaoWordTo](https://haowordtool.com/en/games/how-to-play-castlevania-belmonts-curse/)
+- [How to Play COD: Modern Warfare 4 — Beginner Guide & Tips | HaoWordTool](https://haowordtool.com/en/games/how-to-play-cod-modern-warfare-4/)
+- [How to Play Gears of War: E-Day — Controls, Cover & Beginner Guide | HaoWordTool](https://haowordtool.com/en/games/how-to-play-gears-of-war-e-day/)
+- [How to Play GTA 6 — Beginner Guide & Tips | HaoWordTool](https://haowordtool.com/en/games/how-to-play-gta-6/)
+- [How to Play Ludo King — Beginner Guide & Tips | HaoWordTool](https://haowordtool.com/en/games/how-to-play-ludo-king/)
+- [How to Play Phantom Blade Zero — Beginner Guide & Tips | HaoWordTool](https://haowordtool.com/en/games/how-to-play-phantom-blade-zero/)
+- [How to Play Sprunki — Beginner Guide & Tips | HaoWordTool](https://haowordtool.com/en/games/how-to-play-sprunki/)
+- [How to Play Subway Surfers — Beginner Guide & Tips | HaoWordTool](https://haowordtool.com/en/games/how-to-play-subway-surfers/)
+- [Minecraft Buying Guide 2026: Java vs Bedrock Compared](https://haowordtool.com/en/games/minecraft-buying-guide/)
+- [Phantom Blade Zero Characters — Soul, Boss Fights & 30+ Main Weapons | HaoWo](https://haowordtool.com/en/games/phantom-blade-zero-characters/)
+- [Phantom Blade Zero Guide — Release Date, Gameplay & Tips | HaoWordTool](https://haowordtool.com/en/games/phantom-blade-zero/)
+- [PUBG Mobile UC Top Up Guide: Prices & Safe Options](https://haowordtool.com/en/games/pubg-mobile-uc-top-up/)
+- [Roblox Robux Guide: Prices & Safe Ways to Buy](https://haowordtool.com/en/games/roblox-robux-guide/)
+- [Advanced Sprunki Guide — Pro Techniques & Sound Design | HaoWordTool](https://haowordtool.com/en/games/sprunki-advanced-guide/)
+- [All game guides](https://haowordtool.com/en/games/): full index. Korean editions under /ko/games/.
+
+## Free online tools
+
+- [Age Calculator — Exact Age in Years, Months, Days](https://haowordtool.com/tools/age-calculator.html)
+- [BMI Calculator — Body Mass Index](https://haowordtool.com/tools/bmi-calculator.html)
+- [Calculator — Free Online Calculator](https://haowordtool.com/tools/calculator.html)
+- [Case Converter — Free Online Text Case Changer](https://haowordtool.com/tools/case-converter.html)
+- [Character Counter — Free Online Character Count Tool](https://haowordtool.com/tools/character-counter.html)
+- [Currency Converter — Free Online Tool](https://haowordtool.com/tools/currency-converter.html)
+- [Image Compressor — Compress JPG & PNG Online](https://haowordtool.com/tools/image-compressor.html)
+- [Free Online Tools — 15 Practical Utilities](https://haowordtool.com/tools/index.html)
+- [Mortgage Calculator — Monthly Payment & Interest](https://haowordtool.com/tools/mortgage-calculator.html)
+- [Password Generator — Strong Random Passwords](https://haowordtool.com/tools/password-generator.html)
+- [QR Code Generator — Free Online QR Maker](https://haowordtool.com/tools/qr-code-generator.html)
+- [Remove Line Breaks — Free Online Line Break Remover](https://haowordtool.com/tools/remove-line-breaks.html)
+- [Resize Image — Online Image Resizer](https://haowordtool.com/tools/resize-image.html)
+- [Internet Speed Test — Free Online](https://haowordtool.com/tools/speed-test.html)
+- [Text Diff — Free Online Text Comparison Tool](https://haowordtool.com/tools/text-diff.html)
+- [Timer & Stopwatch — Free Online](https://haowordtool.com/tools/timer.html)
+- [Unit Converter — Length, Weight, Temperature](https://haowordtool.com/tools/unit-converter.html)
+- [What Is My IP — Check Your Public IP Address](https://haowordtool.com/tools/what-is-my-ip.html)
+
+
+## Word game guides
+
+- [Guides — Word Games, AI Animation & How-Tos | HaoWordTool](https://haowordtool.com/guides/)
+- [How to Structure an AI Animated Short: Hooks, Beats & Payoffs | HaoWordTool](https://haowordtool.com/guides/ai-animated-short-story-structure.html)
+- [AI Animation Shot List Guide: Turn Your Script Into Generatable Shots | HaoWordT](https://haowordtool.com/guides/ai-animation-shot-list-guide.html)
+- [AI Animation Tools for Beginners: The Only 5 Categories You Need in 2026 | HaoWo](https://haowordtool.com/guides/ai-animation-tools-beginners-guide.html)
+- [Exact Anagram or Subset Search? Choose with Worked Examples | Letter Solver Pro](https://haowordtool.com/guides/anagram-solver-vs-word-finder.html)
+- [Use Anagrams for Spelling Practice Without Memorizing Noise | Letter Solver Pro](https://haowordtool.com/guides/anagrams-for-spelling-practice.html)
+- [Common Letter Pairs and Clusters for Faster Solving | Letter Solver Pro](https://haowordtool.com/guides/common-letter-pairs-and-clusters.html)
+- [Solve Crossword Constraints Step by Step | Letter Solver Pro](https://haowordtool.com/guides/crossword-constraints-step-by-step.html)
+- [Why Word Lists Disagree—and How to Avoid False Positives | Letter Solver Pro](https://haowordtool.com/guides/dictionary-differences-and-false-positives.html)
+- [A Better Method for Five-Letter Word Puzzles | Letter Solver Pro](https://haowordtool.com/guides/five-letter-word-solving-method.html)
+- [All guides](https://haowordtool.com/guides/): full index of 29 how-to articles.
 
 ## About and contact
 
