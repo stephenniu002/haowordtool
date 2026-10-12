@@ -54,8 +54,8 @@ const noindex = [
 ];
 for (const file of noindex) {
   let html = read(file);
-  if (/<meta name="robots"/i.test(html)) html = html.replace(/<meta name="robots"[^>]*>/i, '<meta name="robots" content="noindex,follow">');
-  else html = html.replace('</title>', '</title><meta name="robots" content="noindex,follow">');
+  if (/<meta name="robots"/i.test(html)) html = html.replace(/<meta name="robots"[^>]*>/i, '<meta name="robots" content="index,follow">');
+  else html = html.replace('</title>', '</title><meta name="robots" content="index,follow">');
   html = html.replace(/<script async src="https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-4489946300243174" crossorigin="anonymous"><\/script>/, '');
   write(file, html);
 }

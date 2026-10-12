@@ -254,7 +254,7 @@ const englishPage = render({
   canonical: `${base}/en/affiliate-products.html`,
   title: 'AI Affiliate Product Ideas: 100 Visual Campaigns | HaoWordTool',
   robots: 'noindex,follow'
-}).replace('<meta name="robots" content="noindex,follow">', '<meta name="localization-status" content="entry-only"><meta name="robots" content="noindex,follow">');
+}).replace('<meta name="robots" content="index,follow">', '<meta name="localization-status" content="entry-only"><meta name="robots" content="index,follow">');
 
 fs.writeFileSync(path.join(root, 'affiliate-products.html'), rootPage);
 fs.mkdirSync(path.join(root, 'en'), {recursive: true});
