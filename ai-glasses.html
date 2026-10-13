@@ -108,13 +108,19 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
   .form-box input::placeholder { color: rgba(255,255,255,0.4); }
   .form-box select option { color: #000; }
 
-  /* Product Gallery */
-  .gallery { padding: 80px 0; background: #fff; }
-  .gallery h2 { text-align: center; font-size: 36px; margin-bottom: 50px; }
-  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .gallery-card { background: #f8f9fb; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  /* Product Gallery - card style */
+  .gallery { padding: 80px 0; background: #0a0a1a; }
+  .gallery h2 { text-align: center; font-size: 36px; margin-bottom: 16px; color: #fff; }
+  .gallery .sub { text-align: center; color: rgba(255,255,255,.65); font-size: 16px; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+  .gallery-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,.3); position: relative; }
   .gallery-card img { width: 100%; height: auto; display: block; aspect-ratio: 1/1; object-fit: cover; }
-  .gallery-card p { padding: 14px 16px; font-size: 14px; color: #333; text-align: center; font-weight: 600; }
+  .gallery-card .card-plus { position: absolute; right: 16px; bottom: 86px; width: 44px; height: 44px; border-radius: 50%; background: #0066ff; color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; font-weight: 300; }
+  .gallery-card .card-body { padding: 20px; text-align: center; }
+  .gallery-card .card-body h3 { font-size: 19px; margin-bottom: 16px; color: #1a1a1a; }
+  .gallery-card .card-btn { display: inline-block; background: #0066ff; color: #fff; padding: 12px 40px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; }
+  .gallery-card .card-btn.red { background: #e63946; }
+  .gallery-card .card-btn:hover { opacity: .9; }
 
   /* Footer */
   footer { padding: 40px 0; text-align: center; font-size: 14px; color: #999; background: #050510; }
@@ -123,7 +129,7 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
     .hero h1 { font-size: 32px; }
     .hero p { font-size: 16px; }
     .pain-grid, .scene-grid, .feat-grid, .review-grid { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: 1fr; }
     .pain h2, .scenes h2, .features h2, .specs h2, .reviews h2, .pricing h2, .gallery h2 { font-size: 26px; }
   }
 </style>
@@ -166,12 +172,41 @@ fbq('init', '2290925698341223');fbq('track', 'PageView');fbq('track', 'ViewConte
 <!-- Product Gallery -->
 <section class="gallery">
   <div class="container">
-    <h2>Product Gallery</h2>
+    <h2>Bestselling Products</h2>
+    <p class="sub">Our most popular AI smart glasses, ready to ship worldwide.</p>
     <div class="gallery-grid">
-      <div class="gallery-card"><img src="glasses-real-unboxing.jpg" alt="HAOGE AI Smart Glasses - Real Unboxing" loading="lazy"><p>Real Unboxing</p></div>
-      <div class="gallery-card"><img src="glasses-real-detail.jpg" alt="HAOGE AI Smart Glasses - Real Product Detail" loading="lazy"><p>Real Product</p></div>
-      <div class="gallery-card"><img src="glasses-white-black.webp" alt="HAOGE AI Smart Glasses - Classic Black" loading="lazy"><p>Classic Black</p></div>
-      <div class="gallery-card"><img src="glasses-white-tortoise.webp" alt="HAOGE AI Smart Glasses - Tortoise" loading="lazy"><p>Tortoise</p></div>
+      <div class="gallery-card">
+        <img src="glasses-real-unboxing.jpg" alt="HAOGE AI Smart Glasses - Real Unboxing" loading="lazy">
+        <div class="card-plus">+</div>
+        <div class="card-body">
+          <h3>HAOGE AI Smart Glasses<br>164-Language Translation</h3>
+          <a class="card-btn" href="https://haowordtool.myshopify.com/products/haoge-ai-smart-glasses">Buy Now $180</a>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="glasses-real-detail.jpg" alt="HAOGE AI Smart Glasses - Real Product Detail" loading="lazy">
+        <div class="card-plus">+</div>
+        <div class="card-body">
+          <h3>HAOGE AI Smart Glasses<br>HD Camera Edition</h3>
+          <a class="card-btn red" href="https://haowordtool.myshopify.com/products/haoge-ai-smart-glasses">Buy Now $180</a>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="glasses-white-black.webp" alt="HAOGE AI Smart Glasses - Classic Black" loading="lazy">
+        <div class="card-plus">+</div>
+        <div class="card-body">
+          <h3>Classic Black<br>Hands-Free Audio</h3>
+          <a class="card-btn" href="https://haowordtool.myshopify.com/products/haoge-ai-smart-glasses">Buy Now $180</a>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="glasses-white-tortoise.webp" alt="HAOGE AI Smart Glasses - Tortoise" loading="lazy">
+        <div class="card-plus">+</div>
+        <div class="card-body">
+          <h3>Tortoise Edition<br>Live Streaming Ready</h3>
+          <a class="card-btn red" href="https://haowordtool.myshopify.com/products/haoge-ai-smart-glasses">Buy Now $180</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
