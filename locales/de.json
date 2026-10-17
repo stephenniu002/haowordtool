@@ -472,6 +472,33 @@
       "title": "Trend-Spiele",
       "subtitle": "Anleitungen, Tipps und Tools für die beliebtesten Spiele.",
       "viewAll": "Alle Spiele ansehen"
+    },
+    "aiBoards": {
+      "title": "KI-Boards",
+      "subtitle": "Wer verdient mit KI Geld – Boards zum Nachahmen.",
+      "viewAll": "Alle Boards ansehen",
+      "boards": {
+        "goldRush": {
+          "name": "KI-Goldrausch",
+          "desc": "48 kopierenswerte KI-Websites"
+        },
+        "keywords": {
+          "name": "Keyword-Goldrausch",
+          "desc": "30 lohnenswerte KI-Suchbegriffe"
+        },
+        "models": {
+          "name": "Modell-Flugkarte",
+          "desc": "Zeitleiste wichtiger KI-Modell-Releases"
+        },
+        "trends": {
+          "name": "Trend-Board",
+          "desc": "10 aufstrebende KI-Trends"
+        },
+        "backlinks": {
+          "name": "Backlink-Ressourcen",
+          "desc": "18 kostenlose Backlink-Kanäle"
+        }
+      }
     }
   }
 }

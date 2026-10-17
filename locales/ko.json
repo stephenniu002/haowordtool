@@ -472,6 +472,33 @@
       "title": "인기 게임",
       "subtitle": "지금 가장 핫한 게임의 공략, 팁, 도구.",
       "viewAll": "모든 게임 보기"
+    },
+    "aiBoards": {
+      "title": "AI 보드",
+      "subtitle": "AI로 돈 버는 사람은 누구인가—따라 할 만한 보드.",
+      "viewAll": "모든 보드 보기",
+      "boards": {
+        "goldRush": {
+          "name": "AI 골드러시",
+          "desc": "따라 할 만한 AI 수익 사이트 48선"
+        },
+        "keywords": {
+          "name": "키워드 골드러시",
+          "desc": "공략할 만한 AI 검색어 30선"
+        },
+        "models": {
+          "name": "모델 플라이트 맵",
+          "desc": "주요 AI 모델 출시 타임라인"
+        },
+        "trends": {
+          "name": "트렌드 보드",
+          "desc": "떠오르는 AI 방향 10선"
+        },
+        "backlinks": {
+          "name": "백링크 리소스",
+          "desc": "무료 백링크 채널 18선"
+        }
+      }
     }
   }
 }

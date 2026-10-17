@@ -472,6 +472,33 @@
       "title": "Jeux tendance",
       "subtitle": "Guides, astuces et outils pour les jeux les plus populaires.",
       "viewAll": "Voir tous les jeux"
+    },
+    "aiBoards": {
+      "title": "Classements IA",
+      "subtitle": "Qui gagne de l'argent avec l'IA — des classements à copier.",
+      "viewAll": "Voir tous les classements",
+      "boards": {
+        "goldRush": {
+          "name": "Ruée vers l'or IA",
+          "desc": "48 sites IA rentables à copier"
+        },
+        "keywords": {
+          "name": "Ruée vers l'or des mots-clés",
+          "desc": "30 requêtes IA à cibler"
+        },
+        "models": {
+          "name": "Carte de vol des modèles",
+          "desc": "Chronologie des sorties de modèles IA"
+        },
+        "trends": {
+          "name": "Tableau des tendances",
+          "desc": "10 tendances IA en plein essor"
+        },
+        "backlinks": {
+          "name": "Ressources de backlinks",
+          "desc": "18 canaux de backlinks gratuits"
+        }
+      }
     }
   }
 }

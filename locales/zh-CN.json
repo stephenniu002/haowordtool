@@ -472,6 +472,33 @@
       "title": "热门游戏",
       "subtitle": "最热门游戏的攻略、技巧和工具。",
       "viewAll": "查看所有游戏"
+    },
+    "aiBoards": {
+      "title": "AI 榜单",
+      "subtitle": "谁在用 AI 赚钱——值得抄的榜单。",
+      "viewAll": "查看全部榜单",
+      "boards": {
+        "goldRush": {
+          "name": "AI 淘金榜",
+          "desc": "48 个值得抄的 AI 赚钱站"
+        },
+        "keywords": {
+          "name": "关键词淘金榜",
+          "desc": "30 个值得做的 AI 搜索词"
+        },
+        "models": {
+          "name": "模型航线图",
+          "desc": "大模型发布时间线"
+        },
+        "trends": {
+          "name": "趋势榜",
+          "desc": "10 个正在起来的 AI 方向"
+        },
+        "backlinks": {
+          "name": "外链资源榜",
+          "desc": "18 个免费外链渠道"
+        }
+      }
     }
   }
 }

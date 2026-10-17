@@ -463,6 +463,33 @@
           "desc": "Current time in major cities"
         }
       }
+    },
+    "aiBoards": {
+      "title": "AI Boards",
+      "subtitle": "Who's making money with AI — boards worth copying.",
+      "viewAll": "View all boards",
+      "boards": {
+        "goldRush": {
+          "name": "AI Gold Rush",
+          "desc": "48 sites worth copying"
+        },
+        "keywords": {
+          "name": "Keyword Gold Rush",
+          "desc": "30 search terms to target"
+        },
+        "models": {
+          "name": "Model Flight Map",
+          "desc": "AI model release timeline"
+        },
+        "trends": {
+          "name": "Trends Board",
+          "desc": "10 rising AI directions"
+        },
+        "backlinks": {
+          "name": "Backlink Resources",
+          "desc": "18 free backlink channels"
+        }
+      }
     }
   }
 }
