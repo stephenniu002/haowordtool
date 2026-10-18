@@ -1,0 +1,182 @@
+[
+  {
+    "case": "Snag · 免费赠送聚合",
+    "confidence": "high",
+    "note": "Opened and verified: official Snag site ('Snag - get stuff for free'), free-item aggregator app.",
+    "url": "https://snagapp.framer.website"
+  },
+  {
+    "case": "Posture Coach · 坐姿养虾",
+    "confidence": "high",
+    "note": "Opened and verified: PostureMax, gamified AI posture coach with evolving-shrimp mascot (matches the blog's 'shrimp' descriptor); domain is the one the App Store listing uses for its Terms/Privacy.",
+    "url": "https://www.posturemaxapp.com/"
+  },
+  {
+    "case": "trustmrr · 收入验证",
+    "confidence": "high",
+    "note": "Opened and verified: official TrustMRR site, verified startup revenue database and acquisition marketplace by Marc Lou.",
+    "url": "https://trustmrr.com"
+  },
+  {
+    "case": "Napper · 宝宝睡眠预测",
+    "confidence": "high",
+    "note": "Opened and verified: official Napper site, baby sleep tracker with AI-predicted nap schedules; matches App Store listing (Napper AB).",
+    "url": "https://napper.app/"
+  },
+  {
+    "case": "Remento · AI回忆录",
+    "confidence": "high",
+    "note": "Opened and verified: official Remento site, Speech-to-Story AI memoir/keepsake-book service (Shark Tank, Mark Cuban).",
+    "url": "https://remento.co/"
+  },
+  {
+    "case": "Dreamface · 宠物唱歌",
+    "confidence": "high",
+    "note": "Opened and verified: official DreamFace site, AI video/avatar generator; app listings confirm pet lip-sync 'talk and sing' feature at this domain.",
+    "url": "https://dreamfaceapp.com/"
+  },
+  {
+    "case": "Class Pet Garden · 班级宠物园",
+    "confidence": "high",
+    "note": "Opened and verified: PetClass is the classroom virtual-pet app (students earn points that hatch/grow pets); the blog's 'Class Pet Garden' name is a paraphrase of PetClass.",
+    "url": "https://petclass.app/"
+  },
+  {
+    "case": "Halo AI · AI修图",
+    "confidence": "high",
+    "note": "Opened and verified: official Halo AI site, natural-language AI photo editor (outfits/hair/room/headshots); this domain is the one the App Store listing (Product Studio Inc.) uses for its Terms/Privacy.",
+    "url": "https://halo.camera/"
+  },
+  {
+    "case": "Rolling · 毒舌记账",
+    "confidence": "high",
+    "note": "Opened and verified: Rolly AI Budget & Expense Tracker with snarky/sassy roast responses (incl. 'Angry Mom' personality); the blog's 'Rolling' name maps to the product 'Rolly'.",
+    "url": "https://rollyapp.ai/"
+  },
+  {
+    "case": "Plug AI · 暧昧消息教练",
+    "confidence": "high",
+    "note": "Opened and verified the App Store listing: 'Plug AI: Texting Assistant' by Vert Media Partners LLC, AI texting/flirting coach for Tinder/Hinge/Wizz/iMessage (4.6, 16K ratings). App-only with no dedicated product website; using App Store URL per policy.",
+    "url": "https://apps.apple.com/us/app/plug-ai-texting-assistant/id6449750416"
+  },
+  {
+    "case": "Gravel · AI健身计划",
+    "confidence": "high",
+    "note": "Official site of 'Gravl' (spelled without e) AI personal trainer; page title and content match the AI fitness plan product.",
+    "url": "https://gravl.ai/"
+  },
+  {
+    "case": "no contact · 防找前任",
+    "confidence": "high",
+    "note": "Official site of NoContact AI, a no-contact-ex app (streak tracker, SOS button, AI coach to stop texting your ex); page content matches.",
+    "url": "https://nocontactai.app/en"
+  },
+  {
+    "case": "Facekit · AI脸打分",
+    "confidence": "high",
+    "note": "Official site of FaceKit, a 3D face analysis app with a single 'Facekit Score' rolled from 12 metrics; matches AI face-scoring product.",
+    "url": "https://facekitapp.com/"
+  },
+  {
+    "case": "LensAI · 照片调光",
+    "confidence": "low",
+    "note": "No verifiable 'LensAI' photo-relighting product found after multiple searches; closest matches are unrelated (LensAI AI Photo Creator avatars by AMOBEAR, Lensa by Prisma Labs).",
+    "url": null
+  },
+  {
+    "case": "Excel Formula AI · David",
+    "confidence": "medium",
+    "note": "David Bressler's ExcelFormulaBot renamed to FormulaBot (Microsoft C&D), now rebranded 'Better Analyst (formerly Formula Bot)'; domain opened and lineage confirmed, but product is now broader analytics, not just Excel formulas.",
+    "url": "https://formulabot.com/"
+  },
+  {
+    "case": "Cal AI Hebrew Clone · Tomer",
+    "confidence": "high",
+    "note": "Official Hebrew-first site of Tomer's CalBuddy AI calorie tracker, the Hebrew Cal AI clone documented in the case writeup; page opened and content matches.",
+    "url": "https://calbuddy.co.il/"
+  },
+  {
+    "case": "Tolan · AI陪伴",
+    "confidence": "high",
+    "note": "Official site of Tolan, the AI companion/alien guide app by Portola; homepage opened and matches.",
+    "url": "https://www.tolans.com/"
+  },
+  {
+    "case": "Sprout · 右滑投简历",
+    "confidence": "high",
+    "note": "Official site of Sprout (formerly Prep.ai), the AI job search app with swipe-right-to-apply; homepage and FAQ confirm the swipe mechanic.",
+    "url": "https://www.usesprout.com/"
+  },
+  {
+    "case": "Pingo · 毒舌口语陪练",
+    "confidence": "high",
+    "note": "Official site of Pingo AI, the AI spoken-language coach; opened and verified. The 'snarky/harsh' framing is from the case's Chinese positioning; site itself presents a friendly tutor.",
+    "url": "https://pingo.ai/"
+  },
+  {
+    "case": "Glow Up · AI试妆",
+    "confidence": "low",
+    "note": "GlowUp - Makeup & Beauty (ex-GlamAI, Zipo Apps) is an iOS-only AI makeup try-on app; its official domain useglowup.app appears in the App Store listing's terms link but could not be opened/verified in this session.",
+    "url": "https://www.useglowup.app/"
+  },
+  {
+    "case": "AI Undercover · 谁是卧底AI题库",
+    "confidence": "low",
+    "note": "No official product site found for an AI-generated 谁是卧底 question bank; search only surfaced unrelated \"undercover\" AI agent tools.",
+    "url": null
+  },
+  {
+    "case": "Symmetry AI · 肌肉分析",
+    "confidence": "high",
+    "note": "symmetry.club is the official site of Symmetry: AI Gym Workout Log (AI body scan / muscle analysis features), opened and verified.",
+    "url": "https://www.symmetry.club/"
+  },
+  {
+    "case": "3AK · AI跑姿分析",
+    "confidence": "high",
+    "note": "App-only product, no official website found; App Store listing opened and verified (3AK Sprinting App, AI Stride & Form Analysis).",
+    "url": "https://apps.apple.com/app/id6756290066"
+  },
+  {
+    "case": "Cat on Chair · 番茄猫",
+    "confidence": "high",
+    "note": "catonchair.app is the official site of the Cat On Chair pomodoro focus app with the cat companion, opened and verified.",
+    "url": "https://catonchair.app/"
+  },
+  {
+    "case": "Physical Phones · 反智能手机座机",
+    "confidence": "high",
+    "note": "physicalphones.com is the official shop for the Bluetooth landline anti-smartphone phones, opened and verified.",
+    "url": "https://physicalphones.com/"
+  },
+  {
+    "case": "点个关 / Push-up Alarm · Early, 24",
+    "confidence": "low",
+    "note": "Could not identify the specific indie product behind the maker hint; generic push-up alarm apps found (Pushy, Snuzu) do not match.",
+    "url": null
+  },
+  {
+    "case": "Dog Vibe Coding · 狗做游戏",
+    "confidence": "high",
+    "note": "Caleb Leak's official project page \"I Taught My Dog to Vibe Code Games\" (dog Momo making games via Claude Code), opened and verified.",
+    "url": "https://www.calebleak.com/posts/dog-game/"
+  },
+  {
+    "case": "Base44 · 说话生成App",
+    "confidence": "high",
+    "note": "base44.com still live as a standalone product after the June 2025 Wix acquisition; the acquisition relationship is confirmed on the site itself, opened and verified.",
+    "url": "https://base44.com/"
+  },
+  {
+    "case": "Recu · 会画过程的设计AI",
+    "confidence": "low",
+    "note": "No verifiable official site found for a design AI called Recu that shows its drawing process; only unrelated tools (Recraft, suapp.ai) surfaced.",
+    "url": null
+  },
+  {
+    "case": "Rikyū · MCP设计工具",
+    "confidence": "high",
+    "note": "rikyu.ai is the official site, tagline \"Design from your AI, over MCP\" (works with Claude/Codex/Cursor), opened and verified.",
+    "url": "https://rikyu.ai/"
+  }
+]
