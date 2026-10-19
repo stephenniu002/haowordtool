@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 收入榜：30 个正在赚钱的 AI 产品 | HaoWordTool</title>
+<meta name="description" content="30 个已经在赚钱的 AI 产品：收入数据（自报）、变现方式、增长打法。前20条免费，完整榜单注册可见。">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/favicon-512.png">
+<link rel="canonical" href="https://haowordtool.com/ai/income.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#0a0a14;color:#e8e8f0;line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+nav{background:#111122;padding:16px 0;border-bottom:1px solid #222244}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+nav a.dim{color:#8888aa;text-decoration:none;font-size:14px}
+.hero{text-align:center;padding:48px 20px 32px}
+.hero h1{font-size:36px;margin-bottom:12px}
+.hero p{color:#aaaacc;max-width:700px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:32px;margin:24px 0;flex-wrap:wrap}
+.stat{text-align:center}
+.stat b{font-size:28px;color:#ffd700;display:block}
+.stat span{color:#8888aa;font-size:13px}
+.controls{display:flex;gap:12px;margin:24px 0;flex-wrap:wrap}
+.controls input,.controls select{padding:10px 14px;border:1px solid #333355;border-radius:8px;background:#151528;color:#e8e8f0;font-size:14px}
+.controls input{flex:1;min-width:200px}
+table{width:100%;border-collapse:collapse;background:#111122;border-radius:12px;overflow:hidden;margin:20px 0}
+th{background:#1a1a33;padding:14px 12px;text-align:left;font-size:13px;color:#aaaacc;font-weight:600}
+td{padding:14px 12px;border-top:1px solid #222244;font-size:14px;vertical-align:top}
+tr:hover td{background:#15152a}
+.idx{font-size:20px;font-weight:700;color:#ffd700;width:50px}
+.tag{background:#222244;padding:4px 10px;border-radius:20px;font-size:12px;white-space:nowrap}
+.rev{color:#4ade80;font-weight:600;white-space:nowrap}
+.copyable{background:#ffd700;color:#000;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:600;white-space:nowrap}
+.dim{color:#666688;font-size:13px}
+.tactic{font-size:13px;color:#aaaacc}
+.lock-cell{text-align:center;padding:40px 20px !important}
+.lock-box .lock-icon{font-size:36px;margin-bottom:8px}
+.btn{display:inline-block;margin-top:12px;padding:10px 24px;background:#ffd700;color:#000;border-radius:8px;text-decoration:none;font-weight:600}
+.btn:hover{background:#ffed4a}
+.notice{background:#1a1a33;border:1px solid #333355;border-radius:8px;padding:16px;margin:20px 0;font-size:13px;color:#aaaacc}
+footer{text-align:center;padding:40px 20px;color:#666688;font-size:13px}
+@media(max-width:768px){table{font-size:12px}td,th{padding:8px 6px}.hero h1{font-size:24px}}
+</style>
+</head>
+<body>
+<nav><div class="container">
+<a href="/"><img src="/assets/haowordtool-logo.png" alt="HaoWordTool" style="height:38px;width:auto;background:#fff;border-radius:8px;padding:4px 8px;"></a>
+<div><a class="dim" href="/ai/boards.html">榜单</a> &nbsp;·&nbsp; <a class="dim" href="/ai/income-en.html">EN</a></div>
+</div></nav>
+
+<div class="container">
+<div class="hero">
+<h1>💰 AI 收入榜</h1>
+<p>只收录已经在赚钱、且小玩家抄得上的 AI 产品。收入数据为自报（未独立核实），看方向不看数字。</p>
+<div class="stats">
+<div class="stat"><b>30</b><span>上榜产品</span></div>
+<div class="stat"><b>9</b><span>小玩家可抄</span></div>
+<div class="stat"><b>20</b><span>免费查看</span></div>
+</div>
+</div>
+
+<div class="notice">
+<b>⚠ 诚实声明：</b>收入数字来自公开报道/创始人自报，<b>未经独立核实</b>，仅供方向参考。标 * 的为自报数据。上线日期标注"待核"的表示暂无可靠来源。
+</div>
+
+<div class="controls">
+<input type="text" id="search" placeholder="搜索产品名…">
+<select id="filter-tag">
+<option value="">全部分类</option>
+<option value="Aggregator">Aggregator</option>
+<option value="Beauty">Beauty</option>
+<option value="Companion">Companion</option>
+<option value="Creative AI">Creative AI</option>
+<option value="Dating">Dating</option>
+<option value="Design AI">Design AI</option>
+<option value="Dev tool · $80M exit">Dev tool · $80M exit</option>
+<option value="EdTech">EdTech</option>
+<option value="Emotion">Emotion</option>
+<option value="Fintech fun">Fintech fun</option>
+<option value="Fitness">Fitness</option>
+<option value="Gamified tool">Gamified tool</option>
+<option value="Geo arbitrage">Geo arbitrage</option>
+<option value="Hardware">Hardware</option>
+<option value="Jobs">Jobs</option>
+<option value="Parenting">Parenting</option>
+<option value="Party game">Party game</option>
+<option value="Photo AI">Photo AI</option>
+<option value="Productivity">Productivity</option>
+<option value="Sports">Sports</option>
+<option value="Trust">Trust</option>
+<option value="Utility">Utility</option>
+<option value="Viral consumer">Viral consumer</option>
+</select>
+<select id="filter-copy">
+<option value="">全部</option>
+<option value="1">只看小玩家可抄</option>
+</select>
+</div>
+
+<table id="board">
+<thead><tr>
+<th>#</th><th>产品</th><th>分类</th><th>收入（自报）</th><th>变现方式</th><th>增长打法</th><th>可抄</th>
+</tr></thead>
+<tbody>
+<tr data-idx="1" data-tag="Aggregator" data-name="Snag 免费赠送聚合">
+      <td class="idx">1</td>
+      <td><b>Snag</b><br><span class="dim">免费赠送聚合</span><br><a href="https://snagapp.framer.website" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Aggregator</span></td>
+      <td class="rev">$30K/mo MRR*</td>
+      <td>订阅</td>
+      <td class="tactic">Aggregator赛道</td>
+      <td><span class="copyable">小玩家可抄</span></td>
+    </tr>
+<tr data-idx="2" data-tag="Gamified tool" data-name="Posture Coach 坐姿养虾">
+      <td class="idx">2</td>
+      <td><b>Posture Coach</b><br><span class="dim">坐姿养虾</span><br><a href="https://www.posturemaxapp.com/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Gamified tool</span></td>
+      <td class="rev">$17 one-time · $1K day one*</td>
+      <td>买断</td>
+      <td class="tactic">Gamified tool赛道</td>
+      <td><span class="copyable">小玩家可抄</span></td>
+    </tr>
+<tr data-idx="3" data-tag="Trust" data-name="trustmrr 收入验证">
+      <td class="idx">3</td>
+      <td><b>trustmrr</b><br><span class="dim">收入验证</span><br><a href="https://trustmrr.com" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Trust</span></td>
+      <td class="rev">$44K / 30 days*</td>
+      <td>待核</td>
+      <td class="tactic">Trust赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="4" data-tag="Parenting" data-name="Napper 宝宝睡眠预测">
+      <td class="idx">4</td>
+      <td><b>Napper</b><br><span class="dim">宝宝睡眠预测</span><br><a href="https://napper.app/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Parenting</span></td>
+      <td class="rev">€47.99/yr subscription</td>
+      <td>订阅</td>
+      <td class="tactic">Parenting赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="5" data-tag="Emotion" data-name="Remento AI回忆录">
+      <td class="idx">5</td>
+      <td><b>Remento</b><br><span class="dim">AI回忆录</span><br><a href="https://remento.co/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Emotion</span></td>
+      <td class="rev">$99/yr · $7M+ post-Shark-Tank*</td>
+      <td>订阅（年付）</td>
+      <td class="tactic">Emotion赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="6" data-tag="Viral consumer" data-name="Dreamface 宠物唱歌">
+      <td class="idx">6</td>
+      <td><b>Dreamface</b><br><span class="dim">宠物唱歌</span><br><a href="https://dreamfaceapp.com/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Viral consumer</span></td>
+      <td class="rev">$29.99/yr · $800K+/mo*</td>
+      <td>订阅</td>
+      <td class="tactic">Viral consumer赛道</td>
+      <td><span class="copyable">小玩家可抄</span></td>
+    </tr>
+<tr data-idx="7" data-tag="EdTech" data-name="Class Pet Garden 班级宠物园">
+      <td class="idx">7</td>
+      <td><b>Class Pet Garden</b><br><span class="dim">班级宠物园</span><br><a href="https://petclass.app/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">EdTech</span></td>
+      <td class="rev">¥475K / single month*</td>
+      <td>待核</td>
+      <td class="tactic">EdTech赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="8" data-tag="Photo AI" data-name="Halo AI AI修图">
+      <td class="idx">8</td>
+      <td><b>Halo AI</b><br><span class="dim">AI修图</span><br><a href="https://halo.camera/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Photo AI</span></td>
+      <td class="rev">$300K/mo in 45 days* · 1.2B views / 120 days</td>
+      <td>订阅</td>
+      <td class="tactic">Photo AI赛道</td>
+      <td><span class="copyable">小玩家可抄</span></td>
+    </tr>
+<tr data-idx="9" data-tag="Fintech fun" data-name="Rolling 毒舌记账">
+      <td class="idx">9</td>
+      <td><b>Rolling</b><br><span class="dim">毒舌记账</span><br><a href="https://rollyapp.ai/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Fintech fun</span></td>
+      <td class="rev">1K → 100K users in 5 days*</td>
+      <td>待核</td>
+      <td class="tactic">Fintech fun赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="10" data-tag="Dating" data-name="Plug AI 暧昧消息教练">
+      <td class="idx">10</td>
+      <td><b>Plug AI</b><br><span class="dim">暧昧消息教练</span><br><a href="https://apps.apple.com/us/app/plug-ai-texting-assistant/id6449750416" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Dating</span></td>
+      <td class="rev">$80K/mo subscriptions*</td>
+      <td>订阅</td>
+      <td class="tactic">Dating赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="11" data-tag="Fitness" data-name="Gravel AI健身计划">
+      <td class="idx">11</td>
+      <td><b>Gravel</b><br><span class="dim">AI健身计划</span><br><a href="https://gravl.ai/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Fitness</span></td>
+      <td class="rev">$440K / single month*</td>
+      <td>待核</td>
+      <td class="tactic">Fitness赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="12" data-tag="Emotion" data-name="no contact 防找前任">
+      <td class="idx">12</td>
+      <td><b>no contact</b><br><span class="dim">防找前任</span><br><a href="https://nocontactai.app/en" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Emotion</span></td>
+      <td class="rev">$190K / 30 days* · ~6K active subs</td>
+      <td>待核</td>
+      <td class="tactic">Emotion赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="13" data-tag="Viral consumer" data-name="Facekit AI脸打分">
+      <td class="idx">13</td>
+      <td><b>Facekit</b><br><span class="dim">AI脸打分</span><br><a href="https://facekitapp.com/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Viral consumer</span></td>
+      <td class="rev">$100K / 2 months*</td>
+      <td>待核</td>
+      <td class="tactic">Viral consumer赛道</td>
+      <td><span class="copyable">小玩家可抄</span></td>
+    </tr>
+<tr data-idx="14" data-tag="Photo AI" data-name="LensAI 照片调光">
+      <td class="idx">14</td>
+      <td><b>LensAI</b><br><span class="dim">照片调光</span><br><span class="dim">暂无官网</span></td>
+      <td><span class="tag">Photo AI</span></td>
+      <td class="rev">$8K / 30 days* (headline said $50K)</td>
+      <td>广告</td>
+      <td class="tactic">Photo AI赛道</td>
+      <td><span class="copyable">小玩家可抄</span></td>
+    </tr>
+<tr data-idx="15" data-tag="Productivity" data-name="Excel Formula AI David">
+      <td class="idx">15</td>
+      <td><b>Excel Formula AI</b><br><span class="dim">David</span><br><a href="https://formulabot.com/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Productivity</span></td>
+      <td class="rev">$23K/mo*</td>
+      <td>订阅</td>
+      <td class="tactic">Productivity赛道</td>
+      <td><span class="copyable">小玩家可抄</span></td>
+    </tr>
+<tr data-idx="16" data-tag="Geo arbitrage" data-name="Cal AI Hebrew Clone Tomer">
+      <td class="idx">16</td>
+      <td><b>Cal AI Hebrew Clone</b><br><span class="dim">Tomer</span><br><a href="https://calbuddy.co.il/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Geo arbitrage</span></td>
+      <td class="rev">$81K / single month*</td>
+      <td>待核</td>
+      <td class="tactic">Geo arbitrage赛道</td>
+      <td><span class="copyable">小玩家可抄</span></td>
+    </tr>
+<tr data-idx="17" data-tag="Companion" data-name="Tolan AI陪伴">
+      <td class="idx">17</td>
+      <td><b>Tolan</b><br><span class="dim">AI陪伴</span><br><a href="https://www.tolans.com/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Companion</span></td>
+      <td class="rev">$1M+/mo* · 100K+ subscribers</td>
+      <td>订阅</td>
+      <td class="tactic">Companion赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="18" data-tag="Jobs" data-name="Sprout 右滑投简历">
+      <td class="idx">18</td>
+      <td><b>Sprout</b><br><span class="dim">右滑投简历</span><br><a href="https://www.usesprout.com/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">Jobs</span></td>
+      <td class="rev">$250K/mo in 8 months*</td>
+      <td>订阅</td>
+      <td class="tactic">Jobs赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="19" data-tag="EdTech" data-name="Pingo 毒舌口语陪练">
+      <td class="idx">19</td>
+      <td><b>Pingo</b><br><span class="dim">毒舌口语陪练</span><br><a href="https://pingo.ai/" target="_blank" rel="noopener">访问 →</a></td>
+      <td><span class="tag">EdTech</span></td>
+      <td class="rev">$450–500K/mo*</td>
+      <td>订阅</td>
+      <td class="tactic">EdTech赛道</td>
+      <td></td>
+    </tr>
+<tr data-idx="20" data-tag="Beauty" data-name="Glow Up AI试妆">
+      <td class="idx">20</td>
+      <td><b>Glow Up</b><br><span class="dim">AI试妆</span><br><span class="dim">暂无官网</span></td>
+      <td><span class="tag">Beauty</span></td>
+      <td class="rev">$800K / first year*</td>
+      <td>订阅（年付）</td>
+      <td class="tactic">Beauty赛道</td>
+      <td></td>
+    </tr>
+<tr class="locked-row" data-idx="21" data-tag="Party game" data-name="AI Undercover 谁是卧底AI题库">
+      <td>21</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 21 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="22" data-tag="Fitness" data-name="Symmetry AI 肌肉分析">
+      <td>22</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 22 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="23" data-tag="Sports" data-name="3AK AI跑姿分析">
+      <td>23</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 23 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="24" data-tag="Gamified tool" data-name="Cat on Chair 番茄猫">
+      <td>24</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 24 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="25" data-tag="Hardware" data-name="Physical Phones 反智能手机座机">
+      <td>25</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 25 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="26" data-tag="Utility" data-name="点个关 / Push-up Alarm Early, 24">
+      <td>26</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 26 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="27" data-tag="Creative AI" data-name="Dog Vibe Coding 狗做游戏">
+      <td>27</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 27 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="28" data-tag="Dev tool · $80M exit" data-name="Base44 说话生成App">
+      <td>28</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 28 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="29" data-tag="Design AI" data-name="Recu 会画过程的设计AI">
+      <td>29</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 29 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+<tr class="locked-row" data-idx="30" data-tag="Design AI" data-name="Rikyū MCP设计工具">
+      <td>30</td>
+      <td colspan="6" class="lock-cell">
+        <div class="lock-box">
+          <div class="lock-icon">🔒</div>
+          <div>第 30 条已锁定</div>
+          <div class="dim">注册登录后查看完整榜单</div>
+          <a href="/ai/pro.html" class="btn">免费注册 →</a>
+        </div>
+      </td>
+    </tr>
+</tbody>
+</table>
+
+<div class="notice">
+<b>解锁完整榜单：</b>前 20 条免费查看，第 21 条起需注册登录。目前注册免费，付费开关未开启。
+<a href="/ai/pro.html" class="btn" style="margin-left:12px">免费注册 →</a>
+</div>
+</div>
+
+<footer>
+<p>HaoWordTool · AI 赚钱情报 · Updated 2026-10-19</p>
+<p><a href="/ai/boards.html" style="color:#8888aa">← 返回榜单首页</a></p>
+</footer>
+
+<script>
+// 搜索+筛选
+const search = document.getElementById('search');
+const filterTag = document.getElementById('filter-tag');
+const filterCopy = document.getElementById('filter-copy');
+const rows = document.querySelectorAll('#board tbody tr');
+
+function applyFilters() {
+  const q = search.value.toLowerCase();
+  const tag = filterTag.value;
+  const copyOnly = filterCopy.value === '1';
+  rows.forEach(r => {
+    const name = (r.dataset.name || '').toLowerCase();
+    const rtag = r.dataset.tag || '';
+    const isCopy = r.querySelector('.copyable') !== null;
+    // 锁定行始终显示
+    if (r.classList.contains('locked-row')) {
+      r.style.display = '';
+      return;
+    }
+    const matchQ = !q || name.includes(q);
+    const matchTag = !tag || rtag === tag;
+    const matchCopy = !copyOnly || isCopy;
+    r.style.display = (matchQ && matchTag && matchCopy) ? '' : 'none';
+  });
+}
+search.addEventListener('input', applyFilters);
+filterTag.addEventListener('change', applyFilters);
+filterCopy.addEventListener('change', applyFilters);
+</script>
+</body>
+</html>
