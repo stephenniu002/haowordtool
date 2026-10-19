@@ -193,5 +193,6 @@ function clearText(){input.value='';originalText='';updateStats();input.focus()}
 function pasteText(){navigator.clipboard.readText().then(t=>{input.value+=t;originalText=input.value;updateStats()}).catch(()=>input.focus())}
 updateStats();
 </script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

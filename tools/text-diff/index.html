@@ -247,5 +247,6 @@ function swapTexts(){const t=textA.value;textA.value=textB.value;textB.value=t;u
 function copyDiff(){const output=document.getElementById('output-body');if(!output.textContent.trim())return;navigator.clipboard.writeText(output.textContent).then(()=>{const b=event.target;const o=b.textContent;b.textContent='已复制!';setTimeout(()=>b.textContent=o,1200);});}
 updateStats();
 </script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

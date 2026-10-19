@@ -185,5 +185,6 @@ function copyText(){if(!input.value)return;navigator.clipboard.writeText(input.v
 function clearText(){saveHistory();input.value='';input.focus()}
 function pasteText(){navigator.clipboard.readText().then(t=>{saveHistory();input.value+=t}).catch(()=>input.focus())}
 </script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>
