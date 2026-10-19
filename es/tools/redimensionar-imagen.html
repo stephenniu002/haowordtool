@@ -72,5 +72,6 @@ file.onchange=()=>{const f=file.files[0];if(!f)return;const r=new FileReader();r
 w.oninput=()=>{if(ratio.checked&&aspect)h.value=Math.round(w.value/aspect);};
 h.oninput=()=>{if(ratio.checked&&aspect)w.value=Math.round(h.value*aspect);};
 dl.onclick=()=>{if(!img)return;const c=document.createElement("canvas");c.width=parseInt(w.value)||img.width;c.height=parseInt(h.value)||img.height;c.getContext("2d").drawImage(img,0,0,c.width,c.height);c.toBlob(b=>{dl.href=URL.createObjectURL(b);});};</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

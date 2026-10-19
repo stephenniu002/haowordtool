@@ -77,5 +77,6 @@ function press(k){if(k==="C"){cur="0";prev=null;op=null;reset=false;}else if(k==
 document.querySelectorAll(".calc-btn").forEach(b=>b.onclick=()=>press(b.dataset.k));
 document.addEventListener("keydown",e=>{const k=e.key;if(/[0-9]/.test(k)||["+","-","*","/","."].includes(k)){press(k);e.preventDefault();}else if(k==="Enter"||k==="="){press("=");e.preventDefault();}else if(k==="Backspace"){cur=cur.length>1?cur.slice(0,-1):"0";upd();e.preventDefault();}else if(k==="Escape"){press("C");}});
 upd();</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

@@ -65,5 +65,6 @@
 <script type="application/json" id="relatedData">["password-generator","world-clock","qr-code-generator"]</script>
 <script src="/assets/related-tools.js" defer></script><script>fetch("https://api.ipify.org?format=json").then(r=>r.json()).then(d=>{document.getElementById("ip").textContent=d.ip;}).catch(()=>{document.getElementById("ip").textContent="n/a";});
 fetch("https://ipapi.co/json/").then(r=>r.json()).then(d=>{document.getElementById("city").textContent=(d.city||"–")+", "+(d.country_name||"");document.getElementById("isp").textContent=d.org||"–";}).catch(()=>{});</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

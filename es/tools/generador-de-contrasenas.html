@@ -71,5 +71,6 @@ function gen(){let pool="";if(document.getElementById("u").checked)pool+="ABCDEF
 document.getElementById("go").onclick=gen;
 document.getElementById("cp").onclick=()=>{navigator.clipboard.writeText(pw.textContent).then(()=>{const b=document.getElementById("cp");b.textContent="Copiado";setTimeout(()=>b.textContent="Copiar",1500);});};
 gen();</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

@@ -64,5 +64,6 @@
 </div></div></footer>
 <script type="application/json" id="relatedData">["calculator","age-calculator"]</script>
 <script src="/assets/related-tools.js" defer></script><script>const t=document.getElementById("text");function upd(){const v=t.value;document.getElementById("chars").textContent=v.length;document.getElementById("words").textContent=v.trim()?v.trim().split(/\s+/).length:0;document.getElementById("lines").textContent=v?v.split(/\n/).length:0;document.getElementById("time").textContent=Math.max(0,Math.ceil((v.trim()?v.trim().split(/\s+/).length:0)/200));}t.oninput=upd;upd();</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

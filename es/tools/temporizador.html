@@ -66,5 +66,6 @@ function fmt(ms){const m=Math.floor(ms/60000),s=Math.floor(ms%60000/1000),c=Math
 function tick(){disp.innerHTML=fmt(el+(run?Date.now()-t0:0));if(run)raf=requestAnimationFrame(tick);}
 sb.onclick=()=>{if(run){el+=Date.now()-t0;run=false;cancelAnimationFrame(raf);sb.textContent="Continuar";}else{t0=Date.now();run=true;sb.textContent="Pausar";tick();}};
 document.getElementById("reset").onclick=()=>{el=0;run=false;cancelAnimationFrame(raf);sb.textContent="Iniciar";disp.innerHTML=fmt(0);};</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>
