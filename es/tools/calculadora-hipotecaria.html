@@ -66,5 +66,6 @@
 <script src="/assets/related-tools.js" defer></script><script>function fmt(n){return n.toLocaleString(undefined,{maximumFractionDigits:0});}
 document.getElementById("go").onclick=()=>{const P=parseFloat(document.getElementById("p").value)||0;const n=(parseFloat(document.getElementById("y").value)||0)*12;const r=(parseFloat(document.getElementById("r").value)||0)/100/12;if(!P||!n)return;const m=r?P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1):P/n;const total=m*n;document.getElementById("m").textContent=fmt(m);document.getElementById("note").textContent="Total "+fmt(total)+" · Interest "+fmt(total-P);document.getElementById("out").style.display="block";};
 document.getElementById("go").click();</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>
