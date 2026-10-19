@@ -64,5 +64,6 @@ area.onclick=()=>file.click();
 file.onchange=()=>{const f=file.files[0];if(!f)return;origKB=f.size/1024;const r=new FileReader();r.onload=e=>{img=new Image();img.onload=()=>{preview.src=e.target.result;preview.style.display="block";go.style.display="inline-flex";area.style.display="none";};img.src=e.target.result;};r.readAsDataURL(f);};
 q.oninput=()=>qv.textContent=q.value;
 go.onclick=()=>{if(!img)return;const c=document.createElement("canvas");c.width=img.width;c.height=img.height;const ctx=c.getContext("2d");ctx.fillStyle="#fff";ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(img,0,0);c.toBlob(b=>{dl.href=URL.createObjectURL(b);dl.style.display="inline-flex";const n=b.size/1024;const r=Math.round((1-n/origKB)*100);document.getElementById("info").textContent=origKB.toFixed(0)+" KB → "+n.toFixed(0)+" KB (−"+r+"%)";out.style.display="block";},"image/jpeg",q.value/100);};</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

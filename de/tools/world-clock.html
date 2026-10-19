@@ -52,5 +52,6 @@
 <script src="/assets/related-tools.js" defer></script><script>const cities=[["Berlin","Europe/Berlin"],["London","Europe/London"],["Paris","Europe/Paris"],["New York","America/New_York"],["Los Angeles","America/Los_Angeles"],["Tokio","Asia/Tokyo"],["Peking","Asia/Shanghai"],["Singapur","Asia/Singapore"],["Sydney","Australia/Sydney"],["Dubai","Asia/Dubai"],["São Paulo","America/Sao_Paulo"],["Mexiko-Stadt","America/Mexico_City"]];
 function tick(){const now=new Date();document.getElementById("clocks").innerHTML=cities.map(c=>{try{const t=new Intl.DateTimeFormat("de-DE",{hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false,timeZone:c[1]}).format(now);const d=new Intl.DateTimeFormat("de-DE",{weekday:"short",day:"numeric",month:"short",timeZone:c[1]}).format(now);return '<div class="clock-item"><div class="city">'+c[0]+'</div><div class="time">'+t+'</div><div class="date">'+d+"</div></div>";}catch(e){return "";}}).join("");}
 tick();setInterval(tick,1000);</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>

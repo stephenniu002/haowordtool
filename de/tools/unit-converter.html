@@ -67,5 +67,6 @@ const cat=document.getElementById("cat"),from=document.getElementById("from"),to
 function fill(){from.innerHTML="";to.innerHTML="";Object.keys(units[cat.value]).forEach(k=>{from.innerHTML+='<option value="'+k+'">'+labels[cat.value][k]+'</option>';to.innerHTML+='<option value="'+k+'">'+labels[cat.value][k]+'</option>';});from.selectedIndex=0;to.selectedIndex=1;}
 cat.onchange=fill;fill();
 document.getElementById("go").onclick=()=>{const v=parseFloat(document.getElementById("v").value)||0;let res;if(cat.value==="temp"){const c=from.value==="c"?v:from.value==="f"?(v-32)*5/9:v-273.15;res=to.value==="c"?c:to.value==="f"?c*9/5+32:c+273.15;}else{res=v*units[cat.value][from.value]/units[cat.value][to.value];}document.getElementById("res").textContent=res.toFixed(6).replace(/\.?0+$/,"")+" "+labels[cat.value][to.value];document.getElementById("out").style.display="block";};</script>
+<script src="/assets/supabase-auth.js"></script>
 </body>
 </html>
