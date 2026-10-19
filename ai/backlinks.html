@@ -129,14 +129,24 @@ let filter="all",q="";
 const rows=document.getElementById("rows");
 function costTag(c){return c==="free"?'<span class="tag free">Free</span>':c==="paid"?'<span class="tag paid">Paid</span>':'<span class="tag">Free / Paid</span>';}
 function render(){
-  const list=DATA.filter(d=>(filter==="all"||(filter==="free"?d.c!=="paid":d.t===filter))&&d.n.toLowerCase().includes(q));
-  rows.innerHTML=list.map((d,i)=>`<tr><td style="color:#666">${i+1}</td>
+  // 免费层：只显示通用目录类（directory）；community/launch 需注册解锁
+  const freeList=DATA.filter(d=>d.t==="directory"&&(filter==="all"||(filter==="free"?d.c!=="paid":d.t===filter))&&d.n.toLowerCase().includes(q));
+  const lockedCount=DATA.filter(d=>d.t!=="directory").length;
+  let html=freeList.map((d,i)=>`<tr><td style="color:#666">${i+1}</td>
   <td><span class="name">${d.n}</span><span class="desc">${d.d}</span></td>
   <td class="hide-m" style="color:#aaa;text-transform:capitalize">${d.t}</td>
   <td>${costTag(d.c)}</td>
   <td class="hide-m" style="color:#aaa">${d.login}</td>
-  <td><a class="visit" href="${d.u}" target="_blank" rel="noopener nofollow">Visit →</a></td></tr>`).join("")
-  ||`<tr><td colspan="6" style="text-align:center;color:#666;padding:30px">No matches. Try another keyword.</td></tr>`;
+  <td><a class="visit" href="${d.u}" target="_blank" rel="noopener nofollow">Visit →</a></td></tr>`).join("");
+  if(!html) html=`<tr><td colspan="6" style="text-align:center;color:#666;padding:30px">No matches. Try another keyword.</td></tr>`;
+  // 锁定区：19条高价值渠道
+  html+=`<tr><td colspan="6" style="text-align:center;padding:36px 20px;background:#111122;border-top:2px solid #333355">
+    <div style="font-size:32px;margin-bottom:8px">🔒</div>
+    <div style="font-weight:600;margin-bottom:4px">还有 ${lockedCount} 条高权重渠道已锁定</div>
+    <div style="color:#8888aa;font-size:13px;margin-bottom:12px">社区、发布平台完整清单 + 按类型/权重筛选，注册后免费查看</div>
+    <a href="/ai/pro.html" style="display:inline-block;padding:10px 24px;background:#ffd700;color:#000;border-radius:8px;text-decoration:none;font-weight:600">免费注册解锁 →</a>
+  </td></tr>`;
+  rows.innerHTML=html;
 }
 document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{document.querySelectorAll(".chip").forEach(x=>x.classList.remove("active"));c.classList.add("active");filter=c.dataset.f;render();});
 document.getElementById("q").oninput=e=>{q=e.target.value.toLowerCase();render();};
