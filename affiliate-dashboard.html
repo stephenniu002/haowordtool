@@ -388,4 +388,5 @@ document.getElementById('export').addEventListener('click',()=>{const cards=[...
 ');const url=URL.createObjectURL(new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='haoword-affiliate-products.csv';link.click();URL.revokeObjectURL(url)});
 document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){event.preventDefault();search.focus()}});
 const sidebar=document.getElementById('sidebar'),mask=document.getElementById('mask');document.getElementById('menu').addEventListener('click',()=>{sidebar.classList.add('open');mask.classList.add('show')});mask.addEventListener('click',()=>{sidebar.classList.remove('open');mask.classList.remove('show')});render();
-</script></body></html>
+</script><script src="/assets/supabase-auth.js"></script>
+</body></html>
