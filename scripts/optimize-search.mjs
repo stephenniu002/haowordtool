@@ -62,7 +62,9 @@ export function run({check = false} = {}) {
   }
   const result = optimize(pages);
   const changes = [...result.pages].filter(([file, html]) => pages.get(file) !== html);
-  if (fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8') !== result.sitemap) changes.push(['sitemap.xml', result.sitemap]);
+  // sitemap 的写入权已经收归 scripts/build-sitemap.mjs（它负责主站 + 各语种 +
+  // sitemap-index 三件套）。这里只改 head 信号，不再比较或写 sitemap.xml，
+  // 否则两个生成器互相覆盖，CI 的 --check 永远在报 pending。
   if (!check) for (const [file, html] of changes) fs.writeFileSync(path.join(root, file), html);
   console.log(`SEO: ${pages.size} pages checked; ${result.urls.length} indexable canonical URLs; ${changes.length} ${check ? 'pending' : 'updated'} files.`);
   if (check && changes.length) throw new Error(`Run node scripts/optimize-search.mjs: ${changes.map(([file]) => file).join(', ')}`);

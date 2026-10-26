@@ -15,3 +15,4 @@ jobs:
       - run: node --test tests/search-seo.test.mjs
       - run: node scripts/optimize-search.mjs --check
       - run: node scripts/validate-site.mjs
+      - run: node scripts/build-sitemap.mjs --check

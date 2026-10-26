@@ -94,24 +94,59 @@ for (const f of files) {
   stats.included++;
 }
 
+/**
+ * 拼接绝对 URL 必须走这里。
+ * 曾经的 bug：直接 ${SITE}${p} 拼接，SITE 结尾无斜杠、p 开头也无斜杠，
+ * 生成出 https://haowordtool.comsitemap.xml —— 六条 loc 全废，
+ * 线上 sitemap-index 等于指不到任何子 sitemap，189 条 URL 一条都送不到 Google。
+ */
+function abs(p) {
+  return `${SITE}/${String(p).replace(/^\/+/, '')}`;
+}
+
 function xml(list) {
+  // 不写 lastmod：来源只能是文件 mtime，而 mtime 是 checkout 时间，
+  // 每次 CI 检出都变，等于天天告诉 Google「全站都更新了」。宁可省略。
   const rows = list
     .sort((a, b) => a.url.localeCompare(b.url))
-    .map((i) => `  <url><loc>${SITE}${i.url}</loc><lastmod>${i.lastmod}</lastmod></url>`)
+    .map((i) => `  <url><loc>${abs(i.url)}</loc></url>`)
     .join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows}\n</urlset>\n`;
 }
 
 function indexXml(parts) {
-  const today = new Date().toISOString().slice(0, 10);
   const rows = parts
-    .map((p) => `  <sitemap><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></sitemap>`)
+    .map((p) => `  <sitemap><loc>${abs(p)}</loc></sitemap>`)
     .join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows}\n</sitemapindex>\n`;
 }
 
+/**
+ * 落盘前的硬校验：任何一条 loc 不是 https://haowordtool.com/ 开头的合法 URL，
+ * 直接抛错退出。sitemap 出错是静默失败——页面 200，Google 却什么都收不到，
+ * 只能靠人肉 curl 才发现，所以必须在生成环节卡死。
+ */
+function assertLocs(s, label) {
+  const locs = [...s.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]);
+  if (!locs.length) throw new Error(`${label}: 没有生成任何 <loc>`);
+  const bad = locs.filter((u) => {
+    if (!u.startsWith(`${SITE}/`)) return true;
+    try {
+      const url = new URL(u);
+      return url.host !== 'haowordtool.com';
+    } catch {
+      return true;
+    }
+  });
+  if (bad.length) {
+    throw new Error(`${label}: ${bad.length} 条 loc 非法，例如 ${bad.slice(0, 3).join(' , ')}`);
+  }
+  return locs.length;
+}
+
 const args = process.argv.slice(2);
 const write = args.includes('--write');
+const check = args.includes('--check');
 const list = args.includes('--list');
 
 console.log('');
@@ -132,14 +167,46 @@ for (const [k, v] of Object.entries(buckets)) {
 }
 
 if (write) {
+  let total = 0;
   for (const [k, v] of Object.entries(buckets)) {
     if (!v.length) continue;
     const p = k === 'main' ? path.join(ROOT, 'sitemap.xml') : path.join(ROOT, k, 'sitemap.xml');
-    fs.writeFileSync(p, xml(v), 'utf8');
+    const body = xml(v);
+    total += assertLocs(body, path.relative(ROOT, p));
+    fs.writeFileSync(p, body, 'utf8');
   }
-  fs.writeFileSync(path.join(ROOT, 'sitemap-index.xml'), indexXml(parts), 'utf8');
+  const idx = indexXml(parts);
+  const n = assertLocs(idx, 'sitemap-index.xml');
+  fs.writeFileSync(path.join(ROOT, 'sitemap-index.xml'), idx, 'utf8');
   console.log('');
-  console.log(`已写入 ${parts.length} 个 sitemap + sitemap-index.xml`);
+  console.log(`已写入 ${parts.length} 个 sitemap（${total} 条 URL）+ sitemap-index.xml（${n} 条子 sitemap）`);
+  console.log('loc 校验：全部通过');
+} else if (check) {
+  // CI 用：磁盘上的 sitemap 必须和页面实际状态完全一致。
+  // 页面加了 noindex、canonical 改了、目录搬了，这里立刻红。
+  const drift = [];
+  for (const [k, v] of Object.entries(buckets)) {
+    if (!v.length) continue;
+    const rel = k === 'main' ? 'sitemap.xml' : `${k}/sitemap.xml`;
+    const p = path.join(ROOT, rel);
+    const want = xml(v);
+    assertLocs(want, rel);
+    const have = fs.existsSync(p) ? fs.readFileSync(p, 'utf8') : '';
+    if (have !== want) drift.push(rel);
+  }
+  const idxRel = 'sitemap-index.xml';
+  const wantIdx = indexXml(parts);
+  assertLocs(wantIdx, idxRel);
+  const idxPath = path.join(ROOT, idxRel);
+  if (!fs.existsSync(idxPath) || fs.readFileSync(idxPath, 'utf8') !== wantIdx) drift.push(idxRel);
+
+  console.log('');
+  if (drift.length) {
+    console.error(`sitemap 与页面状态不一致：${drift.join(', ')}`);
+    console.error('跑 node scripts/build-sitemap.mjs --write 重新生成');
+    process.exit(1);
+  }
+  console.log('sitemap 与实际页面状态一致');
 } else {
   console.log('');
   console.log('dry-run，未写入。加 --write 落盘。');

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://haowordtool.comsitemap.xml</loc><lastmod>2026-10-26</lastmod></sitemap>
-  <sitemap><loc>https://haowordtool.comde/sitemap.xml</loc><lastmod>2026-10-26</lastmod></sitemap>
-  <sitemap><loc>https://haowordtool.comes/sitemap.xml</loc><lastmod>2026-10-26</lastmod></sitemap>
-  <sitemap><loc>https://haowordtool.comfr/sitemap.xml</loc><lastmod>2026-10-26</lastmod></sitemap>
-  <sitemap><loc>https://haowordtool.comja/sitemap.xml</loc><lastmod>2026-10-26</lastmod></sitemap>
-  <sitemap><loc>https://haowordtool.comzh/sitemap.xml</loc><lastmod>2026-10-26</lastmod></sitemap>
+  <sitemap><loc>https://haowordtool.com/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://haowordtool.com/de/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://haowordtool.com/es/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://haowordtool.com/fr/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://haowordtool.com/ja/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://haowordtool.com/zh/sitemap.xml</loc></sitemap>
 </sitemapindex>
