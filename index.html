@@ -6,6 +6,11 @@
 <title>HaoWordTool — 100 个免费在线工具 · AI 工具增长榜单</title>
 <meta name="description" content="100 个免费在线工具：计算器、计时器、字数统计、BMI、二维码生成、密码生成等，纯浏览器运行无需注册。另设 AI 工具增长榜，追踪正在起量的 AI 工具站。">
 <link rel="canonical" href="https://haowordtool.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://haowordtool.com/">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/en/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
 <link rel="alternate" type="application/rss+xml" title="HaoWordTool — new tools and field notes" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,6 +96,21 @@ footer .brand{font-family:var(--font-display);color:var(--white);font-size:16px}
   .tags{display:none}
   td,th{padding:12px 8px}
 }
+
+/* i18n: 语言切换按钮 */
+.langbtn{display:inline-flex;align-items:center;gap:5px;border:1px solid #2b4a6b;border-radius:8px;
+  padding:5px 11px;font-size:12.5px;font-weight:600;color:#c9dbea;font-family:var(--font-mono);white-space:nowrap}
+.langbtn:hover{border-color:var(--sky);color:var(--white);background:rgba(113,195,236,.08)}
+/* i18n: 长文区块（避免首页被判薄页） */
+article{padding:52px 0;border-top:1px solid var(--line)}
+article.soft{background:var(--soft)}
+article h2{font-family:var(--font-display);font-size:26px;font-weight:600;margin-bottom:8px}
+article h3{font-size:15.5px;font-weight:700;margin:24px 0 8px;color:var(--dusk)}
+article p{color:#2b3542;margin-top:10px;max-width:820px}
+article ul{margin:12px 0 0 20px;color:#2b3542}
+article li{margin-top:6px;max-width:800px}
+article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
+@media(max-width:820px){.langbtn span.lbl{display:none}}
 </style>
 </head>
 <body>
@@ -101,6 +121,7 @@ footer .brand{font-family:var(--font-display);color:var(--white);font-size:16px}
     <a class="l" href="/ai-tools/">AI 情报</a>
     <a class="l" href="/services/">服务</a>
     <a class="cta" href="/tools/">全部工具</a>
+    <a class="langbtn" href="/en/" hreflang="en" title="Switch to English"><span class="lbl">EN</span></a>
   </div>
 </div></header>
 
@@ -109,7 +130,7 @@ footer .brand{font-family:var(--font-display);color:var(--white);font-size:16px}
   <h1>100 个免费在线工具，<br><em>加上一张 AI 增长航海图</em></h1>
   <p class="sub">纯浏览器运行的计算器、计时器、字数统计、BMI、二维码生成……无需注册、数据不上传。另设 AI 工具增长榜，追踪正在起量的 AI 工具站。</p>
   <div class="statrow">
-    <div class="stat"><b>16</b><span>免费在线工具</span></div>
+    <div class="stat"><b>100</b><span>免费在线工具</span></div>
     <div class="stat"><b>19</b><span>AI 工具站已收录</span></div>
     <div class="stat"><b>100%</b><span>无需注册</span></div>
   </div>
@@ -352,6 +373,46 @@ footer .brand{font-family:var(--font-display);color:var(--white);font-size:16px}
   </table>
   <a class="more" href="/ai-tools/rank/">查看完整榜单 →</a>
 </div></section>
+
+
+<article class="soft"><div class="wrap">
+  <h2>这些工具是怎么工作的</h2>
+  <p class="lead">一句话：全部在你自己的浏览器里跑完，服务器不参与。</p>
+  <p>页面上的工具用的是浏览器本身就带的能力——JavaScript 做运算，Canvas 处理二维码和图片，<code>Intl</code> 接口做货币与日期格式化。没有一个工具需要把数据发到服务器再等你刷新。这意味着两件事：第一，速度取决于你的设备而不是网络；第二，你输入的内容从头到尾没有离开过这台电脑。</p>
+  <p>这一点在很多场景下比功能多少更重要。用密码生成器的时候，你不希望密码经过别人的服务器；用字数统计粘贴合同或者论文草稿的时候，你也不希望正文被记录；用图片压缩处理工作素材的时候，你更不希望文件被传到某个不知道在哪的对象存储里。本地处理不是噱头，是这类工具唯一合理的设计。</p>
+
+  <h3>为什么免费</h3>
+  <p>因为成本结构允许。工具是静态页面，没有后端进程、没有数据库、没有按次计费的接口，托管成本接近于零，所以没有收费的理由。页面上的广告用来覆盖域名和带宽，仅此而已。没有会员墙，没有导出限制，也没有「免费版只能算三次」这种设计。</p>
+
+  <h3>手机上能用吗</h3>
+  <p>能。所有工具页都是响应式布局，按钮和输入框按触屏尺寸做过，竖屏下不需要横向滚动。计算器、单位换算、二维码生成这类高频工具在手机上用起来比在电脑上更顺手。</p>
+
+  <h3>需要装什么吗</h3>
+  <p>不需要。没有安装包、没有浏览器插件、不需要注册账号，也不要求你授权任何权限。打开网页就能用，关掉网页什么都不留下。</p>
+</div></article>
+
+<article><div class="wrap">
+  <h2>关于 AI 工具增长榜</h2>
+  <p class="lead">这是工具之外的第二个栏目，也是全站唯一需要持续更新的部分。</p>
+  <p>大多数工具导航站按流量排序，结果永远是那几个巨头。但这个信息对做产品的人没有用——你不会再去做一个 ChatGPT。真正有参考价值的是另一组数据：最近一个月里，哪些没什么人知道的 AI 工具站流量翻了几倍，它们切的是哪个细分需求，用的是哪种获客方式。</p>
+  <p>所以这个榜只按一个口径排：<strong>月环比增速</strong>。目前收录 19 个站，每一个都经过人工核验——域名能打开、功能单一明确、近期确实在涨。样本会逐步扩大，每一条都会继续人工核对，不塞凑数的条目。</p>
+  <p>榜单里的流量是第三方估算值，不是审计过的真实数据，只能用来判断量级和趋势。方法论页把这一点写得很直白，因为它决定了这份数据该怎么用、不该怎么用。</p>
+  <p><a href="/ai-tools/rank/" style="color:var(--sea);font-weight:600">→ 查看 AI 工具增长榜与方法论</a></p>
+</div></article>
+
+<article class="soft"><div class="wrap">
+  <h2>常见问题</h2>
+  <h3>这些工具真的完全免费吗</h3>
+  <p>是。没有会员分级，没有功能锁，也没有使用次数限制。网站靠页面广告覆盖基础成本。</p>
+  <h3>我的数据会被上传或保存吗</h3>
+  <p>工具本身不上传任何输入内容，也不做本地存储，刷新页面后输入就没了。唯一的第三方脚本是访问统计和广告，它们统计的是页面访问，不接触你在工具里输入的内容。</p>
+  <h3>工具界面为什么是英文</h3>
+  <p>工具页目前是英文界面，因为主要搜索流量来自英文关键词。功能不受语言影响，中文界面在陆续补齐。这个首页提供中英文两个版本，右上角可以切换。</p>
+  <h3>可以把这个站加到书签或分享给别人吗</h3>
+  <p>可以，直接分享链接即可，不需要邀请码或注册。</p>
+  <h3>发现工具有 bug 怎么办</h3>
+  <p>通过页面底部的联系入口告诉我们，说明用的是哪个浏览器和什么操作步骤，我们会在下一个版本修掉。</p>
+</div></article>
 
 <footer><div class="wrap">
   <span class="brand">HaoWordTool</span>
