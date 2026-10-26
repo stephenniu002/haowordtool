@@ -91,7 +91,7 @@ document.getElementById("go").onclick = convert;
 document.getElementById("swap").onclick = () => { const a = f.value; f.value = t.value; t.value = a; convert(); };
 convert();
 
-const header = document.getElementById("header");
+const header = (document.getElementById('header')||document.createElement('div'));
 addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
 </script>
 <script type="application/json" id="relatedData">["calculator","mortgage-calculator","unit-converter"]</script>

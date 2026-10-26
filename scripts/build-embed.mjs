@@ -74,9 +74,15 @@ function extract(html, rel, slug) {
 
   // 功能脚本：排除广告、登录、站内推荐、统计、结构化数据
   const DROP = /adsbygoogle|googletagmanager|gtag\/js|google-analytics|supabase-auth|related-tools|application\/ld\+json/i;
+  // 每个工具页都在同一块脚本里顺手做了页头滚动阴影：
+  //   const header = document.getElementById("header");
+  //   addEventListener("scroll", () => header.classList.toggle(...))
+  // 壳被剥掉后 header 是 null，这行会抛 TypeError。同块里如果还有别的初始化，
+  // 一起停掉——外面看不出来，工具就是不动。所以给个游离节点兜住。
   const scripts = [...html.matchAll(/<script\b[^>]*>[\s\S]*?<\/script>/gi)]
     .map((m) => m[0])
-    .filter((s) => !DROP.test(s));
+    .filter((s) => !DROP.test(s))
+    .map((s) => s.replace(/document\.getElementById\((["'])header\1\)/g, "(document.getElementById('header')||document.createElement('div'))"));
 
   // 站内相对链接：在 /embed/ 下会全部 404。统一改成 /tools/ 绝对路径。
   // （../assets/ 这类不用动，/embed/../assets 正好落到 /assets）
@@ -213,6 +219,16 @@ for (const t of tools) {
   if (!/<(?:input|button|textarea|select|canvas)\b/i.test(out) && !/textContent|innerHTML|createElement/i.test(out)) {
     problems.push(`${t.rel}: 既无可交互控件，也没有渲染逻辑`);
   }
+
+  // 脚本里 getElementById 的目标必须真的在正文里，否则工具静默失效。
+  // 这条是前面 header 那个 bug 换来的：不检查就永远发现不了。
+  const bodyIds = new Set([...out.matchAll(/\bid=["']([^"']+)["']/g)].map((m) => m[1]));
+  const wanted = new Set([...out.matchAll(/getElementById\(["']([^"']+)["']\)/g)].map((m) => m[1]));
+  const missing = [...wanted].filter(
+    // 已被兜底的写法（|| document.createElement）不算缺元素
+    (id) => !bodyIds.has(id) && !out.includes(`getElementById('${id}')||document.createElement`)
+  );
+  if (missing.length) problems.push(`${t.rel}: 脚本引用不存在的元素 #${missing.join(' #')}`);
 
   // 高度按正文体量估，避免 iframe 内出现双滚动条
   const h = /\bcalculator\b|converter|word-counter|character-counter|text-diff|remove-line-breaks/.test(t.slug) ? 720 : 620;
