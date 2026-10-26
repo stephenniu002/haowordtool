@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多语言站 canonical 全指英文版：30 个页面等于自愿放弃收录 | 案例库</title>
+<meta name="description" content="ja/es 全部工具页 canonical 指向英文版，叠加指向已删语种的 hreflang，语言集群信号整体失效。修正 head 信号后，西语可放开页 1→14、日语 0→11。含两次判据误判的复盘。">
+<link rel="canonical" href="https://haowordtool.com/blog/cases/canonical-language-cluster.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多语言站 canonical 全指英文版：30 个页面等于自愿放弃收录">
+<meta property="og:description" content="修正 head 信号后西语可放开页 1→14、日语 0→11，含两次判据误判的复盘。">
+<meta property="og:url" content="https://haowordtool.com/blog/cases/canonical-language-cluster.html">
+<link rel="stylesheet" href="/assets/deepen.css">
+<style>
+  :root{--ink:#182e28;--muted:#66756e;--line:#dce4dc;--accent:#17654a;--bg:#f7f8f2}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,"Segoe UI",Arial,"Microsoft YaHei",sans-serif}
+  a{color:var(--accent)}
+  .top{display:flex;align-items:center;gap:20px;padding:18px max(20px,calc((100vw - 1100px)/2));border-bottom:1px solid var(--line);background:#fafbf7}
+  .top .brand{font-weight:750;letter-spacing:-.4px;text-decoration:none;color:var(--ink)}
+  .top nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  .top nav a{padding:8px 12px;border-radius:7px;font-size:13px;text-decoration:none;color:var(--ink)}
+  .top nav a:hover{background:#e6eddf;color:#175038}
+  .head{padding:56px max(20px,calc((100vw - 900px)/2)) 28px}
+  .head .kicker{margin:0 0 10px;color:var(--accent);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+  .head h1{margin:0 0 14px;font-size:clamp(1.8rem,3.8vw,2.6rem);line-height:1.2;letter-spacing:-.02em}
+  .head .meta{margin:0;color:var(--muted);font-size:.85rem}
+  .foot{padding:30px 24px 46px;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--line);margin-top:20px}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">HaoWordTool</a>
+  <nav>
+    <a href="/">免费工具</a>
+    <a href="/ai-tools/">AI 情报</a>
+    <a href="/blog/" aria-current="page">案例库</a>
+    <a href="/services/">服务</a>
+    <a href="/tools/">全部工具</a>
+  </nav>
+</header>
+
+<div class="head">
+  <p class="kicker">多语言 SEO · Case 02</p>
+  <h1>30 个多语言工具页的 canonical 全指向英文版：等于主动放弃收录</h1>
+  <p class="meta">2026-10-25 实测 · 对象 haowordtool.com · 366 个页面全量扫描</p>
+</div>
+
+<section class="deepen">
+  <p class="lede">这事的起点是一个看起来很简单的判断：「多语言页做得还不够好，先留着 noindex，等内容真正本地化了再放开。」判断是对的。但它底下压着更硬的一层——那批页面的 canonical 全部指向英文版。在这种情况下，放开 noindex 完全无效，两个信号互相抵消。</p>
+
+  <h2>现象：全站 171 个 error，四类，没有玄学</h2>
+  <p>写了个扫描器把每个页面的 canonical、hreflang、robots 全提出来对照，输出按目录和错误码聚合：</p>
+  <table>
+    <thead><tr><th>错误码</th><th>数量</th><th>成因</th></tr></thead>
+    <tbody>
+      <tr><td>HL_BROKEN</td><td>111</td><td>hreflang 指向已删语种 <code>/ar/</code> <code>/ru/</code>，或指向不存在的同语种页</td></tr>
+      <tr><td>CANON_FOREIGN</td><td>30</td><td>ja/es 全部工具页 canonical 指向英文版</td></tr>
+      <tr><td>HL_DUP</td><td>26</td><td>同一语言重复声明，全在 <code>tools/</code></td></tr>
+      <tr><td>CANON_MISSING</td><td>4</td><td><code>examples/</code> 下演示页缺 canonical</td></tr>
+    </tbody>
+  </table>
+  <p>171 条里没有一条是「玄学」，四类各有明确成因。这决定了修复方式：不需要逐页手改，可以写确定性修复器。</p>
+
+  <h2>核心问题：canonical 是「指向自己」还是「指向别人」</h2>
+  <pre><code>ja/tools/age-calculator.html  → canonical: /tools/age-calculator.html    ← 英文版
+es/tools/calculadora.html     → canonical: /tools/calculator.html        ← 英文版
+de/tools/calculator.html      → canonical: /de/tools/calculator.html     ← 自指，正确</code></pre>
+  <p>canonical 是一个「告诉搜索引擎哪个版本是正本」的指令。指向英文版，等于明确说「别收我，收那篇英文的」。这与 noindex 的效果方向一致：两者都在阻止这个页面被单独收录。所以对 ja/es 这 30 个页面来说，放开 noindex 只是拆掉了一道门，另一道门还锁着。</p>
+  <p>de 的写法是对的，这也解释了为什么同样是「内容较薄的语言页」，de 的 11 个工具页能过闸门，ja/es 一个都过不了。</p>
+
+  <h2>hreflang 的问题更隐蔽</h2>
+  <p>111 条 hreflang 指向 <code>/ar/</code> 和 <code>/ru/</code>——这两个目录早就不存在了。hreflang 指向 404，等于向搜索引擎声明「这个语言版本在这儿」，实际打开是错误页。搜索引擎处理这种不一致的方式通常是：整组 hreflang 都不再被信任，包括那些本身写对的条目。</p>
+  <p>另外 <code>tools/</code> 下 26 处同一语言重复声明（en/de/ja 各出现两次），这属于格式错误，同样会削弱整组信号。</p>
+
+  <h2>修复：只动 head，不动正文</h2>
+  <p>修复器做了三件事，都是确定性的、可重跑的：</p>
+  <ol>
+    <li>canonical 非自指的页面，改为自指。</li>
+    <li>hreflang 中语言前缀不在现存语种列表里的条目，删除。</li>
+    <li>同一语言重复的 hreflang，保留第一条。</li>
+  </ol>
+  <p>一共涉及 87 个页面、165 处。落盘前留了两层回滚：git，以及一个 <code>.head-backup/</code> 目录。</p>
+
+  <h3>dry-run 救了一次误删</h3>
+  <p>第一版修复器把 <code>hreflang="zh-cn"</code> 当成弃用语种删掉了。<code>zh-cn</code> 是合法标签，与 <code>zh</code> 同属中文，只是带地区子标签。判断逻辑写成了「完整字符串是否在列表里」，正确写法是「取主语言前缀再比较」。这类错误如果不做 dry-run 直接落盘，会在几百个页面上同时生效。</p>
+
+  <h2>复验：error 归零，然后看闸门</h2>
+  <table>
+    <thead><tr><th>指标</th><th>修前</th><th>修后</th></tr></thead>
+    <tbody>
+      <tr><td>error</td><td>171</td><td>0</td></tr>
+      <tr><td>es 可放开页</td><td>1</td><td>14</td></tr>
+      <tr><td>ja 可放开页</td><td>0</td><td>11</td></tr>
+      <tr><td>sitemap 收录</td><td>163</td><td>189</td></tr>
+    </tbody>
+  </table>
+  <p>关键在第二、三行：<strong>同一批内容，一个字没改，只是把信号修正了</strong>，可放开页从 1 变成 14、从 0 变成 11。这说明之前的「内容不够本地化」只是部分原因，更早生效的阻断在 head 里。</p>
+
+  <h2>我自己写错判据的两次</h2>
+  <h3>一、拿目标语言虚词率当门槛</h3>
+  <p>第一版闸门用「德语虚词占比」判断一页是不是真德语，结果把 <code>de/tools/calculator.html</code> 判成 FAIL：<code>lang:28% &lt; 35%</code>。而这页是真德语、零英文残留。原因是工具页术语多、正文短、按钮文字多，德语虚词天然占比低。改用「英文残留率」后，这页 0.0% 直接通过。</p>
+
+  <h3>二、功能检测只认 addEventListener</h3>
+  <p>德语 <code>word-counter</code> 被判成空壳，理由是「没有交互逻辑」。实际它写的是 <code>t.oninput = upd</code>，内联属性绑定，功能完整。判据补上 <code>oninput</code> / <code>onchange</code> / <code>fetch</code> / <code>Intl</code> / <code>setInterval</code> 之后才正确。</p>
+  <div class="callout">
+    <p><strong>两次都是同一个方向：</strong>判据把「能用但写法不同」误判成「不行」。这类错误的代价不是漏报，而是把好页面当成坏页面处理——加厚、封索引，做的都是无用功，还会掩盖真正的问题。</p>
+  </div>
+
+  <h2>顺带发现的一条平台规则</h2>
+  <p>静态托管上「同名文件 + 同名目录」会怎么解析？用站内 <code>tools/text-diff</code> 实测（两种形态同时存在）：</p>
+  <pre><code>/tools/text-diff    → text-diff.html          （无斜杠：文件优先）
+/tools/text-diff/   → text-diff/index.html    （带斜杠：目录优先）</code></pre>
+  <p>这意味着新开一个栏目目录时，如果根目录正好有一个同名 <code>.html</code>，无斜杠访问会打到那个文件而不是栏目。新建栏目页里的内链必须全部带斜杠，否则用户点进去看到的是另一个页面。</p>
+
+  <h2>可复用的检查顺序</h2>
+  <ol>
+    <li>先扫全站 canonical，统计「非自指」比例。比例高说明是系统性问题，不要逐页修。</li>
+    <li>检查 hreflang 指向的 URL 是否真实存在——指向 404 比缺失更糟。</li>
+    <li>检查同一语言是否重复声明。</li>
+    <li>以上三项清零后，再去看内容质量。顺序反了会误判内容。</li>
+    <li>任何批量改写前先 dry-run，并人工看一遍 diff 里被删掉的条目。</li>
+  </ol>
+</section>
+
+<footer class="foot">
+  <p><a href="/blog/">← 返回案例库</a> · © 2026 HaoWordTool</p>
+</footer>
+</body>
+</html>

@@ -80,7 +80,6 @@ function removeDivByClass(html, cls) {
 
 /* ---------- 1. noindex ---------- */
 const NOINDEX = [
-  ['blog/index.html', '博客索引页正文不足 80 词，且内容已归并到 /ai-tools/'],
   ['en/blog/index.html', '英文博客索引页正文不足 80 词，内容已归并到 /ai-tools/'],
   ['es/affiliate-marketing.html', '门页：把用户导向英文版，无独立价值'],
   ['fr/affiliate-marketing.html', '门页：把用户导向英文版，无独立价值'],

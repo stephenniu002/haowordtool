@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>少一个斜杠，189 条 URL 一条都没送出去：站点地图索引的静默失败 | 案例库</title>
+<meta name="description" content="sitemap-index 六条 loc 全部缺斜杠，指向不存在的地址，但所有页面仍是 200，站内完全看不出异常。含修复方法、落盘前硬校验，以及如何让这类 bug 进不了主干。">
+<link rel="canonical" href="https://haowordtool.com/blog/cases/sitemap-index-slash.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="少一个斜杠，189 条 URL 一条都没送出去">
+<meta property="og:description" content="站点地图索引指向六个不存在的地址，所有页面仍是 200：静默失败的典型。">
+<meta property="og:url" content="https://haowordtool.com/blog/cases/sitemap-index-slash.html">
+<link rel="stylesheet" href="/assets/deepen.css">
+<style>
+  :root{--ink:#182e28;--muted:#66756e;--line:#dce4dc;--accent:#17654a;--bg:#f7f8f2}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,"Segoe UI",Arial,"Microsoft YaHei",sans-serif}
+  a{color:var(--accent)}
+  .top{display:flex;align-items:center;gap:20px;padding:18px max(20px,calc((100vw - 1100px)/2));border-bottom:1px solid var(--line);background:#fafbf7}
+  .top .brand{font-weight:750;letter-spacing:-.4px;text-decoration:none;color:var(--ink)}
+  .top nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  .top nav a{padding:8px 12px;border-radius:7px;font-size:13px;text-decoration:none;color:var(--ink)}
+  .top nav a:hover{background:#e6eddf;color:#175038}
+  .head{padding:56px max(20px,calc((100vw - 900px)/2)) 28px}
+  .head .kicker{margin:0 0 10px;color:var(--accent);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+  .head h1{margin:0 0 14px;font-size:clamp(1.8rem,3.8vw,2.6rem);line-height:1.2;letter-spacing:-.02em}
+  .head .meta{margin:0;color:var(--muted);font-size:.85rem}
+  .foot{padding:30px 24px 46px;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--line);margin-top:20px}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">HaoWordTool</a>
+  <nav>
+    <a href="/">免费工具</a>
+    <a href="/ai-tools/">AI 情报</a>
+    <a href="/blog/" aria-current="page">案例库</a>
+    <a href="/services/">服务</a>
+    <a href="/tools/">全部工具</a>
+  </nav>
+</header>
+
+<div class="head">
+  <p class="kicker">站点地图 · Case 03</p>
+  <h1>少一个斜杠，189 条 URL 一条都没送出去</h1>
+  <p class="meta">2026-10-25 实测 · 对象 haowordtool.com/sitemap-index.xml</p>
+</div>
+
+<section class="deepen">
+  <p class="lede">这是我知道的最难自查的一类故障：页面全部 200，站内导航正常，用户访问没有任何异常，唯一的症状是「提交了站点地图，但没搜到任何网址」。而这句话只在搜索引擎的后台里能看到。</p>
+
+  <h2>现象：线上文件长这样</h2>
+  <pre><code>&lt;sitemap&gt;&lt;loc&gt;https://haowordtool.comsitemap.xml&lt;/loc&gt;&lt;/sitemap&gt;
+&lt;sitemap&gt;&lt;loc&gt;https://haowordtool.comde/sitemap.xml&lt;/loc&gt;&lt;/sitemap&gt;
+&lt;sitemap&gt;&lt;loc&gt;https://haowordtool.comja/sitemap.xml&lt;/loc&gt;&lt;/sitemap&gt;</code></pre>
+  <p>六条 <code>&lt;loc&gt;</code>，全部缺一个斜杠。<code>https://haowordtool.com</code> 直接拼上了 <code>sitemap.xml</code>，域名和文件名连在一起，成了六个不存在的地址。</p>
+
+  <h2>为什么没被发现</h2>
+  <p>因为它不产生任何错误。请求 <code>/sitemap-index.xml</code> 返回 200，内容是合法 XML，格式完全正确——只是里面的 URL 打不开。整条链路里没有任何环节会报错：</p>
+  <ul>
+    <li>文件生成成功，XML 结构合法；</li>
+    <li>部署成功，文件 200；</li>
+    <li>页面本身没被动过，访问一切正常；</li>
+    <li>站内没有任何地方展示这个文件的解析结果。</li>
+  </ul>
+  <p>搜索引擎那边看到的是「索引文件里六个子图都取不到」，最终表现为「已提交，未发现任何网址」。这个描述不会指向「你的 URL 拼错了」，因为从它那一侧看，只是一个取不到的资源。</p>
+
+  <h2>根因：两段字符串拼接，谁都没加斜杠</h2>
+  <pre><code>const SITE = 'https://haowordtool.com';   // 结尾没有 /
+`${SITE}${p}`                             // p 开头也没有 /</code></pre>
+  <p>这种 bug 的特征是：写的时候两边看起来都对，跑起来也不报错，只有把输出打印出来才看得见。而且它藏在生成器里，手改 sitemap 文件没用——下次生成会覆盖回去。</p>
+
+  <h2>修复：统一拼接函数 + 落盘前硬校验</h2>
+  <p>改法不是加一个斜杠，而是让「拼绝对 URL」只有一个入口：</p>
+  <pre><code>const abs = (p) =&gt; `${SITE}/${String(p).replace(/^\/+/, '')}`;</code></pre>
+  <p>所有生成 loc 的地方都走它，包括子 sitemap 列表和索引文件。然后加一道落盘前校验：任何一条 loc 不以 <code>https://haowordtool.com/</code> 开头，直接抛错，文件不写。</p>
+  <p>校验逻辑本身也要有：</p>
+  <pre><code>function assertLocs(xml, where) {
+  const bad = [...xml.matchAll(/&lt;loc&gt;([^&lt;]*)&lt;\/loc&gt;/g)]
+    .map(m =&gt; m[1])
+    .filter(u =&gt; !u.startsWith('https://haowordtool.com/'));
+  if (bad.length) throw new Error(`${where}: ${bad.length} 条 loc 非法，例如 ${bad[0]}`);
+  return count;
+}</code></pre>
+
+  <h2>更深的一层：谁有权写这个文件</h2>
+  <p>排查时发现有两个脚本都在写 <code>sitemap.xml</code>：一个按页面状态生成，一个在「SEO 优化」流程里顺手重写。两者输出的条目集不同，互相覆盖。表现是 CI 的 <code>--check</code> 永远报 pending——因为它比对的基准一直在被另一个脚本改。</p>
+  <p>处理方式是收权：<code>build-sitemap</code> 独占 sitemap 的写入，负责主站 + 各语种 + 索引三件套；另一个脚本只改 head 信号，不再碰 sitemap。「哪个脚本负责哪个产物」必须明确到单点，否则两个都对的实现会互相破坏。</p>
+
+  <h3>顺带去掉 lastmod</h3>
+  <p>之前每个 URL 都带 <code>&lt;lastmod&gt;</code>，值取文件修改时间。问题在于 CI 每次检出，文件时间都会变——于是每天生成的 sitemap 都在告诉搜索引擎「全站 189 个页面今天全更新了」。这属于制造信号，不如省略：没有 lastmod 是合法的，虚假的 lastmod 会稀释可信度。</p>
+
+  <h2>让这类 bug 进不了主干</h2>
+  <p>修一次不够，同类问题还会再发生。所以加了两道 CI 检查：</p>
+  <ol>
+    <li><strong>结构校验</strong>：<code>sitemap-index.xml</code> 引用的每个子 sitemap 必须存在，每条 loc 必须是合法绝对 URL。</li>
+    <li><strong>一致性校验</strong>：磁盘上的 sitemap 必须与页面实际状态完全一致（哪些页面可索引、canonical 是否自指），不一致就失败。</li>
+  </ol>
+  <p>第二道的价值在于它不是「格式对不对」，而是「内容和现实是否同步」。sitemap 最容易腐坏的方式不是写错，而是页面加了 noindex、改了 canonical 之后它没跟着变。</p>
+
+  <h2>复验与一个操作细节</h2>
+  <p>修完线上逐条跟随验证：</p>
+  <table>
+    <thead><tr><th>子图</th><th>状态</th><th>条数</th></tr></thead>
+    <tbody>
+      <tr><td><code>/sitemap.xml</code></td><td>200</td><td>149</td></tr>
+      <tr><td><code>/de/sitemap.xml</code></td><td>200</td><td>13</td></tr>
+      <tr><td><code>/es/sitemap.xml</code></td><td>200</td><td>14</td></tr>
+      <tr><td><code>/ja/sitemap.xml</code></td><td>200</td><td>11</td></tr>
+      <tr><td><code>/fr/sitemap.xml</code></td><td>200</td><td>1</td></tr>
+      <tr><td><code>/zh/sitemap.xml</code></td><td>200</td><td>1</td></tr>
+    </tbody>
+  </table>
+  <p>操作细节：推送后立刻请求会拿到上一版。这次前四次探测全是 404，第五次才生效，窗口约 40 秒。验收一律带 <code>?cb=$RANDOM</code> 之类的破缓存参数，否则会把「还在部署」误判成「没上线」——然后再去排查一个不存在的故障。</p>
+
+  <div class="callout">
+    <p><strong>这条最值得记：</strong>凡是「由脚本生成的线上文件」，都必须有一条独立校验能在 CI 里跑。不能靠人肉 curl，因为没人会每天去 curl 一个 sitemap-index——它坏了三个月也不会有人发现，直到收录数据对不上。</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <p><a href="/blog/">← 返回案例库</a> · © 2026 HaoWordTool</p>
+</footer>
+</body>
+</html>

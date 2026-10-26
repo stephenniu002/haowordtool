@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T09:27:15.317Z",
+  "generated": "2026-10-26T09:30:59.368Z",
   "verdict": "READY",
   "pages": [
     {
@@ -604,7 +604,7 @@
     },
     {
       "rel": "ai-tools/index.html",
-      "words": 947,
+      "words": 954,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -699,16 +699,52 @@
       "title": "haoword.audio 定价 — AI 音频工具套餐 | haoword.audio"
     },
     {
-      "rel": "blog/index.html",
-      "words": 79,
-      "indexable": false,
-      "selfRef": false,
+      "rel": "blog/cases/canonical-language-cluster.html",
+      "words": 930,
+      "indexable": true,
+      "selfRef": true,
       "affiliateLinks": 0,
       "rating": false,
       "untested": false,
       "doorway": false,
       "disclosure": false,
-      "title": "博客 — AI 工具与词汇文章 | haowordtool"
+      "title": "多语言站 canonical 全指英文版：30 个页面等于自愿放弃收录 | 案例库"
+    },
+    {
+      "rel": "blog/cases/shopify-domain-verification.html",
+      "words": 821,
+      "indexable": true,
+      "selfRef": true,
+      "affiliateLinks": 0,
+      "rating": false,
+      "untested": false,
+      "doorway": false,
+      "disclosure": false,
+      "title": "Shopify 自定义域名绑定的外部验证方法（含 429 干扰项）| 案例库"
+    },
+    {
+      "rel": "blog/cases/sitemap-index-slash.html",
+      "words": 825,
+      "indexable": true,
+      "selfRef": true,
+      "affiliateLinks": 0,
+      "rating": false,
+      "untested": false,
+      "doorway": false,
+      "disclosure": false,
+      "title": "少一个斜杠，189 条 URL 一条都没送出去：站点地图索引的静默失败 | 案例库"
+    },
+    {
+      "rel": "blog/index.html",
+      "words": 512,
+      "indexable": true,
+      "selfRef": true,
+      "affiliateLinks": 0,
+      "rating": false,
+      "untested": false,
+      "doorway": false,
+      "disclosure": false,
+      "title": "案例库 — 真实工作记录与验证方法 | HaoWordTool"
     },
     {
       "rel": "blog.html",
@@ -4427,11 +4463,11 @@
   ],
   "byLocale": {
     "main": {
-      "total": 228,
-      "indexable": 138,
-      "words": 148243,
+      "total": 231,
+      "indexable": 142,
+      "words": 151259,
       "thin": 0,
-      "avg": 650
+      "avg": 655
     },
     "de": {
       "total": 24,

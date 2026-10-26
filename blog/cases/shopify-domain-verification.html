@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shopify 自定义域名绑定的外部验证方法（含 429 干扰项）| 案例库</title>
+<meta name="description" content="后台没有「绑定成功」提示时，怎么从外部证明域名已经生效：证书 SAN、双解析器 DNS、页面响应链三条信号交叉验证，以及如何区分真正的绑定失败与出口限流。">
+<link rel="canonical" href="https://haowordtool.com/blog/cases/shopify-domain-verification.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shopify 自定义域名绑定的外部验证方法（含 429 干扰项）">
+<meta property="og:description" content="证书 SAN、双解析器 DNS、页面响应链三条信号交叉验证，并区分绑定失败与出口限流。">
+<meta property="og:url" content="https://haowordtool.com/blog/cases/shopify-domain-verification.html">
+<link rel="stylesheet" href="/assets/deepen.css">
+<style>
+  :root{--ink:#182e28;--muted:#66756e;--line:#dce4dc;--accent:#17654a;--bg:#f7f8f2}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,"Segoe UI",Arial,"Microsoft YaHei",sans-serif}
+  a{color:var(--accent)}
+  .top{display:flex;align-items:center;gap:20px;padding:18px max(20px,calc((100vw - 1100px)/2));border-bottom:1px solid var(--line);background:#fafbf7}
+  .top .brand{font-weight:750;letter-spacing:-.4px;text-decoration:none;color:var(--ink)}
+  .top nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  .top nav a{padding:8px 12px;border-radius:7px;font-size:13px;text-decoration:none;color:var(--ink)}
+  .top nav a:hover{background:#e6eddf;color:#175038}
+  .head{padding:56px max(20px,calc((100vw - 900px)/2)) 28px}
+  .head .kicker{margin:0 0 10px;color:var(--accent);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+  .head h1{margin:0 0 14px;font-size:clamp(1.8rem,3.8vw,2.6rem);line-height:1.2;letter-spacing:-.02em}
+  .head .meta{margin:0;color:var(--muted);font-size:.85rem}
+  .foot{padding:30px 24px 46px;color:var(--muted);font-size:.85rem;text-align:center;border-top:1px solid var(--line);margin-top:20px}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">HaoWordTool</a>
+  <nav>
+    <a href="/">免费工具</a>
+    <a href="/ai-tools/">AI 情报</a>
+    <a href="/blog/" aria-current="page">案例库</a>
+    <a href="/services/">服务</a>
+    <a href="/tools/">全部工具</a>
+  </nav>
+</header>
+
+<div class="head">
+  <p class="kicker">域名 · Case 01</p>
+  <h1>Shopify 绑定自定义域名：后台没有确认按钮，怎么从外部证明它生效了</h1>
+  <p class="meta">2026-10-23 实测 · 对象 shop.haowordtool.com · 所有数值为当时命令输出</p>
+</div>
+
+<section class="deepen">
+  <p class="lede">新店绑域名最常见的困局不是绑不上，而是绑完之后没有明确的成功提示。后台只显示「已连接」，页面照样能打开——但打开的是店铺还是错误页，从后台看不出来。这篇记录的是从外部验证的全过程，包括一个容易被误判为主因的 429。</p>
+
+  <h2>现象：两个互相矛盾的信号</h2>
+  <p>第一次探测的结果是分裂的：<code>HEAD /</code> 返回 302 跳到 <code>/password</code>，看起来是正常店铺；而 <code>GET /</code> 连续三次返回 <strong>429 Too Many Requests</strong>。如果只看后者，结论会是「域名没配好」或「被墙了」，然后开始怀疑 DNS、怀疑证书、怀疑 CDN 设置。这三个方向都错。</p>
+
+  <h2>测量：三条互不依赖的信号</h2>
+
+  <h3>信号一 — 证书的 SAN 里有没有这个域名</h3>
+  <p>这是最能说明问题的一条。托管平台在域名真正挂到店铺之后才会去申请证书；证书申请不下来，就不会有这张证书。</p>
+  <pre><code>openssl s_client -connect shop.haowordtool.com:443 -servername shop.haowordtool.com &lt;/dev/null \
+  | openssl x509 -noout -issuer -dates -ext subjectAltName</code></pre>
+  <p>拿到的结果：</p>
+  <table>
+    <thead><tr><th>字段</th><th>实际值</th></tr></thead>
+    <tbody>
+      <tr><td>签发者</td><td>Let's Encrypt</td></tr>
+      <tr><td>生效时间</td><td>2026-10-23 06:16:33 GMT</td></tr>
+      <tr><td>subjectAltName</td><td>DNS:shop.haowordtool.com（只有这一条，精确匹配）</td></tr>
+      <tr><td>协商协议</td><td>TLS 1.3</td></tr>
+      <tr><td>covers_host</td><td>true</td></tr>
+    </tbody>
+  </table>
+  <p>一张只覆盖该域名的 Let's Encrypt 证书，且签发时间在绑定时点之后，说明平台已经把这个域名当成自己的站点在处理。泛域名证书或平台默认证书不构成证据，所以 SAN 要看具体内容，不能只看「有没有证书」。</p>
+
+  <h3>信号二 — 两个解析器给的是不是同一组答案</h3>
+  <p>单解析器会被本地缓存和运营商 DNS 影响，所以至少要两个来源。</p>
+  <pre><code>dig +short shop.haowordtool.com CNAME
+dig +short shop.haowordtool.com A
+dig +short shop.haowordtool.com AAAA @1.1.1.1</code></pre>
+  <table>
+    <thead><tr><th>类型</th><th>值</th></tr></thead>
+    <tbody>
+      <tr><td>CNAME</td><td>shops.myshopify.com.</td></tr>
+      <tr><td>A</td><td>23.227.38.74</td></tr>
+      <tr><td>AAAA</td><td>2620:127:f00f:e::</td></tr>
+    </tbody>
+  </table>
+  <p>两个解析器结果一致。CNAME 指向平台入口而不是某个固定 IP，这一点很关键：如果 CNAME 还停在旧目标，即使 A 记录看起来正常，请求也会打到错误的后端。</p>
+
+  <h3>信号三 — 页面响应链能不能走通</h3>
+  <pre><code>curl -sSI https://shop.haowordtool.com/ | head -12
+curl -sS  https://shop.haowordtool.com/password | grep -oE 'etag|shopify-complexity-score[^,]*'</code></pre>
+  <table>
+    <thead><tr><th>请求</th><th>结果</th></tr></thead>
+    <tbody>
+      <tr><td><code>HEAD /</code></td><td>302 → <code>/password</code>，<code>pageType: index</code>，<code>theme: 192508985653</code>，<code>powered-by: Shopify</code></td></tr>
+      <tr><td><code>GET /password</code></td><td>200，<code>etag</code> 内含 <code>PasswordController</code>，<code>shopify-complexity-score-v2: 188</code></td></tr>
+    </tbody>
+  </table>
+  <p>店铺仍在密码保护状态，所以根路径全量跳密码页——这是新店默认行为，不是故障。<code>etag</code> 里出现控制器名称、复杂度评分是个真实渲染值，说明这不是一张静态占位页，而是店铺前台在真实渲染。</p>
+
+  <h2>那个 429 是什么</h2>
+  <p>响应体是 <code>local_rate_limited</code>，带 <code>retry-after: 60</code>，以及 <code>asn:desc="56045"</code>。ASN 56045 是中国移动的家宽出口。也就是说，限流发生在「住宅 IP 访问 Shopify 边缘」这一层，与域名绑定无关。同一时刻 <code>/password</code> 返回 200、<code>robots.txt</code> 返回 200、<code>HEAD /</code> 返回 302，三条都通。</p>
+  <div class="callout">
+    <p><strong>判断规则：</strong>同一目标上「部分请求成功、部分 429」，且 429 响应体带 ASN 与 retry-after，基本可以判定为出口限流，不要动 DNS。真正配错域名的表现是稳定失败：连接超时、证书不匹配、404 统一错误页，而不是间歇性 429。</p>
+  </div>
+
+  <h2>结论与下一步</h2>
+  <p>三条信号同时成立，绑定成立。剩下的两件事卡在登录态上，不是技术问题：把该域名设为 primary domain，以及批准连接器授权——这两个动作都必须在店铺后台的已登录会话里完成，外部无法代办。</p>
+
+  <h2>可复用的检查清单</h2>
+  <ol>
+    <li>证书 SAN 是否精确包含该域名，签发时间是否晚于绑定时点。</li>
+    <li>CNAME 是否指向平台入口，两个解析器结果是否一致。</li>
+    <li>A / AAAA 是否都有值（只有 A 没有 AAAA 时，部分双栈网络会走 IPv6 失败）。</li>
+    <li><code>HEAD /</code> 的状态码与跳转目标是否符合平台默认行为。</li>
+    <li>取一个确定存在的深层路径（如密码页）看是否 200，排除「首页能开但子页 404」。</li>
+    <li>遇到 429 先看响应体有没有 ASN / retry-after，有则换网络复测，不要改 DNS。</li>
+    <li>验证完成后再去后台做需要登录的动作，顺序反了会以为是绑定没生效。</li>
+  </ol>
+  <p>整个排查不到十分钟，其中一半时间花在把 429 从「主因」降级为「干扰项」上。这类判断没有捷径，只能靠多信号交叉——单一信号在这次会给出完全相反的结论。</p>
+</section>
+
+<footer class="foot">
+  <p><a href="/blog/">← 返回案例库</a> · © 2026 HaoWordTool</p>
+</footer>
+</body>
+</html>
