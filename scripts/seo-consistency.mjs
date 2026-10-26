@@ -56,10 +56,7 @@ const SEVERITY = {
    ============================================================ */
 // .head-backup 必须排除：修复器把原文件备份在那里，扫进去会把「修好的备份」
 // 当成待修页面，复验数字永远不降（实测踩过：362 → 449 页，error 反而涨到 176）
-const SKIP_DIRS = new Set([
-  '.git', 'node_modules', '.github', 'assets', 'scripts', 'data', 'locales',
-  'tests', 'docs', '.head-backup', '.tmp',
-]);
+import { SKIP_DIRS } from './lib/site-walker.mjs';
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {

@@ -32,7 +32,7 @@ const SITE = 'https://haowordtool.com';
 const LIVE_LOCALES = ['en', 'de', 'es', 'fr', 'ja', 'ko', 'zh'];
 const BACKUP_DIR = path.join(ROOT, '.head-backup');
 
-const SKIP_DIRS = new Set(['.git', 'node_modules', '.github', 'assets', 'scripts', 'data', 'locales', 'tests', 'docs', '.head-backup']);
+import { SKIP_DIRS } from './lib/site-walker.mjs';
 
 /* ============================================================
    URL 工具（与 seo-consistency.mjs 保持一致）

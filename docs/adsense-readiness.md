@@ -1,6 +1,6 @@
 # AdSense 复审就绪度报告
 
-生成时间：2026-10-26 09:14 UTC
+生成时间：2026-10-26 09:27 UTC
 扫描页面：366 个（可索引 176 个）
 
 ## 结论：READY
@@ -10,26 +10,10 @@
 | 级别 | 数量 |
 |---|---|
 | BLOCKER 致命 | 0 |
-| MAJOR 主要 | 13 |
+| MAJOR 主要 | 2 |
 | MINOR 次要 | 3 |
 
 ## MAJOR
-
-### THIN（11）
-
-| 页面 | 说明 |
-|---|---|
-| `ai-companion.html` | 147 词 < 300 词下限 |
-| `ai-workspace.html` | 206 词 < 300 词下限 |
-| `delivery.html` | 173 词 < 300 词下限 |
-| `en/app-builder.html` | 355 词 < 400 词下限 |
-| `en/ielts/index.html` | 293 词 < 300 词下限 |
-| `en/learn/index.html` | 225 词 < 300 词下限 |
-| `faq.html` | 270 词 < 300 词下限 |
-| `media-downloader.html` | 287 词 < 300 词下限 |
-| `multi-platform-publishing-checklist.html` | 289 词 < 300 词下限 |
-| `share.html` | 211 词 < 300 词下限 |
-| `suanli-chuhai.html` | 230 词 < 300 词下限 |
 
 ### DOORWAY_NOINDEXED（2）
 
@@ -48,7 +32,7 @@
 
 | 目录 | 页面 | 可索引 | 平均词数 |
 |---|---|---|---|
-| main | 228 | 138 | 626 |
+| main | 228 | 138 | 650 |
 | de | 24 | 13 | 117 |
 | es | 48 | 13 | 149 |
 | fr | 33 | 0 | 178 |

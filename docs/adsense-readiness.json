@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T09:14:56.081Z",
+  "generated": "2026-10-26T09:27:15.317Z",
   "verdict": "READY",
   "pages": [
     {
@@ -448,7 +448,7 @@
     },
     {
       "rel": "ai-companion.html",
-      "words": 147,
+      "words": 721,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -652,7 +652,7 @@
     },
     {
       "rel": "ai-workspace.html",
-      "words": 206,
+      "words": 864,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -1072,7 +1072,7 @@
     },
     {
       "rel": "delivery.html",
-      "words": 173,
+      "words": 652,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -1156,7 +1156,7 @@
     },
     {
       "rel": "en/app-builder.html",
-      "words": 355,
+      "words": 756,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -1300,7 +1300,7 @@
     },
     {
       "rel": "en/ielts/index.html",
-      "words": 293,
+      "words": 745,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -1396,7 +1396,7 @@
     },
     {
       "rel": "en/learn/index.html",
-      "words": 225,
+      "words": 629,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -2296,7 +2296,7 @@
     },
     {
       "rel": "faq.html",
-      "words": 270,
+      "words": 722,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -3532,7 +3532,7 @@
     },
     {
       "rel": "media-downloader.html",
-      "words": 287,
+      "words": 859,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -3544,7 +3544,7 @@
     },
     {
       "rel": "multi-platform-publishing-checklist.html",
-      "words": 289,
+      "words": 837,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -3796,7 +3796,7 @@
     },
     {
       "rel": "share.html",
-      "words": 211,
+      "words": 732,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -3856,7 +3856,7 @@
     },
     {
       "rel": "suanli-chuhai.html",
-      "words": 230,
+      "words": 775,
       "indexable": true,
       "selfRef": true,
       "affiliateLinks": 0,
@@ -4398,69 +4398,14 @@
   "blockers": [],
   "majors": [
     {
-      "rel": "ai-companion.html",
-      "code": "THIN",
-      "detail": "147 词 < 300 词下限"
-    },
-    {
-      "rel": "ai-workspace.html",
-      "code": "THIN",
-      "detail": "206 词 < 300 词下限"
-    },
-    {
-      "rel": "delivery.html",
-      "code": "THIN",
-      "detail": "173 词 < 300 词下限"
-    },
-    {
-      "rel": "en/app-builder.html",
-      "code": "THIN",
-      "detail": "355 词 < 400 词下限"
-    },
-    {
-      "rel": "en/ielts/index.html",
-      "code": "THIN",
-      "detail": "293 词 < 300 词下限"
-    },
-    {
-      "rel": "en/learn/index.html",
-      "code": "THIN",
-      "detail": "225 词 < 300 词下限"
-    },
-    {
       "rel": "es/affiliate-marketing.html",
       "code": "DOORWAY_NOINDEXED",
       "detail": "门页但已 noindex，正文 56 词，等 301 就绪后删除"
     },
     {
-      "rel": "faq.html",
-      "code": "THIN",
-      "detail": "270 词 < 300 词下限"
-    },
-    {
       "rel": "fr/affiliate-marketing.html",
       "code": "DOORWAY_NOINDEXED",
       "detail": "门页但已 noindex，正文 53 词，等 301 就绪后删除"
-    },
-    {
-      "rel": "media-downloader.html",
-      "code": "THIN",
-      "detail": "287 词 < 300 词下限"
-    },
-    {
-      "rel": "multi-platform-publishing-checklist.html",
-      "code": "THIN",
-      "detail": "289 词 < 300 词下限"
-    },
-    {
-      "rel": "share.html",
-      "code": "THIN",
-      "detail": "211 词 < 300 词下限"
-    },
-    {
-      "rel": "suanli-chuhai.html",
-      "code": "THIN",
-      "detail": "230 词 < 300 词下限"
     }
   ],
   "minors": [
@@ -4484,9 +4429,9 @@
     "main": {
       "total": 228,
       "indexable": 138,
-      "words": 142637,
+      "words": 148243,
       "thin": 0,
-      "avg": 626
+      "avg": 650
     },
     "de": {
       "total": 24,

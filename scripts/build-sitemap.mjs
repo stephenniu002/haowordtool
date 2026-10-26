@@ -31,7 +31,7 @@ const ROOT = process.cwd();
 const SITE = 'https://haowordtool.com';
 const LOCALES = ['de', 'es', 'fr', 'ja', 'ko', 'zh'];
 
-const SKIP_DIRS = new Set(['.git', 'node_modules', '.github', 'assets', 'scripts', 'data', 'locales', 'tests', 'docs', '.head-backup', '.tmp']);
+import { SKIP_DIRS } from './lib/site-walker.mjs';
 
 /** 这些路径无论 robots 怎么写都不进 sitemap */
 const NEVER = [

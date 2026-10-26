@@ -197,7 +197,7 @@ if (fs.existsSync(reviewsPath)) {
 
 /* ---------- 3. 联盟披露 ---------- */
 const AFFILIATE_RE = /amazon\.[a-z.]+|tag=haowordstudio|bta=1176043|fiverr\.com\/[^"']*bta=/i;
-const SKIP = new Set(['.git', 'node_modules', '.github', 'assets', 'scripts', 'data', 'locales', 'tests', 'docs', '.head-backup', '.tmp', 'www', 'android', 'ios', 'build', 'mobile']);
+import { SKIP_DIRS as SKIP } from './lib/site-walker.mjs';
 const files = [];
 (function walk(d) {
   for (const e of fs.readdirSync(d, { withFileTypes: true })) {

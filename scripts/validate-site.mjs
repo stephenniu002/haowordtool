@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SKIP = new Set(['.git', 'node_modules', 'data', 'www', 'android', 'ios', 'build', '.head-backup', '.tmp', 'docs']);
+import { SKIP_DIRS as SKIP } from './lib/site-walker.mjs';
 const SITE = 'https://haowordtool.com';
 
 const files = [];

@@ -35,7 +35,9 @@ const OUT = (() => {
   return i > -1 ? process.argv[i + 1] : null;
 })();
 
-const SKIP = new Set(['.git', 'node_modules', '.github', 'assets', 'scripts', 'data', 'locales', 'tests', 'docs', '.head-backup', '.tmp', 'www', 'android', 'ios', 'build', 'mobile']);
+// 跳过清单收归 scripts/lib/site-walker.mjs。以前每个脚本各写一份，
+// 结果 content/deepen（片段目录）被当成正式页面，凭空多出 11 个 error。
+import { SKIP_DIRS as SKIP } from './lib/site-walker.mjs';
 
 /** 各语言目录：这些目录下的页面独立判定，不套用主站阈值 */
 const LOCALES = ['de', 'es', 'fr', 'ja', 'ko', 'zh'];

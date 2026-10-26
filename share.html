@@ -94,6 +94,7 @@ gtag('config', 'G-3LV3GH9T5X');
 <meta property="og:url" content="https://haowordtool.com/share.html">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/favicon-512.png">
+<link rel="stylesheet" href="/assets/deepen.css">
 <meta name="robots" content="index,follow"></head>
 <body>
   <nav><a href="/">HaoWordTool / Letter Solver Pro</a></nav>
@@ -133,7 +134,42 @@ gtag('config', 'G-3LV3GH9T5X');
       </ul>
       <p class="note">Please link only where the resource is genuinely useful. We do not request paid links, site-wide links, hidden links or link exchanges.</p>
     </section>
-  </main>
+  <!-- deepen:start -->
+<section class="deepen" id="using-the-badge">
+  <p class="kicker">Usage notes</p>
+  <h2>Where the badge belongs, and where it does not</h2>
+  <p class="lede">The badge is meant for one situation: a page that already recommends tools, and wants a working link next to the recommendation. It is not a banner, and it should not be placed anywhere a reader would mistake it for the site's own branding.</p>
+
+  <h3>Placement that works</h3>
+  <ul>
+    <li>A resource list or "useful links" section on a teaching site, where each entry has a one-line description.</li>
+    <li>The end of a blog post that already explains a word-game or vocabulary problem, as the tool the reader can try next.</li>
+    <li>A puzzle community's sidebar, alongside other free tools — not above the community's own content.</li>
+  </ul>
+
+  <h3>Placement that causes problems</h3>
+  <ul>
+    <li>Inside content aimed at children, without the site's own review — the tool is free and has no accounts, but a badge is still a recommendation, and recommendations in child-facing pages should go through whoever runs the site.</li>
+    <li>On a page that is mostly ads. A badge there reads as paid placement, which it is not, and the confusion lands on both sides.</li>
+    <li>As a header or logo. It is not a co-branding mark, and using it that way implies a partnership that does not exist.</li>
+  </ul>
+
+  <h2>What the link actually contains</h2>
+  <p>The snippet carries three UTM parameters: <code>utm_source=website_badge</code>, <code>utm_medium=referral</code>, and a campaign name. Those exist so that referral traffic can be told apart from search traffic in our own analytics — that is the whole mechanism. There is no third-party pixel in the snippet, no cookie set by the image, and no per-site identifier. If you strip the parameters, the badge still works; you simply become indistinguishable from organic traffic, which is fine.</p>
+
+  <h2>Attribution, and how to word it</h2>
+  <p>A plain sentence is enough: <em>"Word puzzles and vocabulary tools — HaoWordTool (free)."</em> There is no required wording, and no reciprocal link is expected. If the surrounding copy describes what the tool does, keep it accurate: it finds candidate English words from a supplied set of letters using a bundled word list; it does not check answers against an official dictionary, and it does not score them for a specific game.</p>
+  <p>The image needs its <code>alt</code> text kept intact. Replacing it with an empty <code>alt</code> makes the link unreadable to screen readers, and removing <code>width</code> and <code>height</code> causes layout shift as the page loads. Both are one-line fixes in the snippet, and both are worth doing.</p>
+
+  <div class="callout">
+    <p><strong>Corrections:</strong> if a page links to a URL that later moves, or if the description next to the badge turns out to be wrong, write to the contact address and it will be fixed at the source rather than asked of every publisher individually. Link rot is expected over years; a wrong description is not.</p>
+  </div>
+
+  <h2>For teachers adapting the material</h2>
+  <p>The guides may be printed for classroom use and quoted with attribution. They may not be republished in full on another site, because that competes with the original in search results and helps neither party. If a specific worksheet is wanted in an editable format, ask — the answer is usually yes, and it is faster than rebuilding it.</p>
+</section>
+<!-- deepen:end -->
+</main>
   <footer><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/about.html">About</a></footer>
   <script>
     async function copyBadge(){

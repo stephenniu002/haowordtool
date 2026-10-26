@@ -1,0 +1,30 @@
+<section class="deepen" id="what-runs-without-a-build-step">
+  <p class="kicker">Editor notes</p>
+  <h2>What runs here, and what needs a build step</h2>
+  <p class="lede">This editor previews files the way a browser reads them: HTML, CSS and JavaScript loaded directly, no bundler in between. That constraint is what makes the preview instant, and it is also the reason some code that works in a React project will fail here without explanation.</p>
+
+  <h3>Runs as-is</h3>
+  <ul>
+    <li>Plain <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code> blocks, inline or linked as separate files.</li>
+    <li>ES modules via <code>&lt;script type="module"&gt;</code>, as long as the import paths are relative and the files exist in the same project.</li>
+    <li>Any library loaded from a CDN, for example a charting library or a date formatter.</li>
+  </ul>
+
+  <h3>Does not run</h3>
+  <ul>
+    <li><code>import</code> statements for packages that were never installed — there is no <code>node_modules</code>, so a bare specifier like <code>import x from 'lodash'</code> resolves to nothing.</li>
+    <li>JSX and TypeScript without a compile step. Browsers do not parse either.</li>
+    <li>Server-side code. PHP, Python, and Node handlers have no runtime here; anything that needs a server has to be hosted elsewhere and called over HTTP.</li>
+    <li><code>fetch()</code> against a third-party API that does not send CORS headers. The request leaves the browser and the response is blocked on return — the failure appears in the console, not in the page.</li>
+  </ul>
+
+  <h2>What the exported ZIP contains</h2>
+  <p>The export is the project as files, not a snapshot: <code>index.html</code>, any CSS and JavaScript you created, and an <code>assets</code> folder if images were added. Unzip it into an empty directory and open <code>index.html</code> directly — it should behave the same as the preview. If it does not, the usual cause is an absolute path written as <code>/style.css</code>, which resolves to the filesystem root once the file is opened from disk instead of served. Relative paths avoid this entirely.</p>
+
+  <h2>Checking mobile width before you export</h2>
+  <p>The 390px preview is a real layout width, not a scaled screenshot. Two things it catches reliably: text that overflows a flex container because a child has no <code>min-width: 0</code>, and tap targets that fall under roughly 44px once padding collapses. Two things it cannot catch: keyboard behaviour when the on-screen keyboard covers half the viewport, and font rendering differences on iOS. Both need a real phone.</p>
+
+  <div class="callout">
+    <p><strong>Nothing is uploaded during editing.</strong> The project lives in this browser session. Export is the only way out, and it is also the backup — if the tab is closed before exporting, the work does not survive.</p>
+  </div>
+</section>

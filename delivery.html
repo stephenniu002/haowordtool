@@ -80,6 +80,7 @@ gtag('config', 'G-3LV3GH9T5X');
 <meta property="og:url" content="https://haowordtool.com/delivery.html">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/favicon-512.png">
+<link rel="stylesheet" href="/assets/deepen.css">
 </head>
 <body>
 <div class="wrap">
@@ -111,6 +112,43 @@ gtag('config', 'G-3LV3GH9T5X');
 </aside>
 </div>
 <div class="help"><p>Need help? Email <a href="mailto:love6598878593@gmail.com">love6598878593@gmail.com</a> with your PayPal transaction ID and delivery email.</p></div>
+<!-- deepen:start -->
+<section class="deepen" id="how-delivery-matching-works">
+  <p class="kicker">Order handover</p>
+  <h2>How the delivery match works</h2>
+  <p class="lede">This page exists because PayPal does not reliably pass a service description back to a seller. The payment arrives with an email address and a transaction ID — often nothing about which product was bought. The form below supplies those two missing pieces.</p>
+
+  <ol>
+    <li><strong>You pay with PayPal.</strong> The payment completes first; this page is the step after the return-to-merchant redirect.</li>
+    <li><strong>You submit the delivery email.</strong> This is where the files go. It can differ from the PayPal account email, which is common when a company card pays and a personal inbox receives.</li>
+    <li><strong>You add the transaction ID.</strong> That is the join key. The email address alone is not unique enough — one address can have several orders open at once.</li>
+    <li><strong>We match the payment to the order</strong> and send the download link or the service delivery link to the address you gave.</li>
+  </ol>
+
+  <h2>Where to find the transaction ID</h2>
+  <p>In PayPal: Activity → open the payment → the ID appears at the top, a 17-character string starting with a digit or letter, formatted like <code>1AB23456CD789012E</code>. The receipt email PayPal sends contains the same ID near the top. Copy it whole — a truncated ID cannot be matched, and a guessed one will match nothing.</p>
+
+  <h2>The four reasons a match fails</h2>
+  <table>
+    <caption>If none of these apply and delivery has not arrived, reply to the payment receipt email with the transaction ID.</caption>
+    <thead><tr><th>Cause</th><th>What it looks like</th></tr></thead>
+    <tbody>
+      <tr><td>ID mistyped</td><td>One character off, or the trailing block lost when copied from a phone screen</td></tr>
+      <tr><td>Payment still pending</td><td>The transaction sits in eCheck or pending review; the money has not cleared, so there is nothing to match</td></tr>
+      <tr><td>Email typo</td><td>The delivery email differs from the PayPal email and contains a misspelling, so the file goes to an address you do not control</td></tr>
+      <tr><td>Product not specified</td><td>Two packages at different prices; without the product field there is no way to tell which one was bought</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What you receive, and what you do not</h2>
+  <p>Digital files are delivered as a Google Drive folder link with access granted to the address you submit. No physical item is shipped, and no tracking number will follow — if a page or email mentions shipping, it is not this order. Service work is delivered as a link to the completed deliverable plus the source files where the package includes them.</p>
+  <p>The delivery email address you type here is stored with the order record for the purpose of matching and re-sending. It is not added to a mailing list, and it is not shared with the payment processor beyond what the payment itself already contains.</p>
+
+  <div class="callout">
+    <p><strong>Keep the transaction ID.</strong> It is the only identifier that survives a browser change, a cleared inbox, or a delivery link that has expired. Google Drive links can be revoked if access is ever tightened; the transaction ID is what lets a link be reissued.</p>
+  </div>
+</section>
+<!-- deepen:end -->
 <div class="footer">© <span id="year"></span> HaoWordTool. All rights reserved.</div>
 </div>
 <script>
