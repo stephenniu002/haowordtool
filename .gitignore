@@ -38,3 +38,4 @@ marketing/demo-en/audio/
 .head-backup/
 *.tmp-fix
 *.tmp-ni
+.tmp/

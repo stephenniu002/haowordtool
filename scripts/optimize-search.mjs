@@ -22,6 +22,7 @@ const groups = [
 export function optimize(pages) {
   const output = new Map();
   for (const [file, html] of pages) {
+    if (file === '404.html') { output.set(file, html); continue; } // 404 页不是搜索页，不补 canonical/hreflang
     const provisional = /<meta name="localization-status" content="entry-only">/.test(html);
     output.set(file, html.replace(/<head\b[^>]*>[\s\S]*?<\/head>/i, head => {
       // Remove stale language declarations; rebuild only eligible reciprocal groups below.
