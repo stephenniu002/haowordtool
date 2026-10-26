@@ -28,6 +28,112 @@
 <meta name="twitter:description" content="Free BMI calculator. Enter your height and weight to get your body mass index and healthy weight range.">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/favicon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "BMI Calculator",
+  "url": "https://haowordtool.com/tools/bmi-calculator.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Free BMI calculator. Enter height and weight to get your body mass index, category and healthy weight range, with both WHO and Asian-Pacific cutoffs."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a healthy BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the WHO standard, 18.5 to 24.9 is considered normal weight. Under the Asian-Pacific standard used in China, Japan, Korea and Singapore, the normal range is 18.5 to 22.9, with overweight starting at 23.0."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator show two different categories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because two standards exist and they disagree at the same BMI. WHO sets overweight at 25.0; the Asian-Pacific standard sets it at 23.0, based on evidence that metabolic risk rises earlier in Asian populations at the same BMI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can BMI tell me my body fat percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. BMI is derived only from height and weight and cannot distinguish muscle from fat. Two people with identical BMIs can have very different body compositions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BMI accurate for athletes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Muscle is denser than fat, so athletes and weight-trained people frequently register as overweight or obese despite low body fat. Body fat measurement or waist circumference is more informative for this group."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should children use this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Children and teenagers are assessed using age- and sex-specific BMI percentile charts rather than fixed adult thresholds. An adult BMI number is not interpretable for a child."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the healthy weight range shown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the weight range that would place you inside the normal BMI band for your height, so it inherits every limitation of BMI itself. It is a reference band, not a personal target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator store my height and weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculation runs locally in your browser and nothing is saved or transmitted."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://haowordtool.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://haowordtool.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "BMI Calculator",
+      "item": "https://haowordtool.com/tools/bmi-calculator.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
@@ -53,6 +159,53 @@
       <div class="result-value" id="val"></div>
       <div class="result-note" id="note"></div>
     </div>
+  </div>
+  <div class="seo-content">
+<h2>What BMI Measures</h2>
+<p>Body mass index is a single number derived from height and weight. It was designed in the nineteenth century as a population-level statistic for describing how body size distributes across large groups, and it remains useful for exactly that purpose.</p>
+<p>What BMI does <em>not</em> do is measure body fat. It cannot distinguish muscle from fat, cannot tell where fat is stored, and cannot see individual variation in frame size, bone density or body composition. A number that is a reasonable summary for a population can be misleading for any single person in it. Read the category as a rough signal that prompts a closer look, not as a diagnosis.</p>
+
+<h2>How to Use This Calculator</h2>
+<p><strong>Step 1 — Choose your units.</strong> Metric takes centimetres and kilograms; imperial takes feet, inches and pounds.</p>
+<p><strong>Step 2 — Enter height and weight.</strong> Use a recent measurement taken without shoes and without heavy clothing, ideally in the morning.</p>
+<p><strong>Step 3 — Read your BMI</strong> along with the category and the healthy weight range for your height.</p>
+<p><strong>Step 4 — Check both cutoff sets</strong> if relevant to you. The calculator shows the WHO standard and the Asian-Pacific standard side by side, because the two disagree at the same BMI.</p>
+
+<h2>The Formula</h2>
+<p>BMI equals weight in kilograms divided by height in metres squared. In imperial units the formula is weight in pounds multiplied by 703, divided by height in inches squared.</p>
+<p>Because height is squared, BMI is not linear in height: a tall person and a short person with the same proportions get different BMIs, and the tall person's number is higher. This is a known artefact of the formula, not a property of their bodies.</p>
+
+<h2>BMI Categories</h2>
+<p>Under the WHO standard, a BMI below 18.5 is underweight, 18.5 to 24.9 is normal weight, 25.0 to 29.9 is overweight, and 30.0 or above is obese, subdivided into class I (30 to 34.9), class II (35 to 39.9) and class III (40 and above).</p>
+<p>Under the Asian-Pacific standard used widely in China, Japan, Korea and Singapore, the thresholds shift downward: 18.5 to 22.9 is normal, 23.0 to 27.4 is overweight, and 27.5 or above is obese. A BMI of 25 is therefore normal under WHO and overweight under the Asian-Pacific standard — the same body, two different labels.</p>
+
+<h2>Why the Asian Cutoffs Differ</h2>
+<p>At the same BMI, populations of East and South Asian descent tend to carry a higher proportion of body fat and more visceral fat than European populations. Visceral fat — the fat around internal organs rather than under the skin — is the component most strongly associated with metabolic risk.</p>
+<p>This is why type 2 diabetes and cardiovascular disease appear at lower BMI values in Asian populations, and why local health authorities lowered the thresholds rather than importing the WHO numbers unchanged. Using the WHO scale on an Asian body systematically understates risk in the 23 to 27 range.</p>
+
+<h2>When BMI Is Misleading</h2>
+<h3>Athletes and weight-trained people</h3>
+<p>Muscle is denser than fat, so a trained lifter can register as overweight or obese while carrying very little fat. BMI has no way to know this.</p>
+<h3>Older adults</h3>
+<p>Muscle mass declines with age and height can shrink as spinal discs compress, both of which distort the ratio. A "normal" BMI in an eighty-year-old may hide sarcopenia, the loss of muscle that drives frailty and falls.</p>
+<h3>Pregnancy</h3>
+<p>BMI is not meaningful during pregnancy. Weight gain is expected and necessary, and the calculation does not account for it.</p>
+<h3>Children and teenagers</h3>
+<p>Children are assessed with age- and sex-specific percentile charts, not fixed adult cutoffs. Applying an adult BMI number to a child produces a wrong answer.</p>
+<h3>Very tall or very short people</h3>
+<p>The squaring of height means BMI overstates adiposity in tall people and understates it in short people. Some researchers use height raised to the power of 2.5 to correct for this, but clinical practice has largely not adopted it.</p>
+
+<h2>What to Measure Instead, or Alongside</h2>
+<p>Waist circumference is a more direct proxy for visceral fat and adds information BMI cannot provide. Waist-to-height ratio — keep your waist under half your height — is a simple and surprisingly robust screen. Body fat percentage measured by DEXA, calipers or bioimpedance gives composition rather than a ratio. None of these replaces a clinical assessment; they are additional signals.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq-item"><h3>What is a healthy BMI?</h3><p>Under the WHO standard, 18.5 to 24.9 is considered normal weight. Under the Asian-Pacific standard used in China, Japan, Korea and Singapore, the normal range is 18.5 to 22.9, with overweight starting at 23.0.</p></div>
+    <div class="faq-item"><h3>Why does the calculator show two different categories?</h3><p>Because two standards exist and they disagree at the same BMI. WHO sets overweight at 25.0; the Asian-Pacific standard sets it at 23.0, based on evidence that metabolic risk rises earlier in Asian populations at the same BMI.</p></div>
+    <div class="faq-item"><h3>Can BMI tell me my body fat percentage?</h3><p>No. BMI is derived only from height and weight and cannot distinguish muscle from fat. Two people with identical BMIs can have very different body compositions.</p></div>
+    <div class="faq-item"><h3>Is BMI accurate for athletes?</h3><p>No. Muscle is denser than fat, so athletes and weight-trained people frequently register as overweight or obese despite low body fat. Body fat measurement or waist circumference is more informative for this group.</p></div>
+    <div class="faq-item"><h3>Should children use this calculator?</h3><p>No. Children and teenagers are assessed using age- and sex-specific BMI percentile charts rather than fixed adult thresholds. An adult BMI number is not interpretable for a child.</p></div>
+    <div class="faq-item"><h3>How accurate is the healthy weight range shown?</h3><p>It is the weight range that would place you inside the normal BMI band for your height, so it inherits every limitation of BMI itself. It is a reference band, not a personal target.</p></div>
+    <div class="faq-item"><h3>Does the calculator store my height and weight?</h3><p>No. The calculation runs locally in your browser and nothing is saved or transmitted.</p></div>
   </div>
 </div>
 <div class="related-tools">

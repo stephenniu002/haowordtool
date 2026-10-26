@@ -39,6 +39,112 @@
 <meta name="twitter:description" content="A clean, fast online calculator. Basic arithmetic with keyboard support. No signup, no ads.">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/favicon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Online Calculator",
+  "url": "https://haowordtool.com/tools/calculator.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Free online calculator for everyday arithmetic. Supports parentheses, percentages, exponentiation and keyboard input, running entirely in your browser."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this calculator follow order of operations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Exponentiation is evaluated first, then multiplication and division, then addition and subtraction, and same-precedence operators evaluate left to right. Use parentheses to override the default grouping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 0.1 + 0.2 show a long decimal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because decimal fractions such as 0.1 have no exact binary representation, so they are stored as the nearest approximation. Adding two approximations combines their small errors. For currency, calculate in whole cents to avoid the issue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my keyboard instead of clicking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Digits, operators and parentheses all work from the keyboard, Enter evaluates, Backspace deletes and Escape clears the expression."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it support square roots and powers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Both exponentiation and square root are supported. Use parentheses around a negative base to make the intended grouping explicit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a calculation history?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No history is kept, and nothing is stored in your browser or sent to a server. Each session starts clean."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate percentages here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter the number, multiply by the percentage as a decimal, and evaluate. Remember that percentage change is measured against the starting value, so a rise and a fall of the same absolute amount are different percentages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, after the page has loaded. All arithmetic runs locally in your browser."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://haowordtool.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://haowordtool.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Online Calculator",
+      "item": "https://haowordtool.com/tools/calculator.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
@@ -94,7 +200,46 @@
         <button class="calc-btn eq" data-k="=">=</button>
       </div>
     </div>
+    <div class="seo-content">
+<h2>What This Calculator Handles</h2>
+<p>A general-purpose calculator for arithmetic that is more than a single sum but does not need a full scientific stack: addition, subtraction, multiplication, division, parentheses, percentages, exponentiation and square roots. It runs in the browser, so it works on a phone, a tablet or a locked-down work machine where you cannot install software.</p>
+
+<h2>How to Use It</h2>
+<p><strong>Step 1 — Enter your expression</strong> using the on-screen keypad or your keyboard.</p>
+<p><strong>Step 2 — Use parentheses</strong> to control grouping. Everything inside a pair of brackets is evaluated before anything outside it.</p>
+<p><strong>Step 3 — Press equals</strong> or hit Enter to evaluate. The result appears immediately.</p>
+<p><strong>Step 4 — Press clear</strong> to start a new calculation. The clear button resets the whole expression rather than deleting one character.</p>
+
+<h2>Keyboard Shortcuts</h2>
+<p>Typing is faster than tapping for anyone at a desk. Digits and the operators <code>+</code>, <code>-</code>, <code>*</code> and <code>/</code> work directly, and <code>Enter</code> evaluates. Backspace deletes the last character, and Escape clears the expression. Parentheses are on the shifted 9 and 0 keys.</p>
+<p>One habit worth building: type the full expression before evaluating rather than chaining partial results. Chained entry hides rounding — you see 3.33 rather than 10 divided by 3, and subsequent steps inherit that invisible truncation.</p>
+
+<h2>How Expressions Are Evaluated</h2>
+<p>The calculator follows standard operator precedence rather than left-to-right reading order. Exponentiation binds tightest, then multiplication and division, then addition and subtraction. Within the same precedence level, evaluation proceeds left to right.</p>
+<p>So <code>2 + 3 * 4</code> is 14, not 20, because the multiplication happens first. And <code>8 / 4 / 2</code> is 1, not 4, because division is left-associative. When in doubt, add parentheses: they cost nothing and remove all ambiguity, both for the machine and for whoever reads your work later.</p>
+
+<h2>Why 0.1 + 0.2 Is Not Exactly 0.3</h2>
+<p>This is not a bug in the calculator, and it is worth understanding because it affects every digital calculation you will ever see.</p>
+<p>Computers store decimal fractions in binary floating point. Most decimal fractions — 0.1 is the classic example — have no exact binary representation, in the same way that one third has no exact decimal representation. The stored value is the nearest binary approximation, slightly above or below the decimal value you typed.</p>
+<p>When you add two approximations, the small errors combine. The result may display as 0.3 because the calculator rounds for presentation, but the underlying value can be 0.30000000000000004. For everyday arithmetic this is irrelevant. For money it is not, which is why financial systems use integer cents or dedicated decimal types instead of floating point.</p>
+<p>Practical rule: if you are calculating currency, work in the smallest unit (cents, fen) as whole numbers, then divide at the end for display. If you are checking a balance, never compare two floating-point results with strict equality.</p>
+
+<h2>Percentages Without Getting Them Wrong</h2>
+<p>Percentage questions cause more errors than any other everyday calculation, mostly because two different questions hide behind the same word.</p>
+<p><strong>Percent of a number:</strong> 15 percent of 240 is 240 times 0.15, which is 36. Multiply by the decimal form.</p>
+<p><strong>Percentage change:</strong> going from 80 to 100 is an increase of 25 percent, because the change of 20 is measured against the starting value of 80. Going back from 100 to 80 is a decrease of 20 percent, because 20 is now measured against 100. The same absolute movement is a different percentage depending on direction — the reason discounts and markups never cancel out.</p>
+<p><strong>Percentage points:</strong> a rate moving from 4 percent to 5 percent has risen by one percentage point, but by 25 percent in relative terms. Headlines exploit this ambiguity constantly.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq-item"><h3>Does this calculator follow order of operations?</h3><p>Yes. Exponentiation is evaluated first, then multiplication and division, then addition and subtraction, and same-precedence operators evaluate left to right. Use parentheses to override the default grouping.</p></div>
+    <div class="faq-item"><h3>Why does 0.1 + 0.2 show a long decimal?</h3><p>Because decimal fractions such as 0.1 have no exact binary representation, so they are stored as the nearest approximation. Adding two approximations combines their small errors. For currency, calculate in whole cents to avoid the issue.</p></div>
+    <div class="faq-item"><h3>Can I use my keyboard instead of clicking?</h3><p>Yes. Digits, operators and parentheses all work from the keyboard, Enter evaluates, Backspace deletes and Escape clears the expression.</p></div>
+    <div class="faq-item"><h3>Does it support square roots and powers?</h3><p>Yes. Both exponentiation and square root are supported. Use parentheses around a negative base to make the intended grouping explicit.</p></div>
+    <div class="faq-item"><h3>Is there a calculation history?</h3><p>No history is kept, and nothing is stored in your browser or sent to a server. Each session starts clean.</p></div>
+    <div class="faq-item"><h3>Can I calculate percentages here?</h3><p>Yes. Enter the number, multiply by the percentage as a decimal, and evaluate. Remember that percentage change is measured against the starting value, so a rise and a fall of the same absolute amount are different percentages.</p></div>
+    <div class="faq-item"><h3>Does the calculator work offline?</h3><p>Yes, after the page has loaded. All arithmetic runs locally in your browser.</p></div>
   </div>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>
