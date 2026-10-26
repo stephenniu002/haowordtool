@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator — Free Online Calculator — Embeddable</title>
+<!-- 嵌入页与原页同内容，一律 noindex，权重只归原页 -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable Calculator — Free Online Calculator widget — runs entirely in the browser, no sign-up, no upload.">
+<link rel="canonical" href="https://haowordtool.com/tools/calculator.html">
+<link rel="stylesheet" href="/assets/tools.css">
+
+<style>
+  /* 嵌入态：去掉页边距，压掉大标题，只留工具本体 */
+  html,body{margin:0;padding:0;background:#0b0f14}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+  .embed-wrap{padding:14px 14px 0}
+  .embed-wrap h1{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .embed-wrap > p:first-of-type{font-size:13px;color:#8b9bb0;margin:0 0 14px}
+  .embed-credit{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 14px;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:#8b9bb0;background:#0b0f14}
+  .embed-credit a{color:#4fd1c5;text-decoration:none;font-weight:600}
+  .embed-credit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+
+  <div class="wrap tool-page">
+    <a href="/tools/index.html" class="back">← Back to all tools</a>
+    <h1 style="margin-top:16px">Calculator</h1>
+    <p class="lead">Basic four-function calculator. Use the buttons or your keyboard.</p>
+
+    <div class="card" style="max-width:420px">
+      <div class="calc-display">
+        <div class="expr" id="expr">&nbsp;</div>
+        <div class="val" id="val">0</div>
+      </div>
+      <div class="calc-grid">
+        <button class="calc-btn op" data-k="C">C</button>
+        <button class="calc-btn op" data-k="±">±</button>
+        <button class="calc-btn op" data-k="%">%</button>
+        <button class="calc-btn op" data-k="/">÷</button>
+        <button class="calc-btn" data-k="7">7</button>
+        <button class="calc-btn" data-k="8">8</button>
+        <button class="calc-btn" data-k="9">9</button>
+        <button class="calc-btn op" data-k="*">×</button>
+        <button class="calc-btn" data-k="4">4</button>
+        <button class="calc-btn" data-k="5">5</button>
+        <button class="calc-btn" data-k="6">6</button>
+        <button class="calc-btn op" data-k="-">−</button>
+        <button class="calc-btn" data-k="1">1</button>
+        <button class="calc-btn" data-k="2">2</button>
+        <button class="calc-btn" data-k="3">3</button>
+        <button class="calc-btn op" data-k="+">+</button>
+        <button class="calc-btn wide" data-k="0">0</button>
+        <button class="calc-btn" data-k=".">.</button>
+        <button class="calc-btn eq" data-k="=">=</button>
+      </div>
+    </div>
+    <div class="seo-content">
+<h2>What This Calculator Handles</h2>
+<p>A general-purpose calculator for arithmetic that is more than a single sum but does not need a full scientific stack: addition, subtraction, multiplication, division, parentheses, percentages, exponentiation and square roots. It runs in the browser, so it works on a phone, a tablet or a locked-down work machine where you cannot install software.</p>
+
+<h2>How to Use It</h2>
+<p><strong>Step 1 — Enter your expression</strong> using the on-screen keypad or your keyboard.</p>
+<p><strong>Step 2 — Use parentheses</strong> to control grouping. Everything inside a pair of brackets is evaluated before anything outside it.</p>
+<p><strong>Step 3 — Press equals</strong> or hit Enter to evaluate. The result appears immediately.</p>
+<p><strong>Step 4 — Press clear</strong> to start a new calculation. The clear button resets the whole expression rather than deleting one character.</p>
+
+<h2>Keyboard Shortcuts</h2>
+<p>Typing is faster than tapping for anyone at a desk. Digits and the operators <code>+</code>, <code>-</code>, <code>*</code> and <code>/</code> work directly, and <code>Enter</code> evaluates. Backspace deletes the last character, and Escape clears the expression. Parentheses are on the shifted 9 and 0 keys.</p>
+<p>One habit worth building: type the full expression before evaluating rather than chaining partial results. Chained entry hides rounding — you see 3.33 rather than 10 divided by 3, and subsequent steps inherit that invisible truncation.</p>
+
+<h2>How Expressions Are Evaluated</h2>
+<p>The calculator follows standard operator precedence rather than left-to-right reading order. Exponentiation binds tightest, then multiplication and division, then addition and subtraction. Within the same precedence level, evaluation proceeds left to right.</p>
+<p>So <code>2 + 3 * 4</code> is 14, not 20, because the multiplication happens first. And <code>8 / 4 / 2</code> is 1, not 4, because division is left-associative. When in doubt, add parentheses: they cost nothing and remove all ambiguity, both for the machine and for whoever reads your work later.</p>
+
+<h2>Why 0.1 + 0.2 Is Not Exactly 0.3</h2>
+<p>This is not a bug in the calculator, and it is worth understanding because it affects every digital calculation you will ever see.</p>
+<p>Computers store decimal fractions in binary floating point. Most decimal fractions — 0.1 is the classic example — have no exact binary representation, in the same way that one third has no exact decimal representation. The stored value is the nearest binary approximation, slightly above or below the decimal value you typed.</p>
+<p>When you add two approximations, the small errors combine. The result may display as 0.3 because the calculator rounds for presentation, but the underlying value can be 0.30000000000000004. For everyday arithmetic this is irrelevant. For money it is not, which is why financial systems use integer cents or dedicated decimal types instead of floating point.</p>
+<p>Practical rule: if you are calculating currency, work in the smallest unit (cents, fen) as whole numbers, then divide at the end for display. If you are checking a balance, never compare two floating-point results with strict equality.</p>
+
+<h2>Percentages Without Getting Them Wrong</h2>
+<p>Percentage questions cause more errors than any other everyday calculation, mostly because two different questions hide behind the same word.</p>
+<p><strong>Percent of a number:</strong> 15 percent of 240 is 240 times 0.15, which is 36. Multiply by the decimal form.</p>
+<p><strong>Percentage change:</strong> going from 80 to 100 is an increase of 25 percent, because the change of 20 is measured against the starting value of 80. Going back from 100 to 80 is a decrease of 20 percent, because 20 is now measured against 100. The same absolute movement is a different percentage depending on direction — the reason discounts and markups never cancel out.</p>
+<p><strong>Percentage points:</strong> a rate moving from 4 percent to 5 percent has risen by one percentage point, but by 25 percent in relative terms. Headlines exploit this ambiguity constantly.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq-item"><h3>Does this calculator follow order of operations?</h3><p>Yes. Exponentiation is evaluated first, then multiplication and division, then addition and subtraction, and same-precedence operators evaluate left to right. Use parentheses to override the default grouping.</p></div>
+    <div class="faq-item"><h3>Why does 0.1 + 0.2 show a long decimal?</h3><p>Because decimal fractions such as 0.1 have no exact binary representation, so they are stored as the nearest approximation. Adding two approximations combines their small errors. For currency, calculate in whole cents to avoid the issue.</p></div>
+    <div class="faq-item"><h3>Can I use my keyboard instead of clicking?</h3><p>Yes. Digits, operators and parentheses all work from the keyboard, Enter evaluates, Backspace deletes and Escape clears the expression.</p></div>
+    <div class="faq-item"><h3>Does it support square roots and powers?</h3><p>Yes. Both exponentiation and square root are supported. Use parentheses around a negative base to make the intended grouping explicit.</p></div>
+    <div class="faq-item"><h3>Is there a calculation history?</h3><p>No history is kept, and nothing is stored in your browser or sent to a server. Each session starts clean.</p></div>
+    <div class="faq-item"><h3>Can I calculate percentages here?</h3><p>Yes. Enter the number, multiply by the percentage as a decimal, and evaluate. Remember that percentage change is measured against the starting value, so a rise and a fall of the same absolute amount are different percentages.</p></div>
+    <div class="faq-item"><h3>Does the calculator work offline?</h3><p>Yes, after the page has loaded. All arithmetic runs locally in your browser.</p></div>
+  </div>
+</div>
+
+</div>
+
+</div>
+<div class="embed-credit">
+  <span>Free, browser-based, no sign-up.</span>
+  <a href="https://haowordtool.com/tools/calculator.html" target="_blank" rel="noopener">Calculator by HaoWordTool →</a>
+</div>
+<script>
+let cur = "0", prev = null, op = null, reset = false;
+const val = document.getElementById("val");
+const expr = document.getElementById("expr");
+
+function upd(){
+  val.textContent = cur;
+  expr.textContent = prev !== null ? prev + " " + (op || "") : " ";
+}
+function calc(a, b, o){
+  return o === "+" ? a + b : o === "-" ? a - b : o === "*" ? a * b : o === "/" ? a / b : 0;
+}
+function press(k){
+  if (k === "C") { cur = "0"; prev = null; op = null; reset = false; }
+  else if (k === "±") cur = cur.startsWith("-") ? cur.slice(1) : "-" + cur;
+  else if (k === "%") cur = String(parseFloat(cur) / 100);
+  else if (["+", "-", "*", "/"].includes(k)) {
+    if (op && !reset) { cur = String(calc(parseFloat(prev), parseFloat(cur), op)); }
+    prev = cur; op = k; reset = true;
+  } else if (k === "=") {
+    if (op) { cur = String(calc(parseFloat(prev), parseFloat(cur), op)); prev = null; op = null; reset = true; }
+  } else if (k === ".") {
+    if (!cur.includes(".")) cur += ".";
+  } else {
+    if (reset || cur === "0") { cur = k; reset = false; }
+    else cur += k;
+  }
+  upd();
+}
+document.querySelectorAll(".calc-btn").forEach(b => b.onclick = () => press(b.dataset.k));
+
+document.addEventListener("keydown", e => {
+  const k = e.key;
+  if (/[0-9]/.test(k) || ["+","-","*","/","."].includes(k)) { press(k); e.preventDefault(); }
+  else if (k === "Enter" || k === "=") { press("="); e.preventDefault(); }
+  else if (k === "Backspace") {
+    cur = cur.length > 1 ? cur.slice(0, -1) : "0"; upd(); e.preventDefault();
+  } else if (k === "Escape") { press("C"); }
+});
+upd();
+
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
+</script>
+<script type="application/json" id="relatedData">["currency-converter","mortgage-calculator","unit-converter"]</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Counter — Free Online Character Count Tool — Embeddable</title>
+<!-- 嵌入页与原页同内容，一律 noindex，权重只归原页 -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable Character Counter — Free Online Character Count Tool widget — runs entirely in the browser, no sign-up, no upload.">
+<link rel="canonical" href="https://haowordtool.com/tools/character-counter.html">
+<link rel="stylesheet" href="/assets/tools.css">
+
+<style>
+  /* 嵌入态：去掉页边距，压掉大标题，只留工具本体 */
+  html,body{margin:0;padding:0;background:#0b0f14}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+  .embed-wrap{padding:14px 14px 0}
+  .embed-wrap h1{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .embed-wrap > p:first-of-type{font-size:13px;color:#8b9bb0;margin:0 0 14px}
+  .embed-credit{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 14px;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:#8b9bb0;background:#0b0f14}
+  .embed-credit a{color:#4fd1c5;text-decoration:none;font-weight:600}
+  .embed-credit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+<div class="wrap tool-page">
+  <a href="/tools/index.html" class="back">← Back to all tools</a>
+  <h1 style="margin-top:16px">Character Counter — Free Online Character Count Tool</h1>
+  <p class="lead">Paste or type your text. Stats update as you type, entirely in your browser.</p>
+
+  <div class="card">
+    <label for="text">Your text</label>
+    <textarea id="text" placeholder="Start typing or paste text here…" style="min-height:220px"></textarea>
+    <div class="grid4" style="margin-top:18px">
+      <div style="text-align:center;padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02)">
+        <div id="chars" style="font-family:var(--mono);font-size:24px;font-weight:700">0</div>
+        <div style="font-size:11.5px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-top:4px">Characters</div>
+      </div>
+      <div style="text-align:center;padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02)">
+        <div id="charsNoSpace" style="font-family:var(--mono);font-size:24px;font-weight:700">0</div>
+        <div style="font-size:11.5px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-top:4px">No spaces</div>
+      </div>
+      <div style="text-align:center;padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02)">
+        <div id="words" style="font-family:var(--mono);font-size:24px;font-weight:700">0</div>
+        <div style="font-size:11.5px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-top:4px">Words</div>
+      </div>
+      <div style="text-align:center;padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02)">
+        <div id="sents" style="font-family:var(--mono);font-size:24px;font-weight:700">0</div>
+        <div style="font-size:11.5px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-top:4px">Sentences</div>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:12px">
+      <div style="text-align:center;padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02)">
+        <div id="paras" style="font-family:var(--mono);font-size:24px;font-weight:700">0</div>
+        <div style="font-size:11.5px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-top:4px">Paragraphs</div>
+      </div>
+      <div style="padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02)">
+        <label for="limit" style="margin-bottom:6px">Check against platform limit</label>
+        <select id="limit">
+          <option value="0">No limit</option>
+          <option value="150">Instagram bio — 150</option>
+          <option value="155">Meta description — 155</option>
+          <option value="160">SMS — 160</option>
+          <option value="280">X (Twitter) — 280</option>
+          <option value="2200">Instagram caption — 2,200</option>
+          <option value="3000">LinkedIn post — 3,000</option>
+          <option value="63206">Facebook post — 63,206</option>
+        </select>
+        <div id="limitBar" style="margin-top:10px;height:8px;border-radius:4px;background:rgba(255,255,255,.07);overflow:hidden;display:none"><div id="limitFill" style="height:100%;width:0%;background:linear-gradient(90deg,#8a6bff,#4fd1c5);transition:width .2s"></div></div>
+        <div id="limitMsg" class="hint" style="display:none"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seo-content">
+    <h2>What Is a Character Counter?</h2>
+    <p>A character counter is a simple online tool that counts every character in your text — letters, numbers, punctuation, spaces and emojis. Unlike a word counter, which counts words, a character counter tells you the exact length of your text, which is what most platforms enforce as a hard limit.</p>
+    <p>This tool shows two key numbers: the total character count (including spaces, which is what platforms like X and Instagram measure) and the count without spaces. It also reports words, sentences and paragraphs so you get the full picture in one place.</p>
+
+    <h2>How to Use This Character Counter</h2>
+    <p><strong>Step 1 — Paste or type your text</strong> into the box above. Stats update live as you type.</p>
+    <p><strong>Step 2 — Read the stats.</strong> The big numbers show characters, characters without spaces, words, sentences and paragraphs.</p>
+    <p><strong>Step 3 — Check a platform limit.</strong> Pick a platform from the dropdown (for example X at 280) and the progress bar shows how close you are to the limit. Green means you fit; red means you're over.</p>
+
+    <h2>Character Limits by Platform</h2>
+    <h3>Twitter / X Character Limit (280)</h3>
+    <p>Posts on X can be up to 280 characters. Spaces, punctuation and emojis all count — and some emojis count as two characters. Premium subscribers get longer posts, but 280 remains the standard everyone writes for.</p>
+    <h3>Instagram Caption Limit (2,200)</h3>
+    <p>Instagram captions allow up to 2,200 characters, but only the first 125 show before the "more" button. Put your hook and key message in those first 125 characters.</p>
+    <h3>Instagram Bio Limit (150)</h3>
+    <p>Your Instagram bio is limited to 150 characters. Every character matters — use a clear value proposition and one call to action.</p>
+    <h3>Facebook Post Limit (63,206)</h3>
+    <p>Facebook technically allows 63,206 characters per post, but posts get truncated in the feed after about 477 characters. Shorter posts consistently get more engagement.</p>
+    <h3>LinkedIn Post Limit (3,000)</h3>
+    <p>LinkedIn posts allow up to 3,000 characters. The feed shows roughly the first 210 characters before "see more", so front-load your insight.</p>
+    <h3>SEO Meta Description Limit (155–160)</h3>
+    <p>Google typically displays 155–160 characters of your meta description. Stay under 160 to avoid the dreaded "..." truncation in search results.</p>
+    <h3>SMS Character Limit (160)</h3>
+    <p>A standard SMS segment is 160 characters (GSM encoding). Go over and your message splits into multiple segments — which can double or triple your messaging cost.</p>
+
+    <h2>Character Counter vs Word Counter</h2>
+    <p>Use a <strong>character counter</strong> when a platform enforces a length limit: tweets, bios, meta descriptions, SMS, ad headlines. Use a <strong>word counter</strong> when the requirement is about content volume: essays, blog posts, speeches, book chapters. The two tools answer different questions — "will this fit?" versus "is this long enough?" — so writers and marketers usually need both.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq-item"><h3>How many characters is a tweet?</h3><p>A standard post on X (Twitter) can be up to 280 characters, including spaces, punctuation and emojis. Some emojis count as two characters.</p></div>
+    <div class="faq-item"><h3>How many characters is an Instagram caption?</h3><p>Instagram captions allow up to 2,200 characters, but only the first 125 characters display before the "more" button.</p></div>
+    <div class="faq-item"><h3>What is the SEO meta description character limit?</h3><p>Google typically shows 155–160 characters. Keep your meta description under 160 characters so it isn't truncated in search results.</p></div>
+    <div class="faq-item"><h3>Do spaces count as characters?</h3><p>Yes. On almost every platform, spaces count toward the character limit. This tool shows both the total count and the count without spaces.</p></div>
+    <div class="faq-item"><h3>Is this character counter free?</h3><p>Yes — free forever. It runs entirely in your browser with no sign-up, and your text never leaves your device.</p></div>
+  </div>
+</div>
+</a>
+    <a href="/tools/case-converter.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><b>Case Converter</b><span>Open tool</span></div></a>
+    <a href="/tools/remove-line-breaks.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><div><b>Remove Line Breaks</b><span>Open tool</span></div></a>
+    <a href="/tools/text-diff.html" class="related-card"><span class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/></svg></span><div><b>Text Diff</b><span>Open tool</span></div></a>
+  </div>
+</div>
+
+</div>
+<div class="embed-credit">
+  <span>Free, browser-based, no sign-up.</span>
+  <a href="https://haowordtool.com/tools/character-counter.html" target="_blank" rel="noopener">Character Counter by HaoWordTool →</a>
+</div>
+<script>
+const t = document.getElementById("text");
+const limitSel = document.getElementById("limit");
+const limitBar = document.getElementById("limitBar");
+const limitFill = document.getElementById("limitFill");
+const limitMsg = document.getElementById("limitMsg");
+function upd(){
+  const v = t.value;
+  const chars = v.length;
+  document.getElementById("chars").textContent = chars;
+  document.getElementById("charsNoSpace").textContent = v.replace(/\s/g, "").length;
+  document.getElementById("words").textContent = v.trim() ? v.trim().split(/\s+/).length : 0;
+  document.getElementById("sents").textContent = v.trim() ? v.trim().split(/[.!?…]+/).filter(s => s.trim()).length : 0;
+  document.getElementById("paras").textContent = v.trim() ? v.trim().split(/\n\s*\n/).filter(p => p.trim()).length : 0;
+  const lim = parseInt(limitSel.value, 10);
+  if (lim > 0) {
+    limitBar.style.display = "block"; limitMsg.style.display = "block";
+    const pct = Math.min(100, Math.round(chars / lim * 100));
+    limitFill.style.width = pct + "%";
+    const left = lim - chars;
+    if (left >= 0) {
+      limitFill.style.background = pct > 90 ? "linear-gradient(90deg,#f6ad55,#f56565)" : "linear-gradient(90deg,#8a6bff,#4fd1c5)";
+      limitMsg.textContent = left + " characters remaining (" + pct + "% used).";
+    } else {
+      limitFill.style.background = "#f56565";
+      limitMsg.textContent = Math.abs(left) + " characters over the limit — trim before posting.";
+    }
+  } else {
+    limitBar.style.display = "none"; limitMsg.style.display = "none";
+  }
+}
+t.oninput = upd; limitSel.onchange = upd; upd();
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
+</script>
+</body>
+</html>

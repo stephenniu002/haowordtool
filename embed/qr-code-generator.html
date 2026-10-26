@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator — Free Online QR Maker — Embeddable</title>
+<!-- 嵌入页与原页同内容，一律 noindex，权重只归原页 -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable QR Code Generator — Free Online QR Maker widget — runs entirely in the browser, no sign-up, no upload.">
+<link rel="canonical" href="https://haowordtool.com/tools/qr-code-generator.html">
+<link rel="stylesheet" href="/assets/tools.css">
+
+<style>
+  /* 嵌入态：去掉页边距，压掉大标题，只留工具本体 */
+  html,body{margin:0;padding:0;background:#0b0f14}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+  .embed-wrap{padding:14px 14px 0}
+  .embed-wrap h1{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .embed-wrap > p:first-of-type{font-size:13px;color:#8b9bb0;margin:0 0 14px}
+  .embed-credit{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 14px;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:#8b9bb0;background:#0b0f14}
+  .embed-credit a{color:#4fd1c5;text-decoration:none;font-weight:600}
+  .embed-credit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+<div class="wrap tool-page">
+  <a href="/tools/index.html" class="back">← Back to all tools</a>
+  <h1 style="margin-top:16px">QR Code Generator</h1>
+  <p class="lead">Turn any URL or text into a QR code. Download as PNG instantly.</p>
+
+  <div class="card" style="max-width:640px">
+    <label for="text">URL or text</label>
+    <textarea id="text" style="min-height:100px">https://haowordtool.com</textarea>
+
+    <div style="margin-top:16px">
+      <label>Size: <span id="sv">256</span>px</label>
+      <input type="range" id="size" min="128" max="512" step="32" value="256">
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" id="go">Generate</button>
+      <a class="btn btn-ghost" id="dl" style="display:none" download="qrcode.png">Download</a>
+    </div>
+
+    <div id="out" style="display:none;margin-top:20px;text-align:center">
+      <div style="display:inline-block;padding:20px;background:#fff;border-radius:14px">
+        <canvas id="canvas" style="display:block"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="seo-content">
+<h2>What a QR Code Actually Is</h2>
+<p>A QR code is a two-dimensional barcode: a grid of black and white modules that encodes data together with error-correction information. A scanner reads the grid with a camera, reconstructs the bit pattern, applies error correction to repair any misread modules, and returns the original text.</p>
+<p>That is the whole mechanism. There is no link shortener involved, no tracking pixel, no account and no server. A QR code generated here contains exactly the text you typed and nothing else, which is why it never expires.</p>
+
+<h2>How to Use This Generator</h2>
+<p><strong>Step 1 — Enter your content.</strong> A full URL including <code>https://</code>, plain text, a phone number, an email address or any short string.</p>
+<p><strong>Step 2 — Generate.</strong> The code is produced instantly in your browser.</p>
+<p><strong>Step 3 — Test it before you print.</strong> Scan it with your own phone. This step is skipped constantly and it is the one that catches mistakes.</p>
+<p><strong>Step 4 — Download the PNG</strong> and place it in your design. Keep it large enough to scan and do not stretch it non-uniformly.</p>
+
+<h2>Static vs Dynamic QR Codes</h2>
+<p>A <strong>static</strong> code encodes the destination directly. The URL lives inside the grid. It never expires, works offline from the printed page, cannot be edited, and cannot be tracked. This generator produces static codes.</p>
+<p>A <strong>dynamic</strong> code encodes a short redirect URL owned by a service, which then forwards to your real destination. The advantage is that you can change the destination after printing. The cost is that the code dies when the service dies, and every scan is logged by that service.</p>
+<p>For anything permanent — packaging, signage, business cards, printed manuals — a static code is the safer choice, because its lifespan is bounded only by the paper it is printed on. Dynamic codes make sense when you genuinely need to retarget an already-printed asset, and when you accept the dependency.</p>
+
+<h2>How Much Data Fits</h2>
+<p>Capacity depends on the encoding mode and the error-correction level. Numeric data packs most densely, then alphanumeric, then byte mode for arbitrary text. As a practical guide, a typical QR code comfortably holds a URL of around 100 characters, and roughly 300 characters of plain text remains scannable at normal print sizes. Larger payloads force a denser grid with smaller modules, which becomes hard to scan from a distance and hard to print cleanly.</p>
+<p>If your content is long, do not force it into the grid. Host the content at a short URL and encode the URL instead. The code stays sparse, and sparse scans reliably.</p>
+
+<h2>Error Correction, in Plain Terms</h2>
+<p>QR codes carry redundant data so that a partially damaged code can still be read. The four levels are L (about 7 percent recovery), M (15 percent), Q (25 percent) and H (30 percent). Higher correction means a denser code for the same content.</p>
+<p>Use higher correction when the code will be printed small, placed on a curved surface, exposed to weather, or likely to be partly covered — a logo in the centre, for instance. Use lower correction when the code must stay as sparse as possible, such as on a poster read from several metres away.</p>
+
+<h2>Five Things That Break Scanning</h2>
+<ul>
+<li><strong>Too little contrast.</strong> Dark modules must be clearly darker than the background. Inverted codes (light on dark) fail on many scanners.</li>
+<li><strong>No quiet zone.</strong> A clear margin of at least four modules on every side is required. Cropping tight to the grid breaks recognition.</li>
+<li><strong>Non-uniform scaling.</strong> Stretching width and height by different factors distorts the module grid beyond repair.</li>
+<li><strong>Too small in print.</strong> Below roughly 2 cm square, phone cameras struggle at any distance. Size the code to the viewing distance, not to the layout.</li>
+<li><strong>Low print resolution.</strong> A code that looks fine on screen can print with blurred module edges. Export at a generous pixel size and print at high DPI.</li>
+</ul>
+
+    <h2>FAQ</h2>
+    <div class="faq-item"><h3>Do QR codes generated here expire?</h3><p>No. The code encodes your content directly, so it contains no redirect and no service dependency. It works for as long as the encoded text or URL remains valid.</p></div>
+    <div class="faq-item"><h3>Can I change the destination after printing?</h3><p>Not with a static code, which is what this generator produces. Changing the destination requires generating a new code. Services that offer editable codes do so by encoding their own redirect URL, which ties the printed code to that service.</p></div>
+    <div class="faq-item"><h3>Is there a watermark or scan limit?</h3><p>No. There is no watermark, no scan limit and no sign-up. The downloaded PNG is yours to use commercially.</p></div>
+    <div class="faq-item"><h3>Why will my QR code not scan?</h3><p>The most common causes are insufficient contrast, a cropped quiet zone, non-uniform stretching, and printing too small. Test with two different phones before committing to print.</p></div>
+    <div class="faq-item"><h3>How much text can a QR code hold?</h3><p>A few hundred characters at typical print sizes. URLs of around 100 characters work comfortably. For longer content, encode a short link to the content rather than the content itself.</p></div>
+    <div class="faq-item"><h3>Do these codes track who scans them?</h3><p>No. A static code has no mechanism for reporting scans. If you need scan analytics, you would have to use a dynamic code from a service that provides it.</p></div>
+    <div class="faq-item"><h3>Can I use the generated code commercially?</h3><p>Yes. Codes you generate are free to use for personal or commercial purposes.</p></div>
+  </div>
+</div>
+
+</div>
+
+</div>
+<div class="embed-credit">
+  <span>Free, browser-based, no sign-up.</span>
+  <a href="https://haowordtool.com/tools/qr-code-generator.html" target="_blank" rel="noopener">QR Code Generator by HaoWordTool →</a>
+</div>
+<script>
+const canvas = document.getElementById("canvas");
+const size = document.getElementById("size");
+const sv = document.getElementById("sv");
+size.oninput = () => sv.textContent = size.value;
+
+document.getElementById("go").onclick = () => {
+  const text = document.getElementById("text").value.trim();
+  if (!text) return;
+  const s = parseInt(size.value);
+  canvas.width = s; canvas.height = s;
+  const img = new Image();
+  img.crossOrigin = "anonymous";
+  img.onload = () => {
+    canvas.getContext("2d").drawImage(img, 0, 0, s, s);
+    document.getElementById("out").style.display = "block";
+    document.getElementById("dl").style.display = "inline-flex";
+  };
+  img.src = "https://api.qrserver.com/v1/create-qr-code/?size=" + s + "x" + s + "&data=" + encodeURIComponent(text);
+  document.getElementById("dl").href = img.src;
+};
+document.getElementById("go").click();
+
+const header = document.getElementById("header");
+addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 12), {passive:true});
+</script>
+<script type="application/json" id="relatedData">["image-compressor","password-generator","resize-image"]</script>
+</body>
+</html>

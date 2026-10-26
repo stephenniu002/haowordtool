@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>HaoWordTool — new tools and field notes</title>
+  <link>https://haowordtool.com/</link>
+  <description>Free browser-based tools, plus write-ups of real SEO and site-engineering problems and how they were verified.</description>
+  <language>en</language>
+  <lastBuildDate>Mon, 26 Oct 2026 09:31:36 GMT</lastBuildDate>
+  <atom:link href="https://haowordtool.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>AI 工具情报 — 增长榜、原创指南与案例拆解 · HaoWordTool</title>
+    <link>https://haowordtool.com/ai-tools/</link>
+    <guid isPermaLink="true">https://haowordtool.com/ai-tools/</guid>
+    <pubDate>Mon, 26 Oct 2026 09:31:36 GMT</pubDate>
+    <category>signal</category>
+    <description>HaoWordTool 唯一的辅助栏目：每周更新的 AI 工具站增长榜、基于实战的原创指南、行业信号与案例拆解。说明数据口径、编辑立场与收录标准。</description>
+  </item>
+  <item>
+    <title>少一个斜杠，189 条 URL 一条都没送出去：站点地图索引的静默失败</title>
+    <link>https://haowordtool.com/blog/cases/sitemap-index-slash.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/blog/cases/sitemap-index-slash.html</guid>
+    <pubDate>Mon, 26 Oct 2026 09:31:36 GMT</pubDate>
+    <category>case</category>
+    <description>sitemap-index 六条 loc 全部缺斜杠，指向不存在的地址，但所有页面仍是 200，站内完全看不出异常。含修复方法、落盘前硬校验，以及如何让这类 bug 进不了主干。</description>
+  </item>
+  <item>
+    <title>Shopify 自定义域名绑定的外部验证方法（含 429 干扰项）</title>
+    <link>https://haowordtool.com/blog/cases/shopify-domain-verification.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/blog/cases/shopify-domain-verification.html</guid>
+    <pubDate>Mon, 26 Oct 2026 09:31:36 GMT</pubDate>
+    <category>case</category>
+    <description>后台没有「绑定成功」提示时，怎么从外部证明域名已经生效：证书 SAN、双解析器 DNS、页面响应链三条信号交叉验证，以及如何区分真正的绑定失败与出口限流。</description>
+  </item>
+  <item>
+    <title>多语言站 canonical 全指英文版：30 个页面等于自愿放弃收录</title>
+    <link>https://haowordtool.com/blog/cases/canonical-language-cluster.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/blog/cases/canonical-language-cluster.html</guid>
+    <pubDate>Mon, 26 Oct 2026 09:31:36 GMT</pubDate>
+    <category>case</category>
+    <description>ja/es 全部工具页 canonical 指向英文版，叠加指向已删语种的 hreflang，语言集群信号整体失效。修正 head 信号后，西语可放开页 1→14、日语 0→11。含两次判据误判的复盘。</description>
+  </item>
+  <item>
+    <title>World Clock — Current Time Around the World</title>
+    <link>https://haowordtool.com/tools/world-clock.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/world-clock.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>See current time in major cities around the world. Free, always up to date, no signup.</description>
+  </item>
+  <item>
+    <title>Word Counter — Characters, Words, Reading Time</title>
+    <link>https://haowordtool.com/tools/word-counter.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/word-counter.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online word counter. Count characters, words, lines, and estimated reading time as you type. Perfect for writers, students and SEO.</description>
+  </item>
+  <item>
+    <title>What Is My IP — Check Your Public IP Address</title>
+    <link>https://haowordtool.com/tools/what-is-my-ip.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/what-is-my-ip.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Instantly see your public IP address, location, and ISP. Free, no signup, works in any browser.</description>
+  </item>
+  <item>
+    <title>Unit Converter — Length, Weight, Temperature</title>
+    <link>https://haowordtool.com/tools/unit-converter.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/unit-converter.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online unit converter. Convert length, weight, and temperature instantly. Meters, feet, kilograms, pounds, Celsius, Fahrenheit and more.</description>
+  </item>
+  <item>
+    <title>Timer &amp; Stopwatch — Free Online</title>
+    <link>https://haowordtool.com/tools/timer.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/timer.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online stopwatch and timer. Precise timing down to centiseconds, no signup required.</description>
+  </item>
+  <item>
+    <title>Resize Image — Online Image Resizer</title>
+    <link>https://haowordtool.com/tools/resize-image.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/resize-image.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online image resizer. Change width and height with optional aspect ratio lock. Runs in your browser.</description>
+  </item>
+  <item>
+    <title>QR Code Generator — Free Online QR Maker</title>
+    <link>https://haowordtool.com/tools/qr-code-generator.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/qr-code-generator.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free QR code generator. Turn any URL or text into a downloadable QR code instantly. No watermark, no signup.</description>
+  </item>
+  <item>
+    <title>Password Generator — Strong Random Passwords</title>
+    <link>https://haowordtool.com/tools/password-generator.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/password-generator.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online password generator. Create strong random passwords with custom length and character sets. Generated locally, never sent to any server.</description>
+  </item>
+  <item>
+    <title>Mortgage Calculator — Monthly Payment &amp; Interest</title>
+    <link>https://haowordtool.com/tools/mortgage-calculator.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/mortgage-calculator.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free mortgage calculator. Estimate your monthly payment, total payment, and total interest based on loan amount, term, and rate.</description>
+  </item>
+  <item>
+    <title>Image Compressor — Compress JPG &amp; PNG Online</title>
+    <link>https://haowordtool.com/tools/image-compressor.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/image-compressor.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online image compressor. Reduce JPG, PNG and WebP file size directly in your browser. No upload, no watermark.</description>
+  </item>
+  <item>
+    <title>Currency Converter — Free Online Tool</title>
+    <link>https://haowordtool.com/tools/currency-converter.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/currency-converter.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online currency converter. Convert between USD, EUR, CNY, JPY, GBP and 30+ currencies with a clean, fast interface.</description>
+  </item>
+  <item>
+    <title>Calculator — Free Online Calculator</title>
+    <link>https://haowordtool.com/tools/calculator.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/calculator.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>A clean, fast online calculator. Basic arithmetic with keyboard support. No signup, no ads.</description>
+  </item>
+  <item>
+    <title>BMI Calculator — Body Mass Index</title>
+    <link>https://haowordtool.com/tools/bmi-calculator.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/bmi-calculator.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free BMI calculator. Enter your height and weight to get your body mass index and healthy weight range.</description>
+  </item>
+  <item>
+    <title>Age Calculator — Exact Age in Years, Months, Days</title>
+    <link>https://haowordtool.com/tools/age-calculator.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/age-calculator.html</guid>
+    <pubDate>Mon, 26 Oct 2026 08:43:11 GMT</pubDate>
+    <category>tool</category>
+    <description>Free age calculator. Get your exact age in years, months, and days, plus a countdown to your next birthday.</description>
+  </item>
+  <item>
+    <title>Text Diff — Free Online Text Comparison Tool</title>
+    <link>https://haowordtool.com/tools/text-diff.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/text-diff.html</guid>
+    <pubDate>Mon, 19 Oct 2026 12:09:09 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online text diff checker. Compare two texts side by side and highlight differences instantly. No sign-up required.</description>
+  </item>
+  <item>
+    <title>Internet Speed Test — Free Online</title>
+    <link>https://haowordtool.com/tools/speed-test.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/speed-test.html</guid>
+    <pubDate>Mon, 19 Oct 2026 12:09:09 GMT</pubDate>
+    <category>tool</category>
+    <description>Free browser-based internet speed test. Estimate download speed, latency, connection type and network quality without signup.</description>
+  </item>
+  <item>
+    <title>Remove Line Breaks — Free Online Line Break Remover</title>
+    <link>https://haowordtool.com/tools/remove-line-breaks.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/remove-line-breaks.html</guid>
+    <pubDate>Mon, 19 Oct 2026 12:09:09 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online tool to remove line breaks, extra spaces, and unwanted formatting from text. Paste, clean, and copy in seconds.</description>
+  </item>
+  <item>
+    <title>Character Counter — Free Online Character Count Tool</title>
+    <link>https://haowordtool.com/tools/character-counter.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/character-counter.html</guid>
+    <pubDate>Mon, 19 Oct 2026 12:09:09 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online character counter. Count characters with and without spaces instantly. Perfect for Twitter, Instagram, and SEO meta descriptions.</description>
+  </item>
+  <item>
+    <title>Case Converter — Free Online Text Case Changer</title>
+    <link>https://haowordtool.com/tools/case-converter.html</link>
+    <guid isPermaLink="true">https://haowordtool.com/tools/case-converter.html</guid>
+    <pubDate>Mon, 19 Oct 2026 12:09:09 GMT</pubDate>
+    <category>tool</category>
+    <description>Free online case converter. Convert text to uppercase, lowercase, title case, sentence case, and more. No sign-up required.</description>
+  </item>
+</channel>
+</rss>
