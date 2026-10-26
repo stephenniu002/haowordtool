@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4489946300243174" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTTP Status Codes — Searchable Reference</title>
+<meta name="description" content="Look up any HTTP status code with its meaning and when to use it. Filter by class or search by number and description.">
+<link rel="canonical" href="https://haowordtool.com/tools/http-status-codes.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/http-status-codes.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/http-status-codes.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/tools.css">
+<meta property="og:title" content="HTTP Status Codes — Searchable Reference">
+<meta property="og:description" content="Look up any HTTP status code with its meaning and when to use it. Filter by class or search by number and description.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://haowordtool.com/tools/http-status-codes.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HTTP Status Code Reference",
+  "url": "https://haowordtool.com/tools/http-status-codes.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Look up any HTTP status code with its meaning and when to use it. Filter by class or search by number and description."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I use 404 or 410 for deleted pages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "410 is faster to deindex and more accurate. 404 is what most frameworks give you for free, and Google treats a persistent 404 as effectively gone anyway."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://haowordtool.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://haowordtool.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "HTTP Status Code Reference",
+      "item": "https://haowordtool.com/tools/http-status-codes.html"
+    }
+  ]
+}
+</script>
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header">
+  <div class="wrap">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="/assets/haowordtool-logo.png" alt="HaoWordTool" style="height:38px;width:auto;"></a>
+      <div class="nav-right"><a href="index.html" class="back" style="font-size:13px;color:var(--muted);text-decoration:none">← All tools</a></div>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">HTTP Status Code Reference</h1>
+    <p class="lead">Search by code, name or meaning. Filter to a class with one keystroke.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_q">Search</label><input id="f_q" type="text" value="" placeholder="404, redirect, timeout…" spellcheck="false"></div>
+      <div class="fld"><label for="f_cls">Class</label><select id="f_cls"><option value="all" selected>All</option><option value="2">2xx success</option><option value="3">3xx redirect</option><option value="4">4xx client</option><option value="5">5xx server</option></select></div>
+      <div class="out-grid">
+        <div class="out-block"><div class="out-head"><span>Codes</span><button class="copy" data-copy="list">Copy</button></div><pre id="o_list">—</pre></div>
+        <div class="metric"><div class="metric-label">Matches</div><div class="metric-value" id="o_count">—</div></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>The distinction that matters most in practice: 401 means "I do not know who you are", 403 means "I know who you are and no". Returning 401 for a permission failure sends the client into a pointless re-authentication loop.</p></div>
+
+    <div class="seo-content">
+<p>Status codes are a contract between server and client. Using the wrong one does not break the request, it breaks everything downstream — retry logic, caching, monitoring dashboards and the browser itself.</p>
+<h2>The ones people get wrong</h2>
+<p>302 versus 307: the difference is whether the method survives. 301 versus 308: same, but permanent. 401 versus 403: authentication versus authorisation. 200 with an error in the body: never, because every proxy and client between here and there believes the request succeeded.</p>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related tools</h2>
+      <ul>
+        <li><a href="mime-types.html">MIME Type Reference</a></li>
+        <li><a href="chmod-calculator.html">Chmod Calculator</a></li>
+        <li><a href="subnet-calculator.html">Subnet Calculator</a></li>
+        <li><a href="calorie-calculator.html">Calorie Needs Calculator</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+<footer style="padding:32px 0;margin-top:40px;border-top:1px solid rgba(255,255,255,.07)">
+  <div class="wrap" style="font-size:13px;color:var(--muted)">
+    <a href="/" style="color:var(--muted)">HaoWordTool</a> ·
+    <a href="/tools/" style="color:var(--muted)">All tools</a> ·
+    <a href="/privacy.html" style="color:var(--muted)">Privacy</a> ·
+    <a href="/terms.html" style="color:var(--muted)">Terms</a> ·
+    <a href="/contact.html" style="color:var(--muted)">Contact</a>
+    <p style="margin:10px 0 0">Every tool on this site runs entirely in your browser. Nothing you type or upload is sent to a server.</p>
+  </div>
+</footer>
+<script>
+
+const FIELDS = [{"k":"q","label":"Search","type":"text"},{"k":"cls","label":"Class","type":"sel","opts":[["all","All"],["2","2xx success"],["3","3xx redirect"],["4","4xx client"],["5","5xx server"]]}];
+const OUTS = [{"k":"list","label":"Codes","type":"code"},{"k":"count","label":"Matches","type":"big"}];
+const COMPUTE = (v) => {
+      const DATA = [
+        [100, 'Continue', 'The server got the request headers and the client should send the body.'],
+        [101, 'Switching Protocols', 'The server is switching to the protocol named in the Upgrade header, typically WebSocket.'],
+        [103, 'Early Hints', 'Sends Link headers before the final response so the browser can preload resources.'],
+        [200, 'OK', 'The request succeeded. The most common response and the default for a GET.'],
+        [201, 'Created', 'A resource was created. Should carry a Location header pointing at it.'],
+        [202, 'Accepted', 'The request was accepted for processing but is not finished. Used for async jobs.'],
+        [204, 'No Content', 'Success with no body. Common for DELETE and for form posts followed by a redirect.'],
+        [206, 'Partial Content', 'A range request succeeded. Required for resumable downloads and video seeking.'],
+        [301, 'Moved Permanently', 'The resource has a new URL permanently. Search engines transfer signals; clients cache it hard.'],
+        [302, 'Found', 'Temporary redirect. Historically clients changed the method to GET, which is why 307 exists.'],
+        [303, 'See Other', 'The response is at another URL and should be fetched with GET. The correct code after a form POST.'],
+        [304, 'Not Modified', 'The cached copy is still valid. Sent in response to If-None-Match or If-Modified-Since.'],
+        [307, 'Temporary Redirect', 'Like 302 but the method and body must be preserved. Use this for temporary API moves.'],
+        [308, 'Permanent Redirect', 'Like 301 but the method is preserved. Use for permanent API moves.'],
+        [400, 'Bad Request', 'Malformed syntax or invalid parameters. The client should not retry unchanged.'],
+        [401, 'Unauthorized', 'Authentication is missing or invalid. Should carry a WWW-Authenticate header.'],
+        [403, 'Forbidden', 'Authenticated but not allowed. Retrying will not help.'],
+        [404, 'Not Found', 'No resource at that URL. Also used deliberately to avoid leaking whether something exists.'],
+        [405, 'Method Not Allowed', 'The URL exists but not for that method. Must include an Allow header.'],
+        [408, 'Request Timeout', 'The server gave up waiting for the request. Safe to retry.'],
+        [409, 'Conflict', 'The request conflicts with current state — a duplicate create or a stale version.'],
+        [410, 'Gone', 'The resource existed and is permanently gone. Faster to deindex than 404.'],
+        [413, 'Payload Too Large', 'The body exceeds the server limit. Common on upload endpoints.'],
+        [415, 'Unsupported Media Type', 'The Content-Type is not accepted by the endpoint.'],
+        [418, "I'm a Teapot", 'An April Fools status from RFC 2324. Some frameworks return it deliberately for blocked bots.'],
+        [422, 'Unprocessable Content', 'Syntactically valid but semantically wrong — a required field missing or a failed validation.'],
+        [429, 'Too Many Requests', 'Rate limited. Should include Retry-After.'],
+        [500, 'Internal Server Error', 'An unhandled exception. Deliberately vague so nothing leaks.'],
+        [501, 'Not Implemented', 'The server does not support the method at all.'],
+        [502, 'Bad Gateway', 'An upstream server returned something invalid. Typical when a backend is down behind a proxy.'],
+        [503, 'Service Unavailable', 'Temporarily unable to handle the request — overload or maintenance. Should include Retry-After.'],
+        [504, 'Gateway Timeout', 'The upstream did not respond in time. The request may still have been processed.'],
+      ];
+      const q = String(v.q || '').trim().toLowerCase();
+      const rows = DATA.filter(([code, name, desc]) => {
+        if (v.cls !== 'all' && String(code)[0] !== v.cls) return false;
+        if (!q) return true;
+        return String(code).includes(q) || name.toLowerCase().includes(q) || desc.toLowerCase().includes(q);
+      });
+      return {
+        list: rows.length ? rows.map(([c, n, d]) => `${c}  ${n}\n    ${d}`).join('\n') : 'No matches',
+        count: String(rows.length),
+      };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["mime-types","chmod-calculator","subnet-calculator","calorie-calculator"]</script>
+<script src="/assets/related-tools.js" defer></script>
+</body>
+</html>

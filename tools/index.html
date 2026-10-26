@@ -4,7 +4,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4489946300243174" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Online Tools — 15 Practical Utilities</title>
+<title>Free Online Tools — 100 Practical Utilities</title>
 <meta name="description" content="Currency converter, calculator, mortgage, unit converter, word counter, image compressor, internet speed test, QR code, IP lookup, password generator, BMI and more. Free, no signup.">
 <link rel="canonical" href="https://haowordtool.com/tools/">
 <link rel="alternate" type="application/rss+xml" title="HaoWordTool — new tools and field notes" href="/feed.xml">
@@ -23,12 +23,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/tools.css">
 
-<meta property="og:title" content="Free Online Tools — 15 Practical Utilities">
+<meta property="og:title" content="Free Online Tools — 100 Practical Utilities">
 <meta property="og:description" content="Currency converter, calculator, mortgage, unit converter, word counter, image compressor, internet speed test, QR code, IP lookup, password generator, BMI and more. Free, no signup.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://haowordtool.com/tools/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free Online Tools — 15 Practical Utilities">
+<meta name="twitter:title" content="Free Online Tools — 100 Practical Utilities">
 <meta name="twitter:description" content="Currency converter, calculator, mortgage, unit converter, word counter, image compressor, internet speed test, QR code, IP lookup, password generator, BMI and more. Free, no signup.">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/favicon-512.png">
@@ -65,11 +65,15 @@
       <input type="text" id="search" placeholder="Search tools, e.g. mortgage, QR, BMI…">
     </div>
     <div class="tabs" id="tabs">
+      
+      
       <button class="tab active" data-cat="all">All</button>
       <button class="tab" data-cat="convert">Convert</button>
+      <button class="tab" data-cat="text">Text</button>
       <button class="tab" data-cat="image">Image</button>
       <button class="tab" data-cat="network">Network</button>
       <button class="tab" data-cat="life">Everyday</button>
+      <button class="tab" data-cat="security">Security</button>
     </div>
   </div>
 </section>
@@ -99,21 +103,106 @@
 
 <script>
 const tools = [
-  {cat:"convert",catName:"Convert",name:"Currency Converter",desc:"Real-time rates, 30+ currencies",icon:'<circle cx="12" cy="12" r="10"/><path d="M12 6v12M15 9h-4.5a2.5 2.5 0 0 0 0 5h3a2.5 2.5 0 0 1 0 5H9"/>',link:"currency-converter.html"},
-  {cat:"convert",catName:"Convert",name:"Calculator",desc:"Basic arithmetic, keyboard-friendly",icon:'<rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="12" x2="8" y2="12"/><line x1="12" y1="12" x2="12" y2="12"/><line x1="16" y1="12" x2="16" y2="12"/><line x1="8" y1="17" x2="16" y2="17"/>',link:"calculator.html"},
-  {cat:"convert",catName:"Convert",name:"Mortgage Calculator",desc:"Monthly payment & total interest",icon:'<path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>',link:"mortgage-calculator.html"},
-  {cat:"convert",catName:"Convert",name:"Unit Converter",desc:"Length, weight, temperature, area",icon:'<path d="M2 12h20"/><path d="M5 8v8M9 9v6M13 8v8M17 9v6"/>',link:"unit-converter.html"},
+  {cat:"convert",catName:"Convert",name:"Break-Even Calculator",desc:"Calculate the number of units needed to cove…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"break-even.html"},
+  {cat:"convert",catName:"Convert",name:"Business Days Calculator",desc:"Add working days to a date, or count working…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"business-days.html"},
+  {cat:"convert",catName:"Convert",name:"CAGR Calculator",desc:"Calculate compound annual growth rate from a…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"cagr-calculator.html"},
+  {cat:"convert",catName:"Convert",name:"Calculator",desc:"Basic arithmetic, keyboard-friendly",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"calculator.html"},
+  {cat:"convert",catName:"Convert",name:"Compound Interest Calculator",desc:"Project investment growth with compounding a…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"compound-interest.html"},
+  {cat:"convert",catName:"Convert",name:"Currency Converter",desc:"Real-time rates, 30+ currencies",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"currency-converter.html"},
+  {cat:"convert",catName:"Convert",name:"Date Difference Calculator",desc:"Calculate the difference between two dates i…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"date-difference.html"},
+  {cat:"convert",catName:"Convert",name:"Discount Calculator",desc:"Work out the sale price after a percentage d…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"discount-calculator.html"},
+  {cat:"convert",catName:"Convert",name:"Loan Payment Calculator",desc:"Calculate monthly repayments, total interest…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"loan-calculator.html"},
+  {cat:"convert",catName:"Convert",name:"Markup and Margin Calculator",desc:"Convert between cost, markup and margin. Sho…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"markup-margin.html"},
+  {cat:"convert",catName:"Convert",name:"Mortgage Calculator",desc:"Monthly payment & total interest",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"mortgage-calculator.html"},
+  {cat:"convert",catName:"Convert",name:"Number Base Converter",desc:"Convert between binary, octal, decimal and h…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"number-base-converter.html"},
+  {cat:"convert",catName:"Convert",name:"Overtime Pay Calculator",desc:"Calculate overtime pay from an hourly rate…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"overtime-pay.html"},
+  {cat:"convert",catName:"Convert",name:"Percentage Calculator",desc:"Work out a percentage of a number, what perc…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"percentage-calculator.html"},
+  {cat:"convert",catName:"Convert",name:"Percentage Change Calculator",desc:"Calculate percentage increase or decrease be…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"percentage-change.html"},
+  {cat:"convert",catName:"Convert",name:"ROI Calculator",desc:"Calculate return on investment from cost and…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"roi-calculator.html"},
+  {cat:"convert",catName:"Convert",name:"Roman Numeral Converter",desc:"Convert numbers to Roman numerals and Roman…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"roman-numerals.html"},
+  {cat:"convert",catName:"Convert",name:"Salary to Hourly Calculator",desc:"Convert an annual salary to hourly, weekly a…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"salary-to-hourly.html"},
+  {cat:"convert",catName:"Convert",name:"Savings Goal Calculator",desc:"Work out how much to save each month to reac…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"savings-goal.html"},
+  {cat:"convert",catName:"Convert",name:"Tip Calculator",desc:"Calculate the tip and split the total betwee…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"tip-calculator.html"},
+  {cat:"convert",catName:"Convert",name:"Unit Converter",desc:"Length, weight, temperature, area",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"unit-converter.html"},
+  {cat:"convert",catName:"Convert",name:"VAT Calculator",desc:"Add VAT to a net amount or extract VAT from…",icon:'<path d="M4 7h16M4 12h10M4 17h7"/>',link:"vat-calculator.html"},
+  {cat:"image",catName:"Image",name:"Base64 to Image",desc:"Paste a base64 data URI and see the image, p…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"base64-to-image.html"},
+  {cat:"image",catName:"Image",name:"Color Converter",desc:"Convert colours between HEX, RGB, HSL and HS…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"color-converter.html"},
+  {cat:"image",catName:"Image",name:"CSS Gradient Generator",desc:"Build a CSS gradient with two or three colou…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"gradient-generator.html"},
+  {cat:"image",catName:"Image",name:"Favicon Generator",desc:"Generate favicons at 16, 32, 180 and 192 pix…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"favicon-generator.html"},
+  {cat:"image",catName:"Image",name:"File Hash Checker",desc:"Compute the SHA-256 hash of a file in your b…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"file-hash.html"},
+  {cat:"image",catName:"Image",name:"Flip Image",desc:"Mirror an image horizontally or vertically i…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"image-flip.html"},
+  {cat:"image",catName:"Image",name:"Grayscale Image Converter",desc:"Turn an image black and white in the browser…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"image-grayscale.html"},
+  {cat:"image",catName:"Image",name:"Image Color Palette Extractor",desc:"Pull the dominant colours out of an image, w…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"color-palette.html"},
   {cat:"image",catName:"Image",name:"Image Compressor",desc:"Compress JPG / PNG in your browser",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"image-compressor.html"},
-  {cat:"image",catName:"Image",name:"Resize Image",desc:"Custom dimensions, keep aspect ratio",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18M3 9h18"/>',link:"resize-image.html"},
-  {cat:"life",catName:"Everyday",name:"QR Code Generator",desc:"URL or text to QR, downloadable",icon:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v7M14 21h7"/>',link:"qr-code-generator.html"},
-  {cat:"network",catName:"Network",name:"What Is My IP",desc:"Public IP, location & ISP",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',link:"what-is-my-ip.html"},
-  {cat:"network",catName:"Network",name:"Internet Speed Test",desc:"Download, upload, ping & jitter",icon:'<path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/>',link:"speed-test.html"},
-  {cat:"network",catName:"Network",name:"Password Generator",desc:"Custom length, generated locally",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"password-generator.html"},
-  {cat:"life",catName:"Everyday",name:"Word Counter",desc:"Characters, words, paragraphs, read time",icon:'<path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18" cy="17" r="3"/>',link:"word-counter.html"},
-  {cat:"life",catName:"Everyday",name:"BMI Calculator",desc:"Body mass index with health ranges",icon:'<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',link:"bmi-calculator.html"},
-  {cat:"life",catName:"Everyday",name:"Age Calculator",desc:"Exact age & birthday countdown",icon:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',link:"age-calculator.html"},
-  {cat:"life",catName:"Everyday",name:"Timer / Stopwatch",desc:"Countdown and count-up",icon:'<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 2h6"/>',link:"timer.html"},
-  {cat:"life",catName:"Everyday",name:"World Clock",desc:"Current time in major cities",icon:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',link:"world-clock.html"}
+  {cat:"image",catName:"Image",name:"Image Format Converter",desc:"Convert an image to WebP, JPEG or PNG in the…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"image-format-converter.html"},
+  {cat:"image",catName:"Image",name:"Image to Base64",desc:"Convert an image to a base64 data URI for em…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"image-to-base64.html"},
+  {cat:"image",catName:"Image",name:"Resize Image",desc:"Custom dimensions, keep aspect ratio",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"resize-image.html"},
+  {cat:"image",catName:"Image",name:"Rotate Image",desc:"Rotate an image by 90, 180, 270 degrees or a…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"image-rotate.html"},
+  {cat:"image",catName:"Image",name:"SVG to PNG Converter",desc:"Rasterise an SVG to PNG at a chosen size. Pa…",icon:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',link:"svg-to-png.html"},
+  {cat:"life",catName:"Everyday",name:"Age Calculator",desc:"Exact age & birthday countdown",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"age-calculator.html"},
+  {cat:"life",catName:"Everyday",name:"BMI Calculator",desc:"Body mass index with health ranges",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"bmi-calculator.html"},
+  {cat:"life",catName:"Everyday",name:"BMR Calculator",desc:"Calculate basal metabolic rate with the Miff…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"bmr-calculator.html"},
+  {cat:"life",catName:"Everyday",name:"Body Fat Calculator",desc:"Estimate body fat percentage from circumfere…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"body-fat-calculator.html"},
+  {cat:"life",catName:"Everyday",name:"Calorie Needs Calculator",desc:"Estimate daily calories from age, sex, heigh…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"calorie-calculator.html"},
+  {cat:"life",catName:"Everyday",name:"Heart Rate Zones Calculator",desc:"Calculate training heart rate zones from age…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"heart-rate-zones.html"},
+  {cat:"life",catName:"Everyday",name:"Ideal Weight Calculator",desc:"Estimate ideal body weight using three publi…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"ideal-weight.html"},
+  {cat:"life",catName:"Everyday",name:"Macro Split Calculator",desc:"Split daily calories into protein, carbohydr…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"macro-split.html"},
+  {cat:"life",catName:"Everyday",name:"QR Code Generator",desc:"URL or text to QR, downloadable",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"qr-code-generator.html"},
+  {cat:"life",catName:"Everyday",name:"Running Pace Calculator",desc:"Calculate running pace from distance and tim…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"pace-calculator.html"},
+  {cat:"life",catName:"Everyday",name:"Sleep Cycle Calculator",desc:"Work out what time to go to bed or wake up…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"sleep-cycle.html"},
+  {cat:"life",catName:"Everyday",name:"Timer / Stopwatch",desc:"Countdown and count-up",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"timer.html"},
+  {cat:"life",catName:"Everyday",name:"Water Intake Calculator",desc:"Estimate daily water needs from body weight…",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"water-intake.html"},
+  {cat:"life",catName:"Everyday",name:"Word Counter",desc:"Characters, words, paragraphs, read time",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"word-counter.html"},
+  {cat:"life",catName:"Everyday",name:"World Clock",desc:"Current time in major cities",icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',link:"world-clock.html"},
+  {cat:"network",catName:"Network",name:"Chmod Calculator",desc:"Build a Unix permission mode from checkboxes…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"chmod-calculator.html"},
+  {cat:"network",catName:"Network",name:"CSS Minifier",desc:"Remove comments, whitespace and redundant ch…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"css-minifier.html"},
+  {cat:"network",catName:"Network",name:"HTTP Status Code Reference",desc:"Look up any HTTP status code with its meanin…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"http-status-codes.html"},
+  {cat:"network",catName:"Network",name:"Internet Speed Test",desc:"Download, upload, ping & jitter",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"speed-test.html"},
+  {cat:"network",catName:"Network",name:"Meta Tag Generator",desc:"Generate title, description, canonical, Open…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"meta-tag-generator.html"},
+  {cat:"network",catName:"Network",name:"MIME Type Reference",desc:"Find the correct Content-Type for a file ext…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"mime-types.html"},
+  {cat:"network",catName:"Network",name:"Password Generator",desc:"Custom length, generated locally",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"password-generator.html"},
+  {cat:"network",catName:"Network",name:"Redirect Rule Generator",desc:"Generate redirect rules for Apache, Nginx an…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"redirect-generator.html"},
+  {cat:"network",catName:"Network",name:"Robots.txt Generator",desc:"Build a robots.txt with user-agent rules, al…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"robots-txt-generator.html"},
+  {cat:"network",catName:"Network",name:"SQL Formatter",desc:"Format SQL with keywords on their own lines…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"sql-formatter.html"},
+  {cat:"network",catName:"Network",name:"Subnet Calculator",desc:"Calculate network address, broadcast, usable…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"subnet-calculator.html"},
+  {cat:"network",catName:"Network",name:"Unix Timestamp Converter",desc:"Convert Unix timestamps to readable dates an…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"timestamp-converter.html"},
+  {cat:"network",catName:"Network",name:"URL Parser",desc:"Split a URL into protocol, host, port, path…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"url-parser.html"},
+  {cat:"network",catName:"Network",name:"User Agent Parser",desc:"Paste a user agent string to identify browse…",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"user-agent-parser.html"},
+  {cat:"network",catName:"Network",name:"What Is My IP",desc:"Public IP, location & ISP",icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>',link:"what-is-my-ip.html"},
+  {cat:"security",catName:"Security",name:"2FA Code Generator (TOTP)",desc:"Generate 6-digit TOTP codes from a base32 se…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"totp-generator.html"},
+  {cat:"security",catName:"Security",name:"AES Text Encryptor",desc:"Encrypt text with a passphrase using AES-256…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"aes-encryptor.html"},
+  {cat:"security",catName:"Security",name:"Base64 Encoder / Decoder",desc:"Encode text to base64 or decode it back, wit…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"base64-encoder.html"},
+  {cat:"security",catName:"Security",name:"Hash Generator (SHA)",desc:"Compute SHA hashes of any text in your brows…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"hash-generator.html"},
+  {cat:"security",catName:"Security",name:"HMAC Generator",desc:"Compute an HMAC signature from a message and…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"hmac-generator.html"},
+  {cat:"security",catName:"Security",name:"JWT Decoder",desc:"Decode a JSON Web Token to read its header a…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"jwt-decoder.html"},
+  {cat:"security",catName:"Security",name:"Password Strength Checker",desc:"Estimate password entropy and offline crack…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"password-strength-checker.html"},
+  {cat:"security",catName:"Security",name:"TOTP Secret Generator",desc:"Generate a cryptographically random base32 s…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"totp-secret-generator.html"},
+  {cat:"security",catName:"Security",name:"URL Encoder / Decoder",desc:"Percent-encode or decode text for URLs and q…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"url-encoder.html"},
+  {cat:"security",catName:"Security",name:"UUID Generator",desc:"Generate RFC 4122 version 4 UUIDs in your br…",icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',link:"uuid-generator.html"},
+  {cat:"text",catName:"Text",name:"Add Line Numbers",desc:"Prefix every line with a number. Choose the…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"line-numbering.html"},
+  {cat:"text",catName:"Text",name:"Case Converter",desc:"UPPER, lower, Title, Sentence",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"case-converter.html"},
+  {cat:"text",catName:"Text",name:"Character Counter",desc:"Characters, with and without spaces",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"character-counter.html"},
+  {cat:"text",catName:"Text",name:"CSV to JSON",desc:"Convert CSV to JSON in the browser. Handles…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"csv-to-json.html"},
+  {cat:"text",catName:"Text",name:"Find and Replace",desc:"Find and replace across text, with optional…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"find-replace.html"},
+  {cat:"text",catName:"Text",name:"HTML Escape / Unescape",desc:"Escape HTML special characters to entities…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"html-escape.html"},
+  {cat:"text",catName:"Text",name:"JSON Formatter",desc:"Format, minify and validate JSON. Shows the…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"json-formatter.html"},
+  {cat:"text",catName:"Text",name:"JSON to CSV",desc:"Convert a JSON array to CSV. Flattens nested…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"json-to-csv.html"},
+  {cat:"text",catName:"Text",name:"Lorem Ipsum Generator",desc:"Generate placeholder text by paragraph, sent…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"lorem-ipsum.html"},
+  {cat:"text",catName:"Text",name:"Markdown Preview",desc:"Write Markdown and see it rendered live. Sup…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"markdown-preview.html"},
+  {cat:"text",catName:"Text",name:"Morse Code Translator",desc:"Translate text to Morse code and decode Mors…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"morse-code-translator.html"},
+  {cat:"text",catName:"Text",name:"Palindrome Checker",desc:"Check whether text reads the same backwards…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"palindrome-checker.html"},
+  {cat:"text",catName:"Text",name:"Reading Time Calculator",desc:"Estimate reading time from word count at adj…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"reading-time.html"},
+  {cat:"text",catName:"Text",name:"Regex Tester",desc:"Test a regular expression against sample tex…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"regex-tester.html"},
+  {cat:"text",catName:"Text",name:"Remove Duplicate Lines",desc:"Remove duplicate lines from a list. Case-ins…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"dedupe-lines.html"},
+  {cat:"text",catName:"Text",name:"Remove Line Breaks",desc:"Strip line breaks and extra spaces",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"remove-line-breaks.html"},
+  {cat:"text",catName:"Text",name:"Slug Generator",desc:"Turn titles into clean URL slugs. Handles ac…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"slug-generator.html"},
+  {cat:"text",catName:"Text",name:"Sort Lines",desc:"Sort a list alphabetically, numerically, by…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"sort-lines.html"},
+  {cat:"text",catName:"Text",name:"Text Diff",desc:"Compare two texts side by side",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"text-diff.html"},
+  {cat:"text",catName:"Text",name:"Text Reverser",desc:"Reverse text by character, word or line. Han…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"text-reverse.html"},
+  {cat:"text",catName:"Text",name:"Text Statistics",desc:"Count words, characters, sentences and parag…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"text-statistics.html"},
+  {cat:"text",catName:"Text",name:"Text to Speech",desc:"Read text aloud using your system voices. Ad…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"text-to-speech.html"},
+  {cat:"text",catName:"Text",name:"Whitespace Remover",desc:"Collapse multiple spaces, strip trailing whi…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"whitespace-remover.html"},
+  {cat:"text",catName:"Text",name:"Word Frequency Counter",desc:"Count how often each word appears, with stop…",icon:'<path d="M4 7h16M4 12h10M4 17h16"/>',link:"word-frequency.html"}
 ];
 
 let activeCat = "all";

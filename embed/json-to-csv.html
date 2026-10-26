@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON to CSV Converter — Flatten Nested Objects — Embeddable</title>
+<!-- 嵌入页与原页同内容，一律 noindex，权重只归原页 -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable JSON to CSV Converter — Flatten Nested Objects widget — runs entirely in the browser, no sign-up, no upload.">
+<link rel="canonical" href="https://haowordtool.com/tools/json-to-csv.html">
+<link rel="stylesheet" href="/assets/tools.css">
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+<style>
+  /* 嵌入态：去掉页边距，压掉大标题，只留工具本体 */
+  html,body{margin:0;padding:0;background:#0b0f14}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+  .embed-wrap{padding:14px 14px 0}
+  .embed-wrap h1{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .embed-wrap > p:first-of-type{font-size:13px;color:#8b9bb0;margin:0 0 14px}
+  .embed-credit{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 14px;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:#8b9bb0;background:#0b0f14}
+  .embed-credit a{color:#4fd1c5;text-decoration:none;font-weight:600}
+  .embed-credit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">JSON to CSV</h1>
+    <p class="lead">Paste an array of objects, get CSV. Nested keys are flattened with dots; the column set is the union of every row.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_input">JSON</label><textarea id="f_input" rows="10" placeholder="" spellcheck="false">[{&quot;name&quot;:&quot;Jane&quot;,&quot;age&quot;:31,&quot;address&quot;:{&quot;city&quot;:&quot;Boston&quot;}},{&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:42,&quot;address&quot;:{&quot;city&quot;:&quot;New York&quot;},&quot;vip&quot;:true}]</textarea></div>
+      <div class="fld"><label for="f_delim">Delimiter</label><select id="f_delim"><option value="," selected>comma</option><option value=";">semicolon</option><option value="	">tab</option></select></div>
+      <div class="fld chk"><input id="f_flat" type="checkbox" checked><label for="f_flat">Flatten nested objects</label></div>
+      <div class="out-grid">
+        <div class="out-block"><div class="out-head"><span>CSV</span><button class="copy" data-copy="out">Copy</button></div><pre id="o_out">—</pre></div>
+        <div class="metric"><div class="metric-label">Rows</div><div class="metric-value" id="o_rows">—</div></div>
+        <div class="metric"><div class="metric-label">Columns</div><div class="metric-value" id="o_cols">—</div></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>When rows have different keys, the column set is the union — a row without <code>vip</code> gets an empty cell rather than shifting the remaining columns left.</p></div>
+
+    <div class="seo-content">
+<p>CSV is a flat table; JSON is a tree. Converting between them means deciding what happens to the parts that do not fit, and that decision is where most converters quietly lose data.</p>
+<h2>Flattening</h2>
+<p>A nested object <code>{"address":{"city":"Boston"}}</code> becomes a column named <code>address.city</code>. This preserves the nesting in the header, which is round-trippable if you later un-flatten. Turn it off to get <code>[object Object]</code> — occasionally useful to see which columns are nested.</p>
+<h2>Arrays</h2>
+<p>Arrays are serialised as JSON strings inside a single cell rather than spread across columns. Spreading them would require a rule for which array index maps to which column, and there is no rule that works for arbitrary data.</p>
+<h2>Ragged rows</h2>
+<p>The column set is the union across all rows, so a field present in one row appears in every row. This is why the output is wider than the first row suggests, and why missing values appear as empty cells rather than absent columns.</p>
+    </div>
+
+    
+  </div>
+
+</div>
+<div class="embed-credit">
+  <span>Free, browser-based, no sign-up.</span>
+  <a href="https://haowordtool.com/tools/json-to-csv.html" target="_blank" rel="noopener">JSON to CSV Converter by HaoWordTool →</a>
+</div>
+<script>
+
+const FIELDS = [{"k":"input","label":"JSON","type":"area"},{"k":"delim","label":"Delimiter","type":"sel","opts":[[",","comma"],[";","semicolon"],["\t","tab"]]},{"k":"flat","label":"Flatten nested objects","type":"chk"}];
+const OUTS = [{"k":"out","label":"CSV","type":"code"},{"k":"rows","label":"Rows","type":"big"},{"k":"cols","label":"Columns","type":"big"}];
+const COMPUTE = (v) => {
+      let data;
+      try {
+        data = JSON.parse(String(v.input || 'null'));
+      } catch (e) {
+        throw new Error('Invalid JSON: ' + e.message);
+      }
+      if (!Array.isArray(data)) data = [data];
+      if (!data.length) return { out: '', rows: '0', cols: '0' };
+      const flat = (obj, prefix, out) => {
+        for (const [k, val] of Object.entries(obj)) {
+          const key = prefix ? `${prefix}.${k}` : k;
+          if (v.flat && val && typeof val === 'object' && !Array.isArray(val)) flat(val, key, out);
+          else out[key] = Array.isArray(val) ? JSON.stringify(val) : val === null || val === undefined ? '' : val;
+        }
+        return out;
+      };
+      const rows = data.map((r) => (r && typeof r === 'object' ? flat(r, '', {}) : { value: r }));
+      const cols = [...new Set(rows.flatMap((r) => Object.keys(r)))];
+      const d = v.delim || ',';
+      const cell = (x) => {
+        const s = x === undefined || x === null ? '' : String(x);
+        return /["\n\r]/.test(s) || s.includes(d) ? `"${s.replace(/"/g, '""')}"` : s;
+      };
+      const csv = [cols.map(cell).join(d), ...rows.map((r) => cols.map((c) => cell(r[c])).join(d))].join('\n');
+      return { out: csv, rows: String(rows.length), cols: String(cols.length) };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["slug-generator","lorem-ipsum","text-reverse","http-status-codes"]</script>
+</body>
+</html>

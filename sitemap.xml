@@ -106,28 +106,109 @@
   <url><loc>https://haowordtool.com/templates.html</loc></url>
   <url><loc>https://haowordtool.com/terms.html</loc></url>
   <url><loc>https://haowordtool.com/tools/</loc></url>
+  <url><loc>https://haowordtool.com/tools/aes-encryptor.html</loc></url>
   <url><loc>https://haowordtool.com/tools/age-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/base64-encoder.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/base64-to-image.html</loc></url>
   <url><loc>https://haowordtool.com/tools/bmi-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/bmr-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/body-fat-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/break-even.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/business-days.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/cagr-calculator.html</loc></url>
   <url><loc>https://haowordtool.com/tools/calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/calorie-calculator.html</loc></url>
   <url><loc>https://haowordtool.com/tools/case-converter.html</loc></url>
   <url><loc>https://haowordtool.com/tools/case-converter/</loc></url>
   <url><loc>https://haowordtool.com/tools/character-counter.html</loc></url>
   <url><loc>https://haowordtool.com/tools/character-counter/</loc></url>
+  <url><loc>https://haowordtool.com/tools/chmod-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/color-converter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/color-palette.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/compound-interest.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/css-minifier.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/csv-to-json.html</loc></url>
   <url><loc>https://haowordtool.com/tools/currency-converter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/date-difference.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/dedupe-lines.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/discount-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/favicon-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/file-hash.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/find-replace.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/gradient-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/hash-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/heart-rate-zones.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/hmac-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/html-escape.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/http-status-codes.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/ideal-weight.html</loc></url>
   <url><loc>https://haowordtool.com/tools/image-compressor.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/image-flip.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/image-format-converter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/image-grayscale.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/image-rotate.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/image-to-base64.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/json-formatter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/json-to-csv.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/jwt-decoder.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/line-numbering.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/loan-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/lorem-ipsum.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/macro-split.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/markdown-preview.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/markup-margin.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/meta-tag-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/mime-types.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/morse-code-translator.html</loc></url>
   <url><loc>https://haowordtool.com/tools/mortgage-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/number-base-converter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/overtime-pay.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/pace-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/palindrome-checker.html</loc></url>
   <url><loc>https://haowordtool.com/tools/password-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/password-strength-checker.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/percentage-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/percentage-change.html</loc></url>
   <url><loc>https://haowordtool.com/tools/qr-code-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/reading-time.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/redirect-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/regex-tester.html</loc></url>
   <url><loc>https://haowordtool.com/tools/remove-line-breaks.html</loc></url>
   <url><loc>https://haowordtool.com/tools/remove-line-breaks/</loc></url>
   <url><loc>https://haowordtool.com/tools/resize-image.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/robots-txt-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/roi-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/roman-numerals.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/salary-to-hourly.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/savings-goal.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/sleep-cycle.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/slug-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/sort-lines.html</loc></url>
   <url><loc>https://haowordtool.com/tools/speed-test.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/sql-formatter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/subnet-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/svg-to-png.html</loc></url>
   <url><loc>https://haowordtool.com/tools/text-diff.html</loc></url>
   <url><loc>https://haowordtool.com/tools/text-diff/</loc></url>
+  <url><loc>https://haowordtool.com/tools/text-reverse.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/text-statistics.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/text-to-speech.html</loc></url>
   <url><loc>https://haowordtool.com/tools/timer.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/timestamp-converter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/tip-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/totp-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/totp-secret-generator.html</loc></url>
   <url><loc>https://haowordtool.com/tools/unit-converter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/url-encoder.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/url-parser.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/user-agent-parser.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/uuid-generator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/vat-calculator.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/water-intake.html</loc></url>
   <url><loc>https://haowordtool.com/tools/what-is-my-ip.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/whitespace-remover.html</loc></url>
   <url><loc>https://haowordtool.com/tools/word-counter.html</loc></url>
+  <url><loc>https://haowordtool.com/tools/word-frequency.html</loc></url>
   <url><loc>https://haowordtool.com/tools/world-clock.html</loc></url>
   <url><loc>https://haowordtool.com/unscrambler.html</loc></url>
   <url><loc>https://haowordtool.com/video-studio.html</loc></url>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Gradient Generator — Linear and Radial — Embeddable</title>
+<!-- 嵌入页与原页同内容，一律 noindex，权重只归原页 -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable CSS Gradient Generator — Linear and Radial widget — runs entirely in the browser, no sign-up, no upload.">
+<link rel="canonical" href="https://haowordtool.com/tools/gradient-generator.html">
+<link rel="stylesheet" href="/assets/tools.css">
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+<style>
+  /* 嵌入态：去掉页边距，压掉大标题，只留工具本体 */
+  html,body{margin:0;padding:0;background:#0b0f14}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+  .embed-wrap{padding:14px 14px 0}
+  .embed-wrap h1{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .embed-wrap > p:first-of-type{font-size:13px;color:#8b9bb0;margin:0 0 14px}
+  .embed-credit{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 14px;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:#8b9bb0;background:#0b0f14}
+  .embed-credit a{color:#4fd1c5;text-decoration:none;font-weight:600}
+  .embed-credit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">CSS Gradient Generator</h1>
+    <p class="lead">Two or three stops, any angle, and the CSS to paste. Preview updates as you type.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_type">Type</label><select id="f_type"><option value="linear" selected>Linear</option><option value="radial">Radial</option></select></div>
+      <div class="fld"><label for="f_angle">Angle (degrees)</label><input id="f_angle" type="number" inputmode="decimal" step="5" value="135"  ></div>
+      <div class="fld"><label for="f_c1">Start colour</label><input id="f_c1" type="text" value="#4fd1c5" placeholder="" spellcheck="false"></div>
+      <div class="fld"><label for="f_c2">End colour</label><input id="f_c2" type="text" value="#1a202c" placeholder="" spellcheck="false"></div>
+      <div class="fld"><label for="f_c3">Middle colour (blank to skip)</label><input id="f_c3" type="text" value="" placeholder="" spellcheck="false"></div>
+      <div class="out-grid">
+        <div class="out-block"><div class="out-head"><span>CSS</span><button class="copy" data-copy="css">Copy</button></div><pre id="o_css">—</pre></div>
+        <div class="out-block"><div class="out-head"><span>Preview</span></div><img id="o_preview" alt="" style="max-width:100%;display:block;background: repeating-conic-gradient(#1a2029 0% 25%, #131920 0% 50%) 50%/16px 16px"></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>135deg runs from the top-left corner toward the bottom-right. Two colours at the same position produce a hard edge; that is how you get stripes without a repeating gradient.</p></div>
+
+    <div class="seo-content">
+<p>Gradients are cheap visually and expensive to tune by hand — the interpolation happens in sRGB by default, which is why a gradient from blue to yellow passes through a muddy grey rather than a clean transition.</p>
+<h2>Avoiding the grey middle</h2>
+<p>Choose endpoints that share a hue, or add a middle stop to steer the path. Interpolating in oklab produces perceptually even transitions, but browser support for <code>in oklab</code> is still uneven enough that most production CSS adds a third stop instead.</p>
+    </div>
+
+    
+  </div>
+
+</div>
+<div class="embed-credit">
+  <span>Free, browser-based, no sign-up.</span>
+  <a href="https://haowordtool.com/tools/gradient-generator.html" target="_blank" rel="noopener">CSS Gradient Generator by HaoWordTool →</a>
+</div>
+<script>
+
+const FIELDS = [{"k":"type","label":"Type","type":"sel","opts":[["linear","Linear"],["radial","Radial"]]},{"k":"angle","label":"Angle (degrees)","type":"num"},{"k":"c1","label":"Start colour","type":"text"},{"k":"c2","label":"End colour","type":"text"},{"k":"c3","label":"Middle colour (blank to skip)","type":"text"}];
+const OUTS = [{"k":"css","label":"CSS","type":"code"},{"k":"preview","label":"Preview","type":"img"}];
+const COMPUTE = (v) => {
+      const c = [v.c1, v.c3, v.c2].filter((x) => String(x || '').trim());
+      const stops = c.join(', ');
+      const css = v.type === 'radial'
+        ? `background: radial-gradient(circle at 50% 50%, ${stops});`
+        : `background: linear-gradient(${Number(v.angle) || 0}deg, ${stops});`;
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">${c.map((col, i) => `<stop offset="${(i / Math.max(1, c.length - 1)) * 100}%" stop-color="${col}"/>`).join('')}</linearGradient></defs><rect width="320" height="120" fill="url(#g)"/></svg>`;
+      return { css, preview: `data:image/svg+xml,${encodeURIComponent(svg)}` };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["image-to-base64","base64-to-image","image-grayscale","http-status-codes"]</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4489946300243174" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirect Generator — Apache, Nginx and Cloudflare</title>
+<meta name="description" content="Generate redirect rules for Apache, Nginx and Cloudflare from a list of old and new paths. One rule per line.">
+<link rel="canonical" href="https://haowordtool.com/tools/redirect-generator.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/redirect-generator.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/redirect-generator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/tools.css">
+<meta property="og:title" content="Redirect Generator — Apache, Nginx and Cloudflare">
+<meta property="og:description" content="Generate redirect rules for Apache, Nginx and Cloudflare from a list of old and new paths. One rule per line.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://haowordtool.com/tools/redirect-generator.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Redirect Rule Generator",
+  "url": "https://haowordtool.com/tools/redirect-generator.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Generate redirect rules for Apache, Nginx and Cloudflare from a list of old and new paths. One rule per line."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "301 or 302?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "301 if the move is permanent — search engines transfer signals and browsers cache it aggressively. 302 if it might be reverted. Cached 301s are painful to undo because they live in browser caches you cannot clear."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://haowordtool.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://haowordtool.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Redirect Rule Generator",
+      "item": "https://haowordtool.com/tools/redirect-generator.html"
+    }
+  ]
+}
+</script>
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header">
+  <div class="wrap">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="/assets/haowordtool-logo.png" alt="HaoWordTool" style="height:38px;width:auto;"></a>
+      <div class="nav-right"><a href="index.html" class="back" style="font-size:13px;color:var(--muted);text-decoration:none">← All tools</a></div>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">Redirect Rule Generator</h1>
+    <p class="lead">Paste old and new paths, pick the server, get syntax you can paste. 301 or 302.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_pairs">Old → New (one per line, space or tab separated)</label><textarea id="f_pairs" rows="8" placeholder="" spellcheck="false">/old-page /new-page
+/legacy/tool.html /tools/text-diff.html</textarea></div>
+      <div class="fld"><label for="f_target">Server</label><select id="f_target"><option value="apache" selected>Apache .htaccess</option><option value="nginx">Nginx</option><option value="cf">Cloudflare Bulk Redirects CSV</option><option value="vercel">Vercel / Next.js</option></select></div>
+      <div class="fld"><label for="f_code">Status</label><select id="f_code"><option value="301" selected>301 permanent</option><option value="302">302 temporary</option></select></div>
+      <div class="out-grid">
+        <div class="out-block"><div class="out-head"><span>Rules</span><button class="copy" data-copy="out">Copy</button></div><pre id="o_out">—</pre></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>Redirect rules are matched in order, and the first match wins. A broad rule placed before a specific one makes the specific one unreachable — the usual reason a redirect "does not work" on a site where it clearly exists.</p></div>
+
+    <div class="seo-content">
+<p>Redirects are how a site move keeps its search equity. Every old URL that 404s instead of redirecting loses whatever it had accumulated, and a bulk migration without a redirect map loses all of it at once.</p>
+<h2>Rule order</h2>
+<p>Put the specific rules first and the catch-all last. In Apache, <code>RedirectMatch</code> with a regex will swallow everything after it; in Nginx, the first matching <code>location</code> wins. Testing one URL from each end of the map is the quickest way to catch an ordering mistake.</p>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related tools</h2>
+      <ul>
+        <li><a href="http-status-codes.html">HTTP Status Code Reference</a></li>
+        <li><a href="mime-types.html">MIME Type Reference</a></li>
+        <li><a href="chmod-calculator.html">Chmod Calculator</a></li>
+        <li><a href="calorie-calculator.html">Calorie Needs Calculator</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+<footer style="padding:32px 0;margin-top:40px;border-top:1px solid rgba(255,255,255,.07)">
+  <div class="wrap" style="font-size:13px;color:var(--muted)">
+    <a href="/" style="color:var(--muted)">HaoWordTool</a> ·
+    <a href="/tools/" style="color:var(--muted)">All tools</a> ·
+    <a href="/privacy.html" style="color:var(--muted)">Privacy</a> ·
+    <a href="/terms.html" style="color:var(--muted)">Terms</a> ·
+    <a href="/contact.html" style="color:var(--muted)">Contact</a>
+    <p style="margin:10px 0 0">Every tool on this site runs entirely in your browser. Nothing you type or upload is sent to a server.</p>
+  </div>
+</footer>
+<script>
+
+const FIELDS = [{"k":"pairs","label":"Old → New (one per line, space or tab separated)","type":"area"},{"k":"target","label":"Server","type":"sel","opts":[["apache","Apache .htaccess"],["nginx","Nginx"],["cf","Cloudflare Bulk Redirects CSV"],["vercel","Vercel / Next.js"]]},{"k":"code","label":"Status","type":"sel","opts":[["301","301 permanent"],["302","302 temporary"]]}];
+const OUTS = [{"k":"out","label":"Rules","type":"code"}];
+const COMPUTE = (v) => {
+      const rows = String(v.pairs || '').split('\n').map((l) => l.trim()).filter(Boolean).map((l) => l.split(/\s+/));
+      if (!rows.length) return { out: 'Paste at least one pair' };
+      const bad = rows.filter((r) => r.length < 2);
+      if (bad.length) throw new Error(`Line "${bad[0].join(' ')}" needs both an old and a new path`);
+      const code = v.code || '301';
+      const out = rows.map(([from, to]) => {
+        const f = from.startsWith('/') ? from : '/' + from;
+        const t = to.startsWith('/') || /^https?:/.test(to) ? to : '/' + to;
+        if (v.target === 'apache') {
+          return `Redirect ${code} ${f} ${t}`;
+        }
+        if (v.target === 'nginx') {
+          return `location = ${f} {\n    return ${code} ${t};\n}`;
+        }
+        if (v.target === 'vercel') {
+          return `{ "source": "${f}", "destination": "${t}", "permanent": ${code === '301'} }`;
+        }
+        // Cloudflare Bulk Redirects 的 CSV 表头固定，源地址必须是完整 URL
+        return `https://haowordtool.com${f},https://haowordtool.com${t.replace(/^https?:\/\/[^/]+/, '')},${code},true,false,false,false`;
+      });
+      const header = v.target === 'cf'
+        ? 'source_url,target_url,status_code,preserve_query_string,include_subdomains,subpath_matching,preserve_path_suffix\n'
+        : v.target === 'vercel' ? '[redirects]\n' : '';
+      return { out: header + out.join(v.target === 'vercel' ? ',\n' : '\n') };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["http-status-codes","mime-types","chmod-calculator","calorie-calculator"]</script>
+<script src="/assets/related-tools.js" defer></script>
+</body>
+</html>

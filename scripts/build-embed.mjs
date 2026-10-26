@@ -209,7 +209,10 @@ for (const t of tools) {
 
   // 残余相对链接 = 在 /embed/ 下会 404，必须挡在构建阶段。
   // 只放行三种：绝对站内 /xxx、带协议的、纯锚点。
-  const leftovers = [...out.matchAll(/(?:src|href)="([^"]*)"/g)]
+  // 只看 HTML 部分。脚本里的模板字符串（href="favicon-${s}.png"）不是链接，
+  // 扫进去就是误报——第一次跑就有三个工具栽在这上面。
+  const htmlOnly = out.replace(/<script[\s\S]*?<\/script>/gi, '');
+  const leftovers = [...htmlOnly.matchAll(/(?:src|href)="([^"]*)"/g)]
     .map((m) => m[1])
     .filter((u) => u && !/^(?:[a-z]+:)?\/\//i.test(u) && !u.startsWith('/') && !u.startsWith('#'));
   if (leftovers.length) problems.push(`${t.rel}: 残留相对链接 ${[...new Set(leftovers)].slice(0, 3).join(', ')}`);

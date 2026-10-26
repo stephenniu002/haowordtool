@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Frequency Counter — Top Words and Keyword Density — Embeddable</title>
+<!-- 嵌入页与原页同内容，一律 noindex，权重只归原页 -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable Word Frequency Counter — Top Words and Keyword Density widget — runs entirely in the browser, no sign-up, no upload.">
+<link rel="canonical" href="https://haowordtool.com/tools/word-frequency.html">
+<link rel="stylesheet" href="/assets/tools.css">
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+<style>
+  /* 嵌入态：去掉页边距，压掉大标题，只留工具本体 */
+  html,body{margin:0;padding:0;background:#0b0f14}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+  .embed-wrap{padding:14px 14px 0}
+  .embed-wrap h1{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .embed-wrap > p:first-of-type{font-size:13px;color:#8b9bb0;margin:0 0 14px}
+  .embed-credit{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 14px;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:#8b9bb0;background:#0b0f14}
+  .embed-credit a{color:#4fd1c5;text-decoration:none;font-weight:600}
+  .embed-credit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">Word Frequency Counter</h1>
+    <p class="lead">Top words with counts and density. Stop words filtered by default, so the list shows what the text is actually about.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_input">Text</label><textarea id="f_input" rows="10" placeholder="" spellcheck="false"></textarea></div>
+      <div class="fld chk"><input id="f_stop" type="checkbox" checked><label for="f_stop">Remove common stop words</label></div>
+      <div class="fld"><label for="f_min">Minimum word length</label><input id="f_min" type="number" inputmode="decimal" step="1" value="3" min="1" max="20"></div>
+      <div class="fld"><label for="f_top">Show top N</label><input id="f_top" type="number" inputmode="decimal" step="5" value="30" min="5" max="200"></div>
+      <div class="out-grid">
+        <div class="out-block"><div class="out-head"><span>Frequency table</span><button class="copy" data-copy="out">Copy</button></div><pre id="o_out">—</pre></div>
+        <div class="metric"><div class="metric-label">Words analysed</div><div class="metric-value" id="o_total">—</div></div>
+        <div class="metric"><div class="metric-label">Unique words</div><div class="metric-value" id="o_unique">—</div></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>The density figure is the word count divided by total words analysed, not by unique words. A term at 4% density in a 1000-word article appears 40 times — usually a sign of keyword stuffing rather than relevance.</p></div>
+
+    <div class="seo-content">
+<p>Word frequency answers a narrow question well: which terms does this text repeat, and how often. That is useful for finding accidental repetition, checking whether a piece actually covers its stated topic, and spotting the difference between what a page says it is about and what it keeps talking about.</p>
+<h2>Density is a diagnostic, not a target</h2>
+<p>There is no correct keyword density. Search engines have not used it as a ranking signal for many years, and writing to a percentage produces prose that reads like it was written to a percentage. Use the figure to notice over-repetition, not to hit a number.</p>
+<h2>Stop words</h2>
+<p>Filtering them out makes the list readable: without the filter, "the" and "of" dominate every English text and bury the terms you care about. Turn it off when analysing writing style rather than topic — function-word frequency is a fingerprint of authorship.</p>
+<h2>Hyphens and possessives</h2>
+<p>Hyphenated compounds are kept together, so "long-term" counts as one word. Possessives are stripped, so "user's" and "users" both count as "users", which is usually the intent.</p>
+    </div>
+
+    
+  </div>
+
+</div>
+<div class="embed-credit">
+  <span>Free, browser-based, no sign-up.</span>
+  <a href="https://haowordtool.com/tools/word-frequency.html" target="_blank" rel="noopener">Word Frequency Counter by HaoWordTool →</a>
+</div>
+<script>
+
+const FIELDS = [{"k":"input","label":"Text","type":"area"},{"k":"stop","label":"Remove common stop words","type":"chk"},{"k":"min","label":"Minimum word length","type":"num"},{"k":"top","label":"Show top N","type":"num"}];
+const OUTS = [{"k":"out","label":"Frequency table","type":"code"},{"k":"total","label":"Words analysed","type":"big"},{"k":"unique","label":"Unique words","type":"big"}];
+const COMPUTE = (v) => {
+      const STOP = new Set('the a an and or but if then than that this these those of in on at to for from by with without as is are was were be been being it its it\'s not no you your we our they their he she his her i me my can will would could should do does did have has had about into over under more most other some such only own same so too very just'.split(' '));
+      const min = Math.max(1, Number(v.min) || 1);
+      const words = String(v.input || '')
+        .toLowerCase()
+        .replace(/[^\p{L}\p{N}\s'-]/gu, ' ')
+        .split(/\s+/)
+        .map((w) => w.replace(/^[-']+|[-']+$/g, ''))
+        .filter((w) => w.length >= min && /[\p{L}\p{N}]/u.test(w));
+      const total = words.length;
+      const counts = new Map();
+      for (const w of words) {
+        if (v.stop && STOP.has(w)) continue;
+        counts.set(w, (counts.get(w) || 0) + 1);
+      }
+      const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      const top = Math.max(5, Math.min(200, Number(v.top) || 30));
+      const rows = sorted.slice(0, top).map(([w, n], i) => {
+        const density = total ? ((n / total) * 100).toFixed(2) : '0.00';
+        return `${String(i + 1).padStart(3)}. ${w.padEnd(22)} ${String(n).padStart(5)}  ${density.padStart(6)}%`;
+      });
+      return {
+        out: rows.length ? rows.join('\n') : 'No words above the length threshold',
+        total: String(total),
+        unique: String(counts.size),
+      };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["slug-generator","lorem-ipsum","text-reverse","http-status-codes"]</script>
+</body>
+</html>

@@ -113,7 +113,13 @@ if (fs.existsSync(sitemapPath)) {
       errors.push(`sitemap.xml: missing file for /${loc}`);
       continue;
     }
-    if (/<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(fs.readFileSync(abs, 'utf8'))) {
+    // 先剥掉 script/style 再判。工具页里会出现 noindex 这个字符串本身
+    // （比如 meta 标签生成器的输出模板），那不是一个 meta 标签，只是代码里的字面量。
+    // 不剥的话，把它收录进 sitemap 反而被报成"自相矛盾"。
+    const rawPage = fs.readFileSync(abs, 'utf8')
+      .replace(/<script[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[\s\S]*?<\/style>/gi, '');
+    if (/<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(rawPage)) {
       errors.push(`${rel}: sitemap/noindex conflict`);
     }
   }

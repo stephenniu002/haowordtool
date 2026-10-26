@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4489946300243174" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lorem Ipsum Generator — Placeholder Text by Paragraph</title>
+<meta name="description" content="Generate placeholder text by paragraph, sentence or word count. Classic Latin or a plain-English variant, ready to copy.">
+<link rel="canonical" href="https://haowordtool.com/tools/lorem-ipsum.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/lorem-ipsum.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/lorem-ipsum.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/tools.css">
+<meta property="og:title" content="Lorem Ipsum Generator — Placeholder Text by Paragraph">
+<meta property="og:description" content="Generate placeholder text by paragraph, sentence or word count. Classic Latin or a plain-English variant, ready to copy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://haowordtool.com/tools/lorem-ipsum.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Lorem Ipsum Generator",
+  "url": "https://haowordtool.com/tools/lorem-ipsum.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Generate placeholder text by paragraph, sentence or word count. Classic Latin or a plain-English variant, ready to copy."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the output always the same?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Sentences and paragraph lengths are randomised on each run, so repeated clicks give different text — which is what you want when filling several cards or columns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it commercially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Latin itself is public domain. The generated arrangement is not copyrightable in any meaningful sense."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://haowordtool.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://haowordtool.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Lorem Ipsum Generator",
+      "item": "https://haowordtool.com/tools/lorem-ipsum.html"
+    }
+  ]
+}
+</script>
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header">
+  <div class="wrap">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="/assets/haowordtool-logo.png" alt="HaoWordTool" style="height:38px;width:auto;"></a>
+      <div class="nav-right"><a href="index.html" class="back" style="font-size:13px;color:var(--muted);text-decoration:none">← All tools</a></div>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">Lorem Ipsum Generator</h1>
+    <p class="lead">Paragraphs, sentences or words. Classic Latin, or English filler that reads like real copy for layout tests.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_n">How many</label><input id="f_n" type="number" inputmode="decimal" step="1" value="3" min="1" max="100"></div>
+      <div class="fld"><label for="f_unit">Unit</label><select id="f_unit"><option value="para" selected>paragraphs</option><option value="sent">sentences</option><option value="word">words</option></select></div>
+      <div class="fld"><label for="f_flavor">Flavor</label><select id="f_flavor"><option value="latin" selected>Classic Latin</option><option value="en">Plain English</option></select></div>
+      <div class="fld chk"><input id="f_start" type="checkbox" checked><label for="f_start">Start with "Lorem ipsum dolor sit amet"</label></div>
+      <div class="out-grid">
+        <div class="out-block"><div class="out-head"><span>Text</span><button class="copy" data-copy="out">Copy</button></div><pre id="o_out">—</pre></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>Lorem ipsum is scrambled Latin from Cicero's <em>De finibus bonorum et malorum</em>, used as filler since the 1500s. The point is that it has the letter-frequency and word-length distribution of real prose, so a layout tested with it does not collapse when the real copy arrives.</p></div>
+
+    <div class="seo-content">
+<p>Placeholder text exists to be replaced. Its only job is to occupy the right amount of space with the right visual texture so that typography, line length and wrapping can be judged before the content exists.</p>
+<h2>Latin or English</h2>
+<p>Classic Latin is neutral — nobody reads it, so reviewers look at the layout instead of editing the words. Plain English is better when you need to check how real sentences fall: capitalisation, sentence length, and whether the line-height survives actual punctuation. Use English for design review, Latin for client mockups.</p>
+<h2>What it will not catch</h2>
+<p>Lorem ipsum has no long words, no URLs, no numbers and no code. A layout that looks perfect with it will still break on a 40-character German compound or an unbreakable tracking number. Test those cases with real strings before shipping.</p>
+<h2>Accessibility note</h2>
+<p>Screen readers will attempt to pronounce Latin filler. For anything that will be tested with assistive technology, mark placeholder blocks <code>aria-hidden="true"</code> or use real sample content instead.</p>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related tools</h2>
+      <ul>
+        <li><a href="slug-generator.html">Slug Generator</a></li>
+        <li><a href="text-reverse.html">Text Reverser</a></li>
+        <li><a href="sort-lines.html">Sort Lines</a></li>
+        <li><a href="http-status-codes.html">HTTP Status Code Reference</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+<footer style="padding:32px 0;margin-top:40px;border-top:1px solid rgba(255,255,255,.07)">
+  <div class="wrap" style="font-size:13px;color:var(--muted)">
+    <a href="/" style="color:var(--muted)">HaoWordTool</a> ·
+    <a href="/tools/" style="color:var(--muted)">All tools</a> ·
+    <a href="/privacy.html" style="color:var(--muted)">Privacy</a> ·
+    <a href="/terms.html" style="color:var(--muted)">Terms</a> ·
+    <a href="/contact.html" style="color:var(--muted)">Contact</a>
+    <p style="margin:10px 0 0">Every tool on this site runs entirely in your browser. Nothing you type or upload is sent to a server.</p>
+  </div>
+</footer>
+<script>
+
+const FIELDS = [{"k":"n","label":"How many","type":"num"},{"k":"unit","label":"Unit","type":"sel","opts":[["para","paragraphs"],["sent","sentences"],["word","words"]]},{"k":"flavor","label":"Flavor","type":"sel","opts":[["latin","Classic Latin"],["en","Plain English"]]},{"k":"start","label":"Start with \"Lorem ipsum dolor sit amet\"","type":"chk"}];
+const OUTS = [{"k":"out","label":"Text","type":"code"}];
+const COMPUTE = (v) => {
+      const LAT = 'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure in reprehenderit voluptate velit esse cillum eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt culpa qui officia deserunt mollit anim id est laborum'.split(' ');
+      const EN = 'the quick brown fox jumps over a lazy dog while the layout shifts and the text reflows across every breakpoint that the designer promised would hold up under real content'.split(' ');
+      const words = v.flavor === 'en' ? EN : LAT;
+      const pick = (i) => words[i % words.length];
+      const sentence = (n) => {
+        let w = [];
+        for (let i = 0; i < n; i++) w.push(pick(i));
+        return w.join(' ').replace(/^./, (c) => c.toUpperCase()) + '.';
+      };
+      const para = () => {
+        const s = [];
+        const len = 3 + Math.floor(Math.random() * 3);
+        for (let i = 0; i < len; i++) s.push(sentence(8 + Math.floor(Math.random() * 10)));
+        return s.join(' ');
+      };
+      const n = Math.max(1, Math.min(100, Math.floor(Number(v.n) || 1)));
+      let out = [];
+      if (v.unit === 'para') for (let i = 0; i < n; i++) out.push(para());
+      else if (v.unit === 'sent') for (let i = 0; i < n; i++) out.push(sentence(8 + Math.floor(Math.random() * 10)));
+      else {
+        let w = [];
+        for (let i = 0; i < n; i++) w.push(pick(i + 2));
+        out = [w.join(' ')];
+      }
+      let text = v.unit === 'para' ? out.join('\n\n') : out.join(' ');
+      if (v.start && v.unit !== 'word') {
+        text = text.replace(/^./, 'L').replace(/^\S+/, 'Lorem ipsum dolor sit amet,');
+      }
+      return { out: text };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["slug-generator","text-reverse","sort-lines","http-status-codes"]</script>
+<script src="/assets/related-tools.js" defer></script>
+</body>
+</html>

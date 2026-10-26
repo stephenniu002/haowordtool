@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JWT Decoder — Inspect Header and Payload Claims — Embeddable</title>
+<!-- 嵌入页与原页同内容，一律 noindex，权重只归原页 -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable JWT Decoder — Inspect Header and Payload Claims widget — runs entirely in the browser, no sign-up, no upload.">
+<link rel="canonical" href="https://haowordtool.com/tools/jwt-decoder.html">
+<link rel="stylesheet" href="/assets/tools.css">
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+<style>
+  /* 嵌入态：去掉页边距，压掉大标题，只留工具本体 */
+  html,body{margin:0;padding:0;background:#0b0f14}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+  .embed-wrap{padding:14px 14px 0}
+  .embed-wrap h1{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .embed-wrap > p:first-of-type{font-size:13px;color:#8b9bb0;margin:0 0 14px}
+  .embed-credit{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 14px;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:#8b9bb0;background:#0b0f14}
+  .embed-credit a{color:#4fd1c5;text-decoration:none;font-weight:600}
+  .embed-credit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">JWT Decoder</h1>
+    <p class="lead">Paste a token to read its header and claims. Expiry is checked against your clock; the signature is not verified.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_token">Token</label><textarea id="f_token" rows="5" placeholder="eyJhbGciOi..." spellcheck="false"></textarea></div>
+      <div class="out-grid">
+        <div class="out-block"><div class="out-head"><span>Header</span><button class="copy" data-copy="header">Copy</button></div><pre id="o_header">—</pre></div>
+        <div class="out-block"><div class="out-head"><span>Payload</span><button class="copy" data-copy="payload">Copy</button></div><pre id="o_payload">—</pre></div>
+        <div class="metric"><div class="metric-label">Expiry</div><div class="metric-value" id="o_exp">—</div></div>
+        <div class="out-block"><div class="out-head"><span>Notes</span><button class="copy" data-copy="warn">Copy</button></div><pre id="o_warn">—</pre></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>Decoding is not verification. Anyone can craft a token with any claims they like; only the signature tells you the issuer actually produced it. Reading claims from an unverified token and trusting them is how "admin: true" becomes an incident.</p></div>
+
+    <div class="seo-content">
+<p>A JWT is three base64url segments separated by dots: header, payload, signature. The first two are plain text in disguise — base64 is an encoding, not a lock. This tool shows them and stops there, because verification needs the issuer's key and that belongs in your server code, not in a random web page.</p>
+<h2>Reading the claims</h2>
+<p><code>exp</code> is expiry in Unix seconds, <code>iat</code> is issuance, <code>nbf</code> is not-before. <code>iss</code> and <code>aud</code> identify who issued the token and who it was meant for — a token with the right signature but the wrong audience is still an invalid token, and skipping that check is a real vulnerability class.</p>
+<h2>The traps this page flags</h2>
+<p>A token with <code>alg: none</code> and no signature is the oldest JWT attack: the server is told not to verify. A token with no <code>exp</code> never expires, which means a leaked one is valid forever. Both are visible in the header and payload, and both are worth catching before the token reaches production.</p>
+<h2>Where to verify</h2>
+<p>Signature verification requires the key: HMAC for symmetric, the issuer's public key for RS256/ES256. Do it on the server, check <code>iss</code>, <code>aud</code> and <code>exp</code> after the signature, and reject any algorithm the issuer did not publish — accepting whatever the header claims is the algorithm-confusion vulnerability.</p>
+    </div>
+
+    
+  </div>
+
+</div>
+<div class="embed-credit">
+  <span>Free, browser-based, no sign-up.</span>
+  <a href="https://haowordtool.com/tools/jwt-decoder.html" target="_blank" rel="noopener">JWT Decoder by HaoWordTool →</a>
+</div>
+<script>
+
+const FIELDS = [{"k":"token","label":"Token","type":"area"}];
+const OUTS = [{"k":"header","label":"Header","type":"code"},{"k":"payload","label":"Payload","type":"code"},{"k":"exp","label":"Expiry","type":"big"},{"k":"warn","label":"Notes","type":"code"}];
+const COMPUTE = (v) => {
+      const raw = String(v.token || '').trim().replace(/^Bearer\s+/i, '');
+      if (!raw) return { header: '—', payload: '—', exp: '—', warn: 'Paste a token' };
+      const parts = raw.split('.');
+      if (parts.length < 2) throw new Error('A JWT has three dot-separated parts');
+      const b64u = (s) => {
+        let x = s.replace(/-/g, '+').replace(/_/g, '/');
+        while (x.length % 4) x += '=';
+        const bin = atob(x);
+        return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
+      };
+      let header;
+      let payload;
+      try {
+        header = JSON.parse(b64u(parts[0]));
+        payload = JSON.parse(b64u(parts[1]));
+      } catch {
+        throw new Error('Header or payload is not valid base64url JSON');
+      }
+      const notes = [];
+      if (parts.length === 2 || parts[2] === '') notes.push('· No signature segment — this token is unsigned.');
+      if (String(header.alg).toLowerCase() === 'none') notes.push('· alg is "none". Any server that accepts this is accepting forged tokens.');
+      if (!payload.exp && !payload.iat) notes.push('· No exp or iat claim — this token never expires on its own.');
+      if (payload.exp && payload.exp < Date.now() / 1000) notes.push('· Token is expired.');
+      const fmt = (t) => (t ? new Date(t * 1000).toISOString().replace('T', ' ').slice(0, 19) + ' UTC' : '—');
+      const exp = payload.exp
+        ? `${fmt(payload.exp)} (${payload.exp < Date.now() / 1000 ? 'expired' : 'valid'})`
+        : 'no exp claim';
+      return {
+        header: JSON.stringify(header, null, 2),
+        payload: JSON.stringify(payload, null, 2),
+        exp,
+        warn: notes.length ? notes.join('\n') : '· Standard three-part token with a signature segment.',
+      };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["totp-generator","totp-secret-generator","password-strength-checker","http-status-codes"]</script>
+</body>
+</html>

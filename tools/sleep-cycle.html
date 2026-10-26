@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4489946300243174" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleep Calculator — Bedtime by Sleep Cycles</title>
+<meta name="description" content="Work out what time to go to bed or wake up, based on 90-minute sleep cycles. Accounts for the time taken to fall asleep.">
+<link rel="canonical" href="https://haowordtool.com/tools/sleep-cycle.html">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/tools/sleep-cycle.html">
+<link rel="alternate" hreflang="x-default" href="https://haowordtool.com/tools/sleep-cycle.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/tools.css">
+<meta property="og:title" content="Sleep Calculator — Bedtime by Sleep Cycles">
+<meta property="og:description" content="Work out what time to go to bed or wake up, based on 90-minute sleep cycles. Accounts for the time taken to fall asleep.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://haowordtool.com/tools/sleep-cycle.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sleep Cycle Calculator",
+  "url": "https://haowordtool.com/tools/sleep-cycle.html",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Work out what time to go to bed or wake up, based on 90-minute sleep cycles. Accounts for the time taken to fall asleep."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need exactly six cycles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Most adults need seven to nine hours total; cycles are a way of arranging that, not a substitute for it."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://haowordtool.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://haowordtool.com/tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sleep Cycle Calculator",
+      "item": "https://haowordtool.com/tools/sleep-cycle.html"
+    }
+  ]
+}
+</script>
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+</head>
+<body>
+<div class="bg"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<header id="header">
+  <div class="wrap">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="/assets/haowordtool-logo.png" alt="HaoWordTool" style="height:38px;width:auto;"></a>
+      <div class="nav-right"><a href="index.html" class="back" style="font-size:13px;color:var(--muted);text-decoration:none">← All tools</a></div>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">Sleep Cycle Calculator</h1>
+    <p class="lead">Ninety-minute cycles, plus 15 minutes to fall asleep. Waking at the end of a cycle is what makes the difference.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_mode">I want to</label><select id="f_mode"><option value="wake" selected>wake up at…</option><option value="bed">go to bed now at…</option></select></div>
+      <div class="fld"><label for="f_time">Time (HH:MM, 24h)</label><input id="f_time" type="text" value="07:00" placeholder="" spellcheck="false"></div>
+      <div class="fld"><label for="f_fall">Minutes to fall asleep</label><input id="f_fall" type="number" inputmode="decimal" step="any" value="15"  ></div>
+      <div class="out-grid">
+        <div class="out-block"><div class="out-head"><span>Options</span><button class="copy" data-copy="out">Copy</button></div><pre id="o_out">—</pre></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>To wake at 07:00 after six cycles, go to bed at 21:45 — 540 minutes of sleep plus 15 to fall asleep. Five cycles moves that to 23:15.</p></div>
+
+    <div class="seo-content">
+<p>Sleep runs in cycles of roughly 90 minutes, moving through light sleep, deep sleep and REM. Waking mid-cycle, especially out of deep sleep, produces grogginess that can last an hour even after adequate total sleep.</p>
+<h2>Why 90 minutes is approximate</h2>
+<p>Cycle length varies between 70 and 120 minutes depending on the person and the night, and shifts toward longer cycles later in the night. The calculator gives a target, not a guarantee; the useful signal is that going to bed 20 minutes later can feel worse than sleeping less.</p>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related tools</h2>
+      <ul>
+        <li><a href="calorie-calculator.html">Calorie Needs Calculator</a></li>
+        <li><a href="bmr-calculator.html">BMR Calculator</a></li>
+        <li><a href="body-fat-calculator.html">Body Fat Calculator</a></li>
+        <li><a href="http-status-codes.html">HTTP Status Code Reference</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+<footer style="padding:32px 0;margin-top:40px;border-top:1px solid rgba(255,255,255,.07)">
+  <div class="wrap" style="font-size:13px;color:var(--muted)">
+    <a href="/" style="color:var(--muted)">HaoWordTool</a> ·
+    <a href="/tools/" style="color:var(--muted)">All tools</a> ·
+    <a href="/privacy.html" style="color:var(--muted)">Privacy</a> ·
+    <a href="/terms.html" style="color:var(--muted)">Terms</a> ·
+    <a href="/contact.html" style="color:var(--muted)">Contact</a>
+    <p style="margin:10px 0 0">Every tool on this site runs entirely in your browser. Nothing you type or upload is sent to a server.</p>
+  </div>
+</footer>
+<script>
+
+const FIELDS = [{"k":"mode","label":"I want to","type":"sel","opts":[["wake","wake up at…"],["bed","go to bed now at…"]]},{"k":"time","label":"Time (HH:MM, 24h)","type":"text"},{"k":"fall","label":"Minutes to fall asleep","type":"num"}];
+const OUTS = [{"k":"out","label":"Options","type":"code"}];
+const COMPUTE = (v) => {
+      const m = /^(\d{1,2}):(\d{2})$/.exec(String(v.time).trim());
+      if (!m) throw new Error('Time must be HH:MM');
+      const fall = Math.max(0, Number(v.fall) || 0);
+      const base = new Date();
+      base.setHours(+m[1], +m[2], 0, 0);
+      const fmt = (d) => `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+      const out = [];
+      for (let cycles = 6; cycles >= 3; cycles--) {
+        const mins = cycles * 90 + fall;
+        const d = new Date(base.getTime() + (v.mode === 'wake' ? -mins : mins) * 60000);
+        out.push(`${cycles} cycles (${(cycles * 1.5).toFixed(1)} h sleep) → ${fmt(d)}`);
+      }
+      return { out: out.join('\n') };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["calorie-calculator","bmr-calculator","body-fat-calculator","http-status-codes"]</script>
+<script src="/assets/related-tools.js" defer></script>
+</body>
+</html>

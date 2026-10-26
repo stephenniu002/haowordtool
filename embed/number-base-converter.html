@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Base Converter — Binary, Octal, Decimal, Hex — Embeddable</title>
+<!-- 嵌入页与原页同内容，一律 noindex，权重只归原页 -->
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Embeddable Number Base Converter — Binary, Octal, Decimal, Hex widget — runs entirely in the browser, no sign-up, no upload.">
+<link rel="canonical" href="https://haowordtool.com/tools/number-base-converter.html">
+<link rel="stylesheet" href="/assets/tools.css">
+<style>
+.fld { margin-bottom: 14px; }
+.fld label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+.fld .u { color:var(--muted-2); }
+.fld input[type=text], .fld input[type=number], .fld select, .fld textarea {
+  width:100%; box-sizing:border-box; background:rgba(255,255,255,.04); color:var(--text,#e6edf3);
+  border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; padding:10px 12px;
+  font-size:14px; font-family:inherit;
+}
+.fld textarea { font-family:var(--mono,ui-monospace,monospace); font-size:13px; line-height:1.6; resize:vertical; }
+.fld.chk { display:flex; align-items:center; gap:8px; }
+.fld.chk label { margin:0; font-size:14px; color:var(--text,#e6edf3); }
+.out-grid { display:grid; gap:10px; margin-top:6px; }
+.metric { display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  padding:12px 14px; border-radius:10px; background:rgba(79,209,197,.06); border:1px solid rgba(79,209,197,.18); }
+.metric-label { font-size:13px; color:var(--muted); }
+.metric-value { font-size:18px; font-weight:700; color:#4fd1c5; font-variant-numeric:tabular-nums; }
+.out-block { margin-top:12px; border:1px solid var(--border-strong,rgba(255,255,255,.14)); border-radius:10px; overflow:hidden; }
+.out-head { display:flex; align-items:center; justify-content:space-between; padding:8px 12px;
+  background:rgba(255,255,255,.03); font-size:12.5px; color:var(--muted); }
+.out-block pre { margin:0; padding:12px; font-family:var(--mono,ui-monospace,monospace); font-size:12.5px;
+  line-height:1.7; white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto; }
+.copy { background:none; border:1px solid var(--border-strong,rgba(255,255,255,.16)); color:var(--muted);
+  border-radius:6px; padding:2px 8px; font-size:11.5px; cursor:pointer; font-family:inherit; }
+.copy:hover { color:#4fd1c5; border-color:rgba(79,209,197,.4); }
+#err { color:#fca5a5; font-size:13px; margin-top:10px; min-height:18px; }
+.example { margin:20px 0; padding:14px 16px; border-left:3px solid rgba(79,209,197,.5);
+  background:rgba(79,209,197,.05); border-radius:0 10px 10px 0; }
+.example h3 { margin:0 0 6px; font-size:14px; }
+.example p { margin:0; font-size:13.5px; color:var(--muted); }
+.example code { color:#7de8dc; }
+.related-tools { margin-top:28px; }
+.related-tools ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.related-tools a { display:block; padding:12px 14px; border:1px solid var(--border-strong,rgba(255,255,255,.1));
+  border-radius:10px; text-decoration:none; color:var(--text,#e6edf3); font-size:14px; }
+.related-tools a:hover { border-color:rgba(79,209,197,.4); }
+</style>
+<style>
+  /* 嵌入态：去掉页边距，压掉大标题，只留工具本体 */
+  html,body{margin:0;padding:0;background:#0b0f14}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#e6edf3}
+  .embed-wrap{padding:14px 14px 0}
+  .embed-wrap h1{font-size:18px;margin:0 0 10px;line-height:1.3}
+  .embed-wrap > p:first-of-type{font-size:13px;color:#8b9bb0;margin:0 0 14px}
+  .embed-credit{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 14px;margin-top:14px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:#8b9bb0;background:#0b0f14}
+  .embed-credit a{color:#4fd1c5;text-decoration:none;font-weight:600}
+  .embed-credit a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="embed-wrap">
+
+  <div class="wrap tool-page">
+    <h1 style="margin-top:16px">Number Base Converter</h1>
+    <p class="lead">Type in any base, read all of them. Bases 2 to 36 supported, with 32-bit and 64-bit views for bit-level work.</p>
+
+    <div class="card">
+      <div class="fld"><label for="f_value">Value</label><input id="f_value" type="text" value="255" placeholder="" spellcheck="false"></div>
+      <div class="fld"><label for="f_base">Input base</label><select id="f_base"><option value="2">2 binary</option><option value="8">8 octal</option><option value="10" selected>10 decimal</option><option value="16">16 hex</option><option value="36">36 base-36</option></select></div>
+      <div class="out-grid">
+        <div class="metric"><div class="metric-label">Decimal</div><div class="metric-value" id="o_dec">—</div></div>
+        <div class="out-block"><div class="out-head"><span>Binary</span><button class="copy" data-copy="bin">Copy</button></div><pre id="o_bin">—</pre></div>
+        <div class="metric"><div class="metric-label">Octal</div><div class="metric-value" id="o_oct">—</div></div>
+        <div class="metric"><div class="metric-label">Hex</div><div class="metric-value" id="o_hex">—</div></div>
+        <div class="out-block"><div class="out-head"><span>Bit view</span><button class="copy" data-copy="bits">Copy</button></div><pre id="o_bits">—</pre></div>
+      </div>
+      <div id="err"></div>
+    </div>
+
+    <div class="example"><h3>Worked example</h3><p>255 is 11111111 in binary, 377 in octal and FF in hex. In the 8-bit grouping it is one full byte — which is why 255 is the mask for a single octet.</p></div>
+
+    <div class="seo-content">
+<p>Base conversion is exact for integers and lossy for fractions, which is why this page does not accept a decimal point. Floating-point bases are a different problem with a different answer, and pretending otherwise produces quietly wrong values.</p>
+<h2>Where each base shows up</h2>
+<p>Binary for bitmasks and permissions, octal for Unix file modes, hex for colours, memory addresses and byte literals, base-36 for short URL identifiers. The grouping by eight bits is there because byte boundaries are what matter at the level where these conversions get used.</p>
+    </div>
+
+    
+  </div>
+
+</div>
+<div class="embed-credit">
+  <span>Free, browser-based, no sign-up.</span>
+  <a href="https://haowordtool.com/tools/number-base-converter.html" target="_blank" rel="noopener">Number Base Converter by HaoWordTool →</a>
+</div>
+<script>
+
+const FIELDS = [{"k":"value","label":"Value","type":"text"},{"k":"base","label":"Input base","type":"sel","opts":[["2","2 binary"],["8","8 octal"],["10","10 decimal"],["16","16 hex"],["36","36 base-36"]]}];
+const OUTS = [{"k":"dec","label":"Decimal","type":"big"},{"k":"bin","label":"Binary","type":"code"},{"k":"oct","label":"Octal","type":"big"},{"k":"hex","label":"Hex","type":"big"},{"k":"bits","label":"Bit view","type":"code"}];
+const COMPUTE = (v) => {
+      const base = Number(v.base) || 10;
+      const raw = String(v.value || '').trim().toLowerCase().replace(/^0x/, '');
+      if (!raw) return { dec: '—', bin: '', oct: '—', hex: '—', bits: '' };
+      if (base < 2 || base > 36) throw new Error('Base must be between 2 and 36');
+      let n = 0;
+      for (const ch of raw) {
+        const d = parseInt(ch, 36);
+        if (isNaN(d) || d >= base) throw new Error(`"${ch}" is not valid in base ${base}`);
+        n = n * base + d;
+      }
+      const bin = n.toString(2);
+      // 32 位分组，Linux 权限、掩码、协议头都按这个看
+      const grouped = bin.padStart(Math.ceil(bin.length / 8) * 8, '0').replace(/(.{8})(?=.)/g, '$1 ');
+      return {
+        dec: n.toLocaleString('en-US').replace(/,/g, ''),
+        bin: grouped,
+        oct: '0o' + n.toString(8),
+        hex: '0x' + n.toString(16).toUpperCase(),
+        bits: `${bin.length} bits`,
+      };
+    };
+
+const $ = (id) => document.getElementById(id);
+const val = (f, el) => {
+  if (f.type === 'chk') return el.checked;
+  if (f.type === 'num') return el.value === '' ? NaN : Number(el.value);
+  return el.value;
+};
+
+function readFile(el) {
+  return new Promise((res, rej) => {
+    const file = el.files && el.files[0];
+    if (!file) return res('');
+    const r = new FileReader();
+    r.onload = () => res(r.result);
+    r.onerror = () => rej(new Error('Could not read the file'));
+    r.readAsDataURL(file);
+  });
+}
+
+async function collect() {
+  const v = {};
+  for (const f of FIELDS) {
+    const el = $('f_' + f.k);
+    v[f.k] = f.type === 'file' ? await readFile(el) : val(f, el);
+  }
+  return v;
+}
+
+function put(k, x) {
+  const el = $('o_' + k);
+  if (!el) return;
+  if (el.tagName === 'IMG') { el.src = typeof x === 'string' ? x : ''; return; }
+  if (typeof x === 'string' || typeof x === 'number') el.textContent = String(x);
+  else if (x && typeof x === 'object' && 'text' in x) el.textContent = x.text;
+  else el.textContent = JSON.stringify(x);
+}
+
+let timer = null;
+async function run(now) {
+  // 慢一点再算：textarea 每次按键都跑一遍，长文本上会卡
+  if (!now) { clearTimeout(timer); timer = setTimeout(() => run(true), 120); return; }
+  try {
+    const res = await COMPUTE(await collect());
+    for (const o of OUTS) put(o.k, res[o.k] === undefined ? '—' : res[o.k]);
+    document.body.classList.remove('has-error');
+  } catch (err) {
+    for (const o of OUTS) put(o.k, '—');
+    document.body.classList.add('has-error');
+    const box = $('err');
+    if (box) box.textContent = err && err.message ? err.message : String(err);
+  }
+}
+
+for (const f of FIELDS) {
+  const el = $('f_' + f.k);
+  if (!el) continue;
+  const evt = el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'file' ? 'change' : 'input';
+  el.addEventListener(evt, () => run(false));
+}
+
+document.querySelectorAll('.copy').forEach((b) => {
+  b.addEventListener('click', async () => {
+    const el = $('o_' + b.dataset.copy);
+    try { await navigator.clipboard.writeText(el.textContent); b.textContent = 'Copied'; }
+    catch { b.textContent = 'Press Ctrl+C'; }
+    setTimeout(() => (b.textContent = 'Copy'), 1400);
+  });
+});
+
+run(true);
+
+
+</script>
+<script type="application/json" id="relatedData">["percentage-calculator","percentage-change","tip-calculator","http-status-codes"]</script>
+</body>
+</html>
