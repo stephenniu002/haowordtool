@@ -33,3 +33,8 @@ marketing/demo-en/frames.txt
 marketing/demo-en/render.py
 
 marketing/demo-en/audio/
+
+# 修复脚本的原始文件备份，不进仓库
+.head-backup/
+*.tmp-fix
+*.tmp-ni

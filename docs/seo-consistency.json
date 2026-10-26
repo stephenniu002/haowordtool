@@ -1,0 +1,3016 @@
+{
+  "generated": "2026-10-26T08:41:50.924Z",
+  "summary": {
+    "pages": 365,
+    "byCode": {
+      "HL_NO_SELF": 303,
+      "CANON_TRAILING": 3,
+      "HL_LANG_MISMATCH": 2,
+      "HL_NOT_CLOSED": 136
+    },
+    "bySeverity": {
+      "error": 0,
+      "warn": 444
+    },
+    "byDir": {
+      "about": {
+        "error": 0,
+        "warn": 1
+      },
+      "about.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "account.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "affiliate-dashboard.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "affiliate-marketing.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "affiliate-products.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai": {
+        "error": 0,
+        "warn": 30
+      },
+      "ai-companion.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-compute-export.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-content-agency.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-glasses.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-money-cases-zh.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-money-cases.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-nav-en.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-nav.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-one-person-company-guide.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-rank": {
+        "error": 0,
+        "warn": 2
+      },
+      "ai-search-visibility.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-spokesperson.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-studio.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-tools": {
+        "error": 0,
+        "warn": 3
+      },
+      "ai-tools.html": {
+        "error": 0,
+        "warn": 2
+      },
+      "ai-workflow-systems.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ai-workspace.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "app-builder.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "blog": {
+        "error": 0,
+        "warn": 2
+      },
+      "blog.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "checkout.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "contact": {
+        "error": 0,
+        "warn": 1
+      },
+      "contact.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "courses.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "custom-web-design.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "de": {
+        "error": 0,
+        "warn": 58
+      },
+      "delivery.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "editorial-standards.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "en": {
+        "error": 0,
+        "warn": 48
+      },
+      "es": {
+        "error": 0,
+        "warn": 48
+      },
+      "examples": {
+        "error": 0,
+        "warn": 4
+      },
+      "faq.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "fiverr-affiliate-program.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "fiverr-ai-services.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "fiverr-services.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "fr": {
+        "error": 0,
+        "warn": 33
+      },
+      "google-profile-help-local-services.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "google-profile-help-restaurants.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "google-profile-help.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "guides": {
+        "error": 0,
+        "warn": 30
+      },
+      "how-it-works.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ielts-course.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "index.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "ja": {
+        "error": 0,
+        "warn": 15
+      },
+      "landing-pages.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "learn": {
+        "error": 0,
+        "warn": 4
+      },
+      "links.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "local-ai.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "media-downloader.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "multi-platform-publishing-checklist.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "order.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "outfits.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "premium-digital-products.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "pricing.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "privacy": {
+        "error": 0,
+        "warn": 1
+      },
+      "privacy.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "publisher.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "reviews.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "services": {
+        "error": 0,
+        "warn": 5
+      },
+      "share.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "shop": {
+        "error": 0,
+        "warn": 1
+      },
+      "skill-bank.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "social-publisher.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "start.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "suanli-chuhai.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "templates.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "terms.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "tools": {
+        "error": 0,
+        "warn": 38
+      },
+      "top-100-products-2026.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "unscrambler.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "video-studio": {
+        "error": 0,
+        "warn": 1
+      },
+      "videos.html": {
+        "error": 0,
+        "warn": 1
+      },
+      "zh": {
+        "error": 0,
+        "warn": 10
+      },
+      "audio": {
+        "error": 0,
+        "warn": 2
+      },
+      "ko": {
+        "error": 0,
+        "warn": 25
+      },
+      "premium-digital": {
+        "error": 0,
+        "warn": 21
+      }
+    }
+  },
+  "issues": [
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/about/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/about.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/account.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/affiliate-dashboard.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/affiliate-marketing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/affiliate-products.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/ai-rank-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/ai-rank.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/backlinks-zh.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/backlinks.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/best-heated-shawls-winter-2026.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/blog.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/boards-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/boards.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/daily-2026-10-17-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/daily-2026-10-17.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/daily-2026-10-18.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/heated-shawl-power-bank-hours.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/heated-shawl-price-breakdown-40-vs-80.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/heated-shawl-usb-power-pitfall.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/income.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/infra-bubble-ai-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/infra-bubble-ai.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/keywords-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/keywords.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/models-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/models.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/oil-painting-case-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/oil-painting-case.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/pro-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/pro.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/social-media-extract.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/sunxue-15-points.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/trends-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai/trends.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-companion.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-compute-export.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-content-agency.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-glasses.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-money-cases-zh.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-money-cases.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-nav-en.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-nav.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-one-person-company-guide.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "CANON_TRAILING",
+      "severity": "warn",
+      "page": "/ai-rank/index.html",
+      "detail": "canonical 形式与页面对不上：/ai-tools/rank/ vs /ai-rank/index.html"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-rank/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-search-visibility.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-spokesperson.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-studio.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_LANG_MISMATCH",
+      "severity": "warn",
+      "page": "/ai-tools/index.html",
+      "detail": "hreflang=\"zh-hans\" 但 https://haowordtool.com/ai-tools/ 的 lang=zh-cn"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-tools/index.html",
+      "detail": "缺自指 hreflang=\"en\""
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-tools/rank/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "CANON_TRAILING",
+      "severity": "warn",
+      "page": "/ai-tools.html",
+      "detail": "canonical 形式与页面对不上：/shop/services/ai-studio.html vs /ai-tools.html"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-tools.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-workflow-systems.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ai-workspace.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/app-builder.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "CANON_TRAILING",
+      "severity": "warn",
+      "page": "/blog/index.html",
+      "detail": "canonical 形式与页面对不上：/ai-tools/ vs /blog/index.html"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/blog.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/checkout.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/contact/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/contact.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/courses.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/custom-web-design.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_LANG_MISMATCH",
+      "severity": "warn",
+      "page": "/de/index.html",
+      "detail": "hreflang=\"en\" 但 https://haowordtool.com/ 的 lang=zh-cn"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/delivery.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/editorial-standards.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/about.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/affiliate-disclosure.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/affiliate-marketing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/affiliate-products.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/ai-companion.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/app-builder.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/audio/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/audio/pricing/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/blog/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/blog.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/contact.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/cookie-policy.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/custom-web-design.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/editorial-standards.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/faq.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/how-it-works.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/ielts/academic-writing-task-2-plan.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/ielts/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/ielts/speaking-part-2-one-minute-plan.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/ielts-course.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/ai-website-templates.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/customize-html-template.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/export-html-css-js-zip.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/html-css-javascript-online-editor.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/landing-page-html-template.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/portfolio-website-source-code.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/preview-mobile-webpage.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/learn/run-ai-html.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/local-ai.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/media-downloader.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/order.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/pricing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/privacy.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/publisher.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/services/disclosure.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/services/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/services/logo-design.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/services/video-editing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/services/website-design.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/share.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/social-publisher.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/templates.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/terms.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/unscrambler.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/video-studio.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/en/videos.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/about.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/affiliate-marketing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/ai-companion.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/app-builder.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/blog.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/contact.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/custom-web-design.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/editorial-standards.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/faq.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/how-it-works.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/ielts-course.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/local-ai.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/media-downloader.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/order.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/premium-digital/annual-budget.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/premium-digital/dimple-dumpling.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/premium-digital/finance-dashboard.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/premium-digital/ghost-granny-square.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/premium-digital/momo-shelf-ghost.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/premium-digital/wedding-planner.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/premium-digital/willow-market-bag.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/premium-digital-products.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/pricing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/privacy.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/publisher.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/share.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/social-publisher.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/templates.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/terms.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/calculadora-de-edad.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/calculadora-hipotecaria.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/calculadora-imc.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/calculadora.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/compresor-de-imagenes.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/contador-de-palabras.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/conversor-de-monedas.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/conversor-de-unidades.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/generador-de-contrasenas.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/generador-qr.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/mi-direccion-ip.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/redimensionar-imagen.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/reloj-mundial.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/tools/temporizador.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/unscrambler.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/video-studio.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/es/videos.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/examples/daily-plan/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/examples/daily-plan-en/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/examples/landing-page-en/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/examples/portfolio-en/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/faq.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fiverr-affiliate-program.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fiverr-ai-services.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fiverr-services.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/about.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/affiliate-marketing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/ai-companion.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/app-builder.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/blog.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/contact.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/custom-web-design.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/editorial-standards.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/faq.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/how-it-works.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/ielts-course.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/local-ai.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/media-downloader.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/order.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/premium-digital/annual-budget.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/premium-digital/dimple-dumpling.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/premium-digital/finance-dashboard.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/premium-digital/ghost-granny-square.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/premium-digital/momo-shelf-ghost.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/premium-digital/wedding-planner.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/premium-digital/willow-market-bag.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/premium-digital-products.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/pricing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/privacy.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/publisher.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/share.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/social-publisher.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/templates.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/terms.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/unscrambler.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/video-studio.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/fr/videos.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/google-profile-help-local-services.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/google-profile-help-restaurants.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/google-profile-help.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/ai-animated-short-story-structure.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/ai-animation-shot-list-guide.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/ai-animation-tools-beginners-guide.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/anagram-solver-vs-word-finder.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/anagrams-for-spelling-practice.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/common-letter-pairs-and-clusters.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/crossword-constraints-step-by-step.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/dictionary-differences-and-false-positives.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/five-letter-word-solving-method.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/from-solver-result-to-real-vocabulary.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/how-anagram-algorithms-work.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/how-to-unscramble-letters-systematically.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/letter-frequency-without-myths.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/make-first-ai-animated-short-7-days.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/plural-s-and-ed-endings.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/prefixes-and-suffixes-for-anagrams.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/q-words-without-u-explained.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/rack-management-between-turns.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/responsible-use-of-word-solvers.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/scrabble-letter-values-explained.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/seven-letter-bingo-strategy.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/thirty-day-word-pattern-practice.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/vowels-and-consonants-in-word-racks.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/why-ai-animation-is-exploding.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/wildcard-blank-tile-strategy.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/word-families-for-vocabulary.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/word-puzzles-in-esl-classrooms.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/words-ending-in-ing-guide.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/guides/write-ai-animation-scripts-chatgpt.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/how-it-works.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ielts-course.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/age-calculator.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/bmi-calculator.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/calculator.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/currency-converter.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/image-compressor.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/mortgage-calculator.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/password-generator.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/qr-code-generator.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/resize-image.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/timer.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/unit-converter.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/what-is-my-ip.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/word-counter.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/ja/tools/world-clock.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/landing-pages.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/learn/export-html-css-js-zip.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/learn/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/learn/preview-mobile-webpage.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/learn/run-ai-html.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/links.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/local-ai.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/media-downloader.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/multi-platform-publishing-checklist.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/order.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/outfits.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/premium-digital-products.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/pricing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/privacy/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/privacy.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/publisher.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/reviews.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/services/disclosure.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/services/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/services/logo-design.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/services/video-editing.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/services/website-design.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/share.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/shop/services/ai-studio.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/skill-bank.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/social-publisher.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/start.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/suanli-chuhai.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/templates.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/terms.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/tools/case-converter/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/tools/case-converter.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/tools/character-counter/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/tools/character-counter.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/tools/remove-line-breaks/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/tools/remove-line-breaks.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/tools/text-diff/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/tools/text-diff.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/top-100-products-2026.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/unscrambler.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/video-studio/ja/index.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/videos.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/dianre-pijian-xuangou.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/heated-shawl.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/premium-digital/annual-budget.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/premium-digital/dimple-dumpling.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/premium-digital/finance-dashboard.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/premium-digital/ghost-granny-square.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/premium-digital/momo-shelf-ghost.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/premium-digital/wedding-planner.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/premium-digital/willow-market-bag.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NO_SELF",
+      "severity": "warn",
+      "page": "/zh/premium-digital-products.html",
+      "detail": "整页无任何 hreflang"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/audio/index.html",
+      "detail": "指向 /en/audio/index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/audio/pricing/index.html",
+      "detail": "指向 /en/audio/pricing/index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/blog/index.html",
+      "detail": "指向 /en/blog/index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/index.html",
+      "detail": "指向 /index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/index.html",
+      "detail": "指向 /es/index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/annual-budget.html",
+      "detail": "指向 /es/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/annual-budget.html",
+      "detail": "指向 /fr/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/annual-budget.html",
+      "detail": "指向 /zh/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /es/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /fr/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /zh/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/finance-dashboard.html",
+      "detail": "指向 /es/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/finance-dashboard.html",
+      "detail": "指向 /fr/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/finance-dashboard.html",
+      "detail": "指向 /zh/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /es/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /fr/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /zh/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /es/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /fr/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /zh/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/wedding-planner.html",
+      "detail": "指向 /es/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/wedding-planner.html",
+      "detail": "指向 /fr/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/wedding-planner.html",
+      "detail": "指向 /zh/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/willow-market-bag.html",
+      "detail": "指向 /es/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/willow-market-bag.html",
+      "detail": "指向 /fr/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital/willow-market-bag.html",
+      "detail": "指向 /zh/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital-products.html",
+      "detail": "指向 /premium-digital-products.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital-products.html",
+      "detail": "指向 /es/premium-digital-products.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital-products.html",
+      "detail": "指向 /fr/premium-digital-products.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/premium-digital-products.html",
+      "detail": "指向 /zh/premium-digital-products.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/age-calculator.html",
+      "detail": "指向 /es/tools/calculadora-de-edad.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/age-calculator.html",
+      "detail": "指向 /ja/tools/age-calculator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/bmi-calculator.html",
+      "detail": "指向 /es/tools/calculadora-imc.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/bmi-calculator.html",
+      "detail": "指向 /ja/tools/bmi-calculator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/calculator.html",
+      "detail": "指向 /es/tools/calculadora.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/calculator.html",
+      "detail": "指向 /ja/tools/calculator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/currency-converter.html",
+      "detail": "指向 /es/tools/conversor-de-monedas.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/currency-converter.html",
+      "detail": "指向 /ja/tools/currency-converter.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/image-compressor.html",
+      "detail": "指向 /es/tools/compresor-de-imagenes.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/image-compressor.html",
+      "detail": "指向 /ja/tools/image-compressor.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/index.html",
+      "detail": "指向 /es/tools/index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/index.html",
+      "detail": "指向 /ja/tools/index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/mortgage-calculator.html",
+      "detail": "指向 /es/tools/calculadora-hipotecaria.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/mortgage-calculator.html",
+      "detail": "指向 /ja/tools/mortgage-calculator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/password-generator.html",
+      "detail": "指向 /es/tools/generador-de-contrasenas.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/password-generator.html",
+      "detail": "指向 /ja/tools/password-generator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/qr-code-generator.html",
+      "detail": "指向 /es/tools/generador-qr.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/qr-code-generator.html",
+      "detail": "指向 /ja/tools/qr-code-generator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/resize-image.html",
+      "detail": "指向 /es/tools/redimensionar-imagen.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/resize-image.html",
+      "detail": "指向 /ja/tools/resize-image.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/timer.html",
+      "detail": "指向 /es/tools/temporizador.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/timer.html",
+      "detail": "指向 /ja/tools/timer.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/unit-converter.html",
+      "detail": "指向 /es/tools/conversor-de-unidades.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/unit-converter.html",
+      "detail": "指向 /ja/tools/unit-converter.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/what-is-my-ip.html",
+      "detail": "指向 /es/tools/mi-direccion-ip.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/what-is-my-ip.html",
+      "detail": "指向 /ja/tools/what-is-my-ip.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/word-counter.html",
+      "detail": "指向 /es/tools/contador-de-palabras.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/word-counter.html",
+      "detail": "指向 /ja/tools/word-counter.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/world-clock.html",
+      "detail": "指向 /es/tools/reloj-mundial.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/de/tools/world-clock.html",
+      "detail": "指向 /ja/tools/world-clock.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/annual-budget.html",
+      "detail": "指向 /es/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/annual-budget.html",
+      "detail": "指向 /fr/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/annual-budget.html",
+      "detail": "指向 /zh/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /es/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /fr/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /zh/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/finance-dashboard.html",
+      "detail": "指向 /es/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/finance-dashboard.html",
+      "detail": "指向 /fr/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/finance-dashboard.html",
+      "detail": "指向 /zh/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /es/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /fr/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /zh/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /es/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /fr/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /zh/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/wedding-planner.html",
+      "detail": "指向 /es/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/wedding-planner.html",
+      "detail": "指向 /fr/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/wedding-planner.html",
+      "detail": "指向 /zh/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/willow-market-bag.html",
+      "detail": "指向 /es/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/willow-market-bag.html",
+      "detail": "指向 /fr/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital/willow-market-bag.html",
+      "detail": "指向 /zh/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital-products.html",
+      "detail": "指向 /premium-digital-products.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital-products.html",
+      "detail": "指向 /es/premium-digital-products.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital-products.html",
+      "detail": "指向 /fr/premium-digital-products.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/ko/premium-digital-products.html",
+      "detail": "指向 /zh/premium-digital-products.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/annual-budget.html",
+      "detail": "指向 /es/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/annual-budget.html",
+      "detail": "指向 /fr/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/annual-budget.html",
+      "detail": "指向 /zh/premium-digital/annual-budget.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /es/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /fr/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/dimple-dumpling.html",
+      "detail": "指向 /zh/premium-digital/dimple-dumpling.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/finance-dashboard.html",
+      "detail": "指向 /es/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/finance-dashboard.html",
+      "detail": "指向 /fr/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/finance-dashboard.html",
+      "detail": "指向 /zh/premium-digital/finance-dashboard.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /es/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /fr/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/ghost-granny-square.html",
+      "detail": "指向 /zh/premium-digital/ghost-granny-square.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /es/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /fr/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/momo-shelf-ghost.html",
+      "detail": "指向 /zh/premium-digital/momo-shelf-ghost.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/wedding-planner.html",
+      "detail": "指向 /es/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/wedding-planner.html",
+      "detail": "指向 /fr/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/wedding-planner.html",
+      "detail": "指向 /zh/premium-digital/wedding-planner.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/willow-market-bag.html",
+      "detail": "指向 /es/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/willow-market-bag.html",
+      "detail": "指向 /fr/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/premium-digital/willow-market-bag.html",
+      "detail": "指向 /zh/premium-digital/willow-market-bag.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/age-calculator.html",
+      "detail": "指向 /es/tools/calculadora-de-edad.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/age-calculator.html",
+      "detail": "指向 /ja/tools/age-calculator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/bmi-calculator.html",
+      "detail": "指向 /es/tools/calculadora-imc.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/bmi-calculator.html",
+      "detail": "指向 /ja/tools/bmi-calculator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/calculator.html",
+      "detail": "指向 /es/tools/calculadora.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/calculator.html",
+      "detail": "指向 /ja/tools/calculator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/currency-converter.html",
+      "detail": "指向 /es/tools/conversor-de-monedas.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/currency-converter.html",
+      "detail": "指向 /ja/tools/currency-converter.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/image-compressor.html",
+      "detail": "指向 /es/tools/compresor-de-imagenes.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/image-compressor.html",
+      "detail": "指向 /ja/tools/image-compressor.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/index.html",
+      "detail": "指向 /es/tools/index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/index.html",
+      "detail": "指向 /ja/tools/index.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/mortgage-calculator.html",
+      "detail": "指向 /es/tools/calculadora-hipotecaria.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/mortgage-calculator.html",
+      "detail": "指向 /ja/tools/mortgage-calculator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/password-generator.html",
+      "detail": "指向 /es/tools/generador-de-contrasenas.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/password-generator.html",
+      "detail": "指向 /ja/tools/password-generator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/qr-code-generator.html",
+      "detail": "指向 /es/tools/generador-qr.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/qr-code-generator.html",
+      "detail": "指向 /ja/tools/qr-code-generator.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/resize-image.html",
+      "detail": "指向 /es/tools/redimensionar-imagen.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/resize-image.html",
+      "detail": "指向 /ja/tools/resize-image.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/timer.html",
+      "detail": "指向 /es/tools/temporizador.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/timer.html",
+      "detail": "指向 /ja/tools/timer.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/unit-converter.html",
+      "detail": "指向 /es/tools/conversor-de-unidades.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/unit-converter.html",
+      "detail": "指向 /ja/tools/unit-converter.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/what-is-my-ip.html",
+      "detail": "指向 /es/tools/mi-direccion-ip.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/what-is-my-ip.html",
+      "detail": "指向 /ja/tools/what-is-my-ip.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/word-counter.html",
+      "detail": "指向 /es/tools/contador-de-palabras.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/word-counter.html",
+      "detail": "指向 /ja/tools/word-counter.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/world-clock.html",
+      "detail": "指向 /es/tools/reloj-mundial.html，但对方未指回"
+    },
+    {
+      "code": "HL_NOT_CLOSED",
+      "severity": "warn",
+      "page": "/tools/world-clock.html",
+      "detail": "指向 /ja/tools/world-clock.html，但对方未指回"
+    }
+  ]
+}
