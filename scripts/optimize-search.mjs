@@ -58,7 +58,7 @@ export function run({check = false} = {}) {
     }
   }
   readDirectory('', false);
-  for (const dir of [...locales, 'ai', 'guides', 'learn', 'video-studio', 'services']) {
+  for (const dir of [...locales, 'ai', 'ai-rank', 'guides', 'learn', 'video-studio', 'services']) {
     if (fs.existsSync(path.join(root, dir))) readDirectory(dir, true);
   }
   const result = optimize(pages);
