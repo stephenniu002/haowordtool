@@ -229,7 +229,7 @@ function page(s, all) {
     '@type': 'SoftwareApplication',
     name: s.name,
     url,
-    applicationCategory: 'UtilityApplication',
+    applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Web',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     description: s.desc,
