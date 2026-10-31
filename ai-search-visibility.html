@@ -463,7 +463,10 @@ gtag('config', 'G-3LV3GH9T5X');
       <li><b>Write 5 brand queries first.</b> Not clever ones — the exact questions a buyer would type: "best heated shawl for office 2026", "HaoWordTool AI visibility audit price", "who makes AI translation glasses". Write them down before testing; improvising queries mid-audit skews the results toward whatever you remember.</li>
       <li><b>Run each query in a fresh session on all 4 engines.</b> ChatGPT, Perplexity, Google AI Mode, Gemini. New chat every time, memory and personalization off. For each answer record three things: were you mentioned, were you cited with a link, and were the facts right (price, features, contact)?</li>
       <li><b>Score it in a sheet.</b> Rows = the 5 queries, columns = the 4 engines, cells = mentioned / absent / wrong facts. One page, no fancy tooling. Patterns jump out immediately: "cited by Perplexity, invisible to ChatGPT" is a completely different problem from "mentioned everywhere with the wrong price".</li>
-      <!-- SCREENSHOT: a simple audit spreadsheet with brand queries as rows, the four AI engines as columns, and cells marked mentioned / absent / wrong facts -->
+      <figure style="margin:30px 0">
+<img src="/assets/screenshots/d3-visibility-spreadsheet.png" alt="Example 90-minute AI visibility self-audit sheet" loading="lazy" style="width:100%;height:auto;border:1px solid #e3e6f0;border-radius:12px;display:block">
+<figcaption style="font-size:13px;color:#6b7280;margin-top:10px;line-height:1.6">Example 90-minute self-audit sheet: five brand queries tested across four AI engines, each cell scored as mentioned, absent, or wrong facts.</figcaption>
+</figure>
       <li><b>Check robots.txt for AI crawler blocks.</b> Fetch yourdomain.com/robots.txt and search for GPTBot, PerplexityBot, Google-Extended, ClaudeBot, and CCBot. A single Disallow left over from a staging setup is the most common cause of total AI invisibility — and the cheapest to fix.</li>
       <li><b>Fetch /llms.txt at the domain root.</b> If it's missing, crawlers have no site guide. If it exists under /assets/ or /docs/ instead of the root, nothing reads it there — root only. This is the mistake we made ourselves (see below).</li>
       <li><b>Validate schema on 3 key pages.</b> Paste your homepage, a product page, and a FAQ page into Google's Rich Results Test. Record which types validate — Product, Organization, FAQPage. Broken or absent schema means AI models see plain-text guesses instead of structured facts.</li>
@@ -482,7 +485,10 @@ gtag('config', 'G-3LV3GH9T5X');
       <h3>The mistake we made on our own site</h3>
       <p>Before we added Product schema, we asked ChatGPT our own price. It answered "$99/month". Our audit is $499, one-time. The model hadn't read our pricing page — it had guessed from similar-sounding services. After we added schema with the real price, the same prompt started returning $499. We learned it the hard way: <b>if AI hallucinates your price, don't argue with the model — fix the structured data.</b> Second mistake, same project: we first published llms.txt under /assets/. It sat there for weeks doing nothing, because nothing reads llms.txt anywhere except the domain root.</p>
     </div>
-    <!-- SCREENSHOT: ChatGPT answering a brand-price query before and after Product schema was added, showing a hallucinated monthly price versus the correct one-time price -->
+    <figure style="margin:30px 0">
+<img src="/assets/screenshots/d3-visibility-beforeafter.png" alt="What Product schema changed (illustrative diagram)" loading="lazy" style="width:100%;height:auto;border:1px solid #e3e6f0;border-radius:12px;display:block">
+<figcaption style="font-size:13px;color:#6b7280;margin-top:10px;line-height:1.6">Illustrative diagram (not a chat screenshot): before Product schema the model guessed “$99/month”; after adding structured price data the same prompt returns the correct “$499 one-time”.</figcaption>
+</figure>
   </div>
 </section>
 
