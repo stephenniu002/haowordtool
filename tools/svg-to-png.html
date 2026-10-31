@@ -147,6 +147,10 @@
 <p>SVG is resolution-independent until it has to become pixels. Rasterising at 512 px and scaling down in CSS gives a crisp result on every display; rasterising at 100 px and scaling up gives a blurred one, which is how most bad logo exports happen.</p>
 <h2>Sizing</h2>
 <p>Export at the largest size you will ever display, at 2× for high-density screens. A 32 px icon should be exported at 64 or 96 px.</p>
+    
+<h2>Picking the pixel width</h2>
+<p>Rasterise at the largest size you will ever display, then let CSS scale down — a PNG can be made smaller without artefacts but not larger. For a retina screenshot set the width to twice the CSS pixel width. A blank background field leaves the canvas transparent; fill it in when the destination cannot handle alpha, which includes many email clients and most print workflows.</p>
+<p>External images and fonts referenced inside the SVG markup are not fetched during conversion, because the drawing happens in the browser without network access. Inline them as data URIs first, or convert text to paths, otherwise the output will show gaps where the assets should be.</p>
     </div>
 
     <div class="related-tools">

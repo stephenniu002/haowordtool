@@ -146,6 +146,10 @@
 <p>SQL does not care about whitespace, which is exactly why formatted SQL is a communication tool rather than a syntax requirement. The value is in review: a diff of a formatted query shows the clause that changed, not the whole line.</p>
 <h2>Dialect caveats</h2>
 <p>This is a keyword-driven formatter, not a parser. It will not understand dialect-specific syntax such as Postgres <code>::</code> casts or T-SQL <code>TOP</code>, and it will not reorder or validate anything. For anything structural, use your database's own <code>EXPLAIN</code> output.</p>
+    
+<h2>Formatting rules that survive review</h2>
+<p>Uppercase keywords and one clause per line make a query skimmable, but the change that matters most in review is placing each join beside the table it joins rather than at the end of a chain. Indenting continuations inside parentheses by two levels also keeps a nested subquery from blending into its host query.</p>
+<p>Formatting must never change semantics, so be wary of tools that rewrite: comments can be moved across a formatting pass, and a trailing comma before FROM is legal in some dialects and not others. Keep the original query beside a formatted version when diagnosing, and re-run after formatting rather than assuming the result is unchanged.</p>
     </div>
 
     <div class="related-tools">

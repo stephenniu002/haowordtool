@@ -161,6 +161,10 @@
 <p>Filtering them out makes the list readable: without the filter, "the" and "of" dominate every English text and bury the terms you care about. Turn it off when analysing writing style rather than topic — function-word frequency is a fingerprint of authorship.</p>
 <h2>Hyphens and possessives</h2>
 <p>Hyphenated compounds are kept together, so "long-term" counts as one word. Possessives are stripped, so "user's" and "users" both count as "users", which is usually the intent.</p>
+    
+<h2>Reading a frequency list correctly</h2>
+<p>Stop words dominate any raw count, so the filter matters more than the ranking: without it, the top of the list is the same handful of articles and prepositions in every document. Minimum word length is a crude second filter that catches short junk but also drops legitimate terms like AI or UX.</p>
+<p>Counts are exact-match, so run and running are separate entries and a word in a different case is a different token unless case folding is applied. That limitation is why the tool answers "which terms repeat" rather than "what is this about" — for the latter you need stemming and multi-word phrases, neither of which a bag-of-words count can give you.</p>
     </div>
 
     <div class="related-tools">

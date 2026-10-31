@@ -157,6 +157,10 @@
 <p>Checking whether a string is a palindrome, generating a rough cipher for a puzzle, and inspecting the tail of a long identifier. It is not a security measure — reversed text is not hidden text.</p>
 <h2>Copying the result</h2>
 <p>Some platforms mangle right-to-left or emoji-heavy output when it is pasted into a form field. If the result looks correct here but wrong after pasting, the problem is in the destination application's text handling.</p>
+    
+<h2>The three modes do different jobs</h2>
+<p>Reversing characters is a novelty and a good way to test encodings. Reversing word order turns a list ending in the item you want into a list starting with it, which is genuinely useful for sorting surnames, log fields and citations. Reversing line order flips a changelog or a stack trace so the most recent entry comes first.</p>
+<p>Emoji, flags and accented letters are made of several code points, so character reversal can visibly break them — a grapheme-aware reverse needs segmentation, not string indexing. Where the output feeds a machine rather than a reader, prefer reversing the field you actually care about in the source format instead of post-processing the rendered text.</p>
     </div>
 
     <div class="related-tools">

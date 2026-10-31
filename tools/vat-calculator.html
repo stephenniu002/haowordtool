@@ -148,6 +148,10 @@
 <p>VAT is charged on the net amount, so extracting it from a gross figure means dividing by <code>1 + rate</code>. Multiplying the gross by 0.8 to "remove 20%" takes 20% of the gross instead of 20% of the net, and lands 4% short on every invoice.</p>
 <h2>Rates that are not 20%</h2>
 <p>The field is free-form because rates differ by country and by category within a country. Reduced rates, zero rates and exempt supplies all exist; this tool does arithmetic, not tax advice.</p>
+    
+<h2>Adding and removing are different sums</h2>
+<p>Adding VAT multiplies by one plus the rate. Removing it divides by the same factor — it does not subtract the same percentage, and doing so overstates the reclaimable amount. On a 20 percent rate the difference is visible: 100 plus VAT is 120, and 120 minus 20 percent is 96, not 100.</p>
+<p>Rounding is where invoices go wrong. Rounding each line and then summing gives a different total from summing and rounding once, and tax authorities generally expect the invoice total to be internally consistent. Rates also vary by country and by item, with reduced rates on food, books and children's clothing in much of Europe, so confirm the rate for the specific supply rather than using the standard one by habit. Keep the rate you used beside the figure, because a rate change turns an old invoice into an unexplainable one.</p>
     </div>
 
     <div class="related-tools">

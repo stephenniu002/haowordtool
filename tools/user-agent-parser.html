@@ -145,6 +145,10 @@
 <p>The user agent string is a fossil. It encodes browser, engine, OS and device in a format designed for 1990s sniffing, then accumulated compatibility tokens as browsers pretended to be each other to avoid being blocked.</p>
 <h2>Why parsing is unreliable</h2>
 <p>Order determines the answer: every Chromium browser claims Chrome, several claim Safari. Browsers reduce the reported information over time for privacy. And anything a client sends can be faked, so a UA is a hint, never an identity.</p>
+    
+<h2>What the string cannot tell you</h2>
+<p>Every popular browser deliberately claims to be its competitors, because sites used to serve different markup per browser and nobody wanted to be left out. Chrome reports Safari, Edge reports Chrome. That is why a naive match puts most traffic in one bucket: parse the specific tokens in the documented order rather than searching for the first browser name you recognise.</p>
+<p>Treat the result as a hint, not a decision. Feature detection answers what the browser can do, which is the question that actually matters; the user agent answers what it claims to be, and it is trivially spoofed. Anything security-related must never branch on it.</p>
     </div>
 
     <div class="related-tools">

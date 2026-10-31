@@ -148,6 +148,10 @@
 <p>Format choice matters more than quality setting for most images. WebP wins on size for photographic content and supports transparency; PNG is for anything with sharp edges, text or few colours; JPEG is for photographs when compatibility with old software matters.</p>
 <h2>The transparency trap</h2>
 <p>JPEG has no alpha channel. Converting a transparent PNG to JPEG without filling the background first produces black where the transparency was — visible immediately on a dark page and invisible on a white one.</p>
+    
+<h2>Choosing the format before the quality slider</h2>
+<p>Format decides most of the outcome. WebP is smaller than JPEG at comparable quality for photographs and supports transparency; JPEG has no alpha channel at all, so transparent areas become white or black depending on the encoder; PNG is lossless and wins for screenshots, line art and anything with flat colour or text. Converting a screenshot to JPEG is a reliable way to make it both larger and blurrier.</p>
+<p>Quality settings around 0.75 to 0.85 sit near the point where further reduction costs visible detail for little size gain. Every lossy re-encode discards more, so convert from the original rather than from an already-compressed copy. The conversion happens in the browser, so the file is not uploaded anywhere.</p>
     </div>
 
     <div class="related-tools">

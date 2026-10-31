@@ -159,6 +159,10 @@
 <p>Reversing a string by code unit breaks emoji and combining accents. This page segments into grapheme clusters first, so a palindrome containing accented characters is compared on visible characters rather than bytes.</p>
 <h2>Where this is actually used</h2>
 <p>Word puzzles, checking generated identifiers for accidental symmetry, and as a small correctness test for string handling in a new language. In production code, the two-line implementation is worth writing rather than depending on a library.</p>
+    
+<h2>Deciding the rules before you check</h2>
+<p>Almost every disputed palindrome is disputed because of normalisation, not because of the string. Lowercasing, stripping spaces and dropping punctuation are three separate decisions, and strict mode exists so you can see the raw comparison when the answer surprises you. Accents, hyphens and apostrophes each flip a different set of classic examples.</p>
+<p>Unicode complicates the rest: characters outside the basic plane are stored as surrogate pairs, so a naive reverse can split them and produce mojibake rather than a clean negative result. For long strings, comparing in place beats building a reversed copy, though at any size a human could read the difference does not matter.</p>
     </div>
 
     <div class="related-tools">

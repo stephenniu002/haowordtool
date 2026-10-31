@@ -146,6 +146,11 @@
 <p>Palette extraction counts pixels in colour buckets and returns the largest. That is why the result often looks duller than the image feels: the dominant colour of a landscape photograph is usually sky or foliage, not the thing you noticed.</p>
 <h2>Getting a useful palette</h2>
 <p>Crop to the region whose colour you want before uploading. A tight crop of a subject gives a palette about that subject; the full frame gives a palette about the scene.</p>
+    
+<h2>Reading the result sensibly</h2>
+<p>The extractor groups pixels by similarity and returns the most populated groups, which means the count you ask for changes the answer: a small number returns broad averages, a large number starts returning near-duplicates that differ by a few units. Five to eight is usually the useful range for a design palette.</p>
+<p>Photographs produce muddy palettes because natural images contain thousands of intermediate tones — a sky alone contributes dozens of blues. Flat graphics, logos and UI screenshots give cleaner results. If you need a palette from a photo, crop to the subject first so the background stops voting.</p>
+<p>Everything runs in the browser; the image is never uploaded, which also means very large files are limited by the memory of the tab rather than by a server limit.</p>
     </div>
 
     <div class="related-tools">

@@ -150,6 +150,10 @@
 <p>A subnet mask splits the 32-bit address into a network part and a host part. The prefix length is the number of leading network bits, so /24 means 24 network bits and 8 host bits, giving 256 addresses.</p>
 <h2>Why two addresses disappear</h2>
 <p>The all-zeros host part identifies the network itself and the all-ones host part is the broadcast address. Neither can be assigned to an interface. The exceptions are /31, used for point-to-point links where both addresses are usable, and /32, which is a single host.</p>
+    
+<h2>Usable hosts and the two exceptions</h2>
+<p>A block of size 2^n leaves 2^n minus two usable addresses, because the first is the network address and the last is the broadcast. That subtraction disappears at the edges: a /31 is a valid point-to-point link with both addresses usable, and a /32 is a single host route used for loopback and for pinning one address through a tunnel.</p>
+<p>Check the block against the private ranges before assuming it is routable — 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16 do not appear on the public internet — and remember that overlapping subnets are the usual cause of a VPN that connects but cannot reach anything. Where addresses are scarce, variable-length subnetting recovers space by sizing each segment to what it actually holds.</p>
     </div>
 
     <div class="related-tools">

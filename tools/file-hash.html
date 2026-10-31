@@ -147,6 +147,10 @@
 <p>Verifying a download means comparing the hash you compute against the hash the publisher listed. Both halves matter: computing the hash is easy, knowing which hash to trust is the actual security question.</p>
 <h2>Why the file never uploads</h2>
 <p>The file is read through a data URL and hashed with WebCrypto in the tab. For a 1 GB file this will be slow and memory-hungry — a command-line tool is the right instrument past a few hundred megabytes.</p>
+    
+<h2>What a matching hash proves</h2>
+<p>A hash confirms that the bytes you have are the bytes that were published. It does not prove who published them: anyone who can replace the file can replace the hash beside it. For that you need a signature or a hash published on a separate, trusted channel.</p>
+<p>Compare the whole string rather than the first few characters. Truncating to eight characters is common in UI and drops the guarantee to a one-in-four-billion collision at best, which sounds safe until it is applied to a large mirror. The file never leaves your machine here — hashing happens in the browser — so very large files are bounded by available memory rather than by an upload limit. Copy the expected value from the publisher's page rather than retyping it, since a single transposed character looks exactly like corruption.</p>
     </div>
 
     <div class="related-tools">

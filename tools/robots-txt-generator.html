@@ -149,6 +149,10 @@
 <p>robots.txt tells cooperative crawlers what not to fetch. It is not access control: a crawler that ignores it, or a scraper written by someone who wants your data, is unaffected. Anything genuinely private needs authentication.</p>
 <h2>Rules that bite</h2>
 <p><code>Disallow: /</code> with no matching allow blocks the whole site, and it is the single most common cause of a site vanishing from search. A stray <code>Disallow: /</code> in a staging copy that gets deployed is a classic outage.</p>
+    
+<h2>Rules, order and the mistakes that cost pages</h2>
+<p>Rules are matched by user agent, and a group for a specific crawler overrides the wildcard group rather than adding to it, which is how a well-meant Disallow ends up blocking a crawler that was already allowed. The most common accident is a stray Disallow for a path that also holds pages you want indexed; the second is a rule that blocks CSS and JavaScript, which makes the page render as an empty document to the crawler evaluating it.</p>
+<p>Sitemap directives are absolute URLs, not paths, and they belong on their own line outside any group. Test with the crawler's own tooling rather than assuming — the file is fetched once and cached for a while, so a correction can take time to take effect.</p>
     </div>
 
     <div class="related-tools">

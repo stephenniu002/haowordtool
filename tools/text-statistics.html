@@ -162,6 +162,10 @@
 <p>Sentences are split on terminal punctuation, which miscounts abbreviations such as "Dr." and decimals such as "3.5". Paragraphs are split on blank lines, so a document with soft returns throughout will report one paragraph. Both are heuristics, not parsing.</p>
 <h2>Counting rules differ</h2>
 <p>Microsoft Word counts "don't" as one word; some CMSs count hyphenated compounds as two. If you are matching a client's number, ask which tool they are using rather than arguing about the arithmetic.</p>
+    
+<h2>Which of the numbers to act on</h2>
+<p>Average sentence length is the most useful figure here, because it maps onto readability more directly than any score: past about twenty-five words the reader starts losing the thread, and a long average usually means a handful of sentences carrying three ideas each. Sentence length variation matters as much as the average — uniform medium sentences read as flat even when they are technically clear.</p>
+<p>Readability formulas are calibrated on English syllables and break down on technical vocabulary and on names, so treat the grade level as a rough signal rather than a verdict. Character counts differ depending on whether spaces are included, which is worth checking before pasting a figure into a form with a hard limit.</p>
     </div>
 
     <div class="related-tools">

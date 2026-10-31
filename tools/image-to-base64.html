@@ -147,6 +147,10 @@
 <p>A data URI inlines the file into the document. That removes one HTTP request per image, which matters for tiny icons on a cold cache, and it makes the file impossible to cache independently, which hurts everything else.</p>
 <h2>When inlining is the right call</h2>
 <p>Icons under a couple of kilobytes, images that must render before any network round trip, and email templates where external images are blocked by default. For photographs and anything reused across pages, a separate file with a long cache lifetime is faster overall.</p>
+    
+<h2>The size you pay for inlining</h2>
+<p>Base64 inflates the payload by about a third before compression, so a 100 kilobyte image becomes roughly 133 kilobytes of text — and inlined data does not benefit from the browser's separate image cache. It is a good trade for a handful of small icons in a single-page document, and a bad one for anything that appears on several pages or exceeds a few tens of kilobytes.</p>
+<p>Content security policies have to allow data: in the img-src directive or the image silently fails, which is a frequent surprise after tightening a policy. Very large files are also bounded by the size of the document rather than by any network limit, since the string lives in the HTML itself.</p>
     </div>
 
     <div class="related-tools">

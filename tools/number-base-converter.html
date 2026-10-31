@@ -149,6 +149,10 @@
 <p>Base conversion is exact for integers and lossy for fractions, which is why this page does not accept a decimal point. Floating-point bases are a different problem with a different answer, and pretending otherwise produces quietly wrong values.</p>
 <h2>Where each base shows up</h2>
 <p>Binary for bitmasks and permissions, octal for Unix file modes, hex for colours, memory addresses and byte literals, base-36 for short URL identifiers. The grouping by eight bits is there because byte boundaries are what matter at the level where these conversions get used.</p>
+    
+<h2>Where conversions break</h2>
+<p>Hexadecimal and binary are exact because they line up with the machine's own grouping — four bits per hex digit. Base 36 is a presentation choice used for short identifiers and is exact for integers but produces a long string for a large value, which is why short links usually combine it with a counter rather than encoding arbitrary text.</p>
+<p>The digits are case-insensitive and leading zeros are dropped, so a fixed-width display has to pad after conversion rather than before. Overflow is silent in many languages: a value beyond the safe integer range converts without error and gives a wrong answer, so check the magnitude before trusting a long number.</p>
     </div>
 
     <div class="related-tools">

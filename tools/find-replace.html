@@ -161,6 +161,10 @@
 <p>Use it for structure rather than literals: <code>\s+$</code> for trailing whitespace, <code>\b\d{4}-\d{2}-\d{2}\b</code> for dates, <code>^\s*\d+\.\s*</code> to strip list numbering. Capture groups work in the replacement — <code>$1</code> for the first group.</p>
 <h2>Case sensitivity</h2>
 <p>Off by default, which is the safer choice for prose and the wrong choice for code identifiers. In code, a case-insensitive replace of <code>id</code> will also hit <code>ID</code> and <code>Id</code>.</p>
+    
+<h2>Regex is the part that bites</h2>
+<p>In plain mode the find string is literal, which is what you want for most replacements. In regex mode every metacharacter is active, so a search for a version number like 1.2.3 matches far more than intended — escape the dots or stay in plain mode. Capture groups are the payoff: parentheses in the find pattern become $1 and $2 in the replacement.</p>
+<p>Case-insensitive matching is independent of regex mode and applies to both. Run the replacement on a copy first and diff the result; a pattern that matches one extra place is invisible in the output and obvious in a diff. Replacing with an empty string deletes matches, which is the usual way stray separators are removed.</p>
     </div>
 
     <div class="related-tools">

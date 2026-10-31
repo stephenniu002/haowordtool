@@ -157,6 +157,10 @@
 <p>Decoding entities is useful when you are inspecting stored content or reading a feed that double-encoded. It is not a sanitiser — unescaping untrusted input and then inserting it into HTML reintroduces exactly the injection that escaping prevented.</p>
 <h2>Not the same as URL encoding</h2>
 <p>HTML entities and percent-encoding solve different problems in different layers. A URL parameter inside an HTML attribute needs both: percent-encode the value, then HTML-escape the whole attribute.</p>
+    
+<h2>Escaping once, and only once</h2>
+<p>The damage comes from escaping twice. Text escaped on input and again on output renders the entity literally, so the reader sees ampersand-ldquo instead of a quotation mark. Decide where escaping happens — storage or render — and do it there only; unescape before editing, escape on the way out.</p>
+<p>Angle brackets are not the only characters that matter. In an attribute value delimited by double quotes, the quote itself must be escaped, which is why pasting unescaped user text into a title attribute is a reliable way to break the markup. Named entities are readable, numeric ones are safer for characters that have no common name, and unescaping text you did not generate can reintroduce markup you thought was neutralised.</p>
     </div>
 
     <div class="related-tools">

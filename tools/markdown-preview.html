@@ -166,6 +166,10 @@ console.log(1)
 <p>Raw HTML passthrough, footnotes, definition lists, tables and task lists. Raw HTML is the big one: allowing it in a preview tool is how an XSS demonstration becomes an XSS incident when someone pastes their own content.</p>
 <h2>The escaping order</h2>
 <p>Angle brackets and ampersands are escaped before Markdown patterns are applied. If that order were reversed, Markdown-generated tags would be escaped too and nothing would render — a mistake that shows up as a page full of visible HTML tags.</p>
+    
+<h2>Preview is one renderer, not all of them</h2>
+<p>The same source renders differently in GitHub, in a static site generator and in a chat box, because each implements a different subset. Tables, task lists, strikethrough and autolinks are extensions rather than core Markdown, and raw HTML is disabled outright in many contexts for security. If the text is destined for a specific platform, check it there before publishing.</p>
+<p>Blank lines are structural: without one between paragraphs, consecutive lines join into a single block. Code fences need a language tag if you want highlighting, and a fence inside a list has to be indented with the list content or it terminates the list instead of nesting in it.</p>
     </div>
 
     <div class="related-tools">

@@ -160,6 +160,10 @@
 <p>Arrays are serialised as JSON strings inside a single cell rather than spread across columns. Spreading them would require a rule for which array index maps to which column, and there is no rule that works for arbitrary data.</p>
 <h2>Ragged rows</h2>
 <p>The column set is the union across all rows, so a field present in one row appears in every row. This is why the output is wider than the first row suggests, and why missing values appear as empty cells rather than absent columns.</p>
+    
+<h2>What survives the flattening</h2>
+<p>The input needs to be an array of objects, since a table needs rows with the same columns. Objects with different keys produce a union of columns with blanks where a row had nothing — that is the honest result, but it looks like missing data if you expected identical shapes. Flattening nested objects joins the path into a column name, which is readable and reversible only if the separator does not appear in a key.</p>
+<p>Arrays nested inside a row do not flatten cleanly; they are either stringified or dropped, and neither is what you want silently. Semicolons are the delimiter for locales where the comma is the decimal separator, and Excel in those locales will read a comma-separated file as a single column.</p>
     </div>
 
     <div class="related-tools">

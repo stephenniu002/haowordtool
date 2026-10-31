@@ -164,6 +164,10 @@ cherry</textarea></div>
 <p>Trimming before comparison catches the most common invisible difference — a trailing space from a spreadsheet column. The output is the trimmed line, so the result is also cleaner than the input.</p>
 <h2>What counts as a duplicate</h2>
 <p>Exact matches after the chosen normalisation. It does not catch near-duplicates such as "New York" versus "New York, NY", or URLs that differ only by a tracking parameter. Those need a real matching rule, not a dedupe button.</p>
+    
+<h2>What counts as the same line</h2>
+<p>The default keeps the first occurrence and preserves the original order, which is usually what you want for a list that has a meaning. Ticking sort produces a canonical output that is easier to compare between runs but loses that order — decide which property matters before running it.</p>
+<p>Trim and ignore case widen the definition of duplicate, and they are the two settings that catch most real duplicates, since the same value copied from a spreadsheet and from a form rarely matches byte for byte. Trimming before comparing also fixes the invisible case where a trailing tab makes two identical addresses look different.</p>
     </div>
 
     <div class="related-tools">

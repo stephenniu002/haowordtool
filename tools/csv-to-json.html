@@ -163,6 +163,10 @@ Jane,31,Boston</textarea></div>
 <p>Numbers and booleans are converted when the toggle is on, which is usually what you want for JSON consumers. Turn it off when leading zeros matter — a postcode like <code>01234</code> becomes <code>1234</code> if parsed as a number, which is a data-loss bug that ships quietly.</p>
 <h2>Header handling</h2>
 <p>With headers on, the first row supplies keys and duplicate headers are left as-is, so the last column with that name wins. Turn headers off to get arrays of arrays, which is the safer shape when the first row is data rather than a schema.</p>
+    
+<h2>Type conversion is a decision, not a detail</h2>
+<p>Converting numeric-looking values to numbers is convenient and occasionally destructive: postcodes, phone numbers and account references lose leading zeros, and long identifiers lose precision past the safe integer range. If the field is an identifier, leave it as text.</p>
+<p>With the header row switched off, each row becomes an array rather than an object, which is often the better shape for data that will be iterated rather than looked up by name. Delimiters other than a comma exist for a reason — semicolons in European exports, tabs from database dumps, pipes in Markdown tables — and picking the wrong one produces a single column without an error.</p>
     </div>
 
     <div class="related-tools">

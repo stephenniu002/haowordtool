@@ -159,6 +159,10 @@
 <p>Removing whitespace typically cuts a JSON payload by 15–25%. That matters for network transfer and does not matter at all for readability, so minify at the boundary where it is sent, not where it is stored.</p>
 <h2>Sorting keys</h2>
 <p>Key order is not significant in JSON but it is significant for diffing. Sorting recursively makes two payloads from different sources comparable, and turns a noisy diff into a readable one.</p>
+    
+<h2>Sorting keys for a readable diff</h2>
+<p>Pretty printing makes JSON readable; sorting keys makes it diffable. Two objects that differ only in key order show as a wall of changes in a version control diff, and sorting removes that noise permanently. Run it before committing generated JSON rather than after an argument about who changed what.</p>
+<p>Minifying is for payloads, not for configuration files people read. Note that the parser is strict: trailing commas, comments, single quotes and unquoted keys are all rejected, which is correct behaviour and the most common reason a snippet that looks fine fails. Integers beyond the safe range should be kept as strings, because the parse will round them.</p>
     </div>
 
     <div class="related-tools">

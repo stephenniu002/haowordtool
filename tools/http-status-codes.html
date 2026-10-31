@@ -146,6 +146,10 @@
 <p>Status codes are a contract between server and client. Using the wrong one does not break the request, it breaks everything downstream — retry logic, caching, monitoring dashboards and the browser itself.</p>
 <h2>The ones people get wrong</h2>
 <p>302 versus 307: the difference is whether the method survives. 301 versus 308: same, but permanent. 401 versus 403: authentication versus authorisation. 200 with an error in the body: never, because every proxy and client between here and there believes the request succeeded.</p>
+    
+<h2>The pairs that get mixed up</h2>
+<p>301 and 302 differ in whether caches and search engines may carry the change forward; 307 and 308 preserve the request method, which matters for anything that is not a GET. 401 means you are not authenticated, 403 means you are authenticated but not allowed — returning 403 for a login problem sends the client into a loop. 410 tells a crawler the page is deliberately gone and can retire it faster than 404.</p>
+<p>Returning 200 with an error message inside the body is the most damaging habit in this list: monitoring, caches and search engines all treat the request as successful. Pick the status that describes what happened, then put the detail in the body. 429 with a Retry-After header is kinder than 503 to a client that is polling, and both are more useful than a timeout that tells the caller nothing.</p>
     </div>
 
     <div class="related-tools">

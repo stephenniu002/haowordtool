@@ -146,6 +146,10 @@
 <p>URLs have more structure than they appear to. The fragment never reaches the server, the port may be implied by the scheme, and the query string is a sequence of pairs with no ordering guarantee.</p>
 <h2>Why decode parameters</h2>
 <p>A parameter value arrives percent-encoded. Comparing the raw string against an expected value fails whenever the value contains a space, an ampersand or a non-ASCII character — which is most of the time.</p>
+    
+<h2>A field-by-field reading</h2>
+<p>The scheme decides the default port, which is why an explicit 443 on https is redundant and an explicit 80 on https is a hard failure. The host is case-insensitive, the path is not, and the query string is a bag of pairs where duplicate keys are legal and order can matter. Percent-encoding applies to each component separately — a slash encoded inside a path segment is data, not a separator.</p>
+<p>Watch for the trailing slash: /docs and /docs/ are different URLs to a server and to a cache, and the redirect between them is where a surprising number of broken relative links originate. Credentials embedded before the host are deprecated in browsers and should be treated as leaked.</p>
     </div>
 
     <div class="related-tools">

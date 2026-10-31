@@ -158,6 +158,10 @@
 <p>Standard base64 uses <code>+</code> and <code>/</code>, both of which have meaning inside a URL or a filename. The URL-safe alphabet substitutes <code>-</code> and <code>_</code> and drops the padding. JWTs use it — a token with a <code>+</code> in it is a standard-alphabet token that will not survive a query string.</p>
 <h2>What it is not</h2>
 <p>Encoding something in base64 does not hide it; the first thing anyone does with an unknown blob is decode it. Do not use it to obscure passwords, API keys or personal data.</p>
+    
+<h2>When the URL-safe alphabet is required</h2>
+<p>Standard Base64 uses plus and slash, both of which have meaning inside a URL and inside a JSON string in some contexts. The URL-safe variant substitutes minus and underscore, and it is not optional for anything that will sit in a query parameter or a JWT — the plus sign in particular turns into a space when decoded by a form handler.</p>
+<p>Base64 is an encoding, not encryption: anyone holding the string can read it. Expect roughly a third more bytes than the input, padding with equals signs to reach a multiple of four, and note that the padding is sometimes stripped by URL-safe variants, so a decoder may need to restore it before parsing.</p>
     </div>
 
     <div class="related-tools">

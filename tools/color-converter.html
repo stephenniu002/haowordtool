@@ -150,6 +150,10 @@
 <p>HEX and RGB describe the same thing in different units; HSL describes it in the terms people actually think in — hue, saturation, lightness. Changing the lightness of an HSL colour keeps the hue, which is why design systems are usually authored in HSL and shipped in HEX.</p>
 <h2>Contrast is the measurement that matters</h2>
 <p>WCAG requires 4.5:1 for body text and 3:1 for large text. A colour that looks fine on your monitor can fail badly for someone reading on a phone in daylight, and the ratio is the only way to know without testing.</p>
+    
+<h2>Converting between models without losing the point</h2>
+<p>The conversion between HEX and RGB is lossless — they encode the same three numbers in different bases. HSL is lossless in the other direction but describes the colour differently, so the same visible result can round-trip to a slightly different hex when a hue is expressed as a fraction of a degree. Do not convert repeatedly in a loop; convert once and store the model the design system uses.</p>
+<p>Perceived brightness is not the average of the channels: green contributes most and blue least, which is why a pure blue button reads darker than a pure green one at the same numeric values. Check contrast against the background rather than judging saturation alone.</p>
     </div>
 
     <div class="related-tools">

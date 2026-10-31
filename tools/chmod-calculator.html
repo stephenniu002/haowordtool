@@ -156,6 +156,10 @@
 <p>Unix permissions are three groups of three bits: read, write, execute, for owner, group and other. Each group is one octal digit, which is why 755 is three digits and not a number with a value of seven hundred and fifty-five.</p>
 <h2>Directories are different</h2>
 <p>On a directory, read means "list the names", write means "create or delete entries", and execute means "traverse into it". A directory without execute cannot be entered even if you know the exact path — the classic cause of a permission error that looks impossible.</p>
+    
+<h2>Reading the octal, and the settings that bite</h2>
+<p>Each trio of bits becomes one octal digit, so 755 is owner read-write-execute, group and other read-execute. Directories need execute to be entered at all — a directory set to 644 is unreadable in practice, which is a common cause of a permission error that looks like a missing file.</p>
+<p>The special bits are the ones to set deliberately. Setuid on a shell script is ignored by most modern systems; setgid on a directory makes new files inherit the group, which is how shared folders are usually managed; sticky on a directory stops users deleting each other's files, and is why /tmp is 1777. 777 on anything reachable from the internet is an invitation.</p>
     </div>
 
     <div class="related-tools">

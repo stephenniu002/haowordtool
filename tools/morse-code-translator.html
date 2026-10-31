@@ -157,6 +157,10 @@
 <p>Accented characters, CJK, and most symbols are dropped rather than transliterated. Morse has no standard encoding for them, and inventing one produces output that no other implementation can read.</p>
 <h2>Practical uses</h2>
 <p>Puzzles, teaching signal encoding, and generating decorative text. It is not encryption — anyone with the table decodes it in seconds, and it has been public since 1844.</p>
+    
+<h2>Spacing is the message</h2>
+<p>Morse has three levels of separation: a short gap inside a letter, a longer gap between letters, and a longer one still between words. Lose the letter spacing and the same dots and dashes decode into different text, which is why plain concatenation is unreadable even when every character is correct.</p>
+<p>The alphabet covers twenty-six letters, ten digits and a handful of punctuation marks; there is no native case and no accents, so accented characters are usually transliterated before encoding. Timing matters on air but not in text: a dash is three units and the gaps are one, three and seven units respectively, which is the detail that makes hand-sent code copyable.</p>
     </div>
 
     <div class="related-tools">

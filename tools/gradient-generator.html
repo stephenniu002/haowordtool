@@ -149,6 +149,10 @@
 <p>Gradients are cheap visually and expensive to tune by hand — the interpolation happens in sRGB by default, which is why a gradient from blue to yellow passes through a muddy grey rather than a clean transition.</p>
 <h2>Avoiding the grey middle</h2>
 <p>Choose endpoints that share a hue, or add a middle stop to steer the path. Interpolating in oklab produces perceptually even transitions, but browser support for <code>in oklab</code> is still uneven enough that most production CSS adds a third stop instead.</p>
+    
+<h2>Making a gradient not look grey</h2>
+<p>Interpolation happens in sRGB by default, and the midpoint between two saturated opposite hues passes through a desaturated grey. Adding a middle colour of the hue you actually want in between is the reliable fix, and it is why hand-tuned gradients often carry a third stop that seems redundant in the code.</p>
+<p>Angle conventions differ from intuition: zero degrees points up and the angle increases clockwise, so a left-to-right gradient is 90 degrees. Banding appears on large flat areas when the step between adjacent values exceeds one unit per pixel — a very subtle noise overlay is the usual remedy, and it costs a fraction of a kilobyte.</p>
     </div>
 
     <div class="related-tools">

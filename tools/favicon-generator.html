@@ -146,6 +146,10 @@
 <p>A favicon is 16 pixels wide. Detail disappears at that size, so the source image should be a simple mark with strong contrast rather than a full logo with text.</p>
 <h2>Square or it gets cropped</h2>
 <p>The canvas crops to the centre square before scaling. A wide logo will lose its edges — that is better than squashing it, but the real fix is to upload a square source.</p>
+    
+<h2>Which sizes you actually need</h2>
+<p>The sizes field takes a comma-separated list and honours it literally, so the shortest working set is 16, 32, 180 and 512. The 16 and 32 pixel files become favicon.ico, 180 is what iOS uses when someone adds the site to their home screen, and 512 is the minimum Android and most search results ask for. Requesting every size from 16 to 512 wastes time on files nobody reads.</p>
+<p>Browsers cache favicons aggressively and often ignore a normal hard refresh, so a replaced icon can keep showing the old version for days. That is a browser cache, not a generation problem — check in a private window before assuming the file is wrong. Safari on iOS also masks the icon to a rounded square, so keep the important part of the mark away from the corners.</p>
     </div>
 
     <div class="related-tools">

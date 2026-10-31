@@ -147,6 +147,10 @@
 <p>Redirects are how a site move keeps its search equity. Every old URL that 404s instead of redirecting loses whatever it had accumulated, and a bulk migration without a redirect map loses all of it at once.</p>
 <h2>Rule order</h2>
 <p>Put the specific rules first and the catch-all last. In Apache, <code>RedirectMatch</code> with a regex will swallow everything after it; in Nginx, the first matching <code>location</code> wins. Testing one URL from each end of the map is the quickest way to catch an ordering mistake.</p>
+    
+<h2>Choosing the status and the server</h2>
+<p>301 is permanent and browsers cache it aggressively, which is good for a site move and painful if you get it wrong — a mistaken permanent redirect can outlive the change that caused it. 302 is temporary and is the safer default while testing. 308 is the permanent counterpart that preserves the request method, needed when a form posts to the old path.</p>
+<p>Map one old URL to one new URL, not a whole site to the homepage: redirecting everything to the root tells a crawler the pages are equivalent and the old URLs lose their value. The generated syntax is server-specific and the same intent is not portable, so regenerate after moving hosts rather than pasting the previous file.</p>
     </div>
 
     <div class="related-tools">

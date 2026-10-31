@@ -160,6 +160,10 @@
 <p>When quoting code, numbering blank lines wastes attention on nothing. When quoting a log, blank lines are often meaningful separators and should be numbered. There is no universal default, so it is a toggle.</p>
 <h2>Starting from something other than 1</h2>
 <p>Starting at a nonzero value matters when you are numbering a fragment of a longer file — a 40-line excerpt from line 1200 onward should carry the real line numbers, not restart at one.</p>
+    
+<h2>Padding and what it costs you</h2>
+<p>Set the pad width to the width of the largest number or the column will wobble: without padding, line 9 and line 10 push the text to different offsets and the block stops looking like a table. A dot-space or colon-space separator reads better than a bare space, because a single space disappears against indentation in the source.</p>
+<p>Numbered text is for reading, not for running. Pasting it back into a compiler or a script fails immediately, and even in prose the numbers become part of the content if the block is copied again. Skip blank lines only when the numbering is meant to count items rather than lines.</p>
     </div>
 
     <div class="related-tools">

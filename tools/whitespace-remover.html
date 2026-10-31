@@ -161,6 +161,10 @@
 <p>Hard-wrapped text — from an email, a PDF column, or an editor set to 72 columns — has newlines that are not paragraph breaks. Unwrapping joins them within each paragraph while preserving blank-line boundaries, which is the only reliable signal for a real paragraph break.</p>
 <h2>Order matters</h2>
 <p>Converting non-breaking spaces happens first, then unwrapping, then trimming and collapsing. Reversing that order leaves stray characters inside joined lines that no later step will catch.</p>
+    
+<h2>Which combination for which mess</h2>
+<p>Text pasted from a PDF or a web page usually needs the non-breaking space conversion and the trim, because those documents use a different space character and padded cells respectively. Prose that was hard-wrapped in an editor needs join-wrapped-lines, and running collapse on it first will keep the line breaks and defeat the point.</p>
+<p>For CSV or tab-separated data, turn off everything except the trim: collapsing repeated spaces inside a field silently alters the value, and removing blank lines shifts row numbers against the source. The order of operations is fixed here for that reason — trimming before collapsing gives a different result from collapsing before trimming on mixed whitespace.</p>
     </div>
 
     <div class="related-tools">

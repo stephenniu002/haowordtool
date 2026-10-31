@@ -168,6 +168,10 @@ apple
 <p>This page sorts with <code>localeCompare</code>, which puts "ä" next to "a" rather than after "z" as raw character codes would. Turning off case-insensitive switches to a stricter comparison where uppercase sorts before lowercase, matching what a byte sort does.</p>
 <h2>Duplicates</h2>
 <p>The dedupe option keeps the first occurrence and drops later ones, comparing case-insensitively when that box is checked. Blank lines are removed separately, because a list pasted from a spreadsheet usually ends with one.</p>
+    
+<h2>Why the numeric mode needs clean input</h2>
+<p>Numeric sorting compares parsed values, so a line containing anything other than a number falls back to text comparison and lands in an unexpected place. Currency symbols, thousands separators and trailing units all break the parse. Strip them first, or sort the column in a spreadsheet where the type is explicit.</p>
+<p>Case-insensitive sorting is what most people mean by alphabetical, but it still differs from locale-aware collation: accented letters group near their base letter in some languages and after z in others. Leading zeros are a separate trap — as text, 007 sorts before 10; as numbers it sorts after 7.</p>
     </div>
 
     <div class="related-tools">

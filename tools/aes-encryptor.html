@@ -158,6 +158,10 @@
 <p>PBKDF2 slows guessing but does not make a weak passphrase safe. A six-character password falls to a dictionary in seconds no matter how many iterations you run through. Use four or more random words, or a generated password you store in a manager.</p>
 <h2>What this does not protect against</h2>
 <p>It does not protect a compromised machine: anything running in the tab can read what you typed. It does not hide the fact that encryption happened. And if you lose the passphrase, there is no recovery — no key escrow exists here by design.</p>
+    
+<h2>The passphrase is the whole security model</h2>
+<p>Everything rests on the strength and secrecy of the passphrase, because there is no key management and no recovery. A short or reused passphrase undoes a strong cipher; a long random one is the only part that matters. Losing it means the ciphertext is unreadable — that is the design, not a bug to work around.</p>
+<p>Authenticated encryption means a wrong passphrase and a tampered ciphertext produce the same failure: the integrity check fails before any plaintext is returned, which is deliberate and prevents an attacker from learning anything from a partially decrypted result. Copy the whole ciphertext including its encoding header, since the parameters needed to decrypt it are carried there rather than assumed.</p>
     </div>
 
     <div class="related-tools">

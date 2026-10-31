@@ -148,6 +148,10 @@
 <p>Unix time counts seconds since 1 January 1970 UTC, ignoring leap seconds. It is timezone-free by definition, which is why it is the right thing to store — the timezone belongs at the display layer, not in the database.</p>
 <h2>The seconds/milliseconds trap</h2>
 <p>JavaScript uses milliseconds; almost everything else uses seconds. A timestamp of 1793000000 interpreted as milliseconds is 21 January 1970. This calculator switches on digit count, which is the reliable heuristic.</p>
+    
+<h2>Seconds, milliseconds and the timezone trap</h2>
+<p>Count the digits before trusting a timestamp. Ten digits is seconds since 1970, thirteen is milliseconds, and feeding one where the other is expected produces a date in 1970 or in the far future. Unix time is always UTC; the readable date is only local if you apply an offset, which is why two people in different offices can disagree about the same stored value.</p>
+<p>Signed 32-bit storage overflows in January 2038, a limit already baked into older databases and file formats — worth knowing if you are choosing a column type today. For anything that will be read by humans or sorted as text, store ISO 8601 with an explicit offset instead of a bare integer. Daylight saving is the other trap: a local time without an offset is ambiguous for one hour each year, and the ambiguity resolves to two different instants on either side of the change.</p>
     </div>
 
     <div class="related-tools">

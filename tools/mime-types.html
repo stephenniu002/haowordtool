@@ -145,6 +145,10 @@
 <p>The Content-Type header tells the client how to interpret bytes. Browsers sniff when it is missing or wrong, but never for scripts, and modern browsers refuse to execute a script served with the wrong type at all.</p>
 <h2>Two parameters that matter</h2>
 <p><code>charset</code> for text types, and <code>boundary</code> for multipart. Omitting the charset makes non-ASCII content depend on browser defaults, which is how mojibake happens. <code>application/octet-stream</code> means "unknown binary" and forces a download rather than a render.</p>
+    
+<h2>Why the header beats the extension</h2>
+<p>The Content-Type header is what the client acts on; the file extension is only a hint for the operating system. A JSON file served as text/html will not be parsed as JSON, and a stylesheet served as text/plain is ignored outright in strict browsers. When a download opens in the browser instead of saving, or a fetch fails to parse, the header is usually the reason.</p>
+<p>Add a charset for anything textual — without it, browsers guess, and the guess is sometimes windows-1252. Prefer application/octet-stream only when you genuinely want a download prompt. And do not rely on content sniffing to cover a wrong type: browsers apply it inconsistently and the protections against it are getting stricter, not looser.</p>
     </div>
 
     <div class="related-tools">
