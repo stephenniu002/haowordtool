@@ -287,6 +287,11 @@ render();
 <p>Several tools overlap, and the right choice depends on the input. For images, compress when the file is too large but the pixel dimensions are correct; resize when the dimensions themselves are wrong; convert the format when transparency or sharp edges matter more than file size. For text, the word counter suits length limits and reading time, while the diff tool is for comparing two versions line by line.</p>
 <p>Every tool page names the units, formulas and rounding rules it applies, so a result can be checked by hand. If a number looks wrong, the calculation behind it is on the same page rather than hidden in a script.</p>
 </section>
+<section class="seo-content" style="max-width:1120px;margin:0 auto;padding:0 24px 56px">
+<h2>A worked example: checking a number you do not trust</h2>
+<p>Say a mortgage calculator returns a monthly payment that looks lower than the offer you were given. Start by confirming the inputs: loan amount, term in years, and whether the rate is annual or monthly. Then check the formula printed on the page against the result by hand for the first period — principal times monthly rate gives the interest portion, and the remainder of the payment reduces the balance. If the first period matches, the discrepancy is almost always in the inputs rather than the arithmetic.</p>
+<p>The same approach works for unit conversions: convert a value you already know in both systems, such as one inch to 2.54 centimetres, and see whether the tool agrees. If it does, the factor table is sound and any surprising result comes from the number you entered, not the conversion.</p>
+</section>
 <section><h2>Other languages</h2><ul>
 <li><a href="/de/tools/">Werkzeuge (Deutsch)</a></li>
 <li><a href="/es/tools/">Herramientas (Español)</a></li>

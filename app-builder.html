@@ -75,5 +75,10 @@ gtag('config', 'G-3LV3GH9T5X');
 <p>导出的项目是一个可直接打开的静态目录，包含 HTML、样式和脚本，没有后端依赖。你可以在本地继续修改，也可以放到任意静态托管上。手机安装包需要另外打包签名，应用商店上架还涉及开发者账号、隐私说明和审核，这些不在本工具的范围内。</p>
 <p>预览在隔离环境中运行，不连接外部服务，因此需要接口的功能在预览里不会生效。草稿保存在浏览器本地，清除浏览器数据或换设备后会丢失，重要版本请先导出。AI 生成与自动设计尚未开放，当前页面不会产生扣费。</p>
 </section>
+<section class="seo-block" style="max-width:1120px;margin:0 auto;padding:8px 24px 40px">
+<h2>一个最小项目的结构</h2>
+<p>导出的目录通常只有一个 index.html 加一个样式文件和必要的脚本，没有构建步骤。用浏览器直接打开 index.html 就能运行，也可以放到任何静态托管上。如果需要多个页面，就在目录里加同级 HTML 文件并用相对路径互相链接，不需要改配置。</p>
+<p>需要保存数据时，本地存储只能存在访问者自己的浏览器里，无法跨设备同步。要做跨设备功能就必须接后端，这已超出静态导出能提供的范围。先确认这一点，可以避免做完界面才发现架构不支持。</p>
+</section>
 </main><footer class="site-footer"><span data-no-i18n>© 2026 HaoWord Studio</span><nav><a href="/unscrambler.html"><span data-no-i18n data-zh="单词工具" data-en="Word solver">单词工具</span></a><a href="/blog.html"><span data-no-i18n data-zh="学习指南" data-en="Learning guides">学习指南</span></a><a href="/contact.html"><span data-no-i18n data-zh="联系支持" data-en="Contact">联系支持</span></a><a href="/privacy.html"><span data-no-i18n data-zh="隐私" data-en="Privacy">隐私</span></a><a href="/terms.html"><span data-no-i18n data-zh="条款" data-en="Terms">条款</span></a></nav><a href="/en/" lang="en">English workspace</a></footer><script type="module" src="/assets/app-builder.mjs?v=seo1"></script><script type="module" src="/assets/studio-shell.mjs?v=seo1"></script><script src="/assets/supabase-auth.js"></script>
 </body></html>
