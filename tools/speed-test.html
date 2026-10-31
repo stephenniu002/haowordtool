@@ -60,7 +60,20 @@
     <p class="speed-status" id="status">Ready. The test downloads a small sample file from this site and estimates speed from transfer time.</p>
     <p class="speed-note" id="network">Browser network details will appear here when supported.</p>
   </div>
-</div>
+    <div class="seo-content">
+<h2>What is actually being measured</h2>
+<p>The download figure comes from timing a single file transfer and dividing its size by the elapsed time. Ping is the average of several small requests to the same server, and jitter is how much those samples vary around that average. All three describe the path between your device and this site's host — not your line's headline capacity, and not the speed you will get from a server on another continent.</p>
+<h2>Why results differ between tests</h2>
+<p>A single stream cannot always fill a fast connection, so a gigabit line can measure well below its rating here while a multi-stream test reports the full figure. Browser overhead, Wi-Fi, and whether the sample was already in a cache all move the number. Running the test twice and taking the better result is closer to the truth than averaging, because the first run pays for connection setup.</p>
+<p>Latency matters more than bandwidth for anything interactive. A call, a game or a remote desktop is governed by round-trip time and jitter; 50 Mbps with 8 ms latency feels far better than 500 Mbps with 120 ms. Upload is not measured on this page — if you stream or back up, test that separately.</p>
+<h2>Questions that come up</h2>
+<p><strong>Why is my result lower than my plan?</strong> Single-stream measurement, Wi-Fi, or congestion upstream.</p>
+<p><strong>Is the test uploading data?</strong> No, it only downloads a sample from this site.</p>
+<p><strong>What is good jitter?</strong> Under about 10 ms is comfortable for calls; above 30 ms it becomes audible.</p>
+
+<p><strong>Wi-Fi or cable?</strong> Cable, if you want to know what the line can do. A Wi-Fi result measures the line and the radio together, and the radio is usually the weaker of the two.</p>
+    </div>
+    </div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

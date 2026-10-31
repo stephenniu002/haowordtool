@@ -146,6 +146,11 @@
 <p>Roman numerals are additive with a subtractive exception: a smaller symbol before a larger one is subtracted. That single rule is why 4 is IV rather than IIII, and why a naive symbol-repetition converter gets roughly a third of numbers wrong.</p>
 <h2>The range</h2>
 <p>Standard form covers 1 to 3999. Beyond that the Romans used overbars or other conventions that have no single modern encoding, so this converter refuses rather than inventing one.</p>
+    <h2>Where they still appear</h2>
+<p>Roman numerals survive in places where a number is decorative rather than computed: clock faces, chapter headings, film sequels, monarchs and popes, and the copyright year at the end of a film. Building inscriptions and foundation stones use them for dates, which is the most common reason someone needs to read a long one — MMXXVI is 2026, and a bar over a symbol multiplies it by a thousand.</p>
+<p>They are a poor fit for arithmetic. There is no zero and no place value, so addition means concatenating and then simplifying, and multiplication needs an abacus or a table. That is exactly why they were replaced, and why the conversion is best done by machine in both directions.</p>
+
+<p>Reading a long numeral gets easier once you know only six pairs subtract: IV, IX, XL, XC, CD and CM. Everything else is addition, read left to right. A symbol may never repeat more than three times, which is why 4 is IV and 40 is XL rather than four Xs — the rule exists to keep inscriptions short, and it is the single thing most converters get wrong.</p>
     </div>
 
     <div class="related-tools">

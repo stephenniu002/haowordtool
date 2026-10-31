@@ -42,7 +42,20 @@
   <div class="card">
     <div id="list" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px"></div>
   </div>
-</div>
+    <div class="seo-content">
+<h2>What a world clock actually solves</h2>
+<p>A world clock is not about knowing what time it is elsewhere; it is about knowing whether the person you need is awake, at lunch, or already gone for the day. That is why the useful view is several cities at once with dates attached, not one converted timestamp. The cities on this page are read from the browser's own time zone database, so daylight saving transitions are applied automatically rather than assumed.</p>
+<h2>Reading offsets without arithmetic</h2>
+<p>Offsets are not fixed. Most of Europe and North America shift twice a year, on different dates, so the gap between London and New York is four hours in winter and five for the two weeks in March when only one of them has changed. A few zones sit on half or three-quarter hours — India at UTC+5:30, Nepal at UTC+5:45 — which is why a naive hour-only conversion is wrong by thirty minutes for a large part of the world.</p>
+<p>The reliable habit is to convert everything to UTC first and only then to the target zone. Converting directly between two local times invites double-counting a transition.</p>
+<h2>Questions that come up</h2>
+<p><strong>Does it handle daylight saving?</strong> Yes, because the offsets come from the IANA time zone database rather than from a fixed number.</p>
+<p><strong>Why do two cities show the same time?</strong> They are in the same zone or in zones with identical offsets — Madrid and Berlin, for instance.</p>
+<p><strong>Is the clock exact?</strong> It is your device's clock, corrected for the zone you selected. A device with the wrong system time will show the wrong time everywhere.</p>
+
+<p><strong>Can I add a city that is not listed?</strong> The list is fixed at twelve cities chosen for coverage; for anywhere else, the browser's own clock handles the conversion once you know the zone name.</p>
+    </div>
+    </div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

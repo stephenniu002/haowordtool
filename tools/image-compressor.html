@@ -63,7 +63,21 @@
       <div class="result-value" id="info"></div>
     </div>
   </div>
-</div>
+    <div class="seo-content">
+<h2>What the quality slider really does</h2>
+<p>Quality is not a percentage of the original. In JPEG it sets how aggressively the encoder discards high-frequency detail during quantisation: the image is split into 8×8 blocks, transformed, and the fine detail is rounded coarsely. At 70% most photographs are indistinguishable from the original at normal viewing size, and the file is a fraction of the size. Below about 50%, block edges and colour banding in smooth gradients become visible.</p>
+<h2>Format decides more than the slider</h2>
+<p>PNG is lossless, so the quality setting does nothing to it — compressing a PNG means reducing its colour depth or resizing it. JPEG suits photographs; WebP usually beats both at the same visual quality but is not accepted everywhere. For flat graphics, screenshots and anything with text, lossless is the right choice regardless of size.</p>
+<p>Compression is not reversible. Keep the original: re-compressing an already-compressed JPEG compounds the artefacts, and each round of editing and saving makes them worse.</p>
+<h2>Questions that come up</h2>
+<p><strong>Are my images uploaded?</strong> No. Encoding happens in the browser.</p>
+<p><strong>Why is my PNG bigger after compressing?</strong> The quality slider does not apply to lossless encoding.</p>
+<p><strong>What quality should I use?</strong> Start at 75 and compare at 100% zoom; lower it only while the difference stays invisible.</p>
+
+<p><strong>Is there a file size limit?</strong> Only the browser's memory. Very large images can exhaust it on a phone, so resize first if a file is above roughly twenty megapixels.</p>
+<p>Compare before and after at the same zoom rather than trusting the percentage. A file that drops from four megabytes to eight hundred kilobytes has usually lost detail you would notice on a large screen, while a photograph that halves is often indistinguishable — the numbers tell you the cost, not whether it was worth paying.</p>
+    </div>
+    </div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

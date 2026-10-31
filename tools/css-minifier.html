@@ -145,6 +145,11 @@
 <p>Minification removes characters the parser does not need: comments, indentation, the last semicolon in a block. It does not change what the CSS does — if the output behaves differently, the minifier is broken.</p>
 <h2>What this deliberately does not do</h2>
 <p>No selector merging, no property reordering, no colour shortening beyond what whitespace removal achieves. Those optimisations are where minifiers introduce bugs, and with gzip on, additional minification saves single-digit percentages.</p>
+    <h2>Do you need a build step</h2>
+<p>For a site of a few hand-written stylesheets, minifying once before upload is enough, and a build pipeline is overkill. The case for automation appears when the same files are edited by several people: a manual step gets skipped, and the site quietly ships unminified CSS again. A check in continuous integration that fails when the committed output is stale catches that without anyone having to remember.</p>
+<p>Measure before optimising. Compressed transfer is what users actually download, and a stylesheet that halves in size after minification may shrink by a tenth once gzip or brotli has run, because both already remove repeated whitespace. Minification is worth doing for the parser and for the cache, not because it transforms the transfer size.</p>
+
+<p>Keep the unminified source in the repository even if the site serves the minified file. Debugging a rule in a browser's inspector is workable either way, but source maps point at the original line numbers, and without the original there is nothing to review in a pull request. The build artefact is disposable; the source is the record.</p>
     </div>
 
     <div class="related-tools">

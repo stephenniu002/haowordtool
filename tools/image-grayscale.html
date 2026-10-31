@@ -146,6 +146,11 @@
 <p>Grayscale conversion uses the luminance of each pixel rather than a simple average of red, green and blue — the eye is far more sensitive to green than to blue, so an equal average makes skin tones look wrong.</p>
 <h2>Partial desaturation</h2>
 <p>Anything below 100% mutes colour without removing it. That is useful for pushing an image behind text on a hero section while keeping it recognisable.</p>
+    <h2>Which format to save in</h2>
+<p>A grayscale photo has no colour data, so the file can be much smaller — but only if the encoder knows that. Saving a desaturated image as JPEG still stores three channels unless the encoder is told it is single-channel, so the saving comes mostly from the removal of chroma detail rather than the conversion itself. PNG stays lossless in either case, at two to four times the size of a good JPEG.</p>
+<p>If the image is headed for print or for a page that will be re-edited, keep a copy of the colour original. Desaturation is not reversible: once the channels are averaged, the information that distinguished a red apple from a green one is gone.</p>
+
+<p>For anything read on a screen, check the result rather than assuming it. Two colours with clearly different hues can have nearly identical luminance, so a link that stands out in colour can vanish once converted. If the image carries meaning through colour alone, desaturation is an accessibility problem, not just a style choice.</p>
     </div>
 
     <div class="related-tools">

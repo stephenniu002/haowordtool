@@ -60,7 +60,20 @@
       <a id="dl" class="btn btn-primary" style="display:none" download="resized.png">Download resized</a>
     </div>
   </div>
-</div>
+    <div class="seo-content">
+<h2>Pixels, not inches</h2>
+<p>Resizing changes the pixel grid; it does not change physical size. A 3000-pixel-wide photo is 10 inches at 300 pixels per inch and 30 inches at 100, and both files are identical. Print workflows care about pixels per inch; screens care only about pixels. Deciding which one you are serving first avoids the common mistake of upscaling a web image to "300 dpi" and gaining nothing but file size.</p>
+<h2>Downscaling is safe, upscaling is invention</h2>
+<p>Removing pixels is a well-defined averaging problem: each output pixel summarises a block of input pixels, and the result looks clean. Adding pixels is not — the software has to guess what was between the samples. A 2× upscale looks acceptable at a glance and soft at full size; beyond that, edges turn to mush. If the source is too small, re-shoot or re-export rather than upscale.</p>
+<p>Keep the aspect ratio locked unless you intend to distort. Cropping and resizing are different operations, and forcing dimensions that do not match the ratio stretches faces in a way that is immediately obvious.</p>
+<h2>Questions that come up</h2>
+<p><strong>Is the image uploaded anywhere?</strong> No. The resize happens on a canvas in the browser and the file never leaves the device.</p>
+<p><strong>Which format should I save?</strong> JPEG for photographs, PNG for anything with text or transparency, WebP when file size matters more than compatibility.</p>
+<p><strong>Why did my PNG get larger?</strong> Re-encoding a lossless format at a different size creates new data; the compression gains do not survive resampling.</p>
+
+<p><strong>Does resizing keep the photo's metadata?</strong> The canvas re-encodes the image, so EXIF data — camera model, GPS coordinates, capture time — is dropped. That is usually desirable for anything published, and worth knowing if you needed the timestamp preserved.</p>
+    </div>
+    </div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

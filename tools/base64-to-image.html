@@ -145,6 +145,11 @@
 <p>Data URIs turn up in stored avatars, inline SVG in CSS, and API responses that return an image as a JSON string. Decoding one by eye is impossible, so the practical question is always "what is this and how big is it".</p>
 <h2>Where they break</h2>
 <p>A line-wrapped base64 payload fails because the newlines are part of the string. Some systems store the payload without the <code>data:</code> prefix, which is why this accepts both.</p>
+    <h2>The 33% overhead, and when it is worth paying</h2>
+<p>Base64 encodes three bytes as four characters, so a payload is always about a third larger than the binary it carries, plus line breaks if the producer wrapped them. That is the tax for keeping an image inside a text format. It buys you a request-free asset for small icons and a single self-contained file for exports; it costs you caching, since the image can no longer be cached separately from the document that carries it.</p>
+<p>A rough threshold: below about 2 KB inline is a clear win, above 10 KB a separate file almost always is, and in between it depends on how many times the same image appears. The Data URI length limits in older browsers, once a hard constraint, are no longer relevant in current ones.</p>
+
+<p>Watch for the prefix. A data URI begins with a media type declaration followed by the encoding, and stripping it before decoding is the difference between a working image and a file the viewer refuses to open. If the decoded bytes do not start with a recognisable image signature, the payload was truncated in transit rather than corrupted in decoding.</p>
     </div>
 
     <div class="related-tools">

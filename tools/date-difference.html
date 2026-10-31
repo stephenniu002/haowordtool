@@ -157,6 +157,11 @@
 <p>Date arithmetic is not subtraction. Months have different lengths, so "one month later" is ambiguous at month ends, and daylight saving means some days are 23 or 25 hours long if you work in local time. Everything here is computed in UTC to avoid the latter.</p>
 <h2>Why business days are approximate</h2>
 <p>Weekends are a fixed rule; public holidays are not. The count excludes Saturday and Sunday only. For contractual deadlines, subtract the holidays that apply in the relevant jurisdiction.</p>
+    <h2>Inclusive or exclusive, decide first</h2>
+<p>"Three days from Monday" is Thursday if you count exclusive of the start day and Wednesday if you count inclusive. Contracts, notice periods and hotel nights all pick one convention and are inconsistent with each other: a hotel stay from Friday to Sunday is two nights but three calendar days. The arithmetic is trivial; agreeing on the convention is the part that causes disputes.</p>
+<p>When a deadline matters, write the resulting date rather than the interval. "Within 10 business days" invites a recount in a different jurisdiction; "by 14 March" does not.</p>
+
+<p>Calendar arithmetic also depends on which calendar. Most of the world uses the Gregorian one, but business dates in some regions follow a fiscal year that starts in April or July, and "end of quarter" means different days to different finance teams. Convert to explicit dates before comparing anything that crosses an organisational boundary.</p>
     </div>
 
     <div class="related-tools">

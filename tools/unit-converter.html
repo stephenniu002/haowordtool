@@ -89,7 +89,21 @@
         <div class="result-value" id="res"></div>
       </div>
     </div>
-  </div>
+      <div class="seo-content">
+<h2>Two kinds of conversion</h2>
+<p>Most unit conversions are a single multiplication: inches to centimetres is a fixed factor, and so is pounds to kilograms. Temperature is not. Celsius and Fahrenheit have different zero points as well as different step sizes, so the conversion is a linear function with an offset — multiply and add, in that order. Applying a factor alone, which is the usual mistake, gives plausible-looking nonsense for anything well below freezing.</p>
+<h2>Where precision quietly disappears</h2>
+<p>Exact definitions exist for most imperial units: an inch is defined as 2.54 centimetres, so those conversions are exact to any number of digits. Others are conventions with limited precision, and rounding at each step of a chain of conversions accumulates error. Convert once, from the original value, rather than converting a rounded intermediate result.</p>
+<p>Watch the units that share a name. A US gallon is about 3.79 litres and an imperial gallon about 4.55 — a 20% difference that has sunk real projects. A US ton is 2,000 pounds, a metric tonne 2,204.6, and a UK ton historically 2,240.</p>
+<h2>Questions that come up</h2>
+<p><strong>How many digits should I keep?</strong> Match the precision of the input; extra digits imply accuracy that is not there.</p>
+<p><strong>Is the conversion done locally?</strong> Yes, in the browser, with no request to a server.</p>
+<p><strong>Why do two converters disagree slightly?</strong> Different rounding, or different definitions of the same unit name.</p>
+
+<p><strong>Can it convert area or volume?</strong> Those need squared and cubed factors, which is why they are kept separate rather than folded into the length converter; a square metre is not 100 times a square centimetre but 10,000.</p>
+<p><strong>Why does the temperature result look odd?</strong> Because it is the one conversion on the page that is not a pure multiplication, and rounding the intermediate step before adding the offset shifts the answer.</p>
+    </div>
+    </div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

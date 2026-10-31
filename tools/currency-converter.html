@@ -84,7 +84,20 @@
     </div>
 
     <p class="hint">Rates in this demo are static. For production, connect a live forex API such as exchangerate.host or fixer.io.</p>
-  </div>
+      <div class="seo-content">
+<h2>What the rate on this page is</h2>
+<p>The rates here are a fixed snapshot bundled with the page, not a live feed. That is a deliberate trade: the tool works offline, loads instantly, and sends no request to a third party, but the numbers do not move with the market. For budgeting, travel planning and rough comparisons that is fine. For anything that settles — invoicing, payments, contracts — use the rate your bank or payment provider will actually apply, because that rate includes their spread.</p>
+<h2>Why the rate you get is worse than the rate you see</h2>
+<p>Mid-market rates are what currencies trade at between banks, in enormous size. Retail conversion adds a margin, sometimes as a hidden difference between the buy and sell price rather than a visible fee. A card that advertises "no fees" typically earns its money on the spread, and the gap is often one to three percent — far more than a visible commission would be.</p>
+<p>Also mind the direction. A rate quoted as units of foreign currency per unit of domestic is not symmetric with its reciprocal; multiplying by the wrong one gives an answer that is wrong by the square of the rate and looks plausible for currencies near parity.</p>
+<h2>Questions that come up</h2>
+<p><strong>How often are the rates updated?</strong> They are not — the table is static.</p>
+<p><strong>Why does my bank show a different number?</strong> Spread, plus the timestamp of their rate.</p>
+<p><strong>Is the conversion exact?</strong> It is exact arithmetic on approximate inputs; treat three significant figures as honest.</p>
+
+<p><strong>What if my currency is not listed?</strong> Convert through a major currency in two steps. The result carries the error of both rates, so treat it as an estimate rather than a quote.</p>
+    </div>
+    </div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

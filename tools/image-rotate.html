@@ -146,6 +146,11 @@
 <p>Straightening a photo is the usual reason to rotate by a fractional angle: a scanned page or a hand-held shot is rarely level, and a two-degree correction makes the whole page look intentional.</p>
 <h2>Why the canvas grows</h2>
 <p>A rotated rectangle does not fit inside its original bounding box. Either the corners get clipped or the canvas expands — expanding is the correct behaviour, and it is why the output dimensions differ from the input.</p>
+    <h2>Resampling and the cost of rotating</h2>
+<p>Any rotation that is not a multiple of 90 degrees has to resample pixels, because the new grid does not line up with the old one. Each output pixel is built from a weighted mix of its neighbours. Rotate once and the loss is invisible; rotate the same file five times and edges visibly soften, so straighten the original and keep the result rather than the intermediate steps.</p>
+<p>Quarters are free. A 90, 180 or 270 degree turn is a pure rearrangement of pixels, so there is no quality loss and no reason to avoid it. The trade-off is that the canvas swaps width and height, which is worth checking before uploading to a form with fixed dimensions.</p>
+
+<p>Phone photos are the usual source of sideways images. Most cameras record orientation in the file's metadata instead of rotating the pixels, and most viewers honour it while some upload forms do not — which is why a picture looks right on your device and wrong after it is posted. Baking the rotation into the pixels removes the dependency.</p>
     </div>
 
     <div class="related-tools">
