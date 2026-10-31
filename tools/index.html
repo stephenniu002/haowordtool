@@ -276,9 +276,17 @@ render();
 <h2>How the collection is organised</h2>
 <p>Converters and formatters take text or a file and return a different representation of the same thing. Calculators apply a published formula — BMI, compound interest, subnet masks — and show the arithmetic, so you can check it against the source. Reference pages are static tables that answer a lookup without computing anything. Nothing here needs an account, and there is no dashboard holding your history, because there is no server to hold it.</p>
 <h2>Where the numbers come from, and where they stop</h2>
-<p>Calculator formulas are the standard published ones and the input each one expects is labelled on the page. That makes the arithmetic reproducible, not authoritative: tax rates, medical thresholds and legal deadlines change by jurisdiction and by year, and a tool that does not know your situation cannot account for it. Treat the output as a starting figure to verify against the primary source, never as professional advice.</p>
+<p>Calculator formulas are the standard published ones and the input each one expects is labelled on the page. That makes the arithmetic reproducible, not authoritative: tax rates, medical thresholds and legal deadlines change by jurisdiction and by year, and a tool that does not know your situation cannot account for it. Treat the output as a starting figure to verify against the primary source, never as professional advice.</p></section>
 <section><h2>Put these tools on your own site</h2>
 <p>Every tool here can be embedded with one iframe snippet — no account, no API key, no tracking script inside the frame. <a href="/embed/">Grab the embed code →</a></p></section>
+<section class="seo-content" style="max-width:1120px;margin:0 auto;padding:0 24px 56px">
+<h2>What these tools deliberately leave out</h2>
+<p>None of the tools here stores your input, creates an account or keeps a history. That is a design decision rather than an oversight: a tool that remembers nothing cannot leak what it was given. The trade-off is that a refresh clears your work, so export or copy a result before closing the tab.</p>
+<p>They also stay deliberately narrow. The unit converter handles length, mass and temperature but not volume, because volume depends on the substance being measured. The word counter reports characters and words but does not judge whether the text is any good. Where a calculation has limits — BMI ignoring body composition, exchange rates excluding bank spreads — the page states them next to the result rather than in a footnote.</p>
+<h2>Choosing between similar tools</h2>
+<p>Several tools overlap, and the right choice depends on the input. For images, compress when the file is too large but the pixel dimensions are correct; resize when the dimensions themselves are wrong; convert the format when transparency or sharp edges matter more than file size. For text, the word counter suits length limits and reading time, while the diff tool is for comparing two versions line by line.</p>
+<p>Every tool page names the units, formulas and rounding rules it applies, so a result can be checked by hand. If a number looks wrong, the calculation behind it is on the same page rather than hidden in a script.</p>
+</section>
 <section><h2>Other languages</h2><ul>
 <li><a href="/de/tools/">Werkzeuge (Deutsch)</a></li>
 <li><a href="/es/tools/">Herramientas (Español)</a></li>
