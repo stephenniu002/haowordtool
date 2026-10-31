@@ -13,6 +13,7 @@ gtag('config', 'G-3LV3GH9T5X');
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AI Search Visibility Services | Get Cited by ChatGPT, Perplexity & Google AI — HaoWordTool</title>
 <meta name="description" content="GEO/AEO services: AI visibility audit, website AI-readability foundation (robots, llms.txt, schema), and monthly citation monitoring. See what AI says about your brand." />
+<meta name="robots" content="index,follow,max-image-preview:large" />
 <link rel="canonical" href="https://haowordtool.com/ai-search-visibility.html" />
 <meta property="og:title" content="AI Search Visibility Services — Get Cited by ChatGPT, Perplexity & Google AI" />
 <meta property="og:description" content="GEO/AEO services: AI visibility audit, website AI-readability foundation, and monthly citation monitoring. See what AI says about your brand." />
@@ -51,7 +52,9 @@ gtag('config', 'G-3LV3GH9T5X');
     {"@type": "Question", "name": "We already rank #1 on Google — do we need this?",
      "acceptedAnswer": {"@type": "Answer", "text": "Google rank doesn't transfer. Many top-ranked sites are invisible to AI because they lack structured data and citable content. AI answers use different signals."}},
     {"@type": "Question", "name": "Can you guarantee we'll be cited?",
-     "acceptedAnswer": {"@type": "Answer", "text": "No — and you should distrust anyone who does. AI answers are probabilistic and change with every phrasing. We guarantee the work, the measurement, and honest monthly reporting."}}
+     "acceptedAnswer": {"@type": "Answer", "text": "No — and you should distrust anyone who does. AI answers are probabilistic and change with every phrasing. We guarantee the work, the measurement, and honest monthly reporting."}},
+    {"@type": "Question", "name": "Can I do the audit myself instead of paying for it?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes — the 90-minute self-audit on this page is the first half of our own audit. The paid audit adds the competitor benchmark across 20+ queries, a prioritized gap list, and the robots/schema/llms.txt implementation."}}
   ]
 }
 </script>
@@ -436,6 +439,53 @@ gtag('config', 'G-3LV3GH9T5X');
   </div>
 </section>
 
+<style>
+  .diy ol{list-style:none;counter-reset:diy;display:flex;flex-direction:column;gap:14px;max-width:860px;margin:0 auto;padding:0}
+  .diy ol li{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px 20px 68px;font-size:14px;color:var(--muted);line-height:1.7}
+  .diy ol li::before{counter-increment:diy;content:counter(diy,decimal-leading-zero);position:absolute;left:20px;top:20px;font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--accent-2);background:rgba(124,92,255,.16);border:1px solid rgba(124,92,255,.3);border-radius:8px;padding:3px 8px}
+  .diy ol li b{color:var(--text)}
+  .geo-table{width:100%;border-collapse:collapse;max-width:920px;margin:30px auto 0;font-size:13.5px}
+  .geo-table th,.geo-table td{border:1px solid var(--border);padding:12px 14px;text-align:left;vertical-align:top}
+  .geo-table th{background:rgba(124,92,255,.1);color:var(--text);font-weight:700;font-size:12.5px;white-space:nowrap}
+  .geo-table td{color:var(--muted);line-height:1.65}
+  .geo-table td:first-child{color:var(--text);font-weight:600;white-space:nowrap}
+  @media(max-width:640px){.geo-table{display:block;overflow-x:auto}}
+</style>
+
+<!-- diy audit -->
+<section class="sec diy" id="self-audit" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The 90-minute self-audit</h2>
+      <p>Do this before you pay anyone — including us. Every audit we sell starts with the same 90 minutes of procedure and an honest spreadsheet. Run it yourself first; if the gaps are obvious, you'll know exactly what to buy.</p>
+    </div>
+    <ol>
+      <li><b>Write 5 brand queries first.</b> Not clever ones — the exact questions a buyer would type: "best heated shawl for office 2026", "HaoWordTool AI visibility audit price", "who makes AI translation glasses". Write them down before testing; improvising queries mid-audit skews the results toward whatever you remember.</li>
+      <li><b>Run each query in a fresh session on all 4 engines.</b> ChatGPT, Perplexity, Google AI Mode, Gemini. New chat every time, memory and personalization off. For each answer record three things: were you mentioned, were you cited with a link, and were the facts right (price, features, contact)?</li>
+      <li><b>Score it in a sheet.</b> Rows = the 5 queries, columns = the 4 engines, cells = mentioned / absent / wrong facts. One page, no fancy tooling. Patterns jump out immediately: "cited by Perplexity, invisible to ChatGPT" is a completely different problem from "mentioned everywhere with the wrong price".</li>
+      <!-- SCREENSHOT: a simple audit spreadsheet with brand queries as rows, the four AI engines as columns, and cells marked mentioned / absent / wrong facts -->
+      <li><b>Check robots.txt for AI crawler blocks.</b> Fetch yourdomain.com/robots.txt and search for GPTBot, PerplexityBot, Google-Extended, ClaudeBot, and CCBot. A single Disallow left over from a staging setup is the most common cause of total AI invisibility — and the cheapest to fix.</li>
+      <li><b>Fetch /llms.txt at the domain root.</b> If it's missing, crawlers have no site guide. If it exists under /assets/ or /docs/ instead of the root, nothing reads it there — root only. This is the mistake we made ourselves (see below).</li>
+      <li><b>Validate schema on 3 key pages.</b> Paste your homepage, a product page, and a FAQ page into Google's Rich Results Test. Record which types validate — Product, Organization, FAQPage. Broken or absent schema means AI models see plain-text guesses instead of structured facts.</li>
+      <li><b>Benchmark one competitor.</b> Run the same 5 queries for the competitor you lose deals to. The gap column — cited where you're absent — is your actual backlog. Prioritize by buying intent first: a citation on "best X for Y" beats a citation on "what is X".</li>
+    </ol>
+    <table class="geo-table">
+      <thead><tr><th>Engine</th><th>Primary crawl path</th><th>What moves the needle most</th><th>How to measure it</th></tr></thead>
+      <tbody>
+        <tr><td>ChatGPT</td><td>GPTBot + web index</td><td>Structured product facts and genuine third-party reviews</td><td>Brand-query prompts in fresh sessions</td></tr>
+        <tr><td>Perplexity</td><td>PerplexityBot, real-time web</td><td>Pages with clear Q&amp;A structure it can quote verbatim</td><td>Citation links inside its answers</td></tr>
+        <tr><td>Google AI Mode</td><td>Google-Extended + Search index</td><td>Existing rankings reinforced with schema</td><td>AI Mode prompts vs. Search Console data</td></tr>
+        <tr><td>Gemini</td><td>Google crawlers + knowledge base</td><td>Organization and FAQ schema plus authoritative mentions</td><td>Prompt battery and the sources it lists</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:44px">
+      <h3>The mistake we made on our own site</h3>
+      <p>Before we added Product schema, we asked ChatGPT our own price. It answered "$99/month". Our audit is $499, one-time. The model hadn't read our pricing page — it had guessed from similar-sounding services. After we added schema with the real price, the same prompt started returning $499. We learned it the hard way: <b>if AI hallucinates your price, don't argue with the model — fix the structured data.</b> Second mistake, same project: we first published llms.txt under /assets/. It sat there for weeks doing nothing, because nothing reads llms.txt anywhere except the domain root.</p>
+    </div>
+    <!-- SCREENSHOT: ChatGPT answering a brand-price query before and after Product schema was added, showing a hallucinated monthly price versus the correct one-time price -->
+  </div>
+</section>
+
 <!-- faq -->
 <section class="sec" id="faq" style="padding-top:8px">
   <div class="wrap">
@@ -463,6 +513,10 @@ gtag('config', 'G-3LV3GH9T5X');
       <details>
         <summary>Can you guarantee we'll be cited?<span class="plus">+</span></summary>
         <div class="ans">No — and you should distrust anyone who does. AI answers are probabilistic and change with every phrasing. We guarantee the work, the measurement, and honest monthly reporting.</div>
+      </details>
+      <details>
+        <summary>Can I do the audit myself instead of paying for it?<span class="plus">+</span></summary>
+        <div class="ans">Yes — <a href="#self-audit" style="color:var(--accent-2)">the 90-minute procedure above</a> is the first half of our own audit, and it's free. What the $499 buys you is the competitor benchmark across 20+ queries, a prioritized gap list, and the robots/schema/llms.txt implementation done for you. If your self-audit already shows you're invisible everywhere, you're paying for the prioritized version of the same work.</div>
       </details>
     </div>
   </div>
