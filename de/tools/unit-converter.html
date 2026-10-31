@@ -50,7 +50,14 @@
       <div><label for="to">Zu Einheit</label><select id="to"></select></div>
     </div>
     <div class="btn-row"><button class="btn btn-primary btn-block" id="go">Umrechnen</button></div>
-    <div class="result" id="out" style="display:none"><div class="result-label">Ergebnis</div><div class="result-value" id="res"></div></div></div><div class="seo-content"><h2>Über den Einheitenrechner</h2><p>Rechnet Länge (m, km, cm, mm, mi, yd, ft, in), Gewicht (kg, g, mg, t, lb, oz) und Temperatur (°C, °F, K) um.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Welche Einheiten werden unterstützt?</h3><p>Länge: 8 Einheiten. Gewicht: 6 Einheiten. Temperatur: 3 Einheiten.</p></div><div class="faq-item"><h3>Wie genau ist die Umrechnung?</h3><p>Bis zu 6 Dezimalstellen.</p></div></div>
+    <div class="result" id="out" style="display:none"><div class="result-label">Ergebnis</div><div class="result-value" id="res"></div></div></div><div class="seo-content"><h2>Über den Einheitenrechner</h2><p>Rechnet Länge (m, km, cm, mm, mi, yd, ft, in), Gewicht (kg, g, mg, t, lb, oz) und Temperatur (°C, °F, K) um.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Welche Einheiten werden unterstützt?</h3><p>Länge: 8 Einheiten. Gewicht: 6 Einheiten. Temperatur: 3 Einheiten.</p></div><div class="faq-item"><h3>Wie genau ist die Umrechnung?</h3><p>Bis zu 6 Dezimalstellen.</p></div>
+<h2>Metrisch und imperial</h2>
+<p>Der Rechner deckt drei Größenordnungen ab: Länge, Gewicht und Temperatur. Bei Länge und Gewicht sind alle Faktoren fest definiert und damit exakt. Ein Zoll entspricht seit 1959 genau 2,54 Zentimetern, ein Pfund genau 0,45359237 Kilogramm. Diese Definitionen gelten unabhängig davon, welche Einheit zuerst eingegeben wurde.</p>
+<p>Temperatur ist der Sonderfall: Celsius und Fahrenheit sind nicht über einen Faktor, sondern über eine Verschiebung miteinander verbunden. 0 °C entspricht 32 °F, und ein Grad Unterschied entspricht 1,8 Grad Fahrenheit. Eine reine Multiplikation führt hier zu falschen Ergebnissen — der Rechner berücksichtigt den Versatz automatisch, Kelvin wird über den absoluten Nullpunkt bei −273,15 °C angebunden.</p>
+<h2>Runden und Genauigkeit</h2>
+<p>Angezeigt werden standardmäßig vier Nachkommastellen, weil mehr Stellen bei Alltagsgrößen keine praktische Bedeutung haben. Für technische Anwendungen lässt sich die Genauigkeit erhöhen; intern wird mit voller Gleitkommagenauigkeit gerechnet und erst bei der Ausgabe gerundet.</p>
+<p>Ein häufiger Fehler ist die Verwechslung von Masse und Gewicht: Das Pfund ist eine Masseeinheit, das Kilogramm ebenfalls. Die Umrechnung gilt daher unabhängig von der Schwerkraft. Bei Kochrezepten mit Volumenangaben, etwa Cups, hilft der Rechner nicht weiter, weil das Volumen vom Füllgut abhängt.</p>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

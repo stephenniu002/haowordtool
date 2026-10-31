@@ -48,7 +48,14 @@
     <img id="preview" style="display:none;max-width:100%;max-height:280px;border-radius:12px;margin-top:18px;border:1px solid var(--border)">
     <div class="grid2" style="margin-top:20px"><div><label>Breite</label><input type="number" id="w"></div><div><label>Höhe</label><input type="number" id="h"></div></div>
     <label class="check-row" style="margin-top:12px;display:inline-flex"><input type="checkbox" id="ratio" checked> Seitenverhältnis beibehalten</label>
-    <div class="btn-row"><a id="dl" class="btn btn-primary" style="display:none" download="resized.png">Größe ändern</a></div></div><div class="seo-content"><h2>Über die Bildgrößenänderung</h2><p>Ändert Breite und Höhe Ihrer Bilder. Die Option Seitenverhältnis beibehalten verhindert Verzerrungen.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Wie behalte ich die Proportionen?</h3><p>Aktivieren Sie Seitenverhältnis beibehalten.</p></div><div class="faq-item"><h3>Welche Formate?</h3><p>JPG, PNG, WebP. Ausgabe als PNG.</p></div></div>
+    <div class="btn-row"><a id="dl" class="btn btn-primary" style="display:none" download="resized.png">Größe ändern</a></div></div><div class="seo-content"><h2>Über die Bildgrößenänderung</h2><p>Ändert Breite und Höhe Ihrer Bilder. Die Option Seitenverhältnis beibehalten verhindert Verzerrungen.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Wie behalte ich die Proportionen?</h3><p>Aktivieren Sie Seitenverhältnis beibehalten.</p></div><div class="faq-item"><h3>Welche Formate?</h3><p>JPG, PNG, WebP. Ausgabe als PNG.</p></div>
+<h2>Seitenverhältnis und Verzerrung</h2>
+<p>Wird nur die Breite geändert, rechnet der Rechner die Höhe automatisch mit, solange die Option zum Beibehalten des Seitenverhältnisses aktiv ist. Ohne diese Sperre lassen sich beide Werte frei setzen — das ist für gezielte Zuschnitte sinnvoll, verzerrt aber das Motiv, wenn das Verhältnis nicht dem Original entspricht.</p>
+<p>Beim Verkleinern werden benachbarte Pixel zusammengefasst, beim Vergrößern müssen Zwischenwerte interpoliert werden. Dabei entsteht nie neue Information: Ein auf doppelte Größe gestrecktes Bild bleibt unscharf, auch wenn die Datei größer wird. Für Druckdaten ist es deshalb sinnvoller, in ausreichender Auflösung zu fotografieren, statt später hochzurechnen.</p>
+<h2>Passende Maße finden</h2>
+<p>Die gebräuchlichsten Formate haben feste Kantenlängen: Beitragsbilder quadratisch, Story-Formate hochkant im Verhältnis 9:16, Titelbilder breit im Verhältnis 16:9. Wer für mehrere Plattformen produziert, sollte vom größten benötigten Maß ausgehen und daraus verkleinern — der umgekehrte Weg kostet Qualität.</p>
+<p>DPI-Angaben ändern die Pixelzahl nicht, sie beschreiben nur, wie dicht diese beim Druck gesetzt werden. Ein Bild mit 1200 Pixeln Breite bleibt 1200 Pixel breit, egal ob 72 oder 300 dpi eingetragen sind. Für die Anzeige im Netz zählt ausschließlich die Pixelzahl.</p>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

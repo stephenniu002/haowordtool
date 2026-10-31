@@ -48,7 +48,14 @@
 </nav></div></header>
 <main><div class="wrap tool-page">
   <a href="../index.html" class="back">← Volver a todas las herramientas</a>
-  <h1 style="margin-top:16px">Reloj Mundial</h1><p class="lead">Hora actual en las grandes ciudades.</p><div class="card"><div class="clock-grid" id="clocks"></div></div><div class="seo-content"><h2>Sobre el reloj mundial</h2><p>Muestra la hora actual en las principales ciudades del mundo. Se actualiza cada segundo.</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Se considera el horario de verano?</h3><p>Sí, a través de la API Intl del navegador.</p></div><div class="faq-item"><h3>¿Qué tan exacta es?</h3><p>Usa el reloj de tu dispositivo.</p></div></div>
+  <h1 style="margin-top:16px">Reloj Mundial</h1><p class="lead">Hora actual en las grandes ciudades.</p><div class="card"><div class="clock-grid" id="clocks"></div></div><div class="seo-content"><h2>Sobre el reloj mundial</h2><p>Muestra la hora actual en las principales ciudades del mundo. Se actualiza cada segundo.</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Se considera el horario de verano?</h3><p>Sí, a través de la API Intl del navegador.</p></div><div class="faq-item"><h3>¿Qué tan exacta es?</h3><p>Usa el reloj de tu dispositivo.</p></div>
+<h2>Zonas horarias y horario de verano</h2>
+<p>El reloj lee los datos de zona horaria del navegador y calcula con ellos la hora local de cada ciudad. La base son las zonas IANA, que no solo guardan el desfase respecto a UTC sino también las reglas del horario de verano. Así la pantalla cambia de hora en el momento correcto sin mantener reglas escritas en el código.</p>
+<p>El desfase respecto a UTC no es constante: Europa central está en UTC+1 en invierno y UTC+2 en verano, mientras que lugares como Tokio o Singapur mantienen el mismo desfase todo el año. Para agendar reuniones lo decisivo es la diferencia entre dos ciudades, no la hora por separado.</p>
+<h2>Planificar entre zonas</h2>
+<p>Un error frecuente es suponer que la distancia entre dos lugares permanece igual. Cuando cambian al horario de verano en fechas distintas —en Europa y Norteamérica suelen mediar dos o tres semanas— la ventana común se desplaza temporalmente una hora.</p>
+<p>Quien trabaja con varias regiones debería anotar además las citas en UTC. Ese valor es inequívoco y sigue siendo correcto tras cualquier cambio de hora. La pantalla se actualiza cada segundo y usa únicamente los datos de zona del propio dispositivo.</p>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

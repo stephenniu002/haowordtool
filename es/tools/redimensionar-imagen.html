@@ -58,7 +58,14 @@
     <img id="preview" style="display:none;max-width:100%;max-height:280px;border-radius:12px;margin-top:18px;border:1px solid var(--border)">
     <div class="grid2" style="margin-top:20px"><div><label>Ancho</label><input type="number" id="w"></div><div><label>Alto</label><input type="number" id="h"></div></div>
     <label class="check-row" style="margin-top:12px;display:inline-flex"><input type="checkbox" id="ratio" checked> Mantener proporción</label>
-    <div class="btn-row"><a id="dl" class="btn btn-primary" style="display:none" download="resized.png">Redimensionar</a></div></div><div class="seo-content"><h2>Sobre redimensionar imágenes</h2><p>Cambia ancho y alto. La opción Mantener proporción evita distorsiones.</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Cómo mantengo la proporción?</h3><p>Marca Mantener proporción.</p></div><div class="faq-item"><h3>¿Qué formatos?</h3><p>JPG, PNG, WebP. Salida en PNG.</p></div></div>
+    <div class="btn-row"><a id="dl" class="btn btn-primary" style="display:none" download="resized.png">Redimensionar</a></div></div><div class="seo-content"><h2>Sobre redimensionar imágenes</h2><p>Cambia ancho y alto. La opción Mantener proporción evita distorsiones.</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Cómo mantengo la proporción?</h3><p>Marca Mantener proporción.</p></div><div class="faq-item"><h3>¿Qué formatos?</h3><p>JPG, PNG, WebP. Salida en PNG.</p></div>
+<h2>Proporción y distorsión</h2>
+<p>Si solo se cambia el ancho, la herramienta calcula la altura automáticamente mientras la opción de mantener proporción esté activa. Sin ese bloqueo ambos valores se pueden fijar libremente: útil para recortes concretos, pero deforma la imagen cuando la proporción no coincide con la original.</p>
+<p>Al reducir se agrupan píxeles vecinos; al ampliar hay que interpolar valores intermedios. En ningún caso se crea información nueva: una imagen estirada al doble sigue viéndose borrosa aunque el archivo pese más. Para material de impresión conviene fotografiar con resolución suficiente en lugar de ampliar después.</p>
+<h2>Cómo encontrar las medidas adecuadas</h2>
+<p>Los formatos más usados tienen lados fijos: publicaciones cuadradas, formatos de historia verticales en proporción 9:16, cabeceras anchas en 16:9. Quien produce para varias plataformas debería partir de la medida mayor necesaria y reducir desde ahí; el camino inverso cuesta calidad.</p>
+<p>Los valores de ppp no cambian el número de píxeles: solo describen con qué densidad se colocan al imprimir. Una imagen de 1200 píxeles de ancho sigue teniendo 1200, se indiquen 72 o 300 ppp. Para mostrar en pantalla cuenta únicamente la cantidad de píxeles.</p>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

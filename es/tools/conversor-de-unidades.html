@@ -60,7 +60,14 @@
       <div><label for="to">A unidad</label><select id="to"></select></div>
     </div>
     <div class="btn-row"><button class="btn btn-primary btn-block" id="go">Convertir</button></div>
-    <div class="result" id="out" style="display:none"><div class="result-label">Resultado</div><div class="result-value" id="res"></div></div></div><div class="seo-content"><h2>Sobre el conversor de unidades</h2><p>Convierte longitud (m, km, cm, mm, mi, yd, ft, in), peso (kg, g, mg, t, lb, oz) y temperatura (°C, °F, K).</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Qué unidades admite?</h3><p>Longitud: 8 unidades. Peso: 6 unidades. Temperatura: 3 unidades.</p></div><div class="faq-item"><h3>¿Con qué precisión?</h3><p>Hasta 6 decimales.</p></div></div>
+    <div class="result" id="out" style="display:none"><div class="result-label">Resultado</div><div class="result-value" id="res"></div></div></div><div class="seo-content"><h2>Sobre el conversor de unidades</h2><p>Convierte longitud (m, km, cm, mm, mi, yd, ft, in), peso (kg, g, mg, t, lb, oz) y temperatura (°C, °F, K).</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Qué unidades admite?</h3><p>Longitud: 8 unidades. Peso: 6 unidades. Temperatura: 3 unidades.</p></div><div class="faq-item"><h3>¿Con qué precisión?</h3><p>Hasta 6 decimales.</p></div>
+<h2>Sistema métrico e imperial</h2>
+<p>La herramienta cubre tres magnitudes: longitud, peso y temperatura. En longitud y peso todos los factores están fijamente definidos y son exactos. Una pulgada equivale exactamente a 2,54 centímetros y una libra a 0,45359237 kilogramos desde el acuerdo de 1959. Esas definiciones valen sin importar en qué unidad se introduzca primero el valor.</p>
+<p>La temperatura es el caso especial: Celsius y Fahrenheit no se relacionan por un factor sino por un desplazamiento. 0 °C equivale a 32 °F y cada grado de diferencia corresponde a 1,8 grados Fahrenheit. Una multiplicación simple da resultados falsos aquí; la herramienta aplica el desfase automáticamente, y Kelvin se ancla al cero absoluto en −273,15 °C.</p>
+<h2>Redondeo y precisión</h2>
+<p>Se muestran cuatro decimales por defecto, porque más cifras no aportan nada en magnitudes cotidianas. Para uso técnico la precisión se puede aumentar; internamente se calcula con coma flotante completa y solo se redondea al mostrar.</p>
+<p>Un error frecuente es confundir masa y peso: la libra es una unidad de masa, igual que el kilogramo, así que la conversión no depende de la gravedad. Con recetas que usan volumen, como las tazas, la herramienta no ayuda, porque el volumen depende del ingrediente.</p>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

@@ -38,7 +38,14 @@
 </nav></div></header>
 <main><div class="wrap tool-page">
   <a href="../index.html" class="back">← Zurück zu allen Tools</a>
-  <h1 style="margin-top:16px">Weltuhr</h1><p class="lead">Aktuelle Uhrzeit in den Metropolen der Welt.</p><div class="card"><div class="clock-grid" id="clocks"></div></div><div class="seo-content"><h2>Über die Weltuhr</h2><p>Zeigt die aktuelle Uhrzeit in den wichtigsten Metropolen der Welt. Aktualisiert jede Sekunde.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Wird die Sommerzeit berücksichtigt?</h3><p>Ja, über die Intl-API des Browsers.</p></div><div class="faq-item"><h3>Wie genau ist die Zeit?</h3><p>Sie nutzt die Uhr Ihres Geräts.</p></div></div>
+  <h1 style="margin-top:16px">Weltuhr</h1><p class="lead">Aktuelle Uhrzeit in den Metropolen der Welt.</p><div class="card"><div class="clock-grid" id="clocks"></div></div><div class="seo-content"><h2>Über die Weltuhr</h2><p>Zeigt die aktuelle Uhrzeit in den wichtigsten Metropolen der Welt. Aktualisiert jede Sekunde.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Wird die Sommerzeit berücksichtigt?</h3><p>Ja, über die Intl-API des Browsers.</p></div><div class="faq-item"><h3>Wie genau ist die Zeit?</h3><p>Sie nutzt die Uhr Ihres Geräts.</p></div>
+<h2>Zeitzonen und Sommerzeit</h2>
+<p>Die Uhr liest die Zeitzonendaten des Browsers aus und rechnet daraus die Ortszeit für jede Stadt. Grundlage sind die IANA-Zeitzonen, in denen nicht nur der Versatz zu UTC, sondern auch die Regeln für Sommerzeit hinterlegt sind. Dadurch springt die Anzeige zum richtigen Zeitpunkt um eine Stunde, ohne dass Regeln im Code gepflegt werden müssen.</p>
+<p>Der Versatz zu UTC ist nicht konstant: Mitteleuropa liegt im Winter bei UTC+1 und im Sommer bei UTC+2, während Orte wie Tokio oder Singapur ganzjährig denselben Versatz halten. Für Terminplanung ist deshalb der Blick auf die Differenz zwischen zwei Städten entscheidend, nicht auf die Uhrzeit allein.</p>
+<h2>Termine über Zeitzonen planen</h2>
+<p>Ein häufiger Fehler ist die Annahme, der Abstand zwischen zwei Orten bleibe gleich. Wechseln diese zu unterschiedlichen Terminen in die Sommerzeit — in Europa und Nordamerika liegen die Umstellungstermine meist zwei bis drei Wochen auseinander — verschiebt sich das gemeinsame Zeitfenster vorübergehend um eine Stunde.</p>
+<p>Wer regelmäßig mit mehreren Regionen arbeitet, sollte Termine zusätzlich in UTC notieren. Diese Angabe ist eindeutig und bleibt auch nach einer Zeitumstellung korrekt. Die Anzeige aktualisiert sich sekündlich und nutzt ausschließlich die lokalen Zeitzonendaten des Geräts.</p>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

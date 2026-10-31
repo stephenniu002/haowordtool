@@ -48,7 +48,14 @@
     <img id="preview" style="display:none;max-width:100%;max-height:300px;border-radius:12px;margin-top:18px;border:1px solid var(--border)">
     <div style="margin-top:20px"><label>Qualität: <span id="qv">70</span>%</label><input type="range" id="q" min="10" max="100" value="70"></div>
     <div class="btn-row"><button class="btn btn-primary" id="go" style="display:none">Komprimieren</button><a id="dl" class="btn btn-ghost" style="display:none" download="compressed.jpg">Herunterladen</a></div>
-    <div class="result" id="out" style="display:none"><div class="result-label">Komprimiert</div><div class="result-value" id="info"></div></div></div><div class="seo-content"><h2>Über die Bildkomprimierung</h2><p>Verkleinert JPG, PNG und WebP direkt im Browser. Ihre Bilder werden nie hochgeladen.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Verliere ich Qualität?</h3><p>Bei 70–80% ist der Unterschied meist unsichtbar.</p></div><div class="faq-item"><h3>Mehrere Dateien gleichzeitig?</h3><p>Aktuell eine Datei pro Vorgang.</p></div></div>
+    <div class="result" id="out" style="display:none"><div class="result-label">Komprimiert</div><div class="result-value" id="info"></div></div></div><div class="seo-content"><h2>Über die Bildkomprimierung</h2><p>Verkleinert JPG, PNG und WebP direkt im Browser. Ihre Bilder werden nie hochgeladen.</p><h3>Häufige Fragen</h3><div class="faq-item"><h3>Verliere ich Qualität?</h3><p>Bei 70–80% ist der Unterschied meist unsichtbar.</p></div><div class="faq-item"><h3>Mehrere Dateien gleichzeitig?</h3><p>Aktuell eine Datei pro Vorgang.</p></div>
+<h2>Qualität richtig einstellen</h2>
+<p>Der Qualitätsregler steuert, wie stark Details verworfen werden. Werte zwischen 70 und 80 Prozent sind für Fotos im Web der übliche Kompromiss: Die Datei wird deutlich kleiner, ohne dass bei normalem Betrachtungsabstand ein Unterschied auffällt. Unter 60 Prozent beginnen sich Kanten und feine Texturen sichtbar zu glätten, besonders in Himmel, Haut und dunklen Flächen.</p>
+<p>Das Format entscheidet stärker als der Regler. Für Fotos ist JPEG fast immer die kleinste Wahl, für Grafiken mit wenigen Farben und scharfen Kanten bringt PNG oder WebP deutlich bessere Ergebnisse bei kleinerer Datei. Transparenz bleibt nur in PNG und WebP erhalten — wird ein transparentes Bild als JPEG gespeichert, füllt sich der Hintergrund mit Weiß.</p>
+<h2>Was mit den Dateien passiert</h2>
+<p>Die Komprimierung läuft vollständig im Browser. Es findet kein Upload statt, die Bilder verlassen das Gerät nicht. Das bedeutet auch: Es gibt keine Warteschlange auf einem Server, und die Verarbeitung ist bei großen Dateien durch den Arbeitsspeicher des Geräts begrenzt.</p>
+<p>Metadaten wie Aufnahmeort und Kameramodell werden beim Neuberechnen entfernt, was beim Veröffentlichen im Netz meist erwünscht ist. Für den Vergleich lässt sich die Originaldateigröße neben dem Ergebnis anzeigen, sodass die Ersparnis vor dem Speichern sichtbar wird.</p>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>

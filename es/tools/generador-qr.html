@@ -52,7 +52,14 @@
     <div style="margin-bottom:16px;text-align:left"><label for="qrtext">URL o texto</label><input type="text" id="qrtext" placeholder="https://"></div>
     <div class="btn-row" style="justify-content:center"><button class="btn btn-primary" id="go">Generar</button></div>
     <img id="qr" style="display:none;max-width:260px;margin:20px auto;border:1px solid var(--border);border-radius:12px;padding:12px;background:#fff">
-    <div class="btn-row" style="justify-content:center"><a id="dl" class="btn btn-ghost" style="display:none" download="qr.png">Descargar</a></div></div><div class="seo-content"><h2>Sobre el generador de QR</h2><p>Convierte URL o texto en códigos QR. Descarga en PNG y úsalo donde quieras.</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Puedo cambiar el tamaño?</h3><p>La descarga es de 260×260 px y escala sin pérdida.</p></div><div class="faq-item"><h3>¿Caduca el código?</h3><p>No. Los QR contienen los datos y no caducan.</p></div></div>
+    <div class="btn-row" style="justify-content:center"><a id="dl" class="btn btn-ghost" style="display:none" download="qr.png">Descargar</a></div></div><div class="seo-content"><h2>Sobre el generador de QR</h2><p>Convierte URL o texto en códigos QR. Descarga en PNG y úsalo donde quieras.</p><h3>Preguntas frecuentes</h3><div class="faq-item"><h3>¿Puedo cambiar el tamaño?</h3><p>La descarga es de 260×260 px y escala sin pérdida.</p></div><div class="faq-item"><h3>¿Caduca el código?</h3><p>No. Los QR contienen los datos y no caducan.</p></div>
+<h2>Corrección de errores y tamaño</h2>
+<p>Los códigos QR incluyen datos redundantes para seguir siendo legibles con suciedad, arañazos o poca luz. El nivel L tolera alrededor del 7 por ciento de superficie dañada, M un 15, Q un 25 y H hasta un 30. Los niveles altos generan más módulos en la misma superficie, lo que hace el código más denso y más difícil de leer en etiquetas pequeñas.</p>
+<p>Para material impreso la regla práctica es un mínimo de 2 centímetros de lado en el producto final, y más si la distancia de lectura es mayor. Alrededor del código debe quedar una zona libre de cuatro módulos, o muchos lectores no lo detectarán. Sobre fondo de color hace falta contraste suficiente: módulos oscuros sobre fondo claro, nunca al revés.</p>
+<h2>Estático o dinámico</h2>
+<p>El código generado aquí es estático: la dirección va dentro de los módulos. Es robusto y no depende de ningún servicio, pero si la dirección cambia hay que reimprimir. Los códigos dinámicos con redirección permiten cambios posteriores, a cambio de depender de un proveedor que debe seguir disponible.</p>
+<p>El archivo exportado es un PNG con el tamaño en píxeles elegido. Para impresión conviene una resolución de al menos 300 ppp; con 2 centímetros de lado eso equivale a unos 240 píxeles. El código no incluye seguimiento ni servicio intermedio.</p>
+</div>
 <div class="related-tools">
   <h2 id="relatedTitle">Related Tools</h2>
   <div class="related-grid" id="relatedGrid"></div>
