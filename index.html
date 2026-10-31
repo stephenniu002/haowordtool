@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HaoWordTool — 100 个免费在线工具 · AI 工具增长榜单</title>
-<meta name="description" content="100 个免费在线工具：计算器、计时器、字数统计、BMI、二维码生成、密码生成等，纯浏览器运行无需注册。另设 AI 工具增长榜，追踪正在起量的 AI 工具站。">
+<title>HaoWordTool — Free Online Tools & AI Tool Growth Index</title>
+<meta name="description" content="Free online tools that run entirely in your browser: calculator, timer, word counter, BMI, QR code generator, password generator, unit converter, image tools and more. No sign-up, nothing uploaded. Plus a weekly index of AI tool sites that are growing.">
 <link rel="canonical" href="https://haowordtool.com/">
 
 
 
-<meta property="og:locale" content="zh_CN">
-<meta property="og:locale:alternate" content="en_US">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="HaoWordTool — Free Online Tools & AI Tool Growth Index">
+<meta property="og:description" content="Free online tools that run entirely in your browser: calculator, timer, word counter, BMI, QR code generator, password generator, unit converter, image tools and more. No sign-up, nothing uploaded. Plus a weekly index of AI tool sites that are growing.">
+<meta property="og:url" content="https://haowordtool.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="google-adsense-account" content="ca-pub-4489946300243174">
 <link rel="alternate" type="application/rss+xml" title="HaoWordTool — new tools and field notes" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,313 +119,275 @@ article ul{margin:12px 0 0 20px;color:#2b3542}
 article li{margin-top:6px;max-width:800px}
 article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
 @media(max-width:820px){.langbtn span.lbl{display:none}}
+
+/* i18n: 语言切换按钮 */
+.langbtn{display:inline-flex;align-items:center;gap:5px;border:1px solid #2b4a6b;border-radius:8px;
+  padding:5px 11px;font-size:12.5px;font-weight:600;color:#c9dbea;font-family:var(--font-mono);white-space:nowrap}
+.langbtn:hover{border-color:var(--sky);color:var(--white);background:rgba(113,195,236,.08)}
+/* i18n: 长文区块（避免首页被判薄页） */
+article{padding:52px 0;border-top:1px solid var(--line)}
+article.soft{background:var(--soft)}
+article h2{font-family:var(--font-display);font-size:26px;font-weight:600;margin-bottom:8px}
+article h3{font-size:15.5px;font-weight:700;margin:24px 0 8px;color:var(--dusk)}
+article p{color:#2b3542;margin-top:10px;max-width:820px}
+article ul{margin:12px 0 0 20px;color:#2b3542}
+article li{margin-top:6px;max-width:800px}
+article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
+/* 补齐英文页用到的两个类（首页样式表里没有） */
+.cat{font-size:12px;color:var(--sea);white-space:nowrap}
+.sec-note{margin-top:16px;font-size:12.5px;color:var(--mute)}
+@media(max-width:820px){.langbtn span.lbl{display:none}}
 </style>
-</head>
-<body>
-<header><div class="wrap nav">
+<link rel="alternate" hreflang="en" href="https://haowordtool.com/"><link rel="alternate" hreflang="zh-CN" href="https://haowordtool.com/zh/"><link rel="alternate" hreflang="x-default" href="https://haowordtool.com/"></head>
+<body><header><div class="wrap nav">
   <a class="logo" href="/">Hao<span>Word</span>Tool</a>
   <div class="links">
-    <a class="l on" href="/">免费工具</a>
-    <a class="l" href="/ai-tools/">AI 情报</a>
-    <a class="l" href="/services/">服务</a>
-    <a class="cta" href="/tools/">全部工具</a>
-    <a class="langbtn" href="/en/" hreflang="en" title="Switch to English"><span class="lbl">EN</span></a>
+    <a class="l on" href="/">Free tools</a>
+    <a class="l" href="/ai-tools/rank/">AI index</a>
+    <a class="l" href="/blog.html">Guides</a>
+    <a class="cta" href="/tools/">All tools</a>
+    <a class="langbtn" href="/zh/" hreflang="zh-CN" title="切换到中文"><span class="lbl">中文</span></a>
   </div>
 </div></header>
 
 <section class="hero"><div class="wrap">
   <span class="kicker">FREE ONLINE TOOLS · AI GROWTH INTELLIGENCE</span>
-  <h1>100 个免费在线工具，<br><em>加上一张 AI 增长航海图</em></h1>
-  <p class="sub">纯浏览器运行的计算器、计时器、字数统计、BMI、二维码生成……无需注册、数据不上传。另设 AI 工具增长榜，追踪正在起量的 AI 工具站。</p>
+  <h1>A hundred free tools,<br><em>plus a map of AI growth</em></h1>
+  <p class="sub">Calculators, timers, word counters, BMI, QR codes and more — all running in your browser, nothing uploaded, no account needed. Plus a weekly index of AI tool sites that are actually gaining traffic.</p>
   <div class="statrow">
-    <div class="stat"><b>100</b><span>免费在线工具</span></div>
-    <div class="stat"><b>19</b><span>AI 工具站已收录</span></div>
-    <div class="stat"><b>100%</b><span>无需注册</span></div>
+    <div class="stat"><b>100</b><span>Free online tools</span></div>
+    <div class="stat"><b>19</b><span>AI sites tracked</span></div>
+    <div class="stat"><b>100%</b><span>No sign-up</span></div>
   </div>
 </div></section>
 
 <section class="tool-sec"><div class="wrap">
   <div class="sec-head">
-    <h2>免费在线工具</h2>
-    <span class="hint">纯浏览器运行 · 数据不上传 · 永久免费</span>
+    <h2>Most-used tools</h2>
+    <span class="hint">Browser-only · Nothing uploaded · Free forever</span>
   </div>
   <div class="tool-grid">
-
         <a class="tool" href="/tools/calculator.html">
           <span class="t-icon">🧮</span>
-          <span class="t-body"><strong>计算器</strong><em>四则运算 + 历史记录</em></span>
-          <span class="t-cat">数学</span>
+          <span class="t-body"><strong>Calculator</strong><em>Arithmetic, parentheses, percent</em></span>
+          <span class="t-cat">Math</span>
         </a>
-
         <a class="tool" href="/tools/timer.html">
           <span class="t-icon">⏱️</span>
-          <span class="t-body"><strong>计时器</strong><em>秒表 + 倒计时 + 番茄钟</em></span>
-          <span class="t-cat">时间</span>
+          <span class="t-body"><strong>Timer & Stopwatch</strong><em>Stopwatch with pause and resume</em></span>
+          <span class="t-cat">Time</span>
         </a>
-
         <a class="tool" href="/tools/word-counter.html">
           <span class="t-icon">🔤</span>
-          <span class="t-body"><strong>字数统计</strong><em>字符/单词/阅读时长</em></span>
-          <span class="t-cat">写作</span>
+          <span class="t-body"><strong>Word Counter</strong><em>Words, characters, reading time</em></span>
+          <span class="t-cat">Writing</span>
         </a>
-
         <a class="tool" href="/tools/bmi-calculator.html">
           <span class="t-icon">⚖️</span>
-          <span class="t-body"><strong>BMI 计算</strong><em>体重指数 + 健康区间</em></span>
-          <span class="t-cat">健康</span>
+          <span class="t-body"><strong>BMI Calculator</strong><em>Body mass index, Asian cutoffs</em></span>
+          <span class="t-cat">Health</span>
         </a>
-
         <a class="tool" href="/tools/age-calculator.html">
           <span class="t-icon">🎂</span>
-          <span class="t-body"><strong>年龄计算</strong><em>精确到月日 + 倒计时</em></span>
-          <span class="t-cat">日期</span>
+          <span class="t-body"><strong>Age Calculator</strong><em>Exact age in years and months</em></span>
+          <span class="t-cat">Date</span>
         </a>
-
         <a class="tool" href="/tools/qr-code-generator.html">
           <span class="t-icon">🔳</span>
-          <span class="t-body"><strong>二维码生成</strong><em>文字/链接转 PNG</em></span>
-          <span class="t-cat">生成</span>
+          <span class="t-body"><strong>QR Code Generator</strong><em>Text or URL to downloadable PNG</em></span>
+          <span class="t-cat">Generate</span>
         </a>
-
         <a class="tool" href="/tools/password-generator.html">
           <span class="t-icon">🔐</span>
-          <span class="t-body"><strong>密码生成</strong><em>本地生成强密码</em></span>
-          <span class="t-cat">安全</span>
+          <span class="t-body"><strong>Password Generator</strong><em>Strong passwords, generated locally</em></span>
+          <span class="t-cat">Security</span>
         </a>
-
         <a class="tool" href="/tools/unit-converter.html">
           <span class="t-icon">📏</span>
-          <span class="t-body"><strong>单位换算</strong><em>长度/重量/温度</em></span>
-          <span class="t-cat">换算</span>
+          <span class="t-body"><strong>Unit Converter</strong><em>Length, weight, temperature</em></span>
+          <span class="t-cat">Convert</span>
         </a>
-
         <a class="tool" href="/tools/currency-converter.html">
           <span class="t-icon">💱</span>
-          <span class="t-body"><strong>汇率换算</strong><em>30+ 币种实时</em></span>
-          <span class="t-cat">换算</span>
+          <span class="t-body"><strong>Currency Converter</strong><em>30+ currencies</em></span>
+          <span class="t-cat">Convert</span>
         </a>
-
         <a class="tool" href="/tools/world-clock.html">
           <span class="t-icon">🌍</span>
-          <span class="t-body"><strong>世界时钟</strong><em>全球主要城市时间</em></span>
-          <span class="t-cat">时间</span>
+          <span class="t-body"><strong>World Clock</strong><em>Time across major cities</em></span>
+          <span class="t-cat">Time</span>
         </a>
-
         <a class="tool" href="/tools/what-is-my-ip.html">
           <span class="t-icon">🌐</span>
-          <span class="t-body"><strong>IP 查询</strong><em>公网 IP + 归属地</em></span>
-          <span class="t-cat">网络</span>
+          <span class="t-body"><strong>What Is My IP</strong><em>Public IP and location</em></span>
+          <span class="t-cat">Network</span>
         </a>
-
         <a class="tool" href="/tools/mortgage-calculator.html">
           <span class="t-icon">🏠</span>
-          <span class="t-body"><strong>房贷计算</strong><em>月供 + 总利息</em></span>
-          <span class="t-cat">金融</span>
+          <span class="t-body"><strong>Mortgage Calculator</strong><em>Monthly payment and interest</em></span>
+          <span class="t-cat">Finance</span>
         </a>
-
         <a class="tool" href="/tools/image-compressor.html">
           <span class="t-icon">🗜️</span>
-          <span class="t-body"><strong>图片压缩</strong><em>JPG/PNG/WebP 本地</em></span>
-          <span class="t-cat">图片</span>
+          <span class="t-body"><strong>Image Compressor</strong><em>JPG, PNG and WebP in-browser</em></span>
+          <span class="t-cat">Image</span>
         </a>
-
         <a class="tool" href="/tools/resize-image.html">
           <span class="t-icon">🖼️</span>
-          <span class="t-body"><strong>图片缩放</strong><em>宽高 + 比例锁定</em></span>
-          <span class="t-cat">图片</span>
+          <span class="t-body"><strong>Resize Image</strong><em>Exact pixels, lock aspect ratio</em></span>
+          <span class="t-cat">Image</span>
         </a>
-
         <a class="tool" href="/tools/speed-test.html">
           <span class="t-icon">🚀</span>
-          <span class="t-body"><strong>网速测试</strong><em>下载/上传/延迟</em></span>
-          <span class="t-cat">网络</span>
+          <span class="t-body"><strong>Speed Test</strong><em>Download, upload, latency</em></span>
+          <span class="t-cat">Network</span>
         </a>
-
         <a class="tool" href="/tools/text-diff/">
           <span class="t-icon">📝</span>
-          <span class="t-body"><strong>文本对比</strong><em>两段文本差异</em></span>
-          <span class="t-cat">写作</span>
+          <span class="t-body"><strong>Text Diff</strong><em>Highlight differences between two texts</em></span>
+          <span class="t-cat">Writing</span>
         </a>
   </div>
+  <p class="sec-note"><a href="/tools/" style="color:var(--sea);font-weight:600">See all 100 tools →</a></p>
 </div></section>
 
 <section class="rank-sec"><div class="wrap">
   <div class="sec-head">
-    <h2>AI 工具站增长榜</h2>
-    <span class="hint">追踪正在起量的 AI 工具站 · 数据每周更新</span>
+    <h2>AI tool growth index</h2>
+    <span class="hint">Tracking AI tool sites that are gaining · updated weekly</span>
   </div>
   <table>
-    <thead><tr><th>#</th><th>站点</th><th>分类</th><th>月访问</th><th>增速</th></tr></thead>
+    <thead><tr><th>#</th><th>Site</th><th>Category</th><th>Visits</th><th>Growth</th></tr></thead>
     <tbody>
-
-        <tr>
-          <td class="rk">1</td>
-          <td>
-            <span class="dom">careerpicai.com</span>
-            <span class="dname">CareerPic AI</span>
-            <span class="desc">上传自拍，生成求职专业职业头像。</span>
-          </td>
-          <td class="tags"><span class="tag">图像生成</span></td>
-          <td class="num">113.3K</td>
-          <td class="up">+433%</td>
+        <tr data-cat="Text generation">
+          <td class="rk">01</td>
+          <td><a class="dom" href="https://gistra.io" target="_blank" rel="noopener nofollow">gistra.io</a><span class="dname">Gistra</span><span class="desc">Turns YouTube videos into transcripts, notes, flashcards and study guides.</span></td>
+          <td class="cat">Text generation/Education</td>
+          <td class="num">3.3K</td>
+          <td class="up">+9900%</td>
+          <td class="num st">Productivity</td>
         </tr>
-
-        <tr>
-          <td class="rk">2</td>
-          <td>
-            <span class="dom">boppy.me</span>
-            <span class="dname">Boppy</span>
-            <span class="desc">免费 AI 音乐生成站，文字描述即可生成带歌词的完整歌曲。</span>
-          </td>
-          <td class="tags"><span class="tag">音频与语音</span></td>
-          <td class="num">67.4K</td>
-          <td class="up">+1006%</td>
+        <tr data-cat="Image generation">
+          <td class="rk">02</td>
+          <td><a class="dom" href="https://yourmascot.ai" target="_blank" rel="noopener nofollow">yourmascot.ai</a><span class="dname">YourMascot</span><span class="desc">Generates consistent AI mascot characters for products in minutes.</span></td>
+          <td class="cat">Image generation/Design</td>
+          <td class="num">4.2K</td>
+          <td class="up">+9900%</td>
+          <td class="num st">—</td>
         </tr>
-
-        <tr>
-          <td class="rk">3</td>
-          <td>
-            <span class="dom">speechyou.com</span>
-            <span class="dname">SpeechYou</span>
-            <span class="desc">AI 语音转文字工具，支持 1700 种语言。</span>
-          </td>
-          <td class="tags"><span class="tag">音频与语音</span> <span class="tag">生产力与办公</span></td>
-          <td class="num">42.0K</td>
-          <td class="up">+159%</td>
+        <tr data-cat="Video">
+          <td class="rk">03</td>
+          <td><a class="dom" href="https://picvo.ai" target="_blank" rel="noopener nofollow">picvo.ai</a><span class="dname">Picvo AI</span><span class="desc">All-in-one AI studio for video, images, music and voiceover.</span></td>
+          <td class="cat">Video/Image generation</td>
+          <td class="num">5.5K</td>
+          <td class="up">+6083%</td>
+          <td class="num st">Audio & voice</td>
         </tr>
-
-        <tr>
-          <td class="rk">4</td>
-          <td>
-            <span class="dom">mnogogpt.ru</span>
-            <span class="dname">MnogoGPT</span>
-            <span class="desc">俄语无 VPN 的一站式 AI 照片、视频与音乐创作工作室。</span>
-          </td>
-          <td class="tags"><span class="tag">图像生成</span> <span class="tag">视频制作</span> <span class="tag">音频与语音</span></td>
-          <td class="num">33.5K</td>
-          <td class="up">+488%</td>
-        </tr>
-
-        <tr>
-          <td class="rk">5</td>
-          <td>
-            <span class="dom">pgsgrove.com</span>
-            <span class="dname">Phoenix Grove</span>
-            <span class="desc">主打利他 AI/替代智能理念的自研 AI 平台。</span>
-          </td>
-          <td class="tags"><span class="tag">聊天与陪伴</span></td>
-          <td class="num">28.9K</td>
-          <td class="up">+215%</td>
-        </tr>
-
-        <tr>
-          <td class="rk">6</td>
-          <td>
-            <span class="dom">aidetectors.cc</span>
-            <span class="dname">AI Detectors</span>
-            <span class="desc">免费检测文章是否 AI 撰写，并改写为更自然的韩语。</span>
-          </td>
-          <td class="tags"><span class="tag">AI 检测与人性化</span> <span class="tag">文本生成</span> <span class="tag">生产力与办公</span></td>
+        <tr data-cat="AI detection">
+          <td class="rk">04</td>
+          <td><a class="dom" href="https://aidetectors.cc" target="_blank" rel="noopener nofollow">aidetectors.cc</a><span class="dname">AI Detectors</span><span class="desc">Detects AI-written text and rewrites it into more natural Korean.</span></td>
+          <td class="cat">AI detection/Text generation</td>
           <td class="num">28.3K</td>
           <td class="up">+5176%</td>
+          <td class="num st">Productivity</td>
         </tr>
-
-        <tr>
-          <td class="rk">7</td>
-          <td>
-            <span class="dom">musegen.ai</span>
-            <span class="dname">MuseGen</span>
-            <span class="desc">AI 音乐生成器，文本或歌词生成带人声原创歌曲。</span>
-          </td>
-          <td class="tags"><span class="tag">音频与语音</span> <span class="tag">文本生成</span></td>
-          <td class="num">24.7K</td>
-          <td class="up">+193%</td>
+        <tr data-cat="Productivity">
+          <td class="rk">05</td>
+          <td><a class="dom" href="https://autoanalyst.ai" target="_blank" rel="noopener nofollow">autoanalyst.ai</a><span class="dname">AutoAnalyst</span><span class="desc">AI data-science platform for analysis tasks, self-described as an AI analyst.</span></td>
+          <td class="cat">Productivity/Image generation</td>
+          <td class="num">4.2K</td>
+          <td class="up">+4400%</td>
+          <td class="num st">—</td>
         </tr>
-
-        <tr>
-          <td class="rk">8</td>
-          <td>
-            <span class="dom">spiceform.com</span>
-            <span class="dname">Spiceform</span>
-            <span class="desc">AI 原生表单构建器，提示词生成表单。</span>
-          </td>
-          <td class="tags"><span class="tag">生产力与办公</span></td>
-          <td class="num">22.7K</td>
-          <td class="up">+140%</td>
+        <tr data-cat="Lifestyle">
+          <td class="rk">06</td>
+          <td><a class="dom" href="https://munchlog.ai" target="_blank" rel="noopener nofollow">munchlog.ai</a><span class="dname">MunchLog</span><span class="desc">Food diary that logs meals by voice or text and gives a gentle daily review.</span></td>
+          <td class="cat">Lifestyle</td>
+          <td class="num">3.7K</td>
+          <td class="up">+1243%</td>
+          <td class="num st">—</td>
         </tr>
-
-        <tr>
-          <td class="rk">9</td>
-          <td>
-            <span class="dom">talya.app</span>
-            <span class="dname">Talya</span>
-            <span class="desc">法语 AI 求职副驾驶，匹配职位、定制简历、撰写求职信。</span>
-          </td>
-          <td class="tags"><span class="tag">招聘与人力</span> <span class="tag">文本生成</span></td>
-          <td class="num">12.6K</td>
-          <td class="up">+212%</td>
+        <tr data-cat="Audio & voice">
+          <td class="rk">07</td>
+          <td><a class="dom" href="https://boppy.me" target="_blank" rel="noopener nofollow">boppy.me</a><span class="dname">Boppy</span><span class="desc">Free AI music generator: describe a song and get a full track with lyrics.</span></td>
+          <td class="cat">Audio & voice</td>
+          <td class="num">67.4K</td>
+          <td class="up">+1006%</td>
+          <td class="num st">—</td>
         </tr>
-
-        <tr>
+        <tr data-cat="Video">
+          <td class="rk">08</td>
+          <td><a class="dom" href="https://gethandler.ai" target="_blank" rel="noopener nofollow">gethandler.ai</a><span class="dname">Handler</span><span class="desc">TikTok vibe-marketing agent aimed at mobile app developers.</span></td>
+          <td class="cat">Video/Social media</td>
+          <td class="num">8.7K</td>
+          <td class="up">+680%</td>
+          <td class="num st">Marketing & sales</td>
+        </tr>
+        <tr data-cat="Lifestyle">
+          <td class="rk">09</td>
+          <td><a class="dom" href="https://noumi.ai" target="_blank" rel="noopener nofollow">noumi.ai</a><span class="dname">Noumi</span><span class="desc">AI personal assistant that holds context, manages tasks and delivers results.</span></td>
+          <td class="cat">Lifestyle/Chat & companions</td>
+          <td class="num">5.0K</td>
+          <td class="up">+489%</td>
+          <td class="num st">—</td>
+        </tr>
+        <tr data-cat="Image generation">
           <td class="rk">10</td>
-          <td>
-            <span class="dom">mathssolverai.com</span>
-            <span class="dname">Maths Solver AI</span>
-            <span class="desc">面向学生的在线 AI 数学解题站。</span>
-          </td>
-          <td class="tags"><span class="tag">教育</span></td>
-          <td class="num">11.3K</td>
-          <td class="up">+176%</td>
+          <td><a class="dom" href="https://mnogogpt.ru" target="_blank" rel="noopener nofollow">mnogogpt.ru</a><span class="dname">MnogoGPT</span><span class="desc">Russian-language, VPN-free studio for AI photos, video and music.</span></td>
+          <td class="cat">Image generation/Video</td>
+          <td class="num">33.5K</td>
+          <td class="up">+488%</td>
+          <td class="num st">Audio & voice</td>
         </tr>
     </tbody>
   </table>
-  <a class="more" href="/ai-tools/rank/">查看完整榜单 →</a>
+  <a class="more" href="/ai-tools/rank/">See the full index →</a>
 </div></section>
 
-
 <article class="soft"><div class="wrap">
-  <h2>这些工具是怎么工作的</h2>
-  <p class="lead">一句话：全部在你自己的浏览器里跑完，服务器不参与。</p>
-  <p>页面上的工具用的是浏览器本身就带的能力——JavaScript 做运算，Canvas 处理二维码和图片，<code>Intl</code> 接口做货币与日期格式化。没有一个工具需要把数据发到服务器再等你刷新。这意味着两件事：第一，速度取决于你的设备而不是网络；第二，你输入的内容从头到尾没有离开过这台电脑。</p>
-  <p>这一点在很多场景下比功能多少更重要。用密码生成器的时候，你不希望密码经过别人的服务器；用字数统计粘贴合同或者论文草稿的时候，你也不希望正文被记录；用图片压缩处理工作素材的时候，你更不希望文件被传到某个不知道在哪的对象存储里。本地处理不是噱头，是这类工具唯一合理的设计。</p>
+  <h2>How these tools actually work</h2>
+  <p class="lead">Short version: everything runs inside your browser. The server is not involved.</p>
+  <p>These tools use capabilities the browser already has — JavaScript for arithmetic, Canvas for QR codes and image processing, the built-in <code>Intl</code> interfaces for currency and date formatting. None of them send your input to a server and wait for a response. That has two consequences: speed depends on your device rather than your connection, and whatever you type never leaves the machine you typed it on.</p>
+  <p>In several of these cases that matters more than the feature list itself. You do not want a generated password passing through somebody else's server. You do not want the text of a contract or a draft thesis stored as a row in a database you have never seen. You do not want work images uploaded to an object store in an unknown region. Local processing is not a marketing angle here; it is the only sensible design for this category of tool.</p>
 
-  <h3>为什么免费</h3>
-  <p>因为成本结构允许。工具是静态页面，没有后端进程、没有数据库、没有按次计费的接口，托管成本接近于零，所以没有收费的理由。页面上的广告用来覆盖域名和带宽，仅此而已。没有会员墙，没有导出限制，也没有「免费版只能算三次」这种设计。</p>
+  <h3>Why it is free</h3>
+  <p>Because the cost structure allows it. These are static pages — no backend process, no database, no per-call API bill — so hosting costs approach zero and there is no honest reason to charge. The advertising on the page covers the domain and the bandwidth. There is no membership tier, no export restriction and no three-free-uses-per-day limit.</p>
 
-  <h3>手机上能用吗</h3>
-  <p>能。所有工具页都是响应式布局，按钮和输入框按触屏尺寸做过，竖屏下不需要横向滚动。计算器、单位换算、二维码生成这类高频工具在手机上用起来比在电脑上更顺手。</p>
+  <h3>Does it work on a phone</h3>
+  <p>Yes. Every tool page uses a responsive layout with touch-sized controls, and none of them require horizontal scrolling in portrait. Tools like the calculator, unit converter and QR code generator are arguably more convenient on a phone than on a desktop.</p>
 
-  <h3>需要装什么吗</h3>
-  <p>不需要。没有安装包、没有浏览器插件、不需要注册账号，也不要求你授权任何权限。打开网页就能用，关掉网页什么都不留下。</p>
+  <h3>Do I need to install anything</h3>
+  <p>No. There is no installer, no browser extension, no account, and no permission prompt. Open the page and use it; close the page and nothing remains.</p>
 </div></article>
 
 <article><div class="wrap">
-  <h2>关于 AI 工具增长榜</h2>
-  <p class="lead">这是工具之外的第二个栏目，也是全站唯一需要持续更新的部分。</p>
-  <p>大多数工具导航站按流量排序，结果永远是那几个巨头。但这个信息对做产品的人没有用——你不会再去做一个 ChatGPT。真正有参考价值的是另一组数据：最近一个月里，哪些没什么人知道的 AI 工具站流量翻了几倍，它们切的是哪个细分需求，用的是哪种获客方式。</p>
-  <p>所以这个榜只按一个口径排：<strong>月环比增速</strong>。目前收录 19 个站，每一个都经过人工核验——域名能打开、功能单一明确、近期确实在涨。样本会逐步扩大，每一条都会继续人工核对，不塞凑数的条目。</p>
-  <p>榜单里的流量是第三方估算值，不是审计过的真实数据，只能用来判断量级和趋势。方法论页把这一点写得很直白，因为它决定了这份数据该怎么用、不该怎么用。</p>
-  <p><a href="/ai-tools/rank/" style="color:var(--sea);font-weight:600">→ 查看 AI 工具增长榜与方法论</a></p>
+  <h2>About the AI tool growth index</h2>
+  <p class="lead">A second section alongside the tools, and the only part of this site that needs continuous updating.</p>
+  <p>Most tool directories sort by traffic, so the answer is always the same handful of incumbents. That is not actionable for anyone building a product — nobody is going to build another ChatGPT. The useful question is different: over the past month, which AI tool sites almost nobody had heard of multiplied their traffic, which narrow need did they carve out, and how did they acquire users?</p>
+  <p>So the index sorts on exactly one measure: <strong>month-over-month growth</strong>. It currently tracks nineteen sites, each verified by hand — the domain resolves, the product does one clearly defined thing, and the growth is real. The sample will expand gradually, and every entry will keep being checked rather than padded.</p>
+  <p>The traffic figures are third-party estimates, not audited data, and they are good only for reading magnitude and direction. The methodology section says so plainly, because that limitation determines how the data should and should not be used.</p>
+  <p><a href="/ai-tools/rank/" style="color:var(--sea);font-weight:600">→ Read the AI tool growth index and methodology</a></p>
 </div></article>
 
 <article class="soft"><div class="wrap">
-  <h2>常见问题</h2>
-  <h3>这些工具真的完全免费吗</h3>
-  <p>是。没有会员分级，没有功能锁，也没有使用次数限制。网站靠页面广告覆盖基础成本。</p>
-  <h3>我的数据会被上传或保存吗</h3>
-  <p>工具本身不上传任何输入内容，也不做本地存储，刷新页面后输入就没了。唯一的第三方脚本是访问统计和广告，它们统计的是页面访问，不接触你在工具里输入的内容。</p>
-  <h3>工具界面为什么是英文</h3>
-  <p>工具页目前是英文界面，因为主要搜索流量来自英文关键词。功能不受语言影响，中文界面在陆续补齐。这个首页提供中英文两个版本，右上角可以切换。</p>
-  <h3>可以把这个站加到书签或分享给别人吗</h3>
-  <p>可以，直接分享链接即可，不需要邀请码或注册。</p>
-  <h3>发现工具有 bug 怎么办</h3>
-  <p>通过页面底部的联系入口告诉我们，说明用的是哪个浏览器和什么操作步骤，我们会在下一个版本修掉。</p>
+  <h2>Common questions</h2>
+  <h3>Are these tools really free</h3>
+  <p>Yes. No membership tiers, no locked features, no usage caps. The site covers its costs through the advertising on the page.</p>
+  <h3>Is my input uploaded or stored</h3>
+  <p>The tools themselves upload nothing and store nothing locally; reloading the page clears your input. The only third-party scripts are analytics and advertising, which measure page visits and do not touch what you type into a tool.</p>
+  <h3>Why is the tool interface in English</h3>
+  <p>Because most search traffic for these tools is in English. Functionality is unaffected by language, and this homepage is available in Chinese through the language switch in the header.</p>
+  <h3>Can I bookmark or share this site</h3>
+  <p>Yes. Share the link directly — there is no invite code and no account required.</p>
+  <h3>What if I find a bug</h3>
+  <p>Tell us through the contact link in the footer, and include which browser you used and the steps you took. It gets fixed in the next pass.</p>
 </div></article>
+
 
 <footer><div class="wrap">
   <span class="brand">HaoWordTool</span>
-  <span>免费在线工具 · AI 工具增长情报</span>
-  <span><a href="/en/about.html">关于</a> · <a href="/en/privacy.html">隐私</a> · <a href="/en/terms.html">条款</a> · <a href="/en/contact.html">联系</a></span>
+  <span>Free online tools · AI tool growth intelligence</span>
+  <span><a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/contact.html">Contact</a> · <a href="/en/services/">Service guides</a></span>
 </div></footer>
 </body>
 </html>

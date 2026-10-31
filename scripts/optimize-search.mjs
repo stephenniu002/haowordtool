@@ -13,6 +13,10 @@ const urlOf = file => origin + '/' + file.replace(/(^|\/)index\.html$/, '$1');
 
 // Only reviewed, equivalent content belongs in a language cluster.
 const groups = [
+  // 根首页与 /zh/ 是同一份首页的两个语言版本（英文在根，中文在 /zh/）。
+  // 2026-10-30：根首页由中文改为英文，中文搬到 /zh/，这一对必须登记在这里，
+  // 否则下面第 30 行会剥掉 hreflang 而没有任何组来重建，两个首页都变成无注解。
+  {'en': 'index.html', 'zh-CN': 'zh/index.html'},
   // The new English root homepage and legacy localized homepages are different content.
   ...['index.html','logo-design.html','website-design.html','video-editing.html','disclosure.html'].map(file => ({'zh-CN': `services/${file}`, en: `en/services/${file}`})),
   ...['index.html', 'run-ai-html.html', 'preview-mobile-webpage.html', 'export-html-css-js-zip.html'].map(file => ({'zh-CN': `learn/${file}`, en: `en/learn/${file}`})),
