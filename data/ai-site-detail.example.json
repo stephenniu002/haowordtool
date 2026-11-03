@@ -1,0 +1,67 @@
+{
+  "_readme": [
+    "市场数据补充表。build-detail.mjs 会读这个文件，按域名合并进详情表。",
+    "字段缺失 = null，页面显示「本期未采集」，不会用假数据填。",
+    "要加一个站：复制 sites 里任意一条，改域名和值。",
+    "字段说明——",
+    "  revenue_signal     int     每月观测到的付款跳转次数",
+    "  revenue_mom_pct    number  收款环比百分比（+31.5 表示增长 31.5%）",
+    "  conversion_pct     number  付款转化率 = revenue_signal / monthly_visits * 100",
+    "  revenue_month      string  收款最高的月份，'YYYY-MM'",
+    "  payment_provider   string  stripe / dodopayments / paddle / lemonsqueezy / paypal",
+    "  checkout_host      string  实际跳转域名，如 checkout.stripe.com",
+    "  traffic            对象    四项占比，合计应接近 100",
+    "  geo               数组    [{country, pct}]，最多取前六展示",
+    "  insight           string  解读正文，用 \\n 分段",
+    "  data_source       string  manual（手工采集）/ series_derived（仅走势派生）/ api",
+    "  estimated         bool    true = 含推算值，页面顶部会标",
+    "被迁移的站照抄这条结构就行，格式错了脚本会整份跳过并告警，不会写坏页面。"
+  ],
+  "snapshot_date": "2026-11-03",
+  "sites": {
+    "careerpicai.com": {
+      "revenue_signal": 2380,
+      "revenue_mom_pct": 410,
+      "conversion_pct": 2.1,
+      "revenue_month": "2026-10",
+      "payment_provider": "stripe",
+      "checkout_host": "checkout.stripe.com",
+      "traffic": {
+        "direct": 41.8,
+        "referral": 19.2,
+        "search": 31.4,
+        "social": 7.6
+      },
+      "geo": [
+        { "country": "United States", "pct": 38.2 },
+        { "country": "India", "pct": 14.6 },
+        { "country": "United Kingdom", "pct": 9.1 },
+        { "country": "Canada", "pct": 7.4 },
+        { "country": "Germany", "pct": 5.8 },
+        { "country": "Australia", "pct": 4.3 }
+      ],
+      "insight": "搜索占比 31%，说明它吃的是「AI 职业照」这类明确需求的词，不是靠社交传播。这类流量的特点是转化意图强、获客成本低，但天花板取决于这个词的搜索量。\n直接访问 42% 对一个榜内新站来说偏高，通常意味着两种可能：一是投了品牌词广告，二是从别的产品导流过来的老用户。\n收款走 Stripe，定价是订阅制。转化率 2.1% 在工具站里属于中上——多数 AI 工具站停在 0.8%–1.5%。",
+      "data_source": "manual",
+      "estimated": false
+    },
+    "gistra.io": {
+      "payment_provider": null,
+      "checkout_host": null,
+      "traffic": {
+        "direct": 22.4,
+        "referral": 12.1,
+        "search": 58.9,
+        "social": 6.6
+      },
+      "geo": [
+        { "country": "United States", "pct": 29.4 },
+        { "country": "Brazil", "pct": 12.8 },
+        { "country": "Indonesia", "pct": 8.3 },
+        { "country": "Philippines", "pct": 6.9 }
+      ],
+      "insight": "搜索占 59%，几乎是纯 SEO 驱动的站。这类站的增速是词库广度的函数——扩一个语种、扩一类视频平台，流量就上一个台阶。\n月访问基数还小（3.3K），9900% 的环比说明它上个月几乎没流量。这个阶段看环比没有意义，要看它能不能在接下来三个月把搜索词从长尾做到头部。\n变现信号本期未采到，无法判断是否已经上收款。",
+      "data_source": "manual",
+      "estimated": false
+    }
+  }
+}

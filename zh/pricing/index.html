@@ -102,11 +102,12 @@ footer .brand{font-family:var(--font-display);color:var(--white);font-size:16px}
       <ul>
         <li>100 个在线工具全部开放</li>
         <li>榜单前 10 行的环比增速</li>
-        <li>全部 19 个站的域名与简介</li>
+        <li>前 10 行的绝对访问量</li>
+        <li>19 个站点详情页（基础指标）</li>
         <li>榜单方法论与选题说明</li>
-        <li class="off">绝对访问量</li>
-        <li class="off">逐期快照对比</li>
-        <li class="off">CSV / JSON 导出</li>
+        <li class="off">收款信号 / 逐月走势 / 流量结构</li>
+        <li class="off">同分类竞品对比</li>
+        <li class="off">CSV / JSON 导出 · REST API</li>
       </ul>
       <a class="pro-btn cta" href="/zh/#tools">直接用工具</a>
     </div>
@@ -119,11 +120,11 @@ footer .brand{font-family:var(--font-display);color:var(--white);font-size:16px}
       <div class="per">按月续费 · 随时取消</div>
       <ul>
         <li>完整 19 行，全部指标</li>
-        <li>绝对月访问量（不是 3.7K 这种约数）</li>
-        <li>当前期与上一期逐行对比</li>
-        <li>新进榜 / 掉榜标记</li>
-        <li>分类聚合排名</li>
+        <li>19 个详情页：收款信号、付款转化率</li>
+        <li>逐月走势、流量结构、国家分布</li>
+        <li>支付渠道识别 + 同分类竞品对比</li>
         <li>CSV / JSON 导出</li>
+        <li>REST API 5000 次/月</li>
         <li>每周更新当天就能看到</li>
       </ul>
       <a class="pro-btn cta" href="#order" data-plan="pro-month">选月付</a>
@@ -198,15 +199,71 @@ footer .brand{font-family:var(--font-display);color:var(--white);font-size:16px}
       <tr><td>100 个在线工具</td><td class="c yes">全部</td><td class="c yes">全部</td></tr>
       <tr><td>榜单可读行数</td><td class="c">10 / 19</td><td class="c yes">19 / 19</td></tr>
       <tr><td>环比增速</td><td class="c">前 10 行</td><td class="c yes">全部</td></tr>
-      <tr><td>绝对月访问量</td><td class="c no">—</td><td class="c yes">有</td></tr>
+      <tr><td>绝对月访问量</td><td class="c">前 10 行</td><td class="c yes">全部</td></tr>
+      <tr><td>站点详情页</td><td class="c">基础指标</td><td class="c yes">全部</td></tr>
+      <tr><td>收款信号 / 付款转化率</td><td class="c no">—</td><td class="c yes">有</td></tr>
+      <tr><td>支付渠道识别</td><td class="c no">—</td><td class="c yes">有</td></tr>
+      <tr><td>逐月访问走势</td><td class="c no">—</td><td class="c yes">6 个月</td></tr>
+      <tr><td>流量来源结构</td><td class="c no">—</td><td class="c yes">有</td></tr>
+      <tr><td>访客国家分布</td><td class="c no">—</td><td class="c yes">前六</td></tr>
+      <tr><td>同分类竞品对比</td><td class="c no">—</td><td class="c yes">有</td></tr>
       <tr><td>站点类型 / 主营归类</td><td class="c no">—</td><td class="c yes">有</td></tr>
       <tr><td>逐期快照对比</td><td class="c no">—</td><td class="c yes">有</td></tr>
-      <tr><td>新进榜 / 掉榜标记</td><td class="c no">—</td><td class="c yes">有</td></tr>
       <tr><td>CSV / JSON 导出</td><td class="c no">—</td><td class="c yes">有</td></tr>
+      <tr><td>REST API</td><td class="c no">—</td><td class="c yes">5000 次/月</td></tr>
       <tr><td>历史快照回看</td><td class="c no">—</td><td class="c yes">全部</td></tr>
       <tr><td>分类聚合排名</td><td class="c no">—</td><td class="c yes">有</td></tr>
     </tbody>
   </table>
+</div></section>
+
+<!-- API -->
+<section class="pro-sec soft" id="api"><div class="wrap">
+  <h2>REST API</h2>
+  <p class="lead">Pro 用户拿一个 Key，把榜单和站点情报接进自己的表格、脚本或 Agent。<b>5000 次/月</b>，一次导出全榜算 1 次调用。</p>
+
+  <div class="api-doc">
+    <div class="api-ep">
+      <div class="api-row"><code class="m">GET</code><code class="p">/v1/site/{域名}</code><span>单站详情：基础指标、收款信号、支付渠道、逐月序列、流量结构、国家分布、竞品</span></div>
+      <div class="api-row"><code class="m">GET</code><code class="p">/v1/rank</code><span>全量榜单 JSON，19 行一次返回</span></div>
+      <div class="api-row"><code class="m">GET</code><code class="p">/v1/rank?format=csv</code><span>同上的 CSV，可直接进 Excel</span></div>
+      <div class="api-row"><code class="m">GET</code><code class="p">/v1/health</code><span>存活探测，不消耗配额</span></div>
+    </div>
+
+    <p class="api-base">基地址 <code>https://mhxmfhdluzebptfmxgpe.supabase.co/functions/v1/site-api</code></p>
+
+    <pre class="api-code">curl -H "Authorization: Bearer hwt_live_你的KEY" \
+     "https://mhxmfhdluzebptfmxgpe.supabase.co/functions/v1/site-api/v1/site/careerpicai.com"</pre>
+
+    <details class="api-resp">
+      <summary>返回长什么样</summary>
+      <pre class="api-code">{
+  "ok": true,
+  "tier": "pro",
+  "quota": { "limit": 5000, "used": 1, "month": "2026-11" },
+  "data": {
+    "domain": "careerpicai.com",
+    "rank": 11,
+    "monthly_visits": 113300,
+    "mom_growth_pct": 433,
+    "growth_score": 76.2,
+    "revenue_signal": 2380,
+    "conversion_pct": 2.1,
+    "payment_provider": "stripe",
+    "checkout_host": "checkout.stripe.com",
+    "traffic": { "direct": 41.8, "referral": 19.2, "search": 31.4, "social": 7.6 },
+    "geo": [{ "country": "United States", "pct": 38.2 }],
+    "series": [{ "month": "2026-11", "visits": 113300, "revenue_signal": 2380 }]
+  }
+}</pre>
+    </details>
+
+    <p class="api-note">
+      鉴权只用请求头，不用 cookie，所以浏览器里直接 fetch 也行。限流 60 次/分钟，超了返回 429 带 <code>retry_after_seconds</code>。
+      月配额用完返回 429，次月 1 号自动归零。<br>
+      开通 Pro 后发邮件到 <a href="mailto:hi@haowordtool.com?subject=API%20Key%20%E7%94%B3%E8%AF%B7&body=Pro%20%E8%AE%A2%E5%8D%95%E9%82%AE%E7%AE%B1%EF%BC%9A%0A%E7%94%A8%E9%80%94%EF%BC%9A">hi@haowordtool.com</a> 领 Key，标题写「API Key 申请」，24 小时内签发。明文只发一次，库里只存哈希。
+    </p>
+  </div>
 </div></section>
 
 <!-- 下单 + 兑换 -->

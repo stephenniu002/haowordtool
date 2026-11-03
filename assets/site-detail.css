@@ -1,0 +1,249 @@
+/* ============================================================
+   site-detail.css — 站点详情页
+   配色沿用榜单页：dusk #021530 / sea #1a89c5 / sky #71c3ec / amber #fcbb00
+   前缀 d- 避免和站点全局样式撞名
+   ============================================================ */
+
+/* hidden 必须压过一切 display 声明。
+   本页没有引 pro-gate.css，[hidden] 是 UA 样式（权重最低），
+   不写这条的话 .d-btn{display:inline-flex} 会让 hidden 的按钮照样显示 ——
+   侧栏的「管理订阅」会在未开通时和「看 Pro 方案」并排出现。 */
+[hidden]{display:none !important}
+
+.d-hero{
+  background:linear-gradient(180deg,#021530 0%,#010b1e 100%);
+  color:#fff;padding:52px 0 44px;position:relative;overflow:hidden;
+}
+.d-hero::after{
+  content:"";position:absolute;right:-100px;top:-80px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,137,197,.22),transparent 70%);pointer-events:none;
+}
+.d-hero .wrap{position:relative;z-index:1}
+
+.d-crumb{font-size:13px;color:#8ba0b5;margin-bottom:20px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.d-crumb a{color:#8ba0b5}
+.d-crumb a:hover{color:#fff}
+.d-crumb .sep{opacity:.45}
+
+.d-head{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+.d-avatar{
+  flex:0 0 auto;width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+  background:linear-gradient(140deg,#1a89c5,#0b4f78);color:#fff;
+  font:700 22px/1 Inter,system-ui,sans-serif;letter-spacing:-.02em;
+  border:1px solid rgba(113,195,236,.3);
+}
+.d-title{min-width:0;flex:1 1 320px}
+.d-title h1{
+  font-family:'EB Garamond','Noto Serif SC',serif;
+  font-size:clamp(1.75rem,3.6vw,2.6rem);font-weight:600;line-height:1.15;margin:0 0 6px;
+  overflow-wrap:anywhere;
+}
+.d-title .dom{font-family:'Noto Sans Mono',ui-monospace,monospace;font-size:14px;color:#71c3ec}
+.d-title .desc{color:#b8c7d8;margin:12px 0 0;font-size:15px;line-height:1.7;max-width:680px}
+
+.d-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.d-tag{
+  font-size:12px;padding:4px 11px;border-radius:20px;
+  background:rgba(113,195,236,.12);color:#9fd4f0;border:1px solid rgba(113,195,236,.22);
+}
+.d-tag.rank{background:rgba(252,187,0,.14);color:#fcbb00;border-color:rgba(252,187,0,.3);font-weight:600}
+.d-tag.est{background:rgba(255,255,255,.06);color:#8ba0b5;border-color:rgba(255,255,255,.12)}
+
+/* 免费指标条：hero 内，四格 */
+.d-stats{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;
+  margin-top:32px;background:rgba(113,195,236,.14);border:1px solid rgba(113,195,236,.14);
+  border-radius:12px;overflow:hidden;
+}
+.d-stat{background:rgba(2,21,48,.72);padding:16px 18px;min-width:0}
+.d-stat span{display:block;font-size:11.5px;color:#8ba0b5;margin-bottom:7px;letter-spacing:.02em}
+.d-stat b{
+  display:block;font-family:'Noto Sans Mono',ui-monospace,monospace;
+  font-size:22px;font-weight:500;line-height:1.1;overflow-wrap:anywhere;
+}
+.d-stat small{display:block;font-size:11px;color:#6d8298;margin-top:5px}
+.d-stat.up b{color:#4ade80}
+.d-stat.down b{color:#f87171}
+
+/* ---------- 主体 ---------- */
+
+.d-body{padding:40px 0 64px;background:#fff}
+.d-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start}
+
+.d-sec{margin-bottom:38px}
+.d-sec > h2{
+  font-family:'EB Garamond','Noto Serif SC',serif;
+  font-size:24px;font-weight:600;margin:0 0 4px;color:#0d131a;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.d-sec > h2 .pro-pill{
+  font-family:'Inter',system-ui,sans-serif;font-size:10.5px;font-weight:700;
+  padding:2px 8px;border-radius:4px;background:#021530;color:#fcbb00;letter-spacing:.04em;
+}
+.d-sec > .hint{font-size:13px;color:#5a6474;margin:0 0 16px;line-height:1.65}
+
+/* ---------- 市场指标卡 ---------- */
+
+.d-mkt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.d-mkt-card{
+  border:1px solid #e6e9ef;border-radius:12px;padding:16px 18px;background:#fff;min-width:0;
+}
+.d-mkt-card span{display:block;font-size:12px;color:#5a6474;margin-bottom:8px}
+.d-mkt-card b{
+  font-family:'Noto Sans Mono',ui-monospace,monospace;font-size:23px;font-weight:500;
+  color:#0d131a;display:block;line-height:1.15;overflow-wrap:anywhere;
+}
+.d-mkt-card small{display:block;font-size:11.5px;color:#8a94a4;margin-top:6px;line-height:1.5}
+
+/* 空态：非 Pro 时这里没有数据，也不该假装有 */
+.d-empty{
+  border:1px dashed #cdd6e2;border-radius:12px;padding:26px 22px;text-align:center;
+  background:#fafbfd;color:#5a6474;
+}
+.d-empty svg{color:#1a89c5;margin-bottom:10px}
+.d-empty strong{display:block;color:#0d131a;font-size:15px;margin-bottom:6px}
+.d-empty p{font-size:13px;margin:0 0 14px;line-height:1.65}
+.d-empty .d-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+
+.d-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:9px 16px;border-radius:8px;border:1px solid #d7dfeb;background:#fff;
+  color:#0d131a;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;
+  font-family:inherit;line-height:1.2;
+}
+.d-btn:hover{border-color:#1a89c5;color:#1a89c5}
+.d-btn.primary{background:#021530;border-color:#021530;color:#fff}
+.d-btn.primary:hover{background:#1a89c5;border-color:#1a89c5;color:#fff}
+
+/* ---------- 走势图 ---------- */
+
+.d-chart-wrap{border:1px solid #e6e9ef;border-radius:12px;padding:18px 16px 8px;background:#fff}
+.d-chart{width:100%;height:auto;display:block;overflow:visible}
+.d-chart .grid{stroke:#eef1f5;stroke-width:1}
+.d-chart .axis{fill:#8a94a4;font-size:10px;font-family:'Noto Sans Mono',monospace}
+.d-chart .line{fill:none;stroke:#1a89c5;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
+.d-chart .area{fill:url(#dGrad)}
+.d-chart .dot{fill:#fff;stroke:#1a89c5;stroke-width:2}
+.d-chart .dot-last{fill:#1a89c5;stroke:#fff;stroke-width:2}
+.d-chart-legend{
+  display:flex;gap:16px;font-size:11.5px;color:#5a6474;margin-top:6px;
+  padding:0 2px 10px;flex-wrap:wrap;
+}
+.d-chart-legend i{display:inline-block;width:16px;height:2px;background:#1a89c5;vertical-align:middle;margin-right:5px}
+.d-chart-legend .est{color:#8a94a4}
+
+/* ---------- 横向条（流量/国家共用） ---------- */
+
+.d-bars{display:flex;flex-direction:column;gap:10px}
+.d-bar{display:grid;grid-template-columns:92px minmax(0,1fr) 54px;gap:10px;align-items:center;font-size:13px}
+.d-bar .lb{color:#324056;overflow-wrap:anywhere}
+.d-bar .tr{height:8px;background:#eef1f5;border-radius:5px;overflow:hidden}
+.d-bar .fl{height:100%;background:linear-gradient(90deg,#1a89c5,#71c3ec);border-radius:5px}
+.d-bar .vl{
+  text-align:right;font-family:'Noto Sans Mono',monospace;font-size:12.5px;color:#0d131a;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ---------- 支付渠道 ---------- */
+
+.d-pay{
+  display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid #e6e9ef;
+  border-radius:12px;background:#fafbfd;flex-wrap:wrap;
+}
+.d-pay .ico{
+  width:38px;height:38px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;
+  background:#021530;color:#fcbb00;font:700 13px/1 'Noto Sans Mono',monospace;
+}
+.d-pay .meta{min-width:0}
+.d-pay .meta b{display:block;font-size:14px;color:#0d131a;margin-bottom:2px}
+.d-pay .meta code{
+  font-family:'Noto Sans Mono',monospace;font-size:12px;color:#5a6474;
+  overflow-wrap:anywhere;background:none;padding:0;
+}
+
+/* ---------- 解读 ---------- */
+
+.d-insight{border-left:3px solid #1a89c5;padding:2px 0 2px 18px}
+.d-insight p{margin:0 0 12px;font-size:14.5px;line-height:1.85;color:#324056}
+.d-insight p:last-child{margin-bottom:0}
+.d-insight strong{color:#0d131a}
+
+/* ---------- 竞品表 ---------- */
+
+.d-comp{width:100%;border-collapse:collapse;font-size:13.5px}
+.d-comp th{
+  text-align:left;font-size:11.5px;color:#5a6474;font-weight:600;padding:9px 10px;
+  border-bottom:2px solid #e6e9ef;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;
+}
+.d-comp td{padding:11px 10px;border-bottom:1px solid #eef1f5;vertical-align:middle}
+.d-comp tr:last-child td{border-bottom:0}
+.d-comp a{color:#1a89c5;font-weight:500;overflow-wrap:anywhere}
+.d-comp .num{
+  font-family:'Noto Sans Mono',monospace;text-align:right;
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.d-comp .rk{color:#8a94a4;width:38px;font-family:'Noto Sans Mono',monospace}
+
+/* ---------- 侧栏 ---------- */
+
+.d-side{position:sticky;top:84px;display:flex;flex-direction:column;gap:16px}
+.d-card{border:1px solid #e6e9ef;border-radius:14px;padding:20px;background:#fff}
+.d-card h3{margin:0 0 12px;font-size:13px;font-weight:700;color:#0d131a;letter-spacing:.01em}
+.d-card.cta{background:linear-gradient(165deg,#021530,#010b1e);border-color:#16304f;color:#fff}
+.d-card.cta h3{color:#fff;font-size:16px;font-family:'EB Garamond','Noto Serif SC',serif;font-weight:600}
+.d-card.cta p{color:#b8c7d8;font-size:13px;line-height:1.65;margin:0 0 14px}
+.d-card.cta .d-btn{width:100%;margin-bottom:8px}
+.d-card.cta .d-btn.amber{background:#fcbb00;border-color:#fcbb00;color:#021530;font-weight:700}
+.d-card.cta .fine{font-size:11.5px;color:#6d8298;text-align:center;margin:4px 0 0}
+
+.d-kv{display:flex;justify-content:space-between;gap:10px;padding:8px 0;font-size:13px;border-bottom:1px solid #f0f3f7}
+.d-kv:last-child{border-bottom:0}
+.d-kv span{color:#5a6474;flex:0 0 auto}
+.d-kv b{color:#0d131a;font-weight:600;text-align:right;overflow-wrap:anywhere}
+.d-kv b.mono{font-family:'Noto Sans Mono',monospace;font-weight:500}
+
+.d-links{display:flex;flex-direction:column;gap:2px}
+.d-links a{
+  font-size:13px;color:#324056;padding:7px 0;display:flex;align-items:flex-start;gap:6px;
+  border-bottom:1px solid #f4f6f9;overflow-wrap:anywhere;
+}
+.d-links a:last-child{border-bottom:0}
+.d-links a::before{content:"→";color:#1a89c5;opacity:.5;font-size:11px;flex:0 0 auto;margin-top:2px}
+.d-links a:hover{color:#1a89c5}
+
+/* ---------- 状态条 ---------- */
+
+.d-status{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-size:12.5px;padding:9px 14px;border-radius:8px;margin-bottom:22px;
+  background:#f6f8fa;border:1px solid #e6e9ef;color:#5a6474;
+}
+.d-status[data-state="on"]{background:#eefaf3;border-color:#c3ead6;color:#0a8754}
+.d-status .dot{width:7px;height:7px;border-radius:50%;background:#b0bac8;flex:0 0 auto}
+.d-status[data-state="on"] .dot{background:#0a8754}
+.d-status:empty{display:none}
+
+/* ---------- 响应式 ---------- */
+
+@media(max-width:980px){
+  .d-grid{grid-template-columns:1fr;gap:28px}
+  .d-side{position:static;flex-direction:row;flex-wrap:wrap}
+  .d-side > *{flex:1 1 260px}
+}
+@media(max-width:700px){
+  .d-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .d-mkt{grid-template-columns:1fr}
+  .d-hero{padding:36px 0 32px}
+  .d-bar{grid-template-columns:78px minmax(0,1fr) 46px;gap:8px}
+  .d-side > *{flex:1 1 100%}
+  .d-comp .hide-sm{display:none}
+}
+@media(max-width:360px){
+  .d-stats{grid-template-columns:1fr}
+  .d-bar{grid-template-columns:minmax(0,1fr) 44px;row-gap:4px}
+  .d-bar .tr{grid-column:1 / -1;order:3}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .d-chart .line,.d-chart .dot{transition:none !important}
+}

@@ -206,3 +206,64 @@ tr[data-free="0"] td:first-child,tr[data-free="1"] td:first-child{padding-left:1
   .pro-lockbar-act{width:100%}
   .pro-lockbar-act .pro-btn{flex:1}
 }
+
+/* ============================================================
+   API 文档块（定价页 #api）
+   ============================================================ */
+
+.api-doc{border:1px solid #e6e9ef;border-radius:14px;background:#fff;overflow:hidden}
+
+.api-ep{display:flex;flex-direction:column}
+.api-row{
+  display:grid;grid-template-columns:52px minmax(200px,auto) 1fr;gap:14px;align-items:baseline;
+  padding:13px 18px;border-bottom:1px solid #f0f3f7;font-size:13.5px;
+}
+.api-row:last-child{border-bottom:0}
+.api-row .m{
+  font:700 10.5px/1 'Noto Sans Mono',monospace;letter-spacing:.05em;
+  background:#eefaf3;color:#0a8754;border:1px solid #c3ead6;border-radius:4px;
+  padding:4px 0;text-align:center;
+}
+.api-row .p{
+  font-family:'Noto Sans Mono',monospace;font-size:12.5px;color:#021530;
+  background:none;padding:0;overflow-wrap:anywhere;
+}
+.api-row span{color:#5a6474;font-size:13px;line-height:1.6;min-width:0}
+
+.api-base{
+  margin:0;padding:13px 18px;border-top:1px solid #f0f3f7;border-bottom:1px solid #f0f3f7;
+  font-size:12.5px;color:#5a6474;background:#fafbfd;overflow-wrap:anywhere;
+}
+.api-base code{font-family:'Noto Sans Mono',monospace;color:#0d131a}
+
+.api-code{
+  margin:0;padding:16px 18px;background:#021530;color:#c8dced;
+  font:12.5px/1.75 'Noto Sans Mono',ui-monospace,monospace;
+  overflow-x:auto;white-space:pre;
+}
+.api-code::selection{background:#1a89c5;color:#fff}
+
+.api-resp summary{
+  padding:12px 18px;font-size:13px;font-weight:600;color:#1a89c5;cursor:pointer;
+  border-top:1px solid #f0f3f7;list-style:none;
+}
+.api-resp summary::-webkit-details-marker{display:none}
+.api-resp summary::before{content:"▸ ";color:#8a94a4}
+.api-resp[open] summary::before{content:"▾ "}
+.api-resp summary:hover{color:#021530}
+
+.api-note{
+  margin:0;padding:15px 18px;border-top:1px solid #f0f3f7;
+  font-size:12.5px;line-height:1.8;color:#5a6474;
+}
+.api-note code{
+  font-family:'Noto Sans Mono',monospace;font-size:12px;
+  background:#f6f8fa;padding:1px 5px;border-radius:3px;color:#0d131a;
+}
+.api-note a{color:#1a89c5;font-weight:600}
+
+@media(max-width:640px){
+  .api-row{grid-template-columns:44px 1fr;gap:8px 12px}
+  .api-row span{grid-column:2;font-size:12.5px}
+  .api-code{font-size:11.5px;padding:14px}
+}
