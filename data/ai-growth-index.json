@@ -1,0 +1,342 @@
+{
+  "snapshot_date": "2026-11-03",
+  "generated_at": "2026-11-03T06:50:43.925Z",
+  "source": "ai-tools/rank/index.html",
+  "free_rows": 10,
+  "summary": {
+    "total_sites": 19,
+    "total_visits": 426600,
+    "median_growth_pct": 488,
+    "max_visits": 113300,
+    "categories": [
+      {
+        "category": "图像生成",
+        "count": 5,
+        "total_visits": 158300,
+        "avg_growth_ex_capped": 359.5
+      },
+      {
+        "category": "音频与语音",
+        "count": 3,
+        "total_visits": 134100,
+        "avg_growth_ex_capped": 452.7
+      },
+      {
+        "category": "生产力与办公",
+        "count": 2,
+        "total_visits": 26900,
+        "avg_growth_ex_capped": 2270
+      },
+      {
+        "category": "视频制作",
+        "count": 2,
+        "total_visits": 14200,
+        "avg_growth_ex_capped": 3381.5
+      },
+      {
+        "category": "生活与娱乐",
+        "count": 2,
+        "total_visits": 8700,
+        "avg_growth_ex_capped": 866
+      },
+      {
+        "category": "聊天与陪伴",
+        "count": 1,
+        "total_visits": 28900,
+        "avg_growth_ex_capped": 215
+      },
+      {
+        "category": "AI 检测与人性化",
+        "count": 1,
+        "total_visits": 28300,
+        "avg_growth_ex_capped": 5176
+      },
+      {
+        "category": "招聘与人力",
+        "count": 1,
+        "total_visits": 12600,
+        "avg_growth_ex_capped": 212
+      },
+      {
+        "category": "教育",
+        "count": 1,
+        "total_visits": 11300,
+        "avg_growth_ex_capped": 176
+      },
+      {
+        "category": "文本生成",
+        "count": 1,
+        "total_visits": 3300,
+        "avg_growth_ex_capped": null
+      }
+    ]
+  },
+  "records": [
+    {
+      "rank": 1,
+      "domain": "gistra.io",
+      "name": "Gistra",
+      "description": "把 YouTube 视频即时转成文字稿、笔记、闪卡和学习指南。",
+      "category": "文本生成",
+      "category_extra": "教育",
+      "visits_label": "3.3K",
+      "monthly_visits": 3300,
+      "mom_growth_pct": 9900,
+      "site_type": "生产力与办公",
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 2,
+      "domain": "yourmascot.ai",
+      "name": "YourMascot",
+      "description": "AI 产品吉祥物生成工具，几分钟内创建风格一致的吉祥物形象。",
+      "category": "图像生成",
+      "category_extra": "设计",
+      "visits_label": "4.2K",
+      "monthly_visits": 4200,
+      "mom_growth_pct": 9900,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 3,
+      "domain": "picvo.ai",
+      "name": "Picvo AI",
+      "description": "一站式 AI 创作平台，生成专业视频、图片、音乐与配音。",
+      "category": "视频制作",
+      "category_extra": "图像生成",
+      "visits_label": "5.5K",
+      "monthly_visits": 5500,
+      "mom_growth_pct": 6083,
+      "site_type": "音频与语音",
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 4,
+      "domain": "aidetectors.cc",
+      "name": "AI Detectors",
+      "description": "免费检测文章是否 AI 撰写，并改写为更自然的韩语。",
+      "category": "AI 检测与人性化",
+      "category_extra": "文本生成",
+      "visits_label": "28.3K",
+      "monthly_visits": 28300,
+      "mom_growth_pct": 5176,
+      "site_type": "生产力与办公",
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 5,
+      "domain": "autoanalyst.ai",
+      "name": "AutoAnalyst",
+      "description": "面向数据分析的 AI 平台，自称 AI 数据科学家。",
+      "category": "生产力与办公",
+      "category_extra": "图像生成",
+      "visits_label": "4.2K",
+      "monthly_visits": 4200,
+      "mom_growth_pct": 4400,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 6,
+      "domain": "munchlog.ai",
+      "name": "MunchLog",
+      "description": "用语音或文字记录饮食、给出温和当日复盘的食物打卡工具。",
+      "category": "生活与娱乐",
+      "category_extra": null,
+      "visits_label": "3.7K",
+      "monthly_visits": 3700,
+      "mom_growth_pct": 1243,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 7,
+      "domain": "boppy.me",
+      "name": "Boppy",
+      "description": "免费 AI 音乐生成站，文字描述即可生成带歌词的完整歌曲。",
+      "category": "音频与语音",
+      "category_extra": null,
+      "visits_label": "67.4K",
+      "monthly_visits": 67400,
+      "mom_growth_pct": 1006,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 8,
+      "domain": "gethandler.ai",
+      "name": "Handler",
+      "description": "面向移动开发者的 TikTok 氛围营销 AI 代理。",
+      "category": "视频制作",
+      "category_extra": "社交媒体",
+      "visits_label": "8.7K",
+      "monthly_visits": 8700,
+      "mom_growth_pct": 680,
+      "site_type": "营销与销售",
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 9,
+      "domain": "noumi.ai",
+      "name": "Noumi",
+      "description": "像同事一样理解上下文、管理任务并交付成果的 AI 个人助理。",
+      "category": "生活与娱乐",
+      "category_extra": "聊天与陪伴",
+      "visits_label": "5.0K",
+      "monthly_visits": 5000,
+      "mom_growth_pct": 489,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 10,
+      "domain": "mnogogpt.ru",
+      "name": "MnogoGPT",
+      "description": "俄语无 VPN 的一站式 AI 照片、视频与音乐创作工作室。",
+      "category": "图像生成",
+      "category_extra": "视频制作",
+      "visits_label": "33.5K",
+      "monthly_visits": 33500,
+      "mom_growth_pct": 488,
+      "site_type": "音频与语音",
+      "snapshot_date": "2026-11-03",
+      "is_free": true
+    },
+    {
+      "rank": 11,
+      "domain": "careerpicai.com",
+      "name": "CareerPic AI",
+      "description": "上传自拍，生成求职专业职业头像。",
+      "category": "图像生成",
+      "category_extra": null,
+      "visits_label": "113.3K",
+      "monthly_visits": 113300,
+      "mom_growth_pct": 433,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    },
+    {
+      "rank": 12,
+      "domain": "photoshoot.app",
+      "name": "Photoshoot",
+      "description": "面向时尚、产品、人像场景的写真灵感与图片视频生成站。",
+      "category": "图像生成",
+      "category_extra": "设计",
+      "visits_label": "3.1K",
+      "monthly_visits": 3100,
+      "mom_growth_pct": 266,
+      "site_type": "社交媒体",
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    },
+    {
+      "rank": 13,
+      "domain": "aicartoon.app",
+      "name": "AICartoon",
+      "description": "把文字或图片快速生成高清卡通视频的 AI 工具站。",
+      "category": "图像生成",
+      "category_extra": "视频制作",
+      "visits_label": "4.2K",
+      "monthly_visits": 4200,
+      "mom_growth_pct": 251,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    },
+    {
+      "rank": 14,
+      "domain": "pgsgrove.com",
+      "name": "Phoenix Grove",
+      "description": "主打利他 AI/替代智能理念的自研 AI 平台。",
+      "category": "聊天与陪伴",
+      "category_extra": null,
+      "visits_label": "28.9K",
+      "monthly_visits": 28900,
+      "mom_growth_pct": 215,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    },
+    {
+      "rank": 15,
+      "domain": "talya.app",
+      "name": "Talya",
+      "description": "法语 AI 求职副驾驶，匹配职位、定制简历、撰写求职信。",
+      "category": "招聘与人力",
+      "category_extra": "文本生成",
+      "visits_label": "12.6K",
+      "monthly_visits": 12600,
+      "mom_growth_pct": 212,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    },
+    {
+      "rank": 16,
+      "domain": "musegen.ai",
+      "name": "MuseGen",
+      "description": "AI 音乐生成器，文本或歌词生成带人声原创歌曲。",
+      "category": "音频与语音",
+      "category_extra": "文本生成",
+      "visits_label": "24.7K",
+      "monthly_visits": 24700,
+      "mom_growth_pct": 193,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    },
+    {
+      "rank": 17,
+      "domain": "mathssolverai.com",
+      "name": "Maths Solver AI",
+      "description": "面向学生的在线 AI 数学解题站。",
+      "category": "教育",
+      "category_extra": null,
+      "visits_label": "11.3K",
+      "monthly_visits": 11300,
+      "mom_growth_pct": 176,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    },
+    {
+      "rank": 18,
+      "domain": "speechyou.com",
+      "name": "SpeechYou",
+      "description": "AI 语音转文字工具，支持 1700 种语言。",
+      "category": "音频与语音",
+      "category_extra": "生产力与办公",
+      "visits_label": "42.0K",
+      "monthly_visits": 42000,
+      "mom_growth_pct": 159,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    },
+    {
+      "rank": 19,
+      "domain": "spiceform.com",
+      "name": "Spiceform",
+      "description": "AI 原生表单构建器，提示词生成表单。",
+      "category": "生产力与办公",
+      "category_extra": null,
+      "visits_label": "22.7K",
+      "monthly_visits": 22700,
+      "mom_growth_pct": 140,
+      "site_type": null,
+      "snapshot_date": "2026-11-03",
+      "is_free": false
+    }
+  ]
+}

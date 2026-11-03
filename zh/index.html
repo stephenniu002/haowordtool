@@ -115,6 +115,25 @@ article ul{margin:12px 0 0 20px;color:#2b3542}
 article li{margin-top:6px;max-width:800px}
 article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
 @media(max-width:820px){.langbtn span.lbl{display:none}}
+
+/* related links */
+.related-links{padding:52px 0 56px;border-top:1px solid var(--line);background:var(--white)}
+.related-links .sec-head h2{font-family:var(--font-display);font-size:28px;font-weight:600}
+.rl-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.rl-card{border:1px solid var(--line);border-radius:12px;padding:18px 18px 14px;background:var(--white)}
+.rl-card h3{font-size:14px;font-weight:700;color:var(--dusk);margin:0 0 4px}
+.rl-card p{font-size:12px;color:var(--mute);margin:0 0 12px;line-height:1.5}
+.rl-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.rl-card li a{font-size:13px;color:#2b3542;display:inline-flex;align-items:center;gap:5px;line-height:1.4}
+.rl-card li a::before{content:"→";color:var(--sea);font-size:11px;opacity:.55}
+.rl-card li a:hover{color:var(--sea)}
+.rank-more{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:20px}
+.rank-more .more{margin-top:0}
+.rank-more-note{font-size:12.5px;color:var(--mute)}
+.rank-more-note a{color:var(--sea);font-weight:600}
+@media(max-width:900px){.rl-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:640px){.rl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style>
 <link rel="alternate" hreflang="en" href="https://haowordtool.com/"><link rel="alternate" hreflang="zh-CN" href="https://haowordtool.com/zh/"><link rel="alternate" hreflang="x-default" href="https://haowordtool.com/"></head>
 <body>
@@ -124,6 +143,7 @@ article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
     <a class="l on" href="/">免费工具</a>
     <a class="l" href="/ai-tools/">AI 情报</a>
     <a class="l" href="/services/">服务</a>
+    <a class="l" href="/zh/pricing/">Pro</a>
     <a class="cta" href="/tools/">全部工具</a>
     <a class="langbtn" href="/" hreflang="en" title="Switch to English"><span class="lbl">EN</span></a>
   </div>
@@ -252,22 +272,82 @@ article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
   </div>
   <table>
     <thead><tr><th>#</th><th>站点</th><th>分类</th><th>月访问</th><th>增速</th></tr></thead>
-    <tbody>
+        <tbody>
 
         <tr>
           <td class="rk">1</td>
           <td>
-            <span class="dom">careerpicai.com</span>
-            <span class="dname">CareerPic AI</span>
-            <span class="desc">上传自拍，生成求职专业职业头像。</span>
+            <span class="dom">gistra.io</span>
+            <span class="dname">Gistra</span>
+            <span class="desc">把 YouTube 视频即时转成文字稿、笔记、闪卡和学习指南。</span>
           </td>
-          <td class="tags"><span class="tag">图像生成</span></td>
-          <td class="num">113.3K</td>
-          <td class="up">+433%</td>
+          <td class="tags"><span class="tag">文本生成</span> <span class="tag">教育</span></td>
+          <td class="num">3.3K</td>
+          <td class="up">+9900%</td>
         </tr>
 
         <tr>
           <td class="rk">2</td>
+          <td>
+            <span class="dom">yourmascot.ai</span>
+            <span class="dname">YourMascot</span>
+            <span class="desc">AI 产品吉祥物生成工具，几分钟内创建风格一致的吉祥物形象。</span>
+          </td>
+          <td class="tags"><span class="tag">图像生成</span> <span class="tag">设计</span></td>
+          <td class="num">4.2K</td>
+          <td class="up">+9900%</td>
+        </tr>
+
+        <tr>
+          <td class="rk">3</td>
+          <td>
+            <span class="dom">picvo.ai</span>
+            <span class="dname">Picvo AI</span>
+            <span class="desc">一站式 AI 创作平台，生成专业视频、图片、音乐与配音。</span>
+          </td>
+          <td class="tags"><span class="tag">视频制作</span> <span class="tag">图像生成</span></td>
+          <td class="num">5.5K</td>
+          <td class="up">+6083%</td>
+        </tr>
+
+        <tr>
+          <td class="rk">4</td>
+          <td>
+            <span class="dom">aidetectors.cc</span>
+            <span class="dname">AI Detectors</span>
+            <span class="desc">免费检测文章是否 AI 撰写，并改写为更自然的韩语。</span>
+          </td>
+          <td class="tags"><span class="tag">AI 检测与人性化</span> <span class="tag">文本生成</span></td>
+          <td class="num">28.3K</td>
+          <td class="up">+5176%</td>
+        </tr>
+
+        <tr>
+          <td class="rk">5</td>
+          <td>
+            <span class="dom">autoanalyst.ai</span>
+            <span class="dname">AutoAnalyst</span>
+            <span class="desc">面向数据分析的 AI 平台，自称 AI 数据科学家。</span>
+          </td>
+          <td class="tags"><span class="tag">生产力与办公</span> <span class="tag">图像生成</span></td>
+          <td class="num">4.2K</td>
+          <td class="up">+4400%</td>
+        </tr>
+
+        <tr>
+          <td class="rk">6</td>
+          <td>
+            <span class="dom">munchlog.ai</span>
+            <span class="dname">MunchLog</span>
+            <span class="desc">用语音或文字记录饮食、给出温和当日复盘的食物打卡工具。</span>
+          </td>
+          <td class="tags"><span class="tag">生活与娱乐</span></td>
+          <td class="num">3.7K</td>
+          <td class="up">+1243%</td>
+        </tr>
+
+        <tr>
+          <td class="rk">7</td>
           <td>
             <span class="dom">boppy.me</span>
             <span class="dname">Boppy</span>
@@ -279,104 +359,83 @@ article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
         </tr>
 
         <tr>
-          <td class="rk">3</td>
-          <td>
-            <span class="dom">speechyou.com</span>
-            <span class="dname">SpeechYou</span>
-            <span class="desc">AI 语音转文字工具，支持 1700 种语言。</span>
-          </td>
-          <td class="tags"><span class="tag">音频与语音</span> <span class="tag">生产力与办公</span></td>
-          <td class="num">42.0K</td>
-          <td class="up">+159%</td>
-        </tr>
-
-        <tr>
-          <td class="rk">4</td>
-          <td>
-            <span class="dom">mnogogpt.ru</span>
-            <span class="dname">MnogoGPT</span>
-            <span class="desc">俄语无 VPN 的一站式 AI 照片、视频与音乐创作工作室。</span>
-          </td>
-          <td class="tags"><span class="tag">图像生成</span> <span class="tag">视频制作</span> <span class="tag">音频与语音</span></td>
-          <td class="num">33.5K</td>
-          <td class="up">+488%</td>
-        </tr>
-
-        <tr>
-          <td class="rk">5</td>
-          <td>
-            <span class="dom">pgsgrove.com</span>
-            <span class="dname">Phoenix Grove</span>
-            <span class="desc">主打利他 AI/替代智能理念的自研 AI 平台。</span>
-          </td>
-          <td class="tags"><span class="tag">聊天与陪伴</span></td>
-          <td class="num">28.9K</td>
-          <td class="up">+215%</td>
-        </tr>
-
-        <tr>
-          <td class="rk">6</td>
-          <td>
-            <span class="dom">aidetectors.cc</span>
-            <span class="dname">AI Detectors</span>
-            <span class="desc">免费检测文章是否 AI 撰写，并改写为更自然的韩语。</span>
-          </td>
-          <td class="tags"><span class="tag">AI 检测与人性化</span> <span class="tag">文本生成</span> <span class="tag">生产力与办公</span></td>
-          <td class="num">28.3K</td>
-          <td class="up">+5176%</td>
-        </tr>
-
-        <tr>
-          <td class="rk">7</td>
-          <td>
-            <span class="dom">musegen.ai</span>
-            <span class="dname">MuseGen</span>
-            <span class="desc">AI 音乐生成器，文本或歌词生成带人声原创歌曲。</span>
-          </td>
-          <td class="tags"><span class="tag">音频与语音</span> <span class="tag">文本生成</span></td>
-          <td class="num">24.7K</td>
-          <td class="up">+193%</td>
-        </tr>
-
-        <tr>
           <td class="rk">8</td>
           <td>
-            <span class="dom">spiceform.com</span>
-            <span class="dname">Spiceform</span>
-            <span class="desc">AI 原生表单构建器，提示词生成表单。</span>
+            <span class="dom">gethandler.ai</span>
+            <span class="dname">Handler</span>
+            <span class="desc">面向移动开发者的 TikTok 氛围营销 AI 代理。</span>
           </td>
-          <td class="tags"><span class="tag">生产力与办公</span></td>
-          <td class="num">22.7K</td>
-          <td class="up">+140%</td>
+          <td class="tags"><span class="tag">视频制作</span> <span class="tag">社交媒体</span></td>
+          <td class="num">8.7K</td>
+          <td class="up">+680%</td>
         </tr>
 
         <tr>
           <td class="rk">9</td>
           <td>
-            <span class="dom">talya.app</span>
-            <span class="dname">Talya</span>
-            <span class="desc">法语 AI 求职副驾驶，匹配职位、定制简历、撰写求职信。</span>
+            <span class="dom">noumi.ai</span>
+            <span class="dname">Noumi</span>
+            <span class="desc">像同事一样理解上下文、管理任务并交付成果的 AI 个人助理。</span>
           </td>
-          <td class="tags"><span class="tag">招聘与人力</span> <span class="tag">文本生成</span></td>
-          <td class="num">12.6K</td>
-          <td class="up">+212%</td>
+          <td class="tags"><span class="tag">生活与娱乐</span> <span class="tag">聊天与陪伴</span></td>
+          <td class="num">5.0K</td>
+          <td class="up">+489%</td>
         </tr>
 
         <tr>
           <td class="rk">10</td>
           <td>
-            <span class="dom">mathssolverai.com</span>
-            <span class="dname">Maths Solver AI</span>
-            <span class="desc">面向学生的在线 AI 数学解题站。</span>
+            <span class="dom">mnogogpt.ru</span>
+            <span class="dname">MnogoGPT</span>
+            <span class="desc">俄语无 VPN 的一站式 AI 照片、视频与音乐创作工作室。</span>
           </td>
-          <td class="tags"><span class="tag">教育</span></td>
-          <td class="num">11.3K</td>
-          <td class="up">+176%</td>
+          <td class="tags"><span class="tag">图像生成</span> <span class="tag">视频制作</span></td>
+          <td class="num">33.5K</td>
+          <td class="up">+488%</td>
         </tr>
     </tbody>
   </table>
-  <a class="more" href="/ai-tools/rank/">查看完整榜单 →</a>
+  <div class="rank-more">
+    <a class="more" href="/ai-tools/rank/">查看完整榜单（19 行）→</a>
+    <span class="rank-more-note">另有 9 个站在 Pro 里，含绝对访问量与逐期快照 · <a href="/zh/pricing/">看方案</a></span>
+  </div>
 </div></section>
+<!-- related-links:start -->
+<section class="related-links"><div class="wrap">
+  <div class="sec-head">
+    <h2>相关链接</h2>
+    <span class="hint">按用途分组 · 都在这个站内</span>
+  </div>
+  <div class="rl-grid">
+    <div class="rl-card">
+      <h3>免费工具</h3>
+      <p>16 个高频工具，纯浏览器运行</p>
+      <ul><li><a href="/tools/">全部工具</a></li><li><a href="/tools/calculator.html">计算与换算</a></li><li><a href="/tools/unit-converter.html">单位换算</a></li><li><a href="/tools/word-counter.html">字数统计</a></li><li><a href="/tools/image-compressor.html">图片压缩</a></li><li><a href="/tools/json-formatter.html">开发调试</a></li></ul>
+    </div>
+    <div class="rl-card">
+      <h3>AI 工具情报</h3>
+      <p>增长榜、收入案例、每日观察</p>
+      <ul><li><a href="/ai-tools/rank/">增长榜（免费 10 行）</a></li><li><a href="/ai-tools/">AI 工具库</a></li><li><a href="/ai/income.html">收入案例拆解</a></li><li><a href="/ai/daily-2026-10-17.html">每日观察</a></li><li><a href="/ai-nav.html">AI 导航</a></li><li><a href="/ai-one-person-company-guide.html">一人公司指南</a></li></ul>
+    </div>
+    <div class="rl-card">
+      <h3>指南与案例</h3>
+      <p>把方法写清楚，而不是只给结论</p>
+      <ul><li><a href="/guides/">全部指南</a></li><li><a href="/blog.html">洞察与复盘</a></li><li><a href="/guides/how-to-unscramble-letters-systematically.html">字母重排怎么解</a></li><li><a href="/tools/regex-tester.html">正则表达式速查</a></li><li><a href="/tools/jwt-decoder.html">JWT 解析</a></li><li><a href="/editorial-policy.html">编辑方针</a></li></ul>
+    </div>
+    <div class="rl-card">
+      <h3>服务</h3>
+      <p>要人做的部分</p>
+      <ul><li><a href="/services/">全部服务</a></li><li><a href="/en/services/website-design.html">网页设计</a></li><li><a href="/en/services/logo-design.html">Logo 设计</a></li><li><a href="/en/services/video-editing.html">视频剪辑</a></li><li><a href="/ai-studio.html">AI 工作室</a></li><li><a href="/suanli-chuhai.html">算力出海</a></li></ul>
+    </div>
+    <div class="rl-card">
+      <h3>站务</h3>
+      <p>规则、定价、怎么找到人</p>
+      <ul><li><a href="/zh/pricing/">Pro 方案与定价</a></li><li><a href="/about.html">关于本站</a></li><li><a href="/faq.html">常见问题</a></li><li><a href="/how-it-works.html">工作方式</a></li><li><a href="/contact.html">联系我们</a></li><li><a href="/privacy.html">隐私与条款</a></li></ul>
+    </div>
+  </div>
+</div></section>
+<!-- related-links:end -->
+
 
 
 <article class="soft"><div class="wrap">

@@ -39,3 +39,6 @@ marketing/demo-en/audio/
 *.tmp-fix
 *.tmp-ni
 .tmp/
+
+# 就地改写前的本地备份（不部署）
+*.bak

@@ -1,0 +1,208 @@
+/* ============================================================
+   pro-gate.css — Pro 付费墙与定价页共用样式
+   配色沿用站内变量：dusk #021530 / sea #1a89c5 / sky #71c3ec / amber #fcbb00
+   ============================================================ */
+
+/* ---------- 锁遮罩 ---------- */
+
+/* hidden 必须压过 display:flex —— [hidden] 是 UA 样式，权重最低，
+   不写这条的话 .pro-lockbar{display:flex} 会让 hidden 失效 */
+[data-pro-only][hidden],
+[data-pro-hidden][hidden],
+[data-pro-lock][hidden],
+[hidden]{display:none !important}
+
+[data-pro-lock]{position:relative}
+[data-pro-lock].is-locked > *:not(.pro-mask){filter:blur(5px) saturate(.55);opacity:.42;pointer-events:none;user-select:none}
+[data-pro-lock].is-locked{max-height:420px;overflow:hidden}
+
+.pro-mask{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  padding:20px;z-index:5;
+  background:linear-gradient(180deg,rgba(255,255,255,.35) 0%,rgba(255,255,255,.92) 38%,#fff 100%);
+}
+.pro-mask-inner{
+  max-width:420px;text-align:center;color:#021530;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.pro-mask-inner svg{color:#1a89c5}
+.pro-mask-inner strong{font-size:16px;font-weight:700;line-height:1.4}
+.pro-mask-inner p{font-size:13.5px;color:#5a6474;line-height:1.6;margin:0}
+.pro-mask-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+.pro-mask-fine{font-size:12px;color:#8a94a6;margin-top:2px}
+.pro-mask-fine a{color:#1a89c5;text-decoration:underline;text-underline-offset:2px}
+
+.pro-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border:1px solid #d5dbe5;background:#fff;color:#021530;
+  font-family:inherit;font-size:13.5px;font-weight:600;
+  padding:9px 18px;border-radius:9px;cursor:pointer;
+  transition:border-color .15s,background .15s,transform .15s;
+}
+.pro-btn:hover{border-color:#1a89c5;transform:translateY(-1px)}
+.pro-btn-primary{background:#021530;border-color:#021530;color:#fff}
+.pro-btn-primary:hover{background:#0a2a4d;border-color:#0a2a4d}
+.pro-btn-amber{background:#fcbb00;border-color:#fcbb00;color:#021530}
+.pro-btn-amber:hover{background:#ffca2e;border-color:#ffca2e}
+.pro-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* ---------- 定价页 ---------- */
+
+.pro-hero{
+  background:linear-gradient(180deg,#021530 0%,#010b1e 100%);
+  color:#fff;padding:64px 0 52px;position:relative;overflow:hidden;
+}
+.pro-hero::after{
+  content:"";position:absolute;right:-90px;top:-70px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,137,197,.28),transparent 70%);
+}
+.pro-hero .wrap{position:relative;z-index:1}
+.pro-hero .kicker{
+  display:inline-block;font-family:'Noto Sans Mono',ui-monospace,monospace;
+  font-size:12.5px;color:#71c3ec;letter-spacing:.08em;margin-bottom:18px;
+}
+.pro-hero h1{
+  font-family:'EB Garamond','Noto Serif SC',serif;font-weight:600;
+  font-size:clamp(2rem,4.6vw,3.1rem);line-height:1.22;max-width:720px;margin:0;
+}
+.pro-hero h1 em{font-style:italic;color:#fcbb00}
+.pro-hero .sub{color:#b8c7d8;max-width:640px;margin-top:16px;font-size:16.5px;line-height:1.65}
+
+.plan-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));
+  gap:16px;margin-top:-40px;position:relative;z-index:2;
+}
+.plan{
+  background:#fff;border:1px solid #e6e9ef;border-radius:14px;padding:26px 22px 22px;
+  display:flex;flex-direction:column;position:relative;
+}
+.plan.hot{border-color:#021530;box-shadow:0 12px 36px rgba(2,21,48,.13)}
+.plan .flag{
+  position:absolute;top:-11px;left:22px;background:#fcbb00;color:#021530;
+  font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.03em;
+}
+.plan h3{font-size:15px;font-weight:700;color:#021530;margin:0 0 6px}
+.plan .who{font-size:12.5px;color:#5a6474;line-height:1.5;min-height:38px;margin:0}
+.plan .price{
+  font-family:'Noto Sans Mono',ui-monospace,monospace;
+  font-size:32px;font-weight:500;color:#021530;line-height:1;margin:16px 0 2px;
+}
+.plan .price small{font-size:13px;font-weight:400;color:#5a6474;margin-left:2px}
+.plan .per{font-size:12px;color:#8a94a6;font-family:'Noto Sans Mono',monospace;margin-bottom:16px}
+.plan ul{list-style:none;margin:0 0 18px;padding:0;flex:1}
+.plan li{
+  font-size:13.3px;color:#2b3542;padding:6px 0 6px 22px;position:relative;line-height:1.5;
+}
+.plan li::before{
+  content:"";position:absolute;left:2px;top:11px;width:11px;height:6px;
+  border-left:2px solid #0a8754;border-bottom:2px solid #0a8754;transform:rotate(-45deg);
+}
+.plan li.off{color:#9aa3b2}
+.plan li.off::before{border-color:#d5dbe5}
+.plan .cta{width:100%;justify-content:center;margin-top:auto}
+
+.pro-sec{padding:56px 0}
+.pro-sec.soft{background:#f6f8fa;border-top:1px solid #e6e9ef;border-bottom:1px solid #e6e9ef}
+.pro-sec h2{font-family:'EB Garamond','Noto Serif SC',serif;font-size:26px;font-weight:600;margin:0 0 8px}
+.pro-sec .lead{color:#5a6474;font-size:15px;margin:0 0 22px;max-width:760px}
+
+/* 边界对照表 */
+.gate-table{width:100%;border-collapse:collapse;font-size:13.8px;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e6e9ef}
+.gate-table th{
+  text-align:left;font-size:11.5px;font-weight:600;color:#5a6474;padding:11px 14px;
+  background:#f6f8fa;border-bottom:1px solid #e6e9ef;text-transform:uppercase;letter-spacing:.04em;
+}
+.gate-table td{padding:11px 14px;border-bottom:1px solid #eef1f5;vertical-align:top;color:#2b3542}
+.gate-table tr:last-child td{border-bottom:0}
+.gate-table .yes{color:#0a8754;font-weight:700}
+.gate-table .no{color:#b0b8c4}
+.gate-table td.c{text-align:center;width:88px}
+
+/* 兑换框 */
+.redeem-box{
+  background:#fff;border:1px solid #e6e9ef;border-radius:14px;padding:24px;
+  max-width:520px;
+}
+.redeem-box h3{font-size:15px;font-weight:700;margin:0 0 6px;color:#021530}
+.redeem-box p{font-size:13px;color:#5a6474;margin:0 0 14px;line-height:1.6}
+.redeem-row{display:flex;gap:8px;flex-wrap:wrap}
+.redeem-row input{
+  flex:1;min-width:200px;padding:10px 13px;border:1px solid #d5dbe5;border-radius:9px;
+  font-family:'Noto Sans Mono',ui-monospace,monospace;font-size:13.5px;letter-spacing:.04em;
+  color:#021530;background:#fff;
+}
+.redeem-row input:focus{outline:2px solid rgba(26,137,197,.35);outline-offset:1px;border-color:#1a89c5}
+[data-redeem-msg]{display:block;margin-top:10px;font-size:12.8px;min-height:18px}
+[data-redeem-msg][data-state="ok"]{color:#0a8754;font-weight:600}
+[data-redeem-msg][data-state="err"]{color:#c0392b}
+
+/* 登录状态条 */
+.pro-status{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  background:#f6f8fa;border:1px solid #e6e9ef;border-radius:10px;padding:12px 16px;
+  font-size:13px;color:#5a6474;margin-bottom:20px;
+}
+/* 未登录、且没有内容可显示时整条收起，不留空白 */
+.pro-status[data-state="anon"]{display:none}
+.pro-status:empty{display:none}
+.pro-status[data-state="on"]{background:#f0f9f4;border-color:#c6e6d4;color:#0a8754}
+[data-pro-badge][data-state="on"]{font-weight:700}
+
+.faq-pro h3{font-size:14.5px;font-weight:700;margin:22px 0 6px;color:#021530}
+.faq-pro p{font-size:13.8px;color:#2b3542;line-height:1.7;margin:0;max-width:800px}
+
+/* ---------- 榜单页锁定单元格 ---------- */
+
+/* 锁定态的数字用模糊占位，保留列宽和行高，避免 Pro 解锁后表格跳动 */
+td[data-pro-cell] .pro-blur{
+  display:inline-block;
+  filter:blur(4px);
+  opacity:.55;
+  user-select:none;
+  pointer-events:none;
+  font-variant-numeric:tabular-nums;
+}
+td[data-pro-cell].is-unlocked .pro-blur{display:none}
+
+/* 解锁后由 JS 写入的内容 */
+td[data-pro-cell] .pro-val{
+  font-variant-numeric:tabular-nums;
+  font-weight:600;
+  color:var(--dusk);
+}
+td[data-pro-cell="type"] .pro-val{color:var(--mute);font-weight:400;font-size:12.5px}
+
+/* 行级提示：锁定行左侧加一道淡边 */
+tr[data-free="0"] td:first-child{position:relative}
+tr[data-free="0"] td:first-child::before{
+  content:"";
+  position:absolute;left:0;top:6px;bottom:6px;width:2px;
+  background:#fcbb00;border-radius:2px;opacity:.5;
+}
+tr[data-free="1"] td:first-child::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;
+  background:#0a8754;border-radius:2px;opacity:.35;
+}
+tr[data-free="0"] td:first-child,tr[data-free="1"] td:first-child{padding-left:14px}
+
+/* ---------- 榜单页解锁条 ---------- */
+
+.pro-lockbar{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  margin-top:22px;padding:18px 22px;
+  background:#fffaf0;border:1px solid #f2e2b8;border-radius:12px;
+}
+.pro-lockbar-txt{display:flex;flex-direction:column;gap:3px;min-width:240px;flex:1}
+.pro-lockbar-txt strong{font-size:14.5px;font-weight:700;color:#021530}
+.pro-lockbar-txt span{font-size:13px;color:#5a6474;line-height:1.55}
+.pro-lockbar-act{display:flex;gap:10px;flex-wrap:wrap}
+
+@media(max-width:640px){
+  .plan-grid{margin-top:-28px}
+  .pro-hero{padding:48px 0 44px}
+  [data-pro-lock].is-locked{max-height:340px}
+  .gate-table td.c{width:64px}
+  .pro-lockbar{padding:16px 16px}
+  .pro-lockbar-act{width:100%}
+  .pro-lockbar-act .pro-btn{flex:1}
+}
