@@ -124,8 +124,10 @@ article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
 .rl-card h3{font-size:14px;font-weight:700;color:var(--dusk);margin:0 0 4px}
 .rl-card p{font-size:12px;color:var(--mute);margin:0 0 12px;line-height:1.5}
 .rl-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
-.rl-card li a{font-size:13px;color:#2b3542;display:inline-flex;align-items:center;gap:5px;line-height:1.4}
-.rl-card li a::before{content:"→";color:var(--sea);font-size:11px;opacity:.55}
+/* 用 flex 而不是 inline-flex：inline-flex 的宽度由内容决定，
+   卡片窄到 169px 时长文案（"增长榜（免费 10 行）"）会顶出卡片边界，不换行 */
+.rl-card li a{font-size:13px;color:#2b3542;display:flex;align-items:flex-start;gap:5px;line-height:1.4;min-width:0;overflow-wrap:anywhere}
+.rl-card li a::before{content:"→";color:var(--sea);font-size:11px;opacity:.55;flex:0 0 auto;margin-top:2px}
 .rl-card li a:hover{color:var(--sea)}
 .rank-more{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:20px}
 .rank-more .more{margin-top:0}
@@ -272,7 +274,7 @@ article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
   </div>
   <table>
     <thead><tr><th>#</th><th>站点</th><th>分类</th><th>月访问</th><th>增速</th></tr></thead>
-        <tbody>
+    <tbody>
 
         <tr>
           <td class="rk">1</td>
@@ -415,7 +417,7 @@ article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
     <div class="rl-card">
       <h3>AI 工具情报</h3>
       <p>增长榜、收入案例、每日观察</p>
-      <ul><li><a href="/ai-tools/rank/">增长榜（免费 10 行）</a></li><li><a href="/ai-tools/">AI 工具库</a></li><li><a href="/ai/income.html">收入案例拆解</a></li><li><a href="/ai/daily-2026-10-17.html">每日观察</a></li><li><a href="/ai-nav.html">AI 导航</a></li><li><a href="/ai-one-person-company-guide.html">一人公司指南</a></li></ul>
+      <ul><li><a href="/ai-tools/rank/">增长榜</a></li><li><a href="/ai-tools/">AI 工具库</a></li><li><a href="/ai/income.html">收入案例拆解</a></li><li><a href="/ai/daily-2026-10-17.html">每日观察</a></li><li><a href="/ai-nav.html">AI 导航</a></li><li><a href="/ai-one-person-company-guide.html">一人公司指南</a></li></ul>
     </div>
     <div class="rl-card">
       <h3>指南与案例</h3>
@@ -430,7 +432,7 @@ article .lead{color:var(--mute);font-size:15px;margin-bottom:16px}
     <div class="rl-card">
       <h3>站务</h3>
       <p>规则、定价、怎么找到人</p>
-      <ul><li><a href="/zh/pricing/">Pro 方案与定价</a></li><li><a href="/about.html">关于本站</a></li><li><a href="/faq.html">常见问题</a></li><li><a href="/how-it-works.html">工作方式</a></li><li><a href="/contact.html">联系我们</a></li><li><a href="/privacy.html">隐私与条款</a></li></ul>
+      <ul><li><a href="/zh/pricing/">Pro 定价</a></li><li><a href="/about.html">关于本站</a></li><li><a href="/faq.html">常见问题</a></li><li><a href="/how-it-works.html">工作方式</a></li><li><a href="/contact.html">联系我们</a></li><li><a href="/privacy.html">隐私与条款</a></li></ul>
     </div>
   </div>
 </div></section>

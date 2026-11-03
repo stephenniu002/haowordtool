@@ -71,16 +71,23 @@ for r in free_rows:
         )
     )
 
-new_tbody = "    <tbody>\n\n" + "\n".join(rows_html) + "    </tbody>"
+new_tbody = "<tbody>\n\n" + "\n".join(rows_html) + "    </tbody>"
 
-# 只在 rank-sec 区间内替换
+# 只在 rank-sec 区间内替换。
+# 正则带 ([ \t]*) 捕获原有的前导缩进：不带的话每跑一次就多叠 4 个空格，
+# 跑三次 tbody 就飘到页面中间了。
 sec_start = html.find('<section class="rank-sec">')
 sec_end = html.find("</section>", sec_start)
 if sec_start < 0 or sec_end < 0:
     sys.exit("[x] 未找到 rank-sec 区块")
 
 segment = html[sec_start:sec_end]
-new_segment, n = re.subn(r"<tbody>[\s\S]*?</tbody>", new_tbody, segment, count=1)
+new_segment, n = re.subn(
+    r"[ \t]*<tbody[^>]*>[\s\S]*?</tbody>",
+    lambda m: "    " + new_tbody,
+    segment,
+    count=1,
+)
 if n != 1:
     sys.exit("[x] 榜单 tbody 替换失败")
 
@@ -123,7 +130,7 @@ else:
             "title": "AI 工具情报",
             "desc": "增长榜、收入案例、每日观察",
             "links": [
-                ("增长榜（免费 10 行）", "/ai-tools/rank/"),
+                ("增长榜", "/ai-tools/rank/"),
                 ("AI 工具库", "/ai-tools/"),
                 ("收入案例拆解", "/ai/income.html"),
                 ("每日观察", "/ai/daily-2026-10-17.html"),
@@ -159,7 +166,7 @@ else:
             "title": "站务",
             "desc": "规则、定价、怎么找到人",
             "links": [
-                ("Pro 方案与定价", "/zh/pricing/"),
+                ("Pro 定价", "/zh/pricing/"),
                 ("关于本站", "/about.html"),
                 ("常见问题", "/faq.html"),
                 ("工作方式", "/how-it-works.html"),
@@ -213,8 +220,10 @@ CSS = """
 .rl-card h3{font-size:14px;font-weight:700;color:var(--dusk);margin:0 0 4px}
 .rl-card p{font-size:12px;color:var(--mute);margin:0 0 12px;line-height:1.5}
 .rl-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
-.rl-card li a{font-size:13px;color:#2b3542;display:inline-flex;align-items:center;gap:5px;line-height:1.4}
-.rl-card li a::before{content:"→";color:var(--sea);font-size:11px;opacity:.55}
+/* 用 flex 而不是 inline-flex：inline-flex 的宽度由内容决定，
+   卡片窄到 169px 时长文案（"增长榜（免费 10 行）"）会顶出卡片边界，不换行 */
+.rl-card li a{font-size:13px;color:#2b3542;display:flex;align-items:flex-start;gap:5px;line-height:1.4;min-width:0;overflow-wrap:anywhere}
+.rl-card li a::before{content:"→";color:var(--sea);font-size:11px;opacity:.55;flex:0 0 auto;margin-top:2px}
 .rl-card li a:hover{color:var(--sea)}
 .rank-more{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-top:20px}
 .rank-more .more{margin-top:0}
